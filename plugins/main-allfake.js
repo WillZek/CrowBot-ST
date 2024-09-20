@@ -1,4 +1,4 @@
-import pkg from '@whiskeysockets/baileys'
+mport pkg from '@whiskeysockets/baileys'
 import fs from 'fs'
 import fetch from 'node-fetch'
 import axios from 'axios'
@@ -36,9 +36,9 @@ global.creador = 'Wa.me/50557865603'
 global.ofcbot = `${conn.user.jid.split('@')[0]}`
 global.asistencia = 'Wa.me/543876639332'
 global.namechannel = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
-global.namechannel2 = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
-global.namegrupo = 'シ︎ 𝗜𝗮𝗻𝗕𝗼𝘁-𝗠𝗗 💛 𝗠𝘂𝗹𝘁𝗶-𝗕𝗢𝗧𝗦'
-global.namecomu = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗜𝗮𝗻 ✯』'
+global.namechannel2 = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 Crow ✯』'
+global.namegrupo = 'シ︎ 𝗖𝗿𝗼𝘄𝗕𝗼𝘁-𝗠𝗗 💛'
+global.namecomu = '『𝗚𝗿𝘂𝗽𝗼 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 𝗖𝗿𝗼𝘄𝗕𝗼𝘁✯』'
 global.namecomu2 = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
 global.colab1 = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
 global.colab2 = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
@@ -63,13 +63,13 @@ global.waittt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻�
 global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼...*';
 
 //Enlaces
-var canal = 'https://whatsapp.com/channel/0029VajkZ6blXnlwPZmbuH1u'  
+var canal =   'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
 var git = 'https://github.com/ianalejandrook15x' 
 var youtube = 'https://www.youtube.com/@ianalejandrook14' 
 var github = 'https://github.com/ianalejandrook15x/Crow' 
 var facebook = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWKwL' 
 let tiktok = 'https://tiktok.com/@the_crow_legendario_bs'
-let correo = 'sm.iam1836@gmail.com'
+let correo = 'sm.ninopina10@gmail.com'
 
 global.redes = [canal, git, youtube, github, facebook, tiktok, correo].getRandom()
 
@@ -98,7 +98,7 @@ global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@
 
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "3876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363301598733462@newsletter', newsletterName: "𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '7416799975881352295@newsletter', newsletterName: "𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁", serverMessageId: -1 }
 }}, { quoted: m }
   
 global.icono = [ 
@@ -110,6 +110,6 @@ global.icono = [
 'https://qu.ax/CHRS.jpeg',
 ].getRandom()
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363301598733462@newsletter", serverMessageId: 100, newsletterName: '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁', }, externalAdReply: { showAdAttribution: true, title: packname, body: 'Bot De WhatsApp', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "7416799975881352295@newsletter", serverMessageId: 100, newsletterName: '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁', }, externalAdReply: { showAdAttribution: true, title: packname, body: 'Bot De WhatsApp', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
