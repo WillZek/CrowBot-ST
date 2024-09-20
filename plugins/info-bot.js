@@ -19,7 +19,7 @@ conn.reply(m.chat, `*He hey hey skibidi, no digas toilet. Eres perfecta*`, m, rc
 }
   
 if (/^Corin$/i.test(m.text)) {
-conn.reply(m.chat, `*_Hola buscas algun servidor con precios bajos ? Te presento a CorinPLus un servicio hosting confiable y de buena calidad, entre por aqui https://dash.corinplus.com Gracias por utilizar CrowBot-MD_*`, m, rcanal, )
+conn.reply(m.chat, `*_Hola buscas algun servidor con precios bajos ? Te presento a Tk-Host un servicio hosting confiable y de buena calidad, entre por aqui https://dash.tk-joanhost.com Gracias por utilizar CrowBot-MD_*`, m, rcanal, )
 }
 if (/^duda$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola tienes alguna duda sobre el bot o sobre el hosting enviame mensaje al privado* ☁ Wa.me/50557865603`, m, rcanal, )
