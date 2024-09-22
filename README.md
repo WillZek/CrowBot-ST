@@ -1,6 +1,6 @@
-> 🐈‍⬛ Versión Actual: 1.0.0
+> ⌛ Versión Actual: 1.0.0
 
-## 💙 **`C R O W - B O T`**
+## 💛 **`C R O W - B O T`**
 
 ![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
 
