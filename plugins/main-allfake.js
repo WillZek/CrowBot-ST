@@ -98,7 +98,7 @@ global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@
 
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "3876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '7416799975881352295@newsletter', newsletterName: "𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363317263885467@newsletter', newsletterName: "𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁", serverMessageId: -1 }
 }}, { quoted: m }
   
 global.icono = [ 
@@ -110,6 +110,6 @@ global.icono = [
 'https://qu.ax/CHRS.jpeg',
 ].getRandom()
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "7416799975881352295@newsletter", serverMessageId: 100, newsletterName: '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁', }, externalAdReply: { showAdAttribution: true, title: packname, body: 'Bot De WhatsApp', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363317263885467@newsletter", serverMessageId: 100, newsletterName: '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁', }, externalAdReply: { showAdAttribution: true, title: packname, body: 'Bot De WhatsApp', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
