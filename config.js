@@ -42,10 +42,10 @@ global.ianurl = fs.readFileSync('./storage/img/crowurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.grupo = 'https://chat.whatsapp.com/Cvqmah5sZSzLFIjXn75Ple'
-global.grupo2 = 'https://chat.whatsapp.com/Cvqmah5sZSzLFIjXn75Ple'
-global.grupo3 = 'https://chat.whatsapp.com/Cvqmah5sZSzLFIjXn75Ple'
-global.channel = 'https://whatsapp.com/channel/0029VajkZ6bIXnlwPZmbuH1u'
+global.grupo = 'https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu'
+global.grupo2 = 'https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu'
+global.grupo3 = 'https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu'
+global.channel = 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
