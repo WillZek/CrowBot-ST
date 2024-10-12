@@ -19,8 +19,8 @@ global.terminos = `𝑺𝑴𝑺 𝑫𝑬𝑳 𝑪𝑹𝑬𝑨𝑫𝑶𝑹✨
 𝑪𝒐𝒏𝒕𝒂𝒄𝒕𝒂𝒏𝒐𝒔🚀
 
 ✫ ${global.creador}
-᯽ Ianalejandrook15x
+᯽ Niño Piña
 ✫ Correo electronico: 
-Alejandroxddd91@gmail.com
+ninopina10@gmail.com
 
 ✰ ${global.packname}`;
