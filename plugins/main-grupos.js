@@ -30,5 +30,5 @@ await m.react(emojis)
 }
 handler.help = ['grupos']
 handler.tags = ['main']
-handler.command = ['grupos', 'iangrupos', 'gruposian']
+handler.command = ['grupos', 'crowgrupos', 'gruposian']
 export default handler
