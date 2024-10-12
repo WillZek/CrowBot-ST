@@ -23,7 +23,7 @@ font: 'chrome',
 align: 'center',
 colors: ['red']
 });
-say(`Developed By • ianalejandrook15x`, {
+say(`Developed By • Niño Piña`, {
 font: 'console',
 align: 'center',
 colors: ['magenta']
