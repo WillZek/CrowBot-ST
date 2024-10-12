@@ -7,16 +7,16 @@ export async function before(m, {conn, participants, groupMetadata}) {
   let chat = global.db.data.chats[m.chat]
 
   if (chat.welcome && m.messageStubType == 27) {
-    let welcome = `┌─★ *CROW BOT - MD* \n│「 𝗕𝗶𝗲𝗻𝘃𝗲𝗻𝗶𝗱𝗼 ☁ 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │💛  𝗕𝗶𝗲𝗻𝘃𝗲𝗻𝗶𝗱𝗼/𝗮\n   │💛  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
+    let welcome = ` 💛≺ CROW BOT - MD \n「 Bιҽɳʋҽɳιԃσ 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Bιҽɳʋҽɳιԃσ/α 」\n「 ${groupMetadata.subject} 」\n\n  ιαɳαʅҽʝαɳԃɾσσƙ15x`
 await conn.sendLuffy(m.chat, packname, textbot, welcome, img, img, redes, fkontak)
   }
 
   if (chat.welcome && m.messageStubType == 28) {
-    let bye = `┌─★ *CROW BOT - MD* \n│「 𝗔𝗗𝗜𝗢𝗦 💛 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │💛  𝗦𝗲 𝗳𝘂𝗲\n   │💛 𝗡𝘂𝗻𝗰𝗮 𝘁𝗲 𝗾𝘂𝗶𝘀𝗶𝗺𝗼𝘀 𝗮𝗾𝘂𝗶\n   └───────────────┈ ⳹`
+    let bye = ` 💛≺ CROW BOT - MD \n「 Aԃισʂ 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Sҽ ϝυҽ 」\n「 Nυɳƈα ƚҽ ϙυιʂιɱσʂ αϙυι 」\n\n  ιαɳαʅҽʝαɳԃɾσσƙ15x`
 await conn.sendLuffy(m.chat, packname, textbot, bye, img, img, redes, fkontak)
   }
 
   if (chat.welcome && m.messageStubType == 32) {
-    let kick = `┌─★ *CROW BOT -MD* \n│「 𝗔𝗗𝗜𝗢𝗦 💛 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │💛  𝗦𝗲 𝗳𝘂𝗲\n   │💛 𝗡𝘂𝗻𝗰𝗮 𝘁𝗲 𝗾𝘂𝗶𝘀𝗶𝗺𝗼𝘀 𝗮𝗾𝘂𝗶\n   └───────────────┈ ⳹`
+    let kick = ` 💛≺ CROW BOT - MD \n「 Aԃισʂ 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Sҽ ϝυҽ 」\n「 Nυɳƈα ƚҽ ϙυιʂιɱσʂ αϙυι 」\n\n  ιαɳαʅҽʝαɳԃɾσσƙ15x`
 await conn.sendLuffy(m.chat, packname, textbot, kick, img, img, redes, fkontak)
 }}
