@@ -6,25 +6,25 @@ import { xpRange } from '../lib/levelling.js'
 
 let tags = {
   'main': 'INFO 💛',
-  'buscador': 'BUSQUEDAS 💛',
+  'buscador': 'BUSQUEDAS 💥',
   'fun': 'JUEGOS 💛',
-  'serbot': 'SUB BOTS 💛',
+  'serbot': 'SUB BOTS 💥',
   'rpg': 'RPG 💛',
-  'rg': 'REGISTRO 💛',
+  'rg': 'REGISTRO 💥',
   'xp': 'EXP 💛',
-  'sticker': 'STICKERS 💛',
+  'sticker': 'STICKERS 💥',
   'anime': 'ANIMES 💛',
-  'database': 'DATABASE 💛',
+  'database': 'DATABASE 💥',
   'fix': 'FIXMSGESPERA 💛',
-  'grupo': 'GRUPOS 💛',
+  'grupo': 'GRUPOS 💥',
   'nable': 'ON / OFF 💛', 
-  'descargas': 'DESCARGAS 💛',
+  'descargas': 'DESCARGAS 💥',
   'tools': 'HERRAMIENTAS 💛',
-  'info': 'INFORMACIÓN 💛',
+  'info': 'INFORMACIÓN 💥',
   'owner': 'CREADOR 💛', 
-  'audio': 'AUDIOS 💛', 
+  'audio': 'AUDIOS 💥', 
   'ai': 'AI 💛',
-  'transformador': 'CONVERTIDORES 💛',
+  'transformador': 'CONVERTIDORES 💥',
 }
 
 const defaultMenu = {
@@ -50,7 +50,7 @@ const defaultMenu = {
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
-\t*𝐋 𝐈 𝐒 𝐓 𝐀  -  𝐃 𝐃  -  𝐂 𝐎 𝐌 𝐀 𝐍 𝐃 𝐎 𝐒* 
+\t*𝐋 𝐈 𝐒 𝐓 𝐀  -  𝐃 𝐄  -  𝐂 𝐎 𝐌 𝐀 𝐍 𝐃 𝐎 𝐒* 
 `.trimStart(),
     header: ' *`┏━「 %category 」`*',
   body: '*┃♡›* %cmd',
