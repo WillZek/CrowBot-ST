@@ -24,6 +24,7 @@ let tags = {
   'owner': 'CREADOR 🌠', 
   'audio': 'AUDIOS 🌠', 
   'ai': 'AI 🌠',
+  'emox': 'EMOX 🌠',
   'transformador': 'CONVERTIDORES 🌠',
 }
 
