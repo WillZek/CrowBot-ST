@@ -25,6 +25,7 @@ let tags = {
   'audio': 'AUDIOS 🌠', 
   'ai': 'AI 🌠',
   'emox': 'EMOX 🌠',
+  'dl': 'Dl 🌠',
   'transformador': 'CONVERTIDORES 🌠',
 }
 
