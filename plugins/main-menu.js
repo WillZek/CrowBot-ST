@@ -33,19 +33,19 @@ const defaultMenu = {
 “  ✦𝐇𝐨𝐥𝐚 *%name* soy *𝐂𝐫𝐨𝐰𝐁𝐨𝐭*, %greeting ”
 
 ┌───⊷ ♥︎╣𝐈𝐍𝐅𝐎-𝐁𝐎𝐓╠♥︎
-┊  ☆ 𝐂𝐥𝐢𝐞𝐧𝐭𝐞: %name
-┊  ★ 𝐄𝐱𝐩: %exp
-┊  ☆ 𝐄𝐬𝐭𝐫𝐞𝐥𝐥𝐚𝐬: %estrellas
-┊  ★ 𝐍𝐢𝐯𝐞𝐥: %level
-┊  ☆ 𝐑𝐚𝐧𝐠𝐨: %role
+┊  ☆ 💥𝐂𝐥𝐢𝐞𝐧𝐭𝐞: %name
+┊  ★ 🔥𝐄𝐱𝐩: %exp
+┊  ☆ 🌟𝐄𝐬𝐭𝐫𝐞𝐥𝐥𝐚𝐬: %estrellas
+┊  ★ 🚀𝐍𝐢𝐯𝐞𝐥: %level
+┊  ☆ 🔱𝐑𝐚𝐧𝐠𝐨: %role
 └─────────────
 %readmore
 ┌───⊷ ❥𝐈𝐍𝐅𝐎 - 𝐔𝐒𝐄𝐑
-┊  ★ 𝐁𝐨𝐭: 𝕮𝖗𝖔𝖜 𝕭𝖔𝖙 - 𝕸𝕯 
-┊  ☆ 𝐌𝐨𝐝𝐨: Privado VIP 
-┊  ★ 𝐁𝐚𝐢𝐥𝐞𝐲𝐬: Multi Device
-┊  ☆ 𝐓𝐢𝐞𝐦𝐩𝐢𝐨 𝐀𝐜𝐭𝐢𝐯𝐨: %muptime
-┊  ★ 𝐔𝐬𝐮𝐚𝐫𝐢𝐨𝐬: %totalreg 
+┊  ★ 🤖𝐁𝐨𝐭: 𝕮𝖗𝖔𝖜 𝕭𝖔𝖙 - 𝕸𝕯 
+┊  ☆ ☄️𝐌𝐨𝐝𝐨: Privado VIP 
+┊  ★ ✨𝐁𝐚𝐢𝐥𝐞𝐲𝐬: Multi Device
+┊  ☆ ⌛𝐓𝐢𝐞𝐦𝐩𝐢𝐨 𝐀𝐜𝐭𝐢𝐯𝐨: %muptime
+┊  ★ 👥𝐔𝐬𝐮𝐚𝐫𝐢𝐨𝐬: %totalreg 
 └─────────────
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
