@@ -19,10 +19,10 @@ conn.reply(m.chat, `*He hey hey skibidi, no digas toilet. Eres perfecta*`, m, rc
 }
   
 if (/^Crow$/i.test(m.text)) {
-conn.reply(m.chat, `*_Hola Eres Fan De CrowBot o Brawl Stars
+conn.reply(m.chat, `*Hola Eres Fan De CrowBot o Brawl Stars
 Entonces Sigue El Canal Oficial!
 > https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
- Gracias por utilizar CrowBot-MD_*`, m, rcanal, )
+ Gracias por utilizar CrowBot-MD*`, m, rcanal, )
 }
 if (/^duda$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola tienes alguna duda sobre el bot o sobre el hosting enviame mensaje al privado* ☁ Wa.me/50557865603`, m, rcanal, )
