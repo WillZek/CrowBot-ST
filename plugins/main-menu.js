@@ -26,6 +26,7 @@ let tags = {
   'ai': 'AI 🌠',
   'emox': 'EMOX 🌠',
   'dl': 'Dl 🌠',
+  'fun': 'Game🌠',
   'transformador': 'CONVERTIDORES 🌠',
 }
 
