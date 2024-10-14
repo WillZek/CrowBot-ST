@@ -28,6 +28,7 @@ let tags = {
   'dl': 'Dl 🌠',
   'fun': 'Game🌠',
   'jadibot': 'JadiBot🌠',
+  'mods': 'Mods🌠'
   'transformador': 'CONVERTIDORES 🌠',
 }
 
