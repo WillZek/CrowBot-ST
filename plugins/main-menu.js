@@ -27,6 +27,7 @@ let tags = {
   'emox': 'EMOX 🌠',
   'dl': 'Dl 🌠',
   'fun': 'Game🌠',
+  'jadibot': 'JadiBot🌠',
   'transformador': 'CONVERTIDORES 🌠',
 }
 
