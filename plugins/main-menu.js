@@ -26,9 +26,9 @@ let tags = {
   'ai': 'AI 🌠',
   'emox': 'EMOX 🌠',
   'dl': 'Dl 🌠',
-  'fun': 'Game🌠',
-  'jadibot': 'JadiBot🌠',
-  'mods': 'Mods🌠'
+  'fun': 'game🌠',
+  'jadibot': 'Jadibot🌠',
+  'mods': 'mods🌠'
   'transformador': 'CONVERTIDORES 🌠',
 }
 
