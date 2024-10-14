@@ -1,136 +1,182 @@
-import ws from 'ws';
-import PhoneNumber from 'awesome-phonenumber';
 
-let handler = async (m, { conn, usedPrefix, text, args, command }) => {
-    let uniqueUsers = new Map();
+import { promises } from 'fs'
+import { join } from 'path'
+import fetch from 'node-fetch'
+import { xpRange } from '../lib/levelling.js'
 
-    let users = [...uniqueUsers.values()];
-    let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-    let totalUsers = users.length;
-    let totalusr = Object.keys(global.db.data.users).length;
-    let rtotal = Object.entries(global.db.data.users).length || '0'
-    let _uptime = process.uptime() * 1000;
-    let uptime = clockString(_uptime);
-    let username = conn.getName(m.sender);
-    let name = conn.getName(m.sender)
-    let api = await axios.get(`https://deliriusapi-official.vercel.app/tools/country?text=${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}`)
-   let userNationalityData = api.data.result
-   let userNationality = userNationalityData ? `${userNationalityData.name}` : 'Desconocido'
-    let locale = 'es';
-    let d = new Date(new Date + 3600000);
-    let time = d.toLocaleTimeString(locale, {
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric'
-    });
-
-    let totalreg = Object.keys(global.db.data.users).length;
-    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length;
-
-    m.react("🌸");
-    let menu = ``;
-
-    let txt =  `Hσʅα ! Sσყ CrowBot, ρҽɾʂσɳιƚα ʅιɳԃα αϙυι ƚιҽɳҽʂ ɱι ɱҽɳυ`
-txt+= '.͜°˖ `ᴄʀᴇᴀᴅᴏʀ ::`' + ` NiñoPiña\n`;
-txt+= '.͜°˖ `ʙᴏᴛ ::`' + ` CrowBot-MD\n`;
-txt+= '.͜°˖ `ꜰᴇᴄʜᴀ ::`' + ` ${moment.tz('America/Bogota').format('DD/MM/YY')}\n`;
-txt+= '.͜°˖ `ᴘᴀɪs ::`' + ` ${userNationality}\n`;
-txt+= '.͜°˖ `ᴘʀᴇꜰɪᴊᴏ ::`' + ` 「 ${usedPrefix} 」\n`;
-txt+= '.͜°˖ `ᴜꜱᴜᴀʀɪᴏꜱ ::`' + ` ${rtotal}\n`;
-txt+= '.͜°˖ `ᴄᴏɴᴛᴀᴄᴛᴏ ::` #owner\n\n';
-txt+= '.͜°˖ `ᴀᴄᴛɪᴠᴏ ::`' + ` ${uptime}\n`;
-txt+= "✬✭✰✬"
-
-    let listSections = [];
-
-        listSections.push({
-        title: `SELECCIÓNA LO QUE NECESITES`, highlight_label: `Popular CrowBot`,
-        rows: [
-            {
-                header: "Aυƚσ Vҽɾιϝιƈαɾ ╎🌸",
-                title: "",
-                description: `🗃 Verificacion Automáticamente`,
-                id: `#reg ${name}.18`,
-            },
-            {
-                header: "Mҽɳυ Cσɱρʅҽƚσ ╎ 🌸",
-                title: "",
-                description: `🌸 Muestra el menú completo.`,
-                id: `.allmenu`,
-            },
-            {
-                header: "Mҽɳυ NSFW ╎ 🌸",
-                title: "",
-                description: `🔥 Muestra el menú +18.`,
-                id: `.hornymenu`,
-            },
-            {
-                header: "Gιƚ HυႦ ╎ ⭐️",
-                title: "",
-                description: `🌸 Muestra el github del bot.`,
-                id: `#sc`,
-            },
-            {
-                header: "Sƙყ Uʅƚɾα Pʅυʂ ╎ 💸",
-                title: "",
-                description: `⚡️ Super hosting, Sky Ultra Plus.`,
-                id: `#skyplus`,
-            },
-            {
-                header: "Sρҽҽԃ ╎ 🌸",
-                title: "",
-                description: `🚀 Muestra su velocidad y mas.`,
-                id: `#speed`,
-            },
-            {
-                header: "SҽɾႦσƚ Cσԃҽ  ╎ 🌸",
-                title: "",
-                description: `🌸 Ser subbot mediante un codigo de 8 digitos.`,
-                id: `.code`,
-            },
-            {
-                header: "SҽɾႦσƚ QR ╎ 🌸",
-                title: "",
-                description: `☁️ Ser subbot mediante un codigo QR.`,
-                id: `.serbot`,
-            },
-            {
-                header: "SυႦ Bσƚʂ ╎ 🌸",
-                title: "",
-                description: `🟢 Muestra su subbots onlines.`,
-                id: `.bots`,
-            },
-            {
-                header: "Gɾυρσʂ 🌸",
-                title: "",
-                description: `📲 Muestra los grupos principales de la bot.`,
-                id: `.grupos`,
-            },
-        ],
-    });
-
-    let vid = "https://qu.ax/lHgv.mp4";
-    let img = "https://qu.ax/DwRoz.jpg";
-    let img2 = "https://qu.ax/HHXnW.jpg";
-
-    await conn.sendListB(m.chat, menu, txt, `*ೃ༄ Mҽɳυ 🌸 ೄྀ࿐⁩`, [vid, img, img2].getRandom(), listSections, esti);
-};
-
-handler.tags = ['main'];
-handler.help = ['menu'];
-handler.command = ["menu", "help", "menú"];
-
-export default handler;
-
-
-function clockString(ms) {
-  const h = Math.floor(ms / 3600000);
-  const m = Math.floor(ms / 60000) % 60;
-  const s = Math.floor(ms / 1000) % 60;
-  console.log({ ms, h, m, s });
-  return [h, m, s].map((v) => v.toString().padStart(2, 0)).join(":");
+let tags = {
+  'main': 'INFO 💛',
+  'buscador': 'BUSQUEDAS 💛',
+  'fun': 'JUEGOS 💛',
+  'serbot': 'SUB BOTS 💛',
+  'rpg': 'RPG 💛',
+  'rg': 'REGISTRO 💛',
+  'xp': 'EXP 💛',
+  'sticker': 'STICKERS 💛',
+  'anime': 'ANIMES 💛',
+  'database': 'DATABASE 💛',
+  'fix': 'FIXMSGESPERA 💛',
+  'grupo': 'GRUPOS 💛',
+  'nable': 'ON / OFF 💛', 
+  'descargas': 'DESCARGAS 💛',
+  'tools': 'HERRAMIENTAS 💛',
+  'info': 'INFORMACIÓN 💛',
+  'owner': 'CREADOR 💛', 
+  'audio': 'AUDIOS 💛', 
+  'ai': 'AI 💛',
+  'transformador': 'CONVERTIDORES 💛',
 }
 
+const defaultMenu = {
+  before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
+
+“ Hola *%name* soy *Crow*, %greeting ”
+
+┌───⊷ ♥︎╣𝐈𝐍𝐅𝐎-𝐁𝐎𝐓╠♥︎
+┊  ☆ 𝐂𝐥𝐢𝐞𝐧𝐭𝐞: %name
+┊  ☆ 𝐄𝐱𝐩: %exp
+┊  ☆ 𝐄𝐬𝐭𝐫𝐞𝐥𝐥𝐚𝐬: %estrellas
+┊  ☆ 𝐍𝐢𝐯𝐞𝐥: %level
+┊  ☆ 𝐑𝐚𝐧𝐠𝐨: %role
+└─────────────
+%readmore
+┌───⊷ ❥𝐈𝐍𝐅𝐎 - 𝐔𝐒𝐄𝐑
+┊  ☆ 𝐁𝐨𝐭: 𝕮𝖗𝖔𝖜 𝕭𝖔𝖙 - 𝕸𝕯 
+┊  ☆ 𝐌𝐨𝐝𝐨: Privado VIP 
+┊  ☆ 𝐁𝐚𝐢𝐥𝐞𝐲𝐬: Multi Device
+┊  ☆ 𝐓𝐢𝐞𝐦𝐩𝐢𝐨 𝐀𝐜𝐭𝐢𝐯𝐨: %muptime
+┊  ☆ 𝐔𝐬𝐮𝐚𝐫𝐢𝐨𝐬: %totalreg 
+└─────────────
+%readmore
+*─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
+
+\t*𝐋 𝐈 𝐒 𝐓 𝐀  -  𝐃 𝐃  -  𝐂 𝐎 𝐌 𝐀 𝐍 𝐃 𝐎 𝐒* 
+`.trimStart(),
+    header: '*┏━「 %category 」*',
+  body: '*┃☆›* %cmd',
+  footer: '*┗━*\n',
+  after: `> ${dev}`,
+}
+let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
+  try {
+    let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
+    let { exp, estrellas, level, role } = global.db.data.users[m.sender]
+    let { min, xp, max } = xpRange(level, global.multiplier)
+    let name = await conn.getName(m.sender)
+    let d = new Date(new Date + 3600000)
+    let locale = 'es'
+    let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
+    let week = d.toLocaleDateString(locale, { weekday: 'long' })
+    let date = d.toLocaleDateString(locale, {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    })
+    let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', {
+      day: 'numeric',
+      month: 'long',
+      year: 'numeric'
+    }).format(d)
+    let time = d.toLocaleTimeString(locale, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric'
+    })
+    let _uptime = process.uptime() * 1000
+    let _muptime
+    if (process.send) {
+      process.send('uptime')
+      _muptime = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+    let muptime = clockString(_muptime)
+    let uptime = clockString(_uptime)
+    let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+      return {
+        help: Array.isArray(plugin.tags) ? plugin.help : [plugin.help],
+        tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
+        prefix: 'customPrefix' in plugin,
+        estrellas: plugin.estrellas,
+        premium: plugin.premium,
+        enabled: !plugin.disabled,
+      }
+    })
+    for (let plugin of help)
+      if (plugin && 'tags' in plugin)
+        for (let tag of plugin.tags)
+          if (!(tag in tags) && tag) tags[tag] = tag
+    conn.menu = conn.menu ? conn.menu : {}
+    let before = conn.menu.before || defaultMenu.before
+    let header = conn.menu.header || defaultMenu.header
+    let body = conn.menu.body || defaultMenu.body
+    let footer = conn.menu.footer || defaultMenu.footer
+    let after = conn.menu.after || (conn.user.jid == conn.user.jid ? '' : `Powered by https://wa.me/${conn.user.jid.split`@`[0]}`) + defaultMenu.after
+    let _text = [
+      before,
+      ...Object.keys(tags).map(tag => {
+        return header.replace(/%category/g, tags[tag]) + '\n' + [
+          ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
+            return menu.help.map(help => {
+              return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
+                .replace(/%isdiamond/g, menu.diamond ? '(ⓓ)' : '')
+                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
+                .trim()
+            }).join('\n')
+          }),
+          footer
+        ].join('\n')
+      }),
+      after
+    ].join('\n')
+    let text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
+let replace = {
+'%': '%',
+p: _p, uptime, muptime,
+me: conn.getName(conn.user.jid),
+taguser: '@' + m.sender.split("@s.whatsapp.net")[0],
+npmname: _package.name,
+npmdesc: _package.description,
+version: _package.version,
+exp: exp - min,
+maxexp: xp,
+botofc: (conn.user.jid == global.conn.user.jid ? '💛 𝙴𝚂𝚃𝙴 𝙴𝚂 𝙴𝙻 𝙱𝙾𝚃 𝙾𝙵𝙲' : `💛 𝚂𝚄𝙱-𝙱𝙾𝚃 𝙳𝙴: Wa.me/${global.conn.user.jid.split`@`[0]}`), 
+totalexp: exp,
+xp4levelup: max - exp,
+github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]',
+greeting, level, estrellas, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role,
+readmore: readMore
+}
+text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
+
+await m.react('💛') 
+
+conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: dev, "containsAutoReply": true, "mediaType": 1, "thumbnail": imagen1, "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m})
+
+  } catch (e) {
+    conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
+    throw e
+  }
+}
+handler.help = ['menu']
+handler.tags = ['main']
+handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
+handler.register = true
+
+export default handler
+
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
+
+function clockString(ms) {
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+}
 
   var ase = new Date();
   var hour = ase.getHours();
