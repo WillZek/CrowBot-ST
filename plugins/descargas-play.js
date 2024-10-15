@@ -11,7 +11,7 @@ if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de You
 await m.react(rwait)
 
 try {
-  
+
 conn.reply(m.chat, global.wait, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
@@ -21,7 +21,7 @@ sourceUrl: channel }}})
 
 const yt_play = await search(args.join(' '))
 let additionalText = ''
-if (command === 'play') {
+if (command === 'play1') {
 additionalText = 'audio'
 } else if (command === 'play2') {
 additionalText = 'video'}
@@ -42,10 +42,10 @@ let texto1 = `☁ *Título:*
 • ${yt_play[0].url}
 
 *Enviando su ${additionalText}*
-💛 Espere un momento`.trim()
+🌸 Espere un momento`.trim()
 await conn.sendMessage(m.chat, { text: texto1, contextInfo: { externalAdReply: { title: yt_play[0].title, body: dev, thumbnailUrl: yt_play[0].thumbnail, mediaType: 1, showAdAttribution: true, renderLargerThumbnail: true }}} , { quoted: fkontak })
 
-if (command == 'play') {        
+if (command == 'play1') {        
 try {
 let q = '128kbps'
 let v = yt_play[0].url
@@ -135,9 +135,9 @@ await m.react(error)
 return conn.reply(m.chat, '☁ *Inténtelo de nuevo*', m, fake)}
 
 }
-handler.help = ['play', 'play2']
+handler.help = ['play1', 'play2']
 handler.tags = ['descargas']
-handler.command = ['play', 'play2']
+handler.command = ['play1', 'play2']
 handler.register = true
 //handler.estrellas = 1
 
