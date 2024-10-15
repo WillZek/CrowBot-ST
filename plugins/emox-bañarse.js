@@ -51,4 +51,3 @@ handler.command = ['bañarse'];
 handler.group = true;
 
 export default handler;
-```
