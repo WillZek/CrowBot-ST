@@ -1,4 +1,3 @@
-```javascript
 // Codígo creado por OFC CROWBOT
 import fs from 'fs';
 import path from 'path';
@@ -42,7 +41,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
         // Enviamos el mensaje con el video y el mensaje correspondiente
         let mentions = [who]; // Mencionamos al usuario que se ha citado o mencionado
-        conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption: str, mentions }, { quoted: m });
+        conn.sendMessage(m.chat, { video: { url: video, caption: str}, mentions }, { quoted: m });
     }
 }
 
@@ -52,3 +51,4 @@ handler.command = ['bañarse'];
 handler.group = true;
 
 export default handler;
+```
