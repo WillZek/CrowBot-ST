@@ -1,4 +1,5 @@
-// Codígo creado por OFC CROWBOT
+//Codígo creado por Destroy wa.me/584120346669
+
 import fs from 'fs';
 import path from 'path';
 
@@ -16,7 +17,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
     let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
     let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
-    m.react('😂');
+    m.react('🛀');
 
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
@@ -25,29 +26,29 @@ let handler = async (m, { conn, usedPrefix }) => {
     } else if (m.quoted) {
         str = `${name2} está bañando a ${name || who}.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} se está bañando.`.trim();
+        str = `${name2} se está duchando.`.trim();
     }
 
     if (m.isGroup) {
-        let pp = 'https://i.imgur.com/LUXwypF.mp4'; 
-        let pp2 = 'https://i.imgur.com/Laew8s0.mp4'; 
-        let pp3 = 'https://i.imgur.com/Mzjyjmw.mp4';
-        let pp4 = 'https://i.imgur.com/dB0mUQf.mp4';
-        let pp5 = 'https://i.imgur.com/TnKfIku.mp4';
-        let pp6 = 'https://i.imgur.com/K7EoUsI.mp4';
+        let pp = 'https://qu.ax/JZvz.mp4' 
+        let pp2 = 'https://qu.ax/yRRc.mp4' 
+        let pp3 = 'https://qu.ax/Onas.mp4'
+        let pp4 = 'https://qu.ax/kwcA.mp4'
+        let pp5 = 'https://qu.ax/XNDF.mp4'
+        let pp6 = 'https://qu.ax/GZDB.mp4'
 
         const videos = [pp, pp2, pp3, pp4, pp5, pp6];
         const video = videos[Math.floor(Math.random() * videos.length)];
 
         // Enviamos el mensaje con el video y el mensaje correspondiente
         let mentions = [who]; // Mencionamos al usuario que se ha citado o mencionado
-        conn.sendMessage(m.chat, { video: { url: video, caption: str}, mentions }, { quoted: m });
+        conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption: str, mentions }, { quoted: m });
     }
 }
 
-handler.help = ['bañarse @tag'];
+handler.help = ['bath/bañarse @tag'];
 handler.tags = ['emox'];
-handler.command = ['bañarse'];
+handler.command = ['bath','bañarse'];
 handler.group = true;
 
 export default handler;
