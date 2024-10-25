@@ -1,5 +1,5 @@
 const handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw `\`\`\`[ 💛 ] *Por favor ingresa un texto.* Ejemplo:\n${usedPrefix + command} Did i tell u that i miss you\`\`\``;
+    if (!text) throw `\`\`\`[ 💛 ] Por favor ingresa un texto. Ejemplo:\n${usedPrefix + command} Did i tell u that i miss you\`\`\``;
 
     const randomReduction = Math.floor(Math.random() * 5) + 1;
     let search = await yts(text);
@@ -13,7 +13,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     ≡ Uploaded : » ${search.all[0].ago}
     ≡ URL : » ${urls}
 
-# 💛 Su ${isVideo ? 'Video' : 'Audio'} *se está enviando, espere un momento...*\`\`\``;
+# 💛 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
 
     conn.sendMessage(m.chat, { 
         image: { url: search.all[0].thumbnail }, 
