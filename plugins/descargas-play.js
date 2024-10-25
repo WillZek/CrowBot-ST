@@ -3,7 +3,7 @@ import yts from "yt-search";
 
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
-if (!text) return conn.reply(m.chat, `🚩 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Distancia - Kimberly Contreraxx`,  m, rcanal, )
+if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Distancia - Kimberly Contreraxx`,  m, rcanal, )
 
 conn.reply(m.chat, global.wait, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
@@ -16,35 +16,35 @@ try {
 await m.react(rwait)
 const yt_play = await search(args.join(' '))
 let txt = `*乂  Y O U T U B E  -  P L A Y  乂*\n\n`
-    txt += `🚩 *Titulo:*\n${yt_play[0].title}\n\n`
+    txt += `🌸 *Titulo:*\n${yt_play[0].title}\n\n`
     txt += `📅 *Publicado:*\n${yt_play[0].ago}\n\n`
     txt += `🕜 *Duración:*\n${secondString(yt_play[0].duration.seconds)}\n\n`
     txt += `📎 *Url:*\n${yt_play[0].url}`
 
 let listSections = []
 listSections.push({
-title: `✎ SELECCIÓNA LO QUE NECESITES`, highlight_label: ``,
+title: `SELECCIÓNA LO QUE NECESITES`, highlight_label: ``,
 rows: [
 {
-header: "𓆩࿔ྀુ⃟🌹⃟𝘼𝙐𝘿𝙄𝙊 ╎ 🎵",
+header: "Aυԃισ ღ ╎ 🎵",
 title: "",
 description: `🎵 Audio.`,
 id: `#play1 mp3 ${text}`,
 },
 {
-header: "𓆩࿔ྀુ⃟🌹⃟𝙑𝙄𝘿𝙀𝙊 ╎ 📽",
+header: "Vιԃҽσ ღ ╎ 📽",
 title: "",
 description: `📽 Video.`,
 id: `#play1 mp4 ${text}`,
 },
 {
-header: "𓆩࿔ྀુ⃟🌹⃟𝘼𝙐𝘿𝙄𝙊𝘿𝙊𝘾 ╎ 🎵",
+header: "AυԃισDσƈ ღ ╎ 🎵",
 title: "",
 description: `🎵 AudioDoc.`,
 id: `#play1 mp3doc ${text}`,
 },
 {
-header: "𓆩࿔ྀુ⃟🌹⃟𝙑𝙄𝘿𝙀𝙊𝘿𝙊𝘾 ╎ 📽",
+header: "VιԃҽσDσƈ ღ ╎ 📽",
 title: "",
 description: `📽 VideoDoc.`,
 id: `#play1 mp4doc ${text}`,
@@ -52,7 +52,7 @@ id: `#play1 mp4doc ${text}`,
 ],
 })
 let menu = ''
-await conn.sendListB(m.chat, menu, txt, ` 𓏲᭨ ̤̤֟✧⏤͟͞ू⃪٭ۣۜ ፝͜⁞Oᴘᴄɪᴏɴᴇs ᭄፝🍟𑜟꙲𒁑⁩`, yt_play[0].thumbnail, listSections, m)
+await conn.sendListB(m.chat, menu, txt, `*ੈ✩‧₊˚Oρƈισɳҽʂ 🌸 .ೃ࿐⁩`, yt_play[0].thumbnail, listSections, m)
 await m.react(done)
 } catch {
 await m.react(error)
