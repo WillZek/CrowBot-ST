@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, comman
 
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-if (!args || !args[0]) conn.reply(m.chat, `*\`Ingresa El link De la música a descargar 💥\`*`,  m, fake,)
+if (!args || !args[0]) conn.reply(m.chat, `*\`Ingresa El link De la música a descargar 🤍\`*`,  m, fake,)
 if (!args[0].match(/youtu/gi)) return conn.reply(m.chat, `Verifica que la *URL* sea de YouTube`, m).then(_ => m.react('✖️'))
 let q = '128kbps'
 
@@ -58,7 +58,7 @@ console.error(error)
 }}}
 handler.help = ['ytmp3 <url yt>']
 handler.corazones = 2
-handler.tags = ['descargas']
+handler.tags = ['dl']
 handler.command = /^(fgmp3|dlmp3|audio|yt(a|mp3))$/i
 handler.star = 2
 handler.register = true 
