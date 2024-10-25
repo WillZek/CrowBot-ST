@@ -1,49 +1,58 @@
-import fetch from "node-fetch"
-import yts from 'yt-search'
+const handler = async (m, { conn, text, usedPrefix, command }) => {
+    if (!text) throw `\`\`\`[ 💛 ] *Por favor ingresa un texto.* Ejemplo:\n${usedPrefix + command} Did i tell u that i miss you\`\`\``;
 
-const handler = async (m, { text, usedPrefix, command, conn }) => {
-    if (!text) {
-      throw m.reply("💛 Ingresa una consulta de *YouTube*");
-    }
-  
-  try {
-    let res = await yts(text);
-    let videoList = res.all;
-    let video = videoList[0];
+    const randomReduction = Math.floor(Math.random() * 5) + 1;
+    let search = await yts(text);
+    let isVideo = /vid$/.test(command);
+    let urls = search.all[0].url;
+    let body = `\`\`\`⊜─⌈ 📀 ◜YouTube Play◞ 📀 ⌋─⊜
 
-    let texto = `_*Reproduciendo  ${video.title}...*_`;
+    ≡ Título : » ${search.all[0].title}
+    ≡ Views : » ${search.all[0].views}
+    ≡ Duration : » ${search.all[0].timestamp}
+    ≡ Uploaded : » ${search.all[0].ago}
+    ≡ URL : » ${urls}
 
-    await conn.sendMessage(m?.chat, {react: {text: `🎵`, key: m?.key}});
+# 💛 Su ${isVideo ? 'Video' : 'Audio'} *se está enviando, espere un momento...*\`\`\``;
 
-    await conn.sendMessage(m.chat, { 
-      image: { url: video.thumbnail },  
-      caption: texto 
+    conn.sendMessage(m.chat, { 
+        image: { url: search.all[0].thumbnail }, 
+        caption: body 
+    }, { quoted: fkontak });
+
+    let res = await dl_vid(urls)
+    let type = isVideo ? 'video' : 'audio';
+    let video = res.data.mp4;
+    let audio = res.data.mp3;
+    conn.sendMessage(m.chat, { 
+        [type]: { url: isVideo ? video : audio }, 
+        gifPlayback: false, 
+        mimetype: isVideo ? "video/mp4" : "audio/mpeg" 
     }, { quoted: m });
+}
 
-    let apiUrl = `https://endpoint.web.id/downloader/yt-audio?url=${encodeURIComponent(video.url)}&key=gojou`;
-    let result = await (await fetch(apiUrl)).json();
+handler.command = ['play', 'playvid'];
+handler.help = ['play', 'playvid'];
+handler.tags = ['dl'];
+export default handler;
 
-    if (result.status && result.code === 200 && result.result && result.result.download_url) {
-      let audioUrl = result.result.download_url;
+async function dl_vid(url) {
+    const response = await fetch('https://shinoa.us.kg/api/download/ytdl', {
+        method: 'POST',
+        headers: {
+            'accept': '*/*',
+            'api_key': 'free',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            text: url
+        })
+    });
 
-      await conn.sendMessage(m.chat, { 
-        audio: { url: audioUrl }, 
-        mimetype: 'audio/mp4', 
-      }, { quoted: m });
-    } else {
-      m.reply('No se encontro una respuesta de la API.');
+    if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-  } catch (error) {
-    console.error(error);
-    m.reply('Error interno, intenta mas tarde.');
-  }
+    const data = await response.json();
+    return data;
 }
-handler.help = ['play <consulta>']
-handler.tags = ['downloader']
-handler.command = /^(play)$/i
-
-handler.premium = false
-handler.register = true
-
-export default handler
