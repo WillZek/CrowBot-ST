@@ -1,50 +1,44 @@
 import fg from 'api-dylux'
+import yts from 'yt-search'
 import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
-let limit = 320
-let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) => {
-        if (!args || !args[0]) throw `✳️ ${mssg.example} :\n${usedPrefix + command} https://youtu.be/YzkTFFwxtXI`
-    if (!args[0].match(/youtu/gi)) throw `❎ ${mssg.noLink('YouTube')}`
-         let chat = global.db.data.chats[m.chat]
-         m.react(rwait) 
+let limit = 100
 
-         let q = args[1] || '360p'
- try {
-                const yt = await fg.ytv(args[0], q)
-                let { title, dl_url, quality, size, sizeB } = yt
-        let isLimit = limit * 1024 < sizeB 
+let handler = async (m, { conn, args, text, isPrems, isOwner, usedPrefix, command }) => {
 
-     m.reply(` ${isLimit ? `≡  *Sylph - YTDL*\n\n❖ *⚖️${mssg.size}*: ${size}\n❖ *🎞️${mssg.quality}*: ${quality}\n\n❖ _${mssg.limitdl}_ *+${limit} MB*` : global.wait }  `)
+let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-          if(!isLimit) conn.sendFile(m.chat, dl_url, title + '.mp4', `
- ≡  *Sylph - YTDL*
-  
-*📌${mssg.title}:* ${title}
-*🎞️${mssg.quality}:* ${quality}
-*⚖️${mssg.size}:* ${size}
-`.trim(), m, false, { asDocument: false })
-                m.react(done) 
-         } catch {
+if (!args || !args[0]) return conn.reply(m.chat, `*\`Ingresa El link Del vídeo a descargar 🤍\`*`, m)
+if (!args[0].match(/youtu/gi)) return conn.reply(m.chat,`Verifica que la *URL* sea de YouTube`, m).then(_ => m.react('✖️'))
+let q = args[1] || '360p'
 
-        try {
-        let yt = await fg.ytmp4(args[0], q)
-    let { title, size, sizeB, dl_url, quality } = yt
+await m.react('🕒')
+try {
+const yt = await fg.ytv(args[0], q)
+let { title, dl_url, size } = yt 
+let vid = (await yts(text)).all[0]
 
-  let isLimit = limit * 1024 < sizeB 
-  m.reply(` ${isLimit ? `≡  *Sylph - YTDL*\n\n❖ *⚖️${mssg.size}*: ${size}\n❖ *🎞️${mssg.quality}*: ${quality}\n\n❖ _${mssg.limitdl}_ *+${limit} MB*` : global.wait }  `)
-          if(!isLimit) conn.sendFile(m.chat, dl_url, title + '.mp3', `
- ≡  *Sylph - YTDL*
-  
-❖ *📌${mssg.title}* : ${title}
-*🎞️${mssg.quality}:* ${quality}
-❖ *⚖️${mssg.size}* : ${size}
-`.trim(), m, false, { asDocument: false })
-                m.react(done)
+if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m).then(_ => m.react('✖️'))
 
-        } catch {
-                await m.reply(`❎ ${mssg.error}`)
-        }
-                } 
-}
-handler.command = ['ytmp4', 'ytv', 'ytvideo']
-handler.diamond = 5
+await m.react('📀')
+await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n01:26 ━━━━●────── ${vid.timestamp}`, m)
+} catch {
+try {
+let yt = await fg.ytmp4(args[0], q)
+let { title, size, dl_url } = yt
+let vid = (await yts(text)).all[0]
+
+if (size.split('MB')[0] >= limit) return conn.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m).then(_ => m.react('✖️'))
+
+await m.react('📀')
+await conn.sendFile(m.chat, dl_url, 'yt.jpg', `${vid.title}\n⇆ㅤㅤ◁ㅤㅤ❚❚ㅤㅤ▷ㅤㅤ↻\n00:15 ━━━━●────── ${vid.timestamp}`, m)
+} catch {
+await conn.reply(m.chat,`*☓ Ocurrió un error inesperado*`, m).then(_ => m.react('✖️'))
+//console.error(error)
+}}}
+handler.help = ['ytmp4 <url yt>']
+handler.corazones = 2
+handler.tags = ['dl']
+handler.command = /^(fgmp4|dlmp4|video|vídeo|yt(v|mp4)?)$/i;
+handler.star = 2
+handler.register = true 
 export default handler
