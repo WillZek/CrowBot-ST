@@ -64,9 +64,9 @@ global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻�
 
 //Enlaces
 var canal =   'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
-var git = 'https://github.com/ianalejandrook15x' 
+var git = 'https://github.com/WillZek' 
 var youtube = 'https://www.youtube.com/@ianalejandrook14' 
-var github = 'https://github.com/ianalejandrook15x/Crow' 
+var github = 'https://github.com/WillZek/CrowBot-ST' 
 var facebook = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWKwL' 
 let tiktok = 'https://tiktok.com/@the_crow_legendario_bs'
 let correo = 'sm.ninopina10@gmail.com'
