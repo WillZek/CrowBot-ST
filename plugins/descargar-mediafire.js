@@ -1,75 +1,38 @@
-import axios from 'axios';
-import fetch from 'node-fetch';
-import * as cheerio from 'cheerio';
-import {mediafiredl} from '@bochilteam/scraper';
-
-const handler = async (m, {conn, args, usedPrefix, command}) => {
-    if (!args[0]) throw `\`\`\`[💛] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE\`\`\``;
-m.react(rwait)
-  try {
-    const resEX = await mediafiredl(args[0]);
-    let text = `╭━━━⊜ ⌊ \`\`\`Mediafire Downloader\`\`\` ⌉⊜━━━\n`
-    text += `│  ≡ Nombre: ${resEX.filename}\n`
-    text += `│  ≡ Peso: ${resEX.filesizeH}\n`
-    text += `│  ≡ Tipo: ${resEX.ext}\n`
-    text += `╰━━━━━━━━━━━━━━⊜\n`
-    text += `  _• Enviando archivo . . . ._`
-
-    await conn.reply(m.chat, text, m, {
-contextInfo: { externalAdReply :{ showAdAttribution: true,
-                        sourceUrl: 'https://youtube.com/watch?v=TMT9MNM-NHg',
-                        mediaType: 2,
-                        description: `🍁 This bot is still in development.`,
-                        title: `🌺 Thank you for using CrowBot, WhatsApp bot.`,
-                        body: `⚘ Developed by Niño\Piña`,          previewType: 0,
-                        thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
-                        mediaUrl: insta
-
-                      }}
-})
-    await conn.sendFile(m.chat, resEX.url, resEX.filename, '', m, null, {mimetype: resEX.ext, asDocument: true});
-  } catch {
-    try {
-      const res = await mediafireDl(args[0]);
-      const {name, size, date, mime, link} = res;
-      let text2 = `╭━━━⊜ ⌊ \`\`\`Mediafire Downloader - 2\`\`\` ⌉⊜━━━\n`
-    text2 += `│  ≡ Nombre: ${name}\n`
-    text2 += `│  ≡ Peso: ${size}\n`
-    text2 += `│  ≡ Tipo: ${mime}\n`
-    text2 += `╰━━━━━━━━━━━━━━⊜\n`
-    text2 += `  _• Enviando archivo . . . ._`
-      await conn.reply(m.chat, text2, m, {
-contextInfo: { externalAdReply :{ showAdAttribution: true,
-                        sourceUrl: 'https://youtube.com/watch?v=TMT9MNM-NHg',
-                        mediaType: 2,
-                        description: `🍁 This bot is still in development.`,
-                        title: `🌺 Thank you for using Sylphiette, the best WhatsApp bot.`,
-                        body: `⚘ Developed by Niño\Piña ~`,          previewType: 0,
-                        thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
-                        mediaUrl: insta
-
-                      }}
-})
-      await conn.sendFile(m.chat, link, name, '', m, null, {mimetype: mime, asDocument: true});
-    } catch {
-      await m.reply(`\`\`\`[💛] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE\`\`\``);
-    }
-  }
-};
-handler.help = ['mediafire'].map((v) => v + ' <url>');
-handler.tags = ['dl'];
-handler.command = /^(mediafire|mediafiredl|dlmediafire)$/i;
-export default handler;
+import axios from 'axios'
+import fetch from 'node-fetch'
+import cheerio from 'cheerio'
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+if (!args[0]) throw `💛 Ingrese un enlace de mediafire.\n*Ejemplo:* ${usedPrefix}mediafire https://www.mediafire.com/file/nb63btgjr0dsn4z/COMDELIGHT_v1.1.apk/file`
+try {  
+let res = await mediafireDl(args[0])
+let { name, size, date, mime, link } = res
+let caption = `*Nombre:* ${name}
+*Peso:* ${size}
+*Tipo:* ${mime}`.trim()
+conn.reply(m.chat, caption, m, {
+contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: wm, body: 'El Bot mas explosivo de WhatsApp', previewType: 0, thumbnail: null, sourceUrl: md}}})
+await conn.sendFile(m.chat, link, name, '', m, null, { mimetype: mime, asDocument: true })
+} catch (e) {
+await conn.reply(m.chat, `Error, pruebe con ${usedPrefix + command}2`)
+console.log(e)
+handler.limit = false      
+}}
+handler.help = ['mediafire'].map(v => v + ' *<url>*')
+handler.tags = ['descargas']
+handler.command = /^(mediafire|mdfire|mf)$/i
+handler.register = true
+handler.group = true
+export default handler
 
 async function mediafireDl(url) {
-  const res = await axios.get(`https://www-mediafire-com.translate.goog/${url.replace('https://www.mediafire.com/', '')}?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp`);
-  const $ = cheerio.load(res.data);
-  const link = $('#downloadButton').attr('href');
-  const name = $('body > main > div.content > div.center > div > div.dl-btn-cont > div.dl-btn-labelWrap > div.promoDownloadName.notranslate > div').attr('title').replaceAll(' ', '').replaceAll('\n', '');
-  const date = $('body > main > div.content > div.center > div > div.dl-info > ul > li:nth-child(2) > span').text();
-  const size = $('#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('                         ', '').replaceAll(' ', '');
-  let mime = '';
-  const rese = await axios.head(link);
-  mime = rese.headers['content-type'];
-  return {name, size, date, mime, link};
+const res = await axios.get(`https://www-mediafire-com.translate.goog/${url.replace('https://www.mediafire.com/','')}?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=en&_x_tr_pto=wapp`)
+const $ = cheerio.load(res.data)
+const link = $('#downloadButton').attr('href')
+const name = $('body > main > div.content > div.center > div > div.dl-btn-cont > div.dl-btn-labelWrap > div.promoDownloadName.notranslate > div').attr('title').replaceAll(' ','').replaceAll('\n','')
+const date = $('body > main > div.content > div.center > div > div.dl-info > ul > li:nth-child(2) > span').text()
+const size = $('#downloadButton').text().replace('Download', '').replace('(', '').replace(')', '').replace('\n', '').replace('\n', '').replace('                         ', '').replaceAll(' ','')
+let mime = ''
+let rese = await axios.head(link)
+mime = rese.headers['content-type']
+return { name, size, date, mime, link }
 }
