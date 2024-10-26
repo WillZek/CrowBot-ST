@@ -17,29 +17,30 @@ let handler = async (m, { conn, usedPrefix }) => {
 
     let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
     let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
-    m.react('🤣');
+    m.react('😍');
 
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} se esta riendo de ${name || who}.`; // Usamos nombre agendado o número si no está agendado
+        str = `${name2} está enamorad﹫ de ${name || who}.`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${name2} se esta riendo de ${name || who}.`; // Mensaje cuando se cita a otro usuario
+        str = `${name2} está enamorad﹫ de ${name || who}.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} se esta riendo.`.trim();
+        str = `${name2} está enamorad﹫.`.trim();
     }
     
     if (m.isGroup) {
-        let pp = 'https://telegra.ph/file/5fa4fd7f4306aa7b2e17a.mp4'; 
-        let pp2 = 'https://telegra.ph/file/b299115a77fadb7594ca0.mp4'; 
-        let pp3 = 'https://telegra.ph/file/9938a8c2e54317d6b8250.mp4';
-        let pp4 = 'https://telegra.ph/file/e6c7b3f7d482ae42db9a7.mp4';
-        let pp5 = 'https://telegra.ph/file/a61b52737df7459580129.mp4';
-        let pp6 = 'https://telegra.ph/file/f34e1d5c8f17bd2739a51.mp4';
-        let pp7 = 'https://telegra.ph/file/c345ed1ca18a53655f857.mp4';
-        let pp8 = 'https://telegra.ph/file/4eec929f54bc4d83293a3.mp4';
+        let pp = 'https://telegra.ph/file/5fbd60c40ab190ecc8e1c.mp4'; 
+        let pp2 = 'https://telegra.ph/file/ca30d358d292674698b40.mp4'; 
+        let pp3 = 'https://telegra.ph/file/25f88386dd7d4d6df36fa.mp4';
+        let pp4 = 'https://telegra.ph/file/eb63131df0de6b47c7ab7.mp4';
+        let pp5 = 'https://telegra.ph/file/209990ee46c645506a5fc.mp4';
+        let pp6 = 'https://telegra.ph/file/440f276fcbb2d04cbf1d1.mp4';
+        let pp7 = 'https://telegra.ph/file/42cea67d9b013ed9a9cd0.mp4';
+        let pp8 = 'https://telegra.ph/file/bc0f47b8f3fb9470bc918.mp4';
+        let pp9 = 'https://telegra.ph/file/79ae875090b64ab247b7a.mp4';
         
-        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8];
+        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9];
         const video = videos[Math.floor(Math.random() * videos.length)];
         
         // Enviamos el mensaje con el video y el mensaje correspondiente
@@ -48,9 +49,9 @@ let handler = async (m, { conn, usedPrefix }) => {
     }
 }
 
-handler.help = ['laugh/reirse @tag'];
+handler.help = ['love2/enamorada @tag'];
 handler.tags = ['emox'];
-handler.command = ['laugh', 'reirse'];
+handler.command = ['love2', 'enamorada'];
 handler.group = true;
 
 export default handler;
