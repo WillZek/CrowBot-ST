@@ -23,12 +23,12 @@ conn.reply(m.chat, `*Ya te dieron De Comer?🥵🍆*`, m, rcanal, )
 }
 
 if (/^Vendes Bot/i.test(m.text)) {
-conn.reply(m.chat, `*Claro,¡ Vendemos Los Mejores Bots!
+conn.reply(m.chat, `*Claro,¡Vendemos Los Mejores Bots!*
 Tenemos:
 •Bot Perzonalizado Plus o normal 
 •Bot Propio
 •Bot Para Grupo 
-> Consulta Los Precios [🌠]*`, m, rcanal, )
+> *Consulta Los Precios [🌠]*`, m, rcanal, )
 }
   
 if (/^Bot en decadencia/i.test(m.text)) {
