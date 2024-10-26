@@ -1,5 +1,5 @@
-```javascript
-// Código creado por OFC CROWBOT
+//Codígo creado por Niño Piña wa.me/50557865603
+
 import fs from 'fs';
 import path from 'path';
 
@@ -17,39 +17,41 @@ let handler = async (m, { conn, usedPrefix }) => {
 
     let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
     let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
-    m.react('');
+    m.react('☕');
 
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} está tomando un café con ${name || who}.`; // Usamos nombre agendado o número si no está agendado
+        str = `${name2} tomá una tácita de café con ${name || who}.`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${name2} está tomando un café con ${name || who}.`; // Mensaje cuando se cita a otro usuario
+        str = `${name2} esta tomándo una tácita de café con ${name || who}.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} está tomando un café.`.trim();
+        str = `${name2} se toma una tácita de café para estar más activo hoy.`.trim();
     }
 
     if (m.isGroup) {
-        let pp = 'https://c.tenor.com/EzHJ6yxWY9oAAAAM/coffee.gif'; 
-        let pp2 = 'https://c.tenor.com/2l5MvIhM-o4AAAAM/coffee.gif'; 
-        let pp3 = 'https://c.tenor.com/Wi4UzQjzZwYAAAAM/coffee.gif';
-        let pp4 = 'https://c.tenor.com/hXo1Pyz3lSwAAAAM/coffee.gif';
-        let pp5 = 'https://c.tenor.com/C3TgEzQaJlIAAAAM/coffee.gif';
-        let pp6 = 'https://c.tenor.com/CwTm7YgRkKAAAAAM/coffee.gif';
+        let pp = 'https://files.catbox.moe/k6bzj0.mp4'; 
+        let pp2 = 'https://files.catbox.moe/3pj3nx.mp4'; 
+        let pp3 = 'https://files.catbox.moe/wcpe4z.mp4';
+        let pp4 = 'https://files.catbox.moe/64t3cf.mp4';
+        let pp5 = 'https://files.catbox.moe/qy1qmo.mp4';
+        let pp6 = 'https://files.catbox.moe/va1mu7.mp4';
+        let pp7 = 'https://files.catbox.moe/zqqre3.mp4';
+        let pp8 = 'https://files.catbox.moe/duydzw.mp4';
+        let pp9 = 'https://files.catbox.moe/4mn95m.mp4';
 
-        const imgs = [pp, pp2, pp3, pp4, pp5, pp6];
-        const img = imgs[Math.floor(Math.random() * imgs.length)];
+        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9];
+        const video = videos[Math.floor(Math.random() * videos.length)];
 
-        // Enviamos el mensaje con la imagen y el mensaje correspondiente
+        // Enviamos el mensaje con el video y el mensaje correspondiente
         let mentions = [who]; // Mencionamos al usuario que se ha citado o mencionado
-        conn.sendMessage(m.chat, { image: { url: img }, caption: str, mentions }, { quoted: m });
+        conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption: str, mentions }, { quoted: m });
     }
 }
 
-handler.help = ['.cafe @tag'];
-handler.tags = ['cafe'];
-handler.command = ['cafe'];
+handler.help = ['coffe/cafe @tag'];
+handler.tags = ['emox'];
+handler.command = ['coffe', 'cafe'];
 handler.group = true;
 
 export default handler;
-```
