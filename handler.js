@@ -118,7 +118,7 @@ export async function handler(chatUpdate) {
                     onlyLatinos: false,
                     simi: false,
                     antiver: false,
-                    modohorny: false, 
+                    nsfw: false, 
                     reaction: false,
                     expired: 0, 
                 }
