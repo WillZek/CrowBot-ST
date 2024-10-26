@@ -29,7 +29,7 @@ conn.reply(m.chat, `*¡Claro!, Vendemos Bots A Buen Precio Y Accesibles a tus Ne
 if (/^Bot de mrd/i.test(m.text)) {
 conn.reply(m.chat, `*Ya te dieron De Comer?🥵🍆*`, m, rcanal, )
 }
-¡¡
+
 if (/^Vendes Bot/i.test(m.text)) {
 conn.reply(m.chat, `*Claro,¡Vendemos Los Mejores Bots!*
 Tenemos:
