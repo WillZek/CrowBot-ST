@@ -25,7 +25,7 @@ conn.reply(m.chat, `*Claro, El Bot Perzonalizado Simple Cuesta 14$ Con Server In
 if (/^Quiero Un Bot/i.test(m.text)) {
 conn.reply(m.chat, `*¡Claro!, Vendemos Bots A Buen Precio Y Accesibles a tus Necesidades [🌠]*
 > Más Información 
-https://chat.whatsapp.com/KfcT8ReqiJW93g17vSXVpf*`, m, rcanal, )
+https://chat.whatsapp.com/KfcT8ReqiJW93g17vSXVpf`, m, rcanal, )
 }
   
 if (/^Bot de mrd/i.test(m.text)) {
