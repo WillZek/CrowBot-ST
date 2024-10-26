@@ -5,7 +5,7 @@ import path from 'path';
 
 let handler = async (m, { conn, usedPrefix }) => {
     let who;
-if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos comandos están desactivados!*');
+
     // Verificamos si se menciona a alguien o se cita un mensaje
     if (m.mentionedJid.length > 0) {
         who = m.mentionedJid[0]; // Si hay mención, usamos esa
@@ -17,30 +17,29 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos coma
 
     let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
     let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
-    m.react('🥵');
+    m.react('🤔');
 
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} acabás de violar a la putita de ${name || who} mientras te decía " metemela durooo más durooo que rico pitote"...
-Tenemos que volver a sudar juntos!!.`; // Usamos nombre agendado o número si no está agendado
+        str = `${name2} está pensando en ${name || who}.`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${name2} violaste a la zorra mal parida de ${name || who} mientras te decía " metemela durooo más durooo que rico pitote"...
-Tenemos que volver a sudar juntos!!.`; // Mensaje cuando se cita a otro usuario
+        str = `${name2} está pensando en ${name || who}.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} violo a alguien random del grupo por puta.`.trim();
+        str = `${name2} está pensando.`.trim();
     }
     
     if (m.isGroup) {
-        let pp = 'https://files.catbox.moe/cnmn0x.jpg'; 
-        let pp2 = 'https://files.catbox.moe/xph5x5.mp4'; 
-        let pp3 = 'https://files.catbox.moe/4ffxj8.mp4';
-        let pp4 = 'https://files.catbox.moe/f6ovgb.mp4';
-        let pp5 = 'https://qu.ax/XmLe.mp4';
-        let pp6 = 'https://qu.ax/yiMt.mp4';
-        let pp7 = 'https://qu.ax/cdKQ.mp4';
+        let pp = 'https://qu.ax/UOZCs.mp4'; 
+        let pp2 = 'https://qu.ax/BSbau.mp4'; 
+        let pp3 = 'https://qu.ax/Jviwo.mp4';
+        let pp4 = 'https://qu.ax/uAKEC.mp4';
+        let pp5 = 'https://qu.ax/MvOBe.mp4';
+        let pp6 = 'https://qu.ax/QRMyw.mp4';
+        let pp7 = 'https://qu.ax/BarDQ.mp4';
+        let pp8 = 'https://qu.ax/iKbFm.mp4';
         
-        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7];
+        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8];
         const video = videos[Math.floor(Math.random() * videos.length)];
         
         // Enviamos el mensaje con el video y el mensaje correspondiente
@@ -49,9 +48,9 @@ Tenemos que volver a sudar juntos!!.`; // Mensaje cuando se cita a otro usuario
     }
 }
 
-handler.help = ['violar/perra @tag'];
-handler.tags = ['nsfws'];
-handler.command = ['violar', 'perra'];
+handler.help = ['think/pensando @tag'];
+handler.tags = ['emox'];
+handler.command = ['think', 'pensando'];
 handler.group = true;
 
 export default handler;

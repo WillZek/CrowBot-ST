@@ -28,7 +28,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     } else {
         str = `${name2} está tomando una siesta.`.trim();
     }
-
+    
     if (m.isGroup) {
         let pp = 'https://telegra.ph/file/0684477ff198a678d4821.mp4'; 
         let pp2 = 'https://telegra.ph/file/583b7a7322fd6722751b5.mp4'; 
@@ -40,10 +40,10 @@ let handler = async (m, { conn, usedPrefix }) => {
         let pp8 = 'https://telegra.ph/file/3b091f28e5f52bc774449.mp4';
         let pp9 = 'https://telegra.ph/file/7c795529b38d1a93395f6.mp4';
         let pp10 = 'https://telegra.ph/file/6b8e6cc26de052d4018ba.mp4';
-
+        
         const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10];
         const video = videos[Math.floor(Math.random() * videos.length)];
-
+        
         // Enviamos el mensaje con el video y el mensaje correspondiente
         let mentions = [who]; // Mencionamos al usuario que se ha citado o mencionado
         conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption: str, mentions }, { quoted: m });

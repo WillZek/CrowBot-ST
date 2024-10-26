@@ -22,25 +22,25 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos coma
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} acabás de violar a la putita de ${name || who} mientras te decía " metemela durooo más durooo que rico pitote"...
-Tenemos que volver a sudar juntos!!.`; // Usamos nombre agendado o número si no está agendado
+        str = `${name2} tiene sexo fuertemente con ${name || who}.`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${name2} violaste a la zorra mal parida de ${name || who} mientras te decía " metemela durooo más durooo que rico pitote"...
-Tenemos que volver a sudar juntos!!.`; // Mensaje cuando se cita a otro usuario
+        str = `${name2} tiene sexo con ${name || who}.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} violo a alguien random del grupo por puta.`.trim();
+        str = `${name2} tiene sexo apasionadamente`.trim();
     }
     
     if (m.isGroup) {
-        let pp = 'https://files.catbox.moe/cnmn0x.jpg'; 
-        let pp2 = 'https://files.catbox.moe/xph5x5.mp4'; 
-        let pp3 = 'https://files.catbox.moe/4ffxj8.mp4';
-        let pp4 = 'https://files.catbox.moe/f6ovgb.mp4';
-        let pp5 = 'https://qu.ax/XmLe.mp4';
-        let pp6 = 'https://qu.ax/yiMt.mp4';
-        let pp7 = 'https://qu.ax/cdKQ.mp4';
+        let pp = 'https://telegra.ph/file/a2ad1dd463a935d5dfd17.mp4'; 
+        let pp2 = 'https://telegra.ph/file/e3abb2e79cd1ccf709e91.mp4'; 
+        let pp3 = 'https://telegra.ph/file/c5be4a906531c6731cd41.mp4';
+        let pp4 = 'https://telegra.ph/file/9c4b894e034c290df75e4.mp4';
+        let pp5 = 'https://telegra.ph/file/3246f62c61a0ebebcb5c8.mp4';
+        let pp6 = 'https://telegra.ph/file/820460f05d76bb2329bbc.mp4';
+        let pp7 = 'https://telegra.ph/file/2072f260302c6bb97682a.mp4';
+        let pp8 = 'https://telegra.ph/file/22d0ef801c93c1b2ac074.mp4';
+        let pp9 = 'https://telegra.ph/file/6f66fd1974e8df1496768.mp4';
         
-        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7];
+        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp8, pp9];
         const video = videos[Math.floor(Math.random() * videos.length)];
         
         // Enviamos el mensaje con el video y el mensaje correspondiente
@@ -49,9 +49,9 @@ Tenemos que volver a sudar juntos!!.`; // Mensaje cuando se cita a otro usuario
     }
 }
 
-handler.help = ['violar/perra @tag'];
+handler.help = ['sexo/sex @tag'];
 handler.tags = ['nsfws'];
-handler.command = ['violar', 'perra'];
+handler.command = ['sexo','sex'];
 handler.group = true;
 
-export default handler;
+export default handler

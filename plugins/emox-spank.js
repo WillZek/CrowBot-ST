@@ -17,28 +17,26 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos coma
 
     let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
     let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
-    m.react('🥵');
+    m.react('🔥');
 
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} acabás de violar a la putita de ${name || who} mientras te decía " metemela durooo más durooo que rico pitote"...
-Tenemos que volver a sudar juntos!!.`; // Usamos nombre agendado o número si no está agendado
+        str = `${name2} le dio una nalgada a ${name || who}.`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${name2} violaste a la zorra mal parida de ${name || who} mientras te decía " metemela durooo más durooo que rico pitote"...
-Tenemos que volver a sudar juntos!!.`; // Mensaje cuando se cita a otro usuario
+        str = `${name2} Nalgueo a ${name || who}.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} violo a alguien random del grupo por puta.`.trim();
+        str = `${name2} está dando una nalgada! >.<`.trim();
     }
     
     if (m.isGroup) {
-        let pp = 'https://files.catbox.moe/cnmn0x.jpg'; 
-        let pp2 = 'https://files.catbox.moe/xph5x5.mp4'; 
-        let pp3 = 'https://files.catbox.moe/4ffxj8.mp4';
-        let pp4 = 'https://files.catbox.moe/f6ovgb.mp4';
-        let pp5 = 'https://qu.ax/XmLe.mp4';
-        let pp6 = 'https://qu.ax/yiMt.mp4';
-        let pp7 = 'https://qu.ax/cdKQ.mp4';
+        let pp = 'https://files.catbox.moe/yjulgu.mp4'; 
+        let pp2 = 'https://telegra.ph/file/07fe0023525be2b2579f9.mp4'; 
+        let pp3 = 'https://telegra.ph/file/f830f235f844e30d22e8e.mp4';
+        let pp4 = 'https://telegra.ph/file/e278ca6dc7d26a2cfda46.mp4';
+        let pp5 = 'https://files.catbox.moe/mf3tve.mp4';
+        let pp6 = 'https://files.catbox.moe/hobfrw.mp4';
+        let pp7 = 'https://files.catbox.moe/rzijb5.mp4';
         
         const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7];
         const video = videos[Math.floor(Math.random() * videos.length)];
@@ -49,9 +47,9 @@ Tenemos que volver a sudar juntos!!.`; // Mensaje cuando se cita a otro usuario
     }
 }
 
-handler.help = ['violar/perra @tag'];
+handler.help = ['spank/nalgada @tag'];
 handler.tags = ['nsfws'];
-handler.command = ['violar', 'perra'];
+handler.command = ['spank', 'nalgada'];
 handler.group = true;
 
 export default handler;
