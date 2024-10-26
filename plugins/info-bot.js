@@ -46,8 +46,8 @@ conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m
 }
 
 if (/^Como uno al bot en mi grupo/i.test(m.text)) {
-conn.reply(m.chat, `*¡Contacta Al Creador!
-> wa.me/50557865603*`, m, rcanal, )
+conn.reply(m.chat, `*¡Contacta Al Creador!*
+> *wa.me/50557865603*`, m, rcanal, )
 }
   
 if (/^Bot en decadencia/i.test(m.text)) {
