@@ -5,29 +5,29 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
+  'info': 'INFORMACIÓN 🌠'
   'main': 'INFO 🌠',
-  'buscador': 'BUSQUEDAS 🌠',
-  'fun': 'JUEGOS 🌠',
-  'serbot': 'SUB BOTS 🌠',
-  'rpg': 'RPG 🌠',
   'rg': 'REGISTRO 🌠',
+  'nable': 'ON / OFF 🌠',
+  'fun': 'JUEGOS 🌠',
+  'rpg': 'RPG 🌠'
   'xp': 'EXP 🌠',
+  'emox': 'Emoji-Anime 🌠',
+  'nsfws': 'NSFW 🌠',
+  'serbot': 'SUB BOTS 🌠',
+  'buscador': 'BUSQUEDAS 🌠',
+  'descargas': 'DESCARGAS 🌠',
+  'grupo': 'GRUPOS 🌠',
   'sticker': 'STICKERS 🌠',
   'anime': 'ANIMES 🌠',
+  'tools': 'HERRAMIENTAS 🌠',
+  'transformador': 'CONVERTIDORES 🌠',
   'database': 'DATABASE 🌠',
   'fix': 'FIXMSGESPERA 🌠',
-  'grupo': 'GRUPOS 🌠',
-  'nable': 'ON / OFF 🌠', 
-  'descargas': 'DESCARGAS 🌠',
-  'tools': 'HERRAMIENTAS 🌠',
-  'info': 'INFORMACIÓN 🌠',
-  'owner': 'CREADOR 🌠', 
   'audio': 'AUDIOS 🌠', 
+  'owner': 'CREADOR 🌠',
   'ai': 'AI 🌠',
-  'emox': 'EMOX 🌠',
   'dl': 'Dl 🌠',
-  'fun': 'game🌠',
-  'transformador': 'CONVERTIDORES 🌠',
 }
 
 const defaultMenu = {
