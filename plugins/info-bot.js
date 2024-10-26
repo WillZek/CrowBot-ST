@@ -21,11 +21,15 @@ conn.reply(m.chat, `*No digas mamadas, Meriyein*`, m, rcanal, )
 if (/^Bot Perzonalizado Simple/i.test(m.text)) {
 conn.reply(m.chat, `*Claro, El Bot Perzonalizado Simple Cuesta 14$ Con Server Incluído y comisión, trae comandos básicos.[🌠]*`, m, rcanal, )
 }
+
+if (/^Quiero Un Bot/i.test(m.text)) {
+conn.reply(m.chat, `*¡Claro!, Vendemos Bots A Buen Precio Y Accesibles a tus Necesidades [🌠]*`, m, rcanal, )
+}
   
 if (/^Bot de mrd/i.test(m.text)) {
 conn.reply(m.chat, `*Ya te dieron De Comer?🥵🍆*`, m, rcanal, )
 }
-
+¡¡
 if (/^Vendes Bot/i.test(m.text)) {
 conn.reply(m.chat, `*Claro,¡Vendemos Los Mejores Bots!*
 Tenemos:
