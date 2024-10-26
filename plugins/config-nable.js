@@ -9,6 +9,7 @@ ${usedPrefix + command} detect
 ${usedPrefix + command} antidelete
 ${usedPrefix + command} antilink
 ${usedPrefix + command} antilink2
+${usedPrefix + command} nsfw 
 ${usedPrefix + command} autolevelup
 ${usedPrefix + command} autosticker
 ${usedPrefix + command} reaction
@@ -186,6 +187,15 @@ throw false
 }}
 chat.antiTwitch = isEnable 
 break
+
+case 'nsfw': case 'nsfwhot': case 'nsfwhorny':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.nsfw = isEnable          
+break    
 
 case 'autolevelup': case 'autonivel': case 'nivelautomatico':
 if (m.isGroup) {
