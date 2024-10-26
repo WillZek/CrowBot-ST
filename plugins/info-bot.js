@@ -15,8 +15,17 @@ conn.reply(m.chat, `*The first one to speak is gay*`, m, rcanal, )
 }
 
 if (/^Bot de mierda/i.test(m.text)) {
-conn.reply(m.chat, `*He hey hey skibidi, no digas toilet. Eres perfecta*`, m, rcanal, )
+conn.reply(m.chat, `*No digas mamadas, Meriyein*`, m, rcanal, )
 }
+
+if (/^Bot en decadencia/i.test(m.text)) {
+conn.reply(m.chat, `*Calla 🍆🥵*`, m, rcanal, )
+}
+
+if (/^Niño Piña/i.test(m.text)) {
+conn.reply(m.chat, `*Niño Piña Es Mi Creador, Respeta!*`, m, rcanal, )
+}
+  
   
 if (/^Crow$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola Eres Fan De* *CrowBot o Brawl Stars*
