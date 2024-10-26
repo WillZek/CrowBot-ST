@@ -18,6 +18,10 @@ if (/^Bot de mierda/i.test(m.text)) {
 conn.reply(m.chat, `*No digas mamadas, Meriyein*`, m, rcanal, )
 }
 
+if (/^Bot de mrd/i.test(m.text)) {
+conn.reply(m.chat, `*Ya te dieron De Comer?🥵🍆*`, m, rcanal, )
+}
+  
 if (/^Bot en decadencia/i.test(m.text)) {
 conn.reply(m.chat, `*Calla 🍆🥵*`, m, rcanal, )
 }
