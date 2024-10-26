@@ -31,7 +31,7 @@ Tenemos:
 > *Consulta Los Precios [🌠]*`, m, rcanal, )
 }
 
-if (/^Conoces a Legendary/i.test(m.text)) 
+if (/^Conoces a Legendary/i.test(m.text)) { 
 conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m, rcanal, )
 }
   
