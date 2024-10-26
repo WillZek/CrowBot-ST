@@ -2,7 +2,7 @@ const handler = async (m, {conn, usedPrefix, command, args, isOwner, isAdmin, is
 
 let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-const miniopcion = `🚩 *OPCIONES PARA GRUPOS*
+const miniopcion = `[🌠] *OPCIONES PARA GRUPOS*
 
 ${usedPrefix + command} welcome
 ${usedPrefix + command} detect
@@ -18,7 +18,7 @@ ${usedPrefix + command} audios
 ${usedPrefix + command} modoadmin
 ${usedPrefix + command} antifake
 
-💛 *OPCIONES PARA MI PROPIETARIO*
+[🌠] *OPCIONES PARA MI PROPIETARIO*
 
 ${usedPrefix + command} public
 ${usedPrefix + command} status
@@ -397,7 +397,7 @@ default:
 if (!/[01]/.test(command)) return await conn.reply(m.chat, miniopcion, m, rcanal);
 throw false;
 }
-conn.reply(m.chat, `🌸  *La Función ${type} Se Ha ${isEnable ? 'Activado' : 'Desactivado'} En Este ${isAll ? 'Bot' : isUser ? '' : 'Chat.'}*`, m, rcanal, )
+conn.reply(m.chat, `[🌠]  *La Función ${type} Se Ha ${isEnable ? 'Activado' : 'Desactivado'} En Este ${isAll ? 'Bot' : isUser ? '' : 'Chat.'}*`, m, rcanal, )
 
 }
 handler.help = ['en', 'dis'].map((v) => v + 'able <option>');
