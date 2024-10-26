@@ -15,8 +15,8 @@ let handler = async (m, { conn, args, usedPrefix, text, command }) => {
         if (!megaLink) throw new Error('No se encontró el enlace de MEGA ');
         const file = File.fromURL(megaLink);
         await file.loadAttributes();
-         m.reply(`_Nota: Ten en cuenta que los animes en emisión solo duran 3 días en la nube por lo que no se descargará después de ése lapso de tiempo. gracias por usar a Yuki Suou 🍁_`)
-        const caption = `💛 Nombre: ${file.name}\n💛 Tamaño: ${formatBytes(file.size)}\n\n${wm}`;
+         m.reply(`_*Nota: Ten en cuenta que los animes en emisión solo duran 3 días en la nube por lo que no se descargará después de ése lapso de tiempo. gracias por usar a CrowBot 🍁*_`)
+        const caption = `💛 *Nombre:* ${file.name}\n💛 *Tamaño:* ${formatBytes(file.size)}\n\n${wm}`;
         const dataBuffer = await file.downloadBuffer();
         const fileExtension = path.extname(file.name).toLowerCase();
         const mimeTypes = {
