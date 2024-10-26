@@ -17,29 +17,29 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos coma
 
     let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
     let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
-    m.react('🍆');
+    m.react('🥵');
 
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} se pajea pensando en ${name || who}.`; // Usamos nombre agendado o número si no está agendado
+        str = `${name2} le hizo una rusa a ${name || who}.`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${name2} esta pajeando a ${name || who}.`; // Mensaje cuando se cita a otro usuario
+        str = `${name2} le hizo una rusa a ${name || who}.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} se esta haciendo una Turbo paja.`.trim();
+        str = `${name2} está haciendo una rusa`.trim();
     }
     
     if (m.isGroup) {
-        let pp = 'https://qu.ax/TFGZu.mp4'; 
-        let pp2 = 'https://qu.ax/DFYTU.mp4'; 
-        let pp3 = 'https://qu.ax/ugAfu.mp4';
-        let pp4 = 'https://qu.ax/pbpcw.mp4';
-        let pp5 = 'https://qu.ax/UrzOi.mp4';
-        let pp6 = 'https://qu.ax/KaQp.mp4';
-        let pp7 = 'https://qu.ax/fsWkl.mp4';
-        let pp8 = 'https://qu.ax/nZMnv.mp4';
+        let pp = 'https://telegra.ph/file/e4412c087db1b1a7a4022.mp4'; 
+        let pp2 = 'https://telegra.ph/file/7e6bd15e33a1d77d6fb15.mp4'; 
+        let pp3 = 'https://telegra.ph/file/de3cbbb4611242eb0648c.mp4';
+        let pp4 = 'https://telegra.ph/file/4ca2676e76364d6861852.mp4';
+        let pp5 = 'https://telegra.ph/file/1099709e53a16a8a791fd.mp4';
+        let pp6 = 'https://telegra.ph/file/3baffe20cdfbb03d31e45.mp4';
+        let pp7 = 'https://telegra.ph/file/7cc41bab371611124693e.mp4';
+        let pp8 = 'https://telegra.ph/file/adaefc5b25537d948b959.mp4';
         
-        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8];
+        const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7];
         const video = videos[Math.floor(Math.random() * videos.length)];
         
         // Enviamos el mensaje con el video y el mensaje correspondiente
@@ -48,9 +48,9 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos coma
     }
 }
 
-handler.help = ['fap/paja @tag'];
+handler.help = ['boobjob/rusa @tag'];
 handler.tags = ['nsfws'];
-handler.command = ['fap', 'paja'];
+handler.command = ['boobjob','rusa'];
 handler.group = true;
 
 export default handler;
