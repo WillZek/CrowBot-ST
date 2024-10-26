@@ -51,7 +51,6 @@ if (/^Niño Piña/i.test(m.text)) {
 conn.reply(m.chat, `*Niño Piña Es Mi Creador, Respeta!*`, m, rcanal, )
 }
   
-  
 if (/^Crow$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola Eres Fan De* *CrowBot o Brawl Stars*
 *Entonces Sigue El Canal Oficial!*
