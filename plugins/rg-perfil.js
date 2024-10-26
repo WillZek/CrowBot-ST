@@ -1,19 +1,18 @@
-
 import PhoneNumber from 'awesome-phonenumber'
 import fetch from 'node-fetch'
 var handler = async (m, { conn }) => {
 let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://telegra.ph/file/32103b8335e64d253fa98.jpg')
-let { premium, level, estrellas, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[m.sender]
+let pp = await conn.profilePictureUrl(who, 'image').catch(_ => imagen1)
+let { premium, level, cookies, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[m.sender]
 let username = conn.getName(who)
 let noprem = `
-💛 *PERFIL DE USUARIO*
+👤 *PERFIL DE USUARIO*
 ☁️ *Nombre:* ${username}
 💥 *Tag:* @${who.replace(/@.+/, '')}
 🌀 *Registrado:* ${registered ? '✅': '❌'}
 
 👑 *RECURSOS*
-🌟 *Estrellas:* ${estrellas}
+🍪 *Cookies:* ${cookies}
 💥 *Nivel:* ${level}
 💫 *Experiencia:* ${exp}
 ✨️ *Rango:* ${role}
@@ -27,7 +26,7 @@ let prem = `╭──⪩ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐏𝐑𝐄𝐌𝐈𝐔�
 ╰───⪨
 
 ╭────⪩ 𝐑𝐄𝐂𝐔𝐑𝐒𝐎𝐒 ⪨
-│⧼🌟⧽ *ᴇsᴛʀᴇʟʟᴀs:* ${estrellas}
+│⧼🍪⧽ *ᴄᴏᴏᴋɪᴇs:* ${cookies}
 │⧼🔰⧽ *ɴɪᴠᴇʟ:* ${level}
 │⧼💫⧽ *ᴇxᴘᴇʀɪᴇɴᴄɪᴀ:* ${exp}
 │⧼⚜️⧽ *ʀᴀɴɢᴏ:* ${role}
@@ -36,7 +35,7 @@ conn.sendFile(m.chat, pp, 'perfil.jpg', `${premium ? prem.trim() : noprem.trim()
 }
 handler.help = ['profile']
 handler.register = true
-//handler.group = true
+handler.group = true
 handler.tags = ['rg']
 handler.command = ['profile', 'perfil']
 export default handler
