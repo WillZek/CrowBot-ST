@@ -9,11 +9,11 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     let urls = search.all[0].url;
     let body = `\`\`\`⊜─⌈ 📀 ◜*Crow - Play*◞ 📀 ⌋─⊜
 
-    *≡ Título :* » ${search.all[0].title}
-    *≡ Views :* » ${search.all[0].views}
-    *≡ Duration :* » ${search.all[0].timestamp}
-    *≡ Uploaded :* » ${search.all[0].ago}
-    *≡ URL :* » ${urls}
+    ≡ Título : » ${search.all[0].title}
+    ≡ Views : » ${search.all[0].views}
+    ≡ Duration : » ${search.all[0].timestamp}
+    ≡ Uploaded : » ${search.all[0].ago}
+    ≡ URL : » ${urls}
 
 # [💛] Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
 
