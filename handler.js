@@ -95,8 +95,8 @@ export async function handler(chatUpdate) {
                     chat.antiLink = true
                 if (!('onlyLatinos' in chat))
                     chat.onlyLatinos = false
-                if (!('modohorny' in chat))
-                    chat.modohorny = false
+                if (!('nsfw' in chat))
+                    chat.nsfw = false
                 if (!('reaction' in chat))
                     chat.reaction = false
                 if (!('simi' in chat))
