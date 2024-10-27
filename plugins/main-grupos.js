@@ -28,10 +28,6 @@ await conn.sendFile(m.chat, imagen2, "Crow.jpg", grupos, m, null, rcanal)
 await m.react(emojis)
 
 }
-`
-await conn.sendButton(m.chat, str, `͟͞ 𓆩𝐍𝐢𝐧̃𝐨𝐏𝐢𝐧̃𝐚ৎ୭࠱࠭ ͟͞\n` + wm, media, [
-['Menu 💖', '#Menu']], null, [
-['⏤͟͞ू⃪ ፝͜⁞𝐂𝐫𝐨𝐰𝐁𝐨𝐭✰⃔࿐', `${md}`]], fkontak)}
 
 handler.help = ['grupos']
 handler.tags = ['main']
