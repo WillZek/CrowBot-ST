@@ -22,19 +22,13 @@ let handler = async (m, { conn }) => {
 
     if (m.isGroup) {
         let imagenes = [
-            'https://files.catbox.moe/h5yort.mp4',             'https://files.catbox.moe/yxhxlr.gif',             'https://files.catbox.moe/auwqb2.gif',
-'https://files.catbox.moe/lmg19k.gif',
-'https://files.catbox.moe/9kquev.gif',
-'https://files.catbox.moe/uizfay.gif',
-'https://files.catbox.moe/n4zegz.mp4',
-            'https://qu.ax/iioMV.mp4',
-            'https://qu.ax/JgSvx.mp4',
-            'https://qu.ax/dvrKi.mp4',
-            'https://qu.ax/TZuhK.mp4'
+'https://qu.ax/tPREp.jpg',                  'https://qu.ax/PkVwv.jpg',             'https://qu.ax/LgBRM.jpg',
+'https://qu.ax/NoDdH.jpg',
+'https://qu.ax/xlqkf.jpg',
         ];
 
         // Seleccionar una imagen aleatoria
-        const video = videos[Math.floor(Math.random() * imagenes.length)];
+        const imagen = imagenes[Math.floor(Math.random() * imagenes.length)];
 
         // Envía la imagen y el mensaje correspondiente
         conn.sendMessage(m.chat, { imagen: { url: imagenes }, gifPlayback: true, caption: randomMessage }, { quoted: m });
