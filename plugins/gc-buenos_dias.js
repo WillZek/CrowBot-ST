@@ -24,14 +24,14 @@ str = `${name2} buenos días ${name || who}.`; // Mensaje cuando se cita a otro 
 str = `${name2} buenos días a todos en el grupo, les deseo un gran día.`.trim();
 }
 if (m.isGroup) {
-let pp = 'https://files.catbox.moe/0n2bf5.mp4';
-let pp2 = 'https://files.catbox.moe/0im4vk.mp4';
-let pp3 = 'https://files.catbox.moe/zua131.mp4';
-let pp4 = 'https://files.catbox.moe/9cm0x9.mp4';
-let pp5 = 'https://files.catbox.moe/7kxjhv.mp4';
-let pp6 = 'https://files.catbox.moe/id09sr.mp4';
-let pp7 = 'https://files.catbox.moe/3kyhf0.mp4';
-let pp8 = 'https://files.catbox.moe/4qokmi.mp4';
+let pp = 'https://media.giphy.com/media/3o6Zt7VQ9e5N2Xh1K4/giphy.gif';
+let pp2 = 'https://media.giphy.com/media/1gF1g0G7C4Y4K/giphy.gif';
+let pp3 = 'https://media.giphy.com/media/3o6Mbxk1k8b4i5cIYw/giphy.gif';
+let pp4 = 'https://media.giphy.com/media/26tPoyDhjiY8r0g4U/giphy.gif';
+let pp5 = 'https://media.giphy.com/media/l0K4q8tH7qz5y3t9q/giphy.gif';
+let pp6 = 'https://media.giphy.com/media/3o7aD4n3a4H8y4Gq8Y/giphy.gif';
+let pp7 = 'https://media.giphy.com/media/3o6Zt6p7d2V7zP8cK0/giphy.gif';
+let pp8 = 'https://media.giphy.com/media/26gJd7Y5J7Y6p6v7y/giphy.gif';
 const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8];
 const video = videos[Math.floor(Math.random() * videos.length)];
 // Enviamos el mensaje con el video y el mensaje correspondiente
