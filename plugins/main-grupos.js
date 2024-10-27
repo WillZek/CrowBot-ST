@@ -1,34 +1,39 @@
-let media = './src/Grupo.jpg'
-let handler = async (m, { conn, command }) => {
-let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
-    await conn.sendMessage(m.chat, { react: { text: '⚡️', key: m.key } })
-let str = `*📍 GRUPO OFICIAL*
+import fetch from 'node-fetch'
 
-   *_〾̷̸‣⃝⃨⃛⃰⁝̵̓ᝒ̷̸͙✨̶̩ܻᝒ̷̸꯭͙𝐂𝐫𝐨𝐰𝐁𝐨𝐭𓆩֟֯፝𓆪𝝣⃯ᵴͦ𝛒⃨ᷫ𝛆ͨ🄲⃪⃯𝛊ᷨ𝛂⃨ͦꝆ᷽ͭ🍁⃝⃙̻⃮̋⃛⃰⁌̷̸̊͟⿻᳔̶̷̸_*
-  ┃🧸❏ ${gp4}
+let handler  = async (m, { conn, usedPrefix, command }) => {
 
-   *_ ͟͞〾𝐂𝐫𝐨𝐰𝐁𝐨𝐭 𝐎𝐟𝐢𝐜𝐢𝐚𝐥✨_*
-┃🧸❏ https://chat.whatsapp.com/E78uEs2qJIE0apCLB7rSQZ
-   
-   *_🌟𝐂𝐫𝐨𝐰𝐁𝐨𝐭 𝙂𝙚𝙣𝙚𝙧𝙖𝙡🌟_*
-┃🧸❏ https://chat.whatsapp.com/BELmEmNjNlv36w7ElRrOKa
+let grupos = `*Hola!, te invito a unirte a los grupos oficiales del Bot para convivir con la comunidad oficial* 💛
 
-   *_★彡[𝐓𝐄𝐀𝐌 𝐁𝐑𝐀𝐖𝐋𝐈𝐆𝐇𝐓𝐒]彡★_*
-┃❤️‍🔥❏ https://chat.whatsapp.com/BuLovToIxdiLeycG2d3xJN
+1- 『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 𝗖𝗿𝗼𝘄𝗕𝗼𝘁✯』
+*✰* ${grupo}
 
-   *_Canal Oficial_*
-┃❤️‍🔥❏ https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T
+*─ׄ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ*
 
-   *_Canal Oficial2_*
-┃❤️‍🔥❏ https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T
-*_╰━━━━━━━━━━━━━━━━⊜_*
+➠ Enlace anulado? entre aquí! 
+
+☁ Canal :
+*✰* ${channel}
+
+> ${dev}
+
+*─ׄ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ*
+ • ¿Te interesa tener un bot propio, bot para grupo o un curso de como hacer bots personalizados? ¡Únete a nuestro grupo de ventas para solicitar un servicio! 📝
+ [ \`https://chat.whatsapp.com/HAt711AdgXFG1BI9FIACKr\` ]
+ 
+ • Pregunta por lo que quieras!💛
+Beneficios: Soporte Perzonalizado, Asistencia 24/7, Grupo VIP🏆🌟`
+
+await conn.sendFile(m.chat, imagen2, "Crow.jpg", grupos, m, null, rcanal)
+
+await m.react(emojis)
+
+}
 `
 await conn.sendButton(m.chat, str, `͟͞ 𓆩𝐍𝐢𝐧̃𝐨𝐏𝐢𝐧̃𝐚ৎ୭࠱࠭ ͟͞\n` + wm, media, [
 ['Menu 💖', '#Menu']], null, [
 ['⏤͟͞ू⃪ ፝͜⁞𝐂𝐫𝐨𝐰𝐁𝐨𝐭✰⃔࿐', `${md}`]], fkontak)}
 
-handler.command = ['grupos','links','gruposofc','gruposoficiales']
-handler.register = true
-handler.exp = 33
-
+handler.help = ['grupos']
+handler.tags = ['main']
+handler.command = ['grupos', 'iangrupos', 'gruposian']
 export default handler
