@@ -11,7 +11,7 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales del Bot para con
 
 ➠ Enlace anulado? entre aquí! 
 
-☁ Canal :
+ ['⏤͟͞ू⃪ ፝͜⁞ *Canal* ✰⃔࿐', :
 *✰* ${channel}
 
 > ${dev}
@@ -21,7 +21,8 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales del Bot para con
  [ \`https://chat.whatsapp.com/HAt711AdgXFG1BI9FIACKr\` ]
  
  • Pregunta por lo que quieras!💛
-Beneficios: Soporte Perzonalizado, Asistencia 24/7, Grupo VIP🏆🌟\n> ['⏤͟͞ू⃪ ፝͜⁞𝐂𝐫𝐨𝐰𝐁𝐨𝐭✰⃔࿐',
+Beneficios: Soporte Perzonalizado, Asistencia 24/7, Grupo VIP🏆🌟`
+> ⏤͟͞ू⃪ ፝͜⁞𝐂𝐫𝐨𝐰𝐁𝐨𝐭✰⃔࿐',
 
 await conn.sendFile(m.chat, imagen2, "Crow.jpg", grupos, m, null, rcanal)
 
