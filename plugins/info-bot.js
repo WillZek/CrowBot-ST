@@ -18,8 +18,16 @@ if (/^Bot de mierda/i.test(m.text)) {
 conn.reply(m.chat, `*No digas mamadas, Meriyein*`, m, rcanal, )
 }
 
+if (/^destroy|Wilker|Destroy$/i.test(m.text)) {
+conn.reply(m.chat, `*Destroy🔥 es la perrita de mi creador* 🥵🥵`, m, rcanal, )
+}
+
 if (/^porno|cp|xxx|gore|nopor/i.test(m.text)) {
 conn.reply(m.chat, `*Escucha maldita sabandija ni se te ocurra enviar ese tipo de contenido 🤬*`, m, rcanal, )
+}
+
+if (/^a$/i.test(m.text)) {
+conn.reply(m.chat, `*rroz y pollo* 😋👌`, m, rcanal, )
 }
 
 if (/^Bot Perzonalizado Simple/i.test(m.text)) {
@@ -45,11 +53,11 @@ Tenemos:
 > *Consulta Los Precios [🌠]*`, m, rcanal, )
 }
 
-if (/^Conoces a Legendary/i.test(m.text)) { 
+if (/^Conoces a Legendary|diomar/i.test(m.text)) { 
 conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m, rcanal, )
 }
 
-if (/^Como uno al bot en mi grupo/i.test(m.text)) {
+if (/^Como uno al bot en mi grupo|cómo puedo tener un bot en mi grupo/i.test(m.text)) {
 conn.reply(m.chat, `*¡Contacta Al Creador!*
 > *wa.me/50557865603*`, m, rcanal, )
 }
