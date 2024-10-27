@@ -22,6 +22,10 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales del Bot para con
  
  • Pregunta por lo que quieras!💛
 Beneficios: Soporte Perzonalizado, Asistencia 24/7, Grupo VIP🏆🌟`
+`
+await conn.sendButton(m.chat, str, `͟͞ 𓆩ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜ৎ୭࠱࠭ ͟͞\n` + wm, media, [
+['Menu 💖', '#Menu']], null, [
+['⏤͟͞ू⃪ ፝͜⁞𝐘𝐮𝐤𝐢_𝐒𝐮𝐨𝐮-𝐁𝐨𝐭✰⃔࿐', `${md}`]], fkontak)}
 
 await conn.sendFile(m.chat, imagen2, "Crow.jpg", grupos, m, null, rcanal)
 
