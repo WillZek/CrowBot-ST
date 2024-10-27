@@ -64,7 +64,6 @@ conn.reply(m.chat, `*Hola Eres Fan De* *CrowBot o Brawl Stars*
 > https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
  *Gracias por utilizar CrowBot-MD* `, m, rcanal, )
 }
-
 if (/^reglas$/i.test(m.text)) {
 conn.reply(m.chat, `**R꙰EGLAS DEL GRUP❍ꪜ*
 
