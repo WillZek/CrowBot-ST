@@ -61,7 +61,7 @@ if (/^Conoces a Legendary|diomar/i.test(m.text)) {
 conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m, rcanal, )
 }
 
-if (/^Como uno al bot en mi grupo|cómo puedo tener un bot en mi grupo/i.test(m.text)) {
+if (/^Como uno al bot en mi grupo|cómo puedo tener un bot en mi grupo|Bot Para Grupo|botgp/i.test(m.text)) {
 conn.reply(m.chat, `*¡Contacta Al Creador!*
 > *wa.me/50557865603*`, m, rcanal, )
 }
