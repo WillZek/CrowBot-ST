@@ -1,4 +1,4 @@
-//Codígo creado por Destroy wa.me/584120346669
+//Codígo creado por Niño Piña wa.me/50557865603
 
 import fs from 'fs';
 import path from 'path';
@@ -26,7 +26,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     } else if (m.quoted) {
         str = `${name2} hola ${name || who} *como te encuentras hoy?.*`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} saludos para todos los del grupo, como se encuentran?`.trim();
+        str = `${name2} *saludos para todos los del grupo, como se encuentran el día hoy?*`.trim();
     }
     
     if (m.isGroup) {
