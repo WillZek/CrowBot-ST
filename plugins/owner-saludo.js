@@ -2,6 +2,6 @@ const handler = async (m, {conn, command}) => {
   console.log(`/////////////////////////////////////////////////////////////////\n\nEl único reporte con fallos en este comando, no se presenta aquí.\n\n/////////////////////////////////////////////////////////////////`);
   m.reply('*[🌠] ¡Hola, Saludos!, CrowBot te saludo🥰💛*');
 };
-handler.command = /^(saludo)$/i;
+handler.command = /^(saludo,saludar)$/i;
 handler.owner = true;
 export default handler;
