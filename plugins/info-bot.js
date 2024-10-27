@@ -48,7 +48,7 @@ if (/^Bot de mrd/i.test(m.text)) {
 conn.reply(m.chat, `*Ya te dieron De Comer?🥵🍆*`, m, rcanal, )
 }
 
-if (/^Vendes Bot/i.test(m.text)) {
+if (/^Vendes Bot|Venden Bot|Quiero Comprar Bot|Quiero Comprar un bot/i.test(m.text)) {
 conn.reply(m.chat, `*Claro,¡Vendemos Los Mejores Bots!*
 Tenemos:
 •Bot Perzonalizado Plus o normal 
@@ -70,7 +70,7 @@ if (/^Bot en decadencia/i.test(m.text)) {
 conn.reply(m.chat, `*Calla 🍆🥵*`, m, rcanal, )
 }
 
-if (/^Niño Piña/i.test(m.text)) {
+if (/^Niño Piña|niño|piña/i.test(m.text)) {
 conn.reply(m.chat, `*Niño Piña Es Mi Creador, Respeta!*`, m, rcanal, )
 }
 
