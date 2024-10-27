@@ -22,6 +22,10 @@ if (/^destroy|Wilker|Destroy$/i.test(m.text)) {
 conn.reply(m.chat, `*Destroy🔥 es la perrita de mi creador* 🥵🥵`, m, rcanal, )
 }
 
+if (/^tesis|I'm Fz|fz|im fz$/i.test(m.text)) {
+conn.reply(m.chat, `*I'm fz~🔥 es la pajeadora de mi creador* 🥵🥵`, m, rcanal, )
+}
+
 if (/^porno|cp|xxx|gore|nopor/i.test(m.text)) {
 conn.reply(m.chat, `*Escucha maldita sabandija ni se te ocurra enviar ese tipo de contenido 🤬*`, m, rcanal, )
 }
