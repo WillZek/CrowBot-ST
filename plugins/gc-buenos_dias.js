@@ -31,7 +31,7 @@ let pp4 = 'https://files.catbox.moe/lmg19k.gif';
 let pp5 = 'https://files.catbox.moe/9kquev.gif';
 let pp6 = 'https://files.catbox.moe/uizfay.gif';
 let pp7 = 'https://files.catbox.moe/n4zegz.mp4';
-let pp8 = 'https://tenor.com/es-419/view/good-morning-cute-coffee-gif-8173999760206959925';
+let pp8 = 'https://qu.ax/TZuhK.mp4';
 const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8];
 const video = videos[Math.floor(Math.random() * videos.length)];
 // Enviamos el mensaje con el video y el mensaje correspondiente
