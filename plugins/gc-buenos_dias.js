@@ -24,8 +24,8 @@ str = `${name2} buenos días ${name || who}.`; // Mensaje cuando se cita a otro 
 str = `${name2} buenos días a todos en el grupo, les deseo un gran día.`.trim();
 }
 if (m.isGroup) {
-let pp = 'https://media.giphy.com/media/3o6Zt7VQ9e5N2Xh1K4/giphy.gif';
-let pp2 = 'https://media.giphy.com/media/1gF1g0G7C4Y4K/giphy.gif';
+let pp = 'https://giphy.com/gifs/frases-addy-rivera-e44f3WbMgScPpxtRlq';
+let pp2 = 'https://giphy.com/clips/studiosoriginals-feliz-dia-FdgSPh8btKTh01vc8q';
 let pp3 = 'https://media.giphy.com/media/3o6Mbxk1k8b4i5cIYw/giphy.gif';
 let pp4 = 'https://media.giphy.com/media/26tPoyDhjiY8r0g4U/giphy.gif';
 let pp5 = 'https://media.giphy.com/media/l0K4q8tH7qz5y3t9q/giphy.gif';
