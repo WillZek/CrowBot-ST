@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     if (m.mentionedJid.length > 0) {
         str = `${name2} *hola* ${name || who} *como estas?*[🌠]`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${*name2*} *Hola* ${*name* || who} *como te encuentras hoy?[🌠]*`; // Mensaje cuando se cita a otro usuario
+        str = `$*{name2}* *Hola* $*{name *|| who} *como te encuentras hoy?[🌠]*`; // Mensaje cuando se cita a otro usuario
     } else {
         str = `${name2} *saludos para todos los del grupo, como se encuentran el día hoy?*`.trim();
     }
