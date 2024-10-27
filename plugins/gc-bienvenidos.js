@@ -17,16 +17,16 @@ let handler = async (m, { conn, usedPrefix }) => {
 
     let name = conn.getName(who); // Nombre de la persona mencionada o del emisor
     let name2 = conn.getName(m.sender); // Nombre del usuario que envía el comando
-    m.react('🎉');
+    m.react('🌠');
 
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} Bienvenid@ al grupo ${name || who} esperemos la pases bien y que porfavor leas las reglas.`; // Usamos nombre agendado o número si no está agendado
+        str = `${name2} *Bienvenid@ al grupo* ${name || who} *esperemos la pases bien y que porfavor leas las reglas.`; // Usamos nombre agendado o número si no está agendado*
     } else if (m.quoted) {
-        str = `${name2} hola ${name || who} bienvenid@ grupo espero lo pasés muy bien y que lo disfrutes.`; // Mensaje cuando se cita a otro usuario
+        str = `${name2} hola ${name || who} *bienvenid@ grupo espero lo pasés muy bien y que lo disfrutes.*`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} Hola le doy la bienvenida a todos los nuevos y espero que lean las reglas sin más que decir pueden disfrutar del grupo y divertirse.`.trim();
+        str = `${name2} *Hola le doy la bienvenida a todos los nuevos y espero que lean las reglas sin más que decir pueden disfrutar del grupo y divertirse.*`.trim();
     }
 
     if (m.isGroup) {
