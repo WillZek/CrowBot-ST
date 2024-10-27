@@ -1,13 +1,13 @@
 let handler = async (message, { conn, text }) => {
   if (!text) {
-    return conn.reply(message.chat, ' *¿Qué anime estás buscando?*', message);
+    return conn.reply(message.chat, ' *[🌠] ¿Qué anime estás buscando?*', message);
   }
 
   try {
     const { data: response } = await axios.get(`https://animeflvapi.vercel.app/search?text=${encodeURIComponent(text)}`);
 
     if (!response.results || response.results.length === 0) {
-      return conn.reply(message.chat, ' *No se encontraron animes.*', message);
+      return conn.reply(message.chat, ' *[✖️] No se encontraron animes.*', message);
     }
 
     const animes = response.results;
@@ -25,7 +25,7 @@ let handler = async (message, { conn, text }) => {
       ]);
     }
 
-    await conn.sendCarousel(message.chat, '', `\`\`\`¡Hola! A continuación te muestro la lista de animes encontrados\`\`\``, "", messages, message);
+    await conn.sendCarousel(message.chat, '', `\`\`\`¡Hola! A continuación te muestro la lista de animes encontrados💛\`\`\``, "", messages, message);
   } catch (error) {
     await conn.reply(message.chat, error.toString(), message);
   }
