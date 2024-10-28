@@ -5,7 +5,8 @@ import path from 'path';
 
 let handler = async (m, { conn, usedPrefix }) => {
     let who;
-if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos comandos están desactivados!*');
+    if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos comandos están desactivados!*');
+
     // Verificamos si se menciona a alguien o se cita un mensaje
     if (m.mentionedJid.length > 0) {
         who = m.mentionedJid[0]; // Si hay mención, usamos esa
@@ -22,13 +23,13 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos coma
     // Construimos el mensaje dependiendo de si hay una mención o no
     let str;
     if (m.mentionedJid.length > 0) {
-        str = `${name2} está haciendo un 69 con ${name || who}.`; // Usamos nombre agendado o número si no está agendado
+        str = `\`${name2}\` está haciendo un 69 con \`${name || who}\`.`; // Usamos nombre agendado o número si no está agendado
     } else if (m.quoted) {
-        str = `${name2} hizo un 69 con ${name || who}.`; // Mensaje cuando se cita a otro usuario
+        str = `\`${name2}\` hizo un 69 con \`${name || who}\`.`; // Mensaje cuando se cita a otro usuario
     } else {
-        str = `${name2} está haciendo un 69! >.<.`.trim();
+        str = `\`${name2}\` está haciendo un 69! >.<.`.trim();
     }
-    
+
     if (m.isGroup) {
         let pp = 'https://telegra.ph/file/bb4341187c893748f912b.mp4'; 
         let pp2 = 'https://telegra.ph/file/c7f154b0ce694449a53cc.mp4'; 
@@ -39,10 +40,10 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('🚩 *¡Estos coma
         let pp7 = 'https://telegra.ph/file/55cb31314b168edd732f8.mp4';
         let pp8 = 'https://telegra.ph/file/1cbaa4a7a61f1ad18af01.mp4';
         let pp9 = 'https://telegra.ph/file/1083c19087f6997ec8095.mp4';
-        
+
         const videos = [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9];
         const video = videos[Math.floor(Math.random() * videos.length)];
-        
+
         // Enviamos el mensaje con el video y el mensaje correspondiente
         let mentions = [who]; // Mencionamos al usuario que se ha citado o mencionado
         conn.sendMessage(m.chat, { video: { url: video }, gifPlayback: true, caption: str, mentions }, { quoted: m });
