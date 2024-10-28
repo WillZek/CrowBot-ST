@@ -57,8 +57,12 @@ Tenemos:
 > *Consulta Los Precios [🌠]*`, m, rcanal, )
 }
 
-if (/^Conoces a Legendary|diomar/i.test(m.text)) { 
+if (/^Conoces a Legendary|diomar|legendary/i.test(m.text)) { 
 conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m, rcanal, )
+}
+
+if (/^Nodoka|lobo|nakano/i.test(m.text)) { 
+conn.reply(m.chat, `*Nodoka Mi Amor, Culona 🥵❤️‍🔥*`, m, rcanal, )
 }
 
 if (/^Como uno al bot en mi grupo|cómo puedo tener un bot en mi grupo|Bot Para Grupo|botgp/i.test(m.text)) {
