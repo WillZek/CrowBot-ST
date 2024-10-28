@@ -28,7 +28,7 @@ let tags = {
 }
 
 const defaultMenu = {
-  before: `*╭━❍CROWBOT-☆NIÑO PIÑA☆❍━╮*
+  before: `*╭━❍☆CROWBOT☆❍━╮*
 
 “  ✦𝐇𝐨𝐥𝐚 *%name* soy *𝐂𝐫𝐨𝐰𝐁𝐨𝐭*, %greeting ”
 
