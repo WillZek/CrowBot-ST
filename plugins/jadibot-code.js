@@ -32,8 +32,8 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
 
   let authFolderB = crypto.randomBytes(10).toString('hex').slice(0, 8)
 
-    if (!fs.existsSync("./GokuJadiBot/"+ authFolderB)){
-        fs.mkdirSync("./GokuJadiBot/"+ authFolderB, { recursive: true });
+    if (!fs.existsSync("./CrowJadiBot/"+ authFolderB)){
+        fs.mkdirSync("./CrowJadiBot/"+ authFolderB, { recursive: true });
     }
     args[0] ? fs.writeFileSync("./GokuJadiBot/" + authFolderB + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
 
@@ -124,7 +124,7 @@ async function connectionUpdate(update) {
     if (connection == 'open') {
     conn.isInit = true
     global.conns.push(conn)
-    await parent.reply(m.chat, args[0] ? 'Conectado con exito' : '*Conectado exitosamente*, Sub Bot de (*KakarotoBot*👑)\n\n*Nota:* Esto es temporal\nSi el Bot principal se reinicia o se desactiva, todos los sub bots tambien lo haran\n\nEl número del bot puede cambiar, síguenos para que estés al tanto de los siguientes números:\n*-* https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d', m, rcanal)
+    await parent.reply(m.chat, args[0] ? 'Conectado con exito' : '*Conectado exitosamente*, Sub Bot de (*CrowBot*👑)\n\n*Nota:* Esto es temporal\nSi el Bot principal se reinicia o se desactiva, todos los sub bots tambien lo haran\n\nEl número del bot puede cambiar, síguenos para que estés al tanto de los siguientes números:\n*-* https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d', m, rcanal)
     await sleep(5000)
     if (args[0]) return
 
