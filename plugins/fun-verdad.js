@@ -3,7 +3,7 @@ const handler = async (m, {conn}) => {
 
 *⚄︎.- ${pickRandom(global.verdad)}*
 
-*◣ ──「 CrowBot 」── ◢*
+*◣ ──「 ```CrowBot``` 」── ◢*
   `, m);
 };
 handler.help = ['verdad'];
