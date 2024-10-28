@@ -124,7 +124,7 @@ async function connectionUpdate(update) {
     if (connection == 'open') {
     conn.isInit = true
     global.conns.push(conn)
-    await parent.reply(m.chat, args[0] ? 'Conectado con exito' : '*Conectado exitosamente*, Sub Bot de (*CrowBot*👑)\n\n*Nota:* Esto es temporal\nSi el Bot principal se reinicia o se desactiva, todos los sub bots tambien lo haran\n\nEl número del bot puede cambiar, síguenos para que estés al tanto de los siguientes números:\n*-* https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d', m, rcanal)
+    await parent.reply(m.chat, args[0] ? 'Conectado con exito' : '*Conectado exitosamente*, Sub Bot de (*KakarotoBot*👑)\n\n*Nota:* Esto es temporal\nSi el Bot principal se reinicia o se desactiva, todos los sub bots tambien lo haran\n\nEl número del bot puede cambiar, síguenos para que estés al tanto de los siguientes números:\n*-* https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d', m, rcanal)
     await sleep(5000)
     if (args[0]) return
 
