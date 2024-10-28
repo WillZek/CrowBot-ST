@@ -61,6 +61,10 @@ if (/^Conoces a Legendary|diomar|legendary/i.test(m.text)) {
 conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m, rcanal, )
 }
 
+if (/^Lan/i.test(m.text)) {
+conn.reply(m.chat, `*Lan se la chupa 3 veces seguidas en 5 minutos a mí creador🥵🔥*`, m, rcanal, )
+}
+
 if (/^Nodoka|lobo|nakano/i.test(m.text)) { 
 conn.reply(m.chat, `*Nodoka Mi Amor, Culona 🥵❤️‍🔥*`, m, rcanal, )
 }
