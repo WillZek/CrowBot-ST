@@ -5,58 +5,55 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'info': 'INFORMACIÓN 🌠'
-  'main': 'INFO 🌠',
-  'rg': 'REGISTRO 🌠',
-  'nable': 'ON / OFF 🌠',
-  'fun': 'JUEGOS 🌠',
-  'rpg': 'RPG 🌠'
-  'xp': 'EXP 🌠',
-  'emox': 'Emoji-Anime 🌠',
-  'nsfws': 'NSFW 🌠',
-  'serbot': 'SUB BOTS 🌠',
-  'buscador': 'BUSQUEDAS 🌠',
-  'descargas': 'DESCARGAS 🌠',
-  'grupo': 'GRUPOS 🌠',
-  'sticker': 'STICKERS 🌠',
-  'anime': 'ANIMES 🌠',
-  'tools': 'HERRAMIENTAS 🌠',
-  'transformador': 'CONVERTIDORES 🌠',
-  'database': 'DATABASE 🌠',
-  'fix': 'FIXMSGESPERA 🌠',
-  'audio': 'AUDIOS 🌠', 
-  'owner': 'CREADOR 🌠',
-  'ai': 'AI 🌠',
-  'dl': 'Dl 🌠',
+  'main': 'INFO 💛',
+  'buscador': 'BUSQUEDAS 💛',
+  'fun': 'JUEGOS 💛',
+  'serbot': 'SUB BOTS 💛',
+  'rpg': 'RPG 💛',
+  'rg': 'REGISTRO 💛',
+  'xp': 'EXP 💛',
+  'sticker': 'STICKERS 💛',
+  'anime': 'ANIMES 💛',
+  'database': 'DATABASE 💛',
+  'fix': 'FIXMSGESPERA 💛',
+  'grupo': 'GRUPOS 💛',
+  'nable': 'ON / OFF 💛', 
+  'descargas': 'DESCARGAS 💛',
+  'tools': 'HERRAMIENTAS 💛',
+  'info': 'INFORMACIÓN 💛',
+  'owner': 'CREADOR 💛', 
+  'audio': 'AUDIOS 💛', 
+  'ai': 'AI 💛',
+  'transformador': 'CONVERTIDORES 💛',
 }
 
 const defaultMenu = {
   before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
 
-“  ✦𝐇𝐨𝐥𝐚 *%name* soy *𝐂𝐫𝐨𝐰𝐁𝐨𝐭*, %greeting ”
+“ Hola *%name* soy *Crow*, %greeting ”
 
-┌───⊷ ♥︎╣𝐈𝐍𝐅𝐎-𝐁𝐎𝐓╠♥︎
-┊  ☆ 💥𝐂𝐥𝐢𝐞𝐧𝐭𝐞: %name
-┊  ★ 🔥𝐄𝐱𝐩: %exp
-┊  ☆ 🌟𝐄𝐬𝐭𝐫𝐞𝐥𝐥𝐚𝐬: %estrellas
-┊  ★ 🚀𝐍𝐢𝐯𝐞𝐥: %level
-┊  ☆ 🔱𝐑𝐚𝐧𝐠𝐨: %role
+┌───⊷ INFO - BOT
+┊  ☆ Cliente: %name
+┊  ☆ Exp: %exp
+┊  ☆ Estrellas: %estrellas
+┊  ☆ Nivel: %level
+┊  ☆ Rango: %role
 └─────────────
 %readmore
-┌───⊷ ❥𝐈𝐍𝐅𝐎 - 𝐔𝐒𝐄𝐑
-┊  ★ 🤖𝐁𝐨𝐭: 𝕮𝖗𝖔𝖜 𝕭𝖔𝖙 - 𝕸𝕯 
-┊  ☆ ☄️𝐌𝐨𝐝𝐨: Privado VIP 
-┊  ★ ✨𝐁𝐚𝐢𝐥𝐞𝐲𝐬: Multi Device
-┊  ☆ ⌛𝐓𝐢𝐞𝐦𝐩𝐢𝐨 𝐀𝐜𝐭𝐢𝐯𝐨: %muptime
-┊  ★ 👥𝐔𝐬𝐮𝐚𝐫𝐢𝐨𝐬: %totalreg 
+┌───⊷ INFO - USER
+┊  ☆ Bot: Crow Bot - BS 
+┊  ☆ Modo: Privado VIP 
+┊  ☆ Baileys: Multi Device
+┊  ☆ Tiempo Activo: %muptime
+┊  ☆ Usuarios: %totalreg 
 └─────────────
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
-\t*𝐋 𝐈 𝐒 𝐓 𝐀  -  𝐃 𝐄  -  𝐂 𝐎 𝐌 𝐀 𝐍 𝐃 𝐎 𝐒* 
+\t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: ' *`┏━「❥ %category 」`*',
-  body: '*┃♡›* %cmd',
+    header: '*┏━「 %category 」*',
+  body: '*┃☆›* %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
 }
