@@ -25,7 +25,7 @@ str = `\`${name2}\` está agarrando nalgas por ahí.`.trim();
 }
 if (m.isGroup) {
 // Aquí puedes agregar tus propios GIFs de agarrar nalgas
-let pp1 = 'https://files.catbox.moe/tbcerp.png'; // Reemplaza con tus GIFs
+let pp1 = 'https://files.catbox.moe/yjulgu.mp4'; // Reemplaza con tus GIFs
 let pp2 = 'https://files.catbox.moe/erm82k.mp4';
 let pp3 = 'https://files.catbox.moe/9m1nkp.mp4';
 const gifs = [pp1, pp2, pp3];
