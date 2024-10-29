@@ -33,7 +33,7 @@ let pp6 = 'https://qu.ax/xRFyu.mp4';
 let pp7 = 'https://qu.ax/AiMyX.mp4';
 let pp8 = 'https://qu.ax/fGGn.mp4';
 let pp9 = 'https://qu.ax/VmjqP.mp4';
-let pp10 = 'https://media.giphy.com/media/3o6Zt1gF1qC0l4c5dG/giphy.gif';
+let pp10 = 'https://qu.ax/HVWBy.mp4';
 const gifs = [pp1, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10];
 const gif = gifs[Math.floor(Math.random() * gifs.length)];
 // Enviamos el mensaje con el gif y el mensaje correspondiente
