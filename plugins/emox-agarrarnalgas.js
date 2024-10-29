@@ -17,7 +17,7 @@ m.react('🍑'); // Reacción de durazno 🍑
 // Construimos el mensaje dependiendo de si hay una mención o no
 let str;
 if (m.mentionedJid.length > 0) {
-str = `\`${name2}\` está agarrando las nalgas de \`${name || who}\`. ¡Cuidado! 🍑`;
+str = `\`${name2}\` está agarrando las nalgas de \`${name || who}\`. 🥵 🍑`;
 } else if (m.quoted) {
 str = `\`${name2}\` está agarrando las nalgas de \`${name || who}\`. ¡Cuidado! 🍑`;
 } else {
