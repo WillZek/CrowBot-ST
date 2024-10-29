@@ -1,3 +1,4 @@
+
 //Créditos del código DanielDiod 
 
 import cheerio from 'cheerio';
@@ -5,12 +6,14 @@ import axios from 'axios';
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, command, usedPrefix }) => {
- if (!db.data.chats[m.chat].nsfw && m.isGroup) return m.reply('*[❗] 𝐋𝐨𝐬 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖 𝐞𝐬𝐭𝐚́𝐧 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨𝐬 𝐞𝐧 𝐞𝐬𝐭𝐞 𝐠𝐫𝐮𝐩𝐨.*`\n> `𝐬𝐢 𝐞𝐬 𝐚𝐝𝐦𝐢𝐧 𝐲 𝐝𝐞𝐬𝐞𝐚 𝐚𝐜𝐭𝐢𝐯𝐚𝐫𝐥𝐨𝐬 𝐮𝐬𝐞 .on nsfw`);
+ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
+    return m.reply('[❗] 𝐋𝐨𝐬 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖 𝐞𝐬𝐭𝐚́𝐧 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨𝐬 𝐞𝐧 𝐞𝐬𝐭𝐞 𝐠𝐫𝐮𝐩𝐨.\n> 𝐬𝐢 𝐞𝐬 𝐚𝐝𝐦𝐢𝐧 𝐲 𝐝𝐞𝐬𝐞𝐚 𝐚𝐜𝐭𝐢𝐯𝐚𝐫𝐥𝐨𝐬 𝐮𝐬𝐞 .enable nsfw');
+    }
 if (!args[0]) throw `*Formato incorrecto*\nEjemplo:\n\n${usedPrefix + command} con mi prima`;
 try {
 let searchResults = await searchPornhub(args[0]);
 let teks = searchResults.result.map((v, i) => 
-`🥵 `𝐏𝐎𝐑𝐍𝐇𝐔𝐁 メ 𝐒𝐄𝐀𝐑𝐂𝐇`🥵 
+`🥵 𝐏𝐎𝐑𝐍𝐇𝐔𝐁 メ 𝐒𝐄𝐀𝐑𝐂𝐇 🥵 
  𝐓𝐈𝐓𝐔𝐋𝐎: ${v.title} [✰]
  𝐃𝐔𝐑𝐀𝐂𝐈𝐎𝐍: ${v.duration} [✰]
  𝐕𝐈𝐒𝐈𝐓𝐀𝐒: ${v.views} [✰]
