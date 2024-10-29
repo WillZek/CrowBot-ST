@@ -26,7 +26,7 @@ str = `\`${name2}\` está soplando por ahí.`.trim();
 if (m.isGroup) {
 // Aquí puedes agregar tus propios GIFs de soplar
 let pp1 = 'https://qu.ax/SBeRL.mp4';
-let pp2 = 'https://media.giphy.com/media/3o7aD2saY7qK5pP5nG/giphy.gif';
+let pp2 = 'https://qu.ax/jFZx.mp4';
 let pp3 = 'https://media.giphy.com/media/l0Exk8Xy5nQGgYj7K/giphy.gif';
 const gifs = [pp1, pp2, pp3];
 const gif = gifs[Math.floor(Math.random() * gifs.length)];
