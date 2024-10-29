@@ -27,7 +27,7 @@ if (m.isGroup) {
 // Aquí puedes agregar tus propios GIFs de soplar
 let pp1 = 'https://qu.ax/SBeRL.mp4';
 let pp2 = 'https://qu.ax/jFZx.mp4';
-let pp3 = 'https://media.giphy.com/media/l0Exk8Xy5nQGgYj7K/giphy.gif';
+let pp3 = 'https://qu.ax/yYaWB.mp4';
 const gifs = [pp1, pp2, pp3];
 const gif = gifs[Math.floor(Math.random() * gifs.length)];
 // Enviamos el mensaje con el gif y el mensaje correspondiente
