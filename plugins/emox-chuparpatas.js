@@ -25,7 +25,7 @@ str = `\`${name2}\` está chupando patas por ahí.`.trim();
 }
 if (m.isGroup) {
 // Aquí puedes agregar tus propios GIFs de chupar pata
-let pp1 = 'https://files.catbox.moe/yjulgu.mp4'; // Reemplaza con tus GIFs
+let pp1 = 'https://files.catbox.moe/zuwr3w.mp4'; // Reemplaza con tus GIFs
 let pp2 = 'https://files.catbox.moe/erm82k.mp4';
 let pp3 = 'https://files.catbox.moe/9m1nkp.mp4';
 let pp4 = 'https://files.catbox.moe/rzijb5.mp4';
