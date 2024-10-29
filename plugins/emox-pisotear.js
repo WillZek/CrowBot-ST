@@ -26,7 +26,7 @@ str = `\`${name2}\` está pisoteando por ahí.`.trim();
 if (m.isGroup) {
 let pp1 = 'https://qu.ax/deqEY.mp4';
 let pp2 = 'https://qu.ax/tRtKj.mp4';
-let pp3 = 'https://media.giphy.com/media/3o7TKM5c7T5OZ4f1xW/giphy.gif';
+let pp3 = 'https://qu.ax/lAJfu.mp4';
 let pp4 = 'https://media.giphy.com/media/3o6Zt1gF1qC0l4c5dG/giphy.gif';
 let pp5 = 'https://media.giphy.com/media/3o6Zt2J5Z2g2Z6F5C0/giphy.gif';
 let pp6 = 'https://media.giphy.com/media/3o6Zt1gF1qC0l4c5dG/giphy.gif';
