@@ -19,9 +19,9 @@ let str;
 if (m.mentionedJid.length > 0) {
 str = `\`${name2}\` está chupando la pata de \`${name || who}\`. 😆🦶`;
 } else if (m.quoted) {
-str = `\`${name2}\` está chupando la pata de \`${name || who}\`. ¡Cuidado! 🦶`;
+str = `\`${name2}\` está chupando la pata de \`${name || who}\`. 🥵 🦶`;
 } else {
-str = `\`${name2}\` está chupando patas por ahí.`.trim();
+str = `\`${name2}\` está chupando patas por aqui🥵.`.trim();
 }
 if (m.isGroup) {
 // Aquí puedes agregar tus propios GIFs de chupar pata
@@ -37,6 +37,6 @@ conn.sendMessage(m.chat, { video: { url: gif }, gifPlayback: true, caption: str,
 }
 handler.help = ['chuparpata @tag'];
 handler.tags = ['emox'];
-handler.command = ['chuparpata'];
+handler.command = ['chuparpata', 'chupaepatas'];
 handler.group = true;
 export default handler;
