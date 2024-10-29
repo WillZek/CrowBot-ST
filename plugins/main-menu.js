@@ -39,7 +39,7 @@ const defaultMenu = {
 ┊  🌠 Rango: %role
 └─────────────
 %readmore
-┌───⊷ INFO - USER
+┌───⊷ *INFO - USER*
 ┊  🤖 Bot: Crow Bot - BS 
 ┊  🔱 Modo: Privado VIP 
 ┊  ✨ Baileys: Multi Device
