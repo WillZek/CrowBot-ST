@@ -24,7 +24,7 @@ str = `\`${name2}\` está pisoteando a \`${name || who}\`. ¡Cuidado! 😱`; // 
 str = `\`${name2}\` está pisoteando por ahí.`.trim();
 }
 if (m.isGroup) {
-let pp1 = 'https://media.giphy.com/media/3o6ZsY6Q9xZz5e4W8A/giphy.gif';
+let pp1 = 'https://qu.ax/deqEY.mp4';
 let pp2 = 'https://media.giphy.com/media/l0K4mQJ4Z8Pz9G8w8/giphy.gif';
 let pp3 = 'https://media.giphy.com/media/3o7TKM5c7T5OZ4f1xW/giphy.gif';
 let pp4 = 'https://media.giphy.com/media/3o6Zt1gF1qC0l4c5dG/giphy.gif';
