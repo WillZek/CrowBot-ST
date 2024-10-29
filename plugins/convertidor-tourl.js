@@ -1,47 +1,50 @@
-import axios from 'axios';
-import FormData from 'form-data';
-import fs from 'fs';
-import os from 'os';
-import path from 'path';
+import uploadFile from '../lib/uploadFile.js'
+import uploadImage from '../lib/uploadImage.js'
+import fetch from 'node-fetch'
 
-let handler = async (m, { args, command, usedPrefix }) => {
-  let q = m.quoted ? m.quoted : m;
-  let mime = (q.msg || q).mimetype || '';
-  if (!mime) throw `✳️ ${mssg.replyImg}`;
- // if (!args[0]) throw ` \`\`\`[ 🌺 ] Ingresa un texto para guardar la imagen. Ejemplo:\n${usedPrefix + command} Sylph\`\`\``
-
-  let media = await q.download();
-  let tempFilePath = path.join(os.tmpdir(), 'Sylph');
-  fs.writeFileSync(tempFilePath, media);
-
-  let form = new FormData();
-  form.append('image', fs.createReadStream(tempFilePath));
-
+let handler = async (m) => {
+  let q = m.quoted ? m.quoted : m
+  let mime = (q.msg || q).mimetype || ''
+  if (!mime) return conn.reply(m.chat, '💥 Responde a una *Imagen* o *Vídeo.*', m, rcanal)
+  await m.react(rwait)
   try {
-    let response = await axios.post('https://api.imgbb.com/1/upload?key=1f55ea75f24df783643940f3eacbbc96', form, {
-      headers: {
-        ...form.getHeaders()
-      }
-    });
+  conn.reply(m.chat, global.wait, m, {
+  contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
+  title: packname,
+  body: wm,
+  previewType: 0, thumbnail: icons,
+  sourceUrl: channel }}})
+  let media = await q.download()
+  let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
+  let link = await (isTele ? uploadImage : uploadFile)(media)
+  let img = await (await fetch(`${link}`)).buffer()
+  let txt = `乂  *L I N K - E N L A C E*  乂\n\n`
+      txt += `*» Enlace* : ${link}\n`
+      txt += `*» Acortado* : ${await shortUrl(link)}\n`
+      txt += `*» Tamaño* : ${formatBytes(media.length)}\n`
+      txt += `*» Expiración* : ${isTele ? 'No expira' : 'Desconocido'}\n\n`
+      txt += `> ✨️ *${packname}*`
 
-    if (!response.data || !response.data.data || !response.data.data.url) throw '❌ Error al subir el archivo';
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, fkontak, rcanal)
+await m.react(done)
+} catch {
+await m.react(error)
+}}
+handler.help = ['tourl']
+handler.tags = ['transformador']
+handler.command = /^(tourl|upload)$/i
+export default handler
 
-    let link = response.data.data.url;
-    fs.unlinkSync(tempFilePath);
-
-    m.reply(`❖ ${media.length} Byte(s)
-
-❖ (Archivo subido a ImgBB)
-❖ *URL:* ${link}
-    `);
-  } catch (error) {
-    console.error('Error al subir el archivo:', error.message);
-    throw '❌ Error al subir el archivo a ImgBB';
+function formatBytes(bytes) {
+  if (bytes === 0) {
+    return '0 B';
   }
+  const sizes = ['B', 'KB', 'MB', 'GB', 'TB']
+  const i = Math.floor(Math.log(bytes) / Math.log(1024))
+  return `${(bytes / 1024 ** i).toFixed(2)} ${sizes[i]}`;
 }
 
-handler.help = ['tourl'];
-handler.tags = ['tools'];
-handler.command = ['upload', 'tourl'];
-
-export default handler;
+async function shortUrl(url) {
+        let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
+        return await res.text()
+}
