@@ -32,20 +32,20 @@ const defaultMenu = {
 
 “ Hola *%name* soy *Crow*, %greeting ”
 
-┌───⊷ INFO - BOT
-┊  ☆ Cliente: %name
-┊  ☆ Exp: %exp
-┊  ☆ Estrellas: %estrellas
-┊  ☆ Nivel: %level
-┊  ☆ Rango: %role
+┌───⊷ `INFO - BOT`
+┊  👤 *Cliente:* %name
+┊  👑 *Exp:* %exp
+┊  🌟 *Estrellas:* %estrellas
+┊  🔱 *Nivel:* %level
+┊  ❤️‍🔥 *Rango:* %role
 └─────────────
 %readmore
 ┌───⊷ INFO - USER
-┊  ☆ Bot: Crow Bot - BS 
-┊  ☆ Modo: Privado VIP 
-┊  ☆ Baileys: Multi Device
-┊  ☆ Tiempo Activo: %muptime
-┊  ☆ Usuarios: %totalreg 
+┊  🤖 *Bot:* Crow Bot - BS 
+┊  💥 *Modo:* Privado VIP 
+┊  ☄️ *Baileys:* Multi Device
+┊  💫 *Tiempo Activo:* %muptime
+┊  🪐 *Usuarios:* %totalreg 
 └─────────────
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
