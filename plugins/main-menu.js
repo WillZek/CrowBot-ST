@@ -32,23 +32,21 @@ const defaultMenu = {
 
 “ Hola *%name* soy *Crow*, %greeting ”
 
-┏━━━━━━━━ *CREADOR*
-┃  ✿︎ `Niño Piña`
-┗━━━━━━━━━━━━━━
+┌───⊷ INFO - BOT
+┊  ☆ Cliente: %name
+┊  ☆ Exp: %exp
+┊  ☆ Estrellas: %estrellas
+┊  ☆ Nivel: %level
+┊  ☆ Rango: %role
+└─────────────
 %readmore
-┏━━━━━━━━ *INFO - BOT*
-┃  👤 *Cliente:* %name
-┃  👑 *Exp:* %exp
-┃  ❤️‍🔥 *Nivel:* %level
-┗━━━━━━━━━━━━━━
-%readmore
-┏━━━━━━━━━ *INFO - USER*
-┃  🤖 *Bot:* CrowBot - MD 
-┃  🔱 *Modo:* Privado VIP
-┃  ✨ *Baileys:* Multi Device
-┃  🌠 *Tiempo Activo:* %muptime
-┃  🌟 *Usuarios:* %totalreg 
-┗━━━━━━━━━━━━━━
+┌───⊷ INFO - USER
+┊  ☆ Bot: Crow Bot - BS 
+┊  ☆ Modo: Privado VIP 
+┊  ☆ Baileys: Multi Device
+┊  ☆ Tiempo Activo: %muptime
+┊  ☆ Usuarios: %totalreg 
+└─────────────
 %readmore
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ─*
 
