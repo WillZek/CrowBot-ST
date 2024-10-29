@@ -31,7 +31,7 @@ const defaultMenu = {
 
 “ Hola *%name* soy *Crow*, %greeting ”
 
-┌───⊷ INFO - BOT
+┌───⊷ *INFO - BOT*
 ┊  👤 Cliente: %name
 ┊  ❤️‍🔥 Exp: %exp
 ┊  🌟 Estrellas: %estrellas
