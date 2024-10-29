@@ -27,9 +27,8 @@ if (m.isGroup) {
 // Aquí puedes agregar tus propios GIFs de chupar pata
 let pp1 = 'https://files.catbox.moe/zuwr3w.mp4'; // Reemplaza con tus GIFs
 let pp2 = 'https://files.catbox.moe/vkllyl.mp4';
-let pp3 = 'https://files.catbox.moe/9m1nkp.mp4';
-let pp4 = 'https://files.catbox.moe/rzijb5.mp4';
-const gifs = [pp1, pp2, pp3, pp4];
+let pp3 = 'https://files.catbox.moe/es3aji.mp4';
+const gifs = [pp1, pp2, pp3];
 const gif = gifs[Math.floor(Math.random() * gifs.length)];
 // Enviamos el mensaje con el gif y el mensaje correspondiente
 let mentions = [who]; // Mencionamos al usuario que se ha citado o mencionado
