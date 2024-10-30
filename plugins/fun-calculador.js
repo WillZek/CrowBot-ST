@@ -100,7 +100,7 @@ var hawemod = [
 "《 ██████████▒▒》80%",
 "《 ████████████》100%"
 ]
-   let { key } = await conn.sendMessage(m.chat, {text: `🤍 ¡Calculando Porcentaje!`, mentions: conn.parseMention(cal)}, {quoted: fkontak})
+   let { key } = await conn.sendMessage(m.chat, {text: `[🌠] ¡Calculando Porcentaje!`, mentions: conn.parseMention(cal)}, {quoted: fkontak})
  for (let i = 0; i < hawemod.length; i++) {
    await new Promise(resolve => setTimeout(resolve, 1000)); 
    await conn.sendMessage(m.chat, {text: hawemod[i], edit: key, mentions: conn.parseMention(cal)}, {quoted: fkontak}); 
