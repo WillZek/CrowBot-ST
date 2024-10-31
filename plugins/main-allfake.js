@@ -67,7 +67,7 @@ var canal =   'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
 var git = 'https://github.com/WillZek' 
 var youtube = 'https://www.youtube.com/@ianalejandrook14' 
 var github = 'https://github.com/WillZek/CrowBot-ST' 
-var facebook = 'https://www.facebook.com/ianalejandrook13?mibextid=ZbWKwL' 
+var facebook = 'https://www.facebook.com/profile.php?id=100055985748040' 
 let tiktok = 'https://tiktok.com/@the_crow_legendario_bs'
 let correo = 'sm.ninopina10@gmail.com'
 
