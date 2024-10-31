@@ -2,7 +2,7 @@ import yts from 'yt-search';
 
 let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
 
-    if (!text) throw `🌹 Te Faltó Un Link De Un Video De Youtube.\n_(Puedes hacer una búsqueda utilizando el comando ${usedPrefix}yts)_\n _🌷.- Ejemplo:_ *${usedPrefix + command}* https://youtu.be/sBKR6aUorzA?si=TmC01EGbXUx2DUca`;
+    if (!text) throw `🌠 Te Faltó Un Link De Un Video De Youtube.\n_(Puedes hacer una búsqueda utilizando el comando ${usedPrefix}yts)_\n _🌠.- Ejemplo:_ *${usedPrefix + command}* https://youtu.be/sBKR6aUorzA?si=TmC01EGbXUx2DUca`;
 
     await conn.sendMessage(m.chat, { react: { text: '🥀', key: m.key }});
 
@@ -24,7 +24,7 @@ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, comman
     const downloadUrl = delius.data.download.url;
 
     // Crear el mensaje informativo del video/audio
-    let body = `*『 𝐘 𝐮 𝐤 𝐢 _ 𝐒 𝐮 𝐨 𝐮 - 𝐁 𝐨 𝐭 』*
+    let body = `*『 C R O W B O T - O F C』*
 
  *☊.- 𝚃𝚒́𝚝𝚞𝚕𝚘:* ${vid.title || 'Desconocido'}
  *♕.- 𝙰𝚞𝚝𝚘𝚛:* ${vid.author?.name || 'Desconocido'}
