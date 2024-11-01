@@ -237,13 +237,13 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       break
 
       case 'nsfw':
-      case 'modohorny':
+      case 'nsfw': case 'nsfwhot': case 'nsfwhorny':
        if (m.isGroup) {
          if (!(isAdmin || isOwner)) {
            global.dfail('admin', m, conn)
             throw false
            }}
-    chat.modohorny = isEnable          
+    chat.nsfw = isEnable          
     break
     default:
       if (!/[01]/.test(command)) return conn.reply(m.chat, `
