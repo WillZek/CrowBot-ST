@@ -27,7 +27,7 @@ let tags = {
 }
 
 const defaultMenu = {
-  before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
+  before: `*╭━❍☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮*
 
 “ Hola *%name* soy *Crow*, %greeting ”
 
@@ -51,8 +51,8 @@ const defaultMenu = {
 
 \t*L I S T A  -  D E  -  C O M A N D O S* 
 `.trimStart(),
-    header: '*┏━「 %category 」*',
-  body: '*┃☆›* %cmd',
+    header: '*╭━「 %category 」*',
+  body: '*┃❍›* %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
 }
