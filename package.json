@@ -24,10 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ianalejandrook15x/CrowBot-MD.git"
+    "url": "git+https://github.com/WillZek/CrowBot-ST.git"
   },
   "bugs": {
-    "url": "https://github.com/ianalejandrook15x/CrowBot-MD/issues"
+    "url": "https://github.com/WillZek/CrowBot-ST/issues"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
