@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (!text) throw m.reply(`Ingresa un link de pinterest\n*🌹 Ejemplo:* ${usedPrefix}${command} https://pin.it/1q55U8K5K`);
+    if (!text) throw m.reply(`Ingresa un link de pinterest\n*🌠 Ejemplo:* ${usedPrefix}${command} https://pin.it/1q55U8K5K`);
 
     conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 
@@ -30,7 +30,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const link = gyh.data.url || "Enlace no disponible";
-    const message = `*✧ Link del video:* ${link}\n\n> ♡⃝𝒴𝓊𝑘𝒾_𝒮𝓊𝑜𝓊-𝐵𝑜𝓉ᚐ҉ᚐ`;
+    const message = `*✧ Link del video:* ${link}\n\n> ♡⃝CrowBotᚐ҉ᚐ`;
 
     try {
         // Enviar el video con solo el enlace y la firma
