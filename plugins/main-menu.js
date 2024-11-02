@@ -9,6 +9,7 @@ let tags = {
   'fun': 'JUEGOS 💛',
   'serbot': 'SUB BOTS 💛',
   'rpg': 'RPG 💛',
+  'gacha': 'ROLLWAIFUS 💛',
   'rg': 'REGISTRO 💛',
   'xp': 'EXP 💛',
   'sticker': 'STICKERS 💛',
