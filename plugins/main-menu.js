@@ -30,7 +30,7 @@ let tags = {
 const defaultMenu = {
   before: `*╭━❍☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮*
 
-“ *¡Hola!* *%name* *soy* *Crow*, %greeting ”
+“ *¡Hola! %name soy Crow*, *%greeting* ”
 
 ┌───⊷ *INFO - BOT*
 ┊  👤 *Cliente:* %name
