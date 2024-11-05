@@ -46,7 +46,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 <summary><b> 💣 Grupo Oficial</b></summary>
 
 
-* Toca la imagen de arriba ✨
+* Toca El Botón De Arriba✨
 
 ## <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Grupo" width="45" height="43"> 
 
