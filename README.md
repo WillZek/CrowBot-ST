@@ -66,9 +66,6 @@ href="https://chat.whatsapp.com/HAt711AdgXFG1BI9FIACKr?text="><img src="https://
 
 <a href="https://github.com/ianalejandrook15x"><img src="https://github.com/ianalejandrook15x.png" width="100" height="100" alt="ale-rmz"/></a>
 
-<script 
-type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support me on Ko-fi', '#72a4f2', 'P5P415OGVV');kofiwidget2.draw();</script> 
-
 ### **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
 <a
 href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" width="130" height="130" alt="WillZek"/></a>
