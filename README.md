@@ -48,7 +48,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 <summary><b> 💣 Contáctos</b></summary>
 
 - **Propietario:** [`Aquí`](https:/Wa.me/50557865603)
--
+
 
  
 ### 💛 𝙂𝙍𝙐𝙋𝙊 𝙊𝙁𝙄𝘾𝙄𝘼𝙇
