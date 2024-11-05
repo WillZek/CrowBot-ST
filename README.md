@@ -38,9 +38,15 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 * https://wa.me/50557865603
 
  
-### 💛 𝙂𝙍𝙐𝙋𝙊𝙎 𝙊𝙁𝙄𝘾𝙄𝘼𝙇
+### 💛 𝙂𝙍𝙐𝙋𝙊 𝙊𝙁𝙄𝘾𝙄𝘼𝙇
 
 <a href="https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu?text=.menu"><img alt="Grupo Oficial 💛" src="https://img.shields.io/badge/Grupo - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+
+<details>
+<summary><b> 💣 Grupo Oficial</b></summary>
+
+
+* Toca la imagen de arriba ✨
 
 ## <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Grupo" width="45" height="43"> 
 
