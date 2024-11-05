@@ -51,14 +51,19 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 - **Propietario:** [`Aquí`](https:/Wa.me/50557865603)
 
-
+___
  
 ### 💛 `OFC CROWBOT`
 
+> CANAL Y GRUPO DEL BOT
+
 <a href="https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu?text=.menu"><img alt="Grupo Oficial 💛" src="https://img.shields.io/badge/Grupo - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+
+___
 
 <a href="https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d?text=.menu"><img alt="Canal Oficial 💛" src="https://img.shields.io/badge/Canal - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
+___
 
 ### **`TK HOST 📲`**
 <a href="https://dash.tk-joanhost.com"><img src="https://i.ibb.co/pr8TnWJ/SAVE-20240915-183758.jpg" height="125px"></a>
