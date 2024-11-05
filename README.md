@@ -35,6 +35,8 @@ ___
 
 </details>
 
+___
+
 #### Creador: Niño Piña 🫅
 #### Realizado con: B̷r̷a̷w̷l̷i̷g̷h̷t̷s̷ T̷e̷a̷m̷ 💛
 
