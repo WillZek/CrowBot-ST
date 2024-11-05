@@ -65,11 +65,6 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 ## <img src="https://i.pinimg.com/originals/19/80/6e/19806e91932e6054965fc83b85241270.gif" alt="Grupo" width="45" height="43"> 
 
-### GRUPO DE VENTAS
-
-<a
-href="https://chat.whatsapp.com/HAt711AdgXFG1BI9FIACKr?text="><img src="https://files.catbox.moe/oit4rg.jpg" height="125px"></a>
-
 ### 𝗖𝗔𝗡𝗔𝗟 𝗢𝗙𝗜𝗖𝗜𝗔𝗟 💛
 
 <a href="https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d?text=.menu"><img alt="Canal Oficial 💛" src="https://img.shields.io/badge/Canal - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
