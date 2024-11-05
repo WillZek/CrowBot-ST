@@ -22,6 +22,19 @@ ___
 <a href="#"><img title="CrowBot" src="https://img.shields.io/badge/🐦‍🔥𝑪𝑹𝑶𝑾𝑩𝑶𝑻💛 | 𝑵𝑰𝑁̃𝑶 𝑷𝑰𝑁̃𝑨💛 | 𝑩𝑹𝑨𝑾𝑳 𝑺𝑻𝑨𝑹𝑺💛-black?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
 
+### **`Informacion Importante 🌠`**
+<a href="https://www.atom.bio/crowbot-md"><img src="https://qu.ax/LujDk.jpg" height="125px"></a>
+
+<details>
+ <summary><b>:paperclip: Links Importantes</b></summary>
+
+- **Grupo De Ventas:** [`Aquí`](https://chat.whatsapp.com/KfcT8ReqiJW93g17vSXVpf)
+- **Comunidad Oficial:** [`Aquí`](https://chat.whatsapp.com/BZ87KB4Igab3lCw6DAwPCR)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d)
+- **Propietario Del Bot:** [`Aqui`](https:/Wa.me/50557865603)
+
+</details>
+
 #### Creador: Niño Piña 🫅
 #### Realizado con: B̷r̷a̷w̷l̷i̷g̷h̷t̷s̷ T̷e̷a̷m̷ 💛
 
