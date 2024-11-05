@@ -31,6 +31,11 @@ ___
 <a
 href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7.jpg" height="125px"></a>
 
+details>
+<summary><b> 🌠 Contáctos</b></summary>
+
+* https://wa.me/50557865603
+
  
 ### 💛 𝙂𝙍𝙐𝙋𝙊𝙎 𝙊𝙁𝙄𝘾𝙄𝘼𝙇
 
