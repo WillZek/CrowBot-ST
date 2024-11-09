@@ -15,6 +15,10 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • Destroy
 🫂 *Rol:* Editor
 🚩 *Número:* Wa.me/584120346669
+
+• Prak Harper 
+🫂 *Rol:* Amigo
+🚩 *Número:* Wa.me/584241836217
 `
 await conn.sendFile(m.chat, icons, 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
