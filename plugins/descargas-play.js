@@ -17,7 +17,7 @@ let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, comman
   let dl_url = await (isVideo ? yt.video[q].download() : yt.audio[q].download())
   let title = await yt.title
   let size = await (isVideo ? yt.video[q].fileSizeH : yt.audio[q].fileSizeH)
-   let play = `*『  𝙰 𝙱 𝚂 𝚃 𝚁 𝙰 𝙲 𝚃 - 𝙰 𝙻 𝙻  ł  𝙳 . 𝙻  』*\n\n *☊.- 𝚃𝚒́𝚝𝚞𝚕𝚘: ${vid.title}*\n *🜚.- 𝚅𝚒𝚜𝚝𝚊𝚜:* ${vid.views}\n *🝓.- 𝙵𝚎𝚌𝚑𝚊 𝚍𝚎 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚌𝚒𝚘́𝚗: ${vid.ago}*\n *🜵.- 𝙳𝚞𝚛𝚊𝚌𝚒𝚘́𝚗: ${vid.timestamp}*\n\n \`\`\`🜲.- 𝙳𝚎𝚜𝚌𝚛𝚒𝚙𝚌𝚒𝚘́𝚗:\n${vid.description}\`\`\``
+   let play = `*『  C R O W - P L A Y  ł  𝙳 . 𝙻  』*\n\n *☊.- 𝚃𝚒́𝚝𝚞𝚕𝚘: ${vid.title}*\n *🜚.- 𝚅𝚒𝚜𝚝𝚊𝚜:* ${vid.views}\n *🝓.- 𝙵𝚎𝚌𝚑𝚊 𝚍𝚎 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚌𝚒𝚘́𝚗: ${vid.ago}*\n *🜵.- 𝙳𝚞𝚛𝚊𝚌𝚒𝚘́𝚗: ${vid.timestamp}*\n\n \`\`\`🜲.- 𝙳𝚎𝚜𝚌𝚛𝚒𝚙𝚌𝚒𝚘́𝚗:\n${vid.description}\`\`\``
 
 
 conn.sendFile(m.chat, vid.thumbnail, 'play', play, m)
