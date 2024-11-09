@@ -19,6 +19,10 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • Prak Harper 
 🫂 *Rol:* Amigo
 🚩 *Número:* Wa.me/584241836217
+
+• Ian El Guapo🥵🔥 
+🫂 *Rol:* Amigo
+🚩 *Número:* Wa.me/5493876639332
 `
 await conn.sendFile(m.chat, icons, 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
