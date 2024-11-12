@@ -12,13 +12,13 @@ let handler = async (m, { args, command, usedPrefix }) => {
 
   // Verificar si el tipo de archivo es una imagen
   if (!mime.startsWith('image/')) {
-    throw `✳️ Por favor, envía una imagen.`;
+    throw `🌠 Por favor, envía una imagen.`;
   }
 
   // Verificar que se haya proporcionado un texto
   if (!args[0]) {
     // Enviar mensaje pidiendo un texto
-    return m.reply(`\`\`\`[ 🌺 ] Ingresa un texto para guardar la imagen. Ejemplo:\n${usedPrefix + command} Yuki\`\`\``);
+    return m.reply(`\`\`\`[ 🌠 ] Ingresa un texto para guardar la imagen. Ejemplo:\n${usedPrefix + command} Crow\`\`\``);
   }
 
   try {
