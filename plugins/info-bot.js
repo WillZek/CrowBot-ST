@@ -78,7 +78,7 @@ if (/^Bot en decadencia/i.test(m.text)) {
 conn.reply(m.chat, `*Calla 🍆🥵*`, m, rcanal, )
 }
 
-if (/^Niño Piña|niño|piña/i.test(m.text)) {
+if (/^WillZek/i.test(m.text)) {
 conn.reply(m.chat, `*Niño Piña Es Mi Creador, Respeta!*`, m, rcanal, )
 }
 
