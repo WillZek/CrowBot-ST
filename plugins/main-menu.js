@@ -40,6 +40,9 @@ const defaultMenu = {
 ┊  🌠 *Rango:* %role
 ┗━━━━━━━━━━━━━━
 %readmore
+*Sigan El Canal*
+> https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
+%readmore
 ┏━━━━━━━━ *INFO - USER*
 ┊  🤖 *Bot:* Crow Bot - BS 
 ┊  🔱 *Modo:* Privado VIP 
