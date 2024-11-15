@@ -31,6 +31,8 @@ const defaultMenu = {
   before: `*╭━❍☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮*
 
 “ *¡Hola! %name soy Crow*, *%greeting* ”
+*Sigue El Canal*
+https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 
 ┏━━━━━━━━ *INFO - BOT*
 ┊  👤 *Cliente:* %name
@@ -39,9 +41,6 @@ const defaultMenu = {
 ┊  👑 *Nivel:* %level
 ┊  🌠 *Rango:* %role
 ┗━━━━━━━━━━━━━━
-%readmore
-*Sigan El Canal*
-https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 %readmore
 ┏━━━━━━━━ *INFO - USER*
 ┊  🤖 *Bot:* Crow Bot - BS 
