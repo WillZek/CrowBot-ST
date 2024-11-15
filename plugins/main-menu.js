@@ -32,7 +32,7 @@ const defaultMenu = {
 
 “ *¡Hola! %name soy Crow*, *%greeting* ”
 
-`Sigue El Canal`
+*Sigue El Canal*
 https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 
 ┏━━━━━━━━ *INFO - BOT*
