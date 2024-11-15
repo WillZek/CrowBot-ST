@@ -3,7 +3,8 @@ if (!text) throw '⚠ *_️Ingrese la sugerencia que desea enviar._*'
 if (text.length < 10) throw '⚠️ *_Especifique bien la sugerencia, mínimo 10 caracteres._*'
 if (text.length > 1000) throw '⚠️ *_Máximo 1000 caracteres para enviar la sugerencia._*'
 const teks = `╭───────────────────\n│⊷〘 *S U G E R E N C I A* 🌟 〙⊷\n├───────────────────\n│⁖🧡꙰  *Cliente:*\n│✏️ Wa.me/${m.sender.split`@`[0]}\n│\n│⁖💚꙰  *Mensaje:*\n│📩 ${text}\n╰───────────────────`
-await conn.reply('https://chat.whatsapp.com/HFYmBzD7MJvLwXpr5CmUqF', m.quoted ? teks + m.quoted.text : teks, m, { mentions: conn.parseMention(teks) })
+// Aquí se envía el mensaje al grupo
+await conn.sendMessage('HFYmBzD7MJvLwXpr5CmUqF@g.us', teks, { mentions: conn.parseMention(teks) })
 m.reply('⚠️ *_La sugerencia se envió al grupo, gracias por colaborar!_*')
 }
 handler.help = ['sugerir']
