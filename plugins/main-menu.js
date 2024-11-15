@@ -31,7 +31,8 @@ const defaultMenu = {
   before: `*╭━❍☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮*
 
 “ *¡Hola! %name soy Crow*, *%greeting* ”
-*Sigue El Canal*
+
+`Sigue El Canal`
 https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 
 ┏━━━━━━━━ *INFO - BOT*
