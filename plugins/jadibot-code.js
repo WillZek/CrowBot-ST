@@ -183,7 +183,7 @@ serbot()
 }
 handler.help = ['code']
 handler.tags = ['Jadibot']
-handler.command = ['code', 'crow--code']
+handler.command = ['code', 'crow--code', 'crow --code']
 handler.rowner = false
 
 export default handler
