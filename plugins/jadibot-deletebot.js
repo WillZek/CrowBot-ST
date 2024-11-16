@@ -13,7 +13,7 @@ await fs.rmdir("./CrowJadiBot/" + uniqid, { recursive: true, force: true })
 await parentw.sendMessage(m.chat, { text: '🚩 Sub-Bot eliminado.' }, { quoted: fkontak })
 } catch(err) {
 if (err.code === 'ENOENT' && err.path === `./CrowJadiBot/${uniqid}`) {
-await parentw.sendMessage(m.chat, { text: "🌸 No cuentas con ninguna sesión de Sub-Bot." }, { quoted: fkontak })
+await parentw.sendMessage(m.chat, { text: "🌠 No cuentas con ninguna sesión de Sub-Bot." }, { quoted: fkontak })
 } else {
 await m.react(error)
 }}}
