@@ -1,21 +1,17 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-// Verifica si se ingresó texto
-if (!text) throw '⚠ *_️Ingrese la sugerencia que desea enviar._*';
-// Verifica la longitud del texto
-if (text.length < 10) throw '⚠️ *_Especifique bien la sugerencia, mínimo 10 caracteres._*';
-if (text.length > 1000) throw '⚠️ *_Máximo 1000 caracteres para enviar la sugerencia._*';
-// Formatea el mensaje de la sugerencia
-const teks = `╭───────────────────\n│⊷〘 *S U G E R E N C I A* 🌟 〙⊷\n├───────────────────\n│⁖🧡꙰  *Cliente:*\n│✏️ Wa.me/${m.sender.split`@`[0]}\n│\n│⁖💚꙰  *Mensaje:*\n│📩 ${text}\n╰───────────────────`;
-// Envía el mensaje al grupo
-try {
-await conn.sendMessage('HFYmBzD7MJvLwXpr5CmUqF@g.us', teks, { mentions: conn.parseMention(teks) });
-m.reply('⚠️ *_La sugerencia se envió al grupo, gracias por colaborar!_*');
-} catch (error) {
-console.error(error);
-m.reply('⚠️ *_Ocurrió un error al enviar la sugerencia, intenta de nuevo._*');
+    if (!text) return conn.reply(m.chat, '🌠 Que comando quieres sugerir?', m)
+    if (text.length < 10) return conn.reply(m.chat, '🌠 La sugerencia debe ser mas de 10 character.', m)
+    if (text.length > 1000) return conn.reply(m.chat, '🌠 Maximo de la sugerencia es de 1000 character.', m)
+    const teks = `🌠 Sugerencia de un nuevo comando del usuario *${nombre}*
+
+🛡️ Comando Sugerido:
+> ${text}`
+    await conn.reply('50557865603@s.whatsapp.net', m.quoted ? teks + m.quoted.text : teks, m, { mentions: conn.parseMention(teks) })
+
+    m.reply('🌠 La sugerencia se envió a mi propietario.')
 }
-}
-handler.help = ['sugerir'];
-handler.tags = ['info'];
-handler.command = /^(sugerir|sugerencia)$/i;
-export default handler;
+handler.help = ['sugerencia']
+handler.tags = ['info']
+handler.command = ['sugerencia', 'sug']
+
+export default handler
