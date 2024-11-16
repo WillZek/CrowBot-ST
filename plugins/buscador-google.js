@@ -3,7 +3,7 @@ import axios from 'axios';
 const handler = async (m, {conn, command, args}) => {
   const fetch = (await import('node-fetch')).default;
   const text = args.join` `;
-  if (!text) return conn.reply(m.chat, '*[ 💠 ] Complementa tu petición con alguna frase para iniciar la búsqueda.*', m);
+  if (!text) return conn.reply(m.chat, '*[🌠] Complementa tu petición con alguna frase para iniciar la búsqueda.*', m);
   const url = 'https://google.com/search?q=' + encodeURIComponent(text);
   const search = await googleIt(text);
   const msg = search.articles.map(({title, url, description}) => {
