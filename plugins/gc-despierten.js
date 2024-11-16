@@ -6,7 +6,7 @@ m.react('🌞');
 const message = "Levántense webones🥵";
 if (m.isGroup) {
 // URL del sticker
-const stickerUrl = 'https://i.ibb.co/g4MHfC3/crow.webp';
+const stickerUrl = 'https://files.catbox.moe/z7w5t1.webp';
 // Envía el mensaje
 await conn.sendMessage(m.chat, { text: message }, { quoted: m });
 // Envía el sticker
