@@ -269,8 +269,10 @@ ${usedPrefix + command} detect
 ${usedPrefix + command} delete
 ${usedPrefix + command} antitraba
 ${usedPrefix + command} modoadmin 
-${usedPrefix + command} antiarabes 
+${usedPrefix + command} antiarabes
+${usedPrefix + command} autoaceptar
 ${usedPrefix + command} antilink`, m, rcanal)
+
       throw false
   }
   conn.reply(m.chat, `[🌠] La función *${type}* se *${isEnable ? 'activó' : 'desactivó'}* ${isAll ? 'para este Bot' : isUser ? '' : 'para este chat'}`, m, rcanal)
