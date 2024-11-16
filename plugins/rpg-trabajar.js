@@ -17,7 +17,7 @@ user.exp += rsl
 
 handler.help = ['trabajar']
 handler.tags = ['rpg']
-handler.command = ['w','work', 'trabajar']
+handler.command = ['w','work', 'trabajar', 'chambear', 'chamba']
 handler.register = true 
 export default handler
 
