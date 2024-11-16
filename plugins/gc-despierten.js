@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
 // React con un emoji al mensaje
 m.react('🌞');
 // Mensaje que se enviará
-const message = "⏰*DESPERTADOR*⏰Levántense webones💪🥵";
+const message = "⏰*DESPERTADOR*⏰ Levántense webones 💪🥵";
 if (m.isGroup) {
 // URL del sticker
 const stickerUrl = 'https://files.catbox.moe/z7w5t1.webp';
