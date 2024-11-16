@@ -6,11 +6,12 @@ m.react('🌞');
 // Mensaje que se enviará
 const message = "Levántense webones🥵";
 if (m.isGroup) {
-// Aquí puedes poner la URL del sticker que deseas enviar
-const stickerUrl = 'https://i.ibb.co/g4MHfC3/crow.webp'; // Reemplaza con la URL del sticker que quieres usar
-// Envía el mensaje y el sticker
+// Aquí puedes poner la ruta del sticker que deseas enviar
+const stickerPath = 'https://i.ibb.co/g4MHfC3/crow.webp'; // Reemplaza con la ruta o URL del sticker
+// Envía el mensaje
 await conn.sendMessage(m.chat, { text: message }, { quoted: m });
-await conn.sendMessage(m.chat, { url: stickerUrl }, { sendMediaAsSticker: true });
+// Envía el sticker
+await conn.sendMessage(m.chat, { sticker: fs.readFileSync(stickerPath) }, { quoted: m });
 }
 }
 handler.help = ['despertar'];
