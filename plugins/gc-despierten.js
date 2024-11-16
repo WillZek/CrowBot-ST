@@ -5,12 +5,12 @@ m.react('🌞');
 // Mensaje que se enviará
 const message = "⏰*DESPERTADOR*⏰ Levántense webones 💪🥵";
 if (m.isGroup) {
-// URL del sticker
-const stickerUrl = 'https://files.catbox.moe/z7w5t1.webp';
+// URL del vídeo
+const videoUrl = 'https://files.catbox.moe/xss6jx.mp4'; // Cambia esta URL por la del vídeo que deseas enviar
 // Envía el mensaje
 await conn.sendMessage(m.chat, { text: message }, { quoted: m });
-// Envía el sticker
-await conn.sendMessage(m.chat, { image: { url: stickerUrl }, caption: message }, { sendMediaAsSticker: true });
+// Envía el vídeo
+await conn.sendMessage(m.chat, { video: { url: videoUrl }, caption: message }, { mimetype: 'video/mp4' });
 }
 }
 handler.help = ['despertar'];
