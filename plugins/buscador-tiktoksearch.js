@@ -2,7 +2,7 @@ import axios from 'axios'
 const {proto, generateWAMessageFromContent, prepareWAMessageMedia, generateWAMessageContent, getDevice} = (await import("@whiskeysockets/baileys")).default
 
 let handler = async (message, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(message.chat, '🍟 *¿Que quieres buscar en tiktok?*', message, rcanal)
+if (!text) return conn.reply(message.chat, '🌠 *¿Que quieres buscar en tiktok?*', message, rcanal)
 async function createVideoMessage(url) {
 const { videoMessage } = await generateWAMessageContent({ video: { url } }, { upload: conn.waUploadToServer })
 return videoMessage
@@ -18,7 +18,7 @@ await message.react(rwait)
 conn.reply(message.chat, '🚩 *Descargando Su Video...*', message, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
-body: dev,
+body: wm,
 previewType: 0, thumbnail: icons,
 sourceUrl: channel }}})
 let results = []
@@ -29,7 +29,7 @@ let selectedResults = searchResults.splice(0, 7)
 for (let result of selectedResults) {
 results.push({
 body: proto.Message.InteractiveMessage.Body.fromObject({ text: null }),
-footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: dev }),
+footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: textbot }),
 header: proto.Message.InteractiveMessage.Header.fromObject({
 title: '' + result.title,
 hasMediaAttachment: true,
@@ -56,8 +56,8 @@ await conn.reply(message.chat, error.toString(), message)
 }}
 
 handler.help = ['tiktoksearch <txt>']
-handler.cookies = 1
+handler.estrellas = 1
 handler.register = true
 handler.tags = ['buscador']
-handler.command = ['tiktoksearch', 'tiktoks', 'tts']
+handler.command = ['tiktoksearch', 'tts', 'tiktoks']
 export default handler
