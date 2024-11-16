@@ -1,3 +1,4 @@
+// Código Hecho Por Niño Piña wa.me/50557865603
 let handler = async (m, { conn }) => {
 // React con un emoji al mensaje
 m.react('🌞');
