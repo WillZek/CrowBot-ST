@@ -1,29 +1,28 @@
-
 const handler = async (m, {isPrems, conn}) => {
   const time = global.db.data.users[m.sender].lastcofre + 86400000; // 36000000 10 Horas //86400000 24 Horas
   if (new Date - global.db.data.users[m.sender].lastcofre < 86400000) throw `🎁 Ya Reclamastes Tu Cofre\n⏰️Regresa En: *${msToTime(time - new Date())}* Para Volver A Reclamar`;
 
-  const img = 'https://i.pinimg.com/originals/51/1d/0e/511d0eb41f196d12c7961578717e41ef.jpg';
+  const img = 'https://telegra.ph/file/62ba6688963b0ad407edd.png';
   const dia = Math.floor(Math.random() * 30);
   const tok = Math.floor(Math.random() * 10);
-  const luffy = Math.floor(Math.random() * 4000);
+  const ai = Math.floor(Math.random() * 4000);
   const expp = Math.floor(Math.random() * 5000);
 
-  global.db.data.users[m.sender].estrellas += dia;
-  global.db.data.users[m.sender].money += CrowBot;
+  global.db.data.users[m.sender].cookies += dia;
+  global.db.data.users[m.sender].money += ai;
   global.db.data.users[m.sender].joincount += tok;
   global.db.data.users[m.sender].exp += expp;
 
   const texto = `
 ╭━〔 ${global.botname} 〕⬣
-┃🌠 *Obtienes Un Cofre*
+┃🧰 *Obtienes Un Cofre*
 ┃ ${saludo}
 ╰━━━━━━━━━━━━⬣
 
 ╭━〔 ${global.botname} 〕⬣
-┃ *${dia} Dolares* 💵
+┃ *${dia} Cookies* 🍪
 ┃ *${tok} Tokens* 💰
-┃ *${CrowBot} CrowCoins* 💸
+┃ *${ai} CrowCoins* 🪙
 ┃ *${expp} Exp* ⚡
 ╰━━━━━━━━━━━━⬣`;
 
@@ -42,14 +41,16 @@ const handler = async (m, {isPrems, conn}) => {
     'participant': '0@s.whatsapp.net',
   };
 
-  await conn.sendFile(m.chat, img, 'nino.jpg', texto, fkontak);
+  await conn.sendFile(m.chat, img, 'yoshiko.jpg', texto, fkontak);
   // await conn.sendButton(m.chat, texto, wm, img, [['🔰 𝙼𝙴𝙽𝚄', '/menu'] ], fkontak, m)
   global.db.data.users[m.sender].lastcofre = new Date * 1;
 };
-handler.help = ['daily'];
-handler.tags = ['xp'];
+handler.help = ['cofre'];
+handler.tags = ['rpg'];
 handler.command = ['coffer', 'cofre', 'abrircofre', 'cofreabrir'];
 handler.level = 5;
+handler.group = true;
+handler.register = true
 export default handler;
 
 function pickRandom(list) {
