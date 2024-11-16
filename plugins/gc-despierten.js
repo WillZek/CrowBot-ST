@@ -10,7 +10,7 @@ const stickerUrl = 'https://files.catbox.moe/z7w5t1.webp';
 // Envía el mensaje
 await conn.sendMessage(m.chat, { text: message }, { quoted: m });
 // Envía el sticker
-await conn.sendMessage(m.chat, { url: stickerUrl }, { sendMediaAsSticker: true });
+await conn.sendMessage(m.chat, { image: { url: stickerUrl }, caption: message }, { sendMediaAsSticker: true });
 }
 }
 handler.help = ['despertar'];
