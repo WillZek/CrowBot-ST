@@ -2,7 +2,7 @@ const handler = async (m, {isPrems, conn}) => {
   const time = global.db.data.users[m.sender].lastcofre + 86400000; // 36000000 10 Horas //86400000 24 Horas
   if (new Date - global.db.data.users[m.sender].lastcofre < 86400000) throw `🎁 Ya Reclamastes Tu Cofre\n⏰️Regresa En: *${msToTime(time - new Date())}* Para Volver A Reclamar`;
 
-  const img = 'https://files.catbox.moe/p44sem.jpg';
+  const img = 'https://i.ibb.co/8K9WNRy/crow.png';
   const dia = Math.floor(Math.random() * 30);
   const tok = Math.floor(Math.random() * 10);
   const ai = Math.floor(Math.random() * 4000);
