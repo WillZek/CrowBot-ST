@@ -12,7 +12,7 @@ let texto = ` \`\`\`
     ✦ 𝐏𝐚𝐜𝐤𝐚𝐠𝐞 : ⇢ ${packe} 📦
     ✦ 𝐀𝐜𝐭𝐮𝐚𝐥𝐢𝐳𝐚𝐝𝐨 : ⇢ ${lastUpdate} 🗓️
     
-## Su aplicación se enviará en un momento . . .
+## Su aplicación se enviará en un momento, *reportar número manda cp +51 928 215 461* . . .
 
    - ${wm} -          
 \`\`\`     
