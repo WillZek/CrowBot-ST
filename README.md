@@ -1,6 +1,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Bienvenidos%20-%20Crow%20Bot%20💛&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
-> `⌛ Versión Actual: 1.4.0`
+> **`⌛ Versión Actual: 1.4.0`**
 
 ## 💛 **`C R O W - B O T`**
 
@@ -92,6 +92,8 @@ ___
 
 ### **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
 ![https://github.com/WillZek](https://files.catbox.moe/p44sem.jpg)
+
+> **`Solo Escribir Para Cosas Importantes`**
 
 <details>
  <summary><b>:paperclip: Contactos</b></summary>
