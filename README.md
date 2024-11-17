@@ -24,6 +24,7 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 <a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | NIÑO PIÑA💛 | STARCORE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
 ---
+
 ### **`Informacion Importante De CrowBot 🌠`**
 
 ![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
