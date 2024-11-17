@@ -96,7 +96,7 @@ ___
 <a
 href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" width="130" height="130" alt="WillZek"/></a>
 
-> Copyright (c) 2024 **[WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)**.
+> Copyright (c) 2024 ![WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)
 
 **`¡GRACIAS POR PREFERIR CROWBOT!` 💛**
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer&text=Espero%20Hayas%20Disfrutado%20El%20Repositorio&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/>
