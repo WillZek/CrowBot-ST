@@ -65,7 +65,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 > **CANAL Y GRUPO DEL BOT**
 
-<a href="https://www.atom.bio/crowbot-md"><img src="https://qu.ax/LgBRM.jpg" height="125px"></a>
+![Informacion](https://qu.ax/LgBRM.jpg)
 
 
 <a href="https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu?text=.menu"><img alt="Grupo Oficial 💛" src="https://img.shields.io/badge/Grupo - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
