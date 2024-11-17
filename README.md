@@ -87,7 +87,7 @@ ___
 </details>
 
 
-### 🐦‍🔥**`COLABORADORES`**
+### 🐦‍🔥 **`COLABORADORES`**
 
 <a href="https://github.com/ianalejandrook15x"><img src="https://github.com/ianalejandrook15x.png" width="100" height="100" alt="ale-rmz"/></a>
 
