@@ -5,7 +5,7 @@
 ## 💛 **`C R O W - B O T`**
 
 ![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
-
+___
 <a
 href="ninopina10@gmail.com" target="Black"><img
 src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" />
@@ -25,7 +25,7 @@ ___
 
 <a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | NIÑO PIÑA💛 | STARCORE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
-
+---
 ### **`Informacion Importante De CrowBot 🌠`**
 
 ![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
