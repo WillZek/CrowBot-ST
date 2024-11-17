@@ -67,9 +67,9 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 ![Informacion](https://qu.ax/LgBRM.jpg)
 
 
-<a href="https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu?text=.menu"><img alt="Grupo Oficial 💛" src="https://img.shields.io/badge/Grupo - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+<a href="https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX?text=.menu"><img alt="Grupo Oficial 💛" src="https://img.shields.io/badge/Grupo - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
-<a href="https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d?text=.menu"><img alt="Canal Oficial 💛" src="https://img.shields.io/badge/Canal - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+<a href="https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d"><img alt="Canal Oficial 💛" src="https://img.shields.io/badge/Canal - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 
 ___
 
