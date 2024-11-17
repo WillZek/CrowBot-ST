@@ -59,9 +59,9 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 ---
  
-### 💛 `OFC CROWBOT`
+### 💛 **`OFC CROWBOT`**
 
-> CANAL Y GRUPO DEL BOT
+> **CANAL Y GRUPO DEL BOT**
 
 <a href="https://www.atom.bio/crowbot-md"><img src="https://qu.ax/LgBRM.jpg" height="125px"></a>
 
