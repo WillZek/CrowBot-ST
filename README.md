@@ -42,8 +42,8 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 
 ___
 
-#### **`Creador: Niño Piña 🫅`**
-#### Realizado con:【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】💛
+#### **`Creador: Niño Piña 🤴`**
+#### Realizado con:【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】
 
 ### **`CONTACTOS 💻`**
 <p>
