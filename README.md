@@ -6,6 +6,10 @@
 
 ![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
 
+<a
+href="ninopina10@gmail.com" target="Blue"><img
+src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" />
+
 
 
 <p align="center">
