@@ -6,12 +6,6 @@
 
 ![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
 ___
-<a
-href="ninopina10@gmail.com" target="Black"><img
-src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" />
-
-
-
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?lines= WillZek+lanzó ;Nueva+versión+1.1.0 ; By:+StarCore+Team;CrowBot+El+Mejor+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
 </p>
@@ -20,7 +14,11 @@ ___
 
 <a href="https://www.atom.bio/crowbot-md/">
 <img src="https://img.shields.io/badge/CrowBot_Accounts-000000%7D?style=for-the-badge&logo=biolink&logoColor=white">
-</a>
+</a> <a
+href="ninopina10@gmail.com" target="Black"><img
+src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" />
+
+
 
 
 <a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | NIÑO PIÑA💛 | STARCORE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
