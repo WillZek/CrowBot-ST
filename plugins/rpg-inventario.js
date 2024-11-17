@@ -42,7 +42,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 
     let text = `╭━〔 Inventario de ${name} 〕⬣\n` +
                `┋ ⭐ *Estrellasen Cartera:* ${user.estrellas || 0} 🍪\n` +  // Cookies
-               `┋ 🏦 *Cookies en Banco:* ${user.bank || 0} 🍪\n` +  // Cookies en banco
+               `┋ 💸 *Dólares en Banco:* ${user.bank || 0} 🍪\n` +  // Cookies en banco
                `┋ 💎 *Esmeraldas:* ${user.emerald || 0}\n` +  // Esmeraldas
                `┋ 🔩 *Hierro:* ${user.iron || 0}\n` +  // Hierro
                `┋ 🏅 *Oro:* ${user.gold || 0}\n` +  // Oro
