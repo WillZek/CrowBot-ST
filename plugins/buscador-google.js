@@ -1,3 +1,8 @@
+/*
+ ✨ DERECHOS RESERVADOS DEL AUTOR ✨
+- WillZek (@NiñoPiña)
+*/
+
 import { googleIt } from '@bochilteam/scraper';
 import axios from 'axios';
 const handler = async (m, {conn, command, args}) => {
