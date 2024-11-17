@@ -13,7 +13,7 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com/?lines= WillZek+lanzó ;Nueva+versión+1.1.0 ; By:+Niño Piña ; y+𝐁𝐫𝐚𝐰𝐥𝐢𝐠𝐡𝐭𝐬+𝐓𝐞𝐚𝐦;CrowBot+El+Mejor+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
+  <img src="https://readme-typing-svg.demolab.com/?lines= WillZek+lanzó ;Nueva+versión+1.1.0 ; By:+Niño Piña ; y+Brawlight+Team;CrowBot+El+Mejor+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
 </p>
 
 ___
@@ -23,7 +23,7 @@ ___
 </a>
 
 
-<a href="#"><img title="CrowBot" src="https://img.shields.io/badge/🐦‍🔥𝑪𝑹𝑶𝑾𝑩𝑶𝑻💛 | 𝑵𝑰𝑁̃𝑶 𝑷𝑰𝑁̃𝑨💛 | 𝑩𝑹𝑨𝑾𝑳 𝑺𝑻𝑨𝑹𝑺💛-black?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
+<a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | NIÑO PIÑA💛 | STARCORE 💛-black?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
 
 ### **`Informacion Importante De CrowBot 🌠`**
