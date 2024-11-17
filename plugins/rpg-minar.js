@@ -18,7 +18,7 @@ let info = `⛏️ *Te has adentrando en lo profundo de las cuevas*
 🔩 *Hierro*: ${iron}
 🏅 *Oro*: ${gold}
 🕋 *Carbón*: ${coal}
-💸 *Dolares*: ${stone}`
+💸 *Dolares*: ${count}`
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '⚒️ *Minando.. - CrowBot* ✨', 'status@broadcast' )
 await m.react('⛏️')
@@ -30,7 +30,7 @@ user.iron += iron
 user.gold += gold
 user.emerald += emerald
 user.coal += coal
-user.bank += stone
+user.bank += count
 user.lastmiming = new Date * 1
 }
 
