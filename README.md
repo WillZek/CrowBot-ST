@@ -28,7 +28,7 @@ ___
 
 ### **`Informacion Importante De CrowBot 🌠`**
 
-![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)href="https://www.atom.bio/crowbot-md"><img src="https://qu.ax/LujDk.jpg" height="125px"></a>
+![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
 
 <details>
  <summary><b>:paperclip: Links Importantes</b></summary>
