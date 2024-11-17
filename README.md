@@ -96,6 +96,11 @@ ___
 <a
 href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" width="130" height="130" alt="WillZek"/></a>
 
+<details>
+ <summary><b>:paperclip: Contactos</b></summary>
+
+- **Numero:** [`Aquí`](https://wa.me/50557865603?text=Vengo+De+Github)
+
 > Copyright (c) 2024 **[WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)**.
 
 **`¡GRACIAS POR PREFERIR CROWBOT!` 💛**
