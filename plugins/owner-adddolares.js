@@ -11,18 +11,18 @@ let handler = async (m, { conn, text }) => {
     if (!txt) return m.reply('⚠️️ Ingrese la cantidad de *Dolares* que quiere añadir')
     if (isNaN(txt)) return m.reply('⚠️ *sólo números*')
     let dmt = parseInt(txt)
-    let dolares = dmt
-    let pjk = Math.ceil(dmt * impts)
-    yenes += pjk
-    if (yenes < 1) return m.reply('⚠️️ Mínimo es  *1*')
+    let dolares = count
+    let pjk = Math.ceil(count * impts)
+    dolares += pjk
+    if (dolares < 1) return m.reply('⚠️️ Mínimo es  *1*')
     let users = global.db.data.users
-   users[who].dolares += dmt
+   users[who].dolares += count
 
     await conn.reply(m.chat, `⊜ *💵 AÑADIDO*
 ┏━━━━━━━━━━━⬣
-┃⋄ *Total:* ${dmt}
+┃⋄ *Total:* ${count}
 ┗━━━━━━━━━━━⬣`, m, rcanal)
-   conn.fakeReply(m.chat, `⊜ *_Recibiste_* \n\n *_+${dmt} Dolares 💵_*`, who, m.text)
+   conn.fakeReply(m.chat, `⊜ *_Recibiste_* \n\n *_+${count} Dolares 💵_*`, who, m.text)
 }
 
 handler.help = ['adddolares *<@user>*']
