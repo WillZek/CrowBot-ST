@@ -1,6 +1,6 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Bienvenidos%20-%20Crow%20Bot%20💛&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
-> ⌛ Versión Actual: 1.4.0
+> `⌛ Versión Actual: 1.4.0`
 
 ## 💛 **`C R O W - B O T`**
 
@@ -41,10 +41,10 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 
 ___
 
-#### Creador: Niño Piña 🫅
+#### **`Creador: Niño Piña 🫅`**
 #### Realizado con: B̷r̷a̷w̷l̷i̷g̷h̷t̷s̷ T̷e̷a̷m̷ 💛
 
-### CONTACTOS 💻
+### **`CONTACTOS 💻`**
 <p>
 
 <a
@@ -86,7 +86,7 @@ ___
 </details>
 
 
-### 🐦‍🔥 COLABORADORES
+### 🐦‍🔥**`COLABORADORES`**
 
 <a href="https://github.com/ianalejandrook15x"><img src="https://github.com/ianalejandrook15x.png" width="100" height="100" alt="ale-rmz"/></a>
 
