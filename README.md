@@ -26,7 +26,9 @@ ___
 <a href="#"><img title="CrowBot" src="https://img.shields.io/badge/🐦‍🔥𝑪𝑹𝑶𝑾𝑩𝑶𝑻💛 | 𝑵𝑰𝑁̃𝑶 𝑷𝑰𝑁̃𝑨💛 | 𝑩𝑹𝑨𝑾𝑳 𝑺𝑻𝑨𝑹𝑺💛-black?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
 
-### **`Informacion Importante 🌠`**
+### **`Informacion Importante De CrowBot 🌠`**
+
+![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
 <a href="https://www.atom.bio/crowbot-md"><img src="https://qu.ax/LujDk.jpg" height="125px"></a>
 
 <details>
