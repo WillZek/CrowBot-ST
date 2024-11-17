@@ -14,7 +14,7 @@ ___
 
 <a href="https://www.atom.bio/crowbot-md/">
 <img src="https://img.shields.io/badge/CrowBot_Accounts-000000%7D?style=for-the-badge&logo=biolink&logoColor=white">
-</a> 🌠 <a
+</a>   <a
 href="ninopina10@gmail.com" target="Black"><img
 src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" /> 
 
