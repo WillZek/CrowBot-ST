@@ -25,7 +25,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
   global.db.data.users[m.sender].exp += 245
   global.db.data.users[m.sender].joincount += 5
   let sn = createHash('md5').update(m.sender).digest('hex')
-let regbot = `☁ `𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗢` ☁\n`
+let regbot = `☁ 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗢 ☁\n`
 regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
 regbot += `「💛」𝗡𝗼𝗺𝗯𝗿𝗲: ${name}\n`
 regbot += `「💛」𝗘𝗱𝗮𝗱: ${age} años\n`
@@ -35,7 +35,7 @@ regbot += `• 15 Estrellas 🌟\n`
 regbot += `• 5 CrowCoins 🪙\n`
 regbot += `• 245 Experiencia 💸\n`
 regbot += `• 12 Tokens 💰\n`
-regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
+regbot += `꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷\n`
 regbot += `${packname}`
 await m.react('📩')
 await conn.sendLuffy(m.chat, '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
