@@ -93,7 +93,7 @@ ___
 <a href="https://github.com/ianalejandrook15x"><img src="https://github.com/ianalejandrook15x.png" width="100" height="100" alt="ale-rmz"/></a>
 
 ### **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
-![Creador](https://files.catbox.moe/p44sem.jpg)
+![https://github.com/WillZek](https://files.catbox.moe/p44sem.jpg)
 
 <details>
  <summary><b>:paperclip: Contactos</b></summary>
