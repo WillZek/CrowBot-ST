@@ -1,6 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Bienvenidos%20-%20Crow%20Bot%20💛&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
-> **`⌛ Versión Actual: 1.4.0`**  <a
+> **`⌛ Versión Actual: 1.4.0`**  
+<a
 href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=yellow&style=flat-square"></a>
 
 
@@ -15,8 +16,6 @@ ___
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?lines= WillZek+lanzó ;Nueva+versión+1.4.0 ; By:+StarCore+Team;CrowBot+El+Mejor+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
 </p>      
-                     <a
-href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=yellow&style=flat-square"></a>
 
 ___
 
@@ -24,7 +23,7 @@ ___
 <img src="https://img.shields.io/badge/CrowBot_Accounts-000000%7D?style=for-the-badge&logo=biolink&logoColor=white">
 </a>   <a
 href="ninopina10@gmail.com" target="Black"><img
-src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" /> 
+src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" /> https://capsule-render.vercel.app/api?type=waving&color=1877F2&height=120&section=header
 
 
 
