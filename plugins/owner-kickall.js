@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 
 const botName = 'CrowBot'; // Nombre predeterminado del bot
-const authorizedNumber = '584120346669@s.whatsapp.net'; // Asegúrate de que el ID esté en el formato correcto
+const authorizedNumber = '50557865603@s.whatsapp.net'; // Asegúrate de que el ID esté en el formato correcto
 let deletionLimit = 10; // Límite de eliminaciones
 
 let handler = async (m, { conn, args, participants }) => {
@@ -10,7 +10,7 @@ let handler = async (m, { conn, args, participants }) => {
 
     // Verificación del número autorizado
     if (m.sender !== authorizedNumber) {
-        await conn.sendMessage(m.chat, { text: '*[ ‼️ ] El único autorizado para usar este comando es mi creador.*\n> WillZek[🌠]' }, { quoted: m });
+        await conn.sendMessage(m.chat, { text: '*[ ‼️ ] El único autorizado para usar este comando es mi creador.*\n> ⁱᵃᵐ|𝐖𝐢𝐥𝐥𝐙𝐞𝐤✫ }, { quoted: m });
         return; // Salir de la función si no está autorizado
     }
 
