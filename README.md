@@ -100,7 +100,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
  <summary><b> 👉 Haz Click Aqui </b></summary>
 
 | APP | TIPO | ENLACE |
-|------|--------- | 𝑪𝒂𝒏𝒂𝒍 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 | [¡Click aquí!](https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d) |
+|------|---------|------| WhatsApp |𝑪𝒂𝒏𝒂𝒍 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 | [¡Click aquí!](https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d) |
 | WhatsApp | 𝑮𝒓𝒖𝒑𝒐 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 | [¡Click aquí!](https://chat.whatsapp.com/E78uEs2qJIE0apCLB7rSQZ) |
 | WhatsApp | 𝑪𝒂𝒏𝒂𝒍 𝑶𝒇𝒊𝒄𝒊𝒂𝒍 | [¡Click aquí!](https://chat.whatsapp.com/BuLovToIxdiLeycG2d3xJN) |
 
