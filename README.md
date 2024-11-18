@@ -101,6 +101,42 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 ___
 
+
+### **`🌠 Click en la imagen para obtener termux🌠`**
+<a
+href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="https://qu.ax/finc.jpg" height="125px"></a>
+
+<div align=>
+
+#### **`🚩Instalar Por Termux🚩`**
+
+<details>
+ <summary><b> 👉 Click para los ver Comandos</b></summary>
+
+#### **🪄 Instalación manual por termux**
+> copie y peguen en termux uno por uno 
+```bash
+termux-setup-storage
+```
+
+```bash
+apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
+```
+
+```bash
+git clone https://github.com/WillZek/CrowBot-ST && cd CrowBot-ST
+```
+
+```bash
+yarn install && npm install
+```
+
+```bash
+npm start
+```
+> si despues de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal 
+---
+
 ### **`TK HOST 📲`**
 <a href="https://dash.tk-joanhost.com"><img src="https://i.ibb.co/pr8TnWJ/SAVE-20240915-183758.jpg" height="125px"></a>
 
