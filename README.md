@@ -94,10 +94,19 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 ![Informacion](https://qu.ax/LgBRM.jpg)
 
+### **`🔗 Enlaces útiles`**
 
-<a href="https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX?text=.menu"><img alt="Grupo Oficial 💛" src="https://img.shields.io/badge/Grupo - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+<details>
+ <summary><b> 👉 Haz Click Aqui </b></summary>
 
-<a href="https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d?text=.menu"><img alt="Canal Oficial 💛" src="https://img.shields.io/badge/Canal - Oficial-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
+| APP | TIPO | ENLACE |
+|------|-------------|-------|
+| WhatsApp | 𝒞𝒶𝓃𝒶𝓁 𝒪𝒻𝒾𝒸𝒾𝒶𝓁 | [¡Click aquí!](https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T) |
+| WhatsApp | 𝒢𝓇𝓊𝓅𝑜 𝒪𝒻𝒾𝒸𝒾𝒶𝓁 | [¡Click aquí!](https://chat.whatsapp.com/E78uEs2qJIE0apCLB7rSQZ) |
+| WhatsApp | 𝒞𝑜𝓂𝓊𝓃𝒾𝒹𝒶𝒹 𝒪𝒻𝒾𝒸𝒾𝒶𝓁 | [¡Click aquí!](https://chat.whatsapp.com/BuLovToIxdiLeycG2d3xJN) |
+
+</details>
+
 
 ___
 
@@ -136,6 +145,46 @@ npm start
 ```
 > **Si después de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal**
 ---
+
+### **`☁️ SKY ULTRA PLUS`**
+
+<a
+href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
+
+<details>
+ <summary><b> 🌹 servidor Sky</b></summary>
+
+* Dashboard  [`Dash`](https://dash.skyultraplus.com)
+* Panel [`Panel`](https://panel.skyultraplus.com)
+* Canal de WhatsApp [`Canal sky`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
+* Comunidad  [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
+* Contacto(s) [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
+* Discord [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
+
+</details>
+
+---
+
+### **`🌌 Hosting Py:`**
+
+<a
+href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z2.jpg" height="125px"></a>
+
+<details>
+ <summary><b> 🌠 Servidor HostingPy</b></summary>
+
+* Dashboard  [`Dash`](https://dahs.hostingpy.shop)
+* Panel [`Panel`](https://panel.hostingpy.shop)
+* Canal de WhatsApp [`Canal Hosting`](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
+* Comunidad  [`Aquí`](https://chat.whatsapp.com/HT9YFbWTuqO0DQrq6Xxhvx)
+* Contacto(s) [`Soporte`](https://wa.me/595976126756)
+
+> **`Usa Mi Código de Referencia`**:
+ VOed0vMx
+
+___
+
+</details>
 
 ### **`TK HOST 📲`**
 <a href="https://dash.tk-joanhost.com"><img src="https://i.ibb.co/pr8TnWJ/SAVE-20240915-183758.jpg" height="125px"></a>
