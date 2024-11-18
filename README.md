@@ -112,11 +112,6 @@ ___
 
 
 ### 🐦‍🔥 **`COLABORADORES`**
-
-<a href="https://github.com/ianalejandrook15x"><img src="https://github.com/ianalejandrook15x.png" width="100" height="100" alt="ale-rmz"/></a>
-
----
-
 <a href="https://github.com/WillZek/CrowBot-ST/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=WillZek/CrowBot-ST" /> 
 </a>
