@@ -216,7 +216,7 @@ ___
 
 - **Numero:** [`Aquí`](https://wa.me/50557865603?text=Vengo+De+Github)
 
-> Auto © 2024 **[WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)**.
+> Developed By  **[WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)**.
 
 **`¡GRACIAS POR PREFERIR CROWBOT!` 💛**
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer&text=Espero%20Hayas%20Disfrutado%20El%20Repositorio&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/>
