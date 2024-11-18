@@ -23,8 +23,7 @@ ___
 <img src="https://img.shields.io/badge/CrowBot_Accounts-000000%7D?style=for-the-badge&logo=biolink&logoColor=white">
 </a>   <a
 href="ninopina10@gmail.com" target="Black"><img
-src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" /> https://capsule-render.vercel.app/api?type=waving&color=1877F2&height=120&section=header
-
+src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&logoColor=white" /> 
 
 
 
