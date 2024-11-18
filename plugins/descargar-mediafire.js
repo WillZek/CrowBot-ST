@@ -1,40 +1,64 @@
 import axios from 'axios';
 import fetch from 'node-fetch';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import {mediafiredl} from '@bochilteam/scraper';
 
 const handler = async (m, {conn, args, usedPrefix, command}) => {
-  const datas = global
-
-  if (!args[0]) throw `_*< DESCARGAS - MEDIAFIRE />*_\n\n*[ ℹ️ ] Ingrese un enlace de MediaFire.*\n\n*[ 💡 ] Ejemplo:* _${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE_`;
+    if (!args[0]) throw `\`\`\`[🌠] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE\`\`\``;
+m.react(rwait)
   try {
     const resEX = await mediafiredl(args[0]);
-    const captionES = `_*DESCARGAS - MEDIAFIRE*_\n
-    ▢ *Nombre:*  ${resEX.filename}
-    ▢ *Tamaño:*  ${resEX.filesizeH}
-    ▢ *Extensión:* ${resEX.ext}\n\n
-    *[ ℹ️ ] Se está enviando el archivo. espere...*`.trim();
-    m.reply(captionES);
+    let text = `╭━━━⊜ ⌊ \`\`\`Mediafire Downloader\`\`\` ⌉⊜━━━\n`
+    text += `│  ≡ Nombre: ${resEX.filename}\n`
+    text += `│  ≡ Peso: ${resEX.filesizeH}\n`
+    text += `│  ≡ Tipo: ${resEX.ext}\n`
+    text += `╰━━━━━━━━━━━━━━⊜\n`
+    text += `  _• Enviando archivo . . . ._`
+
+    await conn.reply(m.chat, text, m, {
+contextInfo: { externalAdReply :{ showAdAttribution: true,
+                        sourceUrl: 'https://youtube.com/watch?v=TMT9MNM-NHg',
+                        mediaType: 2,
+                        description: `🍁 This bot is still in development.`,
+                        title: `👑 Gracias Por Usar A CrowBot, WhatsApp Bot...`,
+                        body: `⚘ Developed by I\`m Fz ~`,          previewType: 0,
+                        thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
+                        mediaUrl: insta
+
+                      }}
+})
     await conn.sendFile(m.chat, resEX.url, resEX.filename, '', m, null, {mimetype: resEX.ext, asDocument: true});
   } catch {
     try {
       const res = await mediafireDl(args[0]);
       const {name, size, date, mime, link} = res;
-      const caption = `_*DESCARGAS - MEDIAFIRE*_\n
-      ▢ *Nombre:*  ${name}
-      ▢ *Tamaño:*  ${size}
-      ▢ *Extensión:* ${mime}\n\n
-      *[ ℹ️ ] Se está enviando el archivo. espere...*`.trim();
-      await m.reply(caption);
+      let text2 = `╭━━━⊜ ⌊ \`\`\`Mediafire Downloader - 2\`\`\` ⌉⊜━━━\n`
+    text2 += `│  ≡ Nombre: ${name}\n`
+    text2 += `│  ≡ Peso: ${size}\n`
+    text2 += `│  ≡ Tipo: ${mime}\n`
+    text2 += `╰━━━━━━━━━━━━━━⊜\n`
+    text2 += `  _• Enviando archivo . . . ._`
+      await conn.reply(m.chat, text2, m, {
+contextInfo: { externalAdReply :{ showAdAttribution: true,
+                        sourceUrl: 'https://youtube.com/watch?v=TMT9MNM-NHg',
+                        mediaType: 2,
+                        description: `🍁 This bot is still in development.`,
+                        title: `🌺 Thank you for using Sylphiette, the best WhatsApp bot.`,
+                        body: `⚘ Developed by I\`m Fz ~`,          previewType: 0,
+                        thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
+                        mediaUrl: insta
+
+                      }}
+})
       await conn.sendFile(m.chat, link, name, '', m, null, {mimetype: mime, asDocument: true});
     } catch {
-      await m.reply('Hubo un error en la eescarga. agalo de la siguiente manera .MediaFire link', m, rcanal);
+      await m.reply(`\`\`\`[🌺] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/r0lrc9ir5j3e2fs/DOOM_v13_UNCLONE\`\`\``);
     }
   }
 };
-handler.command = ['mediafire','mediafiredl','dlmediafire']
-handler.register = true;
-handler.group = true;
+handler.help = ['mediafire'].map((v) => v + ' <url>');
+handler.tags = ['descargas'];
+handler.command = /^(mediafire|mediafiredl|dlmediafire)$/i;
 export default handler;
 
 async function mediafireDl(url) {
@@ -48,4 +72,4 @@ async function mediafireDl(url) {
   const rese = await axios.head(link);
   mime = rese.headers['content-type'];
   return {name, size, date, mime, link};
-      }
+}
