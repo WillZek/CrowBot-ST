@@ -12,7 +12,7 @@ ___
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?lines= WillZek+lanzó ;Nueva+versión+1.4.0 ; By:+StarCore+Team;CrowBot+El+Mejor+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
-</p>           <a href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Estrellas" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=blue&style=flat-square"></a>
+</p>           <a     href="https://github.com/WillZek/CrowBot.  -ST/stargazers/"><img title="Estrellas" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=blue&style=flat-square"></a>
 
 ___
 
