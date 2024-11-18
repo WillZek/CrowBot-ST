@@ -44,7 +44,7 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 
 ### **` Características `**
 <details>
- <summary><b> <img src="https://i.pinimg.com/originals/73/69/6e/73696e022df7cd5cb3d999c6875361dd.gif" alt="Características" width="42" height="42"> Funciones de CrowBot</b></summary>
+ <summary><b> <img src="https://i.pinimg.com/originals/73/69/6e/73696e022df7cd5cb3d999c6875361dd.gif" alt="Características" width="42" height="42"> Funciones de CrowBot (toca)</b></summary>
 
 > Bot en desarrollo si presenta alguna falla reportar al creador para darle una solución óptima.
 
