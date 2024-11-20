@@ -23,6 +23,12 @@ this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 
 if (/^ara ara$/i.test(m.text) && chat.audios) {  
 let vn = 'https://qu.ax/PPgt.mp3'
 this.sendPresenceUpdate('recording', m.chat)   
+this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: fkontak })}
+
+
+if (/^brook$/i.test(m.text) && chat.audios) {  
+let vn = 'https://files.catbox.moe/eyv8yl.opus';'
+this.sendPresenceUpdate('recording', m.chat)   
 this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: fkontak })} 
 
 if (chat.audios && m.text.match(/(bienvenido|🥳|🤗)/gi)) {
