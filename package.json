@@ -40,7 +40,8 @@
         "@SumiFX/Scraper": "github:SumiFX/SumiFX-Scraper",
         "@StarlightsTeam/Scraper":
 "github:StarlightsTeam/StarlightsTeam-Scraper",
-        "@google-play-scraper": "github:facundoolano/google-play-scraper",
+        "@google-play-scraper":
+"github:facundoolano/google-play-scraper",
         "awesome-phonenumber": "^3.4.0",
         "google-libphonenumber": "latest",
         "ruhend-scraper": "^*",
