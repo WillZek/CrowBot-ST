@@ -77,7 +77,7 @@ ___
 
 ### **`✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】`**
 
-!(StarCore)[https://i.ibb.co/r62XGfr/StarCore.jpg]
+![StarCore](https://i.ibb.co/r62XGfr/StarCore.jpg)
 
 ### **`CONTACTOS 💻`**
 <p>
