@@ -73,7 +73,12 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 ___
 
 #### **`Creador: Niño Piña 🤴`**
-#### Realizado con:【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】
+#### Realizado con:
+
+### **`✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】`**
+
+<a
+href="https://whatsapp.com/channel/0029VankMyeBadmR9Ou0So3t"><img src="https://i.ibb.co/r62XGfr/StarCore.jpg" height="125px"></a>
 
 ### **`CONTACTOS 💻`**
 <p>
