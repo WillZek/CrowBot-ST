@@ -6,6 +6,8 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 <a href="https://github.com/WillZek/CrowBot-ST/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/WillZek/CrowBot-ST?label=Espectadores&style=social"></a>
 
+</p>
+
 ## 💛 **`C R O W - B O T`**
 
 ![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
