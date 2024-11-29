@@ -486,10 +486,10 @@ mods: '「💛」 *Esta función solo puede ser usada por mis desarrolladores.*'
 premium: '「💛」 *Esta función solo es para usuarios Premium.', 
 group: '「💛」 *Esta funcion solo puede ser ejecutada en grupos.*', 
 private: '「💛」 *Esta función solo puede ser usada en chat privado.*', 
-admin: '「💛」 *Este comando solo puede ser usado por admins.*', 
-botAdmin: '「💛」 *Para usar esta función debo ser admin.*', 
+admin: '「💛」 *Este comando solo puede ser usado por admins.\n\n> Sigue El Canal https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d*', 
+botAdmin: '「💛」 *Para usar esta función debo ser admin.\n\n> Sigue El Canal https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d*', 
 unreg: '「💛」 *No te encuentras registrado, registrese para usar esta función*\n\n*/reg nombre.edad*\n\n*Ejemplo* : */reg Crow.18*\n\n> *Sigue El Canal* https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d',
-restrict: '「💛」 *Esta característica esta desactivada.*'
+restrict: '「💛」 *Esta característica esta desactivada.\n\n> Sigue El Canal https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d*'
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
 
