@@ -48,8 +48,8 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     await m.react('📩')
     await conn.sendLuffy(m.chat, '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
     
-    let channelID = '120363355261011910@broadcast';
-    let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *País:* ${userNationality || 'Desconocido'}\n◉ *Verificación:* ${user.name}\n◉ *Edad:* ${age} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 600 coins 🪙\n*¡Bienvenido/a al bot!*`;
+    let channelID = '120363317263885467@newsletter';
+    let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *País:* ${userNationality || 'Desconocido'}\n◉ *Verificación:* ${user.name}\n◉ *Edad:* ${age} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 600 crowcoins 🪙\n*¡Bienvenido/a al bot!*`;
     
     await conn.sendMessage(channelID, {
         text: messageContent
