@@ -1,4 +1,3 @@
-```javascript
 // Código creado por OFC CROWBOT
 import fs from 'fs';
 import path from 'path';
