@@ -1,52 +1,72 @@
-import yts from 'yt-search';
+import fg from 'api-dylux'
+import yts from 'yt-search'
+import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
+import fetch from 'node-fetch' 
+let limit = 100
 
-let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
+let handler = async (m, { conn: star, args, text, isPrems, isOwner, usedPrefix, command }) => {
+if (!args || !args[0]) return star.reply(m.chat, '🌸 Ingresa el enlace del vídeo de YouTube junto al comando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`, m, rcanal)
+if (!args[0].match(/youtu/gi)) return star.reply(m.chat, `Verifica que el enlace sea de YouTube.`, m, rcanal).then(_ => m.react('✖️'))
+let q = '128kbps'
 
-    if (!text) throw `🌠 Te Faltó Un Link De Un Video De Youtube.\n_(Puedes hacer una búsqueda utilizando el comando ${usedPrefix}yts)_\n _🌠.- Ejemplo:_ *${usedPrefix + command}* https://youtu.be/sBKR6aUorzA?si=TmC01EGbXUx2DUca`;
+await m.react('🕓')
+try {
+let v = args[0]
+let yt = await youtubedl(v).catch(async () => await youtubedlv2(v))
+let dl_url = await yt.audio[q].download()
+let title = await yt.title
+let size = await yt.audio[q].fileSizeH
+let thumbnail = await yt.thumbnail
 
-    await conn.sendMessage(m.chat, { react: { text: '🥀', key: m.key }});
+let img = await (await fetch(`${thumbnail}`)).buffer()  
+if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
+        let txt = '`乂  Y O U T U B E  -  M P 3`\n\n'
+       txt += `        📚   *Titulo* : ${title}\n`
+       txt += `        📹   *Calidad* : ${q}\n`
+       txt += `        🚀   *Tamaño* : ${size}\n\n`
+       txt += `> *- 🚀 El audio se esta enviando espera un momento, soy lenta. . .*`
+await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
+await star.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
+await m.react('✅')
+} catch {
+try {
+let yt = await fg.yta(args[0], q)
+let { title, dl_url, size } = yt 
+let vid = (await yts(text)).all[0]
+let { thumbnail, url } = vid
 
-    const videoSearch = await yts(text);
-    if (!videoSearch.all.length) {
-        return global.errori;
-    }
+let img = await (await fetch(`${vid.thumbnail}`)).buffer()  
+if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
+        let txt = '`乂  Y O U T U B E  -  M P 3`\n\n'
+       txt += `        ✩   *Titulo* : ${title}\n`
+       txt += `        ✩   *Calidad* : ${q}\n`
+       txt += `        ✩   *Tamaño* : ${size}\n\n`
+       txt += `> *- ↻ El audio se esta enviando espera un momento, soy lenta. . .*`
+await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
+await star.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
+await m.react('✅')
+} catch {
+try {
+let yt = await fg.ytmp3(args[0], q)
+let { title, dl_url, size, thumb } = yt 
 
-    const vid = videoSearch.all[0];
-    const videoUrl = vid.url;
-    const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${encodeURIComponent(videoUrl)}`;
-    const apiResponse = await fetch(apiUrl);
-    const delius = await apiResponse.json();
+let img = await (await fetch(`${thumb}`)).buffer()
+if (size.split('MB')[0] >= limit) return star.reply(m.chat, `El archivo pesa mas de ${limit} MB, se canceló la Descarga.`, m, rcanal).then(_ => m.react('✖️'))
+        let txt = '`乂  Y O U T U B E  -  M P 3`\n\n'
+       txt += `        ✩   *Titulo* : ${title}\n`
+       txt += `        ✩   *Calidad* : ${q}\n`
+       txt += `        ✩   *Tamaño* : ${size}\n\n`
+       txt += `> *- ↻ El audio se esta enviando espera un momento, soy lenta. . .*`
+await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
+await star.sendMessage(m.chat, { audio: { url: dl_url }, fileName: title + '.mp3', mimetype: 'audio/mp4' }, { quoted: m })
+await m.react('✅')
+} catch {
+await m.react('✖️')
+}}}}
+handler.help = ['ytmp3 *<link yt>*']
+handler.tags = ['descargas']
+handler.command = ['ytmp3', 'yta', 'fgmp3']
+//handler.limit = 1
+handler.register = true 
 
-    if (!delius.status) {
-        return global.errori;
-    }
-
-    const downloadUrl = delius.data.download.url;
-
-    // Crear el mensaje informativo del video/audio
-    let body = `*『 C R O W B O T - O F C』*
-
- *☊.- 𝚃𝚒́𝚝𝚞𝚕𝚘:* ${vid.title || 'Desconocido'}
- *♕.- 𝙰𝚞𝚝𝚘𝚛:* ${vid.author?.name || 'Desconocido'}
- *⛨.- 𝙲𝚊𝚗𝚊𝚕:* ${vid.author?.url || 'Desconocido'}
- *🝓.- 𝙵𝚎𝚌𝚑𝚊 𝚍𝚎 𝙿𝚞𝚋𝚕𝚒𝚌𝚊𝚌𝚒𝚘́𝚗:* ${vid.ago || 'Desconocido'}
- *🜵.- 𝙳𝚞𝚛𝚊𝚌𝚘́𝚗:* ${vid.timestamp || 'Desconocido'}
- *🜚.- 𝚅𝚒𝚜𝚝𝚊𝚜:* ${`${vid.views || 'Desconocido'}`}
- *🝤.- 𝙻𝚒𝚗𝚔:* ${videoUrl}\n
-*🝩.- 𝙴𝚗𝚟𝚒𝚊𝚗𝚍𝚘 𝚊𝚞𝚍𝚒𝚘, 𝚊𝚐𝚞𝚊𝚝𝚊 𝚞𝚗 𝚖𝚘𝚖𝚎𝚗𝚝𝚘...*
-
-> ৎ୭࠭͢ *CrowBot* 𓆪͟͞ `;
-
-    // Enviar el mensaje informativo con la imagen
-    await conn.sendMessage(m.chat, { 
-        image: { url: vid.thumbnail }, 
-        caption: body 
-    }, { quoted: m });
-
-    await conn.sendMessage(m.chat, { react: { text: '🌹', key: m.key }});
-    await conn.sendMessage(m.chat, { audio: { url: downloadUrl }, mimetype: 'audio/mpeg' }, { quoted: m });
-};
-
-handler.command = ['ytmp3', 'yta'];
-handler.limit = 5;
-export default handler;
+export default handler
