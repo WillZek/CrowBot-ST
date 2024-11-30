@@ -11,16 +11,23 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 ## 💛 **`C R O W - B O T`**
 
 ![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
-___
+
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 <a href="https://github.com/WillZek/CrowBot-ST"><img src="https://cardivo.vercel.app/api?name=CrowBot&repo=CrowBot-ST&description=Hola+Soy+CrowBot+Disfruta+del+Bot+De+WhatsApp.&image=https://telegra.ph/file/b346b44893d4613a72f98.jpg/revision/latest?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&instagram=pina_dzn&whatsapp=50557865603&tiktok=crow_legendario_bs&pattern=leaf&colorPattern=%23eaeaea" /><a>
 
-___
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?lines= WillZek+lanzó ;Nueva+versión+1.4.0 ; By:+StarCore+Team;CrowBot+El+Mejor+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
 </p>      
 
-___
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 <a href="https://www.atom.bio/crowbot-md/">
 <img src="https://img.shields.io/badge/CrowBot_Accounts-000000%7D?style=for-the-badge&logo=biolink&logoColor=white">
@@ -33,7 +40,9 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 <a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | NIÑO PIÑA💛 | STARCORE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
 
----
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 ### **`Informacion Importante De CrowBot 🌠`**
 
@@ -49,7 +58,9 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 
 </details>
 
----
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 ### **` Características `**
 <details>
@@ -73,7 +84,9 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 - [ ] Otros
 
 </details>
-___
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 #### **`Creador: Niño Piña 🤴`**
 #### Realizado con:
@@ -101,7 +114,9 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 </details>
 
----
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
  
 ### 💛 **`OFC CROWBOT`**
 
@@ -124,7 +139,9 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 
 
-___
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 
 ### **`🌠 Click en la imagen para obtener termux🌠`**
@@ -179,7 +196,9 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 
 </details>
 
----
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 ### **`🌌 Hosting Py:`**
 
@@ -198,7 +217,9 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 > **`Usa Mi Código de Referencia`**:
  VOed0vMx
 
-___
+<!-- RAINBOW LINE BOT -->
+<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+
 
 </details>
 
