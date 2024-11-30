@@ -23,8 +23,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com/?lines= WillZek+lanzó ;Nueva+versión+1.4.0 ; By:+StarCore+Team;CrowBot+El+Mejor+Bot!&font=Fira%20Code&center=true&width=380&height=50&duration=2000&pause=500" alt="Example Usage - README Typing SVG">
-</p>      
-<!-- RAINBOW LINE BOT -->
+</p> <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 
