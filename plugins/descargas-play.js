@@ -10,7 +10,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 
   const videoInfo = search.all[0];
-  const body = `\`\`\`⊜─⌈ 📻 ◜YouTube Play◞ 📻 ⌋─⊜
+  const body = `\`\`\`⊜─⌈ 💿 ◜Crow - Play◞ 💿 ⌋─⊜
 
     ≡ Título : » ${videoInfo.title}
     ≡ Views : » ${videoInfo.views}
@@ -18,7 +18,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     ≡ Uploaded : » ${videoInfo.ago}
     ≡ URL : » ${videoInfo.url}
 
-# 🌴 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
+# 💎 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
 
   conn.sendMessage(m.chat, {
     image: { url: videoInfo.thumbnail },
