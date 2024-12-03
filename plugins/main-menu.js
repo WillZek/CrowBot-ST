@@ -30,7 +30,7 @@ let tags = {
 const defaultMenu = {
   before: `*╭━❍☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮*
 
-“ *¡Hola! %name soy Crow*, *%greeting* ”
+“ *🌲¡Feliz Navidad! %name soy Crow*, *%greeting* ❄️”
 
 *Sigue El Canal*
 https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
@@ -51,12 +51,12 @@ https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 ┊  💫 *Usuarios:* %totalreg 
 ┗━━━━━━━━━━━━━━
 %readmore
-*︵︵⊹︵ ⏜︵୨୧︵⏜︵⊹︵︵*
+*︵︵⊹︵ ⏜︵🎁︵⏜︵⊹︵︵*
 
-\t*【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】*   
+\t*🎅【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】⛄*   
 `.trimStart(),
     header: '*╭━「 %category 」*',
-  body: '*┃❍➤›* %cmd',
+  body: '*┃⛄➤›* %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
 }
