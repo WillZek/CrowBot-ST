@@ -4,31 +4,31 @@ import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
 let tags = {
-  'main': 'INFO 💛',
-  'buscador': 'BUSQUEDAS 💛',
-  'fun': 'JUEGOS 💛',
-  'serbot': 'SUB BOTS 💛',
-  'rpg': 'RPG 💛',
-  'gacha': 'ROLLWAIFUS 💛',
-  'rg': 'REGISTRO 💛',
-  'xp': 'EXP 💛',
-  'sticker': 'STICKERS 💛',
-  'anime': 'ANIMES 💛',
-  'database': 'DATABASE 💛',
-  'fix': 'FIXMSGESPERA 💛',
-  'grupo': 'GRUPOS 💛',
-  'nable': 'ON / OFF 💛', 
-  'descargas': 'DESCARGAS 💛',
-  'tools': 'HERRAMIENTAS 💛',
-  'info': 'INFORMACIÓN 💛',
-  'owner': 'CREADOR 💛', 
-  'audio': 'AUDIOS 💛', 
-  'ai': 'AI 💛',
-  'transformador': 'CONVERTIDORES 💛',
+  'main': '♥️INFO💚',
+  'buscador': '♥️BUSQUEDAS💚',
+  'fun': '♥️JUEGOS💚',
+  'serbot': '♥️SUB BOTS💚',
+  'rpg': '♥️RPG💚',
+  'gacha': '♥️ROLLWAIFUS💚',
+  'rg': '♥️REGISTRO💚',
+  'xp': '♥️EXP💚',
+  'sticker': '♥️STICKERS💚',
+  'anime': '♥️ANIMES💚',
+  'database': '♥️DATABASE💚',
+  'fix': '♥️FIXMSGESPERA💚',
+  'grupo': '♥️GRUPOS💚',
+  'nable': '♥️ON / OFF💚', 
+  'descargas': '♥️DESCARGAS💚',
+  'tools': '♥️HERRAMIENTAS💚',
+  'info': '♥️INFORMACIÓN💚',
+  'owner': '♥️CREADOR💚', 
+  'audio': '♥️AUDIOS💚', 
+  'ai': '♥️AI💚',
+  'transformador': '♥️CONVERTIDORES💚',
 }
 
 const defaultMenu = {
-  before: `*╭━❍☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆❍━╮*
+  before: `*╭━🦌☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆🦌━╮*
 
 “ *🌲¡Feliz Navidad! %name soy Crow*, *%greeting* ❄️”
 
