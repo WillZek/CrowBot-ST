@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
 // No Quites Los Créditos🦌
 m.react('🎄');
 // Mensaje que se enviará
-const message = "*〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*
+const message = "〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*
 
 *BOT PARA GRUPO* :
 > wa.me/50557865603
