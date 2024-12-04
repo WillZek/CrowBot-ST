@@ -6,7 +6,7 @@ m.react('🎄');
 const message = "〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*\n\n*BOT PARA GRUPO* :\n> wa.me/50557865603\n\n*BOT PERZONALIZADO* :\n> wa.me/50557865603";
 if (m.isGroup) {
 // Feliz Navidad🎄
-const imageUrl = 'https://i.ibb.co/qJNL5Bg/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
+const imageUrl = 'https://i.ibb.co/qJNL5Bg/file.jpg';
 try {
 // Que No Quites Los Créditos😑
 await conn.sendMessage(m.chat, { text: message, quoted: m });
