@@ -24,9 +24,9 @@ global.prems = []
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '⏤͟͟͞͞⋆⬪࣪ꥈ🎅★ ׄ ꒱ 𝑪𝒓𝒐𝒘𝑩𝒐𝒕 - 𝑺.𝑪.𝑨 ୭'
+global.packname = '🦌FELIZ NAVIDAD⛄'
 global.botname = '⛄𝐅𝐄𝐋𝐈𝐙 𝐍𝐀𝐕𝐈𝐃𝐀𝐃❄️'
-global.wm = '𝗡𝗶𝗻̃𝗼 𝗽𝗶𝗻̃𝗮 𝗯𝗼𝘁 - 𝗠𝗗'
+global.wm = '⏤͟͟͞͞⋆⬪࣪ꥈ🎅★ ׄ ꒱ 𝑪𝒓𝒐𝒘𝑩𝒐𝒕 - 𝑺.𝑪.𝑨 ୭'
 global.author = '❄️𝐁𝐲 𝐖𝐢𝐥𝐥𝐙𝐞𝐤🎅'
 global.dev = '⛄𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓⛄'
 global.textbot = '🌲𝐂𝐫𝐨𝐰𝐁𝐨𝐭 𝐁𝐲 𝐖𝐢𝐥𝐥𝐙𝐞𝐤⛄'
