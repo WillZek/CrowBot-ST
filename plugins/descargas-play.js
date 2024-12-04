@@ -27,9 +27,9 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
   let result;
   try {
-    if (command === 'play' || command === 'yta' || command === 'ytmp3') {
+    if (command === 'aplay' || command === 'yta' || command === 'ytmp3') {
       result = await fg.yta(videoInfo.url);
-    } else if (command === 'playvid' || command === 'ytv' || command === 'play2' || command === 'ytmp4') {
+    } else if (command === 'playvid' || command === 'ytv' || command === 'play3' || command === 'ytmp4') {
       result = await fg.ytv(videoInfo.url);
     } else {
       throw "Comando no reconocido.";
@@ -46,7 +46,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = handler.help = ['play', 'playvid', 'ytv', 'ytmp4', 'yta', 'play2', 'ytmp3'];
+handler.command = handler.help = ['aplay', 'playvid', 'ytv', 'ytmp4', 'yta', 'play3', 'ytmp3'];
 handler.tags = ['dl'];
 handler.diamond = 4;
 
