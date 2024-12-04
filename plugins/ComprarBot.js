@@ -20,5 +20,4 @@ console.error('Error al enviar el mensaje:', error);
 handler.help = ['comprar'];
 handler.tags = ['main'];
 handler.command = ['comprar'];
-handler.group = true;
 export default handler;
