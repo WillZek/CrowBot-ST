@@ -9,7 +9,6 @@ if (m, rcanal) {
 const imageUrl = 'https://i.ibb.co/qJNL5Bg/file.jpg';
 try {
 // Que No Quites Los Créditos😑
-await conn.sendMessage(m.chat, { text: message, quoted: m });
 // Te Estoy Viendo😑
 await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message, mimetype: 'image/jpeg' });
 } catch (error) {
