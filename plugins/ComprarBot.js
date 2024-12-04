@@ -1,9 +1,16 @@
 // Código Hecho Por Niño Piña wa.me/50557865603
 let handler = async (m, { conn }) => {
 // No Quites Los Créditos🦌
-m.react('💫');
+m.react('🎄');
 // Mensaje que se enviará
-const message = "**";
+const message = "*〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*
+
+*BOT PARA GRUPO* :
+> wa.me/50557865603
+
+*BOT PERZONALIZADO* :
+> wa.me/50557865603
+*";
 if (m.isGroup) {
 // Feliz Navidad🎄
 const imageUrl = 'https://i.ibb.co/qJNL5Bg/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
