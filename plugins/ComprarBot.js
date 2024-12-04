@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
 // No Quites Los Créditos🦌
 m.react('🎄');
 // Mensaje que se enviará
-const message = "〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*\n\n*BOT PARA GRUPO* :\n> wa.me/50557865603\n\n*BOT PERZONALIZADO* :\n> wa.me/50557865603";
+const message = "〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*\n\n*BOT PARA GRUPO* :\n> wa.me/50557865603\n\n*BOT PERZONALIZADO* :\n> wa.me/50557865603"; m, rcanal)
 if (m.isGroup) {
 // Feliz Navidad🎄
 const imageUrl = 'https://i.ibb.co/qJNL5Bg/file.jpg';
