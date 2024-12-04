@@ -5,7 +5,7 @@ handler.command = /^(ComprarBot|Comprar|comprar|ComprarBot)$/i;
 export default handler;
 
 global.ComprarBot = `
-〔 *CROW - BOT* 〕
+〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*
 
 *BOT PARA GRUPO* :
 > wa.me/50557865603
