@@ -69,11 +69,6 @@ if (/^Nodoka/i.test(m.text)) {
 conn.reply(m.chat, `*Nodoka Mi Amor, Culona 🥵❤️‍🔥*`, m, rcanal, )
 }
 
-if (/^Como uno al bot en mi grupo|cómo puedo tener un bot en mi grupo|Bot Para Grupo|botgp/i.test(m.text)) {
-conn.reply(m.chat, `*¡Contacta Al Creador!*
-> *wa.me/50557865603*`, m, rcanal, )
-}
-
 if (/^Bot en decadencia/i.test(m.text)) {
 conn.reply(m.chat, `*Calla 🍆🥵*`, m, rcanal, )
 }
