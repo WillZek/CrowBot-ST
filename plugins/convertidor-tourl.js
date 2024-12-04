@@ -1,56 +1,47 @@
-import axios from 'axios';
-import FormData from 'form-data';
-import fs from 'fs';
-import os from 'os';
-import path from 'path';
+import fs from 'fs'
+import FormData from 'form-data'
+import axios from 'axios'
+import fetch from 'node-fetch'
 
-const IMGBB_API_KEY = '1f55ea75f24df783643940f3eacbbc96'; // Reemplaza con tu propia API key si es necesario
+let handler = async (m, { conn }) => {
 
-let handler = async (m, { args, command, usedPrefix }) => {
-  let q = m.quoted ? m.quoted : m;
-  let mime = (q.msg || q).mimetype || '';
+  let q = m.quoted ? m.quoted : m
+  let mime = (q.msg || q).mimetype || ''
 
-  // Verificar si el tipo de archivo es una imagen
+  await m.react('🕒')
   if (!mime.startsWith('image/')) {
-    throw `🌠 Por favor, envía una imagen.`;
+    return m.reply('Responde a una *Imagen.*')
   }
 
-  // Verificar que se haya proporcionado un texto
-  if (!args[0]) {
-    // Enviar mensaje pidiendo un texto
-    return m.reply(`\`\`\`[ 🌠 ] Ingresa un texto para guardar la imagen. Ejemplo:\n${usedPrefix + command} Crow\`\`\``);
-  }
+  let media = await q.download()
+  let formData = new FormData()
+  formData.append('image', media, { filename: 'file' })
 
-  try {
-    let media = await q.download();
-    let tempFilePath = path.join(os.tmpdir(), `${args[0]}.jpg`); // Guardar con el nombre proporcionado
-    fs.writeFileSync(tempFilePath, media);
-
-    let form = new FormData();
-    form.append('image', fs.createReadStream(tempFilePath));
-
-    let response = await axios.post(`https://api.imgbb.com/1/upload?key=${IMGBB_API_KEY}`, form, {
-      headers: {
-        ...form.getHeaders()
-      }
-    });
-
-    if (!response.data || !response.data.data || !response.data.data.url) {
-      throw '❌ Error al subir el archivo a ImgBB';
+  let api = await axios.post('https://api.imgbb.com/1/upload?key=10604ee79e478b08aba6de5005e6c798', formData, {
+    headers: {
+      ...formData.getHeaders()
     }
+  })
 
-    let link = response.data.data.url;
-    fs.unlinkSync(tempFilePath); // Eliminar archivo temporal
-
-    m.reply(`❖ *${args[0]}* ha sido guardado como imagen.\n❖ (Archivo subido a ImgBB)\n❖ *URL:* ${link}`);
-  } catch (error) {
-    console.error('Error al subir el archivo:', error.message);
-    throw '❌ Ocurrió un error al procesar la imagen.';
+  await m.react('✅')
+  if (api.data.data) {
+    let txt = '`I B B  -  U P L O A D E R`\n\n'
+        txt += `*❄️ TÍTULO* : ${q.filename || 'x'}\n`
+        txt += `*❄️ ID* : ${api.data.data.id}\n`
+        txt += `*❄️ ENLACE* : ${api.data.data.url}\n`
+        txt += `*❄️ DIRECTO* : ${api.data.data.url_viewer}\n`
+        txt += `*❄️ MIME* : ${mime}\n`
+        txt += `*❄️ FILE* : ${q.filename || 'x.jpg'}\n`
+        txt += `*❄️ EXTENSION* : ${api.data.data.image.extension}\n`
+        txt += `*❄️ DELETE* : ${api.data.data.delete_url}\n\n`
+        txt += `*➤ By: ${botname}*`
+    await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, fake)
+  } else {
+    await m.react('✅')
   }
 }
-
-handler.help = ['to/up'];
-handler.tags = ['transformador'];
-handler.command = ['up', 'to', 'tourl'];
-
-export default handler;
+handler.tags = ['convertir']
+handler.help = ['toibb']
+handler.command = /^(tourl|toibb)$/i
+handler.register = true 
+export default handler
