@@ -9,8 +9,7 @@ const message = "*〔⛄ *CROW - BOT* ❄️〕\n\n> *🦌FELIZ NAVIDAD🎄*
 > wa.me/50557865603
 
 *BOT PERZONALIZADO* :
-> wa.me/50557865603
-*";
+> wa.me/50557865603";
 if (m.isGroup) {
 // Feliz Navidad🎄
 const imageUrl = 'https://i.ibb.co/qJNL5Bg/file.jpg'; // Cambia esta URL por la de la imagen que deseas enviar
