@@ -10,22 +10,22 @@ let handler = async (m, { conn, text }) => {
     let txt = text.replace('@' + who.split`@`[0], '').trim()
     if (!txt) return m.reply('⚠️️ Ingrese la cantidad de *Estrellas* que quiere añadir')
     if (isNaN(txt)) return m.reply('⚠️ *sólo números*')
-    let let = parseInt(txt)
-    let estrellas = let
-    let pjk = Math.ceil(let * impts)
+    let len = parseInt(txt)
+    let estrellas = len
+    let pjk = Math.ceil(len * impts)
     estrellas += pjk
     if (estrellas < 1) return m.reply('⚠️️ Mínimo es  *1*')
     let users = global.db.data.users
-   users[who].estrellas += let
+   users[who].estrellas += len
 
     await conn.reply(m.chat, `⊜ *🌟 AÑADIDO*
 ┏━━━━━━━━━━━⬣
-┃⋄ *Total:* ${let}
+┃⋄ *Total:* ${len}
 ┗━━━━━━━━━━━⬣`, m, rcanal)
-   conn.fakeReply(m.chat, `⊜ *_Recibiste_* \n\n *_+${let} Estrellas 🌟_*`, who, m.text)
+   conn.fakeReply(m.chat, `⊜ *_Recibiste_* \n\n *_+${len} Estrellas 🌟_*`, who, m.text)
 }
 
-handler.help = ['addcookies *<@user>*']
+handler.help = ['addestrellas *<@user>*']
 handler.tags = ['owner']
 handler.command = ['addestrellas', 'addest', 'addestrellasec'] 
 handler.rowner = true
