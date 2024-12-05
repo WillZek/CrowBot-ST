@@ -22,7 +22,7 @@ var handler = async (m, { conn }) => {
     }
 
     let pp = await conn.profilePictureUrl(who, 'image').catch(_ => imagen1);
-    let { premium, level, genre, birth, description, yenes, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[who] || {};
+    let { premium, level, genre, birth, description, estrellas, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[who] || {};
     let username = conn.getName(who);
 
     genre = genre === 0 ? 'No especificado' : genre || 'No especificado';
