@@ -20,13 +20,13 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🫂 *Rol:* Colaborador y amigo
 🚩 *Número:* Wa.me/584241836217
 
+• Barboza 
+🫂 *Rol:* Bot Oficial
+🚩 *Número:* Wa.me/584246582666
+
 • Veggito Navideño
 🫂 *Rol:* Editor
 🚩 *Número:* Wa.me/5493541741460
-
-• Ian El Guapo🥵🔥 
-🫂 *Rol:* Amigo
-🚩 *Número:* Wa.me/5493876639332
 `
 await conn.sendFile(m.chat, icons, 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
