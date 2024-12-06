@@ -1,7 +1,7 @@
 
 let handler  = async (m, { conn }) => {
 
-conn.reply(m.chat, '🚩 *¡Buscando un reto para ti!*', m, {
+conn.reply(m.chat, '⛄ *¡Buscando un reto para ti!＼（＾∀＾）ノ*', m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: wm,
