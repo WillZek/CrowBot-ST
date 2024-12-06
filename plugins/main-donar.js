@@ -6,7 +6,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 puedes donar si quieres ayudar a mantener el bot activo
 
 ▢ *PayPal*
-• *Link :* ninopina10@gmail.com
+• *Link :* https://www.paypal.me/starcoreNinoPina
 `
 let img = 'https://i.ibb.co/37FP2bk/donate.jpg'
 conn.sendFile(m.chat, img, 'img.jpg', don, m, null, rpyp)
