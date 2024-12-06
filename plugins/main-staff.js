@@ -17,7 +17,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🚩 *Número:* Wa.me/584120346669
 
 • Prak Harper 
-🫂 *Rol:* Colaborador y amigo
+🫂 *Rol:* Colaborador y Soporte
 🚩 *Número:* Wa.me/584241836217
 
 • Barboza 
@@ -35,6 +35,10 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • 💖⛄
 🫂 *Rol:* Editora
 🚩 *Número:* Wa.me/573001357781
+
+• Deylin 
+🫂 *Rol:* Colaborador
+🚩 *Número:* Wa.me/50488198573
 `
 await conn.sendFile(m.chat, icons, 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
