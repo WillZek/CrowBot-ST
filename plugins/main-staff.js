@@ -39,6 +39,10 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • Deylin 
 🫂 *Rol:* Colaborador
 🚩 *Número:* Wa.me/50488198573
+
+• Matteus 
+🫂 *Rol:* Bot Oficial
+🚩 *Número:* Wa.me/584164267247
 `
 await conn.sendFile(m.chat, icons, 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
