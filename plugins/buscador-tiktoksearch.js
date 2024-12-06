@@ -39,7 +39,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           body: '<(✿◠‿◠)> 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓 ✨',
           previewType: 0, 
           thumbnail: catalogo,
-          sourceUrl: cn 
+          sourceUrl: canal 
         }
       }
     });
