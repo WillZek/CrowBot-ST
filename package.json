@@ -1,6 +1,6 @@
 {
   "name": "CrowBot-ST",
-  "version": "1.4.0",
+  "version": "1.8.0",
   "description": "Simple WhatsApp Bot Multi Device",
   "main": "index.js",
   "type": "module",
