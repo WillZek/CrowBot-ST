@@ -24,6 +24,10 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🫂 *Rol:* Bot Oficial
 🚩 *Número:* Wa.me/584246582666
 
+• Isa
+🫂 *Rol:* Editora
+🚩 *Número:* Wa.me/529831715910
+
 • Veggito Navideño
 🫂 *Rol:* Editor
 🚩 *Número:* Wa.me/5493541741460
