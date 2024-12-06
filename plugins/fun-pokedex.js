@@ -20,5 +20,7 @@ conn.reply(m.chat, luffypokedex, m, rcanal)
 await m.react(done) }
 
 handler.help = ['pokedex *<pokemon>*']
-handler.tag = [pokédex]
+handler.tag = ['pokedex']
 handler.command = ['pokedex']
+handler.register = true;
+export default handler;
