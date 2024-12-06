@@ -2,7 +2,8 @@
 let handler = async(m, { conn, usedPrefix, command }) => {
 
     let don = `
-≡ ${mssg.donate}
+≡ *DONACION*
+puedes donar si quieres ayudar a mantener el bot activo
 
 ▢ *PayPal*
 • *Link :* ninopina10@gmail.com
