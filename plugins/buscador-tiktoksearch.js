@@ -36,7 +36,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           mediaType: 1, 
           showAdAttribution: true,
           title: '♡  ͜ ۬︵࣪᷼⏜݊᷼𝘿𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙨⏜࣪᷼︵۬ ͜ ',
-          body: '<(✿◠‿◠)> 𝐘𝐮𝐤𝐢_𝐒𝐮𝐨𝐮-𝐁𝐨𝐭 ✨',
+          body: '<(✿◠‿◠)> 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓 ✨',
           previewType: 0, 
           thumbnail: logo5,
           sourceUrl: cn 
