@@ -27,6 +27,10 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • Veggito Navideño
 🫂 *Rol:* Editor
 🚩 *Número:* Wa.me/5493541741460
+
+• 💖⛄
+🫂 *Rol:* Editora
+🚩 *Número:* Wa.me/573001357781
 `
 await conn.sendFile(m.chat, icons, 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
