@@ -13,12 +13,16 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 👺  *Colaboradores:*
 
 • Destroy
-🫂 *Rol:* Editor
+🫂 *Rol:* Dv y Colaborador
 🚩 *Número:* Wa.me/584120346669
 
 • Prak Harper 
-🫂 *Rol:* Amigo
+🫂 *Rol:* Colaborador y amigo
 🚩 *Número:* Wa.me/584241836217
+
+• Veggito Navideño
+🫂 *Rol:* Editor
+🚩 *Número:* Wa.me/5493541741460
 
 • Ian El Guapo🥵🔥 
 🫂 *Rol:* Amigo
