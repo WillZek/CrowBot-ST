@@ -36,7 +36,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           mediaType: 1, 
           showAdAttribution: true,
           title: '♡  ͜ ۬︵࣪᷼⏜݊᷼𝘿𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙨⏜࣪᷼︵۬ ͜ ',
-          body: '<(✿◠‿◠)> CrowBot ✨',
+          body: '<(✿◠‿◠)> 𝐘𝐮𝐤𝐢_𝐒𝐮𝐨𝐮-𝐁𝐨𝐭 ✨',
           previewType: 0, 
           thumbnail: logo5,
           sourceUrl: cn 
@@ -75,7 +75,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
               text: "✨️ RESULTADO DE: " + text
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "ᥫᩣWillZek🚩"
+              text: "ᥫᩣⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
               hasMediaAttachment: false
@@ -104,6 +104,6 @@ handler.estrellas = 1;
 handler.group = true;
 handler.register = true
 handler.tags = ["buscador"];
-handler.command = ["tiktoksearch", "tts", "tiktoks"];
+handler.command = ["tiktoksearch", "ttss", "tiktoks"];
 
 export default handler;
