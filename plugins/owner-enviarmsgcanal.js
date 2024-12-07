@@ -9,7 +9,7 @@ await conn.reply(m.chat, `🌠 El texto se envió correctamente al canal.`, m, f
 await conn.reply(global.idchannel, text, null, fake)
 await m.react(✖️)
 
-} catch {
+} catch (error) {
 await conn.reply(m.chat, `🥀 No se pudo enviar el mensaje al canal.`, m, rcanal)
 await m.react(🔮)}}
 
