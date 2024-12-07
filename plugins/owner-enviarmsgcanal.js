@@ -6,7 +6,7 @@ try {
 await m.react(rwait)
 
 await conn.reply(m.chat, `🌠 El texto se envió correctamente al canal.`, m, fake)
-await conn.reply(global.channel, text, null, fake)
+await conn.reply(global.rcanal, text, null, fake)
 await m.react(done)
 
 } catch {
