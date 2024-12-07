@@ -14,7 +14,7 @@ let txt = `*乂  S C R I P T  -  M A I N*\n\n`
     txt += `        ✩   *Forks* : ${json.forks_count}\n`
     txt += `        ✩   *Stars* : ${json.stargazers_count}\n\n`
     txt += `> ⛄ *${textbot}*`
-let img = await (await fetch(`https://pomf2.lain.la/f/rd6slv9.jpg`)).buffer()
+let img = await (await fetch(`https://files.catbox.moe/jibqlr.jpg`)).buffer()
 
 await conn.sendAi(m.chat, botname, textbot, txt, img, img, canal, m)
 } catch {
