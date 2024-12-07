@@ -5,8 +5,8 @@ if (!text) return await conn.reply(m.chat, `🌠 Y el texto que quiere transmiti
 try {
 await m.react('🕐')
 
-await conn.reply(m.chat, `🌠 El texto se envió correctamente al canal.`, m, fake)
-await conn.reply(global.idchannel, text, null, fake)
+await conn.reply(m.chat, `🌠 El texto se envió correctamente al canal.`, m, rcanal)
+await conn.reply(global.idchannel, text, null, rcanal)
 await m.react('✖️')
 
 } catch (error) {
