@@ -45,7 +45,7 @@ global.ianurl = fs.readFileSync('./storage/img/crowurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.grupo = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
+global.grupo = 'https://chat.whatsapp.com/Ddst1bABCppAOD0Ay41mn4'
 global.grupo2 = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
 global.grupo3 = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
 global.channel = 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
