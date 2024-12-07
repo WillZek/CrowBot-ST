@@ -13,6 +13,6 @@ await m.react(done)
 await conn.reply(m.chat, `🥀 No se pudo enviar el mensaje al canal.`, m, rcanal)
 await m.react(error)}}
 
-handler.command = ['enviarmsg', 'enviarmsgcanal', 'enviarmsgchannel']
+handler.command = ['enviarmsg', 'enviarmsgcanal', 'enviarmsgchannel', 'canals']
 handler.rowner = true
 export default handler
