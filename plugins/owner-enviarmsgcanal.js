@@ -6,7 +6,7 @@ try {
 await m.react('🕐')
 
 await conn.reply(m.chat, `🌠 El texto se envió correctamente al canal.`, m, idchannel)
-await conn.reply(global.idchannel, text, null, rcanal)
+await conn.reply(global.idchannel, text, null, idchannel)
 await m.react('✖️')
 
 } catch (error) {
