@@ -144,7 +144,7 @@ showAdAttribution: false,
 renderLargerThumbnail: false
 }}};
 
-await conn.sendMessage(idchannel, { text: approvedText, contextInfo: options.contextInfo }, { quoted: null });
+await conn.sendMessage(idcanal, { text: approvedText, contextInfo: options.contextInfo }, { quoted: null });
 
 await conn.reply(sender, `🌸 Solicitud aceptada, Grupo:\n${grupo}`);
 delete suggestionQueue[suggestionId];
