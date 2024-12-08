@@ -8,14 +8,13 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 🛡️ Han sugerido un comando:
 > ${text}`
 
-    // Cambia el ID del grupo por el ID del canal
-    const channelChatId = '120363346831728441@c.us'; // Asegúrate de usar el ID correcto del canal
+    const channelChatId = '120363317263885467@newsletter';
     await conn.reply(channelChatId, m.quoted ? teks + m.quoted.text : teks, m, { mentions: conn.parseMention(teks) })
 
     m.reply('🌠 La sugerencia se envió al Staff De CrowBot.')
 }
-handler.help = ['sugerencia']
+handler.help = ['sugerencia2']
 handler.tags = ['Owner']
-handler.command = ['sugerencia', 'sugerir', 'crowsug']
+handler.command = ['sugerencia2', 'sugerir2', 'crowsug2']
 
 export default handler
