@@ -99,5 +99,6 @@ handler.help = ['soundcloud *<búsqueda>*']
 handler.tags = ['descargas']
 handler.command = ['soundcloud', 'sound', 'play']
 handler.register = true
+handler.estrellas = 3;
 //handler.limit = 3
 export default handler*/
