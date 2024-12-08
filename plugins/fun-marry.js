@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const marriagesFile = path.resolve('src/database/marry.json');
+const marriagesFile = path.resolve('media/database/marry.json');
 let proposals = {}; 
 let marriages = loadMarriages();
 const confirmation = {};
