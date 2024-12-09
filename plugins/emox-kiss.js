@@ -1,4 +1,4 @@
-//Codígo creado por Destroy wa.me/584120346669
+//Codígo creado por WillZek wa.me/50557865603
 
 import fs from 'fs';
 import path from 'path';
