@@ -3,7 +3,7 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw m.reply(`🍒 Ingresa un link de un canal\n*🌷 Ejemplo:* ${usedPrefix}${command} https://whatsapp.com/channel/0029VapSIvR5EjxsD1B7hU3T`);
+if (!text) throw m.reply(`🍒 Ingresa un link de un canal\n*❄️ Ejemplo:* ${usedPrefix}${command} https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d`);
 conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 
   let d2 = await fetch(`https://itzpire.com/stalk/whatsapp-channel?url=${text}`)
@@ -11,8 +11,8 @@ conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 
   let text_canal = `\`WHATSAPP CHANNEL\`
 
-   *🌹 - Nombre:* ${dp.data.title}
-   *🌸 - Seguidores:* ${dp.data.followers}
+   *❄️ - Nombre:* ${dp.data.title}
+   *🎄 - Seguidores:* ${dp.data.followers}
    
    \`Descripcion:\n${dp.data.description}\``
 
