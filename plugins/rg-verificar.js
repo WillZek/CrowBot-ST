@@ -32,12 +32,12 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     global.db.data.users[m.sender].joincount += 5
     
     let sn = createHash('md5').update(m.sender).digest('hex')
-    let regbot = `☁ 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗢 ☁\n`
+    let regbot = `⛄ 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 ⛄\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
-    regbot += `「💛」𝗡𝗼𝗺𝗯𝗿𝗲: ${name}\n`
-    regbot += `「💛」𝗘𝗱𝗮𝗱: ${age} años\n`
+    regbot += `「💛」𝐍𝐨𝐦𝐛𝐫𝐞: ${name}\n`
+    regbot += `「💛」𝐄𝐝𝐚𝐝: ${age} años\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
-    regbot += `「💝」𝗥𝗲𝗰𝗼𝗺𝗽𝗲𝗻𝘀𝗮𝘀:\n`
+    regbot += `「💝」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:\n`
     regbot += `• 15 Estrellas 🌟\n`
     regbot += `• 5 CrowCoins 🪙\n`
     regbot += `• 245 Experiencia 💸\n`
@@ -46,7 +46,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     regbot += `${packname}`
 
     await m.react('📩')
-    await conn.sendLuffy(m.chat, '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
+    await conn.sendLuffy(m.chat, '⊱『✅𝆺𝅥 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎(𝐀) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m)
     
     let channelID = '120363317263885467@newsletter';
     let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *País:* ${userNationality || 'Desconocido'}\n◉ *Verificación:* ${user.name}\n◉ *Edad:* ${age} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 600 crowcoins 🪙\n*¡Bienvenido/a al bot!*`;
