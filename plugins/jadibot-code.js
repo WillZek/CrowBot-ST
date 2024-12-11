@@ -35,9 +35,9 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
     if (!fs.existsSync("./CrowJadiBot/"+ authFolderB)){
         fs.mkdirSync("./CrowJadiBot/"+ authFolderB, { recursive: true });
     }
-    args[0] ? fs.writeFileSync("./GokuJadiBot/" + authFolderB + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
+    args[0] ? fs.writeFileSync("./CrowJadiBot/" + authFolderB + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : ""
 
-const {state, saveState, saveCreds} = await useMultiFileAuthState(`./GokuJadiBot/${authFolderB}`)
+const {state, saveState, saveCreds} = await useMultiFileAuthState(`./CrowJadiBot/${authFolderB}`)
 const msgRetryCounterMap = (MessageRetryMap) => { };
 const msgRetryCounterCache = new NodeCache()
 const {version} = await fetchLatestBaileysVersion();
