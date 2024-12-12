@@ -1,12 +1,15 @@
 let handler = async (m, { conn }) => {
-if (!(m.chat in global.db.data.chats)) return m.reply('*Este chat no está registrado en la base de datos!*')
-  let chat = global.db.data.chats[m.chat]
-  if (!chat.isBanned) return m.reply('*Este chat no está baneado!!*')
+if (!(m.chat in global.db.data.chats)) return conn.reply(m.chat, '🎌 *¡Este chat no está registrado!*', m, fake)
+let chat = global.db.data.chats[m.chat]
+if (!chat.isBanned) return conn.reply(m.chat, '[🌠] *El bot no está baneado en este chat*', m, fake)
 chat.isBanned = false
-conn.reply(m.chat,  '*BOT ONLINE 🚀*', m, {contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: ag, body: '𝐂𝐡𝐚𝐭 𝐝𝐞𝐬𝐛𝐚𝐧𝐞𝐚𝐝𝐨', previewType: 0, thumbnail: imagen1, sourceUrl: [tiktok].getRandom()}}}) 
+await conn.reply(m.chat, '🚩 *IanBot-MD ya fué desbaneado en este chat*', m, fake)
 }
-handler.command = /^unbanchat$/i
-//handler.botAdmin = true
-handler.rowner = true
+handler.help = ['unbanchat'];
+handler.tags = ['grupo'];
+handler.command = ['unbanchat','desbanearchat','desbanchat']
+handler.admin = true 
+handler.botAdmin = true
+handler.group = true
 
 export default handler
