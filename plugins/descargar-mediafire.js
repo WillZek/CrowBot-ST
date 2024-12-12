@@ -4,25 +4,25 @@ import * as cheerio from 'cheerio';
 import {mediafiredl} from '@bochilteam/scraper';
 
 const handler = async (m, {conn, args, usedPrefix, command}) => {
-    if (!args[0]) throw `*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`;
+    if (!args[0]) throw `*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> *Powered By WillZek*`;
 m.react('❄️')
   try {
     const resEX = await mediafiredl(args[0]);
-    let text = `╭━━━⊜ ⌊ \`\`\`Mediafire Downloader\`\`\` ⌉⊜━━━\n`
-    text += `│  ≡ Nombre: ${resEX.filename}\n`
-    text += `│  ≡ Peso: ${resEX.filesizeH}\n`
-    text += `│  ≡ Tipo: ${resEX.ext}\n`
-    text += `╰━━━━━━━━━━━━━━⊜\n`
-    text += `  _• Enviando archivo . . . ._`
+    let text = `𝐌𝐄𝐃𝐈𝐀𝐅𝐈𝐑𝐄 - 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑\n\n`
+    text += `│  ✦ *Nombre:* ${name}\n\n`
+    text += `│  ✦ *Peso:* ${size}\n\n`
+    text += `│  ✦ *Tipo:* ${mime}\n\n`
+    text += `╚──────────────\n`
+    text += `> 🎄Espere Un Momento Enviando Archivo Tenga Paciencia❄️`
 
     await conn.reply(m.chat, text, m, {
 contextInfo: { externalAdReply :{ showAdAttribution: true,
                         sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d',
                         mediaType: 2,
-                        description: `🍁 This bot is still in development.`,
-                        title: `👑 Gracias Por Usar A BarbozaBot, WhatsApp Bot...`,
+                        description: `Sigue El Canal Por Favor`,
+                        title: `👑 Gracias Por Usar A CrowBot, WhatsApp Bot⛄`,
                         body: `🎄 Powered By WillZek`,          previewType: 0,
-                        thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
+                        thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
                         mediaUrl: channel
 
                       }}
@@ -32,27 +32,27 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
     try {
       const res = await mediafireDl(args[0]);
       const {name, size, date, mime, link} = res;
-      let text2 = `╭━━━⊜ ⌊ \`\`\`Mediafire Downloader - 2\`\`\` ⌉⊜━━━\n`
-    text2 += `│  ≡ Nombre: ${name}\n`
-    text2 += `│  ≡ Peso: ${size}\n`
-    text2 += `│  ≡ Tipo: ${mime}\n`
-    text2 += `╰━━━━━━━━━━━━━━⊜\n`
-    text2 += `  _• Enviando archivo . . . ._`
+      let text2 = `𝐌𝐄𝐃𝐈𝐀𝐅𝐈𝐑𝐄 - 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑\n\n`
+    text2 += `│  ✦ *Nombre:* ${name}\n\n`
+    text2 += `│  ✦ *Peso:* ${size}\n\n`
+    text2 += `│  ✦ *Tipo:* ${mime}\n\n`
+    text2 += `╚──────────────\n`
+    text2 += `> 🎄Espera Un Momento, Enviando Archivo Tenga Paciencia❄️`
       await conn.reply(m.chat, text2, m, {
 contextInfo: { externalAdReply :{ showAdAttribution: true,
                         sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d',
                         mediaType: 2,
-                        description: `🍁 This bot is still in development.`,
-                        title: `❄️ Gracias Por Usar BarbozaBot`,
+                        description: `❤️‍🔥Sigue El Canal Por Favor❤️‍🔥`,
+                        title: `❄️ Gracias Por Usar CrowBot, Sigue El Canal⛄`,
                         body: `🎄 Powered By WillZek`,          previewType: 0,
-                        thumbnail: await (await fetch('https://telegra.ph/file/11c0098b4f55b2e548b90.png')).buffer(),
+                        thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
                         mediaUrl: channel
 
                       }}
 })
       await conn.sendFile(m.chat, link, name, '', m, null, {mimetype: mime, asDocument: true});
     } catch {
-      await m.reply(`*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`);
+      await m.reply(`*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> *Powered By WillZek*`);
     }
   }
 };
