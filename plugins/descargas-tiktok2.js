@@ -7,7 +7,7 @@ var handler = async (m, { conn, args, usedPrefix, command }) => {
 
     try {
         await conn.reply(m.chat, "🎄 *Espere un momento, estoy descargando su video...*", m);
-
+await m.react('❄️')
         const tiktokData = await tiktokdl(args[0]);
 
         if (!tiktokData) {
