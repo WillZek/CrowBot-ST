@@ -4,7 +4,7 @@ import * as cheerio from 'cheerio';
 import {mediafiredl} from '@bochilteam/scraper';
 
 const handler = async (m, {conn, args, usedPrefix, command}) => {
-    if (!args[0]) throw `*🎄Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command}* https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`;
+    if (!args[0]) throw `\`\`\`[🌠] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\`\`\``;
 m.react('❄️')
   try {
     const resEX = await mediafiredl(args[0]);
@@ -52,7 +52,7 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
 })
       await conn.sendFile(m.chat, link, name, '', m, null, {mimetype: mime, asDocument: true});
     } catch {
-      await m.reply(`*🎄Ingresa un link de mediafire junto al comando.* Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk`);
+      await m.reply(`\`\`\`[🌺] Ingresa un link de mediafire junto al comando. Ejemplo: \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\`\`\``);
     }
   }
 };
