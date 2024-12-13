@@ -1,5 +1,5 @@
 import { doc, getDoc, updateDoc, getDocs, collection } from "firebase/firestore";
-import { db } from "../media/database/clanes-db.js";
+import { db } from "../database/clanes-db.js";
 
 const handler = async (m, { conn, isROwner, args, command, usedPrefix }) => {
   try {
