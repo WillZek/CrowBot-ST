@@ -4,7 +4,7 @@ let handler = async (m, { conn, text }) => {
 
     m.react(done)
     let sesi = await fs.readFileSync('./media/database/db.json')
-    return await conn.sendFile(m.chat, sesi, 'database.json' , '', m, null, { mimetype: 'application/json', asDocument: true })
+    return await conn.sendFile(m.chat, sesi, 'db.json' , '', m, null, { mimetype: 'application/json', asDocument: true })
 }
 
 handler.command = /^(getdb)$/i
