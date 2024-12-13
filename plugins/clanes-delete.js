@@ -1,5 +1,5 @@
 import { doc, deleteDoc, getDoc } from "firebase/firestore";
-import { db } from "../media/database/clanes-db.js";
+import { db } from "../database/clanes-db.js";
 
 const handler = async (m, { conn, isROwner, args }) => {
     const user = global.db.data.users[m.sender];
