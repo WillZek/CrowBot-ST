@@ -1,5 +1,5 @@
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
-import { db } from "../media/database/clanes-db.js";
+import { db } from "../database/clanes-db.js";
 
 const handler = async (m, { conn, command, text, args }) => {
     const clanesRef = collection(db, "clanes");
