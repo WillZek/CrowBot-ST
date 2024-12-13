@@ -96,7 +96,8 @@ ${membersText}
 };
 
 handler.tags = ['clanes'];
-handler.help = handler.command = ['cinfo'];
+handler.help = ['cinfo'];
+handler.command = ['cinfo'];
 export default handler;
 
 async function checkClan(user) {
