@@ -44,6 +44,7 @@
     "google-libphonenumber": "latest",
     "ruhend-scraper": "^*",
     "axios": "^1.1.2",
+    "firebase": "latest",
     "acrcloud": "^1.4.0",
     "form-data": "^4.0.0",
     "cfonts": "^3.3.0",
