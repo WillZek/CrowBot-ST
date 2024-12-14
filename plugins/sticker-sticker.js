@@ -6,6 +6,7 @@ import { sticker } from '../lib/sticker.js'
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
 
+let command = '.s'
 let stiker = false
 try {
 let q = m.quoted ? m.quoted : m
