@@ -23,7 +23,7 @@ await m.reply(m.chat, `[ ⚠️  ¡Encontraste un monstruo! El monstruo te derro
     }
   } else {
     // No se encuentra ningún monstruo
-await m.reply(m.chat, `[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]` m, rcanal);
+await m.reply(m.chat, `[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]`, m, rcanal);
     global.db.data.users[m.sender].estrellas += estrellasEncontradas; 
   }
 }
