@@ -28,7 +28,7 @@ await m.reply(m.chat, `[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellas
   }
 }
 const result = explorarMazmorra(m.sender)
-await conn.reply(m.chat, result, m)
+await conn.reply(m.chat, result, m, rcanal)
 }
 handler.help = ['mazmorra']
 handler.tags = ['rpg']
