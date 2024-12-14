@@ -1,34 +1,27 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
    let user = db.data.users[m.sender]
-   function explorarMazmorra(usuario) {
-  const estrellasEncontradas = randomNumber(10, 20); // Genera una cantidad aleatoria de monedas
-  // Añade las monedas al usuario
+   async function explorarMazmorra(usuario) {
+      const estrellasEncontradas = randomNumber(10, 20); // Genera una cantidad aleatoria de monedas
+      const probabilidadMonstruo = randomNumber(1, 16); // Probabilidad de encontrar un monstruo
 
-  const probabilidadMonstruo = randomNumber(1, 16); // Probabilidad de encontrar un monstruo
+      if (probabilidadMonstruo <= 15) { // Probabilidad de 30% de encontrar un monstruo
+         const fuerzaUsuario = randomNumber(51, 100); // Fuerza del usuario
+         const fuerzaMonstruo = randomNumber(50, 90); // Fuerza del monstruo
 
-  if (probabilidadMonstruo <= 15) { // Probabilidad de 30% de encontrar un monstruo
-    const fuerzaUsuario = randomNumber(51, 100); // Fuerza del usuario
-    const fuerzaMonstruo = randomNumber(50, 90); // Fuerza del monstruo
-
-    if (fuerzaUsuario > fuerzaMonstruo) {
-      // El usuario mata al monstruo y recibe un bono extra
-      const bonoExtra = randomNumber(20, 30);
-      global.db.data.users[m.sender].estrellas += bonoExtra + estrellasEncontradas;
-await conn.reply(m.chat, `[ 🏆  ¡Encontraste un monstruo! Lo derrotaste y encontraste ${estrellasEncontradas} Estrellas 💫 más ➔ ${bonoExtra} como bono extra. ]`, m, rcanal);
-    } else {
-      // El monstruo mata al usuario y pierde la recompensa
-      global.db.data.users[m.sender].estrellas -= estrellasEncontradas;
-await m.reply(m.chat, `[ ⚠️  ¡Encontraste un monstruo! El monstruo te derrotó y perdiste ➔ ${estrellasEncontradas} Estrellas 💫. ]`, m, rcanal);
-
-    }
-  } else {
-    // No se encuentra ningún monstruo
-await m.reply(m.chat, `[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]`, m, rcanal);
-    global.db.data.users[m.sender].estrellas += estrellasEncontradas; 
-  }
-}
-const result = explorarMazmorra(m.sender)
-await conn.reply(m.chat, result, m, rcanal)
+         if (fuerzaUsuario > fuerzaMonstruo) {
+            const bonoExtra = randomNumber(20, 30);
+            global.db.data.users[m.sender].estrellas += bonoExtra + estrellasEncontradas;
+            await conn.reply(m.chat, `[ 🏆  ¡Encontraste un monstruo! Lo derrotaste y encontraste ${estrellasEncontradas} Estrellas 💫 más ➔ ${bonoExtra} como bono extra. ]`, m, rcanal);
+         } else {
+            global.db.data.users[m.sender].estrellas -= estrellasEncontradas;
+            await m.reply(m.chat, `[ ⚠️  ¡Encontraste un monstruo! El monstruo te derrotó y perdiste ➔ ${estrellasEncontradas} Estrellas 💫. ]`, m, rcanal);
+         }
+      } else {
+         global.db.data.users[m.sender].estrellas += estrellasEncontradas; 
+         await m.reply(m.chat, `[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]`, m, rcanal);
+      }
+   }
+   await explorarMazmorra(m.sender);
 }
 handler.help = ['mazmorra']
 handler.tags = ['rpg']
