@@ -14,11 +14,11 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       // El usuario mata al monstruo y recibe un bono extra
       const bonoExtra = randomNumber(20, 30);
       global.db.data.users[m.sender].estrellas += bonoExtra + estrellasEncontradas;
-      conn.reply(`\`\`\`[ 🏆  ¡Encontraste un monstruo! Lo derrotaste y encontraste ${estrellasEncontradas} Estrellas 💫 más ➔ ${bonoExtra} como bono extra. ]\`\`\`, m, rcanal`);
+await conn.reply(m.chat, `\`\`\`[ 🏆  ¡Encontraste un monstruo! Lo derrotaste y encontraste ${estrellasEncontradas} Estrellas 💫 más ➔ ${bonoExtra} como bono extra. ]\`\`\`, m, rcanal`);
     } else {
       // El monstruo mata al usuario y pierde la recompensa
       global.db.data.users[m.sender].estrellas -= estrellasEncontradas;
-      return `\`\`\`[ ⚠️  ¡Encontraste un monstruo! El monstruo te derrotó y perdiste ➔ ${estrellasEncontradas} Estrellas 💫. ]\`\`\`,`;
+await m.reply(m.chat, `\`\`\`[ ⚠️  ¡Encontraste un monstruo! El monstruo te derrotó y perdiste ➔ ${estrellasEncontradas} Estrellas 💫. ]\`\`\`, m, rcanal`);
 
     }
   } else {
