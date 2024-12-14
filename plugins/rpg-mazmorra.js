@@ -21,7 +21,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
          await m.reply(m.chat, `[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]`, m, rcanal);
       }
    }
-   await explorarMazmorra(m.sender);
+   await explorarMazmorra(m.sender, m.chat, m, rcanal);
 }
 handler.help = ['mazmorra']
 handler.tags = ['rpg']
