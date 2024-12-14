@@ -1,3 +1,5 @@
+// Hecho Por I'm Fz~ y Mejorado Por WillZek
+
 let handler = async (m, { conn, usedPrefix, command }) => {
    let user = db.data.users[m.sender]
    async function explorarMazmorra(usuario) {
@@ -11,14 +13,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
          if (fuerzaUsuario > fuerzaMonstruo) {
             const bonoExtra = randomNumber(20, 30);
             global.db.data.users[m.sender].estrellas += bonoExtra + estrellasEncontradas;
-            conn.reply(m.chat, `*[ 🏆  ¡Encontraste un monstruo! Lo derrotaste y encontraste ${estrellasEncontradas} Estrellas 💫 más ➔ ${bonoExtra} como bono extra. ]*`, m, rcanal);
+            conn.reply(m.chat, `*[ 🏆  ¡Encontraste un monstruo! Lo derrotaste y encontraste ${estrellasEncontradas} Estrellas 💫 más ➔ ${bonoExtra} como bono extra. ]*\n\n> ${textbot}`, m, rcanal);
          } else {
             global.db.data.users[m.sender].estrellas -= estrellasEncontradas;
-            conn.reply(m.chat, `*[ ⚠️  ¡Encontraste un monstruo! El monstruo te derrotó y perdiste ➔ ${estrellasEncontradas} Estrellas 💫. ]*`, m, rcanal);
+            conn.reply(m.chat, `*[ ⚠️  ¡Encontraste un monstruo! El monstruo te derrotó y perdiste ➔ ${estrellasEncontradas} Estrellas 💫. ]*\n\n> ${textbot}`, m, rcanal);
          }
       } else {
          global.db.data.users[m.sender].estrellas += estrellasEncontradas; 
-         conn.reply(m.chat, `*[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]*`, m, rcanal);
+         conn.reply(m.chat, `*[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]*\n\n> ${textbot}`, m, rcanal);
       }
    }
    await explorarMazmorra(m.sender, m.chat, m, rcanal);
