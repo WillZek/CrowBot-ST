@@ -9,9 +9,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 > ${text}`
 
     const channelChatId = '120363317263885467@newsletter';
+    const creatorsChatId = owner; // Reemplaza esto con el ID del chat de los creadores
     await conn.reply(channelChatId, m.quoted ? teks + m.quoted.text : teks, m, { mentions: conn.parseMention(teks) })
+    await conn.reply(creatorsChatId, teks, m, { mentions: conn.parseMention(teks) }) // Enviar a los creadores
 
-    m.reply('🌠 La sugerencia se envió al Staff De CrowBot.')
+    m.reply('🌠 La sugerencia se envió al Staff De CrowBot y a los creadores.')
 }
 handler.help = ['sugerencia2']
 handler.tags = ['Owner']
