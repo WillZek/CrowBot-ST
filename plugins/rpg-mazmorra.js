@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     }
   } else {
     // No se encuentra ningún monstruo
-    return `\`\`\`[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]\`\`\`,`;
+await m.reply(m.chat, `\`\`\`[ 🎆 ¡Exploraste la mazmorra y encontraste ${estrellasEncontradas} Estrellas 💫]\`\`\`,` m, rcanal);
     global.db.data.users[m.sender].estrellas += estrellasEncontradas; 
   }
 }
