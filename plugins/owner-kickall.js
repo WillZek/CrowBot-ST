@@ -2,6 +2,7 @@
 - Kickall By Angel-OFC  
 - elimina todos de un grupo con un comando 
 - https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
+- Mejorado Por WillZek🗿🍷
 */
 import axios from 'axios';
 
@@ -14,7 +15,7 @@ let handler = async (m, { conn, text, participants }) => {
 
     if (groupNoAdmins.length === 0) throw '*⚠️ No hay usuarios para eliminar.*'; 
 
-    const stickerUrl = 'https://files.catbox.moe/low7gk.webp'; 
+    const stickerUrl = 'https://files.catbox.moe/agx2sc.webp'; 
 
     await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', m, null);
 
@@ -23,7 +24,7 @@ let handler = async (m, { conn, text, participants }) => {
         await new Promise(resolve => setTimeout(resolve, 3000));
     }
 
-    conn.reply(m.chat, '*🤍 Eliminación Exitosa.*', m, rcanal);
+    conn.reply(m.chat, '*⚔️ Eliminación Exitosa.*', m, rcanal);
 }
 
 handler.help = ['kickall']
