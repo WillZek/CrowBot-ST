@@ -1,3 +1,7 @@
+/* Código Mejorado Por WillZek 🗿🍷
+- Canal De WhatsApp 
+-https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
+*/
 let handler = async (m, { conn, text, participants }) => {
 let member = participants.map(u => u.id)
 if(!text) {
