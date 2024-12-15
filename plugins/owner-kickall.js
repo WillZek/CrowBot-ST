@@ -1,59 +1,36 @@
-import fs from 'fs/promises';
+/* 
+- Kickall By Angel-OFC  
+- elimina todos de un grupo con un comando 
+- https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
+*/
+import axios from 'axios';
 
-const botName = 'CrowBot'; // Nombre predeterminado del bot
-const authorizedNumber = '50557865603@s.whatsapp.net'; // Asegúrate de que el ID esté en el formato correcto
-let deletionLimit = 10; // Límite de eliminaciones
+let handler = async (m, { conn, text, participants }) => {
 
-let handler = async (m, { conn, args, participants }) => {
-    // Verificar si el comando está restringido
-    if (!global.db.data.settings[conn.user.jid].restrict) throw '*⚠️ EL OWNER TIENE RESTRINGIDO (_enable restrict_ / _disable restrict_) EL USO DE ESTE COMANDO*';
+    const groupAdmins = participants.filter(p => p.admin);
+    const botId = conn.user.jid;
+    const groupOwner = groupAdmins.find(p => p.isAdmin)?.id;
+    const groupNoAdmins = participants.filter(p => p.id !== botId && p.id !== groupOwner && !p.admin).map(p => p.id);
 
-    // Verificación del número autorizado
-    if (m.sender !== authorizedNumber) {
-        await conn.sendMessage(m.chat, { text: '*[ ‼️ ] El único autorizado para usar este comando es mi creador.*\n> ⁱᵃᵐ|𝐖𝐢𝐥𝐥𝐙𝐞𝐤✫ }, { quoted: m });
-        return; // Salir de la función si no está autorizado
-    }
+    if (groupNoAdmins.length === 0) throw '*⚠️ No hay usuarios para eliminar.*'; 
 
-    const groupNoAdmins = participants.filter(p => !p.admin && p.id);
-    const listUsers = groupNoAdmins.slice(0, deletionLimit).map((v) => v.id); // Limitar la cantidad de usuarios a eliminar
+    const stickerUrl = 'https://pomf2.lain.la/f/9wvscc1f.webp'; 
 
-    if (listUsers.length === 0) throw '*⚠️ No hay usuarios para eliminar.*'; // Verifica que haya usuarios para eliminar
+    await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', m, null);
 
-    let pesan = args.join` `;
-    let text = `「 *𝙲𝚕𝚎𝚊𝚗𝚎𝚍 𝙱𝚢 - ${botName}* 」`.trim();
-
-    let txt2 = `*[🌠] Eliminación Exitosa.*`;
-
-    let mediaFolder = './src/';
-    let fileName = 'user.jpg';  
-    let filePath = mediaFolder + fileName;
-
-    try {
-        await fs.access(filePath);
-        await conn.updateProfilePicture(m.chat, await fs.readFile(filePath));
-    } catch (error) {
-        throw '*⚠️️ La imagen especificada no existe en la carpeta media.*';
-    }
-
-    try {
-        conn.groupUpdateSubject(m.chat, pesan);
-    } catch (e) {
-        throw '*⚠️ El título del grupo no puede exceder los 25 caracteres.*';
-    }
-
-    await conn.sendMessage(m.chat, { image: { url: filePath }, caption: text, mentions: conn.parseMention(text) }, { quoted: m, ephemeralExpiration: 24 * 60 * 100, disappearingMessagesInChat: 24 * 60 * 100 });
-
-    for (let userId of listUsers) {
+    for (let userId of groupNoAdmins) {
         await conn.groupParticipantsUpdate(m.chat, [userId], 'remove');
+        await new Promise(resolve => setTimeout(resolve, 3000));
     }
-    m.reply(txt2);
+
+    m.reply('*🤍 Eliminación Exitosa.*');
 }
 
-handler.help = ['kickall', '-'].map(v => 'o' + v + ' @user');
+handler.help = ['kickall']
 handler.tags = ['owner'];
-handler.command = ['kickall'];
-handler.owner = true;
+handler.command = /^(kickall)$/i;
 handler.group = true;
+handler.admin = true;
 handler.botAdmin = true;
 
 export default handler;
