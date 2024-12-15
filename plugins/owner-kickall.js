@@ -27,7 +27,7 @@ let handler = async (m, { conn, text, participants }) => {
 }
 
 handler.help = ['kickall']
-handler.tags = ['owner'];
+handler.tags = ['grupo'];
 handler.command = /^(kickall)$/i;
 handler.group = true;
 handler.admin = true;
