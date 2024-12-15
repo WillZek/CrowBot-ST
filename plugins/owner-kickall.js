@@ -23,7 +23,7 @@ let handler = async (m, { conn, text, participants }) => {
         await new Promise(resolve => setTimeout(resolve, 3000));
     }
 
-    m.reply('*🤍 Eliminación Exitosa.*');
+    conn.reply('*🤍 Eliminación Exitosa.*', m, rcanal);
 }
 
 handler.help = ['kickall']
