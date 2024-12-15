@@ -1,5 +1,6 @@
-/* Código Mejorado Por WillZek 🗿🍷
-- Canal De WhatsApp 
+/* 
+-Código Mejorado Por WillZek 🗿🍷
+- Etiqueta A Los Inactivos En Los Grupos De WhatsApp💫
 -https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 */
 let handler = async (m, { conn, text, participants }) => {
