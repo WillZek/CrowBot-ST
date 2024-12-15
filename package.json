@@ -43,7 +43,7 @@
     "awesome-phonenumber": "^7.2.0",
     "google-libphonenumber": "latest",
     "ruhend-scraper": "^*",
-    "axios": "^1.1.2",
+    "axios": "^1.7.9",
     "firebase": "latest",
     "acrcloud": "^1.4.0",
     "form-data": "^4.0.0",
