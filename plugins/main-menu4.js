@@ -158,12 +158,20 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 await m.react('💛') 
 
-let urls = [
-"https://qu.ax/vnPMj.mp4",
-"https://qu.ax/vnPMj.mp4",
-];
-let gifUrl = urls[Math.floor(Math.random() * urls.length)];
-conn.sendMessage(m.chat, {text: text.trim(), mentions: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), contextInfo: { mentionedJid: [...text.matchAll(/@([0-9]{5,16}|0)/g)].map((v) => v[1] + '@s.whatsapp.net'), "externalAdReply": {"showAdAttribution": true, "containsAutoReply": true, "renderLargerThumbnail": true, "title": packname, body: dev, "containsAutoReply": true, "mediaType": 1, "thumbnail": "https://qu.ax/vnPMj.mp4", "mediaUrl": global.channel, "sourceUrl": global.channel}}}, {quoted: m})
+conn.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/9cee79cfcd7e142b1f27d.mp4` }, gifPlayback: true, caption: text.trim(),
+contextInfo: {
+mentionedJid: conn.parseMention(text.trim()),
+isForwarded: true,
+forwardingScore: 999,
+externalAdReply: {
+title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
+body: author,
+thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
+sourceUrl: channel,
+mediaType: 1,
+renderLargerThumbnail: true
+}}}, { quoted: fkontak })
+    m.react('👑') 
 
   } catch (e) {
     conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
