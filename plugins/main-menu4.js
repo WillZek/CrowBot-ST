@@ -163,7 +163,7 @@ let urls = [
 "https://qu.ax/vnPMj.mp4",
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
-await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m}, rcanal);
+await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption: text.trim(), mentions: [m.sender]}, {quoted: m}, {rcanal});
 
   } catch (e) {
     conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
