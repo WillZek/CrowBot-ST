@@ -164,10 +164,8 @@ mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
 forwardingScore: 999,
 externalAdReply: {
-title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
 body: author,
 mediaUrl: channel,
-thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
 sourceUrl: channel,
 mediaType: 1,
 renderLargerThumbnail: true
