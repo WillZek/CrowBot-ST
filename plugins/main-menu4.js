@@ -165,7 +165,7 @@ isForwarded: true,
 forwardingScore: 999,
 externalAdReply: {
 body: author,
-mediaUrl: channel,
+mediaUrl: rcanal,
 sourceUrl: channel,
 mediaType: 1,
 }}}, { quoted: fkontak })
