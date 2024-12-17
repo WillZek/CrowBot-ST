@@ -168,7 +168,6 @@ body: author,
 mediaUrl: channel,
 sourceUrl: channel,
 mediaType: 1,
-renderLargerThumbnail: true
 }}}, { quoted: fkontak })
     m.react('👑') 
 
