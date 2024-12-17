@@ -166,7 +166,7 @@ await conn.sendMessage(m.chat, {video: {url: gifUrl}, gifPlayback: true, caption
 
 
   } catch (e) {
-    conn.reply(m.chat, 'Lo sentimos, el menú tiene un error.', m)
+    conn.reply(m.chat, `Lo sentimos, el menú tiene un error. ${e}`, m)
     throw e
   }
 }
