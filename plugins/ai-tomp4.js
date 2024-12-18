@@ -2,6 +2,8 @@ const ffmpeg = require('fluent-ffmpeg');
 const path = require('path');
 const fs = require('fs');
 
+const handler = async (m, { conn, usedPrefix, command }) => {
+
 const convertAudioToVideo = (audioFilePath, outputFilePath) => {
   return new Promise((resolve, reject) => {
     ffmpeg(audioFilePath)
