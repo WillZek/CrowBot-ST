@@ -42,6 +42,7 @@
     "google-play-scraper": "github:facundoolano/google-play-scraper",
     "awesome-phonenumber": "^7.2.0",
     "google-libphonenumber": "latest",
+    "fluent-ffmpeg": "latest",
     "ruhend-scraper": "^*",
     "axios": "^1.7.9",
     "firebase": "latest",
