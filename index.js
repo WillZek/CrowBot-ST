@@ -14,12 +14,12 @@ const { name, description, author, version } = require(join(__dirname, './packag
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say('CrowBot\nST', {
+say('StarCore-Team', {
 font: 'chrome',
 align: 'center',
-gradient: ['red', 'magenta']
+gradient: ['yellow', 'magenta']
 })
-say(`Multi Device`, {
+say(`CrowBot-ST\nWhatsApp`, {
 font: 'block',
 align: 'center',
 colors: ['red']
