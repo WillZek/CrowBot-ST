@@ -15,7 +15,7 @@ const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
 say('CrowBot\nST', {
-font: 'block',
+font: 'chrome',
 align: 'center',
 gradient: ['red', 'magenta']
 })
@@ -24,7 +24,7 @@ font: 'chrome',
 align: 'center',
 colors: ['red']
 });
-say(`Developed By • Niño Piña`, {
+say(`Powered By WillZek`, {
 font: 'console',
 align: 'center',
 colors: ['magenta']
