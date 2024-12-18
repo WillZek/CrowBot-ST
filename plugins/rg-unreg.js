@@ -5,7 +5,8 @@ let handler = async (m, { conn, text }) => {
     user.registered = false
     let imagenUrl = 'https://i.ibb.co/vQDtxJg/file.jpg'
 
-    return conn.reply(m.chat, `*『✅』 Usted Ya No Está En Mi Base De Datos*`, imagenUrl, m)
+    // Usar sendMessage para enviar el mensaje con la imagen
+    return conn.sendMessage(m.chat, { text: `*『✅』 Usted Ya No Está En Mi Base De Datos*`, image: { url: imagenUrl } }, { quoted: m })
 }
 
 handler.help = ['unreg']
