@@ -53,5 +53,5 @@ main();
 
 handler.help = ['tomp4'];
 handler.tag = ['grupo'];
-handler.command = ['tomp4'];
+handler.command = ['tomp4', 'mp4to'];
 export default handler;
