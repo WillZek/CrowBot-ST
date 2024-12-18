@@ -13,11 +13,12 @@ const require = createRequire(__dirname);
 const { name, description, author, version } = require(join(__dirname, './package.json'));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
+
 say('CrowBot\nST', {
 font: 'block',
 align: 'center',
 gradient: ['red', 'magenta']
-})
+});
 });
 say(`Multi Device`, {
 font: 'chrome',
@@ -29,6 +30,7 @@ font: 'console',
 align: 'center',
 colors: ['magenta']
 });
+
 var isRunning = false;
 function start(file) {
 if (isRunning) return;
