@@ -45,7 +45,9 @@ let userNationalityData = api.data.result;
     let userNationality = userNationalityData ? `${userNationalityData.name} ${userNationalityData.emoji}` : 'Desconocido';
     
     let sn = createHash('md5').update(m.sender).digest('hex')
-    let regbot = `⛄ 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 ⛄\n`
+    let regbot = `┏━━━━━━━━━━━━━━━━━━⬣
+┃⋄ *⛄ 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 ⛄*
+┗━━━━━━━━━━━━━━━━━━⬣\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
     regbot += `「💛」𝐍𝐨𝐦𝐛𝐫𝐞: ${name}\n`
     regbot += `「💛」𝐄𝐝𝐚𝐝: ${age} años\n`
