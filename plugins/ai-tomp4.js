@@ -4,9 +4,11 @@ const fs = require('fs');
 
 const handler = async (m, { conn, usedPrefix, command }) => {
 
-const convertAudioToVideo = (audioFilePath, outputFilePath) => {
+const convertAudioToVideo = (audioFilePath, imageFilePath, outputFilePath) => {
   return new Promise((resolve, reject) => {
-    ffmpeg(audioFilePath)
+    ffmpeg()
+      .input(audioFilePath)
+      .input(imageFilePath)
       .outputOptions('-f', 'mp4')
       .outputOptions('-c:v', 'libx264')
       .outputOptions('-pix_fmt', 'yuv420p')
@@ -24,9 +26,9 @@ const convertAudioToVideo = (audioFilePath, outputFilePath) => {
   });
 };
 
-// Función principal
 const main = async () => {
   const audioFilePath = path.join(__dirname, 'audio.mp3');
+  const imageFilePath = path.join(__dirname, 'Menu.jpg');
   const outputFilePath = path.join(__dirname, 'output.mp4');
 
   if (!fs.existsSync(audioFilePath)) {
@@ -34,15 +36,19 @@ const main = async () => {
     return;
   }
 
+  if (!fs.existsSync(imageFilePath)) {
+    console.error('El archivo de imagen no existe:', imageFilePath);
+    return;
+  }
+
   try {
-    await convertAudioToVideo(audioFilePath, outputFilePath);
+    await convertAudioToVideo(audioFilePath, imageFilePath, outputFilePath);
     console.log('Video guardado en:', outputFilePath);
   } catch (error) {
     console.error('Error al convertir audio a video:', error);
   }
 };
 
-// Ejecutar la función principal
 main();
 
 handler.help = ['tomp4'];
