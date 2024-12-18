@@ -3,8 +3,8 @@ let handler = async (m, { conn, text }) => {
     let user = global.db.data.users[m.sender]
 
     user.registered = false
-    // URL de la imagen que deseas enviar
-    let imagenUrl = 'https://example.com/tu-imagen.jpg' // Cambia esto por la URL de tu imagen
+    let imagenUrl = 'https://i.ibb.co/vQDtxJg/file.jpg'
+
     return conn.reply(m.chat, `*『✅』 Usted Ya No Está En Mi Base De Datos*`, imagenUrl, m)
 }
 
