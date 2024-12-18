@@ -14,20 +14,20 @@ const { name, description, author, version } = require(join(__dirname, './packag
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
 
-say('StarCore-Team', {
-font: 'chrome',
+say('CrowBot\nST', {
+font: 'block',
 align: 'center',
 gradient: ['yellow', 'magenta']
 })
-say(`CrowBot\nST`, {
-font: 'block',
+say(`StarCore-Team`, {
+font: 'chrome',
 align: 'center',
 colors: ['red', 'magenta']
 });
 say(`Powered By WillZek`, {
 font: 'console',
 align: 'center',
-colors: ['red', 'magenta']
+colors: ['magenta']
 });
 
 var isRunning = false;
