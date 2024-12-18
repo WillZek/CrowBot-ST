@@ -20,7 +20,7 @@ align: 'center',
 gradient: ['red', 'magenta']
 })
 say(`Multi Device`, {
-font: 'chrome',
+font: 'block',
 align: 'center',
 colors: ['red']
 });
