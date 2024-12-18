@@ -17,17 +17,17 @@ const rl = createInterface(process.stdin, process.stdout);
 say('StarCore-Team', {
 font: 'chrome',
 align: 'center',
-gradient: ['yellow', 'magenta']
+gradient: ['yellow']
 })
-say(`CrowBot-ST\nWhatsApp`, {
+say(`CrowBot\nST`, {
 font: 'block',
 align: 'center',
-colors: ['red']
+colors: ['red', 'magenta']
 });
 say(`Powered By WillZek`, {
 font: 'console',
 align: 'center',
-colors: ['magenta']
+colors: ['magenta', 'red']
 });
 
 var isRunning = false;
