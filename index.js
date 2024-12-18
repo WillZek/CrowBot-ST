@@ -17,7 +17,7 @@ const rl = createInterface(process.stdin, process.stdout);
 say('StarCore-Team', {
 font: 'chrome',
 align: 'center',
-gradient: ['yellow']
+gradient: ['yellow', 'magenta']
 })
 say(`CrowBot\nST`, {
 font: 'block',
@@ -27,7 +27,7 @@ colors: ['red', 'magenta']
 say(`Powered By WillZek`, {
 font: 'console',
 align: 'center',
-colors: ['magenta', 'red']
+colors: ['red', 'magenta']
 });
 
 var isRunning = false;
