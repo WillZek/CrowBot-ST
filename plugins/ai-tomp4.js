@@ -21,7 +21,7 @@ const handler = async (m, { conn, usedPrefix, command }) => {
   if (!video.data) throw '*🌳 𝙻𝙾 𝙻𝙰𝙼𝙴𝙽𝚃𝙾, 𝙾𝙲𝚄𝚁𝚁𝙸𝙾 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝙰𝙻 𝙲𝙾𝙽𝚅𝙴𝚁𝚃𝙸𝚁 𝚂𝚄 𝙽𝙾𝚃𝙰 𝙳𝙴 𝚅𝙾𝚉 𝙰 Video/𝙼𝙿4, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝚅𝚄𝙴𝙻𝚅𝙰 𝙰 𝙸𝙽𝚃𝙴𝙽𝚃𝙰𝚁𝙻𝙾*';
 
   // Enviar el archivo de audio convertido
-  conn.sendMessage(m.chat, { video: video.data, mimetype: 'video/mpeg' }, { quoted: m });
+  conn.sendMessage(m.chat, { video: video.data, mimetype: 'audio/mpeg' }, { quoted: m });
 };
 
 handler.help = ['tomp4', 'tovideo'];
