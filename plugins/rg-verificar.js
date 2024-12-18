@@ -32,6 +32,13 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     global.db.data.users[m.sender].exp += 245
     global.db.data.users[m.sender].joincount += 5    
 
+    let who;
+    if (m.quoted && m.quoted.sender) {
+        who = m.quoted.sender;
+    } else {
+        who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
+    }
+
     let api = await axios.get(`https://deliriussapi-oficial.vercel.app/tools/country?text=${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}`);
 
 let userNationalityData = api.data.result;
