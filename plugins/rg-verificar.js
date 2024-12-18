@@ -29,13 +29,17 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     global.db.data.users[m.sender].money += 600
     global.db.data.users[m.sender].estrellas += 10
     global.db.data.users[m.sender].exp += 245
-    global.db.data.users[m.sender].joincount += 5
+    global.db.data.users[m.sender].joincount += 5    
+
+let userNationalityData = api.data.result;
+    let userNationality = userNationalityData ? `${userNationalityData.name} ${userNationalityData.emoji}` : 'Desconocido';
     
     let sn = createHash('md5').update(m.sender).digest('hex')
     let regbot = `⛄ 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 ⛄\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
     regbot += `「💛」𝐍𝐨𝐦𝐛𝐫𝐞: ${name}\n`
     regbot += `「💛」𝐄𝐝𝐚𝐝: ${age} años\n`
+    regbot += `「💛」𝐏𝐚𝐢𝐬: $userNationality}\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
     regbot += `「💝」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:\n`
     regbot += `• 15 Estrellas 🌟\n`
