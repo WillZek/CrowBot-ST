@@ -53,12 +53,12 @@ let userNationalityData = api.data.result;
     regbot += `「💛」𝐄𝐝𝐚𝐝: ${age} años\n`
     regbot += `「💛」𝐏𝐚𝐢𝐬: ${userNationality}\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
-    regbot += `「💝」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:\n`
-    regbot += `• 15 Estrellas 🌟\n`
+    regbot += `「💝」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:\n>`
+    regbot += `• 15 Estrellas 🌟\n>`
     regbot += `• 5 CrowCoins 🪙\n`
-    regbot += `• 245 Experiencia 💸\n`
+    regbot += `• 245 Experiencia 💸\n>`
     regbot += `• 12 Tokens 💰\n`
-    regbot += `꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷\n`
+    regbot += `꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷\n>`
     regbot += `${packname}`
 
     await m.react('📩')
