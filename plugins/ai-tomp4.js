@@ -1,4 +1,4 @@
-import { toVideo } from '../lib/converter.js';
+import { mp3 } from '../lib/converter.js';
 
 const handler = async (m, { conn, usedPrefix, command }) => {
   // Mensaje cuando no se responde con un video o nota de voz
