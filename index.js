@@ -18,7 +18,7 @@ say('CrowBot\nST', {
 font: 'block',
 align: 'center',
 gradient: ['red', 'magenta']
-});
+})
 });
 say(`Multi Device`, {
 font: 'chrome',
