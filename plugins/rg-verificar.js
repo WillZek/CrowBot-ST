@@ -62,7 +62,7 @@ let userNationalityData = api.data.result;
     regbot += `${publi}`
 
     await m.react('📪')
-    await conn.sendLuffy(m.chat, '⊱『✅𝆺𝅥 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎(𝐀) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, m, rcanal)
+    await conn.sendLuffy(m.chat, '⊱『✅𝆺𝅥 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐀𝐃𝐎(𝐀) 𝆹𝅥✅』⊰', textbot, regbot, imagen1, imagen1, channel, m, rcanal)
     
     let channelID = '120363317263885467@newsletter';
     let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *País:* ${userNationality || 'Desconocido'}\n◉ *Verificación:* ${user.name}\n◉ *Edad:* ${age} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 600 crowcoins 🪙\n*¡Bienvenido/a al bot!*`;
