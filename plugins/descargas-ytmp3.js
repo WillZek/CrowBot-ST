@@ -1,63 +1,43 @@
-import Starlights from '@StarlightsTeam/Scraper'
-import fetch from 'node-fetch'
-import Sph from 'ytdl-mp3'
+import fg from 'api-dylux'
+import { youtubedl, youtubedlv2 } from '@bochilteam/scraper';
+let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
+  if (!args || !args[0]) throw `✳️ ${mssg.example} :\n${usedPrefix + command} https://youtu.be/YzkTFFwxtXI`
+  if (!args[0].match(/youtu/gi)) throw `❎ ${mssg.noLink('YouTube')}`
+   m.react(rwait)
+ let chat = global.db.data.chats[m.chat]
+ let q = '128kbps'
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) {
-        return m.reply('[ ✰ ] Ingresa el enlace del vídeo de *YouTube* junto al comando.\n\n`» Ejemplo :`\n' + `> *${usedPrefix + command}* https://youtu.be/QSvaCSt8ixs`)
-    }
+ try {
+                const yt = await fg.yta(args[0])
+                let { title, dl_url, quality, size, sizeB } = yt
 
-    await m.react('🕓') 
-    try {
-        let { title, duration, size, thumbnail, dl_url } = await Starlights.ytmp3v2(args[0])
-
-        let img = await (await fetch(thumbnail)).buffer()
-        let txt = '`乂  Y O U T U B E  -  M P 3`\n\n' +
-                  `        ✩   *Título* : ${title}\n` +
-                  `        ✩   *Duración* : ${duration}\n` +
-                  `        ✩   *Tamaño* : ${size}\n\n` +
-                  '> *- ↻ El audio se está enviando, espera un momento...*'
-
-        await conn.sendMessage(m.chat, { image: img, caption: txt }, { quoted: m })
-        await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: `${title}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
-        await m.react('✅')
-    } catch {
-        try {
-            let { title, size, quality, thumbnail, dl_url } = await Starlights.ytmp3(args[0])
-
-            let img = await (await fetch(thumbnail)).buffer()
-            let txt = '`乂  Y O U T U B E  -  M P 3`\n\n' +
-                      `        ✩   *Título* : ${title}\n` +
-                      `        ✩   *Calidad* : ${quality}\n` +
-                      `        ✩   *Tamaño* : ${size}\n\n` +
-                      '> *- ↻ El audio se está enviando, espera un momento...*'
-
-            await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m)
-            await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: `${title}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
-            await m.react('✅')
+                conn.sendFile(m.chat, dl_url, title + '.mp3', `
+ ≡  *TX YTDL*
+  
+❖ *📌${mssg.title}* : ${title}
+❖ *⚖️${mssg.size}* : ${size}
+`.trim(), m, false, { mimetype: 'audio/mpeg', asDocument: chat.useDocument })
+                m.react(done)
+         } catch {
+  try {
+                let yt = await fg.ytmp3(args[0])
+        let { title, size, sizeB, dl_url } = yt
+                conn.sendFile(m.chat, dl_url, title + '.mp3', `
+ ≡  *TX YTDL 2*
+  
+❖ *📌${mssg.title}* : ${title}
+❖ *⚖️${mssg.size}* : ${size}
+`.trim(), m, false, { mimetype: 'audio/mpeg', asDocument: chat.useDocument })
+                m.react(done)
         } catch {
-            try {
-                let cxf = await Sph.ytdl(args[0])
-                let txt = '`乂  Y O U T U B E  -  M P 3`\n\n' +
-                          `        ✩   *Título* : ${cxf.title}\n` +
-                          `        ✩   *Calidad* : ${cxf.quality}\n` +
-                          `        ✩   *Url* : ${cxf.url}\n\n` +
-                          '> *- ↻ El audio se está enviando, espera un momento...*'
-
-                await conn.sendMessage(m.chat, { image: { url: cxf.thumbnail }, caption: txt }, { quoted: m })
-                await conn.sendMessage(m.chat, { audio: { url: cxf.dl_url }, fileName: `${cxf.title}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
-                await m.react('✅')
-            } catch {
-               conn.reply(m.chat, `Error: ${error.message}`)
-                await m.react('✖️')
-            }
-        }
-    }
+                        await m.reply(`❎ ${mssg.error}`)
+} 
 }
-handler.help = ['ytmp3 *<link yt>*']
+
+}
+handler.help = ['ytmp3 <url>']
 handler.tags = ['dl']
-handler.command = ['ytmp3', 'yta', 'fgmp3']
-handler.register = true
-handler.estrellas = 3;
+handler.command = ['ytmp3', 'fgmp3'] 
+handler.diamond = 5
 
 export default handler
