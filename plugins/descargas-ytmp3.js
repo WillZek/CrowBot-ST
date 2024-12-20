@@ -1,6 +1,6 @@
 import yts from 'yt-search';
 const handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `\`\`\`[ 🌴 ] Por favor ingresa un texto. Ejemplo:\n${usedPrefix + command} Did i tell u that i miss you\`\`\``;
+  if (!text) throw `*Por favor ingresa un texto*\nEjemplo:\n${usedPrefix + command} https://youtu.be/QSvaCSt8ixs`;
 
   const isVideo = /vid|2|mp4|v$/.test(command);
   const search = await yts(text);
@@ -10,15 +10,15 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 
   const videoInfo = search.all[0];
-  const body = `\`\`\`⊜─⌈ 📻 ◜YouTube Play◞ 📻 ⌋─⊜
+  const body = ``\`\`Youtube - MP3
 
-    ≡ Título : » ${videoInfo.title}
-    ≡ Views : » ${videoInfo.views}
-    ≡ Duration : » ${videoInfo.timestamp}
-    ≡ Uploaded : » ${videoInfo.ago}
-    ≡ URL : » ${videoInfo.url}
+    * *Título :* » ${videoInfo.title}
+    * *Views :* » ${videoInfo.views}
+    * *Duration :* » ${videoInfo.timestamp}
+    * *Uploaded :* » ${videoInfo.ago}
+    * *URL :* » ${videoInfo.url}
 
-# 🌴 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
+# Estamos Enviando El Audio, Espere Un Momento...\`\`\``;
 
   conn.sendMessage(m.chat, {
     image: { url: videoInfo.thumbnail },
