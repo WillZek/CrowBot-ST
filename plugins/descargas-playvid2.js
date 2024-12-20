@@ -8,7 +8,7 @@ const LimitAud = 725 * 1024 * 1024; //700MB
 const LimitVid = 425 * 1024 * 1024; //425MB
 const handler = async (m, {conn, command, args, text, usedPrefix}) => {
 
-if (command == 'playvid2' || command == 'mp3') {
+if (command == 'paudio' || command == 'mp3') {
 if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Enemy Tommoee Profitt`,  m, rcanal, ); 
 await m.react(rwait);
 const yt_play = await search(args.join(' '));
@@ -88,7 +88,7 @@ await m.react(error);
 console.log(e);
 }}}}}}}
 
-if (command == 'playvid3' || command == 'mp4') {
+if (command == 'pvideo' || command == 'mp4') {
 if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Enemy Tommoee Profitt`,  m, rcanal, );
 await m.react(rwait);
 const yt_play = await search(args.join(' '));
@@ -183,7 +183,7 @@ await m.react(error);
 console.log(e);
 }}}}}}}}
 
-if (command == 'playvid3' || command == 'playdoc') {
+if (command == 'pdoc' || command == 'playdoc') {
 if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Enemy Tommoee Profitt`,  m, rcanal, );
 await m.react(rwait);
 const yt_play = await search(args.join(' '));
@@ -261,7 +261,7 @@ await m.react(error);
 console.log(e);
 }}}}}}}
 
-if (command == 'playvid4' || command == 'playdoc2') {
+if (command == 'pdoc2' || command == 'playdoc2') {
 if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de YouTube*\n\nEjemplo, !${command} Enemy Tommoee Profitt`,  m, rcanal, );
 await m.react(rwait);
 const yt_play = await search(args.join(' '));
@@ -309,9 +309,9 @@ console.log(e2);
 }}}
 
 }
-handler.help = ['playvid2', 'playvid3', 'playvid4', 'playvid5', 'playdoc'];
+handler.help = ['paudio', 'pvideo', 'pdoc', 'pdoc2', 'playdoc'];
 handler.tags = ['descargas'];
-handler.command = ['playvid2', 'playvid3', 'playvid4', 'playvid5', 'mp32', 'mp42', 'playdoc', 'playdoc2']
+handler.command = ['paudio', 'pvideo', 'pdoc', 'pdoc2', 'mp32', 'mp42', 'playdoc', 'playdoc2']
 handler.group = true;
 export default handler;
 
