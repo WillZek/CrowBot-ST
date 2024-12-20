@@ -18,7 +18,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     • *Uploaded :* » ${videoInfo.ago}
     • *URL :* » ${videoInfo.url}
 
-> Estamos Enviando El Audio, Espere Un Momento...`;
+> ${espera}`;
 
   conn.sendMessage(m.chat, {
     image: { url: videoInfo.thumbnail },
