@@ -20,11 +20,13 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
 
 > ${espera}`;
 
+m.react(rwait)
   conn.sendMessage(m.chat, {
     image: { url: videoInfo.thumbnail },
     caption: body,
   }, { quoted: fkontak });
 
+m.react(done)
   let result;
   try {
     if (command === 'play' || command === 'yta' || command === 'ytmp3') {
