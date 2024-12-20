@@ -1,43 +1,64 @@
-import fg from 'api-dylux'
-import { youtubedl, youtubedlv2 } from '@bochilteam/scraper';
-let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
-  if (!args || !args[0]) throw `✳️ ${mssg.example} :\n${usedPrefix + command} https://youtu.be/YzkTFFwxtXI`
-  if (!args[0].match(/youtu/gi)) throw `❎ ${mssg.noLink('YouTube')}`
-   m.react(rwait)
- let chat = global.db.data.chats[m.chat]
- let q = '128kbps'
+import yts from 'yt-search';
+const handler = async (m, { conn, text, usedPrefix, command }) => {
+  if (!text) throw `\`\`\`[ 🌴 ] Por favor ingresa un texto. Ejemplo:\n${usedPrefix + command} Did i tell u that i miss you\`\`\``;
 
- try {
-                const yt = await fg.yta(args[0])
-                let { title, dl_url, quality, size, sizeB } = yt
+  const isVideo = /vid|2|mp4|v$/.test(command);
+  const search = await yts(text);
 
-                conn.sendFile(m.chat, dl_url, title + '.mp3', `
- ≡  *TX YTDL*
-  
-❖ *📌${mssg.title}* : ${title}
-❖ *⚖️${mssg.size}* : ${size}
-`.trim(), m, false, { mimetype: 'audio/mpeg', asDocument: chat.useDocument })
-                m.react(done)
-         } catch {
+  if (!search.all || search.all.length === 0) {
+    throw "No se encontraron resultados para tu búsqueda.";
+  }
+
+  const videoInfo = search.all[0];
+  const body = `\`\`\`⊜─⌈ 📻 ◜YouTube Play◞ 📻 ⌋─⊜
+
+    ≡ Título : » ${videoInfo.title}
+    ≡ Views : » ${videoInfo.views}
+    ≡ Duration : » ${videoInfo.timestamp}
+    ≡ Uploaded : » ${videoInfo.ago}
+    ≡ URL : » ${videoInfo.url}
+
+# 🌴 Su ${isVideo ? 'Video' : 'Audio'} se está enviando, espere un momento...\`\`\``;
+
+  conn.sendMessage(m.chat, {
+    image: { url: videoInfo.thumbnail },
+    caption: body,
+  }, { quoted: fkontak });
+
+  let result;
   try {
-                let yt = await fg.ytmp3(args[0])
-        let { title, size, sizeB, dl_url } = yt
-                conn.sendFile(m.chat, dl_url, title + '.mp3', `
- ≡  *TX YTDL 2*
-  
-❖ *📌${mssg.title}* : ${title}
-❖ *⚖️${mssg.size}* : ${size}
-`.trim(), m, false, { mimetype: 'audio/mpeg', asDocument: chat.useDocument })
-                m.react(done)
-        } catch {
-                        await m.reply(`❎ ${mssg.error}`)
-} 
-}
+    if (command === 'play' || command === 'yta' || command === 'ytmp3') {
+      let hh = await fetch(`https://api.siputzx.my.id/api/dl/youtube/mp3?url=${videoInfo.url}`);
+      result = await hh.json()
+    } else if (command === 'playvid' || command === 'ytv' || command === 'play2' || command === 'ytmp4') {
+    let rr = await fetch(`https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${videoInfo.url}`);
+      result = await rr.json()
+    } else {
+      throw "Comando no reconocido.";
+    }
+let url_dl = isVideo ? result.data.download.url : result.data
+    conn.sendMessage(m.chat, {
+      [isVideo ? 'video' : 'audio']: { url: url_dl },
+      mimetype: isVideo ? "video/mp4" : "audio/mpeg",
+      caption: isVideo ? `URL: ${videoInfo.url}` : '',
+    }, { quoted: m });
 
-}
-handler.help = ['ytmp3 <url>']
-handler.tags = ['dl']
-handler.command = ['ytmp3', 'fgmp3'] 
-handler.diamond = 5
+  } catch (error) {
+    throw "Ocurrió un error al procesar tu solicitud.";
+  }
+};
 
-export default handler
+handler.command = handler.help = ['yta', 'ytmp3'];
+handler.tags = ['descargas'];
+handler.estrellas = 4;
+
+export default handler;
+
+const getVideoId = (url) => {
+  const regex = /(?:v=|\/)([0-9A-Za-z_-]{11}).*/;
+  const match = url.match(regex);
+  if (match) {
+    return match[1];
+  }
+  throw new Error("Invalid YouTube URL");
+};
