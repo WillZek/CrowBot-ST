@@ -61,6 +61,7 @@ await star.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
 await star.sendMessage(m.chat, { video: { url: dl_url }, caption: `${title}`, mimetype: 'video/mp4', fileName: `${title}` + `.mp4`}, {quoted: m })
 await m.react('✅')
 } catch {
+conn.reply(m.chat, `*Error* ${error.message}`)
 await m.react('✖️')
 }}}}
 handler.help = ['ytmp4 *<link yt>*']
