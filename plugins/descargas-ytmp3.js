@@ -46,6 +46,7 @@ let url_dl = isVideo ? result.data.download.url : result.data
     }, { quoted: m });
 
   } catch (error) {
+m.react('✖️')
     throw "${errorm2}";
   }
 };
