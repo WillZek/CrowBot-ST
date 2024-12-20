@@ -48,7 +48,7 @@ let url_dl = isVideo ? result.data.download.url : result.data
   }
 };
 
-handler.command = handler.help = ['yta', 'ytmp3'];
+handler.command = handler.help = ['yta', 'ytmp3', 'Ytmp3'];
 handler.tags = ['descargas'];
 handler.estrellas = 4;
 
