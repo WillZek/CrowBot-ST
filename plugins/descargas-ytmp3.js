@@ -44,7 +44,7 @@ let url_dl = isVideo ? result.data.download.url : result.data
     }, { quoted: m });
 
   } catch (error) {
-    throw "Ocurrió un error al procesar tu solicitud.";
+    throw "${errorm2}";
   }
 };
 
