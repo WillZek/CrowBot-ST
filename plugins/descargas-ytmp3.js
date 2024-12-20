@@ -48,6 +48,7 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
                 await conn.sendMessage(m.chat, { audio: { url: cxf.dl_url }, fileName: `${cxf.title}.mp3`, mimetype: 'audio/mp4' }, { quoted: m })
                 await m.react('✅')
             } catch {
+               conn.reply(m.chat, `Error: ${error.message}`)
                 await m.react('✖️')
             }
         }
