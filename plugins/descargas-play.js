@@ -19,9 +19,9 @@ await m.react('✅')
 } catch {
 await m.react('✖️')
 }}
-handler.help = ['play *<text>*']
-handler.tags = ['dl']
-handler.command = ['play']
+handler.help = ['playop *<text>*']
+handler.tags = ['descargas']
+handler.command = ['playop']
 
 export default handler
 
