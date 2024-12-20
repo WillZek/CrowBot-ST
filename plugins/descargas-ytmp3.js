@@ -10,7 +10,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 
   const videoInfo = search.all[0];
-  const body = ``\`\`Youtube - MP3
+  const body = `Youtube - MP3
 
     * *Título :* » ${videoInfo.title}
     * *Views :* » ${videoInfo.views}
@@ -18,7 +18,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     * *Uploaded :* » ${videoInfo.ago}
     * *URL :* » ${videoInfo.url}
 
-# Estamos Enviando El Audio, Espere Un Momento...\`\`\``;
+# Estamos Enviando El Audio, Espere Un Momento...`;
 
   conn.sendMessage(m.chat, {
     image: { url: videoInfo.thumbnail },
