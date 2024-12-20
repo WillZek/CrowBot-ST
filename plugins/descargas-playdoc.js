@@ -109,7 +109,7 @@ const n4 = lolh.result.thumbnail
 await conn.sendMessage(m.chat, {document: {url: n2}, fileName: `${n}.mp4`, mimetype: 'video/mp4', thumbnail: await fetch(n4)}, {quoted: fkontak})
 } catch {
 
-await conn.reply(m.chat, '🌟 *Ocurrió un fallo*', m, rcanal, )
+await conn.reply(m.chat, `🌟 *Ocurrió un fallo* ${error.message}`, m, rcanal, )
 }}}}
 
 } catch {
