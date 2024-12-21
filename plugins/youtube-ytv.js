@@ -16,7 +16,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   } catch (error) {
     console.error(error);
     await m.react('❌');
-    conn.reply(m.chat, `❀ error comando mal usado ${usedPrefix + commando} *<url>*  `, m, rcanal);
+    conn.reply(m.chat, `✖️ error comando mal usado ${usedPrefix + commando} *<url>*  `, m, rcanal);
   }
 };
 
