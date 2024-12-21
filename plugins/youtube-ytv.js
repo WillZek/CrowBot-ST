@@ -2,7 +2,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) return conn.reply(m.chat, `💛 Ingresa un link de YouTube válido\n> Ejemplo https://youtu.be/P4LfHsUnNL8?si=ahDKJ5h0cW-EB9C9`, m);
+  if (!text) return conn.reply(m.chat, `💛 Ingresa un link de YouTube válido\n> Ejemplo https://youtu.be/P4LfHsUnNL8?si=ahDKJ5h0cW-EB9C9`, m, rcanal);
 
   await m.react('🕓');
 
@@ -16,7 +16,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   } catch (error) {
     console.error(error);
     await m.react('❌');
-    conn.reply(m.chat, `❀ error comando mal usado .ytmp4 *<url>*  `, m);
+    conn.reply(m.chat, `❀ error comando mal usado ${usedPrefix + commando} *<url>*  `, m, rcanal);
   }
 };
 
