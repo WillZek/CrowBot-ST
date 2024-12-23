@@ -7,7 +7,7 @@ let handler = async (m, { conn }) => {
 
     "💰 *Precios a partir de: [1$ En Adelante!]*  \n" +
     "📞 *Contáctanos:*\n" +
-    "• *Wa.me/595976####*\n" +
+    "• *Wa.me/522431268546\n" +
     "•  *Wa.me/522431268###*\n" +
     "• *Wa.me/50557865603* \n\n" +
 
