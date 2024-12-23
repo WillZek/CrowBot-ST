@@ -134,9 +134,7 @@ canalName.length)];
 
 const randomCanalId = canalId[Math.floor(Math.random() * canalId.length)];
 
-global.rcaanall = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: canalId, serverMessageId: 100, newsletterName: canalName, }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
-
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: textbot, body: 'CrowBot-ST', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
 
