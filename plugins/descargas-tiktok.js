@@ -57,7 +57,7 @@ m.react('🍁')
 };
 handler.tags = ['descargas'];
 handler.help = ['tiktok'];
-handler.command = ['tiktok', 'ttk', 'tt'];
+handler.command = ['tiktok2', 'ttk2', 'tt2'];
 handler.register = true;
 export default handler;
 
