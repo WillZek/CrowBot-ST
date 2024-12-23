@@ -30,7 +30,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 ${global.md || ''}`.trim(); // Asegúrate de que global.md esté definido
 
-    await conn.reply(m.chat, crow, img, m);
+    await conn.reply(m.chat, crow, m, rcanal);
 };
 
 handler.help = ['botreglas'];
