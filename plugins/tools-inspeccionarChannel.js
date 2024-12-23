@@ -11,7 +11,7 @@ async function reportError(e) {
 await m.reply(`❌ Ocurrió un error.`)
 console.log(e)
 }
-let thumb = icons
+let thumb = icono
 let pp
 
 switch (true) {     
