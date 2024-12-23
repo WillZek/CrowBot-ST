@@ -4,18 +4,6 @@ import fetch from 'node-fetch'
 
 let handler = async (m, { conn, usedPrefix, command, text }) => {
 
-let lastResponseTime = 0;
-const responseCooldown = 5000; // 5 segundos
-
-let handler = async (m, { conn, usedPrefix, command, text }) => {
-    const currentTime = Date.now();
-    if (currentTime - lastResponseTime < responseCooldown) {
-        return conn.reply(m.chat, '💛 Por favor, espera un momento antes de enviar otro mensaje.', m);
-    }
-
-    lastResponseTime = currentTime;
-};
-
 const isQuotedImage = m.quoted && (m.quoted.msg || m.quoted).mimetype && (m.quoted.msg || m.quoted).mimetype.startsWith('image/')
 
 const username = `${conn.getName(m.sender)}`
