@@ -28,7 +28,7 @@ let handler = async (m, { conn }) => {
     await conn.sendMessage(m.chat, { image: { url: imagenGrandeUrl }, caption: "🌟 ¡Aquí tienes la imagen más grande! 🌟", mimetype: 'image/jpeg', quoted: m });
 }
 
-handler.help = ['precios1'];
+handler.help = ['precios2'];
 handler.tags = ['main'];
-handler.command = ['precios1', 'p1'];
+handler.command = ['precios2', 'p2'];
 export default handler;
