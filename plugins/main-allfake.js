@@ -121,7 +121,7 @@ let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 global.rcanall = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: packname, body: '𝗞𝗮𝗸𝗮𝗿𝗼𝘁𝗼 | 𝗠𝘂𝗻𝗱𝗼 𝗮𝗻𝗶𝗺𝗲', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
  const canalId = [
-"120363205895430548@newsletter", "120363233459118973@newsletter"
+"120363317263885467@newsletter", "120363233459118973@newsletter"
 ];
 const randomCanalId = canalId[Math.floor(Math.random() * canalId.length)];
 
