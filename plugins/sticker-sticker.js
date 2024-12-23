@@ -32,7 +32,6 @@ stiker = await sticker(false, out, global.packname, global.author)
 } else if (args[0]) {
 if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packname, global.author)
 
-const rcanal = ${global.rcanal},
 else return m.reply(`💫 El url es incorrecto`)
 
 }
