@@ -97,7 +97,9 @@ global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@
 
 //Id Channel
 global.idchannel = '120363381910502266@newsletter'
-
+global.canalIdM = ["120363323286489957@newsletter", "120363338362822764@newsletter"]
+global.canalNombreM = ["『✯ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✯』", "𝐌𝐚𝐬𝐡𝐚 𝐇𝐨𝐬𝐭 🎄 ℍ𝕠𝕤𝕥𝕚𝕟𝕘"]
+global.channelRD = await getRandomChannel()
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "3876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
 global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363317263885467@newsletter', newsletterName: "【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】", serverMessageId: -1 }
@@ -132,6 +134,19 @@ canalName.length)];
 
 const randomCanalId = canalId[Math.floor(Math.random() * canalId.length)];
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: canalId, serverMessageId: 100, newsletterName: canalName, }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanall = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: canalId, serverMessageId: 100, newsletterName: canalName, }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: textbot, body: 'CrowBot-ST', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
+
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
+  }
+
+async function getRandomChannel() {
+let randomIndex = Math.floor(Math.random() * canalIdM.length)
+let id = canalIdM[randomIndex]
+let name = canalNombreM[randomIndex]
+return { id, name }
+}         
