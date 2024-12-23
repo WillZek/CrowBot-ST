@@ -51,7 +51,7 @@ let handler = async (m, { conn }) => {
         
         // Asegúrate de que las variables estén definidas
         const textbot = text; // Usando 'text' como 'textbot'
-        const imagen1 = imageUrl; // Usando 'imageUrl' como 'imagen1'
+        const imagen1 = "../Menu.jpg"; // Usando 'imageUrl' como 'imagen1'
         const channel = global.rchannel; // Usando el canal global
         const rcanal = m; // Mensaje original
 
