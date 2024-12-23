@@ -168,7 +168,7 @@ break
 case isCommand2:
 if (!isOwner || !isROwner) return await conn.reply(m.chat, `🌸 No tienes permiso para usar este comando.`, m, fake)
 ch
-if (!text) return await conn.reply(m.chat, `🌷 Ingrese el ID o enlace de un canal de WhatsApp que quiere que el bot siga.\n\nPuede obtener el ID usando el comando:\n${usedPrefix}superinspect enlace${txtBotAdminCh}`, m, rcanal)
+if (!text) return await conn.reply(m.chat, `🌷 Ingrese el ID o enlace de un canal de WhatsApp que quiere que el bot siga.\n\nPuede obtener el ID usando el comando:\n${usedPrefix}inspeccionar enlace${txtBotAdminCh}`, m, rcanal)
 if (text.includes("@newsletter")) {
 ch = text
 } else {
