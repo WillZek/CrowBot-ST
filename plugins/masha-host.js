@@ -1,7 +1,7 @@
 // Código Hecho Por Niño Piña wa.me/50557865603
 let handler = async (m, { conn }) => {
 m.react('💫');
-const message = "🌐 *`MASHA-HOSTING`*\n> *¡HOSTING DE CALIDAD QUE IMPULSA TU ÉXITO! 🚀*\n🌟 *¡Desata el poder de tu presencia digital con nuestros servers! ⚡️ Rápidos, seguros y listos para la acción. ¡No te quedes atrás, únete a nuestro host de calidad y potencia tus proyectos alojando, bot de WhatsAp, servidores de Minecraf, páginas web y muchos más! 💥"*\n\n💰 *Precios a partir de: [1$ En Adelante!]*\n\n📞 *Contáctanos:*
+const message = "🌐 *`MASHA-HOSTING`*\n> *¡HOSTING DE CALIDAD QUE IMPULSA TU ÉXITO! 🚀*\n🌟 *¡Desata el poder de tu presencia digital con nuestros servers! ⚡️ Rápidos, seguros y listos para la acción. ¡No te quedes atrás, únete a nuestro host de calidad y potencia tus proyectos alojando, bot de WhatsAp, servidores de Minecraf, páginas web y muchos más! 💥"*\n\n💰*Precios a partir de: [1$ En Adelante!]*\n\n📞 *Contáctanos:*
 • *Wa.me/59597657755*
 •  *Wa.me/5224312686*
 • *Wa.me/5055786568*\n\n📝 *¡Regístrate ahora y lleva tu proyecto al siguiente nivel!*
