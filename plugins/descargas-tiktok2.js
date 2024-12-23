@@ -32,9 +32,9 @@ await m.react('❄️')
     }
 };
 
-handler.help = ['tiktok2'].map((v) => v + ' *<link>*')
+handler.help = ['tiktok'].map((v) => v + ' *<link>*')
 handler.tags = ['descargas']
-handler.command = /^tt2|tiktok2|ttdl2$/i
+handler.command = /^ttk|tiktok|ttdl$/i
 
 handler.disable = false
 handler.register = true
