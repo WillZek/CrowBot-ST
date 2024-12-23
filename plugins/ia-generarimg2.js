@@ -22,5 +22,5 @@ throw `*🚨 Lo sentimos, ha ocurrido un error 😔*`;
 handler.tags = ['ia'];
 handler.help = ['genearimg'];
 handler.command = ['genearimg2', 'imgg2'];
-// Exportamos el handler
+// El handler me la chupa 
 export default handler;
