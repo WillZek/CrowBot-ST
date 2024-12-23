@@ -118,13 +118,18 @@ global.urls = [
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 
-global.rcanall = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: packname, body: '𝗞𝗮𝗸𝗮𝗿𝗼𝘁𝗼 | 𝗠𝘂𝗻𝗱𝗼 𝗮𝗻𝗶𝗺𝗲', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+const canalName = [
+"⏤͟͟͞͞⋆⬪࣪ꥈ🎅★ ׄ ꒱ 𝑪𝒓𝒐𝒘𝑩𝒐𝒕 - 𝑺.𝑪.𝑨 ୭",
+];
+const randomCanalName =
+canalName[Math.floor(Math.random() *
+canalName.length)];
 
  const canalId = [
 "120363317263885467@newsletter", "120363338362822764@newsletter"
 ];
 const randomCanalId = canalId[Math.floor(Math.random() * canalId.length)];
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: randomCanalId, serverMessageId: 100, newsletterName: '🌲【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】🎅', }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: randomCanalId, serverMessageId: 100, newsletterName: randomCanalName, }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
