@@ -20,10 +20,9 @@ let handler = async (m, { conn }) => {
 
         "*¡Haz que tu experiencia digital sea una explosión de éxito! 🧑‍🚀💣*";
 
-        // Definición de variables necesarias
-        const packname = "Masha Hosting"; // Cambia esto por el nombre que desees
-        const icono = "https://example.com/icono.jpg"; // Cambia esto por la URL de tu ícono
-        const redes = "https://example.com/redes"; // Cambia esto por la URL de tus redes
+        const packname = "Masha Hosting";
+        const icono = "https://i.ibb.co/JtRv1ts/file.jpg";
+        const redes = "https://github.com/WillZek";
 
         global.rchannel = { 
             contextInfo: { 
@@ -51,7 +50,7 @@ let handler = async (m, { conn }) => {
         const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
         await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message, contextInfo: global.rchannel });
     } catch (error) {
-        console.error(`*Error*: ${error.message}`); // Cambia las comillas para que se interprete la variable
+        console.error(`*Error*: ${error.message}`);
     }
 }
 handler.help = ['precios2'];
