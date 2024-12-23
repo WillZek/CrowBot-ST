@@ -30,6 +30,3 @@ handler.help = ['precios1'];
 handler.tags = ['main'];
 handler.command = ['precios1', 'p1'];
 export default handler;
-```
-
-¡Listo! Ahora tu código debería funcionar sin problemas. Recuerda que siempre puedes unirte a mi canal oficial para más diversión y explosiones en el código: [Canal Oficial](https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d). ¡Sigue brillando, WillZek! 🚀💥
