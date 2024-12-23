@@ -1,22 +1,21 @@
-// Código Creado Por WillZek 
-
 let handler = async (m, { conn }) => {
-
     let pluginsConErrores = Object.values(global.plugins).filter(
         (v) => !v.help || !v.tags
     );
 
     let totalErrores = pluginsConErrores.length;
 
-    let nombresErrores = totalErrores > 0 
-        ? pluginsConErrores.map(p => p.help ? p.help.join(', ') : 'Sin nombre').join('\n')
-        : 'No hay plugins con errores.';
+    // Obtener los nombres de los archivos de los plugins con errores
+    let nombresPluginsConErrores = pluginsConErrores.map(plugin => plugin.fileName || 'Nombre no disponible');
 
-    conn.reply(m.chat, `*» Total de Plugins con Errores:* ${totalErrores}\n\n*» Nombres de los Plugins con Errores:*\n${nombresErrores}`, m);
+    // Unir los nombres en un solo string
+    let nombresPlugins = nombresPluginsConErrores.join(', ');
+
+    conn.reply(m.chat, `*» Total de Plugins con Errores:* ${totalErrores}\n*» Nombres de los Plugins con Errores:* ${nombresPlugins}`, m);
 }
 
-handler.help = ['pluginsconerrores']
+handler.help = ['totalerrores']
 handler.tags = ['main']
-handler.command = ['pluginsconerrores', 'perror']
+handler.command = ['totalerrores', 'terrores', 'toerrn']
 handler.register = true
 export default handler;
