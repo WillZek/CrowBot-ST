@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
     m.react('💫');
     const message = "🌐 *`MASHA-HOSTING`*  \n" +
     "> *¡HOSTING DE CALIDAD QUE IMPULSA TU ÉXITO! 🚀* \n" +
-    "🌟 *¡Desata el poder de tu presencia digital con nuestros servers! ⚡️ Rápidos, seguros y listos para la acción. ¡No te quedes atrás, únete a nuestro host de calidad y potencia tus proyectos alojando, bot de WhatsAp, servidores de Minecraf, páginas web y muchos más! 💥\n" +
+    "🌟 *¡Desata el poder de tu presencia digital con nuestros servers! ⚡️ Rápidos, seguros y listos para la acción. ¡No te quedes atrás, únete a nuestro host de calidad y potencia tus proyectos alojando, bot de WhatsAp, servidores de Minecraf, páginas web y muchos más! 💥*\n" +
 
     "💰 *Precios a partir de: [1$ En Adelante!]*  \n" +
     "📞 *Contáctanos:*\n" +
