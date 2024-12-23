@@ -1,3 +1,7 @@
+/*
+-Código Hecho Por WillZek 
+- https://github.com/WillZek
+*/
 let handler = async (m, { conn }) => {
     let pluginsConErrores = Object.values(global.plugins).filter(
         (v) => !v.help || !v.tags
