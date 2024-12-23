@@ -94,10 +94,10 @@ await conn.reply(m.chat, res.data, m, rcanal)
 await m.react(done) 
 } catch{
 }}}
-handler.help = ['chatgpt <texto>', 'ia <texto>']
+handler.help = ['chatgpt2 <texto>', 'ia <texto>']
 handler.tags = ['ai']
 handler.register = true
 handler.cookies = 5
-handler.command = ['ia', 'chatgpt']
+handler.command = ['ia2', 'chatgpt']
 
 export default handler;*/
