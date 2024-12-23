@@ -2,23 +2,23 @@ let handler = async (m, { conn }) => {
     try {
         m.react('💫');
         const text = "🌐 *`MASHA-HOSTING`*  \n" +
-        "> *¡HOSTING DE CALIDAD QUE IMPULSA TU ÉXITO! 🚀* \n" +
-        "🌟 *¡Desata el poder de tu presencia digital con nuestros servers! ⚡️ Rápidos, seguros y listos para la acción. ¡No te quedes atrás, únete a nuestro host de calidad y potencia tus proyectos alojando, bot de WhatsAp, servidores de Minecraf, páginas web y muchos más! 💥*\n" +
+            "> *¡HOSTING DE CALIDAD QUE IMPULSA TU ÉXITO! 🚀* \n" +
+            "🌟 *¡Desata el poder de tu presencia digital con nuestros servers! ⚡️ Rápidos, seguros y listos para la acción. ¡No te quedes atrás, únete a nuestro host de calidad y potencia tus proyectos alojando, bot de WhatsAp, servidores de Minecraf, páginas web y muchos más! 💥*\n" +
 
-        "💰 *Precios a partir de: [1$ En Adelante!]*  \n" +
-        "📞 *Contáctanos:*\n" +
-        "• *Wa.me/522431268546\n" +
-        "•  *Wa.me/595976230899*\n" +
-        "• *Wa.me/584148256527*\n" +
-        "• *Wa.me/50557865603* \n\n" +
+            "💰 *Precios a partir de: [1$ En Adelante!]*  \n" +
+            "📞 *Contáctanos:*\n" +
+            "• *Wa.me/522431268546\n" +
+            "•  *Wa.me/595976230899*\n" +
+            "• *Wa.me/584148256527*\n" +
+            "• *Wa.me/50557865603* \n\n" +
 
-        "📝 *¡Regístrate ahora y lleva tu proyecto al siguiente nivel!*  \n" +
-        "> *[https://dash.masha-host.shop/home]*\n\n" +
+            "📝 *¡Regístrate ahora y lleva tu proyecto al siguiente nivel!*  \n" +
+            "> *[https://dash.masha-host.shop/home]*\n\n" +
 
-        "🌌 *Canal Oficial*\n" +
-        "https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J\n\n" +
+            "🌌 *Canal Oficial*\n" +
+            "https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J\n\n" +
 
-        "*¡Haz que tu experiencia digital sea una explosión de éxito! 🧑‍🚀💣*";
+            "*¡Haz que tu experiencia digital sea una explosión de éxito! 🧑‍🚀💣*";
 
         const packname = "Masha Hosting";
         const icono = "https://i.ibb.co/JtRv1ts/file.jpg";
@@ -42,18 +42,24 @@ let handler = async (m, { conn }) => {
                     thumbnailUrl: icono, 
                     sourceUrl: redes, 
                     mediaType: 1, 
-                    renderLargerThumbnail: false // No Cambien a true perras
+                    renderLargerThumbnail: false 
                 }, 
             } 
         };
 
         const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
-            await conn.sendMessage(m.chat, 'Masha Hosting', textbot, text, imagen1, imagen1, channel, m, rcanal)
+        
+        // Asegúrate de que las variables estén definidas
+        const textbot = text; // Usando 'text' como 'textbot'
+        const imagen1 = imageUrl; // Usando 'imageUrl' como 'imagen1'
+        const channel = global.rchannel; // Usando el canal global
+        const rcanal = m; // Mensaje original
+
+        await conn.sendMessage(m.chat, { text: textbot, image: { url: imagen1 }, ...channel }, { quoted: rcanal });
     } catch (error) {
         console.error(`*Error*: ${error.message}`);
     }
 }
-handler.help
 handler.help = ['precios2'];
 handler.tag = ['main'];
 handler.command = ['precios2', 'p2'];
