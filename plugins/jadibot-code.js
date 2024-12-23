@@ -83,8 +83,7 @@ if (methodCode && !conn.authState.creds.registered) {
         process.exit(0);
     }
 
-    setTimeout(async () => {
-     m.reply(m.chat, '${wait}', rcanal); 
+    setTimeout(async () => { 
    let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
         let txt = ` –  *S E R B O T  -  S U B B O T*\n\n`
