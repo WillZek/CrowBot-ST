@@ -139,6 +139,7 @@ let options = { contextInfo: { externalAdReply: {
 title: title, body: body,
 thumbnailUrl: foto, 
 sourceUrl: redes,
+mediaUrl: channel,
 mediaType: 1,
 showAdAttribution: false,
 renderLargerThumbnail: false
