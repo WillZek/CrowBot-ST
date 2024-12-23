@@ -42,7 +42,7 @@ let handler = async (m, { conn }) => {
                     thumbnailUrl: icono, 
                     sourceUrl: redes, 
                     mediaType: 1, 
-                    renderLargerThumbnail: true // No Cambien a false perras
+                    renderLargerThumbnail: false // No Cambien a true perras
                 }, 
             } 
         };
