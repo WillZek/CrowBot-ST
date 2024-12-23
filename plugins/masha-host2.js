@@ -47,12 +47,13 @@ let handler = async (m, { conn }) => {
             } 
         };
 
-        const imageUrl = "../Menu.jpg"; // No Cambien El Link Zorras
-        await conn.sendMessage(m.chat, text, imagen2, ...global.rchannel, imagen2 }, { quoted: m });
+        const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
+        await conn.sendMessage(m.chat, { text, image: { url: imageUrl }, ...global.rchannel }, { quoted: m });
     } catch (error) {
         console.error(`*Error*: ${error.message}`);
     }
 }
+handler.help
 handler.help = ['precios2'];
 handler.tag = ['main'];
 handler.command = ['precios2', 'p2'];
