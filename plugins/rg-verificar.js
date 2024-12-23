@@ -68,7 +68,7 @@ let userNationalityData = api.data.result;
     let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *País:* ${userNationality || 'Desconocido'}\n◉ *Verificación:* ${user.name}\n◉ *Edad:* ${age} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 600 crowcoins 🪙\n*¡Bienvenido/a al bot!*`;
     
     await conn.sendMessage(channelID, {
-        text: messageContent
+        text: messageContent, ...rcanal
     });
 }
 
