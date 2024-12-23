@@ -26,7 +26,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 
 💛 𝗡𝗼𝘁𝗮: *Si no cumples con las reglas del bot, seras bloqueado.*
 
-💛 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de CrowBot.*
+💛 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de CrowBot: ${repobot}*
 
 ${global.md || ''}`.trim(); // Asegúrate de que global.md esté definido
 
