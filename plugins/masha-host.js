@@ -19,7 +19,7 @@ let handler = async (m, { conn }) => {
     
     "*¡Haz que tu experiencia digital sea una explosión de éxito! 🧑‍🚀💣*";
     
-    if (m.isChat) {
+    if (m.isGroup) {
         const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
         await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' });
     }
