@@ -24,7 +24,9 @@ let handler = async (m, { conn }) => {
 
     const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
     await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message, contextInfo: global.rchannel });
-
+} catch (error) {
+console.error("*Error*: ${error.message}");
+}
 }
 
 handler.help = ['precios2'];
