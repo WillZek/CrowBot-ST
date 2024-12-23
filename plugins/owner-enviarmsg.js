@@ -146,7 +146,7 @@ renderLargerThumbnail: false
 
 await conn.sendMessage(idchannel, { text: approvedText, contextInfo: options.contextInfo }, { quoted: null });
 
-await conn.reply(sender, `🌸 Solicitud aceptada, Grupo:\n${gp4}`);
+await conn.reply(sender, `🌸 Solicitud aceptada, Grupo:\n${grupo}`);
 delete suggestionQueue[suggestionId];
 }};
 handler.command = ['sug', 'sugerencia', 'enviarmensaje', 'solicitud', 'enviarsolicitud'];
