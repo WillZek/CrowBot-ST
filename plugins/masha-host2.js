@@ -30,5 +30,5 @@ let handler = async (m, { conn }) => {
 }
 handler.help = ['precios2'];
 handler.tag = ['main'];
-handler.command ['precios2', 'p2'];
+handler.command = ['precios2', 'p2'];
 export default handler;
