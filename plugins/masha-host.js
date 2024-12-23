@@ -9,7 +9,7 @@ let handler = async (m, { conn }) => {
     "📞 *Contáctanos:*\n" +
     "• *Wa.me/595976####*\n" +
     "•  *Wa.me/522431268###*\n" +
-    "• *Wa.me/5055786560* \n\n" +
+    "• *Wa.me/50557865603* \n\n" +
 
     "📝 *¡Regístrate ahora y lleva tu proyecto al siguiente nivel!*  \n" +
     "> *[https://dash.masha-host.shop/home]*\n\n" +
