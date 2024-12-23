@@ -21,7 +21,7 @@ let handler = async (m, { conn }) => {
     "*¡Haz que tu experiencia digital sea una explosión de éxito! 🧑‍🚀💣*";
 
     const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
-    await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' }, { quoted: m, rcanal});
+    await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message }, { mimetype: 'image/jpeg' }, { quoted: m, rcanal });
 }
 
 handler.help = ['precios1'];
