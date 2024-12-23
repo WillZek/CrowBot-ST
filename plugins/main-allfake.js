@@ -128,9 +128,10 @@ canalName.length)];
 
  const canalId = [
 "120363317263885467@newsletter", "120363338362822764@newsletter"
-];
+].getRandom()
+
 const randomCanalId = canalId[Math.floor(Math.random() * canalId.length)];
 
-global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: canalId, serverMessageId: 100, newsletterName: canalName, }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
+global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: canalId, serverMessageId: 100, newsletterName: randomCanalName, }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
