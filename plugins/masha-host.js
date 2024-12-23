@@ -9,6 +9,7 @@ let handler = async (m, { conn }) => {
     "📞 *Contáctanos:*\n" +
     "• *Wa.me/522431268546\n" +
     "•  *Wa.me/595976230899*\n" +
+    "• *Wa.me/584148256527*\n" +
     "• *Wa.me/50557865603* \n\n" +
 
     "📝 *¡Regístrate ahora y lleva tu proyecto al siguiente nivel!*  \n" +
