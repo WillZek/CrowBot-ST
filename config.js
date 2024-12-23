@@ -50,6 +50,8 @@ global.catalogo = fs.readFileSync('./storage/img/catalogo1.jpg')
 global.ianurl = fs.readFileSync('./storage/img/crowurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+global.mashach = '> *[https://dash.masha-host.shop/home]*\n\n🌌 *Canal Oficial*
+https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J\n\n*¡Haz que tu experiencia digital sea una explosión de éxito! 🧑‍🚀💣*'
 global.mashac = 'wa.me/59597657755*/n• *wa.me/5224312686*/n• *wa.me/5055786568*'
 global.grupo = 'https://chat.whatsapp.com/Ddst1bABCppAOD0Ay41mn4'
 global.grupo2 = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
