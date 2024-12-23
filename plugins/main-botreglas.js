@@ -13,7 +13,7 @@ let crow = `🍁 *Respeta las reglas de CrowBot*\n
 💛 𝗔𝘃𝗶𝘀𝗼: *Puedes apoyarnos dejando una estrellita 🌟 al repositorio oficial de CrowBot.*
 
 ${global.md}`.trim()
-await conn.reply(m.chat, Crow, m, fake)
+await conn.reply(m.chat, crow, m, fake)
 
 }
 handler.help = ['botreglas']
