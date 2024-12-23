@@ -1,6 +1,6 @@
 const handler = async (m, {conn, text, command, usedPrefix}) => {
   if (m.mentionedJid.includes(conn.user.jid)) return;
-  //const pp = './lib/img/warn.jpg';
+  //const pp = './Menu.jpg';
   let who;
   if (m.isGroup) {
     who = m.mentionedJid[0] ?
