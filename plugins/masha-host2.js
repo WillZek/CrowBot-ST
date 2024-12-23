@@ -48,7 +48,7 @@ let handler = async (m, { conn }) => {
         };
 
         const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
-  await conn.sendMessage(m.chat, { message, ...rcanal }, { quoted: m });
+  await conn.sendMessage(m.chat, { message, ...global.rchannel }, { quoted: m });
     } catch (error) {
         console.error(`*Error*: ${error.message}`);
     }
