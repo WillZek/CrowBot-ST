@@ -1,7 +1,7 @@
 let handler = async (m, { conn }) => {
     try {
         m.react('💫');
-        const message = "🌐 *`MASHA-HOSTING`*  \n" +
+        const text = "🌐 *`MASHA-HOSTING`*  \n" +
         "> *¡HOSTING DE CALIDAD QUE IMPULSA TU ÉXITO! 🚀* \n" +
         "🌟 *¡Desata el poder de tu presencia digital con nuestros servers! ⚡️ Rápidos, seguros y listos para la acción. ¡No te quedes atrás, únete a nuestro host de calidad y potencia tus proyectos alojando, bot de WhatsAp, servidores de Minecraf, páginas web y muchos más! 💥*\n" +
 
@@ -48,7 +48,7 @@ let handler = async (m, { conn }) => {
         };
 
         const imageUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
-  await conn.sendMessage(m.chat, { message, ...global.rchannel }, { quoted: m });
+  await conn.sendMessage(m.chat, { text, ...global.rchannel }, { quoted: m });
     } catch (error) {
         console.error(`*Error*: ${error.message}`);
     }
