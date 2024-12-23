@@ -1,5 +1,5 @@
 /*
--Código Hecho Por WillZek 
+- Código Hecho Por WillZek 
 - https://github.com/WillZek
 */
 let handler = async (m, { conn }) => {
