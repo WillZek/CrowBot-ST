@@ -126,3 +126,14 @@ global.rcanall = { contextInfo: { isForwarded: true, forwardedNewsletterMessageI
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: "120363317263885467@newsletter", serverMessageId: 100, newsletterName: '🌲【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】🎅', }, externalAdReply: { showAdAttribution: true, title: packname, body: '❄️𝐅𝐞𝐥𝐢𝐳 𝐍𝐚𝐯𝐢𝐳𝐚𝐝⛄', mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
 export default handler
+
+function pickRandom(list) {
+return list[Math.floor(Math.random() * list.length)]
+  }
+
+async function getRandomChannel() {
+let randomIndex = Math.floor(Math.random() * canalIdM.length)
+let id = canalIdM[randomIndex]
+let name = canalNombreM[randomIndex]
+return { id, name }
+}         
