@@ -84,7 +84,6 @@ if (methodCode && !conn.authState.creds.registered) {
     }
 
     setTimeout(async () => {
-m.react('🕒')
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
         let txt = ` –  *S E R B O T  -  S U B B O T*\n\n`
@@ -96,8 +95,7 @@ m.react('🕒')
             txt += `└  🌠  *4* : Escriba el Codigo\n\n`
             txt += `*👑Nota:* Este Código solo funciona en el número en el que se solicitó\n\n> *Sigan El Canal*https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d`
          await parent.reply(m.chat, txt, m, rcanal)
-m.react(done)
-         await parent.reply(m.chat, codeBot, m, rcanal)
+         await parent.reply(m.chat, wait, codeBot, m, rcanal)
         rl.close()
     }, 3000)
 }
