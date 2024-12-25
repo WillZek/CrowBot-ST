@@ -313,6 +313,7 @@ handler.help = ['paudio', 'pvideo', 'pdoc', 'pdoc2', 'playdoc'];
 handler.tags = ['descargas'];
 handler.command = ['paudio', 'pvideo', 'pdoc', 'pdoc2', 'mp32', 'mp42', 'playdoc', 'playdoc2']
 handler.group = true;
+handler.estrellas = 5;
 export default handler;
 
 async function search(query, options = {}) {
