@@ -2,6 +2,8 @@ async function obtenerLetraCancion(titulo) {
     const urlTitulo = encodeURIComponent(titulo);
     const url = `https://www.lyrics.com/lyrics/${urlTitulo}`;
 
+const handler = async (m, {conn, command, args}) => {
+
     try {
         const response = await fetch(url);
         if (!response.ok) {
