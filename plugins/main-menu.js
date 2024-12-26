@@ -33,24 +33,24 @@ const defaultMenu = {
 
 “ *🌲¡Feliz Navidad! %name soy Crow*, *%greeting* ❄️”
 
-*Sigue El Canal*
+*✧ Sigue El Canal*
 https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 
-┏━━━━━━━━ *INFO - BOT*
+╔━━━━━━━━ *⊱INFO - BOT⊰*
 ┊  👤 *Cliente:* %name
 ┊  ❤️‍🔥 *Exp:* %exp
 ┊  🌟 *Estrellas:* %estrellas
 ┊  👑 *Nivel:* %level
 ┊  🌠 *Rango:* %role
-┗━━━━━━━━━━━━━━
+╚━━━━━━━━━━━━━━
 %readmore
-┏━━━━━━━━ *INFO - USER*
+╔━━━━━━━━ *⊱INFO - USER⊰*
 ┊  🤖 *Bot:* Crow Bot - BS 
 ┊  🔱 *Modo:* Privado VIP 
 ┊  ✨ *Baileys:* Multi Device
 ┊  🪐 *Tiempo Activo:* %muptime
 ┊  💫 *Usuarios:* %totalreg 
-┗━━━━━━━━━━━━━━
+╚━━━━━━━━━━━━━━
 %readmore
 *︵⊹︵⏜︵🎁︵⏜︵⊹︵*
 
