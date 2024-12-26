@@ -1,8 +1,10 @@
+/*
+- By WillZek 
+- Extraer La Letra De Una Canción 
+*/
 async function obtenerLetraCancion(titulo) {
     const urlTitulo = encodeURIComponent(titulo);
     const url = `https://www.lyrics.com/lyrics/${urlTitulo}`;
-
-const handler = async (m, {conn, command, args}) => {
 
     try {
         const response = await fetch(url);
@@ -25,8 +27,10 @@ const handler = async (m, {conn, command, args}) => {
     }
 }
 
-const tituloCancion = 'Despacito';
-obtenerLetraCancion(tituloCancion);
+const handler = async (m, { conn, command, args }) => {
+    const tituloCancion = args.join(' ') || 'Despacito';
+    await obtenerLetraCancion(tituloCancion);
+}
 
 handler.help = ['lyrics'];
 handler.tag = ['buscador'];
