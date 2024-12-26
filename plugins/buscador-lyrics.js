@@ -1,3 +1,4 @@
+async function obtenerLetraCancion(titulo) {
     const urlTitulo = encodeURIComponent(titulo);
     const url = `https://www.lyrics.com/lyrics/${urlTitulo}`;
 
@@ -11,7 +12,6 @@
         const parser = new DOMParser();
         const doc = parser.parseFromString(texto, 'text/html');
 
-        // Buscamos la letra de la canción
         const letra = doc.querySelector('pre.lyric-body');
         if (letra) {
             console.log(letra.innerText);
@@ -23,8 +23,7 @@
     }
 }
 
-// Ejemplo de uso
-const tituloCancion = 'Despacito'; // Cambia esto por el título de la canción que deseas
+const tituloCancion = 'Despacito';
 obtenerLetraCancion(tituloCancion);
 
 handler.help = ['lyrics'];
