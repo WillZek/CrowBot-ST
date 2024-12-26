@@ -5,7 +5,7 @@
 import fetch from 'node-fetch';
 import cheerio from 'cheerio';
 
-async function obtenerLetraCancion(titulo) {
+async function obtenerLetraCancion(titulo, m) {
     const urlTitulo = encodeURIComponent(titulo);
     const url = `https://www.lyrics.com/lyrics/${urlTitulo}`;
 
@@ -14,25 +14,26 @@ async function obtenerLetraCancion(titulo) {
         if (!response.ok) {
             throw new Error('Error al acceder a la página');
         }
-m.react(rwait)
-        const texto = await response.text();
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(texto, 'text/html');
 
-        const letra = doc.querySelector('pre.lyric-body');
-        if (letra) {
-            console.log(letra.innerText);
+        const texto = await response.text();
+        const $ = cheerio.load(texto);
+
+        const letra = $('pre.lyric-body');
+        if (letra.length) {
+            m.reply(letra.text());
+
         } else {
-            console.log('No se encontró la letra de la canción.');
+            m.reply('No se encontró la letra de la canción.');
         }
     } catch (error) {
         console.error(error.message);
+        m.reply('Ocurrió un error al obtener la letra.');
     }
 }
 
 const handler = async (m, { conn, command, args }) => {
     const tituloCancion = args.join(' ') || 'Despacito';
-    await obtenerLetraCancion(tituloCancion);
+    await obtenerLetraCancion(tituloCancion, m);
 }
 
 handler.help = ['lyrics'];
