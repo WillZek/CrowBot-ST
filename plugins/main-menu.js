@@ -31,7 +31,7 @@ let tags = {
 const defaultMenu = {
   before: `*✎෴𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆🦌​᭄*
 
-“ *🌲¡Feliz Navidad! %name soy Crow*, *%greeting* ❄️”
+“ *🌲¡Feliz Navidad! %name soy ${nombrebot}*, *%greeting* ❄️”
 
 *✧ Sigue El Canal*
 https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
@@ -45,7 +45,7 @@ https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 ╚━━━━━━━━━━━━━━
 %readmore
 ╔━━━━━ *⊱INFO - USER⊰*
-┊  🤖 *Bot:* Crow Bot - BS 
+┊  🤖 *Bot:* ${nombrebot} 
 ┊  🔱 *Modo:* Privado VIP 
 ┊  ✨ *Baileys:* Multi Device
 ┊  🪐 *Tiempo Activo:* %muptime
