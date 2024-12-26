@@ -14,12 +14,12 @@ const handler = async (m, {isPrems, conn}) => {
   global.db.data.users[m.sender].exp += expp;
 
   const texto = `
-╭━〔 ${global.botname} 〕⬣
+╭━〔 ${global.nombrebot} 〕⬣
 ┃🧰 *Obtienes Un Cofre*
 ┃ ${saludo}
 ╰━━━━━━━━━━━━⬣
 
-╭━〔 ${global.botname} 〕⬣
+╭━〔 ${global.nombrebot} 〕⬣
 ┃ *${dia} Cookies* 🍪
 ┃ *${tok} Tokens* 💰
 ┃ *${ai} CrowCoins* 🪙
