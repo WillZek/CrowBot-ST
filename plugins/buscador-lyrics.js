@@ -27,7 +27,7 @@ async function obtenerLetraCancion(titulo, m) {
         }
     } catch (error) {
         console.error(error.message);
-        m.reply('Ocurrió un error al obtener la letra.');
+        m.reply(`*Error:* ${error.message}`);
     }
 }
 
