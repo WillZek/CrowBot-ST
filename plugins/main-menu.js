@@ -29,7 +29,7 @@ let tags = {
 }
 
 const defaultMenu = {
-  before: `*╭━🦌☆𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆🦌━╮*
+  before: `*✎෴𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆🦌​᭄*
 
 “ *🌲¡Feliz Navidad! %name soy Crow*, *%greeting* ❄️”
 
