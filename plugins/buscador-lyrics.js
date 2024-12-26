@@ -1,8 +1,3 @@
-¡Hola, WillZek! Aquí tienes un código en JavaScript que utiliza `fetch` para obtener la letra de una canción desde la API de Lyrics.com. Este ejemplo asume que estás trabajando en un entorno donde puedes hacer solicitudes HTTP, como un navegador o un entorno Node.js con `node-fetch`.
-
-```javascript
-async function obtenerLetraCancion(titulo) {
-    // Reemplazamos espacios en el título por '%20' para la URL
     const urlTitulo = encodeURIComponent(titulo);
     const url = `https://www.lyrics.com/lyrics/${urlTitulo}`;
 
