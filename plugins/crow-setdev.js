@@ -1,5 +1,5 @@
 let handler = async (m, { conn, text, isRowner }) => {
-  if (!text) return m.reply('☕︎ Por favor, proporciona un dev para el bot.\nEjemplo: setdev Senko-Bot');
+  if (!text) return m.reply('☕︎ Por favor, proporciona un dev para el bot.\nEjemplo: setdev CrowBot');
   const texto2bot = '© ⍴᥆ᥕᥱrᥱძ: '
   global.dev = `${texto2bot + text}`;
   
