@@ -15,6 +15,7 @@ async function obtenerLetraCancion(titulo, m) {
         }
 
         const texto = await response.text();
+        console.log(texto);
 
         const $ = cheerio.load(texto, { xmlMode: true });
 
