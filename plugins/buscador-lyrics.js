@@ -36,4 +36,4 @@ handler.help = ['lyrics'];
 handler.tag = ['buscador'];
 handler.command = ['lyrics', 'letrac', 'letc'];
 
-export default handler ;
+export default handler;
