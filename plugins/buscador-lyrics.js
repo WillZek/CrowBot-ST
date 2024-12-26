@@ -3,6 +3,7 @@
 - Extraer La Letra De Una Canción 
 */
 import fetch from 'node-fetch'
+import cheerio from 'cheerio';
 
 async function obtenerLetraCancion(titulo) {
     const urlTitulo = encodeURIComponent(titulo);
