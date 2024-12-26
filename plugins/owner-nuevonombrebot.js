@@ -1,9 +1,9 @@
 let handler = async (m, { conn, text, isRowner }) => {
   if (!text) return m.reply('🌐 Por favor, proporciona un nombre para el bot.\nEjemplo: setname CrowBot');
 
-  global.botname = text.trim();
+  global.nombrebot = text.trim();
   
-  m.reply(`✐ El nombre del bot ha sido cambiado a: ${global.botname}`);
+  m.reply(`✐ El nombre del bot ha sido cambiado a: ${global.nombrebot}`);
 };
 
 handler.help = ['setname'];
