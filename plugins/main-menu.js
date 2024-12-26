@@ -36,7 +36,7 @@ const defaultMenu = {
 *✧ Sigue El Canal*
 https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 
-╔━━━━━━ *⊱INFO - BOT⊰*
+╔━━━━━ *⊱INFO - BOT⊰*
 ┊  👤 *Cliente:* %name
 ┊  ❤️‍🔥 *Exp:* %exp
 ┊  🌟 *Estrellas:* %estrellas
@@ -44,7 +44,7 @@ https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 ┊  🌠 *Rango:* %role
 ╚━━━━━━━━━━━━━━
 %readmore
-╔━━━━━━ *⊱INFO - USER⊰*
+╔━━━━━ *⊱INFO - USER⊰*
 ┊  🤖 *Bot:* Crow Bot - BS 
 ┊  🔱 *Modo:* Privado VIP 
 ┊  ✨ *Baileys:* Multi Device
