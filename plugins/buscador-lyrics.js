@@ -15,7 +15,7 @@ async function obtenerLetraCancion(titulo, m) {
         }
 
         const texto = await response.text();
-        console.log(texto);
+        console.log(texto); // Pa ver si funca la api de mrd 
 
         const $ = cheerio.load(texto, { xmlMode: true });
 
