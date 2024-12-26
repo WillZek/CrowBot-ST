@@ -14,7 +14,7 @@ async function obtenerLetraCancion(titulo) {
         if (!response.ok) {
             throw new Error('Error al acceder a la página');
         }
-
+m.react(wait)
         const texto = await response.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(texto, 'text/html');
