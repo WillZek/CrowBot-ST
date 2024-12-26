@@ -3,7 +3,7 @@ let handler = async (m, { conn, text, isRowner }) => {
   const texto2bot = '© ⍴᥆ᥕᥱrᥱძ: '
   global.dev = `${texto2bot + text}`;
   
-  m.reply(`✐ El nombre del bot ha sido cambiado a: ${global.dev}`);
+  m.reply(`🌠 El nombre del bot ha sido cambiado a: ${global.dev}`);
 };
 
 handler.help = ['setdev'];
