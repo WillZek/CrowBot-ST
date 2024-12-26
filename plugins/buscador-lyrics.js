@@ -6,22 +6,21 @@ import fetch from 'node-fetch';
 import cheerio from 'cheerio';
 
 async function obtenerLetraCancion(titulo, m) {
-    const urlTitulo = encodeURIComponent(titulo);
-    const url = `https://www.lyrics.com/lyrics/${urlTitulo}`;
+    const url = `https://www.stands4.com/services/v2/lyrics.php?uid=1001&tokenid=tk324324&term=${encodeURIComponent(titulo)}&artist=Alphaville&format=xml`;
 
     try {
         const response = await fetch(url);
         if (!response.ok) {
-            throw new Error('Error al acceder a la página');
+            throw new Error('Error al acceder a la API');
         }
 
         const texto = await response.text();
-        const $ = cheerio.load(texto);
 
-        const letra = $('pre.lyric-body');
+        const $ = cheerio.load(texto, { xmlMode: true });
+
+        const letra = $('lyric').text();
         if (letra.length) {
-            m.reply(letra.text());
-
+            m.reply(letra);
         } else {
             m.reply('No se encontró la letra de la canción.');
         }
@@ -32,7 +31,7 @@ async function obtenerLetraCancion(titulo, m) {
 }
 
 const handler = async (m, { conn, command, args }) => {
-    const tituloCancion = args.join(' ') || 'Despacito';
+    const tituloCancion = args.join(' ') || 'Forever Young';
     await obtenerLetraCancion(tituloCancion, m);
 }
 
