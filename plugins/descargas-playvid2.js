@@ -312,7 +312,7 @@ console.log(e2);
 handler.help = ['paudio', 'pvideo', 'pdoc', 'pdoc2', 'playdoc'];
 handler.tags = ['descargas'];
 handler.command = ['paudio', 'pvideo', 'pdoc', 'pdoc2', 'mp32', 'mp42', 'playdoc', 'playdoc2']
-handler.group = true;
+handler.group = false;
 handler.estrellas = 12;
 export default handler;
 
