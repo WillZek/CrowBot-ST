@@ -1,13 +1,11 @@
 import { spawn } from 'child_process';
 
-if (!process.send) throw '*『✦』Reiniciar: node start.js*\n*『✦』Reiniciar: node index.js*';
+let handler = async (m, { conn, isROwner, text }) => {
+    if (!process.send) throw '*『✦』Reiniciar: node start.js*\n*『✦』Reiniciar: node index.js*';
 
-const handler = async (m, { conn, isROwner, text }) => {
-    if (!process.send) throw 'Dont: node luffy.js\nDo: node index.js';
-
-    if (isROwner) {
+    if (conn.user.jid === conn.user.jid) {
         const progreso = [
-            "♻️ Iniciando proceso de reinicio de TECNO-BOT",
+      "*♻️iniciando proceso de reinicio de CrowBot*",
             "□□□□□ 0%",
             "■□□□□ 20%",
             "■■□□□ 40%",
@@ -16,19 +14,28 @@ const handler = async (m, { conn, isROwner, text }) => {
             "■■■■■ 100%",
         ];
 
-        await conn.sendMessage(m.chat, { text: progreso[0] }, { quoted: m });
+        const { key } = await conn.sendMessage(m.chat, { text: progreso[0] }, { quoted: m });
 
-        await conn.reply(m.chat, '🌠 *R E I N I C I A N D O* 🌠', m, rcanal);
-        
+        for (let i = 1; i < progreso.length; i++) {
+            await delay(1000);
+
+            await conn.sendMessage(m.chat, { text: progreso[i], edit: key });
+        }
+
+        await conn.sendMessage(m.chat, { text: "*『✅』*CrowBot* reiniciado con éxito espera unos segundos asta que el proceso termine.*", edit: key });
+
+        await delay(2000);
         process.send('reset');
     } else {
-        throw 'No tienes permiso para reiniciar el bot.';
+        throw 'No tienes permisos para ejecutar este comando.';
     }
 };
 
 handler.help = ['restart'];
-handler.tags = ['owner'];
-handler.command = ['restart', 'reiniciar'];
+handler.tags = ['tools'];
+handler.command = ['restart', 'xd', 'reiniciar'];
 handler.rowner = true;
 
 export default handler;
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
