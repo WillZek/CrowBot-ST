@@ -18,7 +18,7 @@ const handler = async (m, { conn, isROwner, text }) => {
 
         await conn.sendMessage(m.chat, { text: progreso[0] }, { quoted: m });
 
-        await conn.reply(m.chat, '🌠 *R E I N I C I A N D O* 🌠', m);
+        await conn.reply(m.chat, '🌠 *R E I N I C I A N D O* 🌠', m, rcanal);
         
         process.send('reset');
     } else {
