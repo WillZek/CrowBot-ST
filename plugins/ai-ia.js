@@ -70,7 +70,7 @@ handler.tags = ['ai']
 
 handler.register = true
 
-// handler.estrellas = 1
+handler.estrellas = 4;
 
 handler.command = ['ia', 'chatgpt', 'ai', 'chat', 'gpt']
 
