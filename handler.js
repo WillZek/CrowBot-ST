@@ -344,7 +344,7 @@ global.db.data.users[m.sender].spam = new Date * 1
                 else
                     m.exp += xp
                 if (!isPrems && plugin.estrellas && global.db.data.users[m.sender].estrellas < plugin.estrellas * 1) {
-                    conn.reply(m.chat, `Se agotaron tus *💵 Dolares*`, m, fake)
+                    conn.reply(m.chat, `Se agotaron tus *Estrellas* 🌟`, m, fake)
                     continue
                 }
                 let extra = {
