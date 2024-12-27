@@ -55,7 +55,7 @@ const handler = async (m, { conn, text, usedPrefix, command, args }) => {
       text: `\`\`\`🌟 ¡Creaste con éxito un clan!\n\nNombre: ${args[0]}\nLíder: @${m.sender.split('@')[0]}\nID de unión: ${ids}\`\`\``,
       mentions: [m.sender],
     },
-    { quoted: fkontak }
+    { quoted: m } // Cambié fkontak a m, asegúrate de usar la variable correcta aquí.
   );
 };
 
@@ -67,6 +67,9 @@ export default handler;
 
 async function generarID(text) {
   const cleanText = text.toUpperCase().replace(/[^A-Z]/g, "");
+  if (cleanText.length === 0) {
+    throw `⚠️ El nombre del clan no puede contener caracteres no válidos.`;
+  }
   let id = "";
   for (let i = 0; i < 6; i++) {
     id += cleanText[Math.floor(Math.random() * cleanText.length)] || "X";
