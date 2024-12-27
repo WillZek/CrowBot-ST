@@ -60,7 +60,9 @@ const handler = async (m, { conn, text, usedPrefix, command, args }) => {
 };
 
 handler.tags = ['clanes'];
-handler.help = handler.command = ["cclan"];
+handler.help = ['cclan'];
+handler.command = ['cclan', 'ccrear'];
+handler.estrellas = 3;
 export default handler;
 
 async function generarID(text) {
