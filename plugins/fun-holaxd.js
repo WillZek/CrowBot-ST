@@ -1,5 +1,5 @@
 {
-let handler = async(m.chat { conn, usedPrefix, commando } ) => {
+const handler = async(m.chat { conn, usedPrefix, commando }) => {
  try{
 let txt = `hola xdd`;
 let img = 'https://qu.ax/yyCo.jpeg';
