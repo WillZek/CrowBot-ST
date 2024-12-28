@@ -1,7 +1,7 @@
 {
 let handler = async(usedPrefix, commando) => {
  try{
-await conn.reoly(m.chat, 'hola xd', rcanal);
+await conn.reply(m.chat, 'hola xd', rcanal);
 } catch (error) {
 m.reply(`Error: ${error.message}`)
 m.react(done)
