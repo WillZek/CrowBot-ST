@@ -1,5 +1,5 @@
 {
-let handler = async(usedPrefix, commando); => {
+let handler = async(usedPrefix, commando) => {
 let txt = `hola xdd`;
 let img = 'https://qu.ax/yyCo.jpeg',
 conn.sendFile(m.chat, img, txt)
