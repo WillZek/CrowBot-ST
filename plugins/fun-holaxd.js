@@ -1,16 +1,18 @@
 import fs from 'fs';
-{
-const handler = async(m.chat { conn, usedPrefix, commando }) => {
- try{
-let txt = `hola xdd`;
-let img = 'https://qu.ax/yyCo.jpeg';
-m.react('🎉');
-await conn.sendMessage(m.chat, img, txt)
-} catch (error) {
-m.reply(`Error: ${error.message}`)
-m.react('💥');
- }
+
+const handler = async (m) => {
+  const { chat, conn, usedPrefix, commando } = m; 
+  try {
+    let txt = `hola xdd`;
+    let img = 'https://qu.ax/yyCo.jpeg';
+    m.react('🎉');
+    await conn.sendMessage(chat, img, { caption: txt });
+  } catch (error) {
+    m.reply(`Error: ${error.message}`);
+    m.react('💥');
+  }
 };
+
 handler.help = ['holaxd'];
 handler.tag = ['fun'];
 handler.command = ['holaxd', 'hxd'];
