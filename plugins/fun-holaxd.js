@@ -4,7 +4,7 @@ const handler = async (m) => {
   const { chat, conn, usedPrefix, commando } = m; 
   try {
     let txt = `hola xdd`;
-    let img = 'https://qu.ax/yyCo.jpeg';
+    let img = 'https://files.catbox.moe/w1ciuo.jpg';
     m.react('🎉');
     await conn.sendMessage(chat, img, { caption: txt });
   } catch (error) {
