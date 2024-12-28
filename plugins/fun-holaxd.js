@@ -1,7 +1,9 @@
 {
-let handler = async(usedPrefix, commando) => {
+let handler = async(m.chat { conn, usedPrefix, commando } ) => {
  try{
-await conn.reply(m.chat, 'hola xd', m, rcanal);
+let txt = `hola xdd`;
+let img = 'https://qu.ax/yyCo.jpeg';
+await conn.sendFile(m.chat, img, txt)
 } catch (error) {
 m.reply(`Error: ${error.message}`)
 m.react(done)
