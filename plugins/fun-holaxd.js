@@ -1,3 +1,4 @@
+import fs from 'fs';
 {
 const handler = async(m.chat { conn, usedPrefix, commando }) => {
  try{
