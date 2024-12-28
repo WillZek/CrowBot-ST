@@ -1,9 +1,7 @@
 {
 let handler = async(usedPrefix, commando) => {
  try{
-let txt = `hola xdd`;
-let img = 'https://qu.ax/yyCo.jpeg';
-await conn.sendFile(m.chat, img, txt)
+await conn.reoly(m.chat, 'hola xd', rcanal);
 } catch (error) {
 m.reply(`Error: ${error.message}`)
 m.react(done)
