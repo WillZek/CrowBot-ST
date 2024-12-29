@@ -2,7 +2,7 @@ import fs from 'fs';
 
 const handler = async(m, { conn, usedPrefix, command });
 
-try {
+ try {
 let txt = `Cristiano Ronaldo Siuuu`;
 let img = 'https://files.catbox.moe/w1ciuo.jpg';
 
