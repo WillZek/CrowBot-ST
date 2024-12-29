@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 import yts from 'yt-search';
 
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) return conn.reply(m.chat, '*\`Ingresa el nombre de lo que quieres buscar\`*', m, fake);
+  if (!args[0]) return conn.reply(m.chat, '*\`Ingresa el nombre de lo que quieres buscar\`*', m, rcanal);
 
   await m.react('🕓');
   try {
