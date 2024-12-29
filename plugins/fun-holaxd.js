@@ -6,7 +6,7 @@ const handler = async (m) => {
     let txt = `hola xdd`;
     let img = 'https://files.catbox.moe/w1ciuo.jpg';
     m.react('🎉');
-    await conn.sendMessage(chat, { image { url: img }, { caption: txt });
+    await conn.sendMessage(chat, { image: { url: img }, { caption: txt });
   } catch (error) {
     m.reply(`Error: ${error.message}`);
     m.react('💥');
