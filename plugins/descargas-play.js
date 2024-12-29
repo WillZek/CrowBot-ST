@@ -51,9 +51,9 @@ let handler = async (m, { conn, args }) => {
   }
 };
 
-handler.help = ['play2 *<texto>*'];
+handler.help = ['playop *<texto>*'];
 handler.tags = ['descargas'];
-handler.command = ['play2'];
+handler.command = ['playop'];
 
 export default handler;
 
