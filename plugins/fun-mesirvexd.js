@@ -1,6 +1,5 @@
 import fs from 'fs';
  
-  {
 const handler = async(m.chat, usedPrefix, command)
 
 try{
