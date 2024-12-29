@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-const handler = async(m.chat, { conn, usedPrefix, command }) => {
+const handler = async(m, { conn, usedPrefix, command }) => {
 
  try {
 let txt = `Cristiano Ronaldo Siuuu`;
