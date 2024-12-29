@@ -9,7 +9,7 @@ m.react('🎉')
 await conn.sendMessage(chat, { image: { url: img }, caption: txt })
 
 } catch (error) { 
-m.reply(`*Error:* ${error.message});
+m.reply(`*Error:* ${error.message}`);
 m.react('💥')
  }
 };
