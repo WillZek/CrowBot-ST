@@ -5,11 +5,11 @@ let txt = `Cristiano Ronaldo Siuuu`;
 let img = 'https://files.catbox.moe/w1ciuo.jpg';
 
 await conn.sendMessage(m.chat, { image: { url: img }, caption: txt});
-m.react('🎉')
+m.react('🎉');
 
 } catch (error) {
 m.reply(`Error: ${error.message}`);
-m.react('💥')
+m.react('💥');
  }
 };
 
