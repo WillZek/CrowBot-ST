@@ -6,7 +6,7 @@ try {
 let txt = `Una Ventana`;
 let img = 'https://files.catbox.moe/w1ciuo.jpg';
 
-conn.sendMessage(chat, { image: { url: img }, caption: txt });
+conn.sendMessage(m.chat, { image: { url: img }, caption: txt });
 m.react('💥');
 
 } catch (error) {
