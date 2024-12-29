@@ -6,7 +6,7 @@ try{
     let txt = `Siuu`;
     let img = 'https://files.catbox.moe/w1ciuo.jpg';
 m.react('🎉')
-await conn.sendMessage(m.chat, { image: { url: img }, caption: txt })
+await conn.sendMessage(m.chat, { image: { url: img }, caption: txt });
 
 } catch (error) { 
 m.reply(`*Error:* ${error.message}`);
