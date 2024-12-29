@@ -3,8 +3,8 @@ import fs from 'fs';
 const handler = async(m, { conn, usedPrefix, command }) => {
 
 try{
-    let txt = `Siuu`;
-    let img = 'https://files.catbox.moe/w1ciuo.jpg';
+    let txt = `*`Messi`*`;
+    let img = 'https://files.catbox.moe/v01b2i.jpg';
 m.react('🎉')
 await conn.sendMessage(m.chat, { image: { url: img }, caption: txt });
 
