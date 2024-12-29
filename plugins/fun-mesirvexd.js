@@ -1,6 +1,6 @@
 import fs from 'fs';
  
-const handler = async(m, { usedPrefix, command }) => {
+const handler = async(m, { conn, usedPrefix, command }) => {
 
 try{
     let txt = `Siuu`;
