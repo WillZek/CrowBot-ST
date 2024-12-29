@@ -17,6 +17,6 @@ m.react('💥')
 
 handler.help = ['messirvexd'];
 handler.tag = ['fun'];
-handler.command ['messirvexd', 'mxd'];
+handler.command = ['messirvexd', 'mxd'];
 
 export default handler;
