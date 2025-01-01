@@ -178,7 +178,7 @@ npm start
 ```
 > **Si después de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal**
 
-<details>
+</details>
 
 ---
 
@@ -255,7 +255,7 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 
 - **Numero:** [`Aquí`](https://wa.me/50557865603?text=Vengo+De+Github)
 
-<details>
+</details>
 
 > Developed By  **[WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)**.
 
