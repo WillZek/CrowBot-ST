@@ -54,7 +54,7 @@ let txt = `
   • Usuario : @${m.sender.split`@`[0]} 🧝‍♂️
   • Tiempo Premium : ${tiempoTl} hora(s) 🕑
   • Total a pagar : ${precio + com} 🏦
-  • Diamantes restantes : ${user.diamond} 
+  • Diamantes restantes : ${user.estrellas} 
   • Tenia : ${user.estrellas + precio + com} ⛅
   • Comisión : -${com} 💎
  ${xx}
