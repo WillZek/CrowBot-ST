@@ -38,7 +38,7 @@ if (!args[0]) return conn.reply(m.chat, texto, fkt2)
           let user = global.db.data.users[m.sender]
          // if (!args[2] == '1h') throw `*❗ Al final del texto debe ir 1h. Ejemplo: ${usedPrefix + command} 1 1h*`
          if (isNaN(args[0])) return conn.reply(m.chat, `*❌ Solo se aceptan numeros. Ejemplo: ${usedPrefix + command} 1 1h*`, fkt2)
-if (!user.estrellas < precio) throw `*🏦 No tienes suficientes estrellas para comprar premium!*`
+if (user.estrellas < precio) throw `*🏦 No tienes suficientes estrellas para comprar premium!*`
 user.estrellas -= precio * args[0]
 user.estrellas -= com * args[0]
 
