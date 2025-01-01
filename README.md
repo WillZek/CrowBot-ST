@@ -177,6 +177,9 @@ yarn install && npm install
 npm start
 ```
 > **Si después de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal**
+
+<details>
+
 ---
 
 ### **`☁️ SKY ULTRA PLUS`**
@@ -251,6 +254,8 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
  <summary><b>:paperclip: Contactos</b></summary>
 
 - **Numero:** [`Aquí`](https://wa.me/50557865603?text=Vengo+De+Github)
+
+<details>
 
 > Developed By  **[WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)**.
 
