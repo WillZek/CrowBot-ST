@@ -19,7 +19,7 @@ let texto = `
   ${xxx}-----------------------------
   • ${usedPrefix + command} 1 1h = 1 hora premium 🎁
   • 1 hora premium = 20 + 1 Diamantes 💎
-   • El +1 es por la comisión. Por cada hora más de premium comprada, se aumentará, es decir, si compras 2 horas premium se te cobrarán 2 diamantes como comisión 💎
+   • El +1 es por la comisión. Por cada hora más de premium comprada, se aumentará, es decir, si compras 2 horas premium se te cobrarán 2 estrellas como comisión 💎
 ${xxx}
  *乂  ＩＮＦＯ  -  ＥＸＴＲＡ*
   ${xxx}-----------------------------
@@ -38,9 +38,9 @@ if (!args[0]) return conn.reply(m.chat, texto, fkt2)
           let user = global.db.data.users[m.sender]
          // if (!args[2] == '1h') throw `*❗ Al final del texto debe ir 1h. Ejemplo: ${usedPrefix + command} 1 1h*`
          if (isNaN(args[0])) return conn.reply(m.chat, `*❌ Solo se aceptan numeros. Ejemplo: ${usedPrefix + command} 1 1h*`, fkt2)
-if (!user.diamond < precio) throw `*🏦 No tienes suficientes diamantes para comprar premium!*`
-user.diamond -= precio * args[0]
-user.diamond -= com * args[0]
+if (!user.estrellas < precio) throw `*🏦 No tienes suficientes estrellas para comprar premium!*`
+user.estrellas -= precio * args[0]
+user.estrellas -= com * args[0]
 
 var tiempo = 3600000 * args[0] //180000 3min | 300000 5 min | 900000 15min | 1800000 30min | 3600000 1h | 10800000 3h | 25200000 7h | 86400000 24h | 259200000 3d  
 var now = new Date() * 1
