@@ -55,7 +55,7 @@ let txt = `
   • Tiempo Premium : ${tiempoTl} hora(s) 🕑
   • Total a pagar : ${precio + com} 🏦
   • Diamantes restantes : ${user.diamond} 
-  • Tenia : ${user.diamond + precio + com} ⛅
+  • Tenia : ${user.estrellas + precio + com} ⛅
   • Comisión : -${com} 💎
  ${xx}
 `
