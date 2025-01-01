@@ -12,7 +12,7 @@ await m.react('✅️')
 } catch (error) {
 await m.react('✖️')
 console.error(error)
-return conn.reply(m.chat, '🍂 *Ocurrió un fallo*', m, rcanal)
+return conn.reply(m.chat, `🍂 *Ocurrió un fallo* ${error.message}`, m, rcanal)
 }}
 
 handler.command = ['bard']
