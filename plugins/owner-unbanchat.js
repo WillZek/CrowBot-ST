@@ -10,6 +10,6 @@ handler.tags = ['grupo'];
 handler.command = ['unbanchat','desbanearchat','desbanchat']
 handler.admin = true 
 handler.botAdmin = true
-handler.group = true
+handler.group = false
 
 export default handler
