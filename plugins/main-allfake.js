@@ -64,13 +64,13 @@ global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻�
 
 //Enlaces
 var canal =   'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
-var git = 'https://github.com/WillZek'  
+var grupo = 'https://chat.whatsapp.com/HwcDg23QEwhIXc73wL0tKj'  
 var github = 'https://github.com/WillZek/CrowBot-ST' 
 var facebook = 'https://www.facebook.com/profile.php?id=100055985748040' 
 let instagram = 'https://www.instagram.com/crowbot-wa'
 let correo = 'sm.ninopina10@gmail.com'
 
-global.redes = [canal, git, github, facebook, instagram, correo].getRandom()
+global.redes = [canal, grupo, github, facebook, instagram, correo].getRandom()
 
 //Imagen
 let category = "imagen"
