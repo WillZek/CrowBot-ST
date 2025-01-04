@@ -10,7 +10,7 @@ const imageUrl = 'https://i.ibb.co/qJNL5Bg/file.jpg';
 try {
 // Que No Quites Los Créditos😑
 // Te Estoy Viendo😑
-await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message, mimetype: 'image/jpeg' });
+await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: message, mimetype: 'image/jpeg' }, { quoted: fkontak });
 } catch (error) {
 console.error('Error al enviar el mensaje:', error);
 }
