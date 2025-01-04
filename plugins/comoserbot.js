@@ -1,5 +1,5 @@
 const handler = async (m, {conn}) => {
-  m.reply(global.serbot);
+  m.reply(global.serbot, { quoted: fkontak });
 };
 handler.command = /^(comoserbot)$/i;
 handler.tags =['main'] 
