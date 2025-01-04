@@ -2,9 +2,10 @@ const handler = async (m, {conn}) => {
   m.reply(global.serbot, { quoted: fkontak });
 };
 handler.command = /^(comoserbot)$/i;
-handler.tags =['main'] 
-handler.help = ['comoserbot <covertirse en bot>'] 
+handler.tags = ['main'];
+handler.help = ['comoserbot <covertirse en bot>'];
 export default handler;
+
 global.serbot = ` 
 *PARA SER UN BOT DEBES PONER LOS SIGUIENTES COMANDOS*
 
