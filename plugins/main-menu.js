@@ -3,7 +3,7 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
-let imagen1 = 'https://files.catbox.moe/ftx8eu.jpg',
+let imagen1 = 'https://files.catbox.moe/ftx8eu.jpg';
 
 let tags = {
   'main': '♥️INFO💚',
