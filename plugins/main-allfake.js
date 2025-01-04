@@ -67,7 +67,7 @@ var canal =   'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
 var git = 'https://github.com/WillZek'  
 var github = 'https://github.com/WillZek/CrowBot-ST' 
 var facebook = 'https://www.facebook.com/profile.php?id=100055985748040' 
-let instagram = 'https://tiktok.com/@the_crow_legendario_bs'
+let instagram = 'https://www.instagram.com/crowbot-wa'
 let correo = 'sm.ninopina10@gmail.com'
 
 global.redes = [canal, git, github, facebook, instagram, correo].getRandom()
