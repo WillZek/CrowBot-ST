@@ -53,7 +53,7 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 
 - **Grupo De Ventas:** [`Aquí`](https://chat.whatsapp.com/KfcT8ReqiJW93g17vSXVpf)
 - **Comunidad Oficial:** [`Aquí`](https://chat.whatsapp.com/BZ87KB4Igab3lCw6DAwPCR)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d)
+- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W)
 - **Propietario Del Bot:** [`Aqui`](https:/Wa.me/50557865603)
 
 </details>
@@ -131,7 +131,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 | APP | TIPO | ENLACE |
 |------|-------------|-------|
-| WhatsApp | 𝒞𝒶𝓃𝒶𝓁 𝒪𝒻𝒾𝒸𝒾𝒶𝓁 | [¡Click aquí!](https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d) |
+| WhatsApp | 𝒞𝒶𝓃𝒶𝓁 𝒪𝒻𝒾𝒸𝒾𝒶𝓁 | [¡Click aquí!](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W) |
 | WhatsApp | 𝒢𝓇𝓊𝓅𝑜 𝒪𝒻𝒾𝒸𝒾𝒶𝓁 | [¡Click aquí!](https://chat.whatsapp.com/E78uEs2qJIE0apCLB7rSQZ) |
 | WhatsApp | 𝒞𝑜𝓂𝓊𝓃𝒾𝒹𝒶𝒹 𝒪𝒻𝒾𝒸𝒾𝒶𝓁 | [¡Click aquí!](https://chat.whatsapp.com/BuLovToIxdiLeycG2d3xJN) |
 
@@ -257,7 +257,7 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 
 </details>
 
-> Developed By  **[WillZek](https://chat.whatsapp.com/F0MiFkIWaQtLrZez9Xt2uu)**.
+> Developed By  **[WillZek](wa.me/50557865603?text=Vengo+De+Github)**.
 
 **`¡GRACIAS POR PREFERIR CROWBOT!` 💛**
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer&text=Espero%20Hayas%20Disfrutado%20El%20Repositorio&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/>
