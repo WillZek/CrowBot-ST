@@ -8,8 +8,8 @@ await conn.reply(m.chat, '🚩 *CrowBot-MD ya fué desbaneado en este chat*', m,
 handler.help = ['unbanchat'];
 handler.tags = ['grupo'];
 handler.command = ['unbanchat','desbanearchat','desbanchat']
-handler.admin = true 
-handler.botAdmin = true
+handler.rowner = true 
+handler.botAdmin = false
 handler.group = false
 
 export default handler
