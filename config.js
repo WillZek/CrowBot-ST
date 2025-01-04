@@ -55,9 +55,8 @@ global.ianurl = fs.readFileSync('./storage/img/crowurl.jpg')
 global.mashach = 'https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J'
 global.mashac = 'wa.me/59597657755*/n• *wa.me/5224312686*/n• *wa.me/5055786568*'
 global.repobot = 'https://github.com/WillZek/CrowBot-ST'
-global.grupo = 'https://chat.whatsapp.com/Ddst1bABCppAOD0Ay41mn4'
-global.grupo2 = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
-global.grupo3 = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
+global.grupo = 'https://chat.whatsapp.com/HwcDg23QEwhIXc73wL0tKj'
+global.comu = 'https://chat.whatsapp.com/Bgfb6Ag13BDCvwzOtldlCm'
 global.channel = 'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
 global.insta = 'https://www.instagram.com/crowbot-wa'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
