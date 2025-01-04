@@ -24,7 +24,7 @@ let handler = async (m, { conn }) => {
 
     const imagenUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // No Cambien El Link Zorras
     const imagenGrandeUrl = 'https://f.uguu.se/aPQnLyQb.jpg'; // Aquí puedes poner el link de la imagen más grande
-    await conn.sendMessage(m.chat, { image: { url: imagenUrl }, caption: message, ...global.channel, mimetype: 'image/jpeg', quoted: m });
+    await conn.sendMessage(m.chat, { image: { url: imagenUrl }, caption: message, ...global.rchannel, mimetype: 'image/jpeg', quoted: m });
 }
 
 handler.help = ['precios2'];
