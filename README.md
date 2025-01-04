@@ -181,6 +181,21 @@ npm start
 </details>
 
 ---
+## **`HOSTINGS DE CALIDAD`**
+
+###  **`🍬 MASHA-HOTS`**
+<a href="https://dash.masha-host.shop/home"><img src="https://qu.ax/aHudo.jpg" height="145px"></a>
+
+<details>
+ <summary><b>🍂 Servidor Masha-Hots</b></summary>
+
+* Dashboard: [`Dash`](https://dash.masha-host.shop)
+* Panel: [`Panel`](https://panel.masha-host.shop)
+* Canal de WhatsApp: [`Canal Masha`](https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J)
+* Comunidad: [`Aquí`](https://chat.whatsapp.com/Fz9rCXegzos1Yh0qHkxGhD)
+* Contacto(s): [`WillZek`](https://wa.me/50557865603) / [`Legend`](https://wa.me/584148256527) / [`Tesis`](https://wa.me/522431268546)
+
+</details>
 
 ### **`☁️ SKY ULTRA PLUS`**
 
