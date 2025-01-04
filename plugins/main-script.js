@@ -17,7 +17,8 @@ let txt = `*乂  S C R I P T  -  M A I N*\n\n`
 let img = await (await fetch(`https://files.catbox.moe/jibqlr.jpg`)).buffer()
 
 await conn.sendAi(m.chat, botname, textbot, txt, img, img, canal, m)
-} catch {
+} catch (error) {
+m.reply(`Error: ${error.message})
 await m.react('✖️')
 }}
 handler.help = ['script']
