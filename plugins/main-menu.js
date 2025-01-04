@@ -41,7 +41,7 @@ https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 ┊  ❤️‍🔥 *Exp:* %exp
 ┊  🌟 *Estrellas:* %estrellas
 ┊  👑 *Nivel:* %level
-┊  🌠 *Rango:* ${role}
+┊  🌠 *Rango:* %role
 ╚━━━━━━━━━━━━━━
 %readmore
 ╔━━━━━ *⊱INFO - USER⊰*
