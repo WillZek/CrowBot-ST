@@ -33,10 +33,10 @@ let tags = {
 const defaultMenu = {
   before: `*✎෴𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆🦌᭄*
 
-“ *🌲¡Feliz Navidad! %name soy ${nombrebot}*, *%greeting* ❄️”
+“ *💛 ¡Hola! %name soy ${nombrebot}*, *%greeting* 🌠”
 
 *✧ Sigue El Canal*
-https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
+https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W
 
 ╔━━━━━ *⊱INFO - BOT⊰*
 ┊  👤 *Cliente:* %name
@@ -56,10 +56,10 @@ https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
 %readmore
 *︵⊹︵⏜︵🎁︵⏜︵⊹︵*
 
-\t*🎅【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】⛄*   
+\t*💛【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】⛄*   
 `.trimStart(),
     header: '*╭━「 %category 」*',
-  body: '*┃⛄➤›* %cmd',
+  body: '*┃🪩➤›* %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
 }
