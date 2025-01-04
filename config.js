@@ -58,8 +58,8 @@ global.repobot = 'https://github.com/WillZek/CrowBot-ST'
 global.grupo = 'https://chat.whatsapp.com/Ddst1bABCppAOD0Ay41mn4'
 global.grupo2 = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
 global.grupo3 = 'https://chat.whatsapp.com/El3yP6HpuBm2lzVK2r4BwX'
-global.channel = 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d'
-global.insta = 'https://www.instagram.com/pina_dzn?igsh=MWhkc25peXV3djNuag=='
+global.channel = 'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
+global.insta = 'https://www.instagram.com/crowbot-wa'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "543876577197-120363317332020195@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '⛄【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】❄️', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
