@@ -8,7 +8,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 🛡️ Han sugerido un comando:
 > ${text}`
 
-    const channelChatId = '120363317263885467@newsletter';
+    const channelChatId = '120363387375075395@newsletter';
     const creatorsChatId = "50498409019"; // Reemplaza esto con el ID del chat de los creadores
     await conn.reply(channelChatId, m.quoted ? teks + m.quoted.text : teks, m, { mentions: conn.parseMention(teks) })
     await conn.reply(creatorsChatId, teks, m, { mentions: conn.parseMention(teks) }) // Enviar a los creadores
