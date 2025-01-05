@@ -12,7 +12,7 @@ import hunting from './rpg-berburu_cazar.js';
 import annual from './rpg-annual.js'; 
 import work from './economy-trabajar.js'; 
 import slut from './economy-slut.js'; 
-import slot from './economy-slot.js'; 
+import slot from './rpg-slot.js'; 
 import shop from './economy-shop.js'; 
 import roulette from './economy-ruleta.js'; 
 import stealXP from './economy-robarxp.js'; 
