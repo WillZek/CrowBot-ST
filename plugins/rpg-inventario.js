@@ -14,7 +14,7 @@ import work from './economy-trabajar.js';
 import slut from './economy-slut.js'; 
 import slot from './rpg-slot.js'; 
 import shop from './rpg-shop.js'; 
-import roulette from './economy-ruleta.js'; 
+import roulette from './fun-ruleta.js'; 
 import stealXP from './economy-robarxp.js'; 
 import stealCookies from './economy-robarcookies.js'; 
 import mine from './economy-minar.js'; 
