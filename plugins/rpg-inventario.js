@@ -8,7 +8,6 @@ import levelUp from './rpg-levelup.js';
 import heal from './rpg-heal.js'; 
 import halloween from './rpg-halloween.js'; 
 import treasureChest from './rpg-cofre.js'; 
-import hunting from './rpg-berburu_cazar.js'; 
 import annual from './rpg-annual.js'; 
 import work from './rpg-trabajar.js'; 
 import slot from './rpg-slot.js'; 
@@ -64,7 +63,7 @@ let handler = async (m, { conn, usedPrefix }) => {
 }
 
 handler.help = ['inventario', 'inv']
-handler.tags = ['economy']
+handler.tags = ['rpg']
 handler.command = ['inventario', 'inv'] 
 handler.register = true 
 
