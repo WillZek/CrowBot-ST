@@ -11,7 +11,6 @@ import treasureChest from './rpg-cofre.js';
 import hunting from './rpg-berburu_cazar.js'; 
 import annual from './rpg-annual.js'; 
 import work from './rpg-trabajar.js'; 
-import slut from './economy-slut.js'; 
 import slot from './rpg-slot.js'; 
 import shop from './rpg-shop.js'; 
 import roulette from './fun-ruleta.js'; 
