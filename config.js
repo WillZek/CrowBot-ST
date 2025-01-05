@@ -8,6 +8,12 @@ import axios from 'axios'
 import moment from 'moment-timezone' 
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+global.emoji = '🚩'
+global.emoji2 = '💛'
+global.emoji3 = '🌠'
+global.emoji4 = '🍭'
+global.emoji5 = '🔱'
+global.emojis = [emoji, emoji2, emoji3, emoji4, emoji5].getRandom()
 
 global.owner = [
    ['50557865603', 'Creador WillZek💛', true],
