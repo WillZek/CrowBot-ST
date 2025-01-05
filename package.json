@@ -41,6 +41,7 @@
 "awesome-phonenumber": "^3.4.0",
 "google-libphonenumber": "latest",
 "ruhend-scraper": "^7.0.4",
+"firebase": "latest",
 "gradient-string": "^2.0.2",
 "axios": "^1.1.2",
 "acrcloud": "^1.4.0",
