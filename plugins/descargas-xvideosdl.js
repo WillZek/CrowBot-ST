@@ -23,8 +23,9 @@ const handler = async (m, { conn, args, command, usedPrefix, text }) => {
     }
 };
 
-handler.command = ['xvideosdl'];
-handler.help = ['descargas'];
+handler.help = ['xvideosdl'];
+handler.tag = ['descargas'];
+handler.command = ['xvideosdl', 'xvdl'];
 handler.register = true;
 handler.group = false;
 
