@@ -8,5 +8,6 @@ avatar: await conn.profilePictureUrl(who).catch(_ => 'https://telegra.ph/file/24
 
 handler.help = ['lolice']
 handler.tags = ['anime']
+handler.estrellas = 4;
 handler.command = /^(lolice)$/i
 export default handler
