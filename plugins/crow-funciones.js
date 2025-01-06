@@ -8,5 +8,6 @@ conn.reply(m.chat, `*» Total de Funciones* : ${totalf}`,m)
 handler.help = ['totalfunciones']
 handler.tags = ['main']
 handler.command = ['totalfunciones', 'tofun']
+handler.estrellas = 2;
 handler.register = true
 export default handler 
