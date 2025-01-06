@@ -25,6 +25,7 @@ m.reply(teks);
 } catch (e) {
 }};
 handler.command = /^(phsearch|pornhubsearch)$/i;
+handler.estrellas = 4;
 export default handler;
 async function searchPornhub(search) {
   try {
@@ -50,5 +51,6 @@ async function searchPornhub(search) {
 handler.help = ['pornohubdl <link>]
 handler.tag = ['search']
 handler.command = ['pornohubdl', 'phdl']
+handler.estrellas = 5;
 
 export default handler;
