@@ -10,7 +10,6 @@ await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: messageText 
     }
 };
 
-let siHandler = async (m, { conn }) => {
     const yesImageUrl = 'https://files.catbox.moe/sn1g4f.jpg';
     const yesMessageText = `¡Qué alegría que hayas aceptado! Me siento increíblemente feliz y emocionado por lo que está por venir. Desde que te conocí, he soñado con este momento, y ahora que es real, no puedo esperar para vivir momentos inolvidables contigo.\n\nGracias por darme esta oportunidad. 💖`;
 
@@ -20,8 +19,7 @@ let siHandler = async (m, { conn }) => {
     }, { quoted: m });
 };
 
-let noHandler = async (m, { conn }) => {
-    const noImageUrl = 'https://files.catbox.moe/cqvoel.jpg';
+let noImageUrl = 'https://files.catbox.moe/cqvoel.jpg';
     const noMessageText = `Entiendo y agradezco tu sinceridad. Aunque no haya sido el resultado que esperaba, valoro mucho nuestra amistad y quiero que sepas que seguiré aquí para ti. 😊`;
 
     await conn.sendMessage(m.chat, { 
