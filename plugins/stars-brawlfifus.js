@@ -40,12 +40,12 @@ let rollHandler = async (m, { conn }) => {
             ? `Reclamado por @${randomCharacter.user.split('@')[0]}` 
             : 'Libre';
 
-        const message = `❀ Nombre » *${randomCharacter.name}*
-⚥ Género » *${randomCharacter.gender}*
-✰ Valor » *${randomCharacter.value}*
-♡ Estado » *${statusMessage}*
-❖ Categoria » *${randomCharacter.source}*
-ID: *${randomCharacter.id}*`;
+        const message = `🔱 Brawler » *${randomCharacter.name}*
+♀️ Género » *${randomCharacter.gender}*
+🪙 Valor » *${randomCharacter.value}*
+🪩 Estado » *${statusMessage}*
+🔎 Categoria » *${randomCharacter.source}*
+> ID: *${randomCharacter.id}*`;
 
         await conn.sendFile(m.chat, randomCharacter.img, `${randomCharacter.name}.jpg`, message, m);
         cooldowns[userId] = now + 15 * 60 * 1000;
