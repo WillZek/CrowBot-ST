@@ -1,15 +1,12 @@
 import fetch from 'node-fetch';
 
-let handler = async (m, { conn, usedPrefix, command }) => {
+let handler = async (m, { conn, command }) => {
     if (command === 'declaracion') {
         const imageUrl = 'https://qu.ax/VccqK.jpg';
 
         const messageText = `Hola Valentina \nVengo a decirte que de hace mucho me gustas pero no fui capaz de demostrar amor y cariño, te quiero pedir disculpas por mi comportamiento en dejarte hablar\nPero con el tiempo me di cuenta que el error fue mio y quiero pedirte disculpas\nEstraño los abrazos que nos dabamos demostraban cariño, realmente quiero que me perdones y empezar otra vez. \n\n¿ Me Perdonas ?\n\n\n`;
 
-        await conn.sendMessage(m.chat, messageText, 'Perdoname', imageUrl, [
-            ['Si Te perdono', `${usedPrefix}si`],
-            ['No Te perdono', `${usedPrefix}no`]
-        ], m);
+        await conn.sendMessage(m.chat, messageText, 'Perdoname', imageUrl);
     }
 };
 
