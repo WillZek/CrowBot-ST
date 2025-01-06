@@ -36,6 +36,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ["fux *<texto>*"];
 handler.tags = ["ai"];
 handler.command = ["fux"];
+handler.estrellas = 3
 
 export default handler;
 
