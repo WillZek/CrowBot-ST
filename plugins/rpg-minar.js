@@ -18,7 +18,7 @@ let info = `⛏️ *Te has adentrando en lo profundo de las cuevas*
 🔩 *Hierro*: ${iron}
 🏅 *Oro*: ${gold}
 🕋 *Carbón*: ${coal}
-💸 *Dolares*: ${count}`
+🌟 *Estrellas*: ${count}`
 
 conn.fakeReply(m.chat, info, '0@s.whatsapp.net', '⚒️ *Minando.. - CrowBot* ✨', 'status@broadcast' )
 await m.react('⛏️')
