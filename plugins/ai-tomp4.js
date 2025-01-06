@@ -54,4 +54,5 @@ main();
 handler.help = ['tomp4'];
 handler.tag = ['grupo'];
 handler.command = ['tomp4', 'mp4to'];
+handler.estrellas = 4;
 export default handler;
