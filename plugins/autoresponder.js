@@ -25,6 +25,8 @@ return response.data.result;
 console.error(error);
 }}
 
+if (!global.db.data.settings[conn.user.jid].restrict) return conn.reply(m.chat, `🍂 *Este comando está deshabilitado por mi creador*`, m, rcanal) 
+
 let query = m.text;
 let username = `${m.pushName}`;
 const syms1 = `Tu nombre es *CrowBot y parece haber sido creado por WillZek. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertida, y te encanta aprender. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}. Lo Mejor De Todo Es Que Darás Publicidad A tu canal oficial : https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W`
