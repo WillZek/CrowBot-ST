@@ -11,18 +11,18 @@ let handler = async (m, { conn }) => {
         return m.reply(`⏱️ ¡Ya reclamaste tu regalo semanal! Vuelve en:\n *${msToTime((user.weekly + cooldown) - new Date())}*`);
     }
 
-    let yenesReward = pickRandom([1, 2, 3]);
+    let estrellasReward = pickRandom([1, 2, 3]);
     let expReward = pickRandom([100, 200, 300]);
 
     user.coin = (user.coin || 0) + we;
-    user.yenes = (user.yenes || 0) + yenesReward;
+    user.estrellas = (user.estrellas || 0) + estrellasReward;
     user.exp = (user.exp || 0) + expReward;
 
     m.reply(`
 🎁 ¡Ha pasado una semana! ¡Disfruta de tu regalo semanal! 🌷
 
 🪙 *Coins* : +${we.toLocaleString()}
-🍪 *Yenes* : +${yenesReward}
+🌟 *Estrellas* : +${yenesReward}
 ✨ *Experiencia* : +${expReward}`);
 
     user.weekly = new Date * 1;
