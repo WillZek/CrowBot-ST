@@ -16,7 +16,7 @@ const defaultMenu = {
 %readmore
 `.trimStart(),
   header: '┏━━⪩「 *_`%category`_* 」⪨',
-  body: '┃『⛄』 %cmd\n',
+  body: '┃『🪙』 %cmd\n',
   footer: '┗━━━━━━━━━━━━━━━━⪩\n',
   after: ``,
 }
@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'rpg': 'MenuEconomia',
 }
-let img = 'https://i.ibb.co/f8W3cKd/file.jpg'
+let img = 'https://files.catbox.moe/w1ltfq.jpg'
 
   try {
           // DEFAULT MENU
