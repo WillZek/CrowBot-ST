@@ -1,4 +1,22 @@
 [
-   {
-   id= "1",
-  
+    {
+        "id": "1",
+        "name": "Aika Sano",
+        "gender": "Mujer",
+        "value": "9999",
+        "source": "Ane wa Yanmama Junyuu-chuu",
+        "img": "https://files.catbox.moe/235bpy.jpg",
+        "user": null,
+        "status": "Libre"
+    },
+    {
+        "id": "31",
+        "name": "Megumi Kayano",
+        "gender": "Mujer",
+        "value": "347",
+        "source": "Persona",
+        "img": "https://files.catbox.moe/ylfgdv.jpg",
+        "user": null,
+        "status": "Libre"
+    }
+]
