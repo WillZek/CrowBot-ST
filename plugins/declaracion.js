@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-let handler = async (m, { conn, command }) => {
+let handler = async (m, { conn, usedPrefix, command }) => {
     if (command === 'declaracion') {
         const imageUrl = 'https://qu.ax/VccqK.jpg';
 
