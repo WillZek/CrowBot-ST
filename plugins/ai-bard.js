@@ -18,5 +18,6 @@ return conn.reply(m.chat, `🍂 *Ocurrió un fallo* ${error.message}`, m, rcanal
 handler.command = ['bard']
 handler.help = ['bard']
 handler.tags = ['ai']
+handler.estrellas = 3
 handler.premium = false
 export default handler
