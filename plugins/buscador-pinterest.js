@@ -14,5 +14,5 @@ handler.help = ['pinterest *<búsqueda>*']
 handler.tags = ['img']
 handler.command = ['pinterest']
 handler.register = true 
-//handler.estrellas = 8;
+handler.estrellas = 8;
 export default handler
