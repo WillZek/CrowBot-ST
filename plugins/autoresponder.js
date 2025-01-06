@@ -27,7 +27,7 @@ console.error(error);
 
 let query = m.text;
 let username = `${m.pushName}`;
-const syms1 = `Tu nombre es *CrowBot y parece haber sido creado por Niño Piña. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertida, y te encanta aprender. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}`
+const syms1 = `Tu nombre es *CrowBot y parece haber sido creado por WillZek. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertida, y te encanta aprender. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}`
 
 let result = await luminsesi(query, username, syms1)
 await this.reply(m.chat, result, m, fake)}
