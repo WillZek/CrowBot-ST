@@ -39,7 +39,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           body: '<(✿◠‿◠)> 𝐁𝐨𝐭𝐁𝐚𝐫𝐛𝐨𝐳𝐚𝐒𝐓 ✨',
           previewType: 0, 
           thumbnail: catalogo,
-          sourceUrl: canal 
+          sourceUrl: channel 
         }
       }
     });
