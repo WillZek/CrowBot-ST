@@ -10,12 +10,12 @@
         "status": "Libre"
     },
     {
-        "id": "31",
-        "name": "Megumi Kayano",
+        "id": "2",
+        "name": "Pam",
         "gender": "Mujer",
         "value": "347",
-        "source": "Persona",
-        "img": "https://files.catbox.moe/ylfgdv.jpg",
+        "source": "epico",
+        "img": "https://files.catbox.moe/3p1232.jpg",
         "user": null,
         "status": "Libre"
     }
