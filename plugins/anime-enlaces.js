@@ -22,7 +22,7 @@ handler.help = ['animelink']
 handler.tags = ['anime']
 handler.command = /^animelink$/i
 
-handler.eatrellas = 1
+handler.eatrellas = 1;
 handler.register = true
 
 export default handler 
