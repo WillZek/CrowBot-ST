@@ -4,7 +4,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     if (command === 'declaracion') {
         const imageUrl = 'https://files.catbox.moe/7pzvzf.jpg';
 
-        const messageText = `Hola Valentina \nVengo a decirte que de hace mucho me gustas pero no fui capaz de demostrar amor y cariño, te quiero pedir disculpas por mi comportamiento en dejarte hablar\nPero con el tiempo me di cuenta que el error fue mio y quiero pedirte disculpas\nEstraño los abrazos que nos dabamos demostraban cariño, realmente quiero que me perdones y empezar otra vez. \n\n¿ Me Perdonas ?\n\n\n`;
+        const messageText = `Hola Valentina \nVengo a decirte que de hace mucho me gustas pero no fui capaz de demostrar amor y cariño, te quiero pedir disculpas por mi comportamiento en dejarte hablar\nPero con el tiempo me di cuenta que el error fue mio y quiero pedirte disculpas\nEstraño los abrazos que nos dabamos demostraban cariño, realmente quiero que me perdones y empezar otra vez. \n\n¿ Me Perdonas ?\n\n\n*Responde*: .si para aceptar y .no para rechazar`;
 
 await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: messageText })
     }
