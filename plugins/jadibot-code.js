@@ -85,13 +85,13 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
       setTimeout(async () => {
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-                let txt = ` –  *S E R B O T  -  S U B B O T*\n\n`;
-                txt += `「✿」 *Usa este Código para convertirte en un Sub Bot*\n`;
-                txt += `│  ✎  Pasos\n`;
-                txt += `│  ✎  *1* : Haga click en los 3 puntos\n`;
-                txt += `│  ✎ *2* : Toque dispositivos vinculados\n`;
-                txt += `│  ✎  *3* : Selecciona *Vincular con el número de teléfono*\n`; 
-                txt += `└  ✎  *4* : Escriba el Codigo`;
+            let txt += `┌  👑  *Usa este Código para convertirte en un Sub Bot*\n`
+            txt += `│  🌠  Pasos\n`
+            txt += `│  🌠  *1* : Haga click en los 3 puntos\n`
+            txt += `│  🌠  *2* : Toque dispositivos vinculados\n`
+            txt += `│  🌠  *3* : Selecciona *Vincular con el número de teléfono*\n` 
+            txt += `└  🌠  *4* : Escriba el Codigo\n\n`
+            txt += `*👑Nota:* Este Código solo funciona en el número en el que se solicitó\n\n> *Sigan El Canal*\n> ${channel}`;
         await parent.reply(m.chat, txt, m);
         await parent.reply(m.chat, codeBot, m);
         rl.close();
@@ -122,7 +122,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
       if (connection == 'open') {
         conn.isInit = true;
         global.conns.push(conn);
-        await parent.reply(m.chat, args[0] ? 'Conectado con éxito' : '*\`[ Conectado Exitosamente 🤍 ]\`*\n\n> _Se intentará reconectar en caso de desconexión de sesión_\n> _Si quieres eliminar el subbot borra la sesión en dispositivos vinculados_\n> _El número del bot puede cambiar, guarda este enlace :_\n\nhttps://whatsapp.com/channel/', m);
+        await parent.reply(m.chat, args[0] ? 'Conectado con éxito' : '*\`[ Conectado Exitosamente 🔱 ]\`*\n\n> _Se intentará reconectar en caso de desconexión de sesión_\n> _Si quieres eliminar el subbot borra la sesión en dispositivos vinculados_\n> _El número del bot puede cambiar, guarda este enlace :_\n\nxd', m);
         await sleep(5000);
         if (args[0]) return;
 
