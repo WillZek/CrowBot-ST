@@ -8,5 +8,6 @@ let handler = async (m, { conn }) => {
     handler.help = ['lolicon']
     handler.tags = ['anime']
     handler.command = /^(lolicon)$/i
+    handler.estrellas = 4;
 
     export default handler
