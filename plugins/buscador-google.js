@@ -24,4 +24,5 @@ const handler = async (m, {conn, command, args}) => {
 handler.help = ['google', 'googlef'].map((v) => v + ' <pencarian>');
 handler.tags = ['buscador'];
 handler.command = /^googlef?$/i;
+handler.estrellas = 7;
 export default handler;
