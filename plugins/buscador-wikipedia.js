@@ -20,6 +20,7 @@ let handler = async (m, { text }) => {
 handler.help = ['wikipedia']
 handler.tags = ['buscador']
 handler.command = ['wiki','wikipedia'] 
+handler.estrellas = 7;
 
 
 export default handler
