@@ -36,7 +36,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
           mediaType: 1, 
           showAdAttribution: true,
           title: '♡  ͜ ۬︵࣪᷼⏜݊᷼𝘿𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙨⏜࣪᷼︵۬ ͜ ',
-          body: '<(✿◠‿◠)> 𝐁𝐨𝐭𝐁𝐚𝐫𝐛𝐨𝐳𝐚𝐒𝐓 ✨',
+          body: '<(✿◠‿◠)> 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓 ✨',
           previewType: 0, 
           thumbnail: catalogo,
           sourceUrl: channel 
@@ -75,7 +75,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
               text: "✨️ RESULTADO DE: " + text
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "ᥫᩣBarboza"
+              text: "ᥫᩣWillZek"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
               hasMediaAttachment: false
