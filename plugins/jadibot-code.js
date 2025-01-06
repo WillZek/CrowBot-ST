@@ -71,12 +71,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
       defaultQueryTimeoutMs: undefined,
       version
     };
-        // Verificación de espacios libres para sub-bots
-        let espaciosLibres = 0; // Cambia este valor según lo que necesites
-        if (espaciosLibres <= 0) {
-            return m.reply("《✧》 No se han encontrado servidores para Sub-Bots disponibles.");
-        }
-
+       
     let conn = makeWASocket(connectionOptions);
 
     if (methodCode && !conn.authState.creds.registered) {
