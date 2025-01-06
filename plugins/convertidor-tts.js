@@ -25,6 +25,7 @@ const handler = async (m, {conn, args, usedPrefix, command}) => {
 handler.help = ['tts <lang> <teks>'];
 handler.tags = ['tools'];
 handler.command = /^g?tts$/i;
+handler.estrellas = 8;
 export default handler;
 
 function tts(text, lang = 'es') {
