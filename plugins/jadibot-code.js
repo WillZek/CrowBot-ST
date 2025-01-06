@@ -85,7 +85,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
       setTimeout(async () => {
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-            let txt += `┌  👑  *Usa este Código para convertirte en un Sub Bot*\n`
+            let txt = `┌  👑  *Usa este Código para convertirte en un Sub Bot*\n`
             txt += `│  🌠  Pasos\n`
             txt += `│  🌠  *1* : Haga click en los 3 puntos\n`
             txt += `│  🌠  *2* : Toque dispositivos vinculados\n`
