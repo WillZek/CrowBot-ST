@@ -19,7 +19,7 @@ await conn.sendFile(m.chat, out, 'error.png', null, m, m)
 
 }
 handler.help = ['toimg']
-handler.tags = ['transformador']
+handler.tags = ['tools']
 handler.command = ['toimg', 'jpg', 'jpge', 'png']
 
 handler.estrellas = 9;
