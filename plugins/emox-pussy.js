@@ -51,7 +51,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['lickpussy/coño @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['lickpussy','coño'];
 handler.group = true;
 
