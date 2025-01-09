@@ -16,7 +16,7 @@ Descubre *MashaHosting*, tu solución ideal con servidores dedicados y precios a
 • (${mch)
 
 ⚜️ *Contacto (Soporte):*  
-• (https://wa.me/50557865603)
+• (https://wa.me/50557865603 )
 
 > *¡Únete a nuestra comunidad y disfruta de un servicio excepcional! No dejes pasar la oportunidad de llevar tus proyectos al siguiente nivel con MashaHosting. ¡Estamos aquí para ayudarte! :D*` 
 await conn.sendMessage(m.chat, { text: txt,
