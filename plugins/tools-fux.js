@@ -34,7 +34,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ["fux *<texto>*"];
-handler.tags = ["ai"];
+handler.tags = ["tools"];
 handler.command = ["fux"];
 handler.estrellas = 3;
 
