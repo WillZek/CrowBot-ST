@@ -16,5 +16,6 @@ handler.help = ['ping']
 handler.tags = ['info']
 handler.command = ['ping']
 handler.register = true
+handler.estrellas = 2;
 
 export default handler
