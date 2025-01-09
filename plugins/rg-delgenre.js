@@ -14,4 +14,5 @@ return conn.reply(m.chat, '✐ Se ha eliminado tu genero', m)
 handler.help = ['delgenre']
 handler.tags = ['rg']
 handler.command = ['delgenero', 'delgenre']
+handler.estrellas = 3;
 export default handler;
