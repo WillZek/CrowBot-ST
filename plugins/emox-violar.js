@@ -52,7 +52,7 @@ Tenemos que volver a sudar juntos!!.`; // Mensaje cuando se cita a otro usuario
 }
 
 handler.help = ['violar/perra @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['violar', 'perra'];
 handler.group = true;
 
