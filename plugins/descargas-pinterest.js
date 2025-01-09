@@ -99,8 +99,8 @@ let handler = async (_0x10bd40, {
   });
 };
 handler.help = ["pinterest"];
-handler.tags = ["buscador"];
-handler.estrellas = 1;
+handler.tags = ["descargas"];
+handler.estrellas = 9;
 handler.register = true;
 handler.command = /^(pinterest)$/i;
 export default handler;
