@@ -195,7 +195,7 @@ await m.react('🪩')
   }
 }
 handler.help = ['menuto']
-handler.tags = ['main']
+handler.tags = ['crow']
 handler.command = ['menuto', 'menuherramientas', 'menuhe']
 
 export default handler
