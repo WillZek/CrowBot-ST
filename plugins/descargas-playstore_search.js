@@ -26,6 +26,7 @@ let handler = async (m, { conn, text }) => {
   m.reply(res, null, opt);
 };
 handler.help = ['playstore'];
-handler.tags = ['dl'];
+handler.tags = ['descargas'];
 handler.command = /^(playstore)$/i;
+handler.estrellas = 4;
 export default handler;
