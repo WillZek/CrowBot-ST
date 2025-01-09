@@ -6,7 +6,7 @@ chat.isBanned = false
 await conn.reply(m.chat, `${emojis} *CrowBot-ST ya fué desbaneado en este chat*`, m, fake)
 }
 handler.help = ['unbanchat'];
-handler.tags = ['grupo'];
+handler.tags = ['owner'];
 handler.command = ['unbanchat','desbanearchat','desbanchat']
 handler.rowner = true 
 handler.botAdmin = false
