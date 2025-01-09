@@ -9,4 +9,5 @@ conn.reply(m.chat, `🍂 *El Usuario ${conn.getName(m.sender)} Estará Inactivo*
 handler.help = ['afk [alasan]'];
 handler.tags = ['main'];
 handler.command = /^afk$/i;
+handler.estrellas = 5;
 export default handler;
