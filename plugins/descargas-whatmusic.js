@@ -32,4 +32,5 @@ m.reply(txt)
 } else throw '💭 Responda A Un Audio O Video'
 }
 handler.command = /^quemusica|quemusicaes|whatmusic$/i
+handler.estrellas = 6;
 export default handler
