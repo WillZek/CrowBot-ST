@@ -51,7 +51,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['fap/paja @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['fap', 'paja'];
 handler.group = true;
 
