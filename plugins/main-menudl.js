@@ -195,7 +195,7 @@ await m.react('🪩')
   }
 }
 handler.help = ['menudl']
-handler.tags = ['main']
+handler.tags = ['crow']
 handler.command = ['menudl', 'menudescargas', 'menudesc']
 
 export default handler
