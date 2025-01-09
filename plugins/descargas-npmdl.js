@@ -59,5 +59,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ["npmdl"];
 handler.tags = ["descargas"];
 handler.command = ["npmdownloader", "npmdownload", "npmpkgdownloader", "npmpkgdownload", "npmdl", "npmd"];
+handler.estrellas = 14;
 
 export default handler;
