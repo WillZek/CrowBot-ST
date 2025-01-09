@@ -27,6 +27,7 @@ handler.help = ['xvideosdl'];
 handler.tag = ['descargas'];
 handler.command = ['xvideosdl', 'xvdl'];
 handler.register = true;
+handler.estrellas = 8;
 handler.group = false;
 
 export default handler;
