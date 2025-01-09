@@ -19,7 +19,7 @@ console.error(error);
 throw `*🚨 Lo sentimos, ha ocurrido un error 😔*`;
 }
 }
-handler.tags = ['ia'];
+handler.tags = ['tools'];
 handler.help = ['genearimg'];
 handler.command = ['genearimg2', 'imgg2', 'meta'];
 // El handler me la chupa 
