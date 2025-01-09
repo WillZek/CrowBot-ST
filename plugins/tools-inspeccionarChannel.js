@@ -1,5 +1,6 @@
 // Código adaptado por https://github.com/GataNina-Li
 // También encontrarás código para comandos enfocados para canales de WhatsApp
+// Version De Canales Para CrowBot
 
 import { getUrlFromDirectPath } from "@whiskeysockets/baileys"
 import _ from "lodash"
