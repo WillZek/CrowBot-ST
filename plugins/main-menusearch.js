@@ -195,7 +195,7 @@ await m.react('🪩')
   }
 }
 handler.help = ['menusearch']
-handler.tags = ['main']
+handler.tags = ['crow']
 handler.command = ['menuse', 'menusearch', 'menubus']
 
 export default handler
