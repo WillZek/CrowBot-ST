@@ -14,20 +14,15 @@ let tags = {
   'rpg': '♥️RPG💚',
   'gacha': '♥️ROLLWAIFUS💚',
   'rg': '♥️REGISTRO💚',
-  'xp': '♥️EXP💚',
   'sticker': '♥️STICKERS💚',
   'anime': '♥️ANIMES💚',
   'database': '♥️DATABASE💚',
-  'fix': '♥️FIXMSGESPERA💚',
   'grupo': '♥️GRUPOS💚',
   'nable': '♥️ON / OFF💚', 
   'descargas': '♥️DESCARGAS💚',
   'tools': '♥️HERRAMIENTAS💚',
   'info': '♥️INFORMACIÓN💚',
   'owner': '♥️CREADOR💚', 
-  'audio': '♥️AUDIOS💚', 
-  'ai': '♥️AI💚',
-  'transformador': '♥️CONVERTIDORES💚',
 }
 
 const defaultMenu = {
