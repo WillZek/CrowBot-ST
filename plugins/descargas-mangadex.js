@@ -101,5 +101,6 @@ let handler = async (m, { conn, args }) => {
 handler.help = ["mangad <nombre del manga> <número del capítulo>"];
 handler.tags = ['descargas'];
 handler.command = /^(mangad)$/i;
+handler.estrellas = 8;
 
 export default handler;
