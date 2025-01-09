@@ -32,7 +32,7 @@ await m.reply('🚩 Ocurrió un error.');
 }};
 handler.help = ['r34 <texto>'];
 handler.command = ['r34', 'rule34'];
-handler.tags = ['nsfw'];
+handler.tags = ['emox'];
 handler.register = true;
 // handler.estrellas = 2;
 export default handler;
