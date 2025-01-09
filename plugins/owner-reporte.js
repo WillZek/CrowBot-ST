@@ -9,5 +9,5 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['reportar']
 handler.tags = ['info']
 handler.command = /^(reporte|report|reportar|bug|error)$/i
-
+handler.estrellas = 2;
 export default handler
