@@ -109,4 +109,6 @@ m.react(done)
 handler.tags = ['descargas']
 handler.help = ['spotify']
 handler.command = /^(spotify|music)$/i
+handler.estrellas = 8;
+
 export default handler
