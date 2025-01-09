@@ -87,6 +87,7 @@ await conn.reply(m.chat, CrowBot, fkontak, { contextInfo: { mentionedJid: [owner
 handler.help = ['infobot']
 handler.tags = ['main']
 handler.command = ['info', 'infobot']
+handler.estrellas = 5;
 
 export default handler
 
