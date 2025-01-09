@@ -19,4 +19,5 @@ return conn.reply(m.chat, `✐ Se ha establecido tu descripcion.\n\n> *${user.de
 handler.help = ['setdescription']
 handler.tags = ['rg']
 handler.command = ['setdescription', 'setdesc']
+handler.estrellas = 3;
 export default handler;
