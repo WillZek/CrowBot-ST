@@ -50,7 +50,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['footjob/pies @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['footjob','pies'];
 handler.group = true;
 
