@@ -38,5 +38,7 @@ const handler = async (m, {args, usedPrefix, command}) => {
     }
   }
 };
+handler.help = ['traductor'];
+handler.tag = ['tools'];
 handler.command = /^(traductor|traducirtexto|googletrad)$/i;
 export default handler;
