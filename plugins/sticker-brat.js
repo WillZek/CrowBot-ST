@@ -35,5 +35,6 @@ async function sticker(img, url, packname, author, categories = [""]) {
 handler.help = ['brat'];
 handler.tags = ['sticker'];
 handler.command = /^(brat)$/i;
+handler.estrellas = 2;
 
 export default handler;
