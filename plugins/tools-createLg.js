@@ -16,7 +16,8 @@ console.error(error);
 throw `*🚨 Lo Sentimos, ha ocurrido un error 😔*`;
 }
 }
-handler.tags = ['ia'];
+handler.tags = ['tools'];
 handler.help = ['genearimg'];
 handler.command = ['genearimg','imgg'];
+handler.estrellas = 7;
 export default handler;
