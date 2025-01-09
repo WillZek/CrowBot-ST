@@ -49,5 +49,6 @@ handler.help = ['gitclone *<url git>*']
 handler.tags = ['descargas']
 handler.command = /^(gitclone)$/i
 handler.register = true 
-//handler.star = 1
+handler.estrellas = 16;
+
 export default handler
