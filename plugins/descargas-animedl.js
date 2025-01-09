@@ -51,5 +51,6 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 }
 
 handler.command = handler.help = ['animedl', 'animelinks'];
-handler.tags = ['descargas', 'prem'];
+handler.tags = ['descargas'];
+handler.estrellas = 9;
 export default handler;
