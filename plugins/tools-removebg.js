@@ -20,7 +20,7 @@ await conn.sendMessage(m.chat, {image: Buffer.from(buffer)}, {quoted: m});
 throw `Error: ${error.message}`;
 }
 }
-handler.tags = ['ia'];
+handler.tags = ['tools'];
 handler.help = ['removebg'];
 handler.command = ['removebg','bg'];
 export default handler;
