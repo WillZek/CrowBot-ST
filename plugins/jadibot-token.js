@@ -1,6 +1,6 @@
 
 import fs from "fs"
-async function handler(m, {usedPrefix}) {
+let handler = async(m, { conn, usedPrefix }) {
     const user = m.sender.split("@")[0]
     if (fs.existsSync("./CrowJadiBot/" + user + "/creds.json")) {
         let token = Buffer.from(fs.readFileSync("./CrowJadiBot/" + user + "/creds.json"), "utf-8").toString("base64")
