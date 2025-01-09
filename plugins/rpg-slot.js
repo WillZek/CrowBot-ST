@@ -74,9 +74,10 @@ ${x[2]} : ${y[2]} : ${z[2]}
 
 handler.help = ['slot <apuesta>'];
 handler.tags = ['rpg'];
+handler.command = ['slot'];
 handler.group = true;
 handler.register = true
-handler.command = ['slot'];
+
 export default handler;
 
 function msToTime(duration) {
