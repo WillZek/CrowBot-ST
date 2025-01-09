@@ -12,6 +12,7 @@ let handler = async (m, { conn }) => {
 handler.help = ['dado']
 handler.tags = ['fun']
 handler.command = ['dado', 'dados'] 
+handler.estrellas = 2;
 
 export default handler
 
