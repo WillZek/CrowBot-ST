@@ -58,5 +58,6 @@ let rollHandler = async (m, { conn }) => {
 rollHandler.help = ['rw', 'rollwaifu'];
 rollHandler.tags = ['gacha'];
 rollHandler.command = ['brawlr', 'brw', 'rollwaifub', 'brver'];
+rollHandler.estrellas = 2;
 
 export default rollHandler;
