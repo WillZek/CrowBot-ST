@@ -15,7 +15,7 @@ El .serbot es para escanear con otro teléfono
 
 m.reply(global.serbot, { quoted: fkontak });
 };
-handler.command = /^(comoserbot)$/i;
+handler.command = /^(comoserbot|serbotmetodo)$/i;
 handler.tags = ['main'];
 handler.help = ['comoserbot <covertirse en bot>'];
 export default handler;
