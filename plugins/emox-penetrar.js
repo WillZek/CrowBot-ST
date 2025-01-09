@@ -23,7 +23,7 @@ let handler = async (m, { conn, command, text }) => {
 
 // Ayuda y configuración del comando
 handler.help = ['penetrar @user'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['penetrar', 'penetrado'];
 handler.register = true;
 handler.group = true;
