@@ -19,7 +19,7 @@ conn.reply(m.chat, `
  `, m, rcanal, )
 
 handler.help = ['animelink']
-handler.tags = ['anime']
+handler.tags = ['emox']
 handler.command = /^animelink$/i
 
 handler.eatrellas = 1;
