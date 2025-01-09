@@ -58,6 +58,6 @@ m.reply(`☠️ Tú pierdes! ❌\n\n*👉🏻 Tu: ${text}\n👉🏻 El Bot: ${as
 }
 }}
 handler.help = ['ppt']
-handler.tags = ['game']
+handler.tags = ['fun']
 handler.command = /^(ppt)$/i
 export default handler
