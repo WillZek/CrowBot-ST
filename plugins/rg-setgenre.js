@@ -39,4 +39,5 @@ return conn.reply(m.chat, `✐ Se ha establecido tu género como: *${user.genre}
 handler.help = ['setgenre']
 handler.tags = ['rg']
 handler.command = ['setgenero', 'setgenre']
+handler.estrellas = 3; 
 export default handler;
