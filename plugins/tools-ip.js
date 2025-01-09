@@ -41,7 +41,7 @@ conn.reply(m.chat, ipsearch, m, rcanal, )
 }
 
 handler.help = ['ip <alamat ip>']
-handler.tags = ['mods']
+handler.tags = ['tools']
 handler.command = /^(ip)$/i
 handler.mods = true
 export default handler
