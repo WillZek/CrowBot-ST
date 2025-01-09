@@ -14,4 +14,5 @@ async function handler(m, {usedPrefix}) {
   handler.tags = ['jadibot'];
   handler.register = true
   handler.private = true
+  handler.estrellas = 4;
   export default handler;
