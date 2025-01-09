@@ -54,7 +54,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['cum/leche @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['cum','leche'];
 handler.group = true;
 
