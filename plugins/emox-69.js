@@ -53,7 +53,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['sixnine/69 @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['sixnine','69'];
 handler.group = true;
 
