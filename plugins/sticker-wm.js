@@ -20,5 +20,6 @@ let handler = async (m, { conn, text }) => {
 }
 handler.help = ['wm <nombre>|<autor>']
 handler.tags = ['sticker']
-handler.command = ['take', 'robar', 'wm'] 
+handler.command = ['take', 'robar', 'wm']
+handler.estrellas = 4; 
 export default handler
