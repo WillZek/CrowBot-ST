@@ -19,4 +19,5 @@ const handler = async (m, {conn, text, usedPrefix, command}) => {
 handler.tags = ['tools']
 handler.help = ['dalle']
 handler.command = ['dalle'];
+handler.estrellas = 6;
 export default handler;
