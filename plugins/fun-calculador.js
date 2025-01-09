@@ -114,4 +114,5 @@ handler.tags = ['fun'];
 handler.register = true;
 handler.group = true;
 handler.command = ['gay', 'lesbiana', 'pajero', 'pajera', 'puto', 'puta', 'manco', 'manca', 'rata', 'prostituta', 'prostituto'];
+handler.estrellas = 5;
 export default handler;
