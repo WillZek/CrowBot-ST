@@ -195,7 +195,7 @@ await m.react('🪩')
   }
 }
 handler.help = ['menugp']
-handler.tags = ['main']
+handler.tags = ['crow']
 handler.command = ['menugp', 'menugrupo', 'menuadmin']
 
 export default handler
