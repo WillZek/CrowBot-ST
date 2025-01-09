@@ -51,7 +51,7 @@ let handler = async (m, { conn, args, __dirname, usedPrefix, command }) => {
     }
 }
 handler.help = ['bass', 'blown', 'deep', 'earrape', 'fast', 'fat', 'nightcore', 'reverse', 'robot', 'slow', 'smooth', 'tupai', 'reverb', 'chorus', 'flanger', 'distortion', 'pitch', 'highpass', 'lowpass', 'underwater'].map(v => v + ' *<mp3/vn>*')
-handler.tags = ['audio']
+handler.tags = ['descargas']
 handler.command = /^(bass|blown|deep|earrape|fas?t|nightcore|reverse|robot|slow|smooth|tupai|squirrel|chipmunk|reverb|chorus|flanger|distortion|pitch|highpass|lowpass|underwater)$/i
 handler.register = true 
 handler.estrellas = 6;
