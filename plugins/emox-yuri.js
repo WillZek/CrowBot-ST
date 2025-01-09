@@ -52,7 +52,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['lesbianas/tijeras @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['lesbianas','tijeras'];
 handler.group = true;
 
