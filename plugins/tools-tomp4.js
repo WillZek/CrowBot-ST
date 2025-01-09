@@ -52,7 +52,7 @@ const main = async () => {
 main();
 
 handler.help = ['tomp4'];
-handler.tag = ['grupo'];
+handler.tag = ['tools'];
 handler.command = ['tomp4', 'mp4to'];
 handler.estrellas = 4;
 export default handler;
