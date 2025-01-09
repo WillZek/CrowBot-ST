@@ -40,7 +40,7 @@ await conn.reply(m.chat, '[🌠] *Hola Soy CrowBot Sigue El Canal💛*', m, rcan
 handler.help = ['ds', 'fixmsgespera']
 handler.tags = ['info']
 handler.command = /^(fixmsgespera|ds)$/i
-
+handler.estrellas = 5;
 handler.register = true
 
 export default handler
