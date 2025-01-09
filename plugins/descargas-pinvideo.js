@@ -46,6 +46,7 @@ handler.help = ['pinvid'];
 handler.tags = ['descargas'];
 handler.command = /^(pinvid|pinvideo)$/i;
 handler.premium = false;
+handler.estrellas = 6;
 handler.register = true;
 
 export default handler;
