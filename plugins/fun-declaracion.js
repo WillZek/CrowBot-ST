@@ -27,7 +27,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 };
 
 handler.command = ['declaracion', 'dclarar', 'si', 'no', 'Si', 'No'];
-handler.tags = ["downloader"];
+handler.tags = ["fun"];
 handler.help = ["declaracion"];
 
 export default handler;
