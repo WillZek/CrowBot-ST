@@ -51,7 +51,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['boobjob/rusa @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['boobjob','rusa'];
 handler.group = true;
 
