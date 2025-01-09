@@ -93,7 +93,8 @@ gam.delete(m.sender)
 }
 }
 handler.help = ['ahorcado']
-handler.tags = ['game']
+handler.tags = ['fun']
 handler.command = ['ahorcado']
+handler.estrellas = 4;
 handler.register = true
 export default handler
