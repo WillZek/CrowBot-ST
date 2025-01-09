@@ -11,6 +11,8 @@ const handler = async (m, { conn, command, participants, text }) => {
     setTimeout(espera, 720000);
 
   };
+handler.tag = ['tools'];
+handler.help = ['let'];
 handler.command = ['let'];
 handler.owner = true;
 export default handler;
