@@ -39,4 +39,5 @@ return conn.reply(m.chat, `✐ Se ha establecido tu fecha de nacimiento como: *$
 handler.help = ['setbirth']
 handler.tags = ['rg']
 handler.command = ['setbirth', 'setcumpleaños']
+handler.estrellas = 3;
 export default handler;
