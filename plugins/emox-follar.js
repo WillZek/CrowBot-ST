@@ -49,7 +49,7 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
 }
 
 handler.help = ['follar @tag'];
-handler.tags = ['nsfws'];
+handler.tags = ['emox'];
 handler.command = ['follar'];
 handler.group = true;
 
