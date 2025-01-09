@@ -1,4 +1,4 @@
-// También encontrarás código para comandos enfocados para canales de WhatsApp
+// Código Creado Por @GataNina-Li
 
 import { getUrlFromDirectPath } from "@whiskeysockets/baileys"
 import _ from "lodash"
