@@ -9,6 +9,7 @@ conn.reply(m.chat, runtime, m, { contextInfo: { externalAdReply: { mediaUrl: fal
 handler.help = ['runtime']
 handler.tags = ['main']
 handler.command = /^(uptime|runtime)$/i
+handler.estrellas = 2;
 
 export default handler
 
