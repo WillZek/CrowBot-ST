@@ -10,29 +10,22 @@ let tags = {
   'serbot': 'SUB BOTS',
   'rpg': 'RPG',
   'rg': 'REGISTRO',
-  'xp': 'EXP',
   'sticker': 'STICKERS',
-  'anime': 'ANIMES',
-  'database': 'DATABASE',
-  'fix': 'FIXMSGESPERA',
   'grupo': 'GRUPOS',
   'nable': 'ON / OFF', 
   'descargas': 'DESCARGAS',
   'tools': 'HERRAMIENTAS',
   'info': 'INFORMACIÓN',
-  'owner': 'CREADOR', 
-  'audio': 'AUDIOS', 
-  'ai': 'AI',
-  'transformador': 'CONVERTIDORES',
+  'owner': 'CREADOR',
 }
 
 const defaultMenu = {
   before: `*─ׄ─ׅ─⭒─ׄ─ׄ─⭒─ׅ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׄ─*
 
-Hola *%name* soy *Ian*
+Hola *%name* soy *CrowBot*
 
 ┏━━━━━━━━ CREADOR
-┃  ✿︎ ιαɳαʅҽʝαɳԃɾσσƙ15x
+┃  ✿︎ ᥕіᥣᥣzᥱk-᥆𝖿ᥴ
 ┗━━━━━━━━━━━━━━
 %readmore
 ┏━━━━━━━━ INFO - BOT
@@ -42,7 +35,7 @@ Hola *%name* soy *Ian*
 ┗━━━━━━━━━━━━━━
 %readmore
 ┏━━━━━━━━━ INFO - USER
-┃  ✿︎ Bot: Ian Bot - MD 
+┃  ✿︎ Bot: Crow Bot - ST 
 ┃  ✿︎ Modo Público
 ┃  ✿︎ Baileys: Multi Device
 ┃  ✿︎ Tiempo Activo: %muptime
@@ -175,6 +168,7 @@ handler.help = ['menu5']
 handler.tags = ['main']
 handler.command = ['menu5', 'help5','allmenu5', 'menú5'] 
 handler.register = true 
+handler.estrellas = 3;
 export default handler
 
 const more = String.fromCharCode(8206)
