@@ -48,6 +48,7 @@ else return conn.reply(m.chat, `${emojis} *_La conversión ha fallado, intenta e
 handler.help = ['stiker <img>', 'sticker <url>']
 handler.tags = ['sticker']
 handler.command = ['s', 'sticker', 'stiker']
+handler.estrellas = 3;
 
 export default handler
 
