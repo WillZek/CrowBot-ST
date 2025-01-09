@@ -18,6 +18,6 @@ const handler = async (m, {usedPrefix}) => {
 ╰━━━━━━━━━━━━⬣`)
 };
 handler.help = ['bal'];
-handler.tags = ['xp'];
+handler.tags = ['rpg'];
 handler.command = ['bal', 'diamantes', 'diamond', 'balance'];
 export default handler;
