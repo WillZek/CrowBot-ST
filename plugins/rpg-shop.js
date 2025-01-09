@@ -19,7 +19,7 @@ const handler = async (m, {conn, command, args}) => {
   } else conn.reply(m.chat, `😔 Lo siento, no tienes suficiente *XP* para comprar *${count}* 🌟 Estrellas`, m, rcanal);
 };
 handler.help = ['Buy', 'Buyall'];
-handler.tags = ['xp'];
+handler.tags = ['rpg'];
 handler.command = ['buy', 'buyall'];
 
 handler.disabled = false;
