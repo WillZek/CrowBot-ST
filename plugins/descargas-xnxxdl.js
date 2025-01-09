@@ -40,7 +40,10 @@ if (!db.data.chats[m.chat].nsfw && m.isGroup) {
   }
 };
 handler.command = ['xnxxdl'];
+handler.tag = ['descargas'];
+handler.help = ['xnxxdl'];
 handler.register = true;
+handler.estrellas = 8;
 handler.group = false;
 export default handler;
 
