@@ -15,13 +15,13 @@ let tags = {
   'rg': '♥️「REGISTRO」💚',
   'sticker': '♥️「STICKERS」💚',
   'anime': '♥️「ANIMES」💚',
-  'database': '♥️DATABASE💚',
-  'grupo': '♥️GRUPOS💚',
-  'nable': '♥️ON / OFF💚', 
-  'descargas': '♥️DESCARGAS💚',
-  'tools': '♥️HERRAMIENTAS💚',
-  'info': '♥️INFORMACIÓN💚',
-  'owner': '♥️CREADOR💚', 
+  'database': '♥️「DATABASE」💚',
+  'grupo': '♥️「GRUPOS」💚',
+  'nable': '♥️「ON / OFF」💚', 
+  'descargas': '♥️「DESCARGAS」💚',
+  'tools': '♥️「HERRAMIENTAS」💚',
+  'info': '♥️「INFORMACIÓN」💚',
+  'owner': '♥️「CREADOR」💚', 
 }
 
 const defaultMenu = {
