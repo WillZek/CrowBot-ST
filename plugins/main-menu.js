@@ -25,12 +25,9 @@ let tags = {
 }
 
 const defaultMenu = {
-  before: `*✎෴𝐂𝐑𝐎𝐖𝐁𝐎𝐓-𝐎𝐅𝐂☆🦌᭄*
+  before: `*•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•*
 
-“ *💛 ¡Hola! %name soy ${nombrebot}*, *%greeting* 🌠”
-
-*✧ Sigue El Canal*
-https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W
+“ *「💛」 ¡Hola! %name soy ${nombrebot}*, *%greeting* ❒”
 
 ╔━━━━━ *⊱INFO - BOT⊰*
 ✦  👤 *Cliente:* %name
