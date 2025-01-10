@@ -33,19 +33,19 @@ const defaultMenu = {
 https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W
 
 ╔━━━━━ *⊱INFO - BOT⊰*
-┊  👤 *Cliente:* %name
-┊  ❤️‍🔥 *Exp:* %exp
-┊  🌟 *Estrellas:* %estrellas
-┊  👑 *Nivel:* %level
-┊  🌠 *Rango:* %role
+✦  👤 *Cliente:* %name
+✧  ❤️‍🔥 *Exp:* %exp
+✦  🌟 *Estrellas:* %estrellas
+✧  👑 *Nivel:* %level
+✦  🌠 *Rango:* %role
 ╚━━━━━━━━━━━━━━
 %readmore
 ╔━━━━━ *⊱INFO - USER⊰*
-┊  🤖 *Bot:* ${nombrebot} 
-┊  🔱 *Modo:* Privado VIP 
-┊  ✨ *Baileys:* Multi Device
-┊  🪐 *Tiempo Activo:* %muptime
-┊  💫 *Usuarios:* %totalreg 
+✧  🤖 *Bot:* ${nombrebot} 
+✦  🔱 *Modo:* Privado VIP 
+✧  ✨ *Baileys:* Multi Device
+✦  🪐 *Tiempo Activo:* %muptime
+✧  💫 *Usuarios:* %totalreg 
 ╚━━━━━━━━━━━━━━
 %readmore
 *︵⊹︵⏜︵🎁︵⏜︵⊹︵*
@@ -53,7 +53,7 @@ https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W
 \t*💛【𝕷 𝖎 𝖘 𝖙 𝖆 - 𝕯𝖊 - 𝕮 𝖔 𝖒 𝖆 𝖓 𝖉 𝖔 𝖘】⛄*   
 `.trimStart(),
     header: '*╭━「 %category 」*',
-  body: '*┃🪩➤›* %cmd',
+  body: '*┃⏤͟͟͞͞🪩➤›* %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
 }
