@@ -10,6 +10,8 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 ## 💛 **`C R O W - B O T`**
 
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>    
+
 ![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
 
 <!-- RAINBOW LINE BOT -->
