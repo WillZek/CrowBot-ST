@@ -38,7 +38,7 @@ let charinfoHandler = async (m, { conn, args }) => {
 };
 
 charinfoHandler.help = ['charinfo <nombre del personaje>', 'winfo <nombre del personaje>', 'waifuinfo <nombre del personaje>'];
-charinfoHandler.tags = ['anime'];
+charinfoHandler.tags = ['gacha'];
 charinfoHandler.command = ['charinfo', 'winfo', 'waifuinfo'];
 
 export default charinfoHandler;
