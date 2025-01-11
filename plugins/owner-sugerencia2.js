@@ -16,7 +16,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     m.reply('🌠 La sugerencia se envió al Staff De CrowBot y a los creadores.')
 }
 handler.help = ['sugerencia2']
-handler.tags = ['Owner']
+handler.tags = ['owner']
 handler.command = ['sugerencia2', 'sugerir2', 'crowsug2']
 handler.group = true;
 
