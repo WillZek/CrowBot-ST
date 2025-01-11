@@ -6,7 +6,7 @@ await conn.reply(m.chat, `😐 Subbot Desactivado`, m, rcanal, )
 conn.ws.close()
 }}
 handler.command = handler.help = ['stop', 'byebot'];
-handler.tags = ['jadibot'];
+handler.tags = ['serbot'];
 handler.owner = true
 handler.private = true
 handler.register = true
