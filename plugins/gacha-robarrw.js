@@ -66,7 +66,7 @@ let handler = async (m, { conn, args }) => {
 };
 
 handler.help = ['vote <nombre> <nuevo valor>'];
-handler.tags = ['anime'];
+handler.tags = ['gacha'];
 handler.command = ['vote', 'value'];
 
 export default handler;
