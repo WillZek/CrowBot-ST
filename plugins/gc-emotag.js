@@ -10,5 +10,5 @@ m.reply('*Y el emoji?🧐*');
 }
 handler.command = ['emotag']
 handler.help = ['emotag < emoji >']
-handler.tags = ['group']
+handler.tags = ['grupo']
 export default handler
