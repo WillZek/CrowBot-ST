@@ -34,7 +34,7 @@ let wimageHandler = async (m, { conn, args }) => {
 };
 
 wimageHandler.help = ['wimage <nombre del personaje>'];
-wimageHandler.tags = ['anime'];
+wimageHandler.tags = ['gacha'];
 wimageHandler.command = ['charimage', 'cimage', 'wimage', 'waifuimage'];
 
 export default wimageHandler;
