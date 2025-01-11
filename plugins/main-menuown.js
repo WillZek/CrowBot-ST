@@ -181,7 +181,7 @@ await m.react('👑')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'Menu Owner',
+        title: 'MENU OWNER',
         body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
