@@ -68,8 +68,8 @@ ${xxx}
   conn.sendMessage(m.chat, { image: { url: url }, caption: txt.trim(), mentions: [m.sender] }, { quoted: fkt2 })
 }
 
-handler.tags = ['prem', 'econ']
-handler.help = ['rg']
+handler.tags = ['rg']
+handler.help = ['buyprem']
 handler.command = ['buyprem', 'premium', 'prem']
 handler.register = true
 export default handler
