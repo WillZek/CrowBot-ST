@@ -14,7 +14,7 @@ let tags = {
   'gacha': '「ROLLWAIFUS」🍨',
   'rg': '「REGISTRO」🍨',
   'sticker': '「STICKERS」🍨',
-  'anime': '「ANIMES」🍨',
+  'emox': '「ANIMES」🍨',
   'database': '「DATABASE」🍨',
   'grupo': '「GRUPOS」🍨',
   'nable': '「ON / OFF」', 
