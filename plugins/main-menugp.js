@@ -195,7 +195,7 @@ await m.react('🪩')
     throw e
   }
 }
-handler.help = ['menugp']
+handler.help = ['menugp (Menu Para Gestionar Grupos)']
 handler.tags = ['crow']
 handler.command = ['menugp', 'menugrupo', 'menuadmin']
 
