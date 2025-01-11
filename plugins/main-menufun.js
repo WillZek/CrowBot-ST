@@ -10,7 +10,7 @@ import fetch from 'node-fetch'
 const { generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
 
 const defaultMenu = {
-  before: `“${emojis}¡Hola! *%name*, a qui esta mi menu de juegos"
+  before: `“🎳¡Hola! *%name*, a qui esta mi menu de juegos"
 
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ──ׄ*
 %readmore
@@ -22,9 +22,9 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'fun': 'MenuJuegos',
+'fun': 'Diversion',
 }
-let img = 'https://files.catbox.moe/w1ltfq.jpg'
+let img = 'https://files.catbox.moe/w3s79j.jpg'
 
   try {
           // DEFAULT MENU
@@ -181,13 +181,14 @@ await m.react('🪩')
         text: text,
         contextInfo: {
         externalAdReply: {
-        body: 'MENU JUEGOS',
+        title: 'MENU DE JUEGOS',
+        body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
         mediaType: 1,
         renderLargerThumbnail: true
         }}},
-        { quoted: fkon})
+        { quoted: fkontak })
 
   } catch (e) {
     conn.reply(m.chat, 'Lo siento, el menú tiene algun error .', m)
