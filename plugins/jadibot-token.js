@@ -12,7 +12,7 @@ let handler = async(m, { conn, usedPrefix }) {
     }
   }
   handler.command = handler.help = ['token', 'gettoken', 'serbottoken'];
-  handler.tags = ['jadibot'];
+  handler.tags = ['serbot'];
   handler.register = true
   handler.private = true
   handler.estrellas = 4;
