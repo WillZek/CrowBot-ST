@@ -195,7 +195,7 @@ await m.react('👑')
     throw e
   }
 }
-handler.help = ['menuow']
+handler.help = ['menuow (Menu Para Mi Owner)']
 handler.tags = ['crow']
 handler.command = ['menuow', 'menuowner', 'menucreador']
 
