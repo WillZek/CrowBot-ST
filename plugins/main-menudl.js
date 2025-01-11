@@ -195,7 +195,7 @@ await m.react('🪇')
     throw e
   }
 }
-handler.help = ['menudl']
+handler.help = ['menudl (Menu De Descargas)']
 handler.tags = ['crow']
 handler.command = ['menudl', 'menudescargas', 'menudesc']
 
