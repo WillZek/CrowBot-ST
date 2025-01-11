@@ -22,7 +22,7 @@ const defaultMenu = {
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
-'grupo': 'MenuGrupo',
+'grupo': 'Menu Para Admins',
 }
 let img = 'https://files.catbox.moe/w3s79j.jpg'
 
