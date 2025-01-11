@@ -16,7 +16,7 @@ ${listAdmin}
   conn.sendFile(m.chat, pp, 'error.jpg', text, m, false, {mentions: [...groupAdmins.map((v) => v.id), owner]});
 };
 handler.help = ['admins <texto>'];
-handler.tags = ['group'];
+handler.tags = ['grupo'];
 handler.command = /^(admins|@admins|dmins)$/i;
 handler.group = true;
 export default handler;
