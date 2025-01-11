@@ -21,7 +21,8 @@ let tags = {
   'descargas': '「DESCARGAS」🍨',
   'tools': '「HERRAMIENTAS」🍨',
   'info': '「INFORMACIÓN」🍨',
-  'owner': '「CREADOR」🍨', 
+  'owner': '「CREADOR」🍨',
+  'logos': '「EDICION LOGOS」🍨', 
 }
 
 const defaultMenu = {
