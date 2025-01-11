@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'tools': 'MenuTools',
 }
-let img = 'https://files.catbox.moe/w1ltfq.jpg'
+let img = 'https://files.catbox.moe/w3s79j.jpg'
 
   try {
           // DEFAULT MENU
@@ -175,19 +175,20 @@ let img = 'https://files.catbox.moe/w1ltfq.jpg'
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
  let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whatsapp.net`, ...(m.chat ? { remoteJid: '16504228206@s.whatsapp.net' } : {}) }, message: { contactMessage: { displayName: `${name}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${name}\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}}
-await m.react('🪩') 
+await m.react('⚙️') 
 
  conn.sendMessage(m.chat, {
         text: text,
         contextInfo: {
         externalAdReply: {
-        body: 'MENU HERRAMIENTAS',
+        title: 'MENU DE HERRAMIENTAS',
+        body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
         mediaType: 1,
         renderLargerThumbnail: true
         }}},
-        { quoted: fkon})
+        { quoted: fkontak })
 
   } catch (e) {
     conn.reply(m.chat, 'Lo siento, el menú tiene algun error .', m)
