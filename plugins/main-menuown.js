@@ -178,10 +178,10 @@ let img = 'https://files.catbox.moe/w1ltfq.jpg'
 await m.react('👑') 
 
  conn.sendMessage(m.chat, {
-        text: text,
+        text: 'MENU OWNER',
         contextInfo: {
         externalAdReply: {
-        body: 'MENU OWNER',
+        body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
         mediaType: 1,
