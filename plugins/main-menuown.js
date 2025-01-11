@@ -24,7 +24,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'owner': 'MenuOwner',
 }
-let img = 'https://files.catbox.moe/w1ltfq.jpg'
+let img = 'https://files.catbox.moe/w3s79j.jpg'
 
   try {
           // DEFAULT MENU
