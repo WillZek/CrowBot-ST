@@ -5,7 +5,7 @@ conn.reply(m.chat, `✅ *El Bot Ha Sido Desactivado En Este Chat*`, m, rcanal)
 
 }
 handler.help = ['banchat']
-handler.tags = ['mods']
+handler.tags = ['owner']
 handler.command = /^banchat$/i
 handler.mods = true 
 export default handler
