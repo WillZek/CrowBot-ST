@@ -55,7 +55,7 @@ let givecharHandler = async (m, { conn, args }) => {
 };
 
 givecharHandler.help = ['givechar <nombre del personaje> @usuario', 'givewaifu <nombre del personaje> @usuario', 'regalar <nombre del personaje> @usuario'];
-givecharHandler.tags = ['anime'];
+givecharHandler.tags = ['gacha'];
 givecharHandler.command = ['regalar', 'givewaifu', 'givechar'];
 
 export default givecharHandler;
