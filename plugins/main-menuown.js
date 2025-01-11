@@ -178,7 +178,7 @@ let img = 'https://files.catbox.moe/w1ltfq.jpg'
 await m.react('👑') 
 
  conn.sendMessage(m.chat, {
-        text: 'MENU OWNER',
+        text: text,
         contextInfo: {
         externalAdReply: {
         body: dev,
