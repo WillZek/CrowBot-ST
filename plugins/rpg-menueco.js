@@ -14,6 +14,8 @@ const defaultMenu = {
 
 *─ׄ─ׄ─⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ─⭒─ׄ─ׄ─⭒─ׄ─ׅ──ׄ*
 %readmore
+Menu Para Coneguir Estrellas Y Usarlas En El Bot✨
+%readmore
 `.trimStart(),
   header: '┏━━⪩「 *_`%category`_* 」⪨',
   body: '┃『🪙』 %cmd\n',
