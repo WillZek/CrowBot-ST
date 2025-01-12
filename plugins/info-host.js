@@ -29,8 +29,8 @@ isForwarded: false,
 title: `✨ L U M I N A R Y - H O S T ✨`,
 body: `🍭 Super Hosting 24/7 🍡`,
 "previewType": "PHOTO",
-thumbnailUrl: 'https://qu.ax/VsQcv.png', 
-sourceUrl: 'https://home.luminarys.shop'}}},
+thumbnailUrl: 'https://files.catbox.moe/0xfwps.jpg', 
+sourceUrl: 'https://chat.whatsapp.com/Jz1OYQPEvMcKbwxo4XoVOt'}}},
 { quoted: fkontak})
 }
 handler.tags =['info'] 
