@@ -8,7 +8,7 @@ let d = new Date
 let date = d.toLocaleDateString('es', { day: 'numeric', month: 'long', year: 'numeric' })
 let database = await fs.readFileSync(`./media/database/db.json`)
 await conn.reply(m.chat, `*• Fecha:* ${date}`, m)
-await conn.sendMessage(m.sender, {document: database, mimetype: 'application/json', fileName: `database.json`}, { quoted: fkontak })
+await conn.sendMessage(m.chat, {document: database, mimetype: 'application/json', fileName: `database.json`}, { quoted: fkontak })
 await m.react(done)
 } catch {
 await m.react(error)
