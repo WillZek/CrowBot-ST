@@ -2,7 +2,7 @@
 import fs from 'fs'
 let handler = async (m, { conn, text }) => {
  try {
-    m.react(done)
+    m.react('✅')
     let sesi = await fs.readFileSync('./media/database/db.json')
     return await conn.sendFile(m.chat, sesi, 'db.json' , '', m, null, { mimetype: 'application/json', asDocument: true })
 }
