@@ -69,9 +69,8 @@ var grupo = 'https://chat.whatsapp.com/HwcDg23QEwhIXc73wL0tKj'
 var github = 'https://github.com/WillZek/CrowBot-ST' 
 var facebook = 'https://www.facebook.com/profile.php?id=100055985748040' 
 let instagram = 'https://www.instagram.com/crowbot_wa'
-let correo = 'sm.ninopina10@gmail.com'
 
-global.redes = [canal, grupo, github, facebook, instagram, correo].getRandom()
+global.redes = [canal, grupo, github, facebook, instagram].getRandom()
 
 //Imagen
 let category = "imagen"
