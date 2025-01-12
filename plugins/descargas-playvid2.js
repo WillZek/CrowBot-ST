@@ -13,7 +13,7 @@ if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de You
 await m.react('⏰');
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ *CrowBot-ST* 𝐭⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
+const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ CrowBot-ST ⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
 
 > 📚 *Título:*
 » ${yt_play[0].title}
@@ -93,7 +93,7 @@ if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de You
 await m.react(rwait);
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ *CrowBot-ST* ⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
+const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ CrowBot-ST ⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
 
 > 📚 *Título:*
 » ${yt_play[0].title}
@@ -188,7 +188,7 @@ if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de You
 await m.react(rwait);
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ *CrowBot-ST* ⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
+const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ CrowBot-ST ⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
 
 > 📚 *Título:*
 » ${yt_play[0].title}
@@ -266,7 +266,7 @@ if (!text) return conn.reply(m.chat, `🌸 *Ingrese el nombre de un video de You
 await m.react(rwait);
 const yt_play = await search(args.join(' '));
 const ytplay2 = await yts(text);
-const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ *CrowBot-ST* ⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
+const texto1 = `*_𔓕꯭  ꯭ ꯭ ꯭ 𓏲꯭֟፝੭ ꯭⌑ CrowBot-ST ⌑꯭ 𓏲꯭֟፝੭ ꯭  ꯭ ꯭ ꯭𔓕_*
 
 > 📚 *Título:*
 » ${yt_play[0].title}
