@@ -7,7 +7,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
   }
   const pesan = args.join` `;
   const colombia = `💌 *Mensaje:* ${pesan}`;
-  let teks = `💛 *Revivan Plantas*\n${colombia}\n\n☁️ *Tags:*\n`;
+  let teks = `💛 *Revivan Plantas*\n${colombia}\n\n┏ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓\n`;
   for (const mem of participants) {
     teks += `┋🔱@${mem.id.split('@')[0]}\n`;
   }
