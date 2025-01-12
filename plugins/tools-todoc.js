@@ -10,11 +10,10 @@ const handler = async (m, { conn }) => {
     
     let media = await q.download();
 
-    // Enviamos el archivo como documento en lugar de un enlace
     await conn.sendMessage(m.chat, {
         document: media,
         mimetype: mime,
-        fileName: `Archivo.${mime.split('/')[1]}` // Usamos la extensión del mime
+        fileName: `Archivo.${mime.split('/')[1]}`
     }, { quoted: m });
 
     let caption = `*Documento* ${formatBytes(media.length)}`;
