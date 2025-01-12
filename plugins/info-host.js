@@ -2,7 +2,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
 let txt = `✨ *M A S H A - H O S T I N G* 
 
 *¿Buscas un hosting de alta calidad a precios imbatibles?*  
-Descubre *MashaHosting*, tu solución ideal con servidores dedicados y precios accesibles  Ofrecemos un Uptime garantizado 24/7, asegurando que tus proyectos funcionen de manera óptima en todo momento.
+Descubre *MashaHosting*, tu solución ideal con servidores dedicados y precios accesibles. Ofrecemos un Uptime garantizado 24/7, asegurando que tus proyectos funcionen de manera óptima en todo momento.
 
 🟢 *Información del Host*
 
@@ -13,7 +13,7 @@ Descubre *MashaHosting*, tu solución ideal con servidores dedicados y precios a
 • (https://panel.masha-host.shop)
 
 🌟 *Únete a nuestro Canal:*  
-• (${mch)
+• (https://channel.com)
 
 ⚜️ *Contacto (Soporte):*  
 • (https://wa.me/50557865603 )
