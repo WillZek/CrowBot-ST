@@ -99,7 +99,7 @@ global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@
 //Id Channel
 global.idchannel = '120363381910502266@newsletter'
 global.canalIdM = ["120363368073378190@newsletter", "120363338362822764@newsletter"]
-global.canalNombreM = ["✯ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✯", "𝐌𝐚𝐬𝐡𝐚 𝐇𝐨𝐬𝐭 🎄 ℍ𝕠𝕤𝕥𝕚𝕟𝕘"]
+global.canalNombreM = ["✯ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✯", "🌠 𝐋𝐮𝐦𝐢𝐧𝐚𝐫𝐲'𝐬 | 𝐖𝐞𝐛 𝐇𝐨𝐬𝐭𝐢𝐧𝐠 🌌"]
 global.channelRD = await getRandomChannel()
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "3876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
