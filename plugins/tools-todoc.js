@@ -1,3 +1,7 @@
+/* Código Hecho Por WillZek 
+- Convierte Una Foto En Documento 
+- https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W
+*/
 import fetch from "node-fetch";
 import crypto from "crypto";
 import { FormData, Blob } from "formdata-node";
