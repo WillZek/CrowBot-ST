@@ -7,7 +7,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
   let chat = global.db.data.chats[m.chat]
 
   if (chat.welcome && m.messageStubType == 27) {
-    let welcome = ` ⛄ *≺ CROW BOT - ST* \n「 Bιҽɳʋҽɳιԃσ 」\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Bιҽɳʋҽɳιԃσ/α 」\n「 ${groupMetadata.subject} 」\n\n> *WillZek*`
+    let welcome = `🍭 *≺ CROW BOT - ST* \n『 Bιҽɳʋҽɳιԃσ 』\n「 @${m.messageStubParameters[0].split`@`[0]} 」\n「 Bιҽɳʋҽɳιԃσ/α 」\n「 ${groupMetadata.subject} 」\n\n> *WillZek*`
 await conn.sendLuffy(m.chat, packname, textbot, welcome, img, img, redes, fkontak)
   }
 
