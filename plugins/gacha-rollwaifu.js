@@ -57,6 +57,6 @@ ID: *${randomCharacter.id}*`;
 
 rollHandler.help = ['rw', 'rollwaifu'];
 rollHandler.tags = ['gacha'];
-rollHandler.command = ['roll', 'rw', 'rollwaifu', 'ver'];
+rollHandler.command = ['roll', 'rw', 'rollwaifu'];
 
 export default rollHandler;
