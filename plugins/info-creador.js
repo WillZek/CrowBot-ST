@@ -1,26 +1,34 @@
 function handler(m) {
+  let icono = [ 
+    'https://qu.ax/yyCo.jpeg',
+    'https://qu.ax/yyCo.jpeg',
+    'https://qu.ax/qJch.jpeg',
+    'https://qu.ax/qJch.jpeg',
+    'https://qu.ax/CHRS.jpeg',
+    'https://qu.ax/CHRS.jpeg',
+  ][Math.floor(Math.random() * 6)];
 
-global.icono = [ 
-'https://qu.ax/yyCo.jpeg',
-'https://qu.ax/yyCo.jpeg',
-'https://qu.ax/qJch.jpeg',
-'https://qu.ax/qJch.jpeg',
-'https://qu.ax/CHRS.jpeg',
-'https://qu.ax/CHRS.jpeg',
-].getRandom()
-
-  const data = global.creadorbot.filter(([id, isCreator]) => id && isCreator)
-  this.sendContact(m.chat, data.map(([id, name]) => [id, name]), estilo, { contextInfo: { externalAdReply: { previewType: "PHOTO", thumbnailUrl: icono, title: textbot, body: dev, sourceUrl: redes, showAdAttribution: true }}})
-
-
+  const data = global.creadorbot.filter(([id, isCreator]) => id && isCreator);
+  this.sendContact(m.chat, data.map(([id, name]) => [id, name]), estilo, { 
+    contextInfo: { 
+      externalAdReply: { 
+        previewType: "PHOTO", 
+        thumbnailUrl: icono,
+        title: textbot, 
+        body: dev, 
+        sourceUrl: redes, 
+        showAdAttribution: true 
+      }
+    }
+  });
 }
 
-handler.help = ['creador']
-handler.tags = ['info']
-handler.command = ['creador', 'creator', 'owner', 'propietario', 'dueño']
+handler.help = ['creador'];
+handler.tags = ['info'];
+handler.command = ['creador', 'creator', 'owner', 'propietario', 'dueño'];
 
+export default handler;
 
-export default handler
 
 /*import PhoneNumber from 'awesome-phonenumber'
 
