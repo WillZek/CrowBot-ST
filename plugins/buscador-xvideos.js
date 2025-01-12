@@ -31,6 +31,8 @@ const handler = async (m, { conn, args, command, usedPrefix }) => {
     }
 };
 
+handler.help = ['xvideosearch'];
+handler.tag = ['buscador'];
 handler.command = ['xvideossearch', 'xvsearch', 'xvse'];
 handler.register = true;
 handler.estrellas = 14;
