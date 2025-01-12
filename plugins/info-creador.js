@@ -1,4 +1,14 @@
 function handler(m) {
+
+global.icono = [ 
+'https://qu.ax/yyCo.jpeg',
+'https://qu.ax/yyCo.jpeg',
+'https://qu.ax/qJch.jpeg',
+'https://qu.ax/qJch.jpeg',
+'https://qu.ax/CHRS.jpeg',
+'https://qu.ax/CHRS.jpeg',
+].getRandom()
+
   const data = global.creadorbot.filter(([id, isCreator]) => id && isCreator)
   this.sendContact(m.chat, data.map(([id, name]) => [id, name]), estilo, { contextInfo: { externalAdReply: { previewType: "PHOTO", thumbnailUrl: icono, title: textbot, body: dev, sourceUrl: redes, showAdAttribution: true }}})
 
