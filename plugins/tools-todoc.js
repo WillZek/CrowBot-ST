@@ -14,7 +14,7 @@ const handler = async (m, { conn }) => {
         document: media,
         mimetype: mime,
         fileName: `Crow.${mime.split('/')[1]}`
-    }, { quoted: m, quoted });
+    }, { quoted: m });
 
     let caption = `*Documento* ${formatBytes(media.length)}`;
 
