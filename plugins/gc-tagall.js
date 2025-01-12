@@ -9,7 +9,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
   const colombia = `💌 *Mensaje:* ${pesan}`;
   let teks = `💛 *Revivan Plantas*\n${colombia}\n\n┏ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓\n`;
   for (const mem of participants) {
-    teks += `┋🔱@${mem.id.split('@')[0]}\n`;
+    teks += `┋🔱@${mem.id.split('@')[0]}\n┗ ${textbot]`;
   }
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
 };
