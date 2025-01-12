@@ -1,13 +1,4 @@
 function handler(m) {
-  let icono = [ 
-    'https://qu.ax/yyCo.jpeg',
-    'https://qu.ax/yyCo.jpeg',
-    'https://qu.ax/qJch.jpeg',
-    'https://qu.ax/qJch.jpeg',
-    'https://qu.ax/CHRS.jpeg',
-    'https://qu.ax/CHRS.jpeg',
-  ][Math.floor(Math.random() * 6)];
-
   const data = global.creadorbot.filter(([id, isCreator]) => id && isCreator);
   this.sendContact(m.chat, data.map(([id, name]) => [id, name]), estilo, { 
     contextInfo: { 
@@ -18,6 +9,8 @@ function handler(m) {
         body: dev, 
         sourceUrl: redes, 
         showAdAttribution: true 
+        mediaType: 1,
+        renderLargerThumbnail: false
       }
     }
   });
