@@ -13,7 +13,7 @@ const handler = async (m, {isOwner, isAdmin, conn, text, participants, args, com
     teks += `┋🔱@${mem.id.split('@')[0]}\n`;
   }
   
-  teks += `┗ ${botname}`;
+  teks += `┗ ${dev}`;
 
   conn.sendMessage(m.chat, {text: teks, mentions: participants.map((a) => a.id)} );
 };
