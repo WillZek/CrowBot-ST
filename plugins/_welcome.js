@@ -7,7 +7,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
   let img = await (await fetch(`${pp}`)).buffer()
   let chat = global.db.data.chats[m.chat]
 
-  if (chat.bienvenida && m.messageStubType == 27) {
+  if (chat.welcome && m.messageStubType == 27) {
     if (chat.sWelcome) {
       let user = `@${m.messageStubParameters[0].split`@`[0]}`
       let welcome = chat.sWelcome.replace('@user', () => user);
@@ -18,7 +18,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     }
   }
 
-  if (chat.bienvenida && m.messageStubType == 28) {
+  if (chat.welcome && m.messageStubType == 28) {
     if (chat.sBye) {
       let user = `@${m.messageStubParameters[0].split`@`[0]}`
       let bye = chat.sBye.replace('@user', () => user);
@@ -29,7 +29,7 @@ export async function before(m, {conn, participants, groupMetadata}) {
     }
   }
 
-  if (chat.bienvenida && m.messageStubType == 32) {
+  if (chat.welcome && m.messageStubType == 32) {
     if (chat.sBye) {
       let user = `@${m.messageStubParameters[0].split`@`[0]}`
       let bye = chat.sBye.replace('@user', () => user);
