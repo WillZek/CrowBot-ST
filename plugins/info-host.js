@@ -1,22 +1,22 @@
 let handler = async (m, { conn, command, usedPrefix }) => {
-let txt = `✨ *M A S H A - H O S T I N G* 
+let txt = `✨ *L U M I N A R H - H O S T* 
 
 *¿Buscas un hosting de alta calidad a precios imbatibles?*  
-Descubre *MashaHosting*, tu solución ideal con servidores dedicados y precios accesibles. Ofrecemos un Uptime garantizado 24/7, asegurando que tus proyectos funcionen de manera óptima en todo momento.
+Descubre *Luminary's Hosting*, tu solución ideal con servidores dedicados y precios accesibles. Ofrecemos un Uptime garantizado 24/7, asegurando que tus proyectos funcionen de manera óptima en todo momento.
 
 🟢 *Información del Host*
 
 🔮 *Dashboard:*  
-• (https://dash.masha-host.shop)
+• (https://home.luminarys.shop)
 
 🧃 *Panel de Control:*  
-• (https://panel.masha-host.shop)
+• (https://control.luminarys.shop)
 
 🌟 *Únete a nuestro Canal:*  
 • (https://channel.com)
 
 ⚜️ *Contacto (Soporte):*  
-• (https://wa.me/50557865603 )
+• (https://wa.me/50557865603)
 
 > *¡Únete a nuestra comunidad y disfruta de un servicio excepcional! No dejes pasar la oportunidad de llevar tus proyectos al siguiente nivel con MashaHosting. ¡Estamos aquí para ayudarte! :D*` 
 await conn.sendMessage(m.chat, { text: txt,
@@ -26,11 +26,11 @@ isForwarded: false,
 "externalAdReply": {
 "showAdAttribution": true,
 "containsAutoReply": true,
-title: `✨ M A S H A - H O S T I N G ✨`,
-body: `⚜️ Super Hosting 24/7 ⚜️`,
+title: `✨ L U M I N A R Y - H O S T ✨`,
+body: `🍭 Super Hosting 24/7 🍡`,
 "previewType": "PHOTO",
 thumbnailUrl: 'https://qu.ax/VsQcv.png', 
-sourceUrl: 'https://dash.skyultraplus.com'}}},
+sourceUrl: 'https://home.luminarys.shop'}}},
 { quoted: fkontak})
 }
 handler.tags =['info'] 
