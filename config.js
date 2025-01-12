@@ -18,6 +18,11 @@ global.owner = [
    ['584241836217', 'Colaborador Prak', true],
 ]
 
+global.creadorbot = [
+   ['50557865603', 'WillZek', true],
+]
+  
+
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.mods = []
