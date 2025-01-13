@@ -1,4 +1,7 @@
-//CREDITOS PARA >> https://github.com/WillZek 
+/* Renovación De Links
+- CREDITOS PARA >> https://github.com/WillZek 
+- Para CrowBot-ST
+*/
 
 let handler = m => m
 handler.all = async function (m) {
@@ -132,7 +135,7 @@ this.sendPresenceUpdate('recording', m.chat)
 this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: fkontak })}
 
 if (chat.audios && m.text.match(/(Potaxio|Potasio|🥑)/gi)) {    
-let vn = 'https://qu.ax/vPoj.mp3'
+let vn = 'https://files.catbox.moe/rxxrje.mp4'
 this.sendPresenceUpdate('recording', m.chat)   
 this.sendMessage(m.chat, { audio: { url: vn }, fileName: 'error.mp3', mimetype: 'audio/mp4', ptt: true }, { quoted: fkontak })}
 
