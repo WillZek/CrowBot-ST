@@ -195,7 +195,7 @@ await m.react('⚙️')
     throw e
   }
 }
-handler.help = ['menuto']
+handler.help = ['menuto (menu de herramientas)']
 handler.tags = ['crow']
 handler.command = ['menuto', 'menuherramientas', 'menuhe']
 
