@@ -20,7 +20,7 @@ const handler = async (m, {conn, command, args}) => {
     const ss = `https://image.thum.io/get/fullpage/${url}`;
     conn.sendFile(m.chat, ss, 'error.png', xd + '\n> ' + url + '\n\n' + msg, m, { title: 'GOOGLE SEARCH', body: dev, sourceUrl: channel });
   } catch (e) {
-console.error(e)
+console.error(e);
 m.reply(`Error: ${e.message}`);
 m.react(done);
     m.reply(msg);
