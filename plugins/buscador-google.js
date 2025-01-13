@@ -10,7 +10,7 @@ const handler = async (m, {conn, command, args}) => {
   const text = args.join` `;
   if (!text) return conn.reply(m.chat, '*[🌠] Complementa tu petición con alguna frase para iniciar la búsqueda.*', m);
 
- const xd = `Resultados De ${text}`;
+ const xd = `*Resultados De:* ${text}`;
   const url = 'https://google.com/search?q=' + encodeURIComponent(text);
   const search = await googleIt(text);
   const msg = search.articles.map(({title, url, description}) => {
@@ -18,7 +18,7 @@ const handler = async (m, {conn, command, args}) => {
   }).join('\n\n');
   try {
     const ss = `https://image.thum.io/get/fullpage/${url}`;
-    await conn.sendFile(m.chat, ss, 'error.png', xd + '\n>' + url + '\n\n' + msg, m);
+    await conn.sendFile(m.chat, ss, 'error.png', xd + '\n> ' + url + '\n\n' + msg, m);
   } catch {
     m.reply(msg);
   }
