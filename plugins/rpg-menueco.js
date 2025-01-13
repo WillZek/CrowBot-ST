@@ -197,7 +197,7 @@ await m.react('💸')
     throw e
   }
 }
-handler.help = ['menujuegos']
+handler.help = ['menueco (menu de economia)']
 handler.tags = ['crow']
 handler.command = ['menue', 'menueconomia', 'menueco']
 
