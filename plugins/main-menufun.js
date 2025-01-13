@@ -195,7 +195,7 @@ await m.react('🪩')
     throw e
   }
 }
-handler.help = ['menufun']
+handler.help = ['menufun (menu de juegos)']
 handler.tags = ['crow']
 handler.command = ['menufun', 'menujuegos', 'menujuego']
 
