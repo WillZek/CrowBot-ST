@@ -24,11 +24,11 @@ var handler = async (m, { text, conn, args, command, usedPrefix }) => {
     let teks = results.all.map(v => {
         switch (v.type) {
             case 'video': return {
-                title: `🌸 *Título:* \n» ${v.title}`,
-                url: `🔗 *Enlace:* \n» ${v.url}`,
-                duration: `🕝 *Duración:* \n» ${v.timestamp}`,
-                uploaded: `🚩 *Subido:* \n» ${v.ago}`,
-                views: `👀 *Vistas:* \n» ${v.views}`,
+                title: `🌸 *Título:* \n» ${video.title}`,
+                url: `🔗 *Enlace:* \n» ${video.url}`,
+                duration: `🕝 *Duración:* \n» ${video.timestamp}`,
+                uploaded: `🚩 *Subido:* \n» ${video.ago}`,
+                views: `👀 *Vistas:* \n» ${video.views}`,
                 thumbnail: v.thumbnail
             }
         }
