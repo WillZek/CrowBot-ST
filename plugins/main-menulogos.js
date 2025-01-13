@@ -57,7 +57,7 @@ const fkontak = {
 await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
 global.db.data.users[m.sender].lastcofre = new Date * 1
 }
-handler.help = ['menulogo']
+handler.help = ['menulogo (menu de logos)']
 handler.tags = ['crow']
 handler.command = ['menulogos', 'logos', 'menulogo'] 
 export default handler
