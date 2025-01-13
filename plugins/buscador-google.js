@@ -18,7 +18,7 @@ const handler = async (m, {conn, command, args}) => {
   }).join('\n\n');
   try {
     const ss = `https://image.thum.io/get/fullpage/${url}`;
-    await conn.sendFile(m.chat, ss, 'error.png', xd + url + '\n\n' + msg, m);
+    await conn.sendFile(m.chat, ss, 'error.png', xd '\n>' + url + '\n\n' + msg, m);
   } catch {
     m.reply(msg);
   }
