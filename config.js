@@ -17,6 +17,7 @@ global.owner = [
    ['522431268546', 'im fz~', true],
    ['584241836217', 'Colaborador Prak', true],
    ['519168382008', 'Darkcore - Tu papa', true],
+   ['573215751237', 'Joker Bot OFF', true],
 ]
 
 global.creadorbot = [
