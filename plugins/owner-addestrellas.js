@@ -29,5 +29,6 @@ handler.help = ['addestrellas *<@user>*']
 handler.tags = ['owner']
 handler.command = ['addestrellas', 'addest', 'addestrellasec'] 
 handler.rowner = true
+handler.admin = true
 
 export default handler
