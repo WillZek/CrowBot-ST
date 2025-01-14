@@ -29,7 +29,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
 
   async function serbot() {
     let authFolderB = m.sender.split('@')[0];
-    const userFolderPath = `./LynxJadiBot/${authFolderB}`;
+    const userFolderPath = `./CrowJadiBot/${authFolderB}`;
 
     if (!fs.existsSync(userFolderPath)) {
       fs.mkdirSync(userFolderPath, { recursive: true });
