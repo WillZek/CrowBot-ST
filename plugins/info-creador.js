@@ -1,6 +1,6 @@
 function handler(m) {
   const data = global.creadorbot.filter(([id, isCreator]) => id && isCreator)
-  this.sendContact(m.chat, data.map(([id, name]) => [id, name]), estilo, { contextInfo: { externalAdReply: { showAdAttribution: true }}})
+  this.sendContact(m.chat, data.map(([id, name]) => [id, name]), rcanal, { contextInfo: { externalAdReply: { showAdAttribution: true }}})
 
 
 }
