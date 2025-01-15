@@ -102,7 +102,7 @@ global.canalNombreM = ["🌠 𝐋𝐮𝐦𝐢𝐧𝐚𝐫𝐲'𝐬 | 𝐖𝐞�
 global.channelRD = await getRandomChannel()
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "3876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363368073378190@newsletter', newsletterName: "【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363371291001924@newsletter', newsletterName: "𝐓ꫀׁׅܻ݊ᥲm 𝐁ꭈׁׅіᧁׁhׁׅ֮𝗍  𝐌᥆᥆݊ꪀ", serverMessageId: -1 }
 }}, { quoted: m }
   
 global.icono = [ 
