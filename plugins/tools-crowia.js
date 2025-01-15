@@ -46,7 +46,7 @@ await conn.sendMessage(m.chat, {
             title: `ᥴr᥆ᥕ ᥲі ᑲᥡ ᥕіᥣᥣzᥱk`,
             body: dev,
             previewType: "PHOTO",
-            thumbnailUrl: 'https://files.catbox.moe/xblbmd.jpeg', 
+            thumbnailUrl: 'https://files.catbox.moe/v1l74n.jpg', 
             sourceUrl: channel,
         }
     }
