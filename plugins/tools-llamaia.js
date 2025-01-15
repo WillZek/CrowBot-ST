@@ -34,7 +34,7 @@ externalAdReply: {
 title: 'ᥣᥣᥲmᥲ - ᥲі ⍴᥆ᥕᥱr ᑲᥡ mᥱ𝗍ᥲ',
 body: dev,
 thumbnailUrl: 'https://files.catbox.moe/j791b7.jpeg',
-sourceUrl: channel,
+sourceUrl: 'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W',
 mediaType: 1,
 renderLargerThumbnail: true
 }}},
