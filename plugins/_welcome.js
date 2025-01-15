@@ -1,60 +1,23 @@
-export async function before(m, { conn, participants, groupMetadata }) {
-    const fkontak = { key: { fromMe: false, participant: '0@s.whatsapp.net' }, message: { conversation: '¡Hola!' } };
+import {WAMessageStubType} from '@whiskeysockets/baileys'
+import fetch from 'node-fetch'
 
-    if (!m.messageStubType || !m.isGroup) return true;
+export async function before(m, {conn, participants, groupMetadata}) {
+  if (!m.messageStubType || !m.isGroup) return !0;
+  let pp = await conn.profilePictureUrl(m.messageStubParameters[0], 'image').catch(_ => 'https://files.catbox.moe/80cc06.jpg')
+  let img = await (await fetch(`${pp}`)).buffer()
+  let chat = global.db.data.chats[m.chat]
 
-    let userId = m.messageStubParameters[0];
+  if (chat.welcome && m.messageStubType == 27) {
+    let welcome = `┌─★ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐌𝐃\n│「 Bienvenido 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │💛  Bienvenido a\n   │💛  ${groupMetadata.subject}\n   └───────────────┈ ⳹`
+await conn.sendLuffy(m.chat, packname, textbot, welcome, img, img, canal, estilo)
+  }
 
-    const welcomeImage = 'https://files.catbox.moe/80cc06.jpg';
-    const goodbyeImage = 'https://files.catbox.moe/80cc06.jpg';
+  if (chat.welcome && m.messageStubType == 28) {
+    let bye = `┌─★ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐌𝐃\n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │💛  Se fue\n   │💛 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+await conn.sendLuffy(m.chat, packname, textbot, bye, img, img, canal, estilo)
+  }
 
-    let pp;
-    try {
-        pp = await conn.profilePictureUrl(userId, 'image');
-    } catch (error) {
-        pp = null;
-    }
-
-    let img;
-    try {
-        img = await (await fetch(pp || welcomeImage)).buffer();
-    } catch (fetchError) {
-        img = await (await fetch(welcomeImage)).buffer();
-    }
-
-    let chat = global.db.data.chats[m.chat];
-
-    if (chat.welcome && m.messageStubType === 27) {
-        let wel = `┌─⪩ CrowBot - ST \n│「 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎 😁 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n    │🍭  ${groupMetadata.subject}\n   └───────────────┈ ⳹\n\n> ✐ Puedes usar *#menu* para ver la lista de comandos.`;
-        try {
-            await conn.sendLuffy(m.chat, packname, dev, wel, img, img, channel, fkontak);
-        } catch (sendError) {
-            console.error('Error al enviar mensaje de bienvenida:', sendError);
-        }
-    }
-
-    // Mensaje de despedida en crow bot(cuando se sale)
-    if (chat.welcome && m.messageStubType === 28) {
-        let bye = `┌─⪩ CrowBot - ST \n│「 𝐀𝐃𝐈Ó𝐒 🗣️‼️ 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n   │😔 SE NOS FUE xd\n   │😹 SE SALIO UN PUTO\n   └───────────────┈ ⳹`;
-        let img2;
-        try {
-            img2 = await (await fetch(goodbyeImage)).buffer(); 
-            await conn.sendLuffy(m.chat, packname, dev, bye, img2, img2, channel, fkontak);
-        } catch (sendError) {
-            console.error('Error al enviar mensaje de despedida:', sendError);
-        }
-    }
-
-    // Mensaje de expulsión (cuando se echa a alguien)
-// recuerda seguir el canal!
-    if (chat.welcome && m.messageStubType === 32) {
-        let kick = `┌─⪩ CrowBot - ST \n│「 𝐀𝐃𝐈Ó𝐒 🗣️‼️ 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n   │😔 SE NOS FUE xd\n   │✨ NO VUELVAS AQUI\n   └───────────────┈ ⳹`;
-        let img3;
-        try {
-            img3 = await (await fetch(goodbyeImage)).buffer();
-            await conn.sendLuffy(m.chat, packname, dev, kick, img3, img3, channel, fkontak);
-        } catch (sendError) {
-            console.error('Error al enviar mensaje de expulsión:', sendError);
-        }
-    }
-}
+  if (chat.welcome && m.messageStubType == 32) {
+    let kick = `┌─★ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐌𝐃\n│「 ADIOS 👋 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │💛  Se fue\n   │💛 Jamás te quisimos aquí\n   └───────────────┈ ⳹`
+await conn.sendLuffy(m.chat, packname, textbot, kick, img, img, canal, estilo)
+}}
