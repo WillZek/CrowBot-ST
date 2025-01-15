@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 title: 'һ᥆ᥣᥲ s᥆ᥡ іzᥙmі-kz᥊ ᥱᥣ mᥱȷ᥆r',
                 body: dev,
                 thumbnailUrl: 'https://i.ibb.co/44XMFDQ/file.jpg',
-                sourceUrl: canal,
+                sourceUrl: channel,
                 mediaType: 1,
                 renderLargerThumbnail: true
             }
@@ -38,16 +38,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
 
     await conn.sendMessage(m.chat, {
         text: txt,
-        footer: '© ᥴrᥱᥲძ᥆r ᥆𝖿іᥴіᥲᥣ іzᥙmі.kz᥊',
-        buttons: [
-            {
-                buttonId: ".menu",
-                buttonText: {
-                    displayText: 'MENU BOT'
-                },
-                type: 1
-            }
-        ],
+        footer: '© ᥴrᥱᥲძ᥆r ᥆𝖿іᥴіᥲᥣ ᥕіᥣᥣzᥱk',
         viewOnce: true,
         headerType: 1
     }, { quoted: m });
