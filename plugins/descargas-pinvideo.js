@@ -48,5 +48,6 @@ handler.command = /^(pinvid|pinvideo)$/i;
 handler.premium = false;
 handler.estrellas = 6;
 handler.register = true;
+handler.premium = true;
 
 export default handler;
