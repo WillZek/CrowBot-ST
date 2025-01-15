@@ -16,7 +16,7 @@ let txt = `*乂  S C R I P T  -  M A I N*\n\n`
     txt += `> 🍭 *${dev}*`
 let img = await (await fetch(`https://files.catbox.moe/1rb6am.jpg`)).buffer()
 
-await conn.sendLuffy(m.chat, botname, textbot, txt, img, img, canal, m)
+await conn.sendMessage(m.chat, { image: { img, txt, img, img, canal, m)
 } catch (error) {
 m.reply(`Error: ${error.message})
 await m.react('✖️')
