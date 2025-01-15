@@ -102,6 +102,7 @@ export async function handler(chatUpdate) {
                     chat.reaction = false
                 if (!('simi' in chat))
                     chat.simi = false
+                if (!('autolevelup' in chat))  chat.autolevelup = false
                 if (!('antiver' in chat))
                     chat.antiver = false
                 if (!('delete' in chat))
@@ -118,6 +119,7 @@ export async function handler(chatUpdate) {
                     antiLink: true,
                     onlyLatinos: false,
                     simi: false,
+                    autolevelup: false,
                     antiver: false,
                     nsfw: false, 
                     autoAceptar: false,
