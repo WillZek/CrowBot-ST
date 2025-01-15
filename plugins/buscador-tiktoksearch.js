@@ -12,6 +12,8 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
     return conn.reply(message.chat, "❕️ *¿QUÉ BÚSQUEDA DESEA REALIZAR EN TIKTOK?*", message, rcanal);
   }
 
+  await message.react('🕓');
+
   async function createVideoMessage(url) {
     const { videoMessage } = await generateWAMessageContent({
       video: { url }
@@ -29,21 +31,6 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
   }
 
   try {
-    conn.reply(message.chat, '✨️ *ENVIANDO SUS RESULTADOS..*', message, {
-      contextInfo: { 
-        externalAdReply: { 
-          mediaUrl: null, 
-          mediaType: 1, 
-          showAdAttribution: true,
-          title: '♡  ͜ ۬︵࣪᷼⏜݊᷼𝘿𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙨⏜࣪᷼︵۬ ͜ ',
-          body: '<(✿◠‿◠)> 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓 ✨',
-          previewType: 0, 
-          thumbnail: catalogo,
-          sourceUrl: channel 
-        }
-      }
-    });
-
     let results = [];
     let { data } = await axios.get("https://apis-starlights-team.koyeb.app/starlight/tiktoksearch?text=" + text);
     let searchResults = data.data;
@@ -75,7 +62,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
               text: "✨️ RESULTADO DE: " + text
             }),
             footer: proto.Message.InteractiveMessage.Footer.create({
-              text: "ᥫᩣWillZek"
+              text: "By CrowBot"
             }),
             header: proto.Message.InteractiveMessage.Header.create({
               hasMediaAttachment: false
@@ -93,6 +80,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
     await conn.relayMessage(message.chat, messageContent.message, {
       messageId: messageContent.key.id
     });
+     await message.react('✅');
   } catch (error) {
     console.error(error);
     conn.reply(message.chat, `❌️ *OCURRIÓ UN ERROR:* ${error.message}`, message);
@@ -100,9 +88,9 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
 };
 
 handler.help = ["tiktoksearch <txt>"];
-handler.estrellas = 10;
 handler.register = true
 handler.tags = ["buscador"];
-handler.command = ["tiktoksearch", "ttks", "tiktoks"];
+handler.command = ["tiktoksearch", "ttss", "tiktoks"];
+handler.estrellas = 7;
 
 export default handler;
