@@ -47,7 +47,7 @@ await conn.sendMessage(m.chat, {
             body: dev,
             previewType: "PHOTO",
             thumbnailUrl: 'https://files.catbox.moe/xblbmd.jpeg', 
-            sourceUrl: channels,
+            sourceUrl: channel,
         }
     }
 }, { quoted: m });
