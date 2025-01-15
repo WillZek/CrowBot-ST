@@ -13,7 +13,7 @@ return imageMessage
 }
 
 let push = [];
-let api = await fetch(`https://deliriussapi-oficial.vercel.app/search/spotify?q=${encodeURIComponent(text)}`);
+let api = await fetch(`https://delirius-apiofc.vercel.app/search/spotify?q=${encodeURIComponent(text)}`);
 let json = await api.json()
 
 for (let track of json.data) {
