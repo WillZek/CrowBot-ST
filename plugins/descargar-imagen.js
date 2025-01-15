@@ -1,6 +1,6 @@
 import {googleImage} from '@bochilteam/scraper';
 const handler = async (m, {conn, text, usedPrefix, command}) => {
-if (!text) throw `*🎩 Uso Correcto: ${usedPrefix + command} Crow De Brawl Stars*`;
+if (!text) throw `*🎩 Uso Correcto: ${usedPrefix + command} CrowBot*`;
 conn.reply(m.chat, '🍭 *Descargando su imagen...*', m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
@@ -15,9 +15,9 @@ const messages = [['Imagen 1', dev, await res.getRandom(),
 await conn.sendCarousel(m.chat, `🎩 Resultado de ${text}`, '🔎 Imagen - Descargas', null, messages, m);
 };
 handler.help = ['imagen <query>'];
-handler.tags = ['buscador','descargas'];
-handler.command = ['image','imagen', 'wimage'];
-handler.estrellas = 5;
+handler.tags = ['buscador', 'tools'];
+handler.command = ['image','imagen'];
 handler.group = true;
+handler.estrellas = 6;
 handler.register = true
 export default handler;
