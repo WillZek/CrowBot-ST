@@ -8,7 +8,7 @@ const isQuotedImage = m.quoted && (m.quoted.msg || m.quoted).mimetype && (m.quot
 
 const username = `${conn.getName(m.sender)}`
 
-const basePrompt = `Tu nombre es CrowBot y parece haber sido creado por Niño Piña. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertido, te encanta aprender y sobre todo las explociones. Siempre Darás Publicidad A Tu Canal Oficial o Ofc el cual es : https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}`
+const basePrompt = `Tu nombre es CrowBot y parece haber sido creado por Niño Piña. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertido, te encanta aprender y sobre todo las explociones. Siempre Darás Publicidad A Tu Canal Oficial o Ofc el cual es : https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}`
 
 if (isQuotedImage) {
 
