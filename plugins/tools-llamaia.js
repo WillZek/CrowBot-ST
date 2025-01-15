@@ -34,7 +34,7 @@ externalAdReply: {
 title: 'ᥣᥣᥲmᥲ - ᥲі ⍴᥆ᥕᥱr ᑲᥡ mᥱ𝗍ᥲ',
 body: dev,
 thumbnailUrl: 'https://files.catbox.moe/j791b7.jpeg',
-sourceUrl: channels,
+sourceUrl: channel,
 mediaType: 1,
 renderLargerThumbnail: true
 }}},
