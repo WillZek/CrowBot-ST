@@ -146,6 +146,15 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.audios = isEnable
       break
 
+case 'autolevelup': case 'autonivel': case 'nivelautomatico':
+if (m.isGroup) {
+if (!(isAdmin || isOwner)) {
+global.dfail('admin', m, conn)
+throw false
+}}
+chat.autolevelup = isEnable          
+break
+
   case 'antiSpam':
     case 'antispam':
     case 'antispamosos':
@@ -259,6 +268,7 @@ ${usedPrefix + command} autoread
 *[🌠] Funciones De Grupos*
 
 ${usedPrefix + command} welcome 
+${usedPrefix + command} autolevelup
 ${usedPrefix + command} antibot
 ${usedPrefix + command} reaccion
 ${usedPrefix + command} simi
