@@ -5,8 +5,8 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
     let userId = m.messageStubParameters[0];
 
-    const welcomeImage = 'https://files.catbox.moe/smlobx.jpg';
-    const goodbyeImage = 'https://files.catbox.moe/smlobx.jpg';
+    const welcomeImage = 'https://files.catbox.moe/80cc06.jpg';
+    const goodbyeImage = 'https://files.catbox.moe/80cc06.jpg';
 
     let pp;
     try {
@@ -25,33 +25,34 @@ export async function before(m, { conn, participants, groupMetadata }) {
     let chat = global.db.data.chats[m.chat];
 
     if (chat.welcome && m.messageStubType === 27) {
-        let wel = `┌─⪩ CrowBot - ST \n│「 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎 😁 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n    │🐉  ${groupMetadata.subject}\n   └───────────────┈ ⳹\n\n> ✐ Puedes usar *#menu* para ver la lista de comandos.`;
+        let wel = `┌─⪩ CrowBot - ST \n│「 𝐁𝐈𝐄𝐍𝐕𝐄𝐍𝐈𝐃𝐎 😁 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n    │🍭  ${groupMetadata.subject}\n   └───────────────┈ ⳹\n\n> ✐ Puedes usar *#menu* para ver la lista de comandos.`;
         try {
-            await conn.sendMini(m.chat, packname, dev, wel, img, img, channel, fkontak);
+            await conn.sendLuffy(m.chat, packname, dev, wel, img, img, channel, fkontak);
         } catch (sendError) {
             console.error('Error al enviar mensaje de bienvenida:', sendError);
         }
     }
 
-    // Mensaje de despedida (cuando se sale)
+    // Mensaje de despedida en crow bot(cuando se sale)
     if (chat.welcome && m.messageStubType === 28) {
-        let bye = `┌─⪩ CrowBot - ST \n│「 𝐀𝐃𝐈Ó𝐒 🗣️‼️ 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n   │😔 SE NOS FUE xd\n   │👺 NO VUELVAS SAIYAN\n   └───────────────┈ ⳹`;
+        let bye = `┌─⪩ CrowBot - ST \n│「 𝐀𝐃𝐈Ó𝐒 🗣️‼️ 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n   │😔 SE NOS FUE xd\n   │😹 SE SALIO UN PUTO\n   └───────────────┈ ⳹`;
         let img2;
         try {
             img2 = await (await fetch(goodbyeImage)).buffer(); 
-            await conn.sendMini(m.chat, packname, dev, bye, img2, img2, channel, fkontak);
+            await conn.sendLuffy(m.chat, packname, dev, bye, img2, img2, channel, fkontak);
         } catch (sendError) {
             console.error('Error al enviar mensaje de despedida:', sendError);
         }
     }
 
     // Mensaje de expulsión (cuando se echa a alguien)
+// recuerda seguir el canal!
     if (chat.welcome && m.messageStubType === 32) {
         let kick = `┌─⪩ CrowBot - ST \n│「 𝐀𝐃𝐈Ó𝐒 🗣️‼️ 」\n└┬⪩ 「 @${userId.split`@`[0]} 」\n   │😔 SE NOS FUE xd\n   │✨ NO VUELVAS AQUI\n   └───────────────┈ ⳹`;
         let img3;
         try {
             img3 = await (await fetch(goodbyeImage)).buffer();
-            await conn.sendMini(m.chat, packname, dev, kick, img3, img3, channel, fkontak);
+            await conn.sendLuffy(m.chat, packname, dev, kick, img3, img3, channel, fkontak);
         } catch (sendError) {
             console.error('Error al enviar mensaje de expulsión:', sendError);
         }
