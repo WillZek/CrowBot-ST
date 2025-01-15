@@ -1,4 +1,4 @@
-//código modificado por Niño Piña
+//código hecho por WillZek
 import { randomBytes } from "crypto"
 import axios from "axios"
 
@@ -17,7 +17,7 @@ isForwarded: false,
 title: `ᥴr᥆ᥕᑲ᥆𝗍 ᑲᥡ ᥕіᥣᥣzᥱk`,
 body: ``,
 "previewType": "PHOTO",
-thumbnailUrl: 'https://tinyurl.com/2awg2bch', 
+thumbnailUrl: 'https://files.catbox.moe/y0sazu.jpg', 
 sourceUrl: 'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'}}},
 { quoted: m})
     } catch (err) {
