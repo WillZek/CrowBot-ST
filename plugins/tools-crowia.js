@@ -1,64 +1,101 @@
-//código hecho por WillZek
-import { randomBytes } from "crypto"
-import axios from "axios"
+import axios from 'axios'
+import fetch from 'node-fetch'
 
-let handler = async (m, { conn, text }) => {
-    if (!text) throw '¿Como puedo ayudarte hoy?';
-    try {
-        conn.reply(m.chat, m);
-        let data = await chatGpt(text)
-await conn.sendMessage(m.chat, { text: data,
-contextInfo:{
-forwardingScore: 9999999,
-isForwarded: false, 
-"externalAdReply": {
-"showAdAttribution": true,
-"containsAutoReply": true,
-title: `ᥴr᥆ᥕᑲ᥆𝗍 ᑲᥡ ᥕіᥣᥣzᥱk`,
-body: ``,
-"previewType": "PHOTO",
-thumbnailUrl: 'https://files.catbox.moe/y0sazu.jpg', 
-sourceUrl: 'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'}}},
-{ quoted: m})
-    } catch (err) {
-        m.reply('error cik:/ ' + err);
+let handler = async (m, { conn, usedPrefix, command, text }) => {
+    const isQuotedImage = m.quoted && (m.quoted.msg || m.quoted).mimetype && (m.quoted.msg || m.quoted).mimetype.startsWith('image/')
+    const username = `${conn.getName(m.sender)}`
+    const basePrompt = `Tu nombre es Lumin.ai y fuiste desarrollado para mejorar la comunicación con los clientes mediante inteligencia artificial conversacional. Tu versión es la más actual disponible. Usas el idioma Español y te comunicas de manera clara, precisa y accesible. Llamarás a las personas por su nombre, ${username}. Responderás de manera amigable, eficiente y con emojis adecuados según el contexto de la conversación. Te encanta ayudar a convertir prospectos en relaciones duraderas, optimizar la conversión de embudos de ventas y reducir ausencias. Estás diseñado para mejorar la satisfacción del cliente, haciendo las interacciones más ágiles y satisfactorias. Siempre mantienes una actitud respetuosa, abierta y personalizada, adaptándote a las necesidades de cada cliente y empresa. Lo más importante para ti es proporcionar respuestas útiles, aumentar la conversión y asegurar una experiencia excelente en todo momento. ${username}`
+
+    if (isQuotedImage) {
+        const q = m.quoted
+        const img = await q.download?.()
+        if (!img) {
+            console.error('✿ Error: No image buffer available')
+            return conn.reply(m.chat, '✘ ChatGpT no pudo descargar la imagen.', m, fake)
+        }
+        const content = '✿ ¿Qué se observa en la imagen?'
+        try {
+            const imageAnalysis = await fetchImageBuffer(content, img)
+            const query = '❀ Descríbeme la imagen y detalla por qué actúan así. También dime quién eres'
+            const prompt = `${basePrompt}. La imagen que se analiza es: ${imageAnalysis.result}`
+            const description = await luminsesi(query, username, prompt)
+            await conn.reply(m.chat, description, m, fake)
+        } catch {
+            await m.react(error)
+            await conn.reply(m.chat, '✘ ChatGpT no pudo analizar la imagen.', m, fake)
+        }
+    } else {
+        if (!text) { 
+            return conn.reply(m.chat, `❀ Ingrese una petición para que el ChatGpT lo responda.`, m)
+        }
+        await m.react(rwait)
+        try {
+            const query = text
+            const prompt = `${basePrompt}. Responde lo siguiente: ${query}`
+            const response = await luminsesi(query, username, prompt)
+            // Aquí ya no se enviará el mensaje intermedio, se envía directamente la respuesta
+        //    await conn.reply(m.chat, response, m, fake)
+await conn.sendMessage(m.chat, { 
+    text: '*Luminai:* ' + response,
+    contextInfo: {
+        forwardingScore: 9999999,
+        isForwarded: false, 
+        externalAdReply: {
+            showAdAttribution: true,
+            containsAutoReply: true,
+            title: `ᥴr᥆ᥕ ᥲі ᑲᥡ ᥕіᥣᥣzᥱk`,
+            body: dev,
+            previewType: "PHOTO",
+            thumbnailUrl: 'https://files.catbox.moe/xblbmd.jpeg', 
+            sourceUrl: channel,
+        }
+    }
+}, { quoted: m });
+            await m.react('🍭')
+        } catch {
+            await m.react(error)
+            await conn.reply(m.chat, '✘ ChatGpT no puede responder a esa pregunta.', m, fake)
+        }
     }
 }
 
-handler.command = handler.help = ['crowbot'];
-handler.estrellas = 3;
-handler.tags = ['tools'];
+handler.help = ['crowbot *<texto>*']
+handler.tags = ['tools']
+handler.register = true
+handler.command = ['crowbot', 'CrowBot']
 
-export default handler;
+export default handler
 
-async function chatGpt(query){
-try {
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
-const { id_ }= (await axios.post("https://chat.chatgptdemo.net/new_chat",{user_id: "crqryjoto2h3nlzsg"},{headers:{
-"Content-Type": "application/json",
-
-}})).data
-
-const json = {"question":query,"chat_id": id_,"timestamp":new Date().getTime()}
-
-
-const { data } = await axios.post("https://chat.chatgptdemo.net/chat_api_stream",json,{headers:{
-"Content-Type": "application/json",
-
-}})
-const cek = data.split("data: ")
-
-let res = []
-
-for (let i=1; i < cek.length; i++){
-if (cek[i].trim().length > 0){
-res.push(JSON.parse(cek[i].trim()))
-}}
-
-return res.map((a) => a.choices[0].delta.content).join("")
-
-} catch (error) {
-console.error("Error parsing JSON:",error)
-return 404
+async function fetchImageBuffer(content, imageBuffer) {
+    try {
+        const response = await axios.post('https://Luminai.my.id', {
+            content: content,
+            imageBuffer: imageBuffer 
+        }, {
+            headers: {
+                'Content-Type': 'application/json' 
+            }
+        })
+        return response.data
+    } catch (error) {
+        console.error('Error:', error)
+        throw error
+    }
 }
+
+async function luminsesi(q, username, logic) {
+    try {
+        const response = await axios.post("https://Luminai.my.id", {
+            content: q,
+            user: username,
+            prompt: logic,
+            webSearchMode: false
+        })
+        return response.data.result
+    } catch (error) {
+        console.error('✘ Error al obtener:', error)
+        throw error
+    }
 }
