@@ -97,6 +97,7 @@ export async function handler(chatUpdate) {
                     chat.onlyLatinos = false
                 if (!('nsfw' in chat))
                     chat.nsfw = false
+                if (!('autoAceptar' in chat)) chat.autoAceptar = false                   
                 if (!('reaction' in chat))
                     chat.reaction = false
                 if (!('simi' in chat))
@@ -119,6 +120,7 @@ export async function handler(chatUpdate) {
                     simi: false,
                     antiver: false,
                     nsfw: false, 
+                    autoAceptar: false,
                     reaction: false,
                     expired: 0, 
                 }
