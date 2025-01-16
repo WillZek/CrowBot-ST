@@ -18,7 +18,7 @@ let grupos = `*Hola!, te invito a unirte a los grupos oficiales del Bot para con
 
 *─ׄ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׅ─ׄ⭒─ׄ─ׄ*`
 
-await conn.sendFile(m.chat, imagen2, "Crow.jpg", grupos, m, null, rcanal)
+await conn.sendFile(m.chat, imagen1, "Crow.jpg", grupos, m, null, rcanal)
 
 await m.react(emojis)
 
