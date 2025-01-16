@@ -65,7 +65,6 @@ let userNationalityData = api.data.result;
   await conn.sendMessage(m.chat, { 
     text: regbot,
     contextInfo: {
-      mentionedJid: [userId],
       externalAdReply: {
         title: textbot,
         body: dev,
