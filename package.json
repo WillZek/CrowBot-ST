@@ -33,6 +33,7 @@
 "dependencies": {
 "@whiskeysockets/baileys": "github:ds6/bails",
 "google-libphonenumber": "latest",
+"@StarlightsTeam/Scraper": "github:StarlightsTeam/StarlightsTeam-Scraper",
 "@adiwajshing/keyed-db": "^0.2.4",
 "@bochilteam/scraper": "^4.2.4",
 "@bochilteam/scraper-sosmed": "^1.0.5",
