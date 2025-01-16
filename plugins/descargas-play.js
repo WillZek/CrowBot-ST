@@ -24,21 +24,7 @@ let handler = async (m, { conn, args }) => {
     await conn.sendMessage(m.chat, {
       image: img,
       caption: txt,
-      footer: 'Selecciona una opción',
-      buttons: [
-        {
-          buttonId: `.ytmp3 https://youtu.be/${video.videoId}`,
-          buttonText: {
-            displayText: '🎵 Audio',
-          },
-        },
-        {
-          buttonId: `.ytmp4 https://youtu.be/${video.videoId}`,
-          buttonText: {
-            displayText: '🎥 Video',
-          },
-        },
-      ],
+      body: dev,
       viewOnce: true,
       headerType: 4,
     }, { quoted: m });
