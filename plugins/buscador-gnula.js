@@ -22,6 +22,8 @@ m.reply(JT)
 console.error(error)
 }}
 
+handler.help = ['cuevana'];
+handler.tag = ['buscador'];
 handler.command = /^(cuevana|cuevanasearch|gnula)$/i
 
 export default handler
