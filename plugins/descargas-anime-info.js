@@ -76,7 +76,6 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   await conn.sendMessage(m.chat, { text: messageText }, { quoted: m });
 }
 
-handler.command = handler.help = ['animeinfo', 'animei'];
-handler.tags = ['descargas'];
+handler.command = ['animeinfo', 'animei'];
 handler.estrellas = 7;
 export default handler;
