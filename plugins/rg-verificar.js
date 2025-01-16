@@ -69,7 +69,7 @@ let userNationalityData = api.data.result;
                 title: textbot,
                 body: dev,
                 thumbnailUrl: imagen1,
-                sourceUrl: channel,
+                sourceUrl: 'https://whatsapp.com/channel/0029Vb1kImN42Dcn99y1rW0E',
                 mediaType: 1,
                 showAdAttribution: true,
                 renderLargerThumbnail: true
