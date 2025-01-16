@@ -20,7 +20,6 @@ const res = aaaa.map((v) => `*🎬 • Titulo:* ${v.title}\n*🍿 • Link:* ${v
   conn.sendMessage(m.chat, {image: {url: img}, caption: ads + res}, {quoted: m});
 };
 handler.command = ['cuevana', 'pelisplus', 'gnula'];
-handler.level = 2
 handler.register = true
 export default handler;
 
