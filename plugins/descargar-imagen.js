@@ -14,20 +14,14 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     await conn.sendMessage(m.chat, { 
         image: { url: link }, 
         caption: `*🔎 Resultado De: ${text}*`, 
-        footer: dev, 
-        buttons: [
-            {
-                buttonId: `${usedPrefix + command} ${text}`,
-                buttonText: { displayText: 'Siguiente' }
-            }
-        ],
+        footer: dev,
         viewOnce: true,
         headerType: 4
     }, { quoted: m })
 }
 
 handler.help = ['imagen <texto>']
-handler.tags = ['buscador', 'tools']
+handler.tags = ['internet', 'tools']
 handler.command = /^(image|imagen)$/i
 
 export default handler
