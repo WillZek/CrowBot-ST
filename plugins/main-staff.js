@@ -7,7 +7,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🎩 *Rol:* Experiencia En Javascript y html
 🍭 *Número:* Wa.me/584120346669
 
-• Prak Harper 
+• 𝐏𝐫𝐚𝐤 𝐇𝐚𝐫𝐩𝐞𝐫 
 🎩 *Rol:* Experiencia En Javascript, Mantenimiento y Editor Profesional
 🍭 *Número:* Wa.me/584241836217
 
