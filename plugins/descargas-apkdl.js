@@ -1,29 +1,21 @@
-let handler = async (m, { conn, args, usedPrefix, command, isOwner }) => {
-if (!args[0]) throw `\`\`\`[ 🌟 ] Ingresa el nombre de la aplicación que quieres descargar. Ejemplo:\n${usedPrefix + command} Clash Royale\`\`\``
-let res = await fetch(`https://api.dorratz.com/v2/apk-dl?text=${args[0]}`);
-let result = await res.json();
-let { name, size, lastUpdate, icon } = result;
-let URL = result.dllink
-let packe = result.package
-let texto = ` \`\`\`
-   ❯───「 𝗔𝗣𝗞 𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 」───❮
-    ✦ 𝐍𝐨𝐦𝐛𝐫𝐞 : ⇢ ${name} 📛
-    ✦ 𝐓𝐚𝐦𝐚𝐧̃𝐨 : ⇢ ${size} ⚖️
-    ✦ 𝐏𝐚𝐜𝐤𝐚𝐠𝐞 : ⇢ ${packe} 📦
-    ✦ 𝐀𝐜𝐭𝐮𝐚𝐥𝐢𝐳𝐚𝐝𝐨 : ⇢ ${lastUpdate} 🗓️
-    
-## Su aplicación se enviará en un momento, *reportar número manda cp +51 928 215 461* . . .
-
-   - ${wm} -          
-\`\`\`     
-`
-await conn.sendFile(m.chat, icon, name + '.jpg', texto, m)
-
-await conn.sendMessage(m.chat, { document: { url: URL }, mimetype: 'application/vnd.android.package-archive', fileName: name + '.apk', caption: ''}, { quoted: m });
-}
-handler.command = ['apk', 'apkdl', 'modapk']
-handler.help = ['apkdl']
-handler.tags = ['descargas']
-handler.estrellas = 14;
-
-export default handler
+import {search, download} from 'aptoide-scraper';
+const handler = async (m, {conn, usedPrefix: prefix, command, text}) => {
+ if (!text) throw conn.reply(m.chat, '*\`Ingrese el nombre de la APK que quiera buscar. 🤍\`*', m, fake, )
+  try {    
+    const searchA = await search(text);
+    const data5 = await download(searchA[0].id);
+    let response = `📲 *Descargador de Aptoide* 📲\n\n📌 *Nombre:* ${data5.name}\n📦 *Package:* ${data5.package}\n🕒 *Última actualización:* ${data5.lastup}\n📥 *Tamaño:* ${data5.size}`
+await conn.sendFile(m.chat, data5.icon, 'thumbnail.jpg', response, m, null, fake)
+//    await conn.sendMessage(m.chat, {image: {url: data5.icon}, caption: response}, {quoted: m});
+ if (data5.size.includes('GB') || data5.size.replace(' MB', '') > 999) {
+      return await conn.sendMessage(m.chat, {text: '*[ ⛔ ] El archivo es demasiado pesado por lo que no se enviará.*'}, {quoted: m});
+    }
+    await conn.sendMessage(m.chat, {document: {url: data5.dllink}, mimetype: 'application/vnd.android.package-archive', fileName: data5.name + '.apk', caption: null}, {quoted: m});
+  } catch {
+    throw `*[❗] Error, no se encontrarón resultados para su búsqueda.*`;
+  }    
+};
+handler.help = ['apk *<nombre>*']
+handler.tags = ['dl']
+handler.command = /^(apk|modapk|dapk2|aptoide|aptoidedl)$/i;
+export default handler;
