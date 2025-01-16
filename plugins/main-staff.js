@@ -51,12 +51,11 @@ contextInfo: {
 externalAdReply: {
 showAdAttribution: true,
 renderLargerThumbnail: false,
-title: `🥷 Developers 👑`,
-body: `🔱 Staff Oficial`,
+title: `🎩 STAFF OFICIAL✨`,
+body: dev,
 mediaType: 1,
 sourceUrl: redes,
-thumbnailUrl: icono
-}}
+thumbnailUrl: 'https://files.catbox.moe/rgumk8.jpg' }}
 }, { mentions: m.sender })
 m.react(emoji)
 
