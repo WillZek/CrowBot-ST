@@ -12,7 +12,7 @@ let handler = async (m, { conn }) => {
         return conn.sendMessage(m.chat, { text: 'Por favor, proporciona el nombre de la película.' }, { quoted: m });
     }
 
-    let url = `https://gnula.vercel.app/api/search/gnula?nombre=${encodeURIComponent(movieName)}`;
+    let url = `https://gnulahd.nu/?s=${encodeURIComponent(movieName)}`;
 
     try {
         let response = await fetch(url);
