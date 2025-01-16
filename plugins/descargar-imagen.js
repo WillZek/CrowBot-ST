@@ -21,7 +21,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 }
 
 handler.help = ['imagen <texto>']
-handler.tags = ['internet', 'tools']
+handler.tags = ['buscador', 'tools']
 handler.command = /^(image|imagen)$/i
 
 export default handler
