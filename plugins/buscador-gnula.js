@@ -1,56 +1,64 @@
-//Codígo creado por Niño Piña wa.me/50557865603
-//Créditos a EliasarYt por brindar la API
+/* Creado/adaptado por Bruno Sobrino (https://github.com/BrunoSobrino) */
 
 import fetch from 'node-fetch';
+import axios from 'axios';
+import {load} from 'cheerio';
+const handler = async (m, {text, usedPrefix, command, conn}) => {
+if (!text) throw`️Ingrese EL Nombre De La Película\nEjemplo: ${usedPrefix + command} El Gato con botas`
+  let aaaa;
+  let img;
+  try {
+    aaaa = await searchC(text);
+    img = 'https://cinefilosoficial.com/wp-content/uploads/2021/07/cuevana.jpg';
+  } catch {
+    aaaa = await searchP(text);
+    img = 'https://elcomercio.pe/resizer/RJM30xnujgfmaODGytH1rRVOrAA=/400x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/BJ2L67XNRRGHTFPKPDOEQ2AH5Y.jpg';
+  }
+  if (aaaa == '') throw `️Resultados`
+  const res = await aaaa.map((v) => `*🎬 • Titulo:* ${v.title}\n*🍿 • Link:* ${v.link}`).join`\n\n───────────────\n\n`;
+  const ads = `*💫 • Buscador*\nhttps://block-this.com/block-this-latest.apk\n\n≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣\n\n`
+  conn.sendMessage(m.chat, {image: {url: img}, caption: ads + res}, {quoted: m});
+};
+handler.command = ['cuevana', 'pelisplus', 'gnula'];
+handler.level = 2
+handler.register = true
+export default handler;
 
-let handler = async (m, { conn }) => {
-    let chat = global.db.data.chats[m.chat];
-    if (chat.isBanned) return;
-
-    let movieName = m.text.split('.gnula ')[1];
-    if (!movieName) {
-        return conn.sendMessage(m.chat, { text: 'Por favor, proporciona el nombre de la película.' }, { quoted: m });
+const safeLoad = async (url, options = {}) => {
+  try {
+    const {data: pageData} = await axios.get(url, options);
+    const $ = load(pageData);
+    return $;
+  } catch (err) {
+    if (err.response) {
+      throw new Error(err.response.statusText);
     }
-
-    let url = `https://gnulahd.nu/?s=${encodeURIComponent(movieName)}`;
-
-    try {
-        let response = await fetch(url);
-
-        if (!response.ok) throw new Error(`Error en la respuesta: ${response.statusText}`);
-
-        let data = await response.json();
-
-        if (data && data.peliculas && data.peliculas.length > 0) {
-            let results = data.peliculas.map(movie => 
-                `🎬 Título: ${movie.titulo || 'Título no disponible'}\n` +
-                `📅 Publicado: ${movie.fechaPublicacion || 'Fecha no disponible'}\n` +
-                `🖋️ Autor: ${movie.autor || 'Autor no disponible'}\n` +
-                `📖 Sinopsis: ${movie.descripcion || 'Sinopsis no disponible'}\n` +
-                `🖼️ Imagen: ${movie.imagen || 'Imagen no disponible'}\n` +
-                `🔗 Enlace: ${movie.enlace || 'Enlace no disponible'}\n` +
-                `🎞️ Idioma: ${movie.idioma || 'No disponible'}\n` +
-                `📺 Calidad: ${movie.calidad || 'No disponible'}\n` +
-                `⬇️ Descargar: ${movie.enlaceDescarga || 'No disponible'}`
-            ).join('\n\n');
-
-            results += `\n\n> ৎ୭࠭͢CrowBot𓆪͟͞ `;
-
-            conn.sendMessage(m.chat, { text: results }, { quoted: m });
-        } else {
-            conn.sendMessage(m.chat, { text: 'No se encontraron resultados para esa película.' }, { quoted: m });
-        }
-    } catch (error) {
-        console.error(error);
-        conn.sendMessage(m.chat, { text: 'Ocurrió un error al buscar: ' + error.message }, { quoted: m });
-    }
+    throw err;
+  }
 };
 
-// Configuración del handler
-handler.help = ['gnula'];
-handler.tags = ['buscador'];
-handler.command = /^(gnula)$/i;
-handler.premium = true;
-handler.register = true;
+async function searchC(query, numberPage = 1) {
+  const $ = await safeLoad(`https://cuevana3.mu/page/${numberPage}/`, {
+    params: {s: query}});
+  const resultSearch = [];
+  $('.results-post > article').each((_, e) => {
+    const element = $(e);
+    const title = element.find('header > h2').text();
+    const link = element.find('.lnk-blk').attr('href');
+    resultSearch.push({title: title, link: link});
+  });
+  return resultSearch;
+}
 
-export default handler;
+async function searchP(query, numberPage = 1) {
+  const $ = await safeLoad(`https://pelisplushd.cx/search/`, {
+    params: {s: query, page: numberPage}});
+  const resultSearch = [];
+  $('a[class^=\'Posters\']').each((_, e) => {
+    const element = $(e);
+    const title = element.find('.listing-content > p').text();
+    const link = element.attr('href');
+    resultSearch.push({title: title, link: link});
+  });
+  return resultSearch;
+}
