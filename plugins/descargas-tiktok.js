@@ -55,8 +55,7 @@ m.react('🍁')
     }
   }
 };
-handler.tags = ['descargas'];
-handler.help = ['tiktok'];
+
 handler.command = ['tiktok2', 'ttk2', 'tt2'];
 handler.estrellas = 4;
 handler.register = true;
