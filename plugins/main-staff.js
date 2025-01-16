@@ -46,7 +46,7 @@ m.react(emoji)
 handler.help = ['staff']
 handler.command = ['colaboradores', 'staff']
 handler.register = true
-handler.tags = ['main']
+handler.tags = ['main', 'crow']
 handler.estrellas = 1;
 
 export default handler
