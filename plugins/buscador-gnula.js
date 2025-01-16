@@ -17,7 +17,7 @@ if (!text) throw`️Ingrese EL Nombre De La Película\nEjemplo: ${usedPrefix + c
   if (aaaa == '') throw `️No se Encontraron Resultados`
 const res = aaaa.map((v) => `*🎬 • Titulo:* ${v.title}\n*🍿 • Link:* ${v.link}`).join('\n\n───────────────\n\n');
   const ads = `*💫 • Buscador*\nhttps://block-this.com/block-this-latest.apk\n\n≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣\n\n`
-  conn.sendMessage(m.chat, {image: {url: img}, caption: ads + res}, {quoted: m});
+  conn.sendMessage(m.chat, {image: {url: img}, caption: ads + res, { quoted: m });
 };
 handler.command = ['cuevana', 'pelisplus', 'gnula'];
 handler.register = true
