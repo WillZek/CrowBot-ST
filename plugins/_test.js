@@ -154,7 +154,7 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 await m.react(emojis) 
 
-conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/d4uf0q.mp4` }, gifPlayback: true, caption: text.trim(),
+conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/3m2bi5.mp4` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
