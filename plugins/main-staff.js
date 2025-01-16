@@ -27,7 +27,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🎩 *Rol:* Bots Oficiales
 🍭 *Número:* Privado🫵🏻
 `
-await conn.sendFile(m.chat, icons, 'brook.jpg', staff.trim(), fkontak, true, {
+await conn.sendFile(m.chat, 'https://files.catbox.moe/rgumk8.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
 'isForwarded': false,
@@ -38,7 +38,7 @@ title: `🎩 STAFF OFICIAL✨`,
 body: dev,
 mediaType: 1,
 sourceUrl: redes,
-thumbnailUrl: 'https://files.catbox.moe/rgumk8.jpg' }}
+thumbnailUrl: icono }}
 }, { mentions: m.sender })
 m.react(emoji)
 
