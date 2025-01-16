@@ -36,7 +36,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
             // Aquí ya no se enviará el mensaje intermedio, se envía directamente la respuesta
         //    await conn.reply(m.chat, response, m, fake)
 await conn.sendMessage(m.chat, { 
-    text: '*Luminai:* ' + response,
+    text: '*Crow:* ' + response,
     contextInfo: {
         forwardingScore: 9999999,
         isForwarded: false, 
