@@ -1,29 +1,19 @@
-import { googleImage } from '@bochilteam/scraper'
+import { pinterest } from '@bochilteam/scraper'
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-    let user = global.db.data.users[m.sender]
+var handler = async(m, { conn, text, usedPrefix, command }) => {
 
-    if (!text) throw `𝗤𝘂𝗲 𝗯𝘂𝘀𝗰𝗮𝗿? 🤔️\n𝗨𝘀𝗲𝗹𝗼 𝗱𝗲 𝗹𝗮 𝘀𝗶𝗴𝘂𝗶𝗲𝗻𝘁𝗲 𝗺𝗮𝗻𝗲𝗿𝗮\n𝗘𝗷𝗲𝗺𝗽𝗹𝗼:\n*${usedPrefix + command} Loli*`
+if (!text) return conn.reply(m.chat, `🎌 *Debera ingresar un texto*\n\nEjemplo, !${command} Crow`, m, fake, )
+m.react(done)
 
-    const res = await googleImage(text)
-    let image = res.getRandom()
-    let link = image
+const json = await pinterest(text)
+conn.sendFile(m.chat, json.getRandom(), 'imagen.jpg', `🚩 *Resultado de* ${text}`.trim(), m)
 
-    await delay(1000)
-
-    await conn.sendMessage(m.chat, { 
-        image: { url: link }, 
-        caption: `*🔎 Resultado De: ${text}*`, 
-        body: dev,
-        viewOnce: true,
-        headerType: 4
-    }, { quoted: m })
 }
+handler.help = ['imagen']
+handler.tags = ['buscador']
+handler.command = /^(imagen|image)$/i
 
-handler.help = ['imagen <texto>']
-handler.tags = ['buscador', 'tools']
-handler.command = /^(image|imagen)$/i
+handler.limit = true
+handler.register = true
 
 export default handler
-
-const delay = time => new Promise(res => setTimeout(res, time))
