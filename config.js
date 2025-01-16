@@ -55,7 +55,7 @@ global.imagen3 = fs.readFileSync('./Menu3.jpg')
 global.welcome = fs.readFileSync('./media/welcome.jpg')
 global.adios = fs.readFileSync('./media/adios.jpg')
 global.catalogo = fs.readFileSync('./storage/img/catalogo1.jpg')
-global.ianurl = fs.readFileSync('./storage/img/crowurl.jpg')
+global.crowurl = fs.readFileSync('./storage/img/crowurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 global.mashach = 'https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J'
