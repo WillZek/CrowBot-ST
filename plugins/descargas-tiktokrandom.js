@@ -19,8 +19,7 @@ m.reply(eror)
 }
 handler.help = ['tiktokrandom']
 handler.tags = ['descargas']
-handler.command = /^(tiktokrandom|ttrandom)$/i
-handler.estrellas = 6;
+handler.command = ['ttrandom', 'tiktokrandom']
 handler.limit = true 
 handler.register = true
 
