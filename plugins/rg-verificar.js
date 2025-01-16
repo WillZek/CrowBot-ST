@@ -68,7 +68,7 @@ let userNationalityData = api.data.result;
             externalAdReply: {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
                 body: dev,
-                thumbnailUrl: imagen1,
+                thumbnailUrl: 'https://files.catbox.moe/kd7vs5.jpg',
                 sourceUrl: 'https://whatsapp.com/channel/0029Vb1kImN42Dcn99y1rW0E',
                 mediaType: 1,
                 showAdAttribution: true,
