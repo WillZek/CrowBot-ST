@@ -18,7 +18,7 @@ const handler = async (m, {conn, command, args}) => {
   }).join('\n\n');
   try {
     const ss = `https://image.thum.io/get/fullpage/${url}`;
-    conn.sendFile(m.chat, ss, 'error.png', xd + '\n> ' + url + '\n\n' + msg, m, {
+    conn.sendFile(m.chat, wait, ss, 'error.png', xd + '\n> ' + url + '\n\n' + msg, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: 'GOOGLE SEARCH',
 body: dev,
