@@ -3,7 +3,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🤖 *Bot:* ${global.botname}
 🪐 *Versión:* ${global.vs}
 
-• DarkCore
+• 𝐃𝐚𝐫𝐤𝐂𝐨𝐫𝐞
 🎩 *Rol:* Experiencia En Javascript y html
 🍭 *Número:* Wa.me/584120346669
 
@@ -11,19 +11,19 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🎩 *Rol:* Experiencia En Javascript, Mantenimiento y Editor Profesional
 🍭 *Número:* Wa.me/584241836217
 
-• Isabel (isa)
+• 𝐈𝐬𝐚𝐛𝐞𝐥 (isa)
 🎩 *Rol:* Experiencia En Diseños De Logos /Editora Profesional
 💛 *Número:* Wa.me/529831715910
 
-• Senna 
+• 𝐒𝐞𝐧𝐧𝐚 
 🎩 *Rol:* Experiencia En Mantenimiento y Soporte Del Bot
 🍭 *Número:* Wa.me/573001357781
 
-• Deylin 
+• 𝐃𝐞𝐲𝐥𝐢𝐧 
 🎩 *Rol:* Experiencia En Redacción y Decoración De Textos
 💛 *Número:* Wa.me/50488198573
 
-• Joker y White 
+• 𝐉𝐨𝐤𝐞𝐫 𝐲 𝐖𝐡𝐢𝐭𝐞 
 🎩 *Rol:* Bots Oficiales
 🍭 *Número:* Privado🫵🏻
 `
