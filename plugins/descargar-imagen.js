@@ -1,4 +1,4 @@
-import {googleImage} from '@bochilteam/scraper';
+import { googleImage } from '@bochilteam/scraper';
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (!text) throw `*🎩 Uso Correcto: ${usedPrefix + command} CrowBot*`;
 conn.reply(m.chat, '🍭 *Descargando su imagen...*', m, {
