@@ -154,16 +154,16 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 await m.react(emojis) 
 
-conn.sendMessage(m.chat, { video: { url: `https://telegra.ph/file/9cee79cfcd7e142b1f27d.mp4` }, gifPlayback: true, caption: text.trim(),
+conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/d4uf0q.mp4` }, gifPlayback: true, caption: text.trim(),
 contextInfo: {
 mentionedJid: conn.parseMention(text.trim()),
 isForwarded: true,
 forwardingScore: 999,
 externalAdReply: {
-title: conn.getName(m.sender) + ', Thanks for using Sylphiette, you can follow me on Instagram by clicking here.',
-body: author,
+title: textbot,
+body: dev,
 thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
-sourceUrl: insta,
+sourceUrl: channel,
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: fkontak })
