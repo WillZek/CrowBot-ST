@@ -162,7 +162,7 @@ forwardingScore: 999,
 externalAdReply: {
 title: textbot,
 body: dev,
-thumbnailUrl: 'https://telegra.ph/file/dc68e52ff6227979070d0.jpg',
+thumbnailUrl: 'https://files.catbox.moe/v8q8y2.jpg',
 sourceUrl: channel,
 mediaType: 1,
 renderLargerThumbnail: true
