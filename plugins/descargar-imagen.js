@@ -1,23 +1,35 @@
-import { googleImage } from '@bochilteam/scraper';
-const handler = async (m, {conn, text, usedPrefix, command}) => {
-if (!text) throw `*🎩 Uso Correcto: ${usedPrefix + command} CrowBot*`;
-conn.reply(m.chat, '🍭 *Descargando su imagen...*', m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
-title: packname,
-body: wm,
-previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
-const res = await googleImage(text);
-const image = await res.getRandom();
-const link = image;
-const messages = [['Imagen 1', dev, await res.getRandom(),
-[[]], [[]], [[]], [[]]], ['Imagen 2', dev, await res.getRandom(), [[]], [[]], [[]], [[]]], ['Imagen 2', dev, await res.getRandom(), [[]], [[]], [[]], [[]]], ['Imagen 4', dev, await res.getRandom(), [[]], [[]], [[]], [[]]]]
-await conn.sendCarousel(m.chat, `🎩 Resultado de ${text}`, '🔎 Imagen - Descargas', null, messages, m);
-};
-handler.help = ['imagen <query>'];
-handler.tags = ['buscador', 'tools'];
-handler.command = ['image','imagen'];
-handler.group = true;
-handler.estrellas = 6;
-handler.register = true
-export default handler;
+import { googleImage } from '@bochilteam/scraper'
+
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    let user = global.db.data.users[m.sender]
+
+    if (!text) throw `𝗤𝘂𝗲 𝗯𝘂𝘀𝗰𝗮𝗿? 🤔️\n𝗨𝘀𝗲𝗹𝗼 𝗱𝗲 𝗹𝗮 𝘀𝗶𝗴𝘂𝗶𝗲𝗻𝘁𝗲 𝗺𝗮𝗻𝗲𝗿𝗮\n𝗘𝗷𝗲𝗺𝗽𝗹𝗼:\n*${usedPrefix + command} Loli*`
+
+    const res = await googleImage(text)
+    let image = res.getRandom()
+    let link = image
+
+    await delay(1000)
+
+    await conn.sendMessage(m.chat, { 
+        image: { url: link }, 
+        caption: `*🔎 Resultado De: ${text}*`, 
+        footer: dev, 
+        buttons: [
+            {
+                buttonId: `${usedPrefix + command} ${text}`,
+                buttonText: { displayText: 'Siguiente' }
+            }
+        ],
+        viewOnce: true,
+        headerType: 4
+    }, { quoted: m })
+}
+
+handler.help = ['imagen <texto>']
+handler.tags = ['buscador', 'tools']
+handler.command = /^(image|imagen)$/i
+
+export default handler
+
+const delay = time => new Promise(res => setTimeout(res, time))
