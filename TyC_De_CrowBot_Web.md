@@ -10,6 +10,6 @@
 - Mantenimiento y Atención Al Cliente
 - Más De 300 Comandos
 
-> ¿Que Esperas Para Comprar Tu Token?
+> ¿Que Esperas Para Comprar Tu **[Token](https://crow-bot-dashboard.vercel.app/)**?
 
 © Powered By Staff De **[CrowBot](https://github.com/WillZek/CrowBot-ST)**
