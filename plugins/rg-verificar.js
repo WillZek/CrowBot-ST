@@ -66,7 +66,7 @@ let userNationalityData = api.data.result;
         text: regbot,
         contextInfo: {
             externalAdReply: {
-                title: textbot,
+                title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
                 body: dev,
                 thumbnailUrl: imagen1,
                 sourceUrl: 'https://whatsapp.com/channel/0029Vb1kImN42Dcn99y1rW0E',
