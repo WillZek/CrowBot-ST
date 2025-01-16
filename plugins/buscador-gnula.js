@@ -15,7 +15,7 @@ if (!text) throw`️Ingrese EL Nombre De La Película\nEjemplo: ${usedPrefix + c
     img = 'https://elcomercio.pe/resizer/RJM30xnujgfmaODGytH1rRVOrAA=/400x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/BJ2L67XNRRGHTFPKPDOEQ2AH5Y.jpg';
   }
   if (aaaa == '') throw `️No se Encontraron Resultados`
-  const res = await aaaa.map((v) => `*🎬 • Titulo:* ${v.title}\n*🍿 • Link:* ${v.link}`).join`\n\n───────────────\n\n`;
+const res = aaaa.map((v) => `*🎬 • Titulo:* ${v.title}\n*🍿 • Link:* ${v.link}`).join('\n\n───────────────\n\n');
   const ads = `*💫 • Buscador*\nhttps://block-this.com/block-this-latest.apk\n\n≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣≣\n\n`
   conn.sendMessage(m.chat, {image: {url: img}, caption: ads + res}, {quoted: m});
 };
