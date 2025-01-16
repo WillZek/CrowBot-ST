@@ -30,7 +30,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 
     const link = gyh.data.url || "Enlace no disponible";
-    const message = `*✧ Link del video:* ${link}\n\n> ♡⃝CrowBotᚐ҉ᚐ`;
+    const message = `*✧ Link del video:* ${link}\n\n> ${dev}`;
 
     try {
         // Enviar el video con solo el enlace y la firma
