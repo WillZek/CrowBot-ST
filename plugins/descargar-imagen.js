@@ -14,7 +14,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     await conn.sendMessage(m.chat, { 
         image: { url: link }, 
         caption: `*🔎 Resultado De: ${text}*`, 
-        footer: dev,
+        body: dev,
         viewOnce: true,
         headerType: 4
     }, { quoted: m })
