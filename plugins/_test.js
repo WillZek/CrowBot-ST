@@ -25,6 +25,8 @@ let tags = {
   'logos': '「EDICION LOGOS」🍨', 
 }
 
+const vid = ['https://telegra.ph/file/32e696946433c03588726.mp4', 'https://telegra.ph/file/5293a73eb90a920f8948b.mp4', 'https://telegra.ph/file/d5ed2537cb22b628d8ef1.mp4']
+
 const defaultMenu = {
   before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
 
@@ -154,19 +156,8 @@ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length
 
 await m.react(emojis) 
 
-conn.sendMessage(m.chat, { video: { url: `https://files.catbox.moe/3m2bi5.mp4` }, gifPlayback: true, caption: text.trim(),
-contextInfo: {
-mentionedJid: conn.parseMention(text.trim()),
-isForwarded: true,
-forwardingScore: 999,
-externalAdReply: {
-title: textbot,
-body: dev,
-thumbnailUrl: 'https://files.catbox.moe/v8q8y2.jpg',
-sourceUrl: channel,
-mediaType: 1,
-renderLargerThumbnail: true
-}}}, { quoted: fkontak })
+await conn.sendMessage(m.chat, { video: { url: vid.getRandom() }, caption: menu, contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: textbot, body: dev, thumbnailUrl: '', sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
+}, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null })
 
   } catch (e) {
     conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
