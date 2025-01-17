@@ -171,7 +171,7 @@ npm start
 </details>
 
 ---
-# **`HOSTINGS DE CALIDAD`**
+## **`🎩 HOSTINGS DE CALIDAD`**
 
 ###  **`🍬 MASHA-HOTS`**
 <a href="https://dash.masha-host.shop/home"><img src="https://qu.ax/aHudo.jpg" height="145px"></a>
@@ -187,7 +187,7 @@ npm start
 
 </details>
 
-### **`☁️ SKY ULTRA PLUS`**
+#### **`☁️ SKY ULTRA PLUS`**
 
 <a
 href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" height="125px"></a>
@@ -208,7 +208,7 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 
-### **`🌌 Hosting Py:`**
+#### **`🌌 Hosting Py:`**
 
 <a
 href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z2.jpg" height="125px"></a>
@@ -231,7 +231,7 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 
 </details>
 
-### **`TK HOST 📲`**
+#### **`TK HOST 📲`**
 <a href="https://dash.tk-joanhost.com"><img src="https://i.ibb.co/pr8TnWJ/SAVE-20240915-183758.jpg" height="125px"></a>
 
 <details>
