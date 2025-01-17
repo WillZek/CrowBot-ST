@@ -101,6 +101,7 @@ const handler = async (m, {command, text, usedPrefix}) => {
                 'z': '𝔃'
             }[v.toLowerCase()] || v;
         }));
+}
     else if (command == 'letra4' || command == 'font4') {
     m.reply(teks.replace(/[a-z]/gi, v => {
         return {
