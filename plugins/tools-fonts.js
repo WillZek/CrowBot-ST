@@ -3,7 +3,6 @@ if (!text) return conn.reply(m.chat, '🍬 Por favor, ingresa el texto que quier
 
 let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
 
-if (command == 'letra1' || command == 'font1') {
 m.reply(teks.replace(/[a-z]/gi, v => {
 return {
 'a': 'ᥲ',
