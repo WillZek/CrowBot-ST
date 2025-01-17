@@ -10,7 +10,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 ## 💛 **`C R O W - B O T`**    
 
-![Menú Principal](https://telegra.ph/file/b346b44893d4613a72f98.jpg)
+![Menú Principal](https://files.catbox.moe/v8q8y2.jpg)
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>   
 
