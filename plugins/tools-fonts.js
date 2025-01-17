@@ -75,4 +75,4 @@ handler.tags = ['fun']
 handler.command = ['letra1', 'font1', 'letra2', 'font2']
 handler.register = true
 
-export default handler
+export default handler;
