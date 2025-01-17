@@ -1,11 +1,12 @@
+
 const handler = async (m, { conn }) => {
 
-let time = global.db.data.users[m.sender].lastclaim + 864000000; //10 dias
-if (new Date - global.db.data.users[m.sender].lastclaim < 864000000) return conn.reply(m.chat, `*Ya Has Reclamado El Regalo De CrowBot💛, Vuelve En ${msToTime(time - new Date())}*`, m, );
+let time = global.db.data.users[m.sender].lastclaim + 864000000; //10 días
+if (new Date().getTime() - global.db.data.users[m.sender].lastclaim < 864000000) return conn.reply(m.chat, `*Ya Has Reclamado El Regalo De CrowBot💛, Vuelve En ${msToTime(time - new Date().getTime())}*`, m, );
 
     const user = global.db.data.users[m.sender];
     conn.sendMessage(m.chat, {text: `🎩 *@${m.sender.split('@')[0]} CrowBot Te Ha Regalado:*\n> 🌟 200 Estrellas\n> 💶 100 Experiencia\n> 🪙 200 CrowCoins`, mentions: [m.sender]}, {quoted: fkontak});
-     
+
     user.money += 200;
     user.estrellas += 200;
     user.exp += 100;
