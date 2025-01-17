@@ -38,9 +38,9 @@ return {
 
 if (command == 'letra2' || command == 'font2') {
 
-let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
+let tekss = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
 
-m.reply(teks.replace(/[a-z]/gi, v => {
+m.reply(tekss.replace(/[a-z]/gi, v => {
 return {
 'a': '𝐚',
 'b': '𝐛',
