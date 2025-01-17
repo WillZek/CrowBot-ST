@@ -10,7 +10,7 @@ const handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, 
   const delay = (time) => new Promise((res)=>setTimeout(res, time));
   switch (command) {
     case 'hidnum': case 'hidetagnum':
-      conn.reply(m.chat, `*𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙽𝚄𝙼𝙴𝚁𝙾𝚂 𝙲𝙾𝙽 𝙴𝙻 𝙿𝚁𝙴𝙵𝙸𝙹𝙾 +${lol} 𝚀𝚄𝙴 𝙴𝚂𝚃𝙰𝙽 𝙴𝙽 𝙴𝚂𝚃𝙴 𝙶𝚁𝚄𝙿𝙾:*\n\n` + numeros.join`\n`, m, {mentions: ps});
+      conn.reply(m.chat, `*MENSAJE ESPECIAL PARA +${lol} QUE ESTAN EN ESTE GRUPO:*\n\n` + numeros.join`\n`, m, {mentions: ps});
       break;
       const ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net';
       const users = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol));
