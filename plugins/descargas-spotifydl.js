@@ -83,7 +83,7 @@ await m.react('✖️')
 }}
 handler.tags = ['descargas']
 handler.help = ['spotifydl']
-handler.command = ['spotifydl']
+handler.command = ['spotifydl', 'spdl']
 //handler.limit = 1
 handler.register = true
 export default handler
