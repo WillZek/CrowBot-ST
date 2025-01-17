@@ -73,7 +73,7 @@ const handler = async (m, {command, text, usedPrefix}) => {
     }
 };
 
-if (command == 'pvideo' || command == 'mp4') {
+if (command == 'letra3' || command == 'font3') {
         m.reply(teks.replace(/[a-z]/gi, v => {
             return {
                 'a': '𝓪',
