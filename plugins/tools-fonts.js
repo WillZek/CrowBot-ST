@@ -101,7 +101,37 @@ const handler = async (m, {command, text, usedPrefix}) => {
                 'z': '𝔃'
             }[v.toLowerCase()] || v;
         }));
-    }
+    } else if (command == 'letra4' || command == 'font4') {
+        m.reply(teks.replace(/[a-z]/gi, v => {
+            return {
+                'a': '𝖆,
+                'b': '𝖇,
+                'c': '𝖈,
+                'd': '𝖉,
+                'e': '𝖊,
+                'f': '𝖋,
+                'g': '𝖌,
+                'h': '𝖍,
+                'i': '𝖎,
+                'j': '𝖏,
+                'k': '𝖐,
+                'l': '𝖑,
+                'm': '𝖒,
+                'n': '𝖓,
+                'o': '𝖔,
+                'p': '𝖕,
+                'q': '𝖖,
+                'r': '𝖗,
+                's': '𝖘,
+                't': '𝖙,
+                'u': '𝖚,
+                'v': '𝖛,
+                'w': '𝖜,
+                'x': '𝖝',
+                'y': '𝖞',
+                'z': '𝖟'
+            }[v.toLowerCase()] || v;
+        }));
 };
 
 handler.help = ['letra *<texto>*'];
