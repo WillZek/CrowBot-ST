@@ -4,7 +4,7 @@
 
 const handler = async (m, {command, text, usedPrefix}) => {
 
-    if (!text) return conn.reply(m.chat, '🍬 Por favor, ingresa el texto que quieres transformar.', m, rcanal);
+    if (!text) return conn.reply(m.chat, '🍭 Por favor, ingresa el texto que quieres transformar.', m, rcanal);
 
     let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text;
 
