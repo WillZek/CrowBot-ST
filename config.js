@@ -46,17 +46,6 @@ global.textbot = `「 🔱 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐒𝐓 🔱 」`
 global.vs = '2.1.0'
 global.publi = '✰𝐒𝐢𝐠𝐮𝐞 𝐄𝐥 𝐂𝐚𝐧𝐚𝐥👇'
 
-//tags
-global.nombre = conn.getName(m.sender)
-global.taguser = '@' + m.sender.split("@s.whatsapp.net")
-var more = String.fromCharCode(8206)
-global.readMore = more.repeat(850)
-
-global.authsticker = `┊👑Bot\n┊↳${botname}\n\n┊👑Usuario\n┊↳ @${conn.getName(m.sender)}`;
-
-global.packsticker = `┊ 🔱𝐒𝐭𝐚𝐫𝐂𝐨𝐫𝐞💫𝐓𝐞𝐚𝐦\n↳https://github.com/WillZek\n\n┊ 👹Info:\n↳Wa.me/50557865603`
-
-
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.imagen1 = fs.readFileSync('./Menu.jpg')
