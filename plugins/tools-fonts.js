@@ -319,12 +319,43 @@ const handler = async (m, {command, text, usedPrefix}) => {
                 'z': '🅩'
             }[v.toLowerCase()] || v;
         }));
+    } else if (command == 'letra10' || command == 'font10') {
+        m.reply(teks.replace(/[a-z]/gi, v => {
+            return {
+                'a': 'ᴀ',
+                'b': 'ʙ',
+                'c': 'ᴄ',
+                'd': 'ᴅ',
+                'e': 'ᴇ',
+                'f': 'ғ',
+                'g': 'ɢ',
+                'h': 'ʜ',
+                'i': 'ɪ',
+                'j': 'ᴊ',
+                'k': 'ᴋ',
+                'l': 'ʟ',
+                'm': 'ᴍ',
+                'n': 'ɴ',
+                'o': 'ᴏ',
+                'p': 'ᴘ',
+                'q': 'ǫ',
+                'r': 'ʀ',
+                's': 'ׅs',
+                't': 'ᴛ',
+                'u': 'ᴜ',
+                'v': 'ׁׅᴠ',
+                'w': 'ᴡ',
+                'x': 'x',
+                'y': 'ʏ',
+                'z': 'ᴢ'
+            }[v.toLowerCase()] || v;
+        }));
     }
 };
 
-handler.help = ['font1', 'font2', 'font3', 'font4', 'font5', 'fontrandom', 'font6', 'font7', 'font8', 'font9'];
+handler.help = ['font1', 'font2', 'font3', 'font4', 'font5', 'fontrandom', 'font6', 'font7', 'font8', 'font9', 'font10'];
 handler.tags = ['teclado'];
-handler.command = ['letra1', 'font1', 'letra2', 'font2', 'letra3', 'font3', 'font4', 'letra4', 'letra5', 'font5', 'letrarandom', 'fontrandom', 'letra6', 'font6', 'letra7', 'font7', 'letra8', 'font8', 'letra9', 'font9'];
+handler.command = ['letra1', 'font1', 'letra2', 'font2', 'letra3', 'font3', 'font4', 'letra4', 'letra5', 'font5', 'letrarandom', 'fontrandom', 'letra6', 'font6', 'letra7', 'font7', 'letra8', 'font8', 'letra9', 'font9', 'letra10', 'font10'];
 handler.register = true;
 
 export default handler;
