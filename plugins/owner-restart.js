@@ -22,7 +22,7 @@ let handler = async (m, { conn, isROwner, text }) => {
             await conn.sendMessage(m.chat, { text: progreso[i], edit: key });
         }
 
-        await conn.sendMessage(m.chat, { text: "『✅』*CrowBot* reiniciado con éxito espera unos segundos asta que el proceso termine.", edit: key });
+        await conn.sendMessage(m.chat, { text: "『✅』𝗖𝗿𝗼𝘄𝗕𝗼𝘁 reiniciado con éxito espera unos segundos asta que el proceso termine.", edit: key });
 
         await delay(2000);
         process.send('reset');
