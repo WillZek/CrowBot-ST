@@ -46,7 +46,7 @@ src="https://img.shields.io/badge/PayPal-000000?style=for-the-badge&logo=paypal&
 <details>
  <summary><b>:paperclip: Links Importantes</b></summary>
 
-- **Grupo De Ventas:** [`Aquí`](https://chat.whatsapp.com/KfcT8ReqiJW93g17vSXVpf)
+- **Comprar Token:** [`Aquí`](https://crow-bot-dashboard.vercel.app/)
 - **Comunidad Oficial:** [`Aquí`](https://chat.whatsapp.com/BZ87KB4Igab3lCw6DAwPCR)
 - **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W)
 - **Propietario Del Bot:** [`Aqui`](https:/Wa.me/50557865603)
