@@ -33,7 +33,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         mensaje += `*${resultado}* y has perdido *${cantidad} estrellas*!`;
     }
 
-   conn.fakeReply(m.chat, message, '0@s.whatsapp.net', 'Resultado🍭', 'status@broadcast' )
+  await conn.reply(m.chat, mensaje, m);
 };
 
 handler.help = ['cf'];
