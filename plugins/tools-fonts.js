@@ -2,6 +2,8 @@ function handler(m, { text }) {
 if (!text) return conn.reply(m.chat, '🍬 Por favor, ingresa el texto que quieres transformar.', m, rcanal)
 
 let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
+
+if (command == 'letra1' || command == 'font1') {
 m.reply(teks.replace(/[a-z]/gi, v => {
 return {
 'a': 'ᥲ',
@@ -34,7 +36,7 @@ return {
 
 handler.help = ['letra *<texto>*']
 handler.tags = ['fun']
-handler.command = ['letra']
+handler.command = ['letra1', 'font1']
 handler.register = true
 
 export default handler
