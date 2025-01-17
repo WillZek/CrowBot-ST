@@ -14,9 +14,9 @@ global.owner = [
    ['50587043137', 'Support2', true],
    ['584148256527', 'Mi Mujer🔥', true],
    ['584120346669', 'Colaborador ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
-   ['522431268546', 'im fz~', true],
+   ['51971867199', 'Senna', true],
    ['584241836217', 'Colaborador Prak', true],
-   ['519168382008', 'Darkcore - Tu papa', true],
+   ['519168382008', 'Darkcore', true],
    ['573215751237', 'Joker Bot OFF', true],
 ]
 
