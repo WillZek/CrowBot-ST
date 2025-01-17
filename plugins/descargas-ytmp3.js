@@ -1,6 +1,6 @@
 import yts from 'yt-search';
 const handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `*Por favor ingresa un texto*\nEjemplo:\n${usedPrefix + command} https://youtu.be/QSvaCSt8ixs`;
+  if (!text) return conn.reply(m.chat, `💛 Ingresa un link de YouTube válido\n> Ejemplo https://youtu.be/P4LfHsUnNL8?si=ahDKJ5h0cW-EB9C9`, m, rcanal);
 
   const isVideo = /vid|2|mp4|v$/.test(command);
   const search = await yts(text);
