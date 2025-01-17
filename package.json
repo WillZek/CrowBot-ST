@@ -49,6 +49,7 @@
 "boxen": "^7.1.1",
 "groq-sdk": "latest",
 "chalk": "^5.1.0",
+"sanzy-spotifydl": "*",
 "url-file-size": "^1.0.5-1",
 "fluid-spotify.js": "*",
 "cheerio": "npm:cheerio@1.0.0-rc.12",
