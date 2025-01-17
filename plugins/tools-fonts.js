@@ -70,10 +70,7 @@ const handler = async (m, {command, text, usedPrefix}) => {
                 'z': '𝐳'
             }[v.toLowerCase()] || v;
         }));
-    }
-};
-
-if (command == 'letra3' || command == 'font3') {
+    } else if (command == 'letra3' || command == 'font3') {
         m.reply(teks.replace(/[a-z]/gi, v => {
             return {
                 'a': '𝓪',
@@ -105,6 +102,7 @@ if (command == 'letra3' || command == 'font3') {
             }[v.toLowerCase()] || v;
         }));
     }
+};
 
 handler.help = ['letra *<texto>*'];
 handler.tags = ['fun'];
