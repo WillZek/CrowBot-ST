@@ -4,11 +4,11 @@ let time = global.db.data.users[m.sender].lastclaim + 864000000; //10 dias
 if (new Date - global.db.data.users[m.sender].lastclaim < 864000000) return conn.reply(m.chat, `*Ya Has Reclamado El Regalo De CrowBot💛, Vuelve En ${msToTime(time - new Date())}*`, m, );
 
     const user = global.db.data.users[m.sender];
-    conn.sendMessage(m.chat, {text: `🎩 *@${m.sender.split('@')[0]} CrowBot Te Ha Regalado:*\n> 🌟 200 Estrellas\n> 💶 200 Experiencia\n> 🪙 200 CrowCoins`, mentions: [m.sender]}, {quoted: fkontak});
+    conn.sendMessage(m.chat, {text: `🎩 *@${m.sender.split('@')[0]} CrowBot Te Ha Regalado:*\n> 🌟 200 Estrellas\n> 💶 100 Experiencia\n> 🪙 200 CrowCoins`, mentions: [m.sender]}, {quoted: fkontak});
      
     user.money += 200;
     user.estrellas += 200;
-    user.exp += 200;
+    user.exp += 100;
 };
 
 handler.help = ['regalo'];
