@@ -253,7 +253,7 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 <details>
  <summary><b>:paperclip: Contactos</b></summary>
 
-- **Numero:** [`Aquí`](https://wa.me/50557865603?text=Vengo+De+Github)
+- **Github:** [`Aquí`](https://github.com/WillZek)
 
 </details>
 
