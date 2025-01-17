@@ -136,7 +136,7 @@ const handler = async (m, {command, text, usedPrefix}) => {
 
 handler.help = ['letra *<texto>*'];
 handler.tags = ['fun'];
-handler.command = ['letra1', 'font1', 'letra2', 'font2', 'letra3', 'font3'];
+handler.command = ['letra1', 'font1', 'letra2', 'font2', 'letra3', 'font3', 'font4', 'letra4'];
 handler.register = true;
 
 export default handler;
