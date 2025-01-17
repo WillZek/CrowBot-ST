@@ -2,7 +2,6 @@ import db from '../lib/database.js';
 import daily from './rpg-daily.js'; 
 import weekly from './rpg-weekly.js';
 import monthly from './rpg-mensual.js';  
-import adventure from './rpg-adventure.js'; 
 import dungeon from './rpg-mazmorra.js'; 
 import levelUp from './rpg-levelup.js'; 
 import heal from './rpg-heal.js'; 
