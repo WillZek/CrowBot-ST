@@ -171,7 +171,7 @@ npm start
 </details>
 
 ---
-## **`HOSTINGS DE CALIDAD`**
+# **`HOSTINGS DE CALIDAD`**
 
 ###  **`🍬 MASHA-HOTS`**
 <a href="https://dash.masha-host.shop/home"><img src="https://qu.ax/aHudo.jpg" height="145px"></a>
