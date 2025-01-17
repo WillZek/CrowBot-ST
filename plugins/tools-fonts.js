@@ -194,12 +194,43 @@ const handler = async (m, {command, text, usedPrefix}) => {
                 'z': 'ꑓ'
             }[v.toLowerCase()] || v;
         }));
+    } else if (command == 'letra6' || command == 'font6') {
+        m.reply(teks.replace(/[a-z]/gi, v => {
+            return {
+                'a': '𝕒',
+                'b': '𝕓',
+                'c': '𝕔',
+                'd': '𝕕',
+                'e': '𝕖',
+                'f': '𝕗',
+                'g': '𝕘',
+                'h': '𝕙',
+                'i': '𝕚',
+                'j': '𝕛',
+                'k': '𝕜',
+                'l': '𝕝',
+                'm': '𝕞',
+                'n': '𝕟',
+                'o': '𝕠',
+                'p': '𝕡',
+                'q': '𝕢',
+                'r': '𝕣',
+                's': 'ׅ𝕤',
+                't': '𝕥',
+                'u': '𝕦',
+                'v': 'ׁׅ𝕧',
+                'w': '𝕨',
+                'x': '𝕩',
+                'y': '𝕪',
+                'z': '𝕫'
+            }[v.toLowerCase()] || v;
+        }));
     }
 };
 
 handler.help = ['letra *<texto>*'];
 handler.tags = ['fun'];
-handler.command = ['letra1', 'font1', 'letra2', 'font2', 'letra3', 'font3', 'font4', 'letra4', 'letra5', 'font5', 'letrarandom', 'fontrandom'];
+handler.command = ['letra1', 'font1', 'letra2', 'font2', 'letra3', 'font3', 'font4', 'letra4', 'letra5', 'font5', 'letrarandom', 'fontrandom', 'letra6', 'font6'];
 handler.register = true;
 
 export default handler;
