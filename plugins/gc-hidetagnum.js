@@ -8,7 +8,7 @@ const handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, 
   const ps = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol));
   const bot = global.db.data.settings[conn.user.jid] || {};
   if (ps == '') return m.reply(`*🍭 Aqui No Hay Ningun Numero Con El Prefijo +${lol}*`);
-  const numeros = ps.map((v)=> '⭔ @' + v.replace(/@.+/, ''));
+  const numeros = ps.map((v)=> '✦ @' + v.replace(/@.+/, ''));
   const delay = (time) => new Promise((res)=>setTimeout(res, time));
   switch (command) {
     case 'hidnum': case 'hidetagnum':
