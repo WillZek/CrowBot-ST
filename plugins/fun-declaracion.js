@@ -1,12 +1,12 @@
 import fetch from 'node-fetch';
 
-if (!text) return m.reply(`🌸 Ingresa el nombre de la persona que te le vas a declarar`)
-
-let handler = async (m, { conn, text, usedPrefix, command }) => {
+let handler = async (m, { conn, text, usedPrefix, command }) => 
     if (command === 'declaracion') {
+        if (!text) return m.reply(`🌸 Ingresa el nombre de la persona a la que te le vas a declarar`);
+
         const imageUrl = 'https://files.catbox.moe/7pzvzf.jpg';
 
-        const messageText = `Hola ${text} \nVengo a decirte que de hace mucho me gustas pero no fui capaz de demostrar amor y cariño, te quiero pedir disculpas por mi comportamiento en dejarte hablar\nPero con el tiempo me di cuenta que el error fue mio y quiero pedirte disculpas\nEstraño los abrazos que nos dabamos demostraban cariño, realmente quiero que me perdones y empezar otra vez. \n\n¿ Me Perdonas ?\n\n\n*Responde*: .si para aceptar y .no para rechazar`;
+        const messageText = `Hola ${text} \nVengo a decirte que desde hace mucho me gustas, pero no fui capaz de demostrar amor y cariño. Te quiero pedir disculpas por mi comportamiento en dejarte hablar. \nPero con el tiempo me di cuenta que el error fue mío y quiero pedirte disculpas. \nExtraño los abrazos que nos dábamos, realmente quiero que me perdones y empezar otra vez. \n\n¿Me Perdonas?\n\n\n*Responde*: .si para aceptar y .no para rechazar`;
 
         await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: messageText });
     } else if (command === 'si') {
