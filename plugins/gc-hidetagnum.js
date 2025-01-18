@@ -11,7 +11,7 @@ const handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, 
   const numeros = ps.map((v)=> '┋💙 @' + v.replace(/@.+/, ''));
   const delay = (time) => new Promise((res)=>setTimeout(res, time));
   switch (command) {
-    case 'hidnum': case 'hidetagnum':
+    case 'hidnum': case 'tagnum':
       conn.reply(m.chat, `*☄️ MENSAJE ESPECIAL PARA +${lol} QUE ESTAN EN ESTE GRUPO:*\n` + `${colombia}\n\n` + numeros.join`\n`, m, {mentions: ps});
       break;
       const ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net';
