@@ -4,8 +4,8 @@ import * as cheerio from 'cheerio';
 import {mediafiredl} from '@bochilteam/scraper';
 
 const handler = async (m, {conn, args, usedPrefix, command}) => {
-    if (!args[0]) throw `*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> *Powered By WillZek*`;
-m.react('❄️')
+    if (!args[0]) throw m.reply(`*🎩Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> ${dev}`);
+m.react('🔱')
   try {
     const resEX = await mediafiredl(args[0]);
     let text = `𝐌𝐄𝐃𝐈𝐀𝐅𝐈𝐑𝐄 - 𝐃𝐎𝐖𝐍𝐋𝐎𝐀𝐃𝐄𝐑\n\n`
@@ -13,18 +13,17 @@ m.react('❄️')
     text += `│  ✦ *Peso:* ${size}\n\n`
     text += `│  ✦ *Tipo:* ${mime}\n\n`
     text += `╚──────────────\n`
-    text += `> 🎄Espere Un Momento Enviando Archivo Tenga Paciencia❄️`
+    text += `> 🍭 Espere Un Momento Enviando Archivo Tenga Paciencia`
 
     await conn.reply(m.chat, text, m, {
 contextInfo: { externalAdReply :{ showAdAttribution: true,
-                        sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d',
+                        sourceUrl: channel,
                         mediaType: 2,
                         description: `Sigue El Canal Por Favor`,
-                        title: `👑 Gracias Por Usar A CrowBot, WhatsApp Bot⛄`,
-                        body: `🎄 Powered By WillZek`,          previewType: 0,
+                        title: 'Descargado ✓',
+                        body: dev,          previewType: 0,
                         thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
-                        mediaUrl: channel
-
+                        mediaUrl: redes 
                       }}
 })
     await conn.sendFile(m.chat, resEX.url, resEX.filename, '', m, null, {mimetype: resEX.ext, asDocument: true});
@@ -37,22 +36,22 @@ contextInfo: { externalAdReply :{ showAdAttribution: true,
     text2 += `│  ✦ *Peso:* ${size}\n\n`
     text2 += `│  ✦ *Tipo:* ${mime}\n\n`
     text2 += `╚──────────────\n`
-    text2 += `> 🎄Espera Un Momento, Enviando Archivo Tenga Paciencia❄️`
+    text2 += `> 🍭 Espera Un Momento, Enviando Archivo Tenga Paciencia`
       await conn.reply(m.chat, text2, m, {
 contextInfo: { externalAdReply :{ showAdAttribution: true,
-                        sourceUrl: 'https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d',
+                        sourceUrl: channel,
                         mediaType: 2,
                         description: `❤️‍🔥Sigue El Canal Por Favor❤️‍🔥`,
-                        title: `❄️ Gracias Por Usar CrowBot, Sigue El Canal⛄`,
-                        body: `🎄 Powered By WillZek`,          previewType: 0,
+                        title: 'Descarado ✓',
+                        body: dev,          previewType: 0,
                         thumbnail: await (await fetch('https://i.ibb.co/ZfjXNy0/file.jpg')).buffer(),
-                        mediaUrl: channel
+                        mediaUrl: redes
 
                       }}
 })
       await conn.sendFile(m.chat, link, name, '', m, null, {mimetype: mime, asDocument: true});
     } catch {
-      await m.reply(`*🎄Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> *Powered By WillZek*`);
+      await m.reply(`*🎩 Ingresa un link de mediafire junto al comando. Ejemplo:* \n${usedPrefix + command} https://www.mediafire.com/file/941xczxhn27qbby/GBWA_V12.25FF-By.SamMods-.apk\n\n> ${dev}`);
     }
   }
 };
