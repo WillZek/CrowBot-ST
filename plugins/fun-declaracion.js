@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 if (!text) return m.reply(`🌸 Ingresa el nombre de la persona que te le vas a declarar`)
 
-let handler = async (m, { conn, usedPrefix, command }) => {
+let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (command === 'declaracion') {
         const imageUrl = 'https://files.catbox.moe/7pzvzf.jpg';
 
