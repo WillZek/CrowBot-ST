@@ -8,11 +8,11 @@ const handler = async (m, {conn, args, groupMetadata, participants, usedPrefix, 
   const ps = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol));
   const bot = global.db.data.settings[conn.user.jid] || {};
   if (ps == '') return m.reply(`*🍭 Aqui No Hay Ningun Numero Con El Prefijo +${lol}*`);
-  const numeros = ps.map((v)=> '✦ @' + v.replace(/@.+/, ''));
+  const numeros = ps.map((v)=> '┋💙 @' + v.replace(/@.+/, ''));
   const delay = (time) => new Promise((res)=>setTimeout(res, time));
   switch (command) {
     case 'hidnum': case 'hidetagnum':
-      conn.reply(m.chat, `*MENSAJE ESPECIAL PARA +${lol} QUE ESTAN EN ESTE GRUPO:*\n` + `${colombia}\n\n` + numeros.join`\n`, m, {mentions: ps});
+      conn.reply(m.chat, `*☄️ MENSAJE ESPECIAL PARA +${lol} QUE ESTAN EN ESTE GRUPO:*\n` + `${colombia}\n\n` + numeros.join`\n`, m, {mentions: ps});
       break;
       const ownerGroup = m.chat.split`-`[0] + '@s.whatsapp.net';
       const users = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.startsWith(lol || lol));
