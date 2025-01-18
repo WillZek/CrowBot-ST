@@ -13,7 +13,7 @@ const require = createRequire(__dirname);
 const { name, description, author, version } = require(join(__dirname, './package.json'));
 const { say } = cfonts;
 const rl = createInterface(process.stdin, process.stdout);
-say('CrowBot', {
+say('CrowBot ST', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
