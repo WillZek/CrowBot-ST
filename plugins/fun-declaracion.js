@@ -28,7 +28,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 };
 
-handler.command = ['declaracion', 'dclarar', 'si', 'no', 'Si', 'No'];
+handler.command = ['declaracion', 'dclarar', 'declaración', 'si', 'no', 'Si', 'No'];
 handler.tags = ["fun"];
 handler.help = ["declaracion"];
 
