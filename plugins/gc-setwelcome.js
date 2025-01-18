@@ -1,9 +1,9 @@
 let handler = async (m, { conn, text, isRowner }) => {
-  if (!text) return m.reply('🎩 Por favor, proporciona una bienvenida para el bot.\n> Ejemplo: #setwelcome Hola user');
+  if (!text) return m.reply('🎩 Ingresa un texto para ponerla como bienvenida del grupo\n> Ejemplo: .setwelcome Hola Bienvenid@');
 
   global.welmss = text.trim();
 
-  m.reply(`🎩 La bienvenida del bot ha sido cambiado a: ${global.welmss}`);
+  m.reply(`🎩 La bienvenida grupo ahora es : ${global.welmss}`);
 };
 
 handler.help = ['setwelcome'];
