@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 
-let handler = async (m, { conn, text, usedPrefix, command }) => 
+let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (command === 'declaracion') {
         if (!text) return m.reply(`🌸 Ingresa el nombre de la persona a la que te le vas a declarar`);
 
