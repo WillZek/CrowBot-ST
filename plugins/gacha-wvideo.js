@@ -33,7 +33,7 @@ let handler = async (m, { conn, args }) => {
             return;
         }
 
-        const randomVideo = character.video[Math.floor(Math.random() * character.video.length)];
+        const randomVideo = character.video;
 
         const message = `❀ Nombre » *${character.name}*
 ⚥ Género » *${character.gender}*
