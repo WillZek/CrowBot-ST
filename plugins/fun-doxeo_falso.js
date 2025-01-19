@@ -58,6 +58,7 @@ Sof02s32inf14.1e100.net
 handler.help = ['doxear <nombre> | <@tag>'];
 handler.tags = ['fun'];
 handler.command = /^Doxxeo|doxxeo|doxxear|Doxxear|doxeo|doxear|doxxeame|doxeame/i;
+handler.rowner = true
 handler.estrellas = 2;
 export default handler;
 
