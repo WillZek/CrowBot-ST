@@ -29,6 +29,7 @@ handler.command = ['sorteo']
 handler.tags = ['fun']
 handler.estrellas = 2;
 handler.group = true
+handler.admin = true
 
 export default handler
 
