@@ -10,7 +10,7 @@ import moment from 'moment-timezone'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 global.owner = [
    ['50557865603', 'Creador WillZek💛', true],
-   ['50498409019', 'CrowBot Soporte', true],
+   ['522731595017', 'CrowBot Soporte', true],
    ['5212731590195', 'Gestion White', true],
    ['584148256527', 'Colaborador Diomar', true],
    ['584120346669', 'Colaborador ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
