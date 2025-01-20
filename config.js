@@ -8,17 +8,19 @@ import axios from 'axios'
 import moment from 'moment-timezone' 
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+// Staff De CrowBot
 global.owner = [
    ['50557865603', 'Creador WillZek💛', true],
    ['5212731595017', 'CrowBot Soporte', true],
    ['5212731590195', 'Gestion White', true],
-   ['584148256527', 'Colaborador Diomar', true],
-   ['584120346669', 'Colaborador ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
+   ['584148256527', 'Dev Diomar', true],
+   ['584120346669', 'Dev ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
    ['51971867199', 'Dev Senna', true],
    ['584241836217', 'Dev Prak', true],
    ['519168382008', 'Dev Darkcore', true],
+   ['573007796996', 'Gestion Morales', true],
    ['573215751237', 'CrowBot OFC1', true],
-   ['51939658716', 'Gestion Morales', true],
+   ['51939658716', 'Gestion Mateo', true],
 ]
 
 global.creadorbot = [
