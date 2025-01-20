@@ -71,7 +71,7 @@ conn.reply(m.chat, `*WillZek Es Mi Creador, Respeta!*`, m, rcanal, )
 
 if (/^Crow$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola Eres Fan De* *CrowBot o Brawl Stars*
-*Entonces Sigue El Canal Oficial!*\n> https://api.tesis.fun/api/dl/terabox?url=https://terabox.com/s/1asNFthGAoD4HgQIp2-W6sA&apikey=7ae6b3c6\n\n*O Puedes Ir Al Sitio Web Oficial De CrowBot!*\n> https://crow-bot-dashboard.vercel.app/\n\n*Gracias por utilizar CrowBot-ST* `, m, rcanal, )
+*Entonces Sigue El Canal Oficial!*\n> https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W\n\n*O Puedes Ir Al Sitio Web Oficial De CrowBot!*\n> https://crow-bot-dashboard.vercel.app/\n\n*Gracias por utilizar CrowBot-ST* `, m, rcanal, )
 }
 if (/^reglasgp|.reglasgp$/i.test(m.text)) {
 conn.reply(m.chat, `**R꙰EGLAS DEL GRUP❍ꪜ*
