@@ -18,12 +18,12 @@ if (/^Bot de mierda/i.test(m.text)) {
 conn.reply(m.chat, `*No digas mamadas, Meriyein*`, m, rcanal, )
 }
 
-if (/^destroy|Wilker|Destroy$/i.test(m.text)) {
+if (/^Wilker$/i.test(m.text)) {
 conn.reply(m.chat, `*Destroy🔥 es la perrita de mi creador* 🥵🥵`, m, rcanal, )
 }
 
-if (/^I'm Fz|im fz$/i.test(m.text)) {
-conn.reply(m.chat, `*I'm fz~🔥 es la pajeadora de mi creador* 🥵🥵`, m, rcanal, )
+if (/^tesis/i.test(m.text)) {
+conn.reply(m.chat, `*Tesis 🔥 es la pajeadora de mi creador* 🥵🥵`, m, rcanal, )
 }
 
 if (/^porno|xxx|gore/i.test(m.text)) {
@@ -57,16 +57,8 @@ Tenemos:
 > *Consulta Los Precios [🌠]*`, m, rcanal, )
 }
 
-if (/^Conoces a Legendary/i.test(m.text)) { 
+if (/^Conoces a diomar/i.test(m.text)) { 
 conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m, rcanal, )
-}
-
-if (/^Lan/i.test(m.text)) {
-conn.reply(m.chat, `*Lan se la chupa 3 veces seguidas en 5 minutos a mí creador🥵🔥*`, m, rcanal, )
-}
-
-if (/^Nodoka/i.test(m.text)) { 
-conn.reply(m.chat, `*Nodoka Mi Amor, Culona 🥵❤️‍🔥*`, m, rcanal, )
 }
 
 if (/^Bot en decadencia/i.test(m.text)) {
@@ -74,14 +66,13 @@ conn.reply(m.chat, `*Calla 🍆🥵*`, m, rcanal, )
 }
 
 if (/^WillZek/i.test(m.text)) {
-conn.reply(m.chat, `*Niño Piña Es Mi Creador, Respeta!*`, m, rcanal, )
+conn.reply(m.chat, `*WillZek Es Mi Creador, Respeta!*`, m, rcanal, )
 }
 
 if (/^Crow$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola Eres Fan De* *CrowBot o Brawl Stars*
 *Entonces Sigue El Canal Oficial!*
-> https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d
- *Gracias por utilizar CrowBot-MD* `, m, rcanal, )
+> https://whatsapp.com/channel/0029VakfOZfHFxP7rNrUQk2d\n*O Puedes Ir Al Sitio Web Oficial De CrowBot!*\n> https://crow-bot-dashboard.vercel.app/\n*Gracias por utilizar CrowBot-ST* `, m, rcanal, )
 }
 if (/^reglasgp|.reglasgp$/i.test(m.text)) {
 conn.reply(m.chat, `**R꙰EGLAS DEL GRUP❍ꪜ*
