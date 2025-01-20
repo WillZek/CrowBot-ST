@@ -59,7 +59,7 @@ let userNationalityData = api.data.result;
     regbot += `• 245 Experiencia 💸\n> `
     regbot += `• 12 Tokens 💰\n`
     regbot += `꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷\n> `
-    regbot += `${publi}`
+    regbot += `🍭 Verifica Tu Registro Aqui 👇🏻`
 
     await m.react('📪')
     await conn.sendMessage(m.chat, {
