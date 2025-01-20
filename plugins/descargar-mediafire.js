@@ -18,7 +18,7 @@ let handler = async (m, { conn, text }) => {
 
 handler.help = ['mediafire *<url>*']
 handler.tags = ['descargas']
-handler.command = ['mediafire']
+handler.command = ['mediafire', 'mf']
 handler.estrellas = 8;
 
 export default handler;
