@@ -4,20 +4,24 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🪐 *Versión:* ${global.vs}
 
 • 𝐃𝐚𝐫𝐤𝐂𝐨𝐫𝐞
-🎩 *Rol:* Experiencia En Javascript y html
-🍭 *Número:* Wa.me/51968382008
+🎩 *Rol:* Developer
+💛 *Número:* Wa.me/51968382008
+
+• 𝐃𝐞𝐬𝐭𝐫𝐨𝐲
+🍭 *Rol* Developer
+💛 *Numero:* Wa.me/584120346669
 
 • 𝐏𝐫𝐚𝐤 𝐇𝐚𝐫𝐩𝐞𝐫 
-🎩 *Rol:* Experiencia En Javascript, Mantenimiento y Editor Profesional
-🍭 *Número:* Wa.me/584241836217
+🎩 *Rol:* Developer y Editor Profesional
+💛 *Número:* Wa.me/584241836217
 
 • 𝐈𝐬𝐚𝐛𝐞𝐥 (isa)
-🎩 *Rol:* Experiencia En Diseños De Logos /Editora Profesional
+🍭 *Rol:* Experiencia En Diseños De Logos /Editora Profesional
 💛 *Número:* Wa.me/529831715910
 
 • 𝐒𝐞𝐧𝐧𝐚 
 🎩 *Rol:* Experiencia En Mantenimiento y Soporte Del Bot
-🍭 *Número:* Wa.me/51971867199
+💛 *Número:* Wa.me/51971867199
 
 • 𝐌𝐨𝐫𝐚𝐥𝐞𝐬
 🍭 *Rol:* Experiencia En Gestión De Grupos
@@ -28,8 +32,8 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 💛 *Número:* Wa.me/50488198573
 
 • 𝐉𝐨𝐤𝐞𝐫 𝐲 𝐖𝐡𝐢𝐭𝐞 
-🎩 *Rol:* Bots Oficiales
-🍭 *Número:* Privado🫵🏻
+🍭 *Rol:* Bots Oficiales
+💛 *Número:* Privado🫵🏻
 `
 await conn.sendFile(m.chat, 'https://files.catbox.moe/h094yg.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
