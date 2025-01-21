@@ -27,6 +27,8 @@ let tags = {
 
 const vid = ['https://files.catbox.moe/z23r5g.mp4', 'https://files.catbox.moe/z23r5g.mp4', 'https://files.catbox.moe/z23r5g.mp4']
 
+let uptime = await process.uptime()
+
 const defaultMenu = {
   before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
 
