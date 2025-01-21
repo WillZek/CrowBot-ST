@@ -1,76 +1,56 @@
 import fetch from 'node-fetch';
-import yts from 'yt-search';
+import axios from 'axios';
 
-let handler = async (m, { conn, args }) => {
-  if (!args[0]) return conn.reply(m.chat, '*\`Ingresa el nombre de lo que quieres buscar\`*', m);
+let handler = async (m, { conn, command, args, text, usedPrefix }) => {
+if (!text) return conn.reply(m.chat, `🌠INGRESE EL NOMBRE DE ALGUNA CANCION *Soundcloud.*`, m, rcanal)
 
-  await m.react('🕓');
-  try {
-    let res = await search(args.join(" "));
-    let video = res[0];
-    let img = await (await fetch(video.image)).buffer();
+await m.react('🕒');
+try {
+let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${encodeURIComponent(text)}`);
+let json = await api.json();
+let { url } = json[0];
 
-    let txt = `> *YouTube Play 🍧.*\n\n`;
-    txt += `${video.title}\n\n`;
-    txt += `• *Duración:* ${secondString(video.duration.seconds)}\n`;
-    txt += `• *Autor:* ${video.author.name || 'Desconocido'}\n`;
-    txt += `• *Publicado:* ${eYear(video.ago)}\n`;
-    txt += `• *Url:* _https://youtu.be/${video.videoId}_\n\n`;
+let api2 = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud?url=${url}`);
+let json2 = await api2.json();
 
-    await conn.sendMessage(m.chat, {
-      image: img,
-      caption: txt,
-      footer: 'Presiona el botón para el tipo de descarga.',
-      buttons: [
-        {
-          buttonId: `.ytmp3 https://youtu.be/${video.videoId}`,
-          buttonText: {
-            displayText: '🎵 Audio',
-          },
-        },
-        {
-          buttonId: `.ytmp4 https://youtu.be/${video.videoId}`,
-          buttonText: {
-            displayText: '🎥 Video',
-          },
-        },
-      ],
-      viewOnce: true,
-      headerType: 4,
-    }, { quoted: m });
+let { link: dl_url, quality, image } = json2;
 
-    await m.react('✅');
-  } catch (e) {
-    console.error(e);
-    await m.react('✖️');
-    conn.reply(m.chat, '*\`Error al buscar el video.\`*', m);
-  }
+let audio = await getBuffer(dl_url);
+
+let txt = `*\`- S O U N C L O U D - M U S I C -\`*\n\n`;
+    txt += `        ✩  *Título* : ${json[0].title}\n`;
+    txt += `        ✩  *Calidad* : ${quality}\n`;
+    txt += `        ✩  *Url* : ${url}\n\n`;
+    txt += `> 🚩 *${textbot}*`
+
+await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null, rcanal);
+await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
+
+await m.react('✅');
+} catch {
+await m.react('✖️');
+}}
+
+handler.help = ['soundcloud *<búsqueda>*']
+handler.tags = ['descargas']
+handler.command = ['soundcloud', 'sound', 'play']
+
+export default handler
+
+const getBuffer = async (url, options) => {
+try {
+const res = await axios({
+method: 'get',
+url,
+headers: {
+'DNT': 1,
+'Upgrade-Insecure-Request': 1,
+},
+...options,
+responseType: 'arraybuffer',
+});
+return res.data;
+} catch (e) {
+console.log(`Error : ${e}`);
+}
 };
-
-handler.help = ['play *<texto>*'];
-handler.tags = ['descargas'];
-handler.command = ['play'];
-
-export default handler;
-
-async function search(query, options = {}) {
-  let search = await yts.search({ query, hl: "es", gl: "ES", ...options });
-  return search.videos;
-}
-
-function secondString(seconds) {
-  seconds = Number(seconds);
-  const h = Math.floor(seconds / 3600);
-  const m = Math.floor((seconds % 3600) / 60);
-  const s = Math.floor(seconds % 60);
-  return `${h > 0 ? h + 'h ' : ''}${m}m ${s}s`;
-}
-
-function eYear(txt) {
-  if (txt.includes('year')) return txt.replace('year', 'año').replace('years', 'años');
-  if (txt.includes('month')) return txt.replace('month', 'mes').replace('months', 'meses');
-  if (txt.includes('day')) return txt.replace('day', 'día').replace('days', 'días');
-  if (txt.includes('hour')) return txt.replace('hour', 'hora').replace('hours', 'horas');
-  if (txt.includes('minute')) return txt.replace('minute', 'minuto').replace('minutes', 'minutos');
-  return txt;
-}
