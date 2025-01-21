@@ -23,5 +23,6 @@ handler.help = ['sorteo'];
 handler.command = ['sorteo'];
 handler.tags = ['grupo'];
 handler.group = true;
+handler.admin = true
 
 export default handler;
