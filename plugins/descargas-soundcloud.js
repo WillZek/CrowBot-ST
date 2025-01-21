@@ -20,7 +20,7 @@ await m.react('✅')
 await m.react('✖️')
 }}
 handler.help = ['play *<Cancion>*']
-handler.tags = ['downloader']
+handler.tags = ['descargas']
 handler.command = ['play']
 handler.register = false
 handler.limit = false
