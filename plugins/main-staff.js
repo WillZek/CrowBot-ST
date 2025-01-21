@@ -31,8 +31,12 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🎩 *Rol:* Experiencia En Redacción y Decoración De Textos
 💛 *Número:* Wa.me/50488198573
 
+• 𝐎𝐫𝐥𝐚𝐧𝐝𝐨
+🍭 *Rol:* Gestión De Grupos
+💛 *Número:* Wa.me/522731590195
+
 • 𝐉𝐨𝐤𝐞𝐫 𝐲 𝐖𝐡𝐢𝐭𝐞 
-🍭 *Rol:* Bots Oficiales
+🎩 *Rol:* Bots Oficiales
 💛 *Número:* Privado🫵🏻
 `
 await conn.sendFile(m.chat, 'https://files.catbox.moe/h094yg.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
