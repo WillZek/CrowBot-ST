@@ -68,5 +68,10 @@ async function luminsesi(q, username, logic) {
     throw error;
   }
 }
+handler.help = ['@CrowAi']
+handler.tags = ['info']
+handler.customPrefix = /^=?> /
+handler.command = /(?:)/i
+handler.rowner = true
 
 export default handler;
