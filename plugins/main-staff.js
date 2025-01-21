@@ -5,7 +5,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 
 • 𝐃𝐚𝐫𝐤𝐂𝐨𝐫𝐞
 🎩 *Rol:* Experiencia En Javascript y html
-🍭 *Número:* Wa.me/584120346669
+🍭 *Número:* Wa.me/51968382008
 
 • 𝐏𝐫𝐚𝐤 𝐇𝐚𝐫𝐩𝐞𝐫 
 🎩 *Rol:* Experiencia En Javascript, Mantenimiento y Editor Profesional
@@ -27,7 +27,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🎩 *Rol:* Bots Oficiales
 🍭 *Número:* Privado🫵🏻
 `
-await conn.sendFile(m.chat, 'https://files.catbox.moe/rgumk8.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
+await conn.sendFile(m.chat, 'https://files.catbox.moe/h094yg.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
 'isForwarded': false,
