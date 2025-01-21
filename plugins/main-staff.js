@@ -17,7 +17,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 
 • 𝐒𝐞𝐧𝐧𝐚 
 🎩 *Rol:* Experiencia En Mantenimiento y Soporte Del Bot
-🍭 *Número:* Wa.me/573001357781
+🍭 *Número:* Wa.me/51971867199
 
 • 𝐃𝐞𝐲𝐥𝐢𝐧 
 🎩 *Rol:* Experiencia En Redacción y Decoración De Textos
