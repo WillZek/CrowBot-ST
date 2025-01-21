@@ -177,8 +177,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
 handler.help = ['code'];
 handler.tags = ['serbot'];
 handler.command = ['code', 'code'];
-handler.rowner = false;
-handler.estrellas = 12;
+handler.rowner = false
 
 export default handler;
 
