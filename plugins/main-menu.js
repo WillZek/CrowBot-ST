@@ -44,7 +44,7 @@ const defaultMenu = {
 ✧  🤖 *Bot:* ${nombrebot} 
 ✦  🔱 *Modo:* Privado VIP 
 ✧  ✨ *Baileys:* Multi Device
-✦  🪐 *Tiempo Activo:* %muptime
+✦  🪐 *Tiempo Activo:* ${rTime(uptime)}
 ✧  💫 *Usuarios:* %totalreg 
 ╚━━━━━━━━━━━━━━
 %readmore
