@@ -34,9 +34,6 @@ var handler = async (m, { conn }) => {
     let isMarried = who in global.db.data.marriages;
     let partner = isMarried ? global.db.data.marriages[who] : null;
     let partnerName = partner ? conn.getName(partner) : 'Nadie';
-    let api = await axios.get(`https://delirius-apiofc.vercel.app/tools/country?text=${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}`);
-    let userNationalityData = api.data.result;
-    let userNationality = userNationalityData ? `${userNationalityData.name} ${userNationalityData.emoji}` : 'Desconocido';
 
     let noprem = `
 「 👤 *PERFIL DE USUARIO* 」
@@ -47,7 +44,6 @@ var handler = async (m, { conn }) => {
 👩‍❤️‍👩 *Casad@:* ${isMarried ? partnerName : 'Nadie'}
 📜 *Descripción:* ${description}
 🌀 *Registrado:* ${registered ? '✅': '❌'}
-🌐 *Pais:* ${userNationality}
 
 「 💰 *RECURSOS* 」
 💴 *Estrellas:* ${estrellas || 0}
@@ -65,7 +61,6 @@ var handler = async (m, { conn }) => {
 │⧼👩‍❤️‍👩⧽ *ᴄᴀsᴀᴅᴏ:* ${isMarried ? partnerName : 'Nadie'}
 📜 *ᴅᴇsᴄʀɪᴘᴄɪᴏɴ:* ${description}
 │⧼🌀⧽ *ʀᴇɢɪsᴛʀᴀᴅᴏ:* ${registered ? '✅': '❌'}
-│⧼🌐⧽ *ᴘᴀɪs:* ${userNationality}
 
 ╰─────────────────⪨
 
