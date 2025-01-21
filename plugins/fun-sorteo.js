@@ -1,37 +1,27 @@
-import util from 'util'
-import path from 'path'
+/* Sorteo By WillZek
+- https://github.com/WillZek 
+- (No es la gran cosa Pero para los boludos ya le facilite el trabajo 🥱)
+*/
 
-async function handler(m, { groupMetadata, command, conn, text, usedPrefix}) {
+import db from '../lib/database.js';
+import MessageType from '@whiskeysockets/baileys';
 
-let user = a => '@' + a.split('@')[0]
-if (!text) throw `*Ejemplo:*\n${usedPrefix + command} texto`
-let ps = groupMetadata.participants.map(v => v.id)
-let a = ps.getRandom()
-let k = Math.floor(Math.random() * 70)
-let vn = `https://hansxd.nasihosting.com/sound/sound${k}.mp3`
-let top = `*\`[ 🥳 ＦＥＬＩＣＩＤＡＤＥＳ 🥳]\`*\n\n${user(a)} 🥳\nAcaba de ganar el sorteo felicitaciones 🎉`
-let txt = ''
-let count = 0
-for (const c of top) {
-await new Promise(resolve => setTimeout(resolve, 15))
-txt += c
-count++
+let handler = async (m, { groupMetadata, command, conn }) => {
 
-if (count % 10 === 0) {
-conn.sendPresenceUpdate('composing' , m.chat);
+    let participants = groupMetadata.participants.map(v => v.id);
+    
+    let randomUser  = participants[Math.floor(Math.random() * participants.length)];
+
+    let message = `🎉 ¡Felicidades @${randomUser .split('@')[0]}!🥳 Has sido elegido al azar. 🎉`;
+
+m.react('🎉');
+
+    await conn.sendMessage(m.chat, { text: message, mentions: [randomUser ] }, { quoted: m });
 }
-}
-await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, {quoted: m, ephemeralExpiration: 24*60*100, disappearingMessagesInChat: 24*60*100} )
 
-}
-handler.help = ['sorteo']
-handler.command = ['sorteo']
-handler.tags = ['fun']
-handler.estrellas = 2;
-handler.group = true
-handler.admin = true
+handler.help = ['sorteo'];
+handler.command = ['sorteo'];
+handler.tags = ['grupo'];
+handler.group = true;
 
-export default handler
-
-function pickRandom(list) {
-return list[Math.floor(Math.random() * list.length)]}
+export default handler;
