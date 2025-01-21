@@ -65,7 +65,7 @@ global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻�
 
 //Enlaces
 var canal =   'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
-var grupo = 'https://chat.whatsapp.com/HwcDg23QEwhIXc73wL0tKj'  
+var grupo = 'https://chat.whatsapp.com/B7POPrlJiZf7UWHJKvzVkx'  
 var github = 'https://github.com/WillZek/CrowBot-ST' 
 var facebook = 'https://www.facebook.com/profile.php?id=100055985748040' 
 let instagram = 'https://www.instagram.com/crowbot_wa'
