@@ -21,7 +21,7 @@ await m.react('✅')
 await m.react('✖️')
 }}
 handler.help = ['spotifysearch *<búsqueda>*']
-handler.tags = ['search']
+handler.tags = ['buscador']
 handler.command = ['spotifysearch']
 handler.register = true
 
