@@ -18,6 +18,8 @@ export async function before(m, { conn, participants, groupMetadata }) {
       img = await (await fetch(defaultImage)).buffer();
     }
 
+  const welcomeMessage = global.db.data.chats[m.chat]?.welcomeMessage || 'Bienvenido/a :';
+
     if (m.messageStubType === WAMessageStubType.GROUP_PARTICIPANT_ADD) {
     let bienvenida = `┌─★ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭-𝐒𝐓\n│「 Bienvenido 」\n└┬★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n   │💛 ${welcomeMessage}\n   │💛  ${groupMetadata.subject}\n   └───────────────┈ ⳹\n> ${dev}`
       await conn.sendMessage(m.chat, { image: img, caption: bienvenida, mentions: [who] }, { quoted: estilo })
