@@ -1,15 +1,24 @@
 let handler = async (m, { conn, text, isRowner }) => {
-  if (!text) return m.reply('🎩 Ingresa un texto para ponerla como bienvenida del grupo\n> Ejemplo: .setwelcome Hola Bienvenid@');
+  if (!text) {
+    return m.reply('🎩 Debes proporcionar el mensaje de bienvenida después del comando. Ejemplo: `.setwelcome ¡Bienvenido al grupo!`');
+  }
 
-  global.welmss = text.trim();
+  const welcomeMessage = text.trim();
 
-  m.reply(`🎩 La bienvenida grupo ahora es : ${global.welmss}`);
+  try {
+    global.db.data.chats[m.chat].welcomeMessage = welcomeMessage;
+
+    m.reply(`🎩 El mensaje de bienvenida del grupo ha sido actualizado correctamente a: ${welcomeMessage}`);
+  } catch (error) {
+    console.error(error);
+    m.reply('🎩 Hubo un error al intentar cambiar el mensaje de bienvenida.');
+  }
 };
 
-handler.help = ['setwelcome'];
+handler.help = ['setwelcome *<mensaje>*'];
 handler.tags = ['grupo'];
-handler.command = ['setwelcome'];
-handler.owner = false;
+handler.command = ['setwelcome', 'setwel'];
 handler.admin = true;
+handler.group = true;
 
 export default handler;
