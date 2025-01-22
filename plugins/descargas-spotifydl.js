@@ -17,7 +17,7 @@ let txt = `*S P O T I F Y  -  D O W N L O A D*\n\n`;
     txt += ` 💛  *Álbum* : ${album}\n`;
     txt += ` 💛  *Artista* : ${artist}\n\n`;
     txt += ` 💛  *Link:* ${dl_url}\n`;
-    txt += `*${espera}*`;
+    txt += `> ${espera}`;
 
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal);
 await conn.sendMessage(m.chat, { audio: { url: dl_url }, fileName: `${title}.mp3`, mimetype: 'audio/mp4' }, { quoted: m });
