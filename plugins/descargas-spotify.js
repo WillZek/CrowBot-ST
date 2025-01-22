@@ -1,81 +1,28 @@
-/* ʙʏ ᴊᴛxꜱ 🐢 */
-import fetch from 'node-fetch'
-const { generateWAMessageContent, generateWAMessageFromContent, proto } = (await import('@whiskeysockets/baileys')).default
+import Starlights from '@StarlightsTeam/Scraper'
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return m.reply('Ingresa el texto de lo que quieres buscar en Spotify 🤍');
-await m.react('🕓');
+let handler = async (m, { conn, command, args, text, usedPrefix }) => {
+  if (!text) return conn.reply(m.chat, '🚩 Ingresa el título de un video o canción de YouTube.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Gemini Aaliyah - If Only`, m, rcanal)
+  await m.react('🕓')
+  try {
+    let res = await Starlights.spotifySearch(text)
+    let img = await (await fetch(`${res[0].thumbnail}`)).buffer()
+    let txt = '`乂  S P O T I F Y  -  S E A R C H`'
+    for (let i = 0; i < res.length; i++) {
+      txt += `\n\n`
+      txt += `  *» Nro* : ${i + 1}\n`
+      txt += `  *» Titulo* : ${res[i].title}\n`
+      txt += `  *» Artista* : ${res[i].artist}\n`
+      txt += `  *» Url* : ${res[i].url}`
+    }
 
-try {
-async function createImage(url) {
-const { imageMessage } = await generateWAMessageContent({image: { url }}, {upload: conn.waUploadToServer})
-return imageMessage
-}
-
-let push = [];
-let api = await fetch(`https://delirius-apiofc.vercel.app/search/spotify?q=${encodeURIComponent(text)}`);
-let json = await api.json()
-
-for (let track of json.data) {
-let image = await createImage(track.image)
-
-/* push.push({
-body: proto.Message.InteractiveMessage.Body.fromObject({
-text: '${track.title} - ${track.artist}'
-}),
-footer: proto.Message.InteractiveMessage.Footer.fromObject({text: `${dev}`}),
-header: proto.Message.InteractiveMessage.Header.fromObject({title: '', hasMediaAttachment: true, imageMessage: image}),
-nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
-buttons: [ */ 
-
-        push.push({
-            body: proto.Message.InteractiveMessage.Body.fromObject({
-                text: `◦ *Título:* ${track.title} \n◦ *Artistas:* ${track.artist} \n◦ *Duración:* ${track.duration} \n◦ *Popularidad:* ${track.popularity} \n◦ *Fecha:* ${track.publish}`
-            }),
-            footer: proto.Message.InteractiveMessage.Footer.fromObject({
-                text: '' 
-            }),
-            header: proto.Message.InteractiveMessage.Header.fromObject({
-                title: '',
-                hasMediaAttachment: true,
-                imageMessage: image 
-            }),
-            nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({
-                buttons: [
-{
-"name": "cta_copy",
-"buttonParamsJson": "{\"display_text\":\"🎧 ¡Descargar Audio! 🎧\",\"id\":\"123456789\",\"copy_code\":\".spotify " + track.url + "\"}"
-},
-]
-})
-});
-}
-
-const msg = generateWAMessageFromContent(m.chat, {
-viewOnceMessage: {
-message: {
-messageContextInfo: {
-deviceListMetadata: {},
-deviceListMetadataVersion: 2
-},
-interactiveMessage: proto.Message.InteractiveMessage.fromObject({
-body: proto.Message.InteractiveMessage.Body.create({text: '*`\Resultados de:\`* ' + `${text}`}),
-footer: proto.Message.InteractiveMessage.Footer.create({text: '_\`ꜱ\` \`ᴘ\` \`-\` \`ꜱ\` \`ᴇ\` \`ᴀ\` \`ʀ\` \`ᴄ\` \`ʜ\`_'}),
-header: proto.Message.InteractiveMessage.Header.create({hasMediaAttachment: false}),
-carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({cards: [...push]})
-})
-}}}, {
-    'quoted': m
-  });
-
-await m.react('✅');
-await conn.relayMessage(m.chat, msg.message, { messageId: msg.key.id })
-} catch (error) {
-console.error(error)
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
+await m.react('✅')
+} catch {
+await m.react('✖️')
 }}
-
-handler.help = ["spotifysearch *<texto>*"]
-handler.tags = ["search"]
-handler.command = /^(spotifysearch)$/i
+handler.help = ['spotifysearch *<búsqueda>*']
+handler.tags = ['search']
+handler.command = ['spotifysearch']
+handler.register = true
 
 export default handler
