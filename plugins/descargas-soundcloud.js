@@ -1,4 +1,4 @@
-//Bailando Hasta Las 6 de la mñana si señor
+/* Bailando Hasta Las 6 de la mñana si señor
 import fetch from 'node-fetch'
 import yts from 'yt-search'
 
@@ -111,8 +111,9 @@ function eYear(txt) {
     }
     return txt
 }
+*/ 
 
-/* import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 import axios from 'axios';
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
@@ -168,4 +169,3 @@ return res.data;
 console.log(`Error : ${e}`);
 }
 };
-*/
