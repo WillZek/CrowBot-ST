@@ -1,3 +1,9 @@
+/* Código Hecho Por WillZek para CrowBot
+- Tienen Que Definir El welcomeMessage también en el _welcome.js o no funcionará 
+- también tienen que agregar ${welcomeMessage} en el mensaje de bienvenida, eso sí, las comillas son `
+- Espero Les Funcione uwu 
+*/
+
 let handler = async (m, { conn, text, isRowner }) => {
   if (!text) {
     return m.reply('🎩 Debes proporcionar el mensaje de bienvenida después del comando. Ejemplo: `.setwelcome ¡Bienvenido al grupo!`');
