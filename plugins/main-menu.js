@@ -25,6 +25,8 @@ let tags = {
   'logos': '「EDICION LOGOS」🍨', 
 }
 
+const botinfo = (conn.user.jid == global.conn.user.jid ? 'Oficial' : 'Sub-Bot');
+
 const vid = ['https://files.catbox.moe/z23r5g.mp4', 'https://files.catbox.moe/z23r5g.mp4', 'https://files.catbox.moe/z23r5g.mp4']
 
 const defaultMenu = {
@@ -41,7 +43,7 @@ const defaultMenu = {
 ╚━━━━━━━━━━━━━━
 %readmore
 ╔━━━━━ *⊱INFO - USER⊰*
-✧  🤖 *Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Oficial' : 'Sub-Bot')}
+✧  🤖 *Bot:* %botinfo
 ✦  🔱 *Modo:* Privado VIP 
 ✧  ✨ *Baileys:* Multi Device
 ✦  🪐 *Tiempo Activo:* %muptime
