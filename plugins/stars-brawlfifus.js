@@ -50,6 +50,8 @@ let rollHandler = async (m, { conn }) => {
         await conn.sendFile(m.chat, randomCharacter.img, `${randomCharacter.name}.jpg`, message, m);
         cooldowns[userId] = now + 15 * 60 * 1000;
 
+    user.estrellas += random.Character.value;
+
     } catch (error) {
         await conn.reply(m.chat, `✘ Error al cargar el personaje: ${error.message}`, m);
     }
