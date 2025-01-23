@@ -11,6 +11,6 @@ let handler = async(m, { conn, usedPrefix, command }) => {
     await conn.sendMessage(m.chat, { text: `A Levantarse Que Ya Amaneció 🙂‍↕️`, mentions: participants.map(p => p.id) });
 };
 
-handler.command = ['fachero'];
+handler.command = ['levantar', 'reloj'];
 
 export default handler;
