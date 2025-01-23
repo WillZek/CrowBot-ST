@@ -1,3 +1,7 @@
+/* Hecho Porque El Otro De .despertar no me gustaba mucho xD
+- Manda Un Sticker y etiqueta a todo el grupo sin mencionarlos ☕
+*/
+
 let handler = async(m, { conn, usedPrefix, command }) => {
     const stickerUrl = 'https://files.catbox.moe/wy49r0.webp'; 
     m.react('😎');
