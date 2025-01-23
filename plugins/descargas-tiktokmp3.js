@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import yts from 'yt-search'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw m.reply(`🍬 Por favor, ingrese el link de tiktok para descargar su audio.`);
+if (!text) throw m.reply(`🎩 Ingresa el link de tiktok para descargar su audio.`);
 conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 
   let d2 = await fetch(`https://eliasar-yt-api.vercel.app/api/search/tiktok?query=${text}`)
@@ -25,8 +25,8 @@ conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
     await conn.sendMessage(m.chat, doc, { quoted: m })
 await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }});
 }
-handler.help = ['tiktokmp3 *<url>*']
-handler.tags = ['dl']
+handler.help = ['ttmp3 *<url>*']
+handler.tags = ['descargas']
 handler.command = ['tiktokmp3', 'ttmp3']
 
 export default handler
