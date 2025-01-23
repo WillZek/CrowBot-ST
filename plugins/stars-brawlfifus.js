@@ -36,7 +36,14 @@ let rollHandler = async (m, { conn }) => {
         const characters = await loadCharacters();
         const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
 
-    const user = global.db.data.users[m.sender];
+        if (!randomCharacter) {
+            throw new Error('❀ No se encontró ningún personaje.');
+        }
+
+        const user = global.db.data.users[m.sender];
+        if (!user) {
+            throw new Error('❀ Usuario no encontrado.');
+        }
 
         const statusMessage = randomCharacter.user 
             ? `Reclamado por @${randomCharacter.user.split('@')[0]}` 
@@ -52,8 +59,8 @@ let rollHandler = async (m, { conn }) => {
         await conn.sendFile(m.chat, randomCharacter.img, `${randomCharacter.name}.jpg`, message, m);
         cooldowns[userId] = now + 15 * 60 * 1000;
 
-const brawler = ${randomCharacter.value};
-    user.estrellas += brawler;
+        const brawler = randomCharacter.value;
+        user.estrellas += brawler;
 
     } catch (error) {
         await conn.reply(m.chat, `✘ Error al cargar el personaje: ${error.message}`, m);
