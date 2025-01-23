@@ -68,10 +68,7 @@ async function luminsesi(q, username, logic) {
     throw error;
   }
 }
-handler.help = ['@CrowAi']
-handler.tags = ['info']
-handler.customPrefix = /^=?> /
-handler.command = /(?:)/i
-handler.rowner = true
+handler.customPrefix = /^(aicrow|crowai)$/i
+handler.command = new RegExp
 
 export default handler;
