@@ -6,6 +6,7 @@ let texto = `• 𝐌𝐄𝐍𝐔 +10 •
 
 ║➤ ❤️‍🔥 _.xnxxsearch_ (texto)
 ║➤ ❤️‍🔥 _.xnxxdl_ (link)
+║➤ ❤️‍🔥 _.rule34_ (texto)
 ║➤ ❤️‍🔥 _.xvideosearch_ (texto)
 ║➤ ❤️‍🔥 _.xvideosdl_ (link)
 ║➤ ❤️‍🔥 _.fuck_ (@tag)
@@ -14,7 +15,8 @@ let texto = `• 𝐌𝐄𝐍𝐔 +10 •
 ║➤ ❤️‍🔥 _.follar_ (@tag)
 ║➤ ❤️‍🔥 _.penetrar_ (@tag)
 ║➤ ❤️‍🔥 _.horny_ (@tag)
-║➤ ❤️‍🔥 _.violar_ (@tag)`
+║➤ ❤️‍🔥 _.violar_ (@tag)
+║➤ ❤️‍🔥 _.sixnine_ (@tag)`
 
 const fkontak = {
         "key": {
