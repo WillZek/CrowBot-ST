@@ -69,6 +69,6 @@ let claimHandler = async (m, { conn }) => {
 
 claimHandler.help = ['bclaim'];
 claimHandler.tags = ['gacha'];
-claimHandler.command = ['bc', 'bclaim', 'breclamar'];
+claimHandler.command = ['bclaim', 'breclamar'];
 
 export default claimHandler;
