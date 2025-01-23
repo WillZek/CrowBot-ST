@@ -2,7 +2,7 @@ let handler = async (m, { isPrems, conn }) => {
 
 let img = 'https://files.catbox.moe/16bm7g.jpg' 
 let texto = `• 𝐌𝐄𝐍𝐔 +10 •
-•°「 🔞 *COMANDOS NOPOR* 🔞 」°•
+「 🔞 *COMANDOS NOPOR* 🔞 
 
 ║➤ ❤️‍🔥 _.xnxxsearch_ (texto)
 ║➤ ❤️‍🔥 _.xnxxdl_ (link)
