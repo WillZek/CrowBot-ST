@@ -46,7 +46,7 @@ let rollHandler = async (m, { conn }) => {
         }
 
         const statusMessage = randomCharacter.user 
-            ? `Reclamado por @${randomCharacter.user.split('@')[0]}` 
+            ? `Reclamado por @+${randomCharacter.user.split('@')[0]}` 
             : 'Libre';
 
         const message = `🔱 Brawler » *${randomCharacter.name}*
