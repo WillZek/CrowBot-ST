@@ -11,7 +11,7 @@ let handler = async (m, { conn, usedPrefix, command, text, args }) => {
     let data = await Starlights.tiktokSearch(text)
 
     if (data && data.length > 0) {
-     let txt = `🎩 *RESULTADOS DE : ${text}*`
+     let txt = `🎩 *`RESULTADOS DE:` ${text}*`
 for (let i = 0; i < Math.min(50, data.length); i++) {
   let video = data[i]
          txt += `\n\n`
