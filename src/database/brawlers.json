@@ -20,12 +20,22 @@
         "status": "Libre"
     },
     {
-        "id": "2",
+        "id": "3",
         "name": "Colt",
-        "gender": "Mujer",
+        "gender": "Hombre",
         "value": "10",
         "source": "Especial",
         "img": "https://files.catbox.moe/nn5bro.jpg",
+        "user": null,
+        "status": "Libre"
+    },
+    {
+        "id": "4",
+        "name": "Gus",
+        "gender": "Hombre",
+        "value": "20",
+        "source": "Súper Especial",
+        "img": "https://files.catbox.moe/orj49u.jpg",
         "user": null,
         "status": "Libre"
     }
