@@ -30,7 +30,7 @@ const fkontak = {
         },
         "participant": "0@s.whatsapp.net"
 }
-await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
+await conn.sendFile(m.chat, img, 'img.jpg', texto, rcanal)
 }
 handler.help = ['menuhot (menu +18)']
 handler.tags = ['crow']
