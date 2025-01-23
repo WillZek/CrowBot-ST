@@ -6,13 +6,13 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   try {
     let res = await Starlights.spotifySearch(text)
     let img = await (await fetch(`${res[0].thumbnail}`)).buffer()
-    let txt = '`乂  S P O T I F Y  -  S E A R C H`'
+    let txt = '`S P O T I F Y  -  S E A R C H`'
     for (let i = 0; i < res.length; i++) {
       txt += `\n\n`
-      txt += `  *» Nro* : ${i + 1}\n`
-      txt += `  *» Titulo* : ${res[i].title}\n`
-      txt += `  *» Artista* : ${res[i].artist}\n`
-      txt += `  *» Url* : ${res[i].url}`
+      txt += ` 💛 *Nro* : ${i + 1}\n`
+      txt += ` 💛 *Titulo* : ${res[i].title}\n`
+      txt += ` 💛 *Artista* : ${res[i].artist}\n`
+      txt += ` 💛 *Url* : ${res[i].url}`
     }
 
 await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
