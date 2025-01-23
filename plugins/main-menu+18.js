@@ -6,6 +6,7 @@ let texto = `• 𝐌𝐄𝐍𝐔 +10 •
 
 ║➤ ❤️‍🔥 _.xnxxsearch_ (texto)
 ║➤ ❤️‍🔥 _.xnxxdl_ (link)
+║➤ ❤️‍🔥 _.phsearch_ (texto)
 ║➤ ❤️‍🔥 _.rule34_ (texto)
 ║➤ ❤️‍🔥 _.xvideosearch_ (texto)
 ║➤ ❤️‍🔥 _.xvideosdl_ (link)
