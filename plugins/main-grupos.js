@@ -11,7 +11,7 @@ let grupos = `╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈≫\n\n☕�
 
 ➠ Enlace anulado? entre aquí! 
 
-[🌠] 𓆩 *Canal* ⁞✰⃔࿐:
+[🌠] 𓆩 *Canal Crow's Club* ⁞✰⃔࿐:
 *❏* ${channel}
 
 > ${dev}
