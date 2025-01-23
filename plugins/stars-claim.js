@@ -31,10 +31,11 @@ let claimHandler = async (m, { conn }) => {
         const seconds = remainingTime % 60;
         return await conn.reply(m.chat, `《✧》Debes esperar *${minutes} minutos y ${seconds} segundos* para usar *#c* de nuevo.`, m);
     }
-        const user = global.db.data.users[m.sender];
-        if (!user) {
-            throw new Error('❀ Usuario no encontrado.');
-        }
+
+    const user = global.db.data.users[m.sender];
+    if (!user) {
+        throw new Error('❀ Usuario no encontrado.');
+    }
 
     if (m.quoted && m.quoted.sender === conn.user.jid) {
         const quotedMessageId = m.quoted.id;
@@ -62,10 +63,10 @@ let claimHandler = async (m, { conn }) => {
             await conn.reply(m.chat, `✦ Has reclamado a *${brawler.name}* con éxito.`, m);
             cooldowns[userId] = now + 30 * 60 * 1000;
 
+            const brawlerValue = randomCharacter.value;
+            user.estrellas -= brawlerValue;
 
-        const brawler = randomCharacter.value;
-        user.estrellas += brawler;
-
+            await conn.reply(m.chat, `✦ Has perdido *${brawlerValue}* estrellas. Te quedan *${user.estrellas}* estrellas.`, m);
 
         } catch (error) {
             await conn.reply(m.chat, `✘ Error al reclamar el brawler: ${error.message}`, m);
