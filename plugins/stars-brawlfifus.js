@@ -36,6 +36,8 @@ let rollHandler = async (m, { conn }) => {
         const characters = await loadCharacters();
         const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
 
+    const user = global.db.data.users[m.sender];
+
         const statusMessage = randomCharacter.user 
             ? `Reclamado por @${randomCharacter.user.split('@')[0]}` 
             : 'Libre';
