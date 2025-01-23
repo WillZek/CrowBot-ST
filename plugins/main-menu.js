@@ -30,7 +30,7 @@ const vid = ['https://files.catbox.moe/z23r5g.mp4', 'https://files.catbox.moe/z2
 const defaultMenu = {
   before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
 
-“ *「💛」 ¡Hola! %name soy ${nombrebot}*, *%greeting* ❒”
+"*「💛」 ¡Hola! %name soy ${nombrebot}*, *%greeting* ❒"
 
 ╔━━━━━ *⊱INFO - BOT⊰*
 ✦  👤 *Cliente:* %name
@@ -52,7 +52,7 @@ const defaultMenu = {
 
 \t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
 `.trimStart(),
-      header: '✧*̥˚ ︶︶︶︶︶︶︶︶︶  ✧*̥˚\n┊ %category \n✧*̥˚ ︶︶︶︶︶︶︶︶︶  ✧*̥˚',
+  header: '✧*̥˚ ︶︶︶︶︶︶︶︶︶  ✧*̥˚\n┊ %category \n✧*̥˚ ︶︶︶︶︶︶︶︶︶  ✧*̥˚',
   body: '*┃⏤͟͟͞͞🍭➤›* %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
