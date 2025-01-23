@@ -29,7 +29,7 @@ await m.react('✖️');
 };
 
 handler.help = ['spotifydl'];
-handler.tags = ['downloader'];
+handler.tags = ['descargas'];
 handler.command = ['spotifydl'];
 // handler.limit = 1;
 handler.register = true;
