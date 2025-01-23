@@ -27,9 +27,8 @@ async function fetchVideoData(url) {
   try {
     const response = await axios.get(url);
     const html = response.data;
-    const json = {};
-    json.high = 'url_del_video';
-    json.title = 'Título del video';
+    const json = html.data;
+    const res = json.title;
 
     return { high: json.high, title: res.result.title };
   } catch (error) {
