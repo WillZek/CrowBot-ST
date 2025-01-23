@@ -23,8 +23,8 @@
         "id": "2",
         "name": "Pam",
         "gender": "Mujer",
-        "value": "20",
-        "source": "Super Especial",
+        "value": "10",
+        "source": "Especial",
         "img": "https://files.catbox.moe/nn5bro.jpg",
         "user": null,
         "status": "Libre"
