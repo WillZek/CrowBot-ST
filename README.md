@@ -89,9 +89,7 @@ ___
 - [x] Descarga de música y video De YT
 - [ ] Otros
 
-</details>
-<!-- RAINBOW LINE BOT -->
-<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
+___
 
 # **`INFORMACION CONTACTOS`**
 
