@@ -97,12 +97,12 @@ ___
 
 ___
 
-## **`👑 INFORMACION CONTACTOS`**
+### **`👑 INFORMACION CONTACTOS`**
 
-### **`Creador: Niño Piña 🤴`**
+#### **`Owner: Niño Piña 🤴`**
 > **`Developed By: Crow's Club`**
 
-### **`CONTACTOS 💻`**
+#### **`CONTACTOS 💻`**
 <p>
 
 <a
