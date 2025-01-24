@@ -166,9 +166,7 @@ npm start
 
 ---
 <details>
- <summary><b> Hostings</b></summary>
-
-## **`🎩 HOSTINGS DE CALIDAD`**
+ <summary><b> **`🎩 HOSTINGS DE CALIDAD`**</b></summary>
 
 ###  **`🍬 LUMINARY'S - HOSTING`**
 <a href="https://dash.masha-host.shop/home"><img src="https://qu.ax/aHudo.jpg" height="145px"></a>
