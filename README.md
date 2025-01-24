@@ -32,7 +32,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 # REDES OFICIALES 
 
 <details>
- <summary><b> 💛 Toca Aqui </b></summary>
+ <summary><b> 💛 TOCA AQUI</b></summary>
 
 [![Web](https://img.shields.io/badge/Web_Oficial-36DFFF?style=for-the-badge&logo=vercel&logoColor=white)](https://crow-bot-dashboard.vercel.app/)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](maito:ninopina10@gmail.com)
