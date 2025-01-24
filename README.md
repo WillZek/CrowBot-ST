@@ -165,6 +165,9 @@ npm start
 </details>
 
 ---
+<details>
+ <summary><b> Hostings</b></summary>
+
 ## **`🎩 HOSTINGS DE CALIDAD`**
 
 ###  **`🍬 LUMINARY'S - HOSTING`**
