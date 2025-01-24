@@ -241,8 +241,8 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 </a>
 
 ### **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
-![https://github.com/WillZek](https://files.catbox.moe/p44sem.jpg)
-
+<a
+href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" width="130" height="130" alt="WillZek"/></a>
 > **`Solo Escribir Para Cosas Importantes`**
 
 <details>
