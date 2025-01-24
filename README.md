@@ -47,19 +47,23 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 
-### **`Informacion Importante De CrowBot 🌠`**
+### **`INFORMACION IMPORTANTE`**
 
 ![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
 
-<details>
- <summary><b>:paperclip: Links Importantes</b></summary>
+### **`🔗 OBTEN LOS ENLACES`**
 
-- **Comprar Token:** [`Aquí`](https://crow-bot-dashboard.vercel.app/)
-- **Comunidad Oficial:** [`Aquí`](https://chat.whatsapp.com/BZ87KB4Igab3lCw6DAwPCR)
-- **Canal de WhatsApp:** [`Aquí`](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W)
-- **Propietario Del Bot:** [`Aqui`](https:/Wa.me/50557865603)
+<details>
+ <summary><b> 👉 Haz Click Aqui </b></summary>
+
+| APP | TIPO | ENLACE |
+|------|-------------|-------|
+| **WhatsApp** | 𝐂𝐚𝐧𝐚𝐥 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W) |
+| **WhatsApp** | 𝐆𝐫𝐮𝐩𝐨 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://chat.whatsapp.com/B7POPrlJiZf7UWHJKvzVkx) |
+| **WhatsApp** | 𝐂𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://chat.whatsapp.com/B85dNp4WfzsDeDz8OFgvhx) |
 
 </details>
+
 
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
@@ -116,21 +120,6 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 > **CANAL Y GRUPO DEL BOT**
 
 ![Informacion](https://qu.ax/LgBRM.jpg)
-
-### **`🔗 OBTEN LOS ENLACES`**
-
-<details>
- <summary><b> 👉 Haz Click Aqui </b></summary>
-
-| APP | TIPO | ENLACE |
-|------|-------------|-------|
-| **WhatsApp** | 𝐂𝐚𝐧𝐚𝐥 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W) |
-| **WhatsApp** | 𝐆𝐫𝐮𝐩𝐨 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://chat.whatsapp.com/B7POPrlJiZf7UWHJKvzVkx) |
-| **WhatsApp** | 𝐂𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://chat.whatsapp.com/B85dNp4WfzsDeDz8OFgvhx) |
-
-</details>
-
-
 
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
