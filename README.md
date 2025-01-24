@@ -239,6 +239,7 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 
 </details>
 
+</details>
 
 ### 🐦‍🔥 **`COLABORADORES`**
 <a href="https://github.com/WillZek/CrowBot-ST/graphs/contributors">
