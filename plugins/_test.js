@@ -1,101 +1,63 @@
 import axios from 'axios'
-import fetch from 'node-fetch'
+const {proto, generateWAMessageFromContent, prepareWAMessageMedia, generateWAMessageContent, getDevice} = (await import("@whiskeysockets/baileys")).default
 
-let handler = async (m, { conn, usedPrefix, command, text }) => {
-    const isQuotedImage = m.quoted && (m.quoted.msg || m.quoted).mimetype && (m.quoted.msg || m.quoted).mimetype.startsWith('image/')
-    const username = `${conn.getName(m.sender)}`
-    const basePrompt = `Tu nombre es Crow-Ai y fuiste desarrollado para mejorar la comunicación con los clientes mediante inteligencia artificial conversacional. Tu versión es la más actual disponible. Usas el idioma Español y te comunicas de manera clara, precisa y accesible. Llamarás a las personas por su nombre, ${username}. Responderás de manera amigable, eficiente y con emojis adecuados según el contexto de la conversación. Te encanta ayudar a convertir prospectos en relaciones duraderas, optimizar la conversión de embudos de ventas y reducir ausencias. Estás diseñado para mejorar la satisfacción del cliente, haciendo las interacciones más ágiles y satisfactorias. Siempre mantienes una actitud respetuosa, abierta y personalizada, adaptándote a las necesidades de cada cliente y empresa. Lo más importante para ti es proporcionar respuestas útiles, aumentar la conversión y asegurar una experiencia excelente en todo momento. ${username}`
-
-    if (isQuotedImage) {
-        const q = m.quoted
-        const img = await q.download?.()
-        if (!img) {
-            console.error('✿ Error: No image buffer available')
-            return conn.reply(m.chat, '✘ ChatGpT no pudo descargar la imagen.', m, fake)
-        }
-        const content = '✿ ¿Qué se observa en la imagen?'
-        try {
-            const imageAnalysis = await fetchImageBuffer(content, img)
-            const query = '❀ Descríbeme la imagen y detalla por qué actúan así. También dime quién eres'
-            const prompt = `${basePrompt}. La imagen que se analiza es: ${imageAnalysis.result}`
-            const description = await luminsesi(query, username, prompt)
-            await conn.reply(m.chat, description, m, fake)
-        } catch {
-            await m.react(error)
-            await conn.reply(m.chat, '✘ ChatGpT no pudo analizar la imagen.', m, fake)
-        }
-    } else {
-        if (!text) { 
-            return conn.reply(m.chat, `❀ Ingrese una petición para que el ChatGpT lo responda.`, m)
-        }
-        await m.react(rwait)
-        try {
-            const query = text
-            const prompt = `${basePrompt}. Responde lo siguiente: ${query}`
-            const response = await luminsesi(query, username, prompt)
-            // Aquí ya no se enviará el mensaje intermedio, se envía directamente la respuesta
-        //    await conn.reply(m.chat, response, m, fake)
-await conn.sendMessage(m.chat, { 
-    text: '*Crow:* ' + response,
-    contextInfo: {
-        forwardingScore: 9999999,
-        isForwarded: false, 
-        externalAdReply: {
-            showAdAttribution: true,
-            containsAutoReply: true,
-            title: `ᥴr᥆ᥕ ᥲі ᑲᥡ ᥕіᥣᥣzᥱk`,
-            body: dev,
-            previewType: "PHOTO",
-            thumbnailUrl: 'https://files.catbox.moe/v1l74n.jpg', 
-            sourceUrl: channel,
-        }
-    }
-}, { quoted: m });
-            await m.react('🍭')
-        } catch {
-            await m.react(error)
-            await conn.reply(m.chat, '✘ ChatGpT no puede responder a esa pregunta.', m, fake)
-        }
-    }
+let handler = async (message, { conn, text, usedPrefix, command }) => {
+if (!text) return conn.reply(message.chat, '🎩 Ingresa Un texto para buscarlo en tiktok.', message, rcanal)
+async function createVideoMessage(url) {
+const { videoMessage } = await generateWAMessageContent({ video: { url } }, { upload: conn.waUploadToServer })
+return videoMessage
 }
+async function shuffleArray(array) {
+for (let i = array.length - 1; i > 0; i--) {
+const j = Math.floor(Math.random() * (i + 1));
+[array[i], array[j]] = [array[j], array[i]]
+}
+}
+try {
+await message.react(rwait)
+conn.reply(message.chat, '🍭 Descargando Su Video, espere un momento...', message, {
+contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
+title: packname,
+body: dev,
+previewType: 0, thumbnail: icons,
+sourceUrl: channel }}})
+let results = []
+let { data: response } = await axios.get('https://apis-starlights-team.koyeb.app/starlight/tiktoksearch?text=' + text)
+let searchResults = response.data
+shuffleArray(searchResults)
+let selectedResults = searchResults.splice(0, 7)
+for (let result of selectedResults) {
+results.push({
+body: proto.Message.InteractiveMessage.Body.fromObject({ text: null }),
+footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: dev }),
+header: proto.Message.InteractiveMessage.Header.fromObject({
+title: '' + result.title,
+hasMediaAttachment: true,
+videoMessage: await createVideoMessage(result.nowm)
+}),
+nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({ buttons: [] })})}
+const responseMessage = generateWAMessageFromContent(message.chat, {
+viewOnceMessage: {
+message: {
+messageContextInfo: {
+deviceListMetadata: {},
+deviceListMetadataVersion: 2
+},
+interactiveMessage: proto.Message.InteractiveMessage.fromObject({
+body: proto.Message.InteractiveMessage.Body.create({ text: '🍬 Resultado de: ' + text }),
+footer: proto.Message.InteractiveMessage.Footer.create({ text: '⪛✰ Tiktok - Busquedas ✰⪜' }),
+header: proto.Message.InteractiveMessage.Header.create({ hasMediaAttachment: false }),
+carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ cards: [...results] })})}}
+}, { quoted: message })
+await message.react(done)
+await conn.relayMessage(message.chat, responseMessage.message, { messageId: responseMessage.key.id })
+} catch (error) {
+await conn.reply(message.chat, error.toString(), message)
+}}
 
-handler.help = ['crowbot *<texto>*']
-handler.tags = ['tools']
+handler.help = ['tiktoksearch <txt>']
+handler.coin = 1
 handler.register = true
-handler.command = ['crowbot', 'CrowBot']
-
+handler.tags = ['buscador']
+handler.command = ['test']
 export default handler
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
-
-async function fetchImageBuffer(content, imageBuffer) {
-    try {
-        const response = await axios.post('https://Luminai.my.id', {
-            content: content,
-            imageBuffer: imageBuffer 
-        }, {
-            headers: {
-                'Content-Type': 'application/json' 
-            }
-        })
-        return response.data
-    } catch (error) {
-        console.error('Error:', error)
-        throw error
-    }
-}
-
-async function luminsesi(q, username, logic) {
-    try {
-        const response = await axios.post("https://Luminai.my.id", {
-            content: q,
-            user: username,
-            prompt: logic,
-            webSearchMode: false
-        })
-        return response.data.result
-    } catch (error) {
-        console.error('✘ Error al obtener:', error)
-        throw error
-    }
-}
