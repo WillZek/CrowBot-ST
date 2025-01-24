@@ -7,7 +7,7 @@ try {
 let api = await fetch(`https://delirius-apiofc.vercel.app/search/cuevana?q=${encodeURIComponent(text)}`)
 let json = await api.json()
 
-let JT = '📽️ Cuevana  -  Search 📽️';
+let JT = '📽️ ${command}  -  Search 📽️';
 json.data.forEach((app, index) => {
       JT += `\n\n══════════════════════`;
       JT += `\n☁️ *Nro :* ${index + 1}`
