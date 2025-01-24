@@ -51,6 +51,8 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 ![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
 
+> Enlaces Oficiales De CrowBot
+
 ### **`🔗 OBTEN LOS ENLACES`**
 
 <details>
