@@ -1,8 +1,3 @@
-/* Código Creado Por ianalejandrook14
-- Github Search
-- Api De Github Original 
-*/
-
 import axios from 'axios';
 
 function formatDate(dateString) {
@@ -68,13 +63,12 @@ ${userInfo}
 *Repositorios:*
 ${userRepos}
     `;
-    
+
     conn.reply(message.chat, result, message);
 };
 
-handler.help = ['githubsearch'];
+handler.help = ['githubsearch *<texto>*'];
 handler.tags = ['buscador'];
 handler.command = ['githubsearch'];
-handler.estrellas = 9;
 
 export default handler;
