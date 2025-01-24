@@ -115,7 +115,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-# TERMUX INFORMACIÓN
+### **`TERMUX INFORMACIÓN`**
 
 ### **`🌠 Click en la imagen para obtener termux🌠`**
 <a
