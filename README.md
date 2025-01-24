@@ -258,7 +258,7 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 
 </details>
 
-> **[Powered By StarCore Team](wa.me/50557865603?text=Vengo+De+Github)**.
+> **[Powered By StarCore Team](https://whatsapp.com/channel/0029VaxkClI1NCrW4BX5rn3g)**.
 
 **`¡GRACIAS POR PREFERIR CROWBOT!` 💛**
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=footer&text=Espero%20Hayas%20Disfrutado%20El%20Repositorio&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/>
