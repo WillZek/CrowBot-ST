@@ -66,10 +66,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 </details>
 
-
-<!-- RAINBOW LINE BOT -->
-<img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
-
+___
 
 ### **` Características `**
 <details>
@@ -96,9 +93,10 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
+# **`INFORMACION CONTACTOS`**
 
-#### **`Creador: Niño Piña 🤴`**
-#### **`Hecho Por: Staff De CrowBot`**
+### **`Creador: Niño Piña 🤴`**
+> **`Developed By: Crow's Club`**
 
 ### **`CONTACTOS 💻`**
 <p>
@@ -243,12 +241,6 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 ### **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
 <a
 href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" width="130" height="130" alt="WillZek"/></a>
-> **`Solo Escribir Para Cosas Importantes`**
-
-<details>
- <summary><b>:paperclip: Contactos</b></summary>
-
-- **Github:** [`Aquí`](https://github.com/WillZek)
 
 </details>
 
