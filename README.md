@@ -158,7 +158,7 @@ npm start
 </details>
 
 ---
-# 🍭 `HOSTINGS INFORMACION`
+## 🍭 `HOSTINGS INFORMACION`
 
 ![Informacion](https://qu.ax/LgBRM.jpg)
 
