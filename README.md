@@ -89,6 +89,8 @@ ___
 - [x] Descarga de música y video De YT
 - [ ] Otros
 
+</details>
+
 ___
 
 # **`INFORMACION CONTACTOS`**
