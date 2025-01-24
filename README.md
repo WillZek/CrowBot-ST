@@ -6,7 +6,7 @@
 <a
 href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=yellow&style=flat-square"></a>
 
-# **`Donaciones`**
+# **`📩 Donaciones`**
 
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/starcoreNinoPina)
 
@@ -49,7 +49,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 ### **`INFORMACION IMPORTANTE`**
 
-![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
+![Menu Secundario](https://files.catbox.mow/ugr9af.jpg)
 
 > Enlaces Oficiales De CrowBot
 
