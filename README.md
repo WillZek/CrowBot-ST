@@ -6,6 +6,8 @@
 <a
 href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=yellow&style=flat-square"></a>
 
+___
+
 # **`📩 Donaciones`**
 
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/starcoreNinoPina)
@@ -29,7 +31,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-# REDES OFICIALES 
+## 🍷 REDES OFICIALES 
 
 [![Web](https://img.shields.io/badge/Web_Oficial-36DFFF?style=for-the-badge&logo=vercel&logoColor=white)](https://crow-bot-dashboard.vercel.app/)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](maito:ninopina10@gmail.com)
@@ -47,7 +49,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
 
-### **`INFORMACION IMPORTANTE`**
+### **`🎩 INFORMACION IMPORTANTE`**
 
 ![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
 
@@ -68,7 +70,7 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 ___
 
-### **` Características `**
+### **`🔱 CARACTERÍSTICAS`**
 <details>
  <summary><b> <img src="https://i.pinimg.com/originals/73/69/6e/73696e022df7cd5cb3d999c6875361dd.gif" alt="Características" width="42" height="42"> Funciones de CrowBot (toca)</b></summary>
 
@@ -93,7 +95,7 @@ ___
 
 ___
 
-## **`INFORMACION CONTACTOS`**
+## **`👑 INFORMACION CONTACTOS`**
 
 ### **`Creador: Niño Piña 🤴`**
 > **`Developed By: Crow's Club`**
@@ -115,7 +117,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 <!-- RAINBOW LINE BOT -->
 <img src="https://github.com/AnderMendoza/AnderMendoza/raw/main/assets/line-neon.gif" width="100%">
 
-### **`TERMUX INFORMACIÓN`**
+### **`🖤 TERMUX INFORMACIÓN`**
 
 ### **`🌠 Click en la imagen para obtener termux🌠`**
 <a
@@ -234,17 +236,15 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 
 </details>
 
-### 🐦‍🔥 **`COLABORADORES`**
+## 🐦‍🔥 **`COLABORADORES`**
 <a href="https://github.com/WillZek/CrowBot-ST/graphs/contributors">
 <img src="https://contrib.rocks/image?repo=WillZek/CrowBot-ST" /> 
 </a>
 
-### **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
+## **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
 <a
 href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" width="130" height="130" alt="WillZek"/></a>
 
 </details>
 
-> **[Powered By StarCore Team](https://whatsapp.com/channel/0029VaxkClI1NCrW4BX5rn3g)**.
-
-**`¡GRACIAS POR PREFERIR CROWBOT!` 💛**
+> **[Powered By StarCore Team](https://whatsapp.com/channel/0029VaxkClI1NCrW4BX5rn3g)**
