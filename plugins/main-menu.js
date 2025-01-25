@@ -162,7 +162,7 @@ await conn.sendMessage(m.chat, { video: { url: vid.getRandom() }, caption: text.
 }, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null })
 
   } catch (e) {
-    conn.reply(m.chat, '❌️ Lo sentimos, el menú tiene un error', m, rcanal, )
+    conn.reply(m.chat, `❌️ Lo sentimos, el menú tiene un error ${e.message}`, m, rcanal, )
     throw e
   }
 }
