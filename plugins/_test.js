@@ -29,7 +29,7 @@ conn.on('chat-update', async (chatUpdate) => {
 
 handler.help = ['mute']
 handler.tags = ['owner']
-handler.command = /^test$/i
+handler.command = ['test'];
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
