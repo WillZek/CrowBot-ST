@@ -1,63 +1,32 @@
-import axios from 'axios'
-const {proto, generateWAMessageFromContent, prepareWAMessageMedia, generateWAMessageContent, getDevice} = (await import("@whiskeysockets/baileys")).default
+import fetch from 'node-fetch';
 
-let handler = async (message, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(message.chat, '🎩 Ingresa Un texto para buscarlo en tiktok.', message, rcanal)
-async function createVideoMessage(url) {
-const { videoMessage } = await generateWAMessageContent({ video: { url } }, { upload: conn.waUploadToServer })
-return videoMessage
-}
-async function shuffleArray(array) {
-for (let i = array.length - 1; i > 0; i--) {
-const j = Math.floor(Math.random() * (i + 1));
-[array[i], array[j]] = [array[j], array[i]]
-}
-}
-try {
-await message.react(rwait)
-conn.reply(message.chat, '🍭 Descargando Su Video, espere un momento...', message, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
-title: packname,
-body: dev,
-previewType: 0, thumbnail: icons,
-sourceUrl: channel }}})
-let results = []
-let { data: response } = await axios.get('https://apis-starlights-team.koyeb.app/starlight/tiktoksearch?text=' + text)
-let searchResults = response.data
-shuffleArray(searchResults)
-let selectedResults = searchResults.splice(0, 7)
-for (let result of selectedResults) {
-results.push({
-body: proto.Message.InteractiveMessage.Body.fromObject({ text: null }),
-footer: proto.Message.InteractiveMessage.Footer.fromObject({ text: dev }),
-header: proto.Message.InteractiveMessage.Header.fromObject({
-title: '' + result.title,
-hasMediaAttachment: true,
-videoMessage: await createVideoMessage(result.nowm)
-}),
-nativeFlowMessage: proto.Message.InteractiveMessage.NativeFlowMessage.fromObject({ buttons: [] })})}
-const responseMessage = generateWAMessageFromContent(message.chat, {
-viewOnceMessage: {
-message: {
-messageContextInfo: {
-deviceListMetadata: {},
-deviceListMetadataVersion: 2
-},
-interactiveMessage: proto.Message.InteractiveMessage.fromObject({
-body: proto.Message.InteractiveMessage.Body.create({ text: '🍬 Resultado de: ' + text }),
-footer: proto.Message.InteractiveMessage.Footer.create({ text: '⪛✰ Tiktok - Busquedas ✰⪜' }),
-header: proto.Message.InteractiveMessage.Header.create({ hasMediaAttachment: false }),
-carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ cards: [...results] })})}}
-}, { quoted: message })
-await message.react(done)
-await conn.relayMessage(message.chat, responseMessage.message, { messageId: responseMessage.key.id })
-} catch (error) {
-await conn.reply(message.chat, error.toString(), message)
-}}
+let handler = async (m, { conn, text, usedPrefix, command }) => {
+    if (command === 'declaracion') {
+        if (!text) return m.reply(`🌸 Ingresa el nombre de la persona a la que te le vas a declarar`);
 
-handler.help = ['tiktoksearch <txt>']
-handler.coin = 1
-handler.register = true
-handler.tags = ['buscador']
-handler.command = ['test']
-export default handler
+        const imageUrl = 'https://files.catbox.moe/7pzvzf.jpg';
+
+        const messageText = `Hola ${text} \nVengo a decirte que desde hace mucho me gustas, pero no fui capaz de demostrar amor y cariño. Te quiero pedir disculpas por mi comportamiento en dejarte hablar. \nPero con el tiempo me di cuenta que el error fue mío y quiero pedirte disculpas. \nExtraño los abrazos que nos dábamos, realmente quiero que me perdones y empezar otra vez. \n\n¿Me Perdonas?\n\n\n*Responde*: .si para aceptar y .no para rechazar`;
+
+        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: messageText });
+
+if (/^si|Si/i.test(m.text)) {
+conn.reply(m.chat, `*¡Qué alegría que hayas aceptado! Me siento increíblemente feliz y emocionado por lo que está por venir. Desde que te conocí, he soñado con este momento, y ahora que es real, no puedo esperar para vivir momentos inolvidables contigo.\n\nGracias por darme esta oportunidad. 💖*`, m, rcanal, )
+}
+
+    } else if (command === 'no') {
+        const noImageUrl = 'https://files.catbox.moe/cqvoel.jpg';
+        const noMessageText = `Entiendo y agradezco tu sinceridad. Aunque no haya sido el resultado que esperaba, valoro mucho nuestra amistad y quiero que sepas que seguiré aquí para ti. 😊`;
+
+        await conn.sendMessage(m.chat, { 
+            image: { url: noImageUrl }, 
+            caption: noMessageText
+        }, { quoted: m });
+    }
+};
+
+handler.command = ['declaracion', 'dclarar', 'declaración', 'si', 'no', 'Si', 'No'];
+handler.tags = ["fun"];
+handler.help = ["declaracion"];
+
+export default handler;
