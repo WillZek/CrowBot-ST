@@ -25,7 +25,7 @@ conn.reply(m.chat, `*¡Qué alegría que hayas aceptado! Me siento increíblemen
     }
 };
 
-handler.command = ['declaracion', 'dclarar', 'declaración', 'si', 'no', 'Si', 'No'];
+handler.command = ['test'];
 handler.tags = ["fun"];
 handler.help = ["declaracion"];
 
