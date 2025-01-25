@@ -1,4 +1,4 @@
-const handler = async (m, { conn, isAdmin, groupMetadata }) => {
+const handler = async (m, { conn, isBotAdmin, groupMetadata }) => {
   if (!isBotAdmin) return m.reply('🎩 *¡NO SOY ADMIN!*');
 
   // Mute a la persona etiquetada
