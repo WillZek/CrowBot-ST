@@ -26,7 +26,7 @@ conn.on('chat-update', async (chatUpdate) => {
 
 handler.help = ['mute']
 handler.tags = ['owner']
-handler.command = /^mute$/i
+handler.command = /^mute|test$/i
 handler.group = true
 handler.admin = true
 handler.botAdmin = true
