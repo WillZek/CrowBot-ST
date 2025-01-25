@@ -1,28 +1,27 @@
-const handler = async (m, { conn, isBotAdmin, groupMetadata }) => {
-  if (!isBotAdmin) return m.reply('🎩 *¡NO SOY ADMIN!*');
+let handler = async (m, { conn, usedPrefix, command }) => {
+    if (!m.quoted) return conn.reply(m.chat, `🍭 *Etiqueta Ala persona que deseas mutar*`, m);
 
-  const participant = m.mentionedJid[0];
-  if (!participant) return m.reply('🚩 *¡DEBES MENCIONAR A ALGUIEN!*');
+    let delet = m.message.extendedTextMessage.contextInfo.participant;
+    let bang = m.message.extendedTextMessage.contextInfo.stanzaId;
 
-  try {
-    await conn.groupParticipantsUpdate(m.chat, [participant], 'delete');
+    await conn.groupParticipants(m.chat, [delet], 'mute');
 
-    m.reply('🚩 *¡LA PERSONA HA SIDO MUTADA!*');
-
-    conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, id: m.id, fromMe: false } });
+    conn.reply(m.chat, `🔇 ${delet} ha sido muteado y sus mensajes serán eliminados.`, m);
     
-    let usertag = conn.getName(participant);
-    conn.reply('543876577197@s.whatsapp.net', `🚩 *${usertag}* ha sido mutado en:\n> ${groupMetadata.subject}.`, m, { quoted: m });
-  } catch (error) {
-    m.reply('🚩 Ocurrió un error: ' + error.message);
-  }
-};
+    conn.on('chat-update', async (chatUpdate) => {
+        if (!chatUpdate.messages) return;
+        const message = chatUpdate.messages.all()[0];
+        if (message.key.participant === delet) {
+            await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: message.key.id, participant: delet }});
+        }
+    });
+}
 
-handler.tags = ['owner'];
-handler.help = ['mute @tag'];
-handler.command = ['mute'];
-handler.mods = true;
-handler.group = true;
-handler.botAdmin = true;
+handler.help = ['mute']
+handler.tags = ['owner']
+handler.command = /^mute$/i
+handler.group = true
+handler.admin = true
+handler.botAdmin = true
 
 export default handler;
