@@ -1,10 +1,11 @@
+let mutedParticipants = new Set(); // Chicos Esto Es Tipo Guardar Los Mutados
+
 let handler = async (m, { conn, usedPrefix, command }) => {
     let who;
     if (m.isGroup) who = m.mentionedJid[0];
     else who = m.chat;
 
     if (!who) return m.reply(`🍭 *Etiqueta a la persona que deseas mutar*`);
-
 
     let delet;
     if (m.quoted) {
@@ -13,7 +14,14 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         delet = m.mentionedJid[0];
     }
 
+    const isBotAdmin = await conn.groupMetadata(m.chat).then(metadata => {
+        return metadata.participants.some(participant => participant.jid === conn.user.jid && participant.isAdmin);
+    });
+
+    if (!isBotAdmin) return m.reply(`🚫 *El bot necesita ser admin para mutar a alguien.*`);
+
     await conn.groupParticipants(m.chat, [delet], 'mute');
+    mutedParticipants.add(delet);
 
     conn.reply(m.chat, `🔇 ${delet} ha sido muteado y sus mensajes serán eliminados.`, m);
 }
@@ -21,9 +29,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 conn.on('chat-update', async (chatUpdate) => {
     if (!chatUpdate.messages) return;
     const message = chatUpdate.messages.all()[0];
-    
-    if (message.key.participant === delet) {
-        await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: message.key.id, participant: delet }});
+
+    if (mutedParticipants.has(message.key.participant)) {
+        await conn.sendMessage(message.key.remoteJid, { delete: { remoteJid: message.key.remoteJid, fromMe: false, id: message.key.id }});
     }
 });
 
