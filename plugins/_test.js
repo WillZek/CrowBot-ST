@@ -1,12 +1,11 @@
 const handler = async (m, { conn, isBotAdmin, groupMetadata }) => {
   if (!isBotAdmin) return m.reply('🎩 *¡NO SOY ADMIN!*');
 
-  // Mute a la persona etiquetada
   const participant = m.mentionedJid[0];
   if (!participant) return m.reply('🚩 *¡DEBES MENCIONAR A ALGUIEN!*');
 
   try {
-    await conn.groupParticipantsUpdate(m.chat, [participant], 'remove');
+    await conn.groupParticipantsUpdate(m.chat, [participant], 'delete');
 
     m.reply('🚩 *¡LA PERSONA HA SIDO MUTADA!*');
 
