@@ -5,7 +5,7 @@ let handler = async (m, { conn, isROwner, text }) => {
 
     if (conn.user.jid === conn.user.jid) {
         const progreso = [
-      "*♻️iniciando proceso de reinicio de CrowBot*",
+      "*🕒 iniciando proceso de reinicio de CrowBot*",
             "□□□□□□ 0%",
             "■□□□□□ 20%",
             "■■□□□□ 30%",
@@ -23,7 +23,7 @@ let handler = async (m, { conn, isROwner, text }) => {
             await conn.sendMessage(m.chat, { text: progreso[i], edit: key });
         }
 
-        await conn.sendMessage(m.chat, { text: "『✅』𝗖𝗿𝗼𝘄𝗕𝗼𝘁 reiniciado con éxito espera unos segundos asta que el proceso termine.", edit: key });
+        await conn.sendMessage(m.chat, { text: "✅ 𝗖𝗿𝗼𝘄𝗕𝗼𝘁 reiniciado con éxito espera unos segundos asta que el proceso termine.", edit: key }, { externalAdReply: { title: botname, body: dev, sourceUrl: channel });
 
         await delay(2000);
         process.send('reset');
