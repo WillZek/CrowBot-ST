@@ -23,4 +23,4 @@ ___
 | **Dashboard** | 𝐒𝐢𝐭𝐢𝐨𝐖𝐞𝐛 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click Aquí!](https://crow-bot-dashboard.vercel.app/) 
 
 
-> ☕ Powered By Staff De **[Crow's Club](https://github.com/WillZek/CrowBot-ST)**
+> ☕ Powered By Staff De **[Crow's Club](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W)**
