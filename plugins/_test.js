@@ -18,6 +18,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 conn.on('chat-update', async (chatUpdate) => {
     if (!chatUpdate.messages) return;
     const message = chatUpdate.messages.all()[0];
+    
     if (message.key.participant === delet) {
         await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: message.key.id, participant: delet }});
     }
