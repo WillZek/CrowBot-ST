@@ -1,32 +1,29 @@
-import fetch from 'node-fetch';
+const handler = async (m, { conn, isAdmin, groupMetadata }) => {
+  if (!isBotAdmin) return m.reply('🎩 *¡NO SOY ADMIN!*');
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-    if (command === 'declaracion') {
-        if (!text) return m.reply(`🌸 Ingresa el nombre de la persona a la que te le vas a declarar`);
+  // Mute a la persona etiquetada
+  const participant = m.mentionedJid[0];
+  if (!participant) return m.reply('🚩 *¡DEBES MENCIONAR A ALGUIEN!*');
 
-        const imageUrl = 'https://files.catbox.moe/7pzvzf.jpg';
+  try {
+    await conn.groupParticipantsUpdate(m.chat, [participant], 'remove');
 
-        const messageText = `Hola ${text} \nVengo a decirte que desde hace mucho me gustas, pero no fui capaz de demostrar amor y cariño. Te quiero pedir disculpas por mi comportamiento en dejarte hablar. \nPero con el tiempo me di cuenta que el error fue mío y quiero pedirte disculpas. \nExtraño los abrazos que nos dábamos, realmente quiero que me perdones y empezar otra vez. \n\n¿Me Perdonas?\n\n\n*Responde*: .si para aceptar y .no para rechazar`;
+    m.reply('🚩 *¡LA PERSONA HA SIDO MUTADA!*');
 
-        await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: messageText });
-
-if (/^si|Si/i.test(m.text)) {
-conn.reply(m.chat, `*¡Qué alegría que hayas aceptado! Me siento increíblemente feliz y emocionado por lo que está por venir. Desde que te conocí, he soñado con este momento, y ahora que es real, no puedo esperar para vivir momentos inolvidables contigo.\n\nGracias por darme esta oportunidad. 💖*`, m, rcanal, )
-}
-
-    } else if (command === 'no') {
-        const noImageUrl = 'https://files.catbox.moe/cqvoel.jpg';
-        const noMessageText = `Entiendo y agradezco tu sinceridad. Aunque no haya sido el resultado que esperaba, valoro mucho nuestra amistad y quiero que sepas que seguiré aquí para ti. 😊`;
-
-        await conn.sendMessage(m.chat, { 
-            image: { url: noImageUrl }, 
-            caption: noMessageText
-        }, { quoted: m });
-    }
+    conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, id: m.id, fromMe: false } });
+    
+    let usertag = conn.getName(participant);
+    conn.reply('543876577197@s.whatsapp.net', `🚩 *${usertag}* ha sido mutado en:\n> ${groupMetadata.subject}.`, m, { quoted: m });
+  } catch (error) {
+    m.reply('🚩 Ocurrió un error: ' + error.message);
+  }
 };
 
-handler.command = ['test'];
-handler.tags = ["fun"];
-handler.help = ["declaracion"];
+handler.tags = ['owner'];
+handler.help = ['mute @tag'];
+handler.command = ['mute'];
+handler.mods = true;
+handler.group = true;
+handler.botAdmin = true;
 
 export default handler;
