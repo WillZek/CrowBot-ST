@@ -18,14 +18,6 @@ if (/^Bot de mierda/i.test(m.text)) {
 conn.reply(m.chat, `*No digas mamadas, Meriyein*`, m, rcanal, )
 }
 
-if (/^Wilker$/i.test(m.text)) {
-conn.reply(m.chat, `*Destroy🔥 es la perrita de mi creador* 🥵🥵`, m, rcanal, )
-}
-
-if (/^tesis/i.test(m.text)) {
-conn.reply(m.chat, `*Tesis 🔥 es la pajeadora de mi creador* 🥵🥵`, m, rcanal, )
-}
-
 if (/^porno|xxx|gore/i.test(m.text)) {
 conn.reply(m.chat, `*Escucha maldita sabandija ni se te ocurra enviar ese tipo de contenido 🤬*`, m, rcanal, )
 }
@@ -36,12 +28,6 @@ conn.reply(m.chat, `*rroz y pollo* 😋👌`, m, rcanal, )
 
 if (/^Bot Perzonalizado Simple/i.test(m.text)) {
 conn.reply(m.chat, `*Claro, El Bot Perzonalizado Simple Cuesta 14$ Con Server Incluído y comisión, trae comandos básicos.[🌠]*`, m, rcanal, )
-}
-
-if (/^Quiero Un Bot/i.test(m.text)) {
-conn.reply(m.chat, `*¡Claro!, Vendemos Bots A Buen Precio Y Accesibles a tus Necesidades [🌠]*
-> Más Información 
-https://chat.whatsapp.com/KfcT8ReqiJW93g17vSXVpf`, m, rcanal, )
 }
 
 if (/^Bot de mrd/i.test(m.text)) {
@@ -57,22 +43,15 @@ Tenemos:
 > *Consulta Los Precios [🌠]*`, m, rcanal, )
 }
 
-if (/^Conoces a diomar/i.test(m.text)) { 
-conn.reply(m.chat, `*Si Lo conozco, Es Una Zorra caliente 🥵❤️‍🔥*`, m, rcanal, )
-}
-
 if (/^Bot en decadencia/i.test(m.text)) {
-conn.reply(m.chat, `*Calla 🍆🥵*`, m, rcanal, )
-}
-
-if (/^WillZek/i.test(m.text)) {
-conn.reply(m.chat, `*WillZek Es Mi Creador, Respeta!*`, m, rcanal, )
+conn.reply(m.chat, `*Tu Mamá we 🍆🥵*`, m, rcanal, )
 }
 
 if (/^Crow$/i.test(m.text)) {
 conn.reply(m.chat, `*Hola Eres Fan De* *CrowBot o Brawl Stars*
 *Entonces Sigue El Canal Oficial!*\n> https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W\n\n*O Puedes Ir Al Sitio Web Oficial De CrowBot!*\n> https://crow-bot-dashboard.vercel.app/\n\n*Gracias por utilizar CrowBot-ST* `, m, rcanal, )
 }
+
 if (/^reglasgp|.reglasgp$/i.test(m.text)) {
 conn.reply(m.chat, `**R꙰EGLAS DEL GRUP❍ꪜ*
 
