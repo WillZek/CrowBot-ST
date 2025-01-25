@@ -68,6 +68,7 @@ ___
 | **WhatsApp** | 𝐆𝐫𝐮𝐩𝐨 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://chat.whatsapp.com/B7POPrlJiZf7UWHJKvzVkx) |
 | **WhatsApp** | 𝐂𝐨𝐦𝐮𝐧𝐢𝐝𝐚𝐝 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click aquí!](https://chat.whatsapp.com/B85dNp4WfzsDeDz8OFgvhx) |
 | **Dashboard** | 𝐒𝐢𝐭𝐢𝐨𝐖𝐞𝐛 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click Aquí!](https://crow-bot-dashboard.vercel.app/) |
+| **Terminos** | 𝐓𝐞𝐫𝐦𝐢𝐧𝐨𝐬 𝐃𝐞𝐥𝐚 𝐖𝐞𝐛 | [¡Click Aquí!](https://github.com/WillZek/CrowBot-ST/blob/main/TyC_De_CrowBot_Web.md) |
 
 </details>
 
