@@ -41,9 +41,6 @@ global.namechannel2 = '『✯ 𝗧𝗲𝗮𝗺 𝗖𝗼𝗺𝘂𝗻𝗶𝘁𝘆 
 global.namegrupo = 'シ︎ 𝗖𝗿𝗼𝘄𝗕𝗼𝘁-𝗠𝗗 💛'
 global.namecomu = '『𝗚𝗿𝘂𝗽𝗼 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 𝗖𝗿𝗼𝘄𝗕𝗼𝘁✯』'
 global.namecomu2 = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
-global.colab1 = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
-global.colab2 = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
-global.colab3 = '𝗧𝗵𝗲𝗖𝗿𝗼𝘄𝗕𝗼𝘁'
 
 //Reacciones De Comandos.!
 global.rwait = '🕒'
@@ -60,9 +57,6 @@ global.emojis = [emoji, emoji2, emoji3, emoji4, emoji5].getRandom()
 
 //mensaje en espera
 global.wait = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waitt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waittt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
-global.waitttt = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼...*';
 
 //Enlaces
 var canal =   'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
@@ -93,12 +87,6 @@ global.taguser = '@' + m.sender.split("@s.whatsapp.net")
 var more = String.fromCharCode(8206)
 global.readMore = more.repeat(850)
 
-//tags
-global.nombre = conn.getName(m.sender)
-global.taguser = '@' + m.sender.split("@s.whatsapp.net")
-var more = String.fromCharCode(8206)
-global.readMore = more.repeat(850)
-
 global.authsticker = `┊👑Bot\n┊↳${botname}\n\n┊👑Usuario\n┊↳ @${conn.getName(m.sender)}`;
 
 global.packsticker = `┊ 🔱𝐒𝐭𝐚𝐫𝐂𝐨𝐫𝐞💫𝐓𝐞𝐚𝐦\n↳https://github.com/WillZek\n\n┊ 👹Info:\n↳Wa.me/50557865603`
@@ -106,15 +94,15 @@ global.packsticker = `┊ 🔱𝐒𝐭𝐚𝐫𝐂𝐨𝐫𝐞💫𝐓𝐞𝐚�
 //Fakes
 global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363371291001924@newsletter', newsletterName: "𝐓ꫀׁׅܻ݊ᥲm 𝐁ꭈׁׅіᧁׁhׁׅ֮𝗍  𝐌᥆᥆݊ꪀ", serverMessageId: -1 }
+}}, { quoted: m }
+
 //Id Channel
 global.idchannel = '120363381910502266@newsletter'
 global.canalIdM = ["120363338362822764@newsletter", "120363368073378190@newsletter", "120363387375075395@newsletter"]
 global.canalNombreM = ["🌠 𝐋𝐮𝐦𝐢𝐧𝐚𝐫𝐲'𝐬 | 𝐖𝐞𝐛 𝐇𝐨𝐬𝐭𝐢𝐧𝐠 🌌", "✯ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✯", "⏤͟͟͞͞☆ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 𝐓𝐞𝐬𝐭 『𝐏𝐨𝐝𝐜𝐚𝐬𝐭』"]
 global.channelRD = await getRandomChannel()
 // global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "3876577197-120363302285079181@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: `${packname}`, orderTitle: 'Bang', thumbnail: icons, sellerJid: '0@s.whatsapp.net'}}}
-
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363371291001924@newsletter', newsletterName: "𝐓ꫀׁׅܻ݊ᥲm 𝐁ꭈׁׅіᧁׁhׁׅ֮𝗍  𝐌᥆᥆݊ꪀ", serverMessageId: -1 }
-}}, { quoted: m }
   
 global.icono = [ 
 'https://files.catbox.moe/pl19zo.jpg',
@@ -130,20 +118,6 @@ global.urls = [
 "https://qu.ax/vnPMj.mp4",
 ];
 let gifUrl = urls[Math.floor(Math.random() * urls.length)];
-
-const canalName = [
-"⏤͟͟͞͞⋆⬪࣪ꥈ🎅★ ׄ ꒱ 𝑪𝒓𝒐𝒘𝑩𝒐𝒕 - 𝑺.𝑪.𝑨 ୭",
-"𝐌𝐚𝐬𝐡𝐚 𝐇𝐨𝐬𝐭 🎄 ℍ𝕠𝕤𝕥𝕚𝕟𝕘"
-].getRandom()
-const randomCanalName =
-canalName[Math.floor(Math.random() *
-canalName.length)];
-
- const canalId = [
-"120363368073378190@newsletter", "120363368073378190@newsletter"
-].getRandom()
-
-const randomCanalId = canalId[Math.floor(Math.random() * canalId.length)];
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: textbot, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icono, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
