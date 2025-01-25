@@ -59,13 +59,12 @@ global.emojis = [emoji, emoji2, emoji3, emoji4, emoji5].getRandom()
 global.wait = '🕒 *𝗘𝘀𝗽𝗲𝗿𝗮 𝗨𝗻 𝗠𝗼𝗺𝗲𝗻𝘁𝗼, 𝗦𝗼𝘆 𝗟𝗲𝗻𝘁𝗼 ...*';
 
 //Enlaces
-var canal =   'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
 var grupo = 'https://chat.whatsapp.com/B7POPrlJiZf7UWHJKvzVkx'  
 var github = 'https://github.com/WillZek/CrowBot-ST' 
 var web = 'https://crow-bot-dashboard.vercel.app/' 
 let instagram = 'https://www.instagram.com/crowbot_wa'
 
-global.redes = [canal, grupo, github, web, instagram].getRandom()
+global.redes = [grupo, github, web, instagram].getRandom()
 
 //Imagen
 let category = "imagen"
