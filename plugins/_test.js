@@ -1,7 +1,10 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
-    if ((!m.mentionedJid || !m.mentionedJid.length) && !m.quoted) { 
-        return conn.reply(m.chat, `🍭 *Etiqueta a la persona que deseas mutar*`, m);
-    }
+    let who;
+    if (m.isGroup) who = m.mentionedJid[0];
+    else who = m.chat;
+
+    if (!who) return m.reply(`🍭 *Etiqueta a la persona que deseas mutar*`);
+
 
     let delet;
     if (m.quoted) {
