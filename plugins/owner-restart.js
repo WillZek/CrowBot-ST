@@ -6,14 +6,13 @@ let handler = async (m, { conn, isROwner, text }) => {
     if (conn.user.jid === conn.user.jid) {
         const progreso = [
       "*♻️iniciando proceso de reinicio de CrowBot*",
-            "□□□□□□□ 0%",
-            "■□□□□□□ 20%",
-            "■■□□□□□ 30%",
-            "■■■□□□□ 50%",
-            "■■■■□□□ 60%",
-            "■■■■■□□ 70%",
-            "■■■■■■□ 80%",
-            "■■■■■■■ 100%",
+            "□□□□□□ 0%",
+            "■□□□□□ 20%",
+            "■■□□□□ 30%",
+            "■■■□□□ 50%",
+            "■■■■□□ 60%",
+            "■■■■■□ 80%",
+            "■■■■■■ 100%",
         ];
 
         const { key } = await conn.sendMessage(m.chat, { text: progreso[0] }, { quoted: m });
