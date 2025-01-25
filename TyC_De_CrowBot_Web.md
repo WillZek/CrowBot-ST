@@ -12,7 +12,7 @@ ___
 
 # **`🍬 TIENDA`**
 
-## Te Ofrecemos Un Apartado De Tienda, Para Que Puedes Comprar Tu Token Premium Mensual Por Tan Solo 3$
+## Te Ofrecemos Un Apartado De [Tienda](https://crow-bot-dashboard.vercel.app/), Para Que Puedes Comprar Tu Token Premium Mensual Por Tan Solo 3$
 - Soporte Técnico
 - Mantenimiento y Atención Al Cliente
 - Más De 300 Comandos
@@ -22,6 +22,5 @@ ___
 |------|-------------|-------|
 | **Dashboard** | 𝐒𝐢𝐭𝐢𝐨𝐖𝐞𝐛 𝐎𝐟𝐢𝐜𝐢𝐚𝐥 | [¡Click Aquí!](https://crow-bot-dashboard.vercel.app/) 
 
-> ¿Que Esperas Para Comprar Tu **[Token](https://crow-bot-dashboard.vercel.app/)**?
 
 > ☕ Powered By Staff De **[Crow's Club](https://github.com/WillZek/CrowBot-ST)**
