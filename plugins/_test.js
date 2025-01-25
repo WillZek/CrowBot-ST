@@ -1,5 +1,5 @@
 let handler = async (m, { conn, usedPrefix, command }) => {
-    if (!m.quoted) return conn.reply(m.chat, `🍭 *Etiqueta Ala persona que deseas mutar*`, m);
+     if (!m.mentionedJid[0] && !m.quoted) { return conn.reply(m.chat, `🍭 *Etiqueta Ala persona que deseas mutar*`, m);
 
     let delet = m.message.extendedTextMessage.contextInfo.participant;
     let bang = m.message.extendedTextMessage.contextInfo.stanzaId;
