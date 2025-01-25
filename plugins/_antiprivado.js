@@ -6,7 +6,7 @@ export async function before(m, {conn, isAdmin, isBotAdmin, isOwner, isROwner}) 
     const chat = global.db.data.chats[m.chat];
     const bot = global.db.data.settings[this.user.jid] || {};
     if (bot.antiPrivate && !isOwner && !isROwner) {
-      await m.reply(`> ⭐ Hola @${m.sender.split`@`[0]}, Lo Siento No Esta 📌Permitido Escribirme Al Privado ⚠️ Por Lo Cual Seras Bloqueado/A\n\n> *⭐ Wiii* \n\n\n _Ayudame a cumplir mi meta_\n Canal\nhttps://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W`, false, {mentions: [m.sender]});
+      await m.reply(`> ⭐ Hola @${m.sender.split`@`[0]}, Lo Siento No Esta 📌Permitido Escribirme Al Privado ⚠️ Por Lo Cual Seras Bloqueado/A\n\n> *⭐ Wiii* \n\n\n _Ayudame a cumplir mi meta_\n Canal\nhttps://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W\n*Si Te Quieres Hacer SubBot Puedes Hacerlo En El Grupo Oficial Del Bot : ${grupo}`, false, {mentions: [m.sender]});
       await this.updateBlockStatus(m.chat, 'block');
     }
     return !1;
