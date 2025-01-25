@@ -24,4 +24,4 @@ ___
 
 > ¿Que Esperas Para Comprar Tu **[Token](https://crow-bot-dashboard.vercel.app/)**?
 
-© Powered By Staff De **[Crow's Club](https://github.com/WillZek/CrowBot-ST)**
+> `© Powered By Staff De **[Crow's Club](https://github.com/WillZek/CrowBot-ST)`**
