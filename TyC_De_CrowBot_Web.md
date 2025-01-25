@@ -1,4 +1,4 @@
-## **`🎩 CrowBot - Página Web`**
+## **`🎩 CrowBot - Web`**
 
 ![CrowMenu](https://files.catbox.moe/wifc6k.jpg)
 
