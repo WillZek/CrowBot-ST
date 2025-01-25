@@ -2,7 +2,7 @@
 
 ![CrowMenu](https://files.catbox.moe/wifc6k.jpg)
 
-## Este Sitio Web A Sido Creado Exclusivamente Para CrowBot 
+## Este [Sitio Web](https://crow-bot-dashboard.vercel.app/) A Sido Creado Exclusivamente Para CrowBot 
 > Cualquier Duda O Problemas Preguntarle Al Staff De CrowBot o A Los Administradores Del Grupo.
 
 # Tienda
