@@ -6,7 +6,7 @@
 
 > **Cualquier Duda O Problemas Contactar Con El Staff De Crow's Club**
 
-# 🍬 Tienda
+# **`🍬 Tienda`**
 
 ## Te Ofrecemos Un Apartado De Tienda, Para Que Puedes Comprar Tu Token Premium Mensual Por Tan Solo 3$
 - Soporte Técnico
