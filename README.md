@@ -130,6 +130,10 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 > [!IMPORTANT]
 > **CrowBot No Recibe Actualizaciones En Termux**
 
+> [!TIP]
+> Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!
+
+
 #### **`🌠 Click en la imagen para obtener termux`**
 <a
 href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="https://qu.ax/finc.jpg" height="125px"></a>
@@ -166,14 +170,8 @@ npm start
 
 </details>
 
-___
-
-
-> [!TIP]
-> Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!
-
-
 ---
+
 ### 🍭 `HOSTINGS INFORMACION`
 
 ![Informacion](https://qu.ax/LgBRM.jpg)
