@@ -127,6 +127,9 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 
 ### **`🖤 TERMUX INFORMACIÓN`**
 
+> [!IMPORTANT]
+> **CrowBot No Recibe Actualizaciones En Termux**
+
 #### **`🌠 Click en la imagen para obtener termux`**
 <a
 href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="https://qu.ax/finc.jpg" height="125px"></a>
@@ -162,6 +165,9 @@ npm start
 > **Si después de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal**
 
 </details>
+
+> [!TIP]
+> **Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!**
 
 ---
 ### 🍭 `HOSTINGS INFORMACION`
