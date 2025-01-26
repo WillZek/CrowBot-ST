@@ -168,7 +168,8 @@ npm start
 
 
 > [!TIP]
-> Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu Token En La Pagina Oficial De CrowBot!.
+> Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!
+.
 
 ---
 ### 🍭 `HOSTINGS INFORMACION`
