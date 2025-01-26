@@ -10,12 +10,6 @@ href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src=
 
 </p>
 
-
-</p>
-<p align="center"><img src="https://profile-counter.glitch.me/{CrowBot-ST}/count.svg" alt="WillZek:: Visitor's Count" /></p>
-
-</p>
-
 ___
 
 # **`📩 Donaciones`**
