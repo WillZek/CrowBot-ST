@@ -15,6 +15,8 @@ ___
 # **`📩 Donaciones`**
 
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.me/starcoreNinoPina)
+[![Donen Pijes](https://img.shields.io/badge/Donar-E4405F?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/crowclub#pageMessageModal)
+
 
 ___
 
