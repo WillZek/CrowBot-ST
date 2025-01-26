@@ -253,9 +253,10 @@ href="https://dahs.hostingpy.shop/home"><img src="https://files.catbox.moe/lr92z
 </details>
 
 ## 🐦‍🔥 **`COLABORADORES`**
-<a href="https://github.com/WillZek/CrowBot-ST/graphs/contributors">
-<img src="https://contrib.rocks/image?repo=WillZek/CrowBot-ST" /> 
-</a>
+<a href="https://github.com/The-king-Destroy"><img src="https://github.com/The-king-Destroy.png" width="100" height="100" alt="The-king-Destroy"/></a>
+
+<a href="https://github.com/Manuel12yt"><img src="https://github.com/Manuel12yt.png" width="100" height="100" alt="Manuel12yt"/></a>
+
 
 ## **`💛 𝘊𝘙𝘌𝘈𝘋𝘖𝘙`**
 <a
