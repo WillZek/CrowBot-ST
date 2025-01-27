@@ -11,5 +11,5 @@ return conn.sendMessage(m.chat, { image: { url: img, caption: '*『✅』 Usted 
 handler.help = ['regaut'];
 handler.tags = ['rg'];
 handler.command = ['regaut', 'regautomatico', 'regautomatic', 'regrapido', 'regrap', 'verifyaut'];
-handler.register = true
+handler.register = false;
 export default handler
