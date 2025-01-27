@@ -9,7 +9,7 @@ let handler = async function (m, { conn, usedPrefix, command }) {
     let defaultAge = 18
 
     if (user.registered === true) {
-        return m.reply(`💛 𝗬𝗮 𝘁𝗲 𝗲𝗻𝗰𝘂𝗲𝗻𝘁𝗿𝗮𝘀 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗱𝗼.\n\n¿𝗤𝘂𝗶𝗲𝗿𝗲 𝘃𝗼𝗹𝘃𝗲𝗿 𝗮 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗿𝘀𝗲?\n\n𝗨𝘀𝗲 𝗲𝘀𝘁𝗲 𝗰𝗼𝗺𝗮𝗻𝗱𝗼 𝗽𝗮𝗿𝗮 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘀𝘂 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗼.\n*${usedPrefix}unreg*`)
+        return m.reply(`📩 𝗬𝗮 𝘁𝗲 𝗲𝗻𝗰𝘂𝗲𝗻𝘁𝗿𝗮𝘀 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗱𝗼.\n\n¿𝗤𝘂𝗶𝗲𝗿𝗲 𝘃𝗼𝗹𝘃𝗲𝗿 𝗮 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗿𝘀𝗲?\n\n𝗨𝘀𝗲 𝗲𝘀𝘁𝗲 𝗰𝗼𝗺𝗮𝗻𝗱𝗼 𝗽𝗮𝗿𝗮 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘀𝘂 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗼.\n*${usedPrefix}unreg*`)
     }
 
     user.name = defaultName.trim()
@@ -22,7 +22,7 @@ let handler = async function (m, { conn, usedPrefix, command }) {
 
     let sn = createHash('md5').update(m.sender).digest('hex')
     let regbot = `┏━━━━━━━━━━━━━━━━━━⬣
-┃⋄ *🎩 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 - 𝐑𝐀𝐏𝐈𝐃𝐎*
+┃⋄ *🍭 𝐑𝐄𝐆𝐈𝐒𝐓𝐑𝐎 - 𝐑𝐀𝐏𝐈𝐃𝐎*
 ┗━━━━━━━━━━━━━━━━━━⬣\n`
     regbot += `•┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄┄•\n`
     regbot += `「💛」𝐍𝐨𝐦𝐛𝐫𝐞: ${defaultName}\n`
@@ -34,14 +34,14 @@ let handler = async function (m, { conn, usedPrefix, command }) {
     regbot += `• 100 Experiencia 💸\n> `
     regbot += `• 5 Tokens 💰\n`
     regbot += `꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷\n> `
-    regbot += `🍭 Verifica Tu Registro Aqui 👇🏻`
+    regbot += `🎩 Verifica Tu Registro Aqui 👇🏻`
 
     await m.react('🍷')
     await conn.sendMessage(m.chat, {
         text: regbot,
         contextInfo: {
             externalAdReply: {
-                title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
+                title: '⊱『🌃𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥🍬』⊰',
                 body: '¡Bienvenido a CrowBot!',
                 thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg',
                 sourceUrl: 'https://whatsapp.com/channel/0029Vb1kImN42Dcn99y1rW0E',
@@ -53,7 +53,7 @@ let handler = async function (m, { conn, usedPrefix, command }) {
     }, { quoted: m });
 
     let channelID = '120363387375075395@newsletter';
-    let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *Verificación:* ${defaultName}\n◉ *Edad:* ${defaultAge} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 5 crowcoins 🪙\n*¡Bienvenido/a al bot!*`;
+    let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *Verificación:* ${defaultName}\n◉ *Edad:* ${defaultAge} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 5 Estrellas 🪙\n*¡Bienvenido/a al bot!*`;
 
     await conn.sendMessage(channelID, {
         text: messageContent
@@ -62,6 +62,6 @@ let handler = async function (m, { conn, usedPrefix, command }) {
 
 handler.help = ['regaut']
 handler.tags = ['rg']
-handler.command = ['regaut']
+handler.command = ['regaut', 'regautomatico', 'regrapido']
 
 export default handler
