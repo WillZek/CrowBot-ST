@@ -21,6 +21,7 @@ global.owner = [
    ['573007796996', 'Gestion Morales', true],
    ['573215751237', 'CrowBot OFC1', true],
    ['51939658716', 'Gestion Mateo', true],
+   ['51920227615', 'Gestion Sha', true],
 ]
 
 global.creadorbot = [
