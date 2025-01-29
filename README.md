@@ -131,7 +131,7 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 > **CrowBot No Recibe Actualizaciones En Termux**
 
 > [!TIP]
-> Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!
+> **Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!**
 
 
 #### **`🌠 Click en la imagen para obtener termux`**
