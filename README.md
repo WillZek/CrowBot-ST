@@ -263,4 +263,4 @@ href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" widt
 
 </details>
 
-> **[⏤͟͟͞͞P᥆ᥕᥱrᥱძ ᑲᥡ s𝗍ᥲrᥴ᥆rᥱ 𝗍ᥱᥲm ❀](https://whatsapp.com/channel/0029VaxkClI1NCrW4BX5rn3g)**
+> **[✎ P᥆ᥕᥱrᥱძ ᑲᥡ s𝗍ᥲrᥴ᥆rᥱ 𝗍ᥱᥲm ❀](https://whatsapp.com/channel/0029VaxkClI1NCrW4BX5rn3g)**
