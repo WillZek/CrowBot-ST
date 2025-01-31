@@ -6,3 +6,7 @@ if (!text) return m.reply('🎩 Ingresa Un Texto Que Deseas Buscar En Google');
 
 let api = `https://delirius-apiofc.vercel.app/search/gimage?query=${text}`;
 let response = await fetch(api);
+let json = response.json();
+let data = join.data[0];
+
+
