@@ -17,7 +17,7 @@ global.owner = [
    ['584120346669', 'Dev ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
    ['51971867199', 'Dev Senna', true],
    ['584241836217', 'Dev Prak', true],
-   ['519168382008', 'Dev Darkcore', true],
+   ['51968382008', 'Dev Darkcore', true],
    ['573007796996', 'Gestion Morales', true],
    ['573215751237', 'CrowBot OFC1', true],
    ['51939658716', 'Gestion Mateo', true],
