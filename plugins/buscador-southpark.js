@@ -2,7 +2,7 @@
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (text) return m.reply('🍭 Ingresa Un Texto Para Buscar En South Park');
+if (!text) return m.reply('🍭 Ingresa Un Texto Para Buscar En South Park');
 
 try {
 let api = `https://delirius-apiofc.vercel.app/search/southpark?query=${text}`;
