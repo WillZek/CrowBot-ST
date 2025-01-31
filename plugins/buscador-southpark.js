@@ -8,7 +8,7 @@ try {
 let api = `https://delirius-apiofc.vercel.app/search/southpark?query=${text}`;
 
 let response = await fetch(api);
-let json = response.json();
+let json = await response.json();
 let result = json.data[0];
 
 let park = `*Resultado De Tu Búsqueda:* ${text}\n\n*Título:* ${data.title}\n*Duración:* ${data.duration}\n*Episodio:* ${data.episode}\n*Descripción:* ${data.description}\n*Link:* ${data.url}\> ${dev}`;
