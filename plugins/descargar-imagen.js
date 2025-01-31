@@ -26,6 +26,6 @@ m.react('✖️');
  }
 };
 
-handler.command = ['testgoogle', 'tgo'];
+handler.command = ['imagen', 'image'];
 
 export default handler;
