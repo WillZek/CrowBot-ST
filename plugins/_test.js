@@ -13,7 +13,7 @@ let json = response.json();
 let data = json.data[0];
 
 let txt = `*Resultado De: ${text}`;
-let img = data.url;
+let img = json.url;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
 
