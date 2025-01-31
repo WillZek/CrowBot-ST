@@ -13,7 +13,7 @@ let response = await fetch(api);
 let json = await response.json();
 let data = json.data[0];
 
-let park = `*Resultado De Tu Búsqueda:* ${text}\n\n*Título:* ${data.title}\n*Duración:* ${data.duration}\n*Episodio:* ${data.episode}\n*Descripción:* ${data.description}\n*Link:* ${data.url}\> ${dev}`;
+let park = `*Resultado De Tu Búsqueda:* ${text}\n\n*Título:* ${data.title}\n*Duración:* ${data.duration}\n*Episodio:* ${data.episode}\n*Descripción:* ${data.description}\n*Link:* ${data.url}\n> ${dev}`;
 
 conn.sendMessage(m.chat, { caption: park }, { quoted: fkontak });
 
