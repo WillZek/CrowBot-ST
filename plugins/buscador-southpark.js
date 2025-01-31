@@ -15,7 +15,7 @@ let datas = json.data;
 
 let park = `*Información De:* ${text}\n\n*Capital:* ${datas.capitalCity}\n*Continente:* ${datas.continent}\n*Población:* ${datas.population}\n*Prefijo:* ${datas.callingCode}\n*Moneda:* ${datas.currency}\n*Descripción:* ${datas.description}`;
 
-let img = datas.imagen;
+let img = datas.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: park }, { quoted: fkontak });
 
