@@ -13,7 +13,7 @@ let response = await fetch(api);
 let json = await response.json();
 let datas = json.data;
 
-let park = `*Información De:* ${text}\n\n*Capital:* ${datas.capitalCity}\n*Continente:* ${datas.continent}\n*Población:* ${datas.population}\n*Prefijo:* ${datas.callingCode}\n*Moneda:* ${datas.currency}\n*Descripción:* ${datas.description}`;
+let park = `*Información De:* ${text}\n\n*Organización:* ${datas.memberOf}\n*Capital:* ${datas.capitalCity}\n*Continente:* ${datas.continent}\n*Población:* ${datas.population}\n*Prefijo:* ${datas.callingCode}\n*Moneda:* ${datas.currency}\n*Descripción:* ${datas.description}`;
 
 let img = datas.image;
 
