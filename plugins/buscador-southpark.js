@@ -11,11 +11,11 @@ let api = `https://delirius-apiofc.vercel.app/tools/flaginfo?query=${text}`;
 
 let response = await fetch(api);
 let json = await response.json();
-let data = json.data[0];
+let datas = json.data[0];
 
-let park = `*Información De:* ${text}\n\n*Capital:* ${data.capitalCity}\n*Continente:* ${data.continent}\n*Población:* ${data.population}\n*Prefijo:* ${data.callingCode}\n*Moneda:* ${data.currency}\n*Descripción:* ${data.description}`;
+let park = `*Información De:* ${text}\n\n*Capital:* ${datas.capitalCity}\n*Continente:* ${datas.continent}\n*Población:* ${datas.population}\n*Prefijo:* ${datas.callingCode}\n*Moneda:* ${datas.currency}\n*Descripción:* ${datas.description}`;
 
-let img = data.imagen;
+let img = datas.imagen;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: park }, { quoted: fkontak });
 
