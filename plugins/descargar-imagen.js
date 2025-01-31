@@ -1,19 +1,31 @@
-import Starlights from "@StarlightsTeam/Scraper"
+/* Código Hecho Por WillZek 
+- https://github.com/WillZek 
+- https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W
+*/
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return m.reply('🚩 Ingresa el nombre de la imágen que estas buscando.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* Crow De Brawl Stars`)
-await m.react('🕓')
+import fetch from 'node-fetch';
+
+let handler = async(m, { conn, text, usedPrefix, command }) => {
+  if (!text) return m.reply('🎩 Ingresa Un Texto Para Buscar Una Imagen En Google');
+
 try {
-let { dl_url } = await Starlights.pinterest(text)
-await conn.sendFile(m.chat, dl_url, 'thumbnail.jpg', `*» Resultado* : ${text}`, m, null, rcanal)
-await m.react('✅')
-} catch {
-await m.react('✖️')
-}}
-handler.help = ['pinterest', 'imagen']
-handler.tags = ['img']
-handler.command = ['pinterest', 'imagen']
-handler.register = true 
-handler.estrellas = 5;
+let api = `https://delirius-apiofc.vercel.app/search/gimage?query=${text}`;
+let response = await fetch(api);
+let json = await response.json();
+let data = json.data[0];
 
-export default handler
+let txt = `*Resultado De:* ${text}`;
+let img = data.url;
+
+conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
+
+} catch (e) {
+console.error(e);
+m.reply(`*Error:* ${e.message}`);
+m.react('✖️');
+ }
+};
+
+handler.command = ['testgoogle', 'tgo'];
+
+export default handler;
