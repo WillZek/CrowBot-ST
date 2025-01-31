@@ -15,4 +15,11 @@ let img = data.url;
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
 
 } catch (e) {
+console.error(e)
+m.reply(`*Error:* ${e.message}`);
+m.react('✖️');
+ }
+};
+
+
 
