@@ -9,4 +9,10 @@ let response = await fetch(api);
 let json = response.json();
 let data = join.data[0];
 
+let txt = `*Resultado De: ${text}`;
+let img = data.url;
+
+conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
+
+} catch (e) {
 
