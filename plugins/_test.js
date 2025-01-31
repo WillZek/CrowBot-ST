@@ -21,5 +21,8 @@ m.react('✖️');
  }
 };
 
+handler.command = ['testgoogle', 'tgo'];
+
+export default handler;
 
 
