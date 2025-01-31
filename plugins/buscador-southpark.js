@@ -13,7 +13,7 @@ let data = json.data[0];
 
 let park = `*Resultado De Tu Búsqueda:* ${text}\n\n*Título:* ${data.title}\n*Duración:* ${data.duration}\n*Episodio:* ${data.episode}\n*Descripción:* ${data.description}\n*Link:* ${data.url}\> ${dev}`;
 
-conn.sendMessage(m.chat, { image: { url: null }, caption: park }, { quoted: fkontak });
+conn.sendMessage(m.chat, { caption: park }, { quoted: fkontak });
 
 } catch (e) {
 m.reply(`*Error:* ${e.message}`);
