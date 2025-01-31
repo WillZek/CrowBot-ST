@@ -10,7 +10,7 @@ try {
 let api = `https://delirius-apiofc.vercel.app/search/gimage?query=${text}`;
 let response = await fetch(api);
 let json = response.json();
-let data = join.data[0];
+let data = json.data[0];
 
 let txt = `*Resultado De: ${text}`;
 let img = data.url;
