@@ -1,32 +1,39 @@
-import fetch from 'node-fetch'
-import yts from 'yt-search'
+/* Tiktok MP3 By WillZek 
+- Free Codes Titan 
+- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
+*/
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) throw m.reply(`🎩 Ingresa el link de tiktok para descargar su audio.`);
-conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
+// [💥] 𝗧𝗜𝗞𝗧𝗢𝗞 𝗠𝗣3 - 𝗗𝗟
 
-  let d2 = await fetch(`https://eliasar-yt-api.vercel.app/api/search/tiktok?query=${text}`)
-  let dp = await d2.json()
-      const doc = {
-      audio: { url: dp.results.audio },
-      mimetype: 'audio/mp4',
-      fileName: `ttbykeni.mp3`,
-      contextInfo: {
-        externalAdReply: {
-          showAdAttribution: true,
-          mediaType: 2,
-          mediaUrl: text,
-          title: dp.results.title,
-          sourceUrl: text,
-          thumbnail: await (await conn.getFile(dp.results.thumbnail)).data
-        }
-      }
-    };
-    await conn.sendMessage(m.chat, doc, { quoted: m })
-await conn.sendMessage(m.chat, { react: { text: '✅', key: m.key }});
+import fetch from 'node-fetch';
+
+let handler = async(m, { conn, args, usedPrefix, command }) => {
+
+if (!args[0]) return m.reply(`🎩 Ingrese Una Url De Tiktok\n*Ejemplo:* ${usedPrefix + command} https://vm.tiktok.com/ZMh3KL31o/`);
+
+try {
+let api = `https://eliasar-yt-api.vercel.app/api/search/tiktok?query=${args[0]}`;
+let response = await fetch(api);
+let json = await response.json();
+let res = json.results;
+
+m.react('🕑');
+let ttt = `*Autor:* ${res.author}\n*Título:* ${res.title}`;
+
+let aud = res.audio;
+let img = 'https://files.catbox.moe/51xcx4.jpg';
+
+await conn.sendFile(m.chat, img, 'thumbnail.jpg', ttt, m, null, rcanal);
+
+conn.sendMessage(m.chat, { audio: { url: aud }, mimetype: 'audio/mpeg' }, { quoted: m });
+m.react('✅');
+
+} catch (e) {
+m.reply(`Error: ${e.message}`);
+m.react('✖️');
+ }
 }
-handler.help = ['ttmp3 *<url>*']
-handler.tags = ['descargas']
-handler.command = ['tiktokmp3', 'ttmp3']
 
-export default handler
+handler.command = ['tiktokmp3', 'ttmp3'];
+
+export default handler;
