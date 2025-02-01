@@ -22,10 +22,6 @@ if (/^porno|xxx|gore/i.test(m.text)) {
 conn.reply(m.chat, `*Escucha maldita sabandija ni se te ocurra enviar ese tipo de contenido 🤬*`, m, rcanal, )
 }
 
-if (/^a$/i.test(m.text)) {
-conn.reply(m.chat, `*rroz y pollo* 😋👌`, m, rcanal, )
-}
-
 if (/^Bot Perzonalizado Simple/i.test(m.text)) {
 conn.reply(m.chat, `*Claro, El Bot Perzonalizado Simple Cuesta 14$ Con Server Incluído y comisión, trae comandos básicos.[🌠]*`, m, rcanal, )
 }
