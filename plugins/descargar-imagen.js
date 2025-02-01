@@ -1,7 +1,4 @@
-/* Imagen Search By WillZek 
-- Free Codes Titan 
-- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
-*/
+/* Imagen Search By WillZek
 
 import fetch from 'node-fetch';
 
