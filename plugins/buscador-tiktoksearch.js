@@ -1,37 +1,36 @@
-import axios from 'axios'
-import Starlights from '@StarlightsTeam/Scraper'
+/* Tiktok Search By WillZek 
+- https://github.com/WillZek 
+*/
 
-let handler = async (m, { conn, usedPrefix, command, text, args }) => {
-  if (!text) return conn.reply(m.chat, `🚩 Ingresa el nombre video que deseas buscar en TikTok.\n\nEjemplo:\n> *${usedPrefix + command}* Crow De Brawl Stars Edits`, m, rcanal)
+// 【🔎】𝗧𝗜𝗞𝗧𝗢𝗞 𝗦𝗘𝗔𝗥𝗖𝗛
 
-  await m.react('🕓')
-  let img = await (await axios.get('https://files.catbox.moe/izoqir.jpg', { responseType: 'arraybuffer' })).data
+import fetch from 'node-fetch';
 
-  try {
-    let data = await Starlights.tiktokSearch(text)
+let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-    if (data && data.length > 0) {
-     let txt = `🎩 *RESULTADOS DE: ${text}*`
-for (let i = 0; i < Math.min(50, data.length); i++) {
-  let video = data[i]
-         txt += `\n\n`
-         txt += ` 💛 *Nro* : ${i + 1}\n`
-         txt += ` 💛 *Título* : ${video.title}\n`
-         txt += ` 💛 *Autor* : ${video.author}\n`
-         txt += ` 💛 *Url* : ${video.url}`
-}
-      await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, null, rcanal)
-      await m.react('✅')
-    } else {
-      await conn.react('✖️')
-    }
-  } catch {
-    await m.react('✖️')
-  }
-}
-handler.tags = ['buscador']
-handler.help = ['tiktoksearch *<búsqueda>*']
-handler.command = ['tiktoksearch', 'tiktoks']
-handler.register = true
+if (!text) return m.reply(`🍭 Ingrese Un Texto Para Buscarlo En Tiktok\n> *Ejemplo:* ${usedPrefix + command} Crow Edits`);
 
-export default handler
+try {
+let api = `https://delirius-apiofc.vercel.app/search/tiktoksearch?query=${text}`;
+
+let response = await fetch(api);
+let json = await response.json();
+let meta = json.meta[0];
+
+m.react('🕑');
+let txt = `✧ *Titulo:* ${meta.title}\n✧ *Likes:* ${meta.like}\n✧ *Comentarios:* ${meta.coment}\n✧ *Compartidas:* ${meta.share}\n✧ *Link:* ${meta.url}`;
+
+let vid = meta.hd;
+
+m.react('✅');
+conn.sendMessage(m.chat, { video: { url: vid }, caption: txt }, { quoted: fkontak });
+
+} catch (e) {
+m.reply(`Error: ${e.message}`);
+m.react('✖️');
+ }
+};
+
+handler.command = ['tiktoksearch', 'ttsearch'];
+
+export default handler;
