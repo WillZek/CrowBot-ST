@@ -170,7 +170,7 @@ clear
 echo -e "\e[36m
 ┏━━━━━━━━━⪩
 ┃˚₊ · ͟͟͞͞➳❥ 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐂𝐈𝐎́𝐍
-┃⏤͟͟͞͞ Black clover- MD
+┃⏤͟͟͞͞ CrowBot-ST 
 ┗━━━━━━━━━⪩
 
 ✰ Mode by:
