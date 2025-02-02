@@ -1,42 +1,47 @@
-/* Play Store Para CrowBot 
- By WillZek 
+/* 
+- Search Playstore By Jose XrL
+- Power By Team Code Titans
+- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S 
 */
+// *🍁 《 Playstore  - Search  */*
 
-import axios from 'axios';
+import gplay from "google-play-scraper";
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) return conn.reply(m.chat, `🚩 Ingrese una consulta de búsqueda\n\nEjemplo:\n> *${usedPrefix + command}* car`, m, rcanal);
+let handler = async (m, { conn, text }) => {
+  if (!text) {
+    return conn.reply(m.chat, "*\`🤍 Ingresa el nombre de app que quieres buscar\`*", m);
+  }
+  
+  let res = await gplay.search({ term: text });
+  if (!res.length) {
+    return conn.reply(m.chat, "*\`🤍 Por favor ingresa el nombre de una app de la Play Store\`*", m); 
+  }
 
-    await m.react('🕓');
-    try {
-        let response = await axios.get(`https://api.dorratz.com/playstore?query=${encodeURIComponent(args.join(' '))}`);
-        let apps = response.data;
+  let opt = {
+    contextInfo: {
+      externalAdReply: {
+        title: res[0].title,
+        body: res[0].summary,
+        thumbnail: (await conn.getFile(res[0].icon)).data,
+        sourceUrl: res[0].url,
+      },
+    },
+  };
 
-        if (!apps.length) return conn.reply(m.chat, '⚠️ No se encontraron aplicaciones.', m);
+  res = res.map(
+    (v) =>
+      `*\`🤍 Resultado:\`* ${v.title}
+       *\`✍️ Desarrollador:\`* ${v.developer}
+       *\`💸 Precio:\`* ${v.priceText}
+       *\`📈 Puntuacion:\`* ${v.scoreText}
+       *\`⛓️ Link:\`* ${v.url}`
+  ).join`\n\n`;
 
-        let txt = '`乂  A P P L I C A C I O N E S  -  F I N D`\n\n';
-        apps.forEach(app => {
-            txt += `🌟 *Nombre*: ${app.name}\n`;
-            txt += `👨‍💻 *Desarrollador*: [${app.developer}](${app.link_dev})\n`;
-            txt += `⭐ *Calificación*: ${app.rating}\n`;
-            txt += `🔗 *Enlace*: ${app.link}\n`;
-            txt += `🖼️ *Imagen*: ${app.img}\n\n`;
-        });
-
-        txt += `> 🚩 *Consulta* : *${args.join(' ')}*`;
-
-        await conn.sendMessage(m.chat, { text: txt }, { quoted: m });
-        await m.react('✅');
-    } catch (error) {
-        console.error(error);
-        await m.react('✖️');
-        return conn.reply(m.chat, '⚠️ Ocurrió un error al buscar aplicaciones.', m);
-    }
+  conn.reply(m.chat, res, m, opt); 
 };
 
-handler.help = ['playstore *<consulta>*'];
+handler.help = ['playstore', 'playstoresearch']; 
 handler.tags = ['buscador'];
-handler.command = ['playstore', 'ps'];
-handler.register = true;
+handler.command = /^(playstore|playstoresearch)$/i;
 
 export default handler;
