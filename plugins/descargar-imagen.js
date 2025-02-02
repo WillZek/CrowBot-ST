@@ -28,6 +28,8 @@ m.react('✖️');
  }
 }
 
+handler.help = ['imagen'];
+handler.tag = ['buscador'];
 handler.command = ['imagen', 'image'];
 
 export default handler;
