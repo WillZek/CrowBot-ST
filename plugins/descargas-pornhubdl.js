@@ -19,6 +19,7 @@ let url = resu.download_url;
 await conn.sendMessage(m.chat, { video: { url: url }, caption: video_title }, { quoted: m });
 
 } catch (error) {
+m.reply(`Error: ${error.message}`);
 console.error(error)
 }}
 
