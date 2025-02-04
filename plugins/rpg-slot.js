@@ -49,7 +49,7 @@ cooldowns[m.sender] = Date.now()
 return await conn.reply(m.chat, `🎰 *S L O T S*\n──────────\n${x[0]} : ${y[0]} : ${z[0]}\n${x[1]} : ${y[1]} : ${z[1]}\n${x[2]} : ${y[2]} : ${z[2]}\n──────────\n\n${end}`, m, rcanal) 
 }
 handler.help = ['slot <apuesta>']
-handler.tags = ['fun']
+handler.tags = ['rpg']
 handler.command = ['slot']
 handler.register = true
 handler.group = false 
