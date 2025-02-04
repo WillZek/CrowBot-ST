@@ -1,3 +1,5 @@
+// Créditos A Destroy (https://github.com/The-king-Destroy)
+
 let { downloadContentFromMessage } = (await import('@whiskeysockets/baileys'));
 
 let handler = async (m, { conn }) => {
