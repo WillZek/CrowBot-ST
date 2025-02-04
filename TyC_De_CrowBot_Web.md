@@ -12,7 +12,7 @@ ___
 
 # **`🍬 TIENDA`**
 
-> Te Ofrecemos Un Apartado De [Tienda](https://crow-bot-dashboard.vercel.app/), Para Que Puedes Comprar Tu Token Premium Mensual Por Tan Solo 3$
+> Te Ofrecemos Un Apartado De [Tienda](https://crow-bot-dashboard.vercel.app/), Para Que Puedes Comprar Tu Token Premium Mensual Por Tan Solo 4$
 - Soporte Técnico
 - Mantenimiento y Atención Al Cliente
 - Más De 300 Comandos
