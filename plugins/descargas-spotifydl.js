@@ -55,7 +55,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
     await m.react('❌');
     conn.reply(
       m.chat,
-      '[ ᰔᩚ ] Ocurrió un error al procesar tu solicitud.',
+      `[ ᰔᩚ ] Ocurrió un error al procesar tu solicitud. : ${error.message}`,
       m
     );
   }
