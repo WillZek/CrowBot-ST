@@ -15,6 +15,6 @@ for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper 
 }
 handler.tags = ['owner']
 handler.command = handler.help =['prestamo','prestar']
-handler.rowner = true
+handler.mods = true
 
 export default handler
