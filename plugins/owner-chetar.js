@@ -10,6 +10,6 @@ const handler = async (m, { conn }) => {
 handler.help = ['cheat'];
 handler.tags = ['owner'];
 handler.command = /^(ilimitado|infiniy|chetar)$/i;
-handler.nods = true;
+handler.mods = true;
 handler.fail = null;
 export default handler;
