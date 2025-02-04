@@ -1,89 +1,61 @@
-//Codígo modificado por ya saben xd wa.me/5351524614
+let cooldowns = {}
 
-import { delay } from "@whiskeysockets/baileys";
+let handler = async (m, { conn, args, usedPrefix, command }) => {
 
-const handler = async (m, { args, usedPrefix, command, conn }) => {
-  const fa = `🎩 Por favor, ingresa la cantidad que desea apostar.`.trim();
-  if (!args[0] || isNaN(args[0]) || parseInt(args[0]) <= 0) throw fa;
-
-  const apuesta = parseInt(args[0]);
-  const users = global.db.data.users[m.sender];
-  const time = users.lastslot + 10000;
-  if (new Date() - users.lastslot < 10000) throw `🍬 Debes esperar ${msToTime(time - new Date())} para usar #slot nuevamente.`;
-  if (apuesta < 100) throw '🍭 El minimo para apostar es de 100 XP.';
-  if (users.exp < apuesta) {
-    throw `🍭 Tu XP no es suficiente para aportar esa cantidad.`;
-  }
-
-  const emojis = ['🪙', '🍒', '🍏'];
-  const getRandomEmojis = () => {
-    const x = Array.from({ length: 3 }, () => emojis[Math.floor(Math.random() * emojis.length)]);
-    const y = Array.from({ length: 3 }, () => emojis[Math.floor(Math.random() * emojis.length)]);
-    const z = Array.from({ length: 3 }, () => emojis[Math.floor(Math.random() * emojis.length)]);
-    return { x, y, z };
-  };
-
-  const initialText = '🎰 | *SLOTS* \n────────\n';
-  let { key } = await conn.sendMessage(m.chat, { text: initialText }, { quoted: m });
-
-  const animateSlots = async () => {
-    for (let i = 0; i < 5; i++) {
-      const { x, y, z } = getRandomEmojis();
-      const animationText = `
-🎰 | *SLOTS* 
-────────
-${x[0]} : ${y[0]} : ${z[0]}
-${x[1]} : ${y[1]} : ${z[1]}
-${x[2]} : ${y[2]} : ${z[2]}
-────────`;
-      await conn.sendMessage(m.chat, { text: animationText, edit: key }, { quoted: m });
-      await delay(300);
-    }
-  };
-
-  await animateSlots();
-
-  const { x, y, z } = getRandomEmojis();
-  let end;
-  if (x[0] === y[0] && y[0] === z[0]) {
-    end = `🎩 Ganaste! 🎁 +${apuesta + apuesta} XP.`;
-    users.exp += apuesta;
-  } else if (x[0] === y[0] || x[0] === z[0] || y[0] === z[0]) {
-    end = `🍭 Casi lo logras!, sigue intentandolo = *Toma +10 XP*`;
-    users.exp += 10;
-  } else {
-    end = `🍭 Perdiste -${apuesta} XP`;
-    users.exp -= apuesta;
-  }
-
-  users.lastslot = Date.now();
-  const finalResult = `
-🎰 | *SLOTS* 
-────────
-${x[0]} : ${y[0]} : ${z[0]}
-${x[1]} : ${y[1]} : ${z[1]}
-${x[2]} : ${y[2]} : ${z[2]}
-────────
-🎰 | ${end}`;
-  await conn.sendMessage(m.chat, { text: finalResult, edit: key }, { quoted: m });
-};
-
-handler.help = ['slot <apuesta>'];
-handler.tags = ['economy'];
-handler.group = true;
+if (!args[0]) return m.reply('🚩 Ingresa la cantidad de *🌟 Estrellas* que deseas apostar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* 10`)
+if (isNaN(args[0])) return m.reply('🚩 Ingresa la cantidad de *🌟 Estrellas* que deseas apostar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* 10`)
+let apuesta = parseInt(args[0])
+let users = global.db.data.users[m.sender]
+let tiempoEspera = 15
+if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempoEspera * 1000) {
+let tiempoRestante = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempoEspera * 1000 - Date.now()) / 1000))
+m.reply(`⏱ Espera *${tiempoRestante}* para apostar nuevamente.`)
+return
+}
+let emojis = ["🍎", "🍉", "🍓"];
+let a = Math.floor(Math.random() * emojis.length);
+let b = Math.floor(Math.random() * emojis.length);
+let c = Math.floor(Math.random() * emojis.length);
+let x = [],
+y = [],
+z = [];
+for (let i = 0; i < 3; i++) {
+x[i] = emojis[a];
+a++;
+if (a == emojis.length) a = 0;
+}
+for (let i = 0; i < 3; i++) {
+y[i] = emojis[b];
+b++;
+if (b == emojis.length) b = 0;
+}
+for (let i = 0; i < 3; i++) {
+z[i] = emojis[c];
+c++;
+if (c == emojis.length) c = 0;
+}
+let end;
+if (a == b && b == c) {
+end = `Acabas de ganar *${apuesta} 🌟 Estrellas*`
+users.estrellas += apuesta
+} else if (a == b || a == c || b == c) {
+end = `Casi lo logras sigue intentando :) \nTen *1 🌟 Estrellas.*`
+users.estrellas += 1
+} else {
+end = `Perdiste  *${apuesta} 🌟 Estrellas*`
+users.estrellas -= apuesta
+}
+cooldowns[m.sender] = Date.now()
+return await conn.reply(m.chat, `🎰 *S L O T S*\n──────────\n${x[0]} : ${y[0]} : ${z[0]}\n${x[1]} : ${y[1]} : ${z[1]}\n${x[2]} : ${y[2]} : ${z[2]}\n──────────\n\n${end}`, m, rcanal) 
+}
+handler.help = ['slot <apuesta>']
+handler.tags = ['fun']
+handler.command = ['slot']
 handler.register = true
-handler.command = ['slot'];
-export default handler;
+handler.group = false 
+export default handler
 
-function msToTime(duration) {
-  const milliseconds = parseInt((duration % 1000) / 100);
-  let seconds = Math.floor((duration / 1000) % 60);
-  let minutes = Math.floor((duration / (1000 * 60)) % 60);
-  let hours = Math.floor((duration / (1000 * 60 * 60)) % 24);
-
-  hours = (hours < 10) ? '0' + hours : hours;
-  minutes = (minutes < 10) ? '0' + minutes : minutes;
-  seconds = (seconds < 10) ? '0' + seconds : seconds;
-
-  return minutes + ' m ' + seconds + ' s ';
+function segundosAHMS(segundos) {
+let segundosRestantes = segundos % 60
+return `${segundosRestantes} segundos`
 }
