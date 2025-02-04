@@ -28,6 +28,7 @@ await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`,
 
 await m.react('✅');
 } catch {
+m.reply('No Se Encontraron Resultados Para Tu Búsqueda En Soundcloud');
 await m.react('✖️');
 }}
 
