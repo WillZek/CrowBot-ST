@@ -5,65 +5,45 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-  const apiKey = 'xenzpedo';
-
-  if (!text) {
-    return conn.reply(
-      m.chat,
-      '[ ᰔᩚ ] Ingresa el nombre o enlace para buscar en *Spotify*.\n\n' + 
-      `Ejemplo:\n> *${usedPrefix + command}* https://open.spotify.com/track/123456789`,
-      m
-    );
+  if (!text || !text.startsWith('http')) {
+    return conn.reply(m.chat, '[ ᰔᩚ ] Ingresa una URL válida de *Spotify*.', m);
   }
 
   await m.react('🕓');
 
   try {
-    const response = await fetch(
-      `https://api.botcahx.eu.org/api/download/spotify?url=${encodeURIComponent(text)}&apikey=${apiKey}`
-    );
-    const result = await response.json();
+    let apiURL = `https://delirius-apiofc.vercel.app/download/spotifydlv3?url=${encodeURIComponent(text)}`;
+    let apiDL = await fetch(apiURL);
+    let jsonDL = await apiDL.json();
 
-    if (result.status && result.result?.data) {
-      const { title, artist, thumbnail, url } = result.result.data;
+    if (jsonDL && jsonDL.status && jsonDL.data) {
+      let { title, author, image, duration, url: musicUrl } = jsonDL.data;
 
-      const mensaje = `🎵 *Título*: ${title}\n🎤 *Artista*: ${artist.name}\n🔗 *Spotify*: ${artist.external_urls.spotify}\n🕒 *Duración*: ${result.result.data.duration}`;
+      let durationMinutes = Math.floor(duration / 60000);
+      let durationSeconds = ((duration % 60000) / 1000).toFixed(0);
 
-      await conn.sendFile(m.chat, thumbnail, 'cover.jpg', mensaje, m);
+      let caption = `🎶 *Título*: ${title}\n🖊️ *Autor*: ${author}\n⏳ *Duración*: ${durationMinutes}:${durationSeconds.padStart(2, '0')}\n🌐 *Enlace*: ${text}`;
 
-      await conn.sendMessage(
-        m.chat,
-        { 
-          audio: { url }, 
-          fileName: `${title}.mp3`, 
-          mimetype: 'audio/mpeg' 
-        }, 
-        { quoted: m }
-      );
+      await conn.sendFile(m.chat, image, 'cover.jpg', caption, m);
+
+      await conn.sendMessage(m.chat, {
+        audio: { url: musicUrl },
+        mimetype: 'audio/mp4'
+      }, { quoted: m });
 
       await m.react('✅');
     } else {
       await m.react('❌');
-      conn.reply(
-        m.chat,
-        '[ ᰔᩚ ] No se pudo obtener la música para este enlace o búsqueda.',
-        m
-      );
     }
   } catch (error) {
     console.error(error);
     await m.react('❌');
-    conn.reply(
-      m.chat,
-      `[ ᰔᩚ ] Ocurrió un error al procesar tu solicitud. : ${error.message}`,
-      m
-    );
   }
 };
 
-handler.help = ['spotifydl *<url>*'];
+handler.command = /^(spotifydl|spdl|Spotifydl)$/i;
 handler.tags = ['descargas'];
-handler.command = /^(spotifydl|spdl)$/i;
 handler.register = true;
+handler.estrellas = 6;
 
 export default handler;
