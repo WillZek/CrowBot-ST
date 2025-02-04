@@ -12,16 +12,12 @@ import moment from 'moment-timezone'
 global.owner = [
    ['50557865603', 'Creador WillZek💛', true],
    ['5212731595017', 'CrowBot Soporte', true],
-   ['5212731590195', 'Gestion White', true],
    ['584148256527', 'Dev Diomar', true],
    ['584120346669', 'Dev ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
    ['51971867199', 'Dev Senna', true],
    ['584241836217', 'Dev Prak', true],
    ['51968382008', 'Dev Darkcore', true],
-   ['573007796996', 'Gestion Morales', true],
    ['573215751237', 'CrowBot OFC1', true],
-   ['51939658716', 'Gestion Mateo', true],
-   ['51920227615', 'Gestion Sha', true],
 ]
 
 global.creadorbot = [
@@ -31,8 +27,8 @@ global.creadorbot = [
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.mods = []
-global.prems = []
+global.mods = ['50368471855']
+global.prems = ['573215751237']
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
