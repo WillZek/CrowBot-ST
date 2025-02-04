@@ -83,7 +83,8 @@ await conn.sendMessage(m.chat, { audio: { url: audiop }, mimetype: 'audio/mpeg' 
 await m.react('✅');
 if (fileSize > LimitAud) return await conn.sendMessage(m.chat, { document: { url: audiop }, mimetype: 'audio.mp3', fileName: `${yt_play[0].title}.mp3` }, { quoted: m });
 await m.react('✅');
-} catch (e) {    
+} catch (e) { 
+m.reply('No Se Encontraron Resultados'); 
 await m.react('✖️');
 console.log(e);
 }}}}}}}
@@ -178,7 +179,8 @@ await m.react(done);
 } else {
 await conn.sendMessage(m.chat, { video: { url: audiop }, fileName: `${yt_play[0].title}.mp4`, caption: `🌷 Aquí está tu video.`, thumbnail: yt_play[0].thumbnail, mimetype: 'video/mp4' }, { quoted: m });
 await m.react(done);
-}} catch (e) {    
+}} catch (e) {
+m.reply('No se encontró ningún Resultado');  
 await m.react(error);
 console.log(e);
 }}}}}}}}
@@ -258,6 +260,7 @@ await conn.sendMessage(m.chat, { document: { url: audioData.result.downloadUrl }
 await m.react(done);
 } catch (e) {    
 await m.react(error);
+m.reply('No Encontré Resultados');
 console.log(e);
 }}}}}}}
 
