@@ -1,32 +1,63 @@
-import axios from 'axios';
+import axios from "axios";
 
+let handler = async (m, { conn, args }) => {
+  if (!args[0]) {
+    let resp = `🎩 Ingrese el nombre de su País o Ciudad.`;
+    let txt = '';
+    let count = 0;
+    for (const c of resp) {
+      await new Promise(resolve => setTimeout(resolve, 5));
+      txt += c;
+      count++;
+      if (count % 10 === 0) {
+        conn.sendPresenceUpdate('composing', m.chat);
+      }
+    }
+    await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, { quoted: m, ephemeralExpiration: 24*60*60, disappearingMessagesInChat: 24*60*60 });
+    return;
+  }
 
-const handler = async (m, {args}) => {
-  const datas = global
-  const idioma = datas.db.data.users[m.sender].language || global.defaultLenguaje
-  const _translate = JSON.parse(fs.readFileSync(`./src/languages/${idioma}.json`))
-  const tradutor = _translate.plugins.herramientas_clima
-
-  if (!args[0]) throw tradutor.texto1;
   try {
-    const response = axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273`);
-    const res = await response;
-    const name = res.data.name;
-    const Country = res.data.sys.country;
-    const Weather = res.data.weather[0].description;
-    const Temperature = res.data.main.temp + '°C';
-    const Minimum_Temperature = res.data.main.temp_min + '°C';
-    const Maximum_Temperature = res.data.main.temp_max + '°C';
-    const Humidity = res.data.main.humidity + '%';
-    const Wind = res.data.wind.speed + 'km/h';
-    const wea = `${tradutor.texto2[0]} ${name}\n${tradutor.texto2[1]} ${Country}\n${tradutor.texto2[2]} ${Weather}\n${tradutor.texto2[3]} ${Temperature}\n${tradutor.texto2[4]} ${Minimum_Temperature}\n${tradutor.texto2[5]} ${Maximum_Temperature}\n${tradutor.texto2[6]} ${Humidity}\n${tradutor.texto2[7]} ${Wind}`;
-    m.reply(wea);
-  } catch {
-    return tradutor.texto3;
+    const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args[0]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273`);
+    const res = response.data;
+    const name = res.name;
+    const Country = res.sys.country;
+    const Weather = res.weather[0].description;
+    const Temperature = res.main.temp + "°C";
+    const Minimum_Temperature = res.main.temp_min + "°C";
+    const Maximum_Temperature = res.main.temp_max + "°C";
+    const Humidity = res.main.humidity + "%";
+    const Wind = res.wind.speed + "km/h";
+    const wea = `「 📍 」LUGAR: ${name}\n「 🗺️ 」PAIS: ${Country}\n「 🌤️ 」TIEMPO: ${Weather}\n「 🌡️ 」TEMPERATURA: ${Temperature}\n「 💠 」TEMPERATURA MINIMA: ${Minimum_Temperature}\n「 📛 」TEMPERATURA MAXIMA: ${Maximum_Temperature}\n「 💦 」HUMEDAD: ${Humidity}\n「 🌬️ 」VIENTO: ${Wind}`.trim();
+
+    let txt = '';
+    let count = 0;
+    for (const c of wea) {
+      await new Promise(resolve => setTimeout(resolve, 5));
+      txt += c;
+      count++;
+      if (count % 10 === 0) {
+        conn.sendPresenceUpdate('composing', m.chat);
+      }
+    }
+    await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, { quoted: m, ephemeralExpiration: 24*60*60, disappearingMessagesInChat: 24*60*60 });
+  } catch (e) {
+    let resp = "⚠️ Error!\n No se encontraron resultados, trate de escribir un país o ciudad existente.";
+    let txt = '';
+    let count = 0;
+    for (const c of resp) {
+      await new Promise(resolve => setTimeout(resolve, 5));
+      txt += c;
+      count++;
+      if (count % 10 === 0) {
+        conn.sendPresenceUpdate('composing', m.chat);
+      }
+    }
+    await conn.sendMessage(m.chat, { text: txt.trim(), mentions: conn.parseMention(txt) }, { quoted: m, ephemeralExpiration: 24*60*60, disappearingMessagesInChat: 24*60*60 });
   }
 };
+
 handler.help = ['clima *<ciudad/país>*'];
 handler.tags = ['tools'];
-handler.command = /^(clima|tiempo)$/i;
-handler.estrellas = 6;
+handler.command = ['clima', 'tiempo']
 export default handler;
