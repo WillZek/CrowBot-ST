@@ -46,7 +46,7 @@ contextInfo: {
 externalAdReply: {
 showAdAttribution: true,
 renderLargerThumbnail: false,
-title: `🎩 STAFF OFICIAL✨`,
+title: `🎩 STAFF OFICIAL🌟`,
 body: dev,
 mediaType: 1,
 sourceUrl: redes,
