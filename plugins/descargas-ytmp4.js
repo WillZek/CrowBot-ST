@@ -27,7 +27,6 @@ handler.estrellas = 4;
 handler.register = true;
 
 export default handler;
-*/
 
 /* 
 - Downloader Ytmp4 By DarkCore
@@ -75,3 +74,4 @@ handler.command = ['ytmp4'];
 handler.tags = ['descargas'];
 
 export default handler;
+*/
