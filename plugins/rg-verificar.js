@@ -94,7 +94,7 @@ let chtxt = `👤 *𝚄𝚜𝚎𝚛* » ${m.pushName || 'Anónimo'}
             }
         }
     }, { quoted: null });
-}
+};
 
 handler.help = ['reg']
 handler.tags = ['rg']
