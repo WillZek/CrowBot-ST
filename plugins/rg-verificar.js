@@ -74,9 +74,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     let channelID = '120363387375075395@newsletter';
     let messageContent = `◉ *Usuarios:* ${m.pushName || 'Anónimo'}\n◉ *País:* ${userNationality || 'Desconocido'}\n◉ *Verificación:* ${user.name}\n◉ *Edad:* ${age} años\n◉ *Número de serie:*\n⤷ ${sn}\n\n🎁 *Recompensa:* 600 crowcoins 🪙\n*¡Bienvenido/a al bot!*`;
     
-    await conn.sendMessage(channelID, {
-        text: messageContent, ...rcanal
-    });
+    await conn.sendMessage('channelID, { text: messageContent, contextInfo: options.contextInfo }, { quoted: null });
 }
 
 handler.help = ['reg']
