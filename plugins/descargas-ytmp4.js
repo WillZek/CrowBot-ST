@@ -34,7 +34,7 @@ export default handler;
 - Parchado por DarkCore... vip plus
 */
 
-import fetch from 'node-fetch';
+/* import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text }) => {
     if (!text) return conn.reply(m.chat, '🍟 Ingresa un link de YouTube', m);
