@@ -1,38 +1,58 @@
-/*
- ✨ DERECHOS RESERVADOS DEL AUTOR ✨
-- WillZek (@NiñoPiña)
+/* 
+- Google Search Bot By Jose
+- Power By Team Code Titans
+- https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y 
 */
-
+// *[ 🔍 GOOGLE SEARCH ]*
 import { googleIt } from '@bochilteam/scraper';
+import google from 'google-it';
 import axios from 'axios';
-const handler = async (m, {conn, command, args}) => {
-  const fetch = (await import('node-fetch')).default;
-  const text = args.join` `;
-  if (!text) return conn.reply(m.chat, '*[🌠] Complementa tu petición con alguna frase para iniciar la búsqueda.*', m);
 
- const xd = `*Resultados De:* ${text}`;
-  const url = 'https://google.com/search?q=' + encodeURIComponent(text);
-  const search = await googleIt(text);
-  const msg = search.articles.map(({title, url, description}) => {
-    return `*${title}*\n_${url}_\n_${description}_`;
-  }).join('\n\n');
-  try {
-    const ss = `https://image.thum.io/get/fullpage/${url}`;
-    conn.sendFile(m.chat, ss, 'error.png', xd + '\n> ' + url + '\n\n' + msg, m, {
-contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
-title: 'GOOGLE SEARCH',
-body: dev,
-previewType: 0, thumbnail: icons,
-sourceUrl: channel }}});
-  } catch (e) {
-console.error(e);
-m.reply(`Error: ${e.message}`);
-m.react(done);
-    m.reply(msg);
-  }
+let handler = async (m, { conn, command, args, usedPrefix }) => {
+    const fetch = (await import('node-fetch')).default;
+    const text = args.join` `;
+    if (!text) return m.reply(`*\`Ingrese el texto a buscar\`*\n• Ejemplo: ${usedPrefix + command} gato`);
+
+    m.react("🔥");
+    try {
+        const res = await fetch(`${apis}/search/googlesearch?query=${encodeURIComponent(text)}`);
+        const data = await res.json();
+
+        if (data.status && data.data && data.data.length > 0) {
+            let teks = `\`🔍 RESULTADOS DE:\` ${text}\n\n`;
+            for (let result of data.data) {
+                teks += `*${result.title}*\n_${result.url}_\n_${result.description}_\n\n─────────────────\n\n`;
+            }
+
+            const ss = `https://image.thum.io/get/fullpage/https://google.com/search?q=${encodeURIComponent(text)}`;
+            conn.sendFile(m.chat, ss, 'result.png', teks, fkontak, false, fake);
+            m.react("✅");
+            handler.limit = 1;      
+        }
+    } catch (error) {
+        try {
+            const url = 'https://google.com/search?q=' + encodeURIComponent(text);
+            google({ 'query': text }).then(res => {
+                let teks = `\`🔍 RESULTADOS DE:\` ${text}\n\n*${url}*\n\n`;
+                for (let g of res) {
+                    teks += `_${g.title}_\n_${g.link}_\n_${g.snippet}_\n\n┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈\n\n`;
+                }
+                const ss = `https://image.thum.io/get/fullpage/${url}`;
+                conn.sendFile(m.chat, ss, 'error.png', teks, fkontak, false, rcanal);
+            });
+            m.react("✅");
+            handler.limit = 1;         
+        } catch (e) {
+            handler.limit = 0;
+            console.log(e);
+            m.react("❌");
+        }
+    }
 };
-handler.help = ['google', 'googlef'].map((v) => v + ' <pencarian>');
-handler.tags = ['buscador'];
-handler.command = /^googlef?$/i;
-handler.estrellas = 7;
+
+handler.help = ['google', 'googlef'].map(v => v + ' <pencarian>');
+handler.tags = ['buscadores'];
+handler.command = ['google'];
+handler.register = true;
+
 export default handler;
