@@ -88,7 +88,7 @@ showAdAttribution: false,
 renderLargerThumbnail: false
 }}};
     
-    await conn.sendMessage('channelID, { text: messageContent, contextInfo: options.contextInfo }, { quoted: null });
+    await conn.sendMessage(channelID, { text: messageContent, contextInfo: options.contextInfo }, { quoted: null });
 }
 
 handler.help = ['reg']
