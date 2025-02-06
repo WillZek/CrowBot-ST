@@ -32,7 +32,7 @@ const defaultMenu = {
 
 "*「💛」 ¡Hola! %name soy ${nombrebot}*, *%greeting* ❒"
 
-╔━━━━━ *⊱INFO - BOT⊰*
+╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
 ✦  👤 *Cliente:* %name
 ✧  ❤️‍🔥 *Exp:* %exp
 ✦  🌟 *Estrellas:* %estrellas
@@ -40,7 +40,7 @@ const defaultMenu = {
 ✦  🌠 *Rango:* %role
 ╚━━━━━━━━━━━━━━
 %readmore
-╔━━━━━ *⊱INFO - USER⊰*
+╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐔𝐒𝐄𝐑⊰*
 ✧  🤖 *Bot:* CrowBot-ST
 ✦  🔱 *Modo:* Privado VIP 
 ✧  ✨ *Baileys:* Multi Device
