@@ -6,18 +6,18 @@ import fetch from 'node-fetch';
 import axios from 'axios';
 
 let handler = async (m, { conn, text }) => {
-    if (!text) return conn.reply(m.chat, `🍟 Ingresa un link de TeraBox`, m);
+    if (!text) return conn.reply(m.chat, `🍬 Por favor, ingresa un link de TeraBox.`, m);
     await m.react('🕓');
 
     try {
         let api = await fetch(`https://dark-core-api.vercel.app/api/terabox?key=TWIzumi&url=${text}`);
         let json = await api.json();
-        if (!json.success) return m.reply('❌ Error al obtener los detalles del enlace, por favor intenta nuevamente.');
+        if (!json.success) return m.reply('⚠️ Error al obtener los detalles del enlace, por favor intenta nuevamente.');
 
         let { fileName, type, thumb, url } = json.result;
-        let caption = `*「✐」${fileName}*
+        let caption = `*「📚」${fileName}*
 
-> ❒ Tipo » *${type}*
+> 🔖 Tipo » *${type}*
 > 🖼️ Vista previa » *${thumb}*`;
 
         // Enviar el archivo con el caption y el thumbnail
@@ -28,13 +28,13 @@ let handler = async (m, { conn, text }) => {
         await m.react('✅');
     } catch (error) {
         console.error(error);
-        m.reply(`❌ Ocurrió un error al procesar la solicitud. : ${error.message}`);
+        m.reply('⚠️ Ocurrió un error al procesar la solicitud.');
     }
 }
 
 handler.help = ['terabox *<url>*']
 handler.tags = ['descargas']
-handler.command = ['terabox', 'tbdl']
+handler.command = ['terabox', 'tb']
 
 export default handler;
 
