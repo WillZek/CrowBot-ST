@@ -22,9 +22,7 @@ let handler = async (m, { conn, text }) => {
 > 🖼️ Vista previa » *${thumb}*`;
 
         // Enviar el archivo con el caption y el thumbnail
-        await conn.sendFile(m.chat, url, fileName, caption, m, false, {
-            thumbnail: thumb ? await getBuffer(thumb) : null
-        });
+        await conn.sendFile(m.chat, url, fileName, caption, m, false });
 
         await m.react('✅');
     } catch (error) {
