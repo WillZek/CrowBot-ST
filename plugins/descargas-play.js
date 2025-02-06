@@ -71,7 +71,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     const videoInfo = search.all[0];
     const { title, thumbnail, timestamp, views, ago, url } = videoInfo;
     const vistas = formatViews(views);
-    const infoMessage = `♡ Título: *${title}*\n> ♡ Duración: *${timestamp}*\n> ♡ Vistas: *${vistas}*\n> ♡ Canal: *${videoInfo.author.name || 'Desconocido'}*\n> ♡ Publicado: *${ago}*\n> ♡ Enlace: ${url}`;
+    const infoMessage = `♡ Título: *${title}*\n> ♡ Duración: *${timestamp}*\n> ♡ Vistas: *${vistas}*\n> ♡ Canal: *${videoInfo.author.name || 'Desconocido'}*\n> ♡ Publicado: *${ago}*\n> ♡ Enlace: ${url}\n> Powered By Crow's Club`;
     const thumb = (await conn.getFile(thumbnail))?.data;
 
     const JT = {
