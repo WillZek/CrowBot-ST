@@ -14,7 +14,7 @@ let handler = async (m, { conn, text }) => {
         let json = await api.json();
         if (!json.success) return m.reply('⚠️ Error al obtener los detalles del enlace, por favor intenta nuevamente.');
 
-        let { fileName, type, thumb, url } = json.result;
+        let { fileName, type, thumb, url } = json.;
         let caption = `*「📚」${fileName}*
 
 > 🔖 Tipo » *${type}*
