@@ -28,7 +28,7 @@ let handler = async (m, { conn, text }) => {
         await m.react('✅');
     } catch (error) {
         console.error(error);
-        m.reply('❌ Ocurrió un error al procesar la solicitud.');
+        m.reply(`❌ Ocurrió un error al procesar la solicitud. : ${error.message}`);
     }
 }
 
