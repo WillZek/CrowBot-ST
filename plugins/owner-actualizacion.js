@@ -5,8 +5,8 @@ import axios from 'axios';
 let previousCommitSHA = '';
 let previousUpdatedAt = '';
 let previousCommitUser = ''; 
-const owner = 'ianalejandrook15x';
-const repo = 'Crow';
+const owner = 'WillZek';
+const repo = 'CrowBot-ST';
 const handler = async (m, {conn, text, usedPrefix, command}) => {
  conn.sendMessage(m.chat, {text: `*✅️ Comando activado con éxito, te notificaremos cuando se actualize el repositorio.*`}, {quoted: estilo});  
 try {
