@@ -31,7 +31,7 @@ user.estrellas += count * 2
 conn.reply(m.chat, '`🌸 Veamos que numeros tienen!`\n\n'+ `➠ *CrowBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username}, *GANASTE* ${formatNumber(count * 2)} 🌟 Estrellas`.trim(), m, rcanal)
 } else {
 user.estrellas += count * 1
-conn.reply(m.chat, '`🌸 Veamos que numeros tienen!`\n\n'+ `➠ *ianBot* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 🌟 Estrellas.`.trim(), m, rcanal)}
+conn.reply(m.chat, '`🌸 Veamos que numeros tienen!`\n\n'+ `➠ *CrowBot-ST* : ${Aku}\n➠ *${username}* : ${Kamu}\n\n> ${username} obtienes ${formatNumber(count * 1)} 🌟 Estrellas.`.trim(), m, rcanal)}
 } else conn.reply(m.chat, `No tienes *${formatNumber(count)} 🌟 Estrellas* para apostar!`.trim(), m, rcanal)}
 
 handler.help = ['apostar *<cantidad>*']
