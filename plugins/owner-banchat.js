@@ -8,4 +8,5 @@ handler.help = ['banchat']
 handler.tags = ['owner']
 handler.command = /^banchat$/i
 handler.mods = true 
+handler.admin = true
 export default handler
