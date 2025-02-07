@@ -1,6 +1,6 @@
 //Codigo creado por David Chian wa.me/5351524614
 
-import fs from 'fs';
+/* import fs from 'fs';
 
 const obtenerDatos = () => {
     if (fs.existsSync('data.json')) {
@@ -24,3 +24,4 @@ const limpiarPersonajesReservados = () => {
 setInterval(limpiarPersonajesReservados, 1800000); //30 minutos :v
 
 limpiarPersonajesReservados();
+*/
