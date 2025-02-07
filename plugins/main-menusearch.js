@@ -195,7 +195,7 @@ await m.react('🔦')
     throw e
   }
 }
-handler.help = ['menusearch (menu de economia)']
+handler.help = ['menusearch (menu de búsquedas)']
 handler.tags = ['crow']
 handler.command = ['menuse', 'menusearch', 'menubus']
 
