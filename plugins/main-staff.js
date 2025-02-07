@@ -39,7 +39,9 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🎩 *Rol:* Mod
 💛 *Número:* Wa.me/51920227615
 
-• 𝐖𝐀𝐓𝐇𝐀𝐒𝐇𝐈`
+• 𝐀𝐍𝐆𝐄𝐋
+🍭 *Rol:* Mod
+💛 *Numero:* Wa.me/50368471855`
 await conn.sendFile(m.chat, 'https://files.catbox.moe/h094yg.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
