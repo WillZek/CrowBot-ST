@@ -26,7 +26,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     case 'antipriv':
      isAll = true
         if (!isMods) {
-          global.dfail('mods', m, conn)
+          global.dfail('rowner', m, conn)
           throw false
       }
       bot.antiPrivate = isEnable
