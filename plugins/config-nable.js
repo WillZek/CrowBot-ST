@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isMods, isAd
     case 'bv':
     case 'bienvenida':
       if (!m.isGroup) {
-        if (!isOwner || isMods) {
+        if (!isOwner && !isMods) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isMods, isAd
     case 'antiprivado':
     case 'antipriv':
      isAll = true
-        if (!isOwner || isMods) {
+        if (!isOwner && !isMods) {
           global.dfail('rowner', m, conn)
           throw false
       }
@@ -49,7 +49,7 @@ break
   case 'restrict':
     case 'restringir':
      isAll = true
-        if (!isOwner || isMods) {
+        if (!isOwner && !isMods) {
           global.dfail('rowner', m, conn)
           throw false
       }
@@ -108,7 +108,7 @@ break
     case 'autoleer':
     case 'leermensajes':
      isAll = true
-     if (!isOwner || isMods) {
+     if (!(isOwner || isMods)) {
      global.dfail('rowner', m, conn)
       throw false
       }
@@ -119,7 +119,7 @@ break
     case 'antiocultar':
     case 'antiviewonce':
       if (!m.isGroup) {
-        if (!isOwner || isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -134,7 +134,7 @@ break
     case 'reaccion':
     case 'emojis':
       if (!m.isGroup) {
-        if (!isOwner || isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -149,7 +149,7 @@ break
     case 'audiosbot':
     case 'botaudios':
       if (!m.isGroup) {
-        if (!isOwner || isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -173,7 +173,7 @@ break
     case 'antispam':
     case 'antispamosos':
      isAll = true
-      if (!isOwner || isMods) {
+      if (!(isOwner || isMods)) {
       global.dfail('rowner', m, conn)
       throw false
       }
@@ -195,7 +195,7 @@ break
     case 'status':
     case 'bio':
      isAll = true
-        if (!isOwner || isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('rowner', m, conn)
           throw false
         }
@@ -206,7 +206,7 @@ break
     case 'serbot':
     case 'subbots':
      isAll = true
-        if (!isOwner || isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('rowner', m, conn)
           throw false
       }
@@ -217,7 +217,7 @@ break
     case 'configuraciones':
     case 'avisodegp':
       if (!m.isGroup) {
-        if (!isOwner || isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -232,7 +232,7 @@ break
     case 'autosimi':
     case 'simsimi':
       if (!m.isGroup) {
-        if (!isOwner || isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('group', m, conn)
           throw false
         }
