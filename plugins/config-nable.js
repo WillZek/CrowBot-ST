@@ -49,7 +49,7 @@ break
   case 'restrict':
     case 'restringir':
      isAll = true
-        if (!isOwner && !isMods) {
+        if (!(isOwner || isMods)) {
           global.dfail('rowner', m, conn)
           throw false
       }
