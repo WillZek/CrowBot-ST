@@ -38,7 +38,8 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • 𝐒𝐄𝐈𝐒𝐇𝐈𝐑𝐎 - 𝐍𝐀𝐆𝐈
 🎩 *Rol:* Mod
 💛 *Número:* Wa.me/51920227615
-`
+
+• 𝐖𝐀𝐓𝐇𝐀𝐒𝐇𝐈`
 await conn.sendFile(m.chat, 'https://files.catbox.moe/h094yg.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
