@@ -144,7 +144,7 @@ serbot()
 }
 handler.help = ["serbot"]
 handler.tags = ["serbot"]
-handler.command = ["serbot", "jadibot", "qr", "serbotqr"]
+handler.command = ["jadibot", "qr", "serbotqr"]
 handler.estrellas = 13;
 // handler.register = true
 export default handler
