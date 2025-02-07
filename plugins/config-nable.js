@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     case 'bv':
     case 'bienvenida':
       if (!m.isGroup) {
-        if (!isOwner) {
+        if (!isMods) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -25,8 +25,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     case 'antiprivado':
     case 'antipriv':
      isAll = true
-        if (!isOwner) {
-          global.dfail('rowner', m, conn)
+        if (!isMods) {
+          global.dfail('mods', m, conn)
           throw false
       }
       bot.antiPrivate = isEnable
