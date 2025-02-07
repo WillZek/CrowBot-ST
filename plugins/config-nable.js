@@ -49,7 +49,7 @@ break
   case 'restrict':
     case 'restringir':
      isAll = true
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('rowner', m, conn)
           throw false
       }
@@ -59,7 +59,7 @@ break
  case 'antibot':
     case 'antibots':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isOwner || isMods)) {
           global.dfail('admin', m, conn)
           throw false
         }
@@ -72,7 +72,7 @@ break
     case 'antisubot':
     case 'antibot2':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isOwner || isMods)) {
           global.dfail('admin', m, conn)
           throw false
         }
@@ -85,7 +85,7 @@ break
     case 'antiarabes':
     case 'antiarab':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isOwner || isMods)) {
           global.dfail('admin', m, conn)
           throw false
         }
@@ -108,7 +108,7 @@ break
     case 'autoleer':
     case 'leermensajes':
      isAll = true
-     if (!isOwner) {
+     if (!isOwner || isMods) {
      global.dfail('rowner', m, conn)
       throw false
       }
@@ -119,7 +119,7 @@ break
     case 'antiocultar':
     case 'antiviewonce':
       if (!m.isGroup) {
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -134,7 +134,7 @@ break
     case 'reaccion':
     case 'emojis':
       if (!m.isGroup) {
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -149,7 +149,7 @@ break
     case 'audiosbot':
     case 'botaudios':
       if (!m.isGroup) {
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -162,7 +162,7 @@ break
 
 case 'autolevelup': case 'autonivel': case 'nivelautomatico':
 if (m.isGroup) {
-if (!(isAdmin || isOwner)) {
+if (!(isAdmin || isOwner || isMods)) {
 global.dfail('admin', m, conn)
 throw false
 }}
@@ -173,7 +173,7 @@ break
     case 'antispam':
     case 'antispamosos':
      isAll = true
-      if (!isOwner) {
+      if (!isOwner || isMods) {
       global.dfail('rowner', m, conn)
       throw false
       }
@@ -184,7 +184,7 @@ break
      case 'antieliminar': 
      case 'delete':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isOwner || isMods)) {
        global.dfail('admin', m, conn)
        throw false
      }}
@@ -195,7 +195,7 @@ break
     case 'status':
     case 'bio':
      isAll = true
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('rowner', m, conn)
           throw false
         }
@@ -206,7 +206,7 @@ break
     case 'serbot':
     case 'subbots':
      isAll = true
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('rowner', m, conn)
           throw false
       }
@@ -217,7 +217,7 @@ break
     case 'configuraciones':
     case 'avisodegp':
       if (!m.isGroup) {
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -232,7 +232,7 @@ break
     case 'autosimi':
     case 'simsimi':
       if (!m.isGroup) {
-        if (!isOwner) {
+        if (!isOwner || isMods) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -251,7 +251,7 @@ break
 
     case 'antilink':
       if (m.isGroup) {
-        if (!(isAdmin || isOwner)) {
+        if (!(isAdmin || isOwner || isMods)) {
           global.dfail('admin', m, conn)
           throw false
         }
@@ -262,7 +262,7 @@ break
       case 'nsfw':
       case 'nsfw': case 'nsfwhot': case 'nsfwhorny':
        if (m.isGroup) {
-         if (!(isAdmin || isOwner)) {
+         if (!(isAdmin || isOwner || isMods)) {
            global.dfail('admin', m, conn)
             throw false
            }}
