@@ -142,7 +142,7 @@ creloadHandler(false)
 }
 serbot()
 }
-handler.help = ["serbot"]
+handler.help = ["serbotqr"]
 handler.tags = ["serbot"]
 handler.command = ["jadibot", "qr", "serbotqr"]
 handler.estrellas = 13;
