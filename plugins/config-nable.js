@@ -260,7 +260,7 @@ break
       break
 
       case 'nsfw':
-      case 'nsfw': case 'nsfwhot': case 'nsfwhorny':
+      case 'modohorny': case 'nsfwhot': case 'nsfwhorny':
        if (m.isGroup) {
          if (!(isAdmin || isMods)) {
            global.dfail('admin', m, conn)
