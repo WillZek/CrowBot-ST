@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isMods, isAd
     case 'antiprivado':
     case 'antipriv':
      isAll = true
-        if (!isMods) {
+        if (!isOwner || isMods) {
           global.dfail('rowner', m, conn)
           throw false
       }
