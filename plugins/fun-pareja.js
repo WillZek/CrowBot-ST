@@ -13,8 +13,8 @@ function handler(m, {groupMetadata}) {
     await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', m, null);
  
     await conn.sendMessage(m.chat, { text: txt, mentions: [a, b] });
+};
 
-}
 handler.help = ['formarpareja'];
 handler.tags = ['fun'];
 handler.command = ['formarpareja', 'formarparejas', 'pareja'];
