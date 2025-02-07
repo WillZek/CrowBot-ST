@@ -35,9 +35,9 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🍭 *Rol:* Gestión De Grupos
 💛 *Número:* Wa.me/522731590195
 
-• 𝐉𝐨𝐤𝐞𝐫 𝐲 𝐖𝐡𝐢𝐭𝐞 
-🎩 *Rol:* Bots Oficiales
-💛 *Número:* Privado🫵🏻
+• 𝐒𝐄𝐈𝐒𝐇𝐈𝐑𝐎 - 𝐍𝐀𝐆𝐈
+🎩 *Rol:* Gestion De Grupos
+💛 *Número:* Wa.me/51920227615
 `
 await conn.sendFile(m.chat, 'https://files.catbox.moe/h094yg.jpg', 'brook.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
