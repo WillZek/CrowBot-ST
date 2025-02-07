@@ -8,6 +8,11 @@ function handler(m, {groupMetadata}) {
   m.reply(`*FORMANDO PAREJA 14 DE FEBRERO 💏*\n> ${toM(a)}, Deberías Empezar Una Cita con ${toM(b)} 🌹`, null, {
     mentions: [a, b],
   });
+
+    const stickerUrl = 'https://files.catbox.moe/ajtz0u.webp'; 
+    m.react('💘');
+
+    await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', m, null);
 }
 handler.help = ['formarpareja'];
 handler.tags = ['fun'];
