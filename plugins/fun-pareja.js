@@ -5,7 +5,7 @@ function handler(m, {groupMetadata}) {
   let b;
   do b = ps.getRandom();
   while (b === a);
-  m.reply(`**FORMANDO PAREJA 14 DE FEBRERO 💏*\n> ${toM(a)}, Deberías Empezar Una Cita con ${toM(b)} 🌹*`, null, {
+  m.reply(`*FORMANDO PAREJA 14 DE FEBRERO 💏*\n> ${toM(a)}, Deberías Empezar Una Cita con ${toM(b)} 🌹*`, null, {
     mentions: [a, b],
   });
 }
