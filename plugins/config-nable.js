@@ -25,7 +25,8 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isPrems, isA
     case 'antiprivado':
     case 'antipriv':
      isAll = true
-        if (!isPrems) {
+        if (!isOwner) {
+          if (!isPrems) {
           global.dfail('rowner', m, conn)
           throw false
       }
@@ -34,6 +35,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isPrems, isA
 
 case 'autoaceptar': case 'aceptarnuevos':
 if (!m.isGroup) {
+if (!isOwner) {
 if (!isPrems) {
 global.dfail('group', m, conn)
 throw false
@@ -49,6 +51,7 @@ break
   case 'restrict':
     case 'restringir':
      isAll = true
+       if (!isOwner) {
         if (!isPrems) {
           global.dfail('rowner', m, conn)
           throw false
