@@ -3,6 +3,8 @@ let handler = async (m, { conn, args, participants }) => {
         return { ...value, jid: key };
     });
 
+    let who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.sender
+    let user = global.db.data.users[who]
     let sortedLim = users.sort((a, b) => (b.estrellas || 0) + (b.bank || 0) - (a.estrellas || 0) - (a.bank || 0));
     let len = args[0] && args[0].length > 0 ? Math.min(10, Math.max(parseInt(args[0]), 10)) : Math.min(10, sortedLim.length);
 
@@ -11,7 +13,7 @@ let handler = async (m, { conn, args, participants }) => {
     text += sortedLim.slice(0, len).map(({ jid, estrellas, bank }, i) => {
         let total = (estrellas || 0) + (bank || 0);
         return `💫 ${i + 1} » *${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]}:*` +
-               `\n\t\t Total→ *🌟${total} Estrellas*`;
+               `\n\t\t Total→ *🌟${user.estrellas} Estrellas*`;
     }).join('\n');
 
     await conn.reply(m.chat, text.trim(), m, { mentions: conn.parseMention(text) });
