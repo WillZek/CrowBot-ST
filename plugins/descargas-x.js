@@ -1,25 +1,43 @@
-// Twitterdl By WillZek 
+/* Twitterdl By WillZek 
+- Free Codes Titan
+- https://github.com/WillZek
+*/
+
+// [🌠] Twitter Downloader
 
 import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, usedPrefix, command }) => {
-
-if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Twitter Para Poder Mandar Su Video');
+if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Twitter Para Poder Mandar Su Video o Imagen');
 
 try {
-let api = `https://api.dorratz.com/xdown?url=${args[0]}`;
+let api = `https://delirius-apiofc.vercel.app/download/twitterdl?url=${args[0]}`;
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.media[0];
 
-if (!args[0].match(/x/gi)) return m.reply(m.chat, '✖️ Verifica El Link Para Poder Descargar Tu Archivo ', m, rcanal)
+if (!json.found) {
+return m.reply(`✖️ Error: ${json.error || 'No se encontró ningún medio en el enlace proporcionado.'}`);
+}
 
-m.react('🕑');
-let txt = `> *¡Video descargado con exito!*`;
-let link = arch.url;
+let media = json.media;
 
-await conn.sendMessage(m.chat, { video: { url: link }, caption: txt }, {quoted: fkontak});   
+if (media.length > 0) {
+let arch = media[0];
+
+if (json.type === 'video') {
+let videoUrl = arch.url;
+let txt = `> *¡Descargado con éxito!*`;
+
+await conn.sendMessage(m.chat, { video: { url: videoUrl }, caption: txt }, { quoted: fkontak });
 m.react('✅');
+
+} else if (json?.type === 'image') {
+let imageUrl = arch.url;
+await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: '¡Imagen descargada con éxito!' }, { quoted: fkontak });
+m.react('✅');
+} else {
+return m.reply('✖️ El enlace no es ni una imagen ni un video.');
+}
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
@@ -29,7 +47,7 @@ m.react('✖️');
 
 handler.help = ['xdl'];
 handler.tag = ['descargas'];
-handler.command = ['xdl', 'twitterdl'];
+handler.command = ['xdl', 'twitterdl']
 handler.estrellas = 5;
 
 export default handler;
