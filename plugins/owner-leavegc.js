@@ -13,5 +13,5 @@ return console.log(e)
 }}
 handler.command = /^(salir|leavegc|salirdelgrupo|leave)$/i
 handler.group = true
-handler.mods = true
+handler.prems = true
 export default handler
