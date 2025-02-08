@@ -3,7 +3,7 @@
 - https://github.com/WillZek 
 */
 
-// [🔎] Anime Info
+// [🐋] Anime Info
 
 import fetch from 'node-fetch';
 
@@ -30,6 +30,6 @@ m.reply('✖️');
  }
 };
 
-handler.command = ['test'];
+handler.command = ['animeinfo', 'ainfo'];
 
 export default handler;
