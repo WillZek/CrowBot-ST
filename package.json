@@ -49,6 +49,7 @@
 "cfonts": "^3.3.0",
 "boxen": "^7.1.1",
 "groq-sdk": "latest",
+"sharp": "latest",
 "chalk": "^5.1.0",
 "sanzy-spotifydl": "*",
 "url-file-size": "^1.0.5-1",
