@@ -12,6 +12,6 @@ m.reply(`🚩 Me uní correctamente al Grupo`)
 handler.help = ['join <link>']
 handler.tags = ['owner']
 handler.command = ['join', 'entrar'] 
-handler.mods = true
+handler.prems = true
 
 export default handler
