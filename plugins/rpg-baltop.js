@@ -13,7 +13,7 @@ let handler = async (m, { conn, args, participants }) => {
     text += sortedLim.slice(0, len).map(({ jid, estrellas, bank }, i) => {
         let total = (estrellas || 0) + (bank || 0);
         return `💫 ${i + 1} » *${participants.some(p => jid === p.jid) ? `(${conn.getName(jid)}) wa.me/` : '@'}${jid.split`@`[0]}:*` +
-               `\n\t\t Total→ *🌟${user.estrellas} Estrellas*`;
+               `\n\t\t Total→ *🌟${total} Estrellas*`;
     }).join('\n');
 
     await conn.reply(m.chat, text.trim(), m, { mentions: conn.parseMention(text) });
