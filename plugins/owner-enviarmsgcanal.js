@@ -14,5 +14,5 @@ await conn.reply(m.chat, `🥀 No se pudo enviar el mensaje al canal.`, m, idcha
 await m.react('🔮')}}
 
 handler.command = ['enviarmsg', 'enviarmsgcanal', 'enviarmsgchannel', 'canals']
-handler.mods = true
+handler.prems = true
 export default handler
