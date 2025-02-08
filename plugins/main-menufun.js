@@ -18,7 +18,7 @@ const defaultMenu = {
   header: '┏━━⪩「 *_`%category`_* 」⪨',
   body: '┃『🎮』 %cmd\n',
   footer: '┗━━━━━━━━━━━━━━━━⪩\n',
-  after: ``,
+  after: `${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
