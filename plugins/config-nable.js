@@ -2,6 +2,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isMods, isAd
   let isEnable = /true|enable|(turn)?on|1/i.test(command)
   let chat = global.db.data.chats[m.chat]
   let user = global.db.data.users[m.sender]
+  let isMods = isMods;
   let bot = global.db.data.settings[conn.user.jid] || {}
   let type = (args[0] || '').toLowerCase()
   let isAll = false, isUser = false
