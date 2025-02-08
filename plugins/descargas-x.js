@@ -26,14 +26,14 @@ let arch = media[0];
 
 if (json.type === 'video') {
 let videoUrl = arch.url;
-let txt = `> *¡Descargado con éxito!*`;
+let txt = `> *¡Descargado con Exito!*`;
 
 await conn.sendMessage(m.chat, { video: { url: videoUrl }, caption: txt }, { quoted: fkontak });
 m.react('✅');
 
 } else if (json?.type === 'image') {
 let imageUrl = arch.url;
-await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: '¡Imagen descargada con éxito!' }, { quoted: fkontak });
+await conn.sendMessage(m.chat, { image: { url: imageUrl }, caption: '¡Descargado Con Exito!' }, { quoted: fkontak });
 m.react('✅');
 } else {
 return m.reply('✖️ El enlace no es ni una imagen ni un video.');
