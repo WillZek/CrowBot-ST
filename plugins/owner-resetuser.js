@@ -28,6 +28,6 @@ const handler = async (m, { conn, text }) => {
 };
 handler.tags = ['owner'];
 handler.command = /(restablecerdatos|deletedatauser|resetuser|borrardatos)$/i;
-handler.mods = true;
+handler.prems = true;
 
 export default handler;
