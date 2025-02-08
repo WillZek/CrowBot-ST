@@ -20,5 +20,5 @@ handler.help = ['delprem <@user>'];
 handler.tags = ['owner'];
 handler.command = /^(remove|-|del)premium$/i;
 handler.group = true;
-handler.mods = true;
+handler.prems = true;
 export default handler;
