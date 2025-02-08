@@ -12,7 +12,7 @@ try {
 let api = `https://apis-starlights-team.koyeb.app/starlight/pinterest-search?text=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let res = json.results;
+let res = json.results[0];
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
