@@ -45,7 +45,6 @@ m.react('✖️');
 
 handler.help = ['xdl'];
 handler.tag = ['descargas'];
-handler.command = ['xdl', 'twitterdl', 'test']
-handler.estrellas = 5;
+handler.command = ['xdl', 'twitterdl']
 
 export default handler;
