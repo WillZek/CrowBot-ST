@@ -8,7 +8,7 @@
 import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, usedPrefix, command }) => {
-if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Twitter Para Poder Mandar Su Video o Imagen');
+if (!args[0]) return m.reply('⬇️ Ingresa Un Link De Twitter');
 
 try {
 let api = `https://delirius-apiofc.vercel.app/download/twitterdl?url=${args[0]}`;
