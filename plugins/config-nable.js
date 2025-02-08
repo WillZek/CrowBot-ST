@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix, command, args, isOwner, isMods, isAdmin, isROwner }) => {
+let handler = async (m, { conn, usedPrefix, command, args, isOwner, isPrems, isAdmin, isROwner }) => {
   let isEnable = /true|enable|(turn)?on|1/i.test(command)
   let chat = global.db.data.chats[m.chat]
   let user = global.db.data.users[m.sender]
@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isMods, isAd
     case 'bv':
     case 'bienvenida':
       if (!m.isGroup) {
-        if (!isMods) {
+        if (!isPrems) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isMods, isAd
     case 'antiprivado':
     case 'antipriv':
      isAll = true
-        if (!isOwner) {
+        if (!isPrems) {
           global.dfail('rowner', m, conn)
           throw false
       }
