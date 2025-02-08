@@ -1,81 +1,35 @@
-/* Código hecho por I'm Fz `
- - https/Github.com/FzTeis
+/* Anime Info By WillZek 
+- Free Codes Titan 
+- https://github.com/WillZek 
 */
 
-async function getShortUrl(longUrl) {
-  try {
-    const response = await axios.get(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(longUrl)}`);
-    return response.data;
-  } catch (error) {
-    console.error('Error al acortar el enlace:', error.message);
-    return longUrl; // Devuelve la URL original si hay un error
-  }
-}
+// [🔎] Anime Info
 
-async function getAnimeEpisodes(url) {
-  try {
-    const response = await axios.get(url);
-    const html = response.data;
-    const $ = cheerio.load(html);
-    
-    const script = $('script').filter((i, el) => {
-      const text = $(el).text();
-      return text.includes('var anime_info') && text.includes('var episodes');
-    });
+import fetch from 'node-fetch';
 
-    if (script.length === 0) {
-      throw new Error('No se encontró el script que contiene las variables.');
-    }
+let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-    const scriptText = script.html();
-    const animeInfoMatch = scriptText.match(/var anime_info = (\[.*?\]);/);
-    const episodesMatch = scriptText.match(/var episodes = (\[.*?\]);/);
+if (!text) return m.reply(m.chat, '🍭 Ingrese Un Nombre Del Algún Anime', m, rcanal);
 
-    if (!animeInfoMatch || !episodesMatch) {
-      throw new Error('No se encontraron las variables anime_info o episodes en el script.');
-    }
+try {
+let api = `https://api.ryzendesu.vip/api/weebs/anime-info?query=${text}`;
 
-    const animeInfo = JSON.parse(animeInfoMatch[1]);
-    const episodes = JSON.parse(episodesMatch[1]);
+let responde = await fetch(api);
+let json = await responde.json();
 
-    const animeId = animeInfo[1];
+let txt = `*Nombre:* ${json.title}\n*Miembros:* ${json.members}\n*Url:* ${json.url}\n*Informacion:* ${json.synopsis}`;
 
-    const episodeUrls = episodes.reverse().map((episode, index) => ({
-      [`Episodio ${index + 1}`]: `https://tioanime.com/ver/${animeId}-${episode}`
-    }));
+let img = json.images.jpg.image_url;
 
-    const nextEpisodeElement = $('span.next-episode span');
-    const nextEpisode = nextEpisodeElement.text() || 'N/A';
+conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
 
-    return {
-      proximo_episodio: nextEpisode,
-      episodios: episodeUrls
-    };
-  } catch (error) {
-    console.error('Error al obtener los episodios:', error.message);
-    return { error: `Error al procesar la solicitud: ${error.message}` };
-  }
-}
+} catch (error) {
+console.log(error)
+m.reply(`*Error:* ${error.message}`);
+m.reply('✖️');
+ }
+};
 
-let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-  if (!args[0]) throw `*\`🌱 Ingresa el link del anime para obtener información. Ejemplo:.\`*\n\n\`${usedPrefix + command} https://tioanime.com/anime/dungeon-meshi\``;
+handler.command = ['test'];
 
-  let data = await getAnimeEpisodes(args[0]);
-  if (data.error) throw data.error;
-
-  let messageText = `• Lista de episodios del anime:\n\n`;
-
-  for (const episode of data.episodios) {
-    const [key, url] = Object.entries(episode)[0];
-    const shortUrl = await getShortUrl(url); // Acortar el enlace aquí
-    messageText += `${key}:\n    Url: ${shortUrl}\n----------------------------------\n`;
-  }
-
-  messageText += `\nPróximo episodio: ${data.proximo_episodio}`;
-
-  await conn.sendMessage(m.chat, { text: messageText }, { quoted: m });
-}
-
-handler.command = ['animeinfo', 'animei'];
-handler.estrellas = 7;
 export default handler;
