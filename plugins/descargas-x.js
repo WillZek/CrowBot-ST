@@ -20,8 +20,6 @@ return m.reply(`✖️ Error: ${json.error || 'No se encontró ningún medio en 
 }
 
 let media = json.media;
-
-if (media.length > 0) {
 let arch = media[0];
 
 if (json.type === 'video') {
@@ -47,7 +45,7 @@ m.react('✖️');
 
 handler.help = ['xdl'];
 handler.tag = ['descargas'];
-handler.command = ['xdl', 'twitterdl']
+handler.command = ['xdl', 'twitterdl', 'test']
 handler.estrellas = 5;
 
 export default handler;
