@@ -92,7 +92,9 @@ export async function handler(chatUpdate) {
                 if (!('detect' in chat))
                     chat.detect = true 
                 if (!('antiLink' in chat))
-                    chat.antiLink = true
+                    chat.antiLink = false
+                if (!('antiLink2' in chat))
+chat.antiLink2 = false
                 if (!('onlyLatinos' in chat))
                     chat.onlyLatinos = false
                 if (!('nsfw' in chat))
@@ -116,7 +118,8 @@ export async function handler(chatUpdate) {
                     delete: false,
                     audios: false,
                     detect: true,
-                    antiLink: true,
+                    antiLink: false,
+                    antiLink2: false,
                     onlyLatinos: false,
                     simi: false,
                     autolevelup: false,
