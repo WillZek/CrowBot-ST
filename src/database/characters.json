@@ -350,5 +350,17 @@
         "video": "https://files.catbox.moe/lkse01.mp4",
         "user": null,
         "status": "Libre"
-    }
+    },
+    {
+        "id": "34",
+        "name": "Naruto",
+        "gender": "Hombre",
+        "value": "6476",
+        "source": "Umineko no Naku Koro ni",
+        "img": "https://files.catbox.moe/5c3hs8.jpg",
+        "video": "https://files.catbox.moe/lkse01.mp4",
+        "user": null,
+        "status": "Libre"
+    },
+
 ]
