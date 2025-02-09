@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 
 const charactersFilePath = './media/database/characters.json';
-const haremFilePath = './src/database/harem.json';
+const haremFilePath = './media/database/harem.json';
 
 async function loadCharacters() {
     try {
