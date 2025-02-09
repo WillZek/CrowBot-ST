@@ -1,6 +1,7 @@
 /* Lyrics By WillZek 
 - Free Codes Titan 
-- https://github.com/WillZek 
+- https://github.com/WillZek
+- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S 
 */
 
 // [⌨️] Letra De Canciones
