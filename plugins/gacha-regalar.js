@@ -1,7 +1,7 @@
 
 import { promises as fs } from 'fs';
 
-const charactersFilePath = './src/database/characters.json';
+const charactersFilePath = './media/database/characters.json';
 
 async function loadCharacters() {
     try {
