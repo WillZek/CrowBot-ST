@@ -1,4 +1,4 @@
-import fs from 'fs';  
+/* import fs from 'fs';  
 import path from 'path';  
 
 let handler = async (m, { conn, isRowner }) => {
@@ -66,3 +66,4 @@ seconds = (seconds < 10) ? '0' + seconds : seconds
 
 return minutes + ' m y ' + seconds + ' s '
 }
+*/
