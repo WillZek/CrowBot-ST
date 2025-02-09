@@ -1,5 +1,5 @@
 const handler = async (m, {conn, text, command, usedPrefix}) => {
-  const pp = './Menu.jpg';
+  const pp = './media/menus/Menu.jpg';
   let who;
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text;
   else who = m.chat;
