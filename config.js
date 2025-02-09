@@ -50,7 +50,6 @@ global.publi = '✰𝐒𝐢𝐠𝐮𝐞 𝐄𝐥 𝐂𝐚𝐧𝐚𝐥👇'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.imagen1 = fs.readFileSync('./media/menus/Menu.jpg')
-global.fantasyVid = ['./media/menus/Menuvid1.mp4', './media/menus/Menuvid2.mp4', './media/menus/Menuvid3.mp4']
 global.imagen2 = fs.readFileSync('./media/menus/Menu2.jpg')
 global.imagen3 = fs.readFileSync('./media/menus/Menu3.jpg')
 global.welcome = fs.readFileSync('./media/welcome.jpg')
@@ -59,8 +58,6 @@ global.catalogo = fs.readFileSync('./media/catalogo.jpg')
 global.crowurl = fs.readFileSync('./media/crowurl.jpg')
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
-global.mashach = 'https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J'
-global.mashac = 'wa.me/59597657755*/n• *wa.me/5224312686*/n• *wa.me/5055786568*'
 global.repobot = 'https://github.com/WillZek/CrowBot-ST'
 global.grupo = 'https://chat.whatsapp.com/B7POPrlJiZf7UWHJKvzVkx'
 global.comu = 'https://chat.whatsapp.com/Bgfb6Ag13BDCvwzOtldlCm'
