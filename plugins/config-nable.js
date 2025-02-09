@@ -258,12 +258,12 @@ break
       if (!/[01]/.test(command)) return conn.reply(m.chat, `
 *[🍨] Funciones Solo Para Owner*
 
-${usedPrefix + command} antispam
-${usedPrefix + command} antiprivado
-${usedPrefix + command} subbots
-${usedPrefix + command} status
-${usedPrefix + command} restrict
-${usedPrefix + command} autoread
+🜲 ${usedPrefix + command} antispam
+🜲 ${usedPrefix + command} antiprivado
+🜲 ${usedPrefix + command} subbots
+🜲 ${usedPrefix + command} status
+🜲 ${usedPrefix + command} restrict
+🜲 ${usedPrefix + command} autoread
 
 *[🎩] Funciones De Grupos*
 
