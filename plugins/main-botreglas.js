@@ -1,7 +1,7 @@
 // Reglas Para CrowBot
 
 let handler = async (m, { conn, usedPrefix, command }) => {
-    let img = "/Menu.jpg"; // Asegúrate de que esta imagen esté en la ruta correcta
+    let img = "./media/menus/Menu.jpg"; // Chatgpt me chupa la vrg
 
     let fkontak = {
         "key": {
