@@ -146,6 +146,16 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.audios = isEnable
       break
 
+    case 'antilink2':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn);
+          throw false;
+        }
+      }
+      isEnable = chat.antiLink2 = !chat.antiLink2;
+      break;
+
 case 'autolevelup': case 'autonivel': case 'nivelautomatico':
 if (m.isGroup) {
 if (!(isAdmin || isOwner)) {
@@ -281,7 +291,8 @@ break
 ➳ ${usedPrefix + command} modoadmin 
 ➳ ${usedPrefix + command} antiarabes
 ➳ ${usedPrefix + command} autoaceptar
-➳ ${usedPrefix + command} antilink`, m, rcanal)
+➳ ${usedPrefix + command} antilink
+➳ ${usedPrefix + command} antilink2`, m, rcanal)
 
       throw false
   }
