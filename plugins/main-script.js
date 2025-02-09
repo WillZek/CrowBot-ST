@@ -7,7 +7,6 @@ let handler = async (m, { conn, args }) => {
     let json = await res.json()
     let txt = `*乂  S C R I P T  -  M A I N  乂*\n\n`
     txt += `✩  *Nombre* : ${json.name}\n`
-    txt += `✩  *Descripcion* : ${json.description}\n`
     txt += `✩  *Visitas* : ${json.watchers_count}\n`
     txt += `✩  *Peso* : ${(json.size / 1024).toFixed(2)} MB\n`
     txt += `✩  *Url* : ${json.html_url}\n`
