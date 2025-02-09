@@ -10,7 +10,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     case 'bv':
     case 'bienvenida':
       if (!m.isGroup) {
-        if (!isOwner && !isMods) {
+        if (!isOwner) {
           global.dfail('group', m, conn)
           throw false
         }
@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
     case 'antiprivado':
     case 'antipriv':
      isAll = true
-        if (!isOwner && !isMods) {
+        if (!isOwner) {
           global.dfail('rowner', m, conn)
           throw false
       }
