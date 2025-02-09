@@ -1,44 +1,36 @@
-/*
-- By WillZek 
-- Extraer La Letra De Una Canción 
+/* Lyrics By WillZek 
+- Free Codes Titan 
+- https://github.com/WillZek 
 */
+
+// [⌨️] Letra De Canciones
+
 import fetch from 'node-fetch';
-import cheerio from 'cheerio';
 
-async function obtenerLetraCancion(titulo, m) {
-    const url = `https://www.stands4.com/services/v2/lyrics.php?uid=1001&tokenid=tk324324&term=${encodeURIComponent(titulo)}&artist=Alphaville&format=xml`;
+let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-    try {
-        const response = await fetch(url);
-        if (!response.ok) {
-            throw new Error('Error al acceder a la API');
-        }
+if (!text) return m.reply(m.chat, '🍭 Ingrese Un Nombre De Alguna Cancion', m, rcanal);
 
-        const texto = await response.text();
-        console.log(texto); // Pa ver si funca la api de mrd 
+try {
+let api = `https://archive-ui.tanakadomp.biz.id/search/lirik?q=${text}`;
 
-        const $ = cheerio.load(texto, { xmlMode: true });
+let responde = await fetch(api);
+let json = await responde.json();
+let crow = json.result;
 
-        const letra = $('lyric').text();
-        if (letra.length) {
-            m.reply(letra);
-        } else {
-            m.reply('No se encontró la letra de la canción.');
-        }
-    } catch (error) {
-        console.error(error.message);
-        m.reply(`*Error:* ${error.message}`);
-    }
-}
+let txt = `*Nombre:* ${crow.title}\n*Letra:* ${crow.lyrics}`;
 
-const handler = async (m, { conn, command, args }) => {
-    const tituloCancion = args.join(' ') || 'Forever Young';
-    await obtenerLetraCancion(tituloCancion, m);
-}
+let img = crow.thumb;
 
-handler.help = ['lyrics'];
-handler.tag = ['buscador'];
-handler.command = ['lyrics', 'letrac'];
-handler.estrellas = 4;
+conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
+
+} catch (e) {
+console.log(e)
+m.reply('*No se pudo obtener la letra De su canción*');
+m.reply('✖️');
+ }
+};
+
+handler.command = ['lyrics'];
 
 export default handler;
