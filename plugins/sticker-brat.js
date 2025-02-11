@@ -15,7 +15,7 @@ let api = `https://kepolu-brat.hf.space/brat?q=${text}`;
 let res = await axios.get(api);
 let st = res 
 
-await conn.sendMessage(m.chat, { sticker: st }, { quoted: m })
+await conn.sendMessage(m.chat, { sticker: api }, { quoted: m })
 
 } catch (error) {
 m.reply(`${error.message}`);
