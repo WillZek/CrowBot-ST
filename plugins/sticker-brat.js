@@ -17,7 +17,7 @@ let res = await axios.get(api);
 let st = res 
 
 
-const buffer = Buffer.from(res, 'base64');
+const buffer = Buffer.from(st, 'base64');
 let stiker = await sticker(buffer, false, global.packname, global.author);
 if (stiker) return conn.sendFile(m.chat, stiker, 'error.webp', '', m);
 
