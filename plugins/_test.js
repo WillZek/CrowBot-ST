@@ -12,8 +12,8 @@ let img = 'https://files.catbox.moe/l6jzeo.jpeg';
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: ff }, { quoted: fkontak });
 m.react('🔫');
+}
 
 handler.command = ['menuff'];
 
 export default handler
-
