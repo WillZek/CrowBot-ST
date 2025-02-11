@@ -29,6 +29,6 @@ handler.tags = ['grupo']
 handler.command = /^(kickrandom|ruletaban|rban)$/i;
 handler.group = true
 handler.admin = true
-handler.botAdmin = true;
+handler.botAdmin = false;
 
 export default handler;
