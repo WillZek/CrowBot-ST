@@ -21,9 +21,8 @@ const buffer = Buffer.from(st, 'base64');
 let stiker = await sticker(buffer, false, global.packname, global.author);
 if (stiker) return conn.sendFile(m.chat, stiker, 'error.webp', '', m);
 
-/* await conn.sendFile(m.chat, api, 'sticker.webp', '', m, null);
+await conn.sendFile(m.chat, st, 'sticker.webp', '', m, null);
 await conn.sendMessage(m.chat, { sticker: api }, { quoted: m })
-*/
 
 } catch (error) {
 m.reply(`${error.message}`);
