@@ -10,6 +10,7 @@ try {
 let api = await axios.get(`https://vapis.my.id/api/bratv1?q=${text}`, { responseType: 'arraybuffer' })
 await conn.sendMessage(m.chat, { sticker: Buffer.from(api.data) }, { quoted: m })
 } catch (error) {
+m.reply(`${error.message}`);
 console.error(error)
 }}
 
