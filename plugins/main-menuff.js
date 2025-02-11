@@ -15,7 +15,7 @@ conn.sendMessage(m.chat, { image: { url: img }, caption: ff }, { quoted: fkontak
 m.react('🔫');
 }
 
-handler.help = ['menuff'];
+handler.help = ['menuff (Menu Free Fire)'];
 handler.tag = ['crow'];
 handler.command = ['menuff'];
 
