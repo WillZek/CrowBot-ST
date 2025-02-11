@@ -1,21 +1,23 @@
 // ౨ৎ ˖ ࣪⊹ 𝐁𝐲 𝐉𝐭𝐱𝐬 𐙚˚.ᡣ𐭩
 // API De Mrd 
-import axios from 'axios'
+import axios from 'axios';
 import { sticker } from '../lib/sticker.js';
 
 let handler = async (m, { conn, text }) => {
-if (!text) return conn.reply(m.chat, `❀ Ingresa un texto`, m)
-
+if (!text) return conn.reply(m.chat, `❀ Ingresa un texto`, m);
 
 try {
-let api = await axios.get(`https://kepolu-brat.hf.space/brat?q=${text}`, { responseType: 'arraybuffer' })
+let response = await axios.get(`https://kepolu-brat.hf.space/brat?q=${text}`, { responseType: 'arraybuffer' });
+        
+let stickerBuffer = Buffer.from(response.data);
 
-await conn.sendMessage(m.chat, { sticker: Buffer.from(api) }, { quoted: m })
+await conn.sendMessage(m.chat, { sticker: stickerBuffer }, { quoted: m });
 
 } catch (error) {
 m.reply(`${error.message}`);
-console.error(error)
-}}
+console.error(error);
+  }
+}
 
 handler.command = ['brat']
 
