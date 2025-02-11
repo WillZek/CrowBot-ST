@@ -9,7 +9,7 @@ if (!text) return conn.reply(m.chat, `❀ Ingresa un texto`, m);
 try {
 let response = await axios.get(`https://kepolu-brat.hf.space/brat?q=${text}`, { responseType: 'arraybuffer' });
         
-let stickerBuffer = Buffer.from(response.data);
+let stickerBuffer = Buffer.from(response);
 
 await conn.sendMessage(m.chat, { sticker: stickerBuffer }, { quoted: m });
 
