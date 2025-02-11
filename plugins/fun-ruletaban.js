@@ -3,7 +3,7 @@
 - https://github.com/WillZek 
 */
 
-let SCC = async (m, { conn, text, participants }) => {
+let handler = async (m, { conn, text, participants }) => {
 
 const gAdmins = participants.filter(p => p.admin);
 const botId = conn.user.jid;
@@ -24,11 +24,11 @@ conn.reply(m.chat, `*${tag}* Fue Eliminado Con Éxito 🎩`, m, null)
     m.react('✅');
 }
 
-SCC.help = ['ruletaban']
-SCC.tags = ['grupo']
-SCC.command = /^(kickrandom|ruletaban|rban)$/i;
-SCC.group = true
-SCC.admin = true
-SCC.botAdmin = true;
+handler.help = ['ruletaban']
+handler.tags = ['grupo']
+handler.command = /^(kickrandom|ruletaban|rban)$/i;
+handler.group = true
+handler.admin = true
+handler.botAdmin = true;
 
-export default SCC
+export default handler;
