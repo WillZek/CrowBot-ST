@@ -9,7 +9,7 @@ async function loadCharacters() {
         const data = await fs.readFile(charactersFilePath, 'utf-8');
         return JSON.parse(data);
     } catch (error) {
-        throw new Error('❀ No se pudo cargar el archivo characters.json.');
+        throw new Error(`❀ No se pudo cargar el archivo characters.json : ${error.message}`);
     }
 }
 
