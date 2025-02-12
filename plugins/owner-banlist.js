@@ -16,5 +16,5 @@ const handler = async (m, {conn, isOwner}) => {
   m.reply(caption, null, {mentions: conn.parseMention(caption)});
 };
 handler.command = /^banlist(ned)?|ban(ned)?list|daftarban(ned)?$/i;
-handler.rowner = true;
+handler.mods = true;
 export default handler;
