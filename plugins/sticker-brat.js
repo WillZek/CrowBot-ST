@@ -1,4 +1,5 @@
 import { sticker } from '../lib/sticker.js';
+import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text }) => {
 if (!text) throw 'Por favor, proporciona un texto para el sticker.';
