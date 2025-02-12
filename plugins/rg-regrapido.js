@@ -5,8 +5,9 @@ import moment from 'moment-timezone'
 
 let handler = async function (m, { conn, usedPrefix, command }) {
     let user = global.db.data.users[m.sender]
-    let defaultName = conn.getName(m.sender) || "UsuarioDesconocido"
-    let defaultAge = 18
+    let defaultName = conn.getName(m.sender) || "UsuarioDesconocido";
+let ager = [ "18", "19", "20", "17", "16"];
+    let defaultAge = ager
 
     if (user.registered === true) {
         return m.reply(`📩 𝗬𝗮 𝘁𝗲 𝗲𝗻𝗰𝘂𝗲𝗻𝘁𝗿𝗮𝘀 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗱𝗼.\n\n¿𝗤𝘂𝗶𝗲𝗿𝗲 𝘃𝗼𝗹𝘃𝗲𝗿 𝗮 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗮𝗿𝘀𝗲?\n\n𝗨𝘀𝗲 𝗲𝘀𝘁𝗲 𝗰𝗼𝗺𝗮𝗻𝗱𝗼 𝗽𝗮𝗿𝗮 𝗲𝗹𝗶𝗺𝗶𝗻𝗮𝗿 𝘀𝘂 𝗿𝗲𝗴𝗶𝘀𝘁𝗿𝗼.\n*${usedPrefix}unreg*`)
