@@ -11,7 +11,8 @@ if (!response.ok) return m.reply('Error en la respuesta de la API.');
 const buffer = await response.buffer();
 let stiker = await sticker(false, buffer, global.packname, global.author);
 
-conn.sendFile(m.chat, stiker, null, { asSticker: true }, m);
+// conn.sendFile(m.chat, stiker, null, { asSticker: true }, m);
+if (stiker) return conn.sendFile(m.chat, stiker, 'pene.webp', '', m);
 
 } catch (error) {
 m.reply(`Error: ${error}`);
