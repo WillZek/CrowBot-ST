@@ -13,7 +13,7 @@ let stiker = await sticker(null, buffer, global.packname, global.author);
 
  conn.sendFile(m.chat, stiker, null, { asSticker: true }, m);
 if (stiker) return conn.sendFile(m.chat, stiker, 'pene.webp', '', m);
-/*
+*/
 
 try {
 let pene = `https://api.fgmods.xyz/api/maker/carbon?text=${text}&apikey=${elrebelde21}`
