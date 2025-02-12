@@ -5,7 +5,6 @@ let setting = global.db.data.settings[this.user.jid]
 if (setting.autobio) {
 
 let _uptime = process.uptime() * 1000
-let _muptime
 if (process.send) { process.send('uptime')
 _muptime = await new Promise(resolve => { process.once('message', resolve) 
 setTimeout(resolve, 2000) }) * 1000}
