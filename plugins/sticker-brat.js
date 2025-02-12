@@ -9,7 +9,7 @@ const response = await fetch(`https://brat.caliphdev.com/api/brat?text=${encodeU
 if (!response.ok) m.reply('Error en la respuesta de la API.');
 
 const buffer = await response.buffer();
-let stiker = await sticker(null, buffer, global.packname, global.author);
+let stiker = await sticker(false, buffer, global.packname, global.author);
 } catch (error) {
 m.reply(`Error: ${error}`);
 }
