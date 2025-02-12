@@ -1,24 +1,19 @@
-// ౨ৎ ˖ ࣪⊹ 𝐁𝐲 𝐉𝐭𝐱𝐬 𐙚˚.ᡣ𐭩
-// API De Mrd 
-import axios from 'axios';
-import { sticker } from '../lib/sticker.js';
+import { sticker } from '../lib/sticker.js'
 
-let handler = async (m, { conn, text }) => {
-if (!text) return conn.reply(m.chat, `❀ Ingresa un texto`, m);
+let handler = async (m, { conn, text, command }) => {
+    let stiker = await sticker(null,
+        global.API('https://brat.caliphdev.com', `/api/brat`, {
+            text: text
+        }),
+        global.packname,
+        global.author
+    )
+    if (stiker) return conn.sendFile(m.chat, stiker, 'sticker.webp', '', m)
+    throw stiker.toString()
 
-try {
-let response = await axios.get(`https://kepolu-brat.hf.space/brat?q=${text}`, { responseType: 'arraybuffer' });
-        
-let stickerBuffer = Buffer.from(response.data);
-
-await conn.sendMessage(m.chat, { sticker: stickerBuffer }, { quoted: m });
-
-} catch (error) {
-m.reply(`${error.message}`);
-console.error(error);
-  }
 }
 
-handler.command = ['brat']
-
+handler.help = ['brat <texto>']
+handler.tags = ['sticker']
+handler.command = /^brat$/i
 export default handler
