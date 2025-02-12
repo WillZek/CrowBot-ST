@@ -2,17 +2,17 @@ import { sticker } from '../lib/sticker.js';
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text }) => {
-if (!text) throw 'Por favor, proporciona un texto para el sticker.';
+if (!text) m.reply('Por favor, proporciona un texto para el sticker.');
 
 let stiker;
 try {
 const response = await fetch(`https://brat.caliphdev.com/api/brat?text=${encodeURIComponent(text)}`);
-if (!response.ok) throw 'Error en la respuesta de la API.';
+if (!response.ok) m.reply('Error en la respuesta de la API.');
 
 const buffer = await response.buffer();
 stiker = await sticker(null, buffer, global.packname, global.author);
 } catch (error) {
-throw `Error: ${error}`;
+m.reply(`Error: ${error}`);
 }
 
 if (stiker) return conn.sendFile(m.chat, stiker, 'sticker.webp', '', m);
