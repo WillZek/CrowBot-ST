@@ -16,7 +16,7 @@ if (stiker) return conn.sendFile(m.chat, stiker, 'pene.webp', '', m);
 */
 
 try {
-let pene = `https://api.fgmods.xyz/api/maker/carbon?text=${text}&apikey=${elrebelde21}`
+let pene = `https://api.fgmods.xyz/api/maker/carbon?text=${text}&apikey=elrebelde21`
 await conn.sendFile(m.chat, pene, 'error.jpg', null, m, null, fake)
 
 } catch (error) {
