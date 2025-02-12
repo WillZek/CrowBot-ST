@@ -105,6 +105,8 @@ chat.antiLink2 = false
                 if (!('simi' in chat))
                     chat.simi = false
                 if (!('autolevelup' in chat))  chat.autolevelup = false
+                if (!('antiBot2' in chat))
+chat.antiBot2 = false
                 if (!('antiver' in chat))
                     chat.antiver = false
                 if (!('delete' in chat))
@@ -123,6 +125,7 @@ chat.antiLink2 = false
                     onlyLatinos: false,
                     simi: false,
                     autolevelup: false,
+                    antiBot2: false,
                     antiver: false,
                     nsfw: false, 
                     autoAceptar: false,
