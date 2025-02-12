@@ -15,7 +15,6 @@ m.reply(`Error: ${error}`);
 }
 
 // if (stiker) return conn.sendFile(m.chat, stiker, 'sticker.webp', '', m);
-throw 'Error al crear tu sticker bro';
 
 conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 }
