@@ -17,7 +17,8 @@ if (stiker) return conn.sendFile(m.chat, stiker, 'pene.webp', '', m);
 
 try {
 let pene = `https://api.fgmods.xyz/api/maker/carbon?text=${text}&apikey=elrebelde21`
-await conn.sendMessage(m.chat, { sticker: pene }, { quoted: m });
+// await conn.sendMessage(m.chat, { sticker: pene }, { quoted: m });
+if (stiker) return conn.sendFile(m.chat, pene, 'pene.webp', '', m);
 
 } catch (error) {
 m.reply(`Error: ${error}`);
