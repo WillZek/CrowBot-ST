@@ -1,12 +1,12 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Bienvenidos%20-%20Crow%20Bot%20💛&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Bienvenidos%20-%20Elder%20Bot%20🥷&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
 ![Bienvenida Épica](https://github.com/WillZek/WillZek/blob/main/Crow.svg)
 
 > **`🪩 Versión Actual: 2.1.0`**  
 
 <a
-href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=yellow&style=flat-square"></a>
-<a href="https://github.com/WillZek/CrowBot-ST/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/WillZek/CrowBot-ST?label=Espectadores&style=social"></a>
+href="https://github.com/WillZek/ElderBot-HN/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/WillZek/ElderBot-HN?color=yellow&style=flat-square"></a>
+<a href="https://github.com/WillZek/ElderBot-HN/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/WillZek/ElderBot-HN?label=Espectadores&style=social"></a>
 
 </p>
 
@@ -21,15 +21,15 @@ ___
 ___
 
 
-## 💛 **`C R O W - B O T`**    
+## 🥷 **`E L D E R - B O T`**    
 
 ![Menú Principal](https://files.catbox.moe/v8q8y2.jpg)
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>   
 
-<a href="https://github.com/WillZek/CrowBot-ST"><img src="https://cardivo.vercel.app/api?name=CrowBot&repo=CrowBot-ST&description=Hola+Soy+CrowBot+Disfruta+del+Bot+De+WhatsApp.&image=https://telegra.ph/file/b346b44893d4613a72f98.jpg/revision/latest?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&instagram=crowbot_wa&whatsapp=50557865603&tiktok=crow_legendario_bs&pattern=leaf&colorPattern=%23eaeaea" /><a>
+<a href="https://github.com/WillZek/ElderBot-HN"><img src="https://cardivo.vercel.app/api?name=Elder&repo=ElderBot-HN&description=Hola+Soy+ElderBot+Disfruta+del+Bot+De+WhatsApp.&image=https://telegra.ph/file/b346b44893d4613a72f98.jpg/revision/latest?cb=20200606024545&usqp=CAU&usqp=CAU&backgroundColor=%23ecf0f1&instagram=crowbot_wa&whatsapp=50557865603&tiktok=crow_legendario_bs&pattern=leaf&colorPattern=%23eaeaea" /><a>
 
- <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=85&pause=2000&color=FFD200FF&chrome=true&width=1000&height=200&lines=💛+ WillZek+Lanzó;🍷La+Version+2.1.0;Disfruta+Del+Bot+🎩" alt="Typing SVG" /></a>
+ <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=85&pause=2000&color=FFD200FF&chrome=true&width=1000&height=200&lines=🥷+ WillZek+Lanzó;🍷La+Version+2.1.0;Disfruta+Del+Bot+🎩" alt="Typing SVG" /></a>
 
 
 <!-- RAINBOW LINE BOT -->
@@ -46,7 +46,7 @@ ___
 [![Accounts](https://img.shields.io/badge/CUENTAS-000000%7D?style=for-the-badger&logo=biolink&logoColor=white)](https://www.atom.bio/crowbot-ofc)
 
 
-<a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | NIÑO PIÑA💛 | STARCORE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
+<a href="#"><img title="ElderBot" src="https://img.shields.io/badge/ELDERBOT💛 | HN ELDER💛 | STARCORE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
 
 <!-- RAINBOW LINE BOT -->
