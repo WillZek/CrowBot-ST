@@ -58,14 +58,14 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     regbot += `🍭 Verifica Tu Registro Aqui 👇🏻`
 
     await m.react('📪')
-    await conn.sendMessage(m.chat, {
+  await conn.sendMessage(m.chat, {
         text: regbot,
         contextInfo: {
             externalAdReply: {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
                 body: dev,
                 thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg',
-                sourceUrl: channel,
+                sourceUrl: redes,
                 mediaType: 1,
                 showAdAttribution: true,
                 renderLargerThumbnail: true
