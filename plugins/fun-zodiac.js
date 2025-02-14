@@ -1,6 +1,6 @@
 
 let handler = (m, { usedPrefix, command, text }) => {
-    if (!text) throw `Ejemplo:\n${usedPrefix + command} 2000 06 09`
+    if (!text) return m.reply(`Ejemplo:\n${usedPrefix + command} 2000 06 09`);
 
     const date = new Date(text)
     if (date == 'Fecha invalida, prueba con el siguiente formato AAAA MM DD Ejemplo: 2003 02 07 ') throw date
