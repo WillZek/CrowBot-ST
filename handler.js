@@ -138,7 +138,7 @@ chat.antiBot2 = false
                if (!('self' in settings)) settings.self = false
                if (!('restrict' in settings)) settings.restrict = false
                 if (!('jadibotmd' in settings)) settings.jadibotmd = true
-               if (!('autobio' in settings)) settings.autobio = false
+               if (!('autobio' in settings)) settings.autobio = true
                 if (!('antiPrivate' in settings)) settings.antiPrivate = false
                 if (!('autoread' in settings)) settings.autoread = false
                 if (!('autoread2' in settings)) settings.autoread2 = false
@@ -147,7 +147,7 @@ chat.antiBot2 = false
                 self: false,
                 restrict: false,
                 jadibotmd: true,
-                autobio: false,
+                autobio: true,
                 antiPrivate: false,
                 autoread: false,
                 autoread2: false,
