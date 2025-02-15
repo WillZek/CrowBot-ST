@@ -27,7 +27,7 @@ let handler = async (m, { conn, text }) => {
     let pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
 
     if (pene) {
-        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${pene.split('@')[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${pene.split('@', '+')[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
     } else {
         await conn.reply(m.chat, `EL USUARIO NO LE MAMO EL PENE A MI CREADOR`, m)
     }
