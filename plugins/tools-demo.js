@@ -2,66 +2,47 @@ import { randomBytes } from "crypto"
 import axios from "axios"
 
 let handler = async (m, { conn, text }) => {
-    if (!text) throw '¿Cómo puedo ayudarte hoy?';
+    if (!text) throw `${emoji} ¿Cómo puedo ayudarte hoy?`;
     try {
         conn.reply(m.chat, m);
-        let data = await chatGpt(text)
-await conn.sendMessage(m.chat, { 
-    text: '*Demo:* ' + data,
-    contextInfo: {
-        forwardingScore: 9999999,
-        isForwarded: false, 
-        externalAdReply: {
-            showAdAttribution: true,
-            containsAutoReply: true,
-            title: `[ 𝗖𝗛𝗔𝗧𝗚𝗣𝗧 - 𝗗𝗘𝗠𝗢 ]`,
-            body: dev,
-            previewType: "PHOTO",
-            thumbnailUrl: 'https://tinyurl.com/2awg2bch', 
-            sourceUrl: channel,
-        }
-    }
-}, { quoted: m });
+        let data = await chatGpt(text);
+        await conn.sendMessage(m.chat, { 
+            text: '*Demo:* ' + data
+        }, { quoted: m });
 
-    } catch (err) {
-        m.reply('error cik:/ ' + err);
+    } catch (e) {
+        m.reply('error cik:/ ' + e);
     }
 }
 
 handler.help = ['demo *<texto>*'];
-handler.command = ['demo'];
+handler.command = ['demo', 'openai'];
 handler.tags = ['tools'];
+handler.group = false;
 
 export default handler;
 
-async function chatGpt(query){
-try {
+async function chatGpt(query) {
+    try {
+        const { id_ } = (await axios.post("https://chat.chatgptdemo.net/new_chat", { user_id: "crqryjoto2h3nlzsg" }, { headers: { "Content-Type": "application/json" } })).data;
 
-const { id_ }= (await axios.post("https://chat.chatgptdemo.net/new_chat",{user_id: "crqryjoto2h3nlzsg"},{headers:{
-"Content-Type": "application/json",
+        const json = { "question": query, "chat_id": id_, "timestamp": new Date().getTime() };
 
-}})).data
+        const { data } = await axios.post("https://chat.chatgptdemo.net/chat_api_stream", json, { headers: { "Content-Type": "application/json" } });
+        const cek = data.split("data: ");
 
-const json = {"question":query,"chat_id": id_,"timestamp":new Date().getTime()}
+        let res = [];
 
+        for (let i = 1; i < cek.length; i++) {
+            if (cek[i].trim().length > 0) {
+                res.push(JSON.parse(cek[i].trim()));
+            }
+        }
 
-const { data } = await axios.post("https://chat.chatgptdemo.net/chat_api_stream",json,{headers:{
-"Content-Type": "application/json",
+        return res.map((a) => a.choices[0].delta.content).join("");
 
-}})
-const cek = data.split("data: ")
-
-let res = []
-
-for (let i=1; i < cek.length; i++){
-if (cek[i].trim().length > 0){
-res.push(JSON.parse(cek[i].trim()))
-}}
-
-return res.map((a) => a.choices[0].delta.content).join("")
-
-} catch (error) {
-console.error("Error parsing JSON:",error)
-return 404
-}
+    } catch (error) {
+        console.error("Error parsing JSON:", error);
+        return 404;
+    }
 }
