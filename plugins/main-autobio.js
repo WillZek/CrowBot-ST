@@ -3,7 +3,7 @@ handler.all = async function (m) {
 let setting = global.db.data.settings[this.user.jid];
 const INTERVAL = 30 * 60 * 1000; //se actualizada solo cada 30 minutos 
 
-if (setting.autobio && (new Date() - setting.status < INTERVAL)) return;
+if (setting.autobio && (new Date() - setting.autobio < INTERVAL)) return;
 
 let _uptime = process.uptime() * 1000;
 let _muptime;
