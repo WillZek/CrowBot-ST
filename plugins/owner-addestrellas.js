@@ -23,13 +23,17 @@ let handler = async (m, { conn, text }) => {
     if (!users[who]) return m.reply('⚠️ El usuario no existe en la base de datos.');
 
     users[who].estrellas += dmt;
-
+  
   let pene;
-pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false;
-  } else {
-    pene = text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.chat;
-  }
-
+if (m.mentionedJid[0]) {
+    pene = m.mentionedJid[0]
+} else if (m.quoted) {
+    pene = m.quoted.sender
+} else if (text) {
+    pene = text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
+} else {
+    pene = false
+}
     await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${pene.split('@')[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
