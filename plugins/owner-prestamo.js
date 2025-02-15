@@ -1,3 +1,4 @@
+// Lo Debería De Eliminar Porque Ni Se Usa
 let handler = async(m, { conn, command, text }) => {
   if (!text) return m.reply(`*🌠 Ingresa El Motivo Del Préstamo*`)
     if (text.length < 11) return m.reply(`*🚩 Ingresa Al Menos 11 Caracteres*`)
@@ -15,6 +16,6 @@ for (let [jid] of global.owner.filter(([number, _, isDeveloper]) => isDeveloper 
 }
 handler.tags = ['owner']
 handler.command = handler.help =['prestamo','prestar']
-handler.prems = true
+handler.owner = true
 
 export default handler
