@@ -1,6 +1,6 @@
 /* Código Hecho Por WillZek Para Crow Ya Que El Otro Se Jodió xD
 - https://github.com/WillZek 
-/*
+*/
 
 import db from '../lib/database.js';
 import MessageType from '@whiskeysockets/baileys';
