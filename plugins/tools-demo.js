@@ -18,7 +18,7 @@ await conn.sendMessage(m.chat, {
             body: dev,
             previewType: "PHOTO",
             thumbnailUrl: 'https://tinyurl.com/2awg2bch', 
-            sourceUrl: channels,
+            sourceUrl: channel,
         }
     }
 }, { quoted: m });
