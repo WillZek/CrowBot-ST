@@ -65,7 +65,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
                 body: dev,
                 thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg',
-                sourceUrl: redes,
+                sourceUrl: channel,
                 mediaType: 1,
                 showAdAttribution: true,
                 renderLargerThumbnail: true
