@@ -1,6 +1,6 @@
 /* Código Hecho Por WillZek Para Crow Ya Que El Otro Se Jodió xD
 - https://github.com/WillZek 
-*/
+/*
 
 import db from '../lib/database.js';
 import MessageType from '@whiskeysockets/baileys';
@@ -23,23 +23,19 @@ let handler = async (m, { conn, text }) => {
     if (!users[who]) return m.reply('⚠️ El usuario no existe en la base de datos.');
 
     users[who].estrellas += dmt;
-  
-  let pene;
-if (m.mentionedJid[0]) {
-    pene = m.mentionedJid[0]
-} else if (m.quoted) {
-    pene = m.quoted.sender
-} else if (text) {
-    pene = text.replace(/[^0-9]/g, '') + '@s.whatsapp.net'
-} else {
-    pene = false
-}
-    await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${pene.split('@')[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+
+    let pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
+
+    if (pene) {
+        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${pene.split('@')[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+    } else {
+        await conn.reply(m.chat, `EL USUARIO NO LE MAMO EL PENE A MI CREADOR`, m)
+    }
 }
 
-handler.help = ['addestrellas *<@user>* <cantidad>'];
+handler.help = ['addestrellas *<@user>* <cantidad>']
 handler.tags = ['owner'];
-handler.command = ['addestrellas', 'addes'];
-handler.mods = true;
+handler.command = ['addestrellas', 'addes']
+handler.mods = true
 
-export default handler;
+export default handler
