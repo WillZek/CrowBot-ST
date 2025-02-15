@@ -168,7 +168,6 @@ await conn.sendMessage(m.chat, { video: { url: vid.getRandom() }, caption: text.
 }
 handler.help = ['menu']
 handler.tags = ['main']
-handler.estrellas = 5;
 handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
 handler.register = true
 
