@@ -30,7 +30,7 @@ await conn.sendMessage(m.chat, {
 
 handler.help = ['demo *<texto>*'];
 handler.command = ['demo'];
-handler.tags = ['ai'];
+handler.tags = ['tools'];
 
 export default handler;
 
