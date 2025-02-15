@@ -6,7 +6,7 @@ const handler = async (m) => {
     let o;
     try {
       conn.reply(m.chat, `${emoji} Speed Test....`, m, )
-      o = await exec('python3 ./speed.py --secure --share');
+      o = await exec('python3 ./lib/speed.py --secure --share');
         const {stdout, stderr} = o;
         if (stdout.trim()) {
             const match = stdout.match(/http[^"]+\.png/);
