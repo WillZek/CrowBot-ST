@@ -30,6 +30,6 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['addestrellas *<@user>* <cantidad>'];
 handler.tags = ['owner'];
 handler.command = ['addestrellas', 'addes'];
-handler.prems = true;
+handler.mods = true;
 
 export default handler;
