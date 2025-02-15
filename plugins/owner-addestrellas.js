@@ -26,7 +26,7 @@ let handler = async (m, { conn, text }) => {
 
    let pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.sender
 
-    await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${m.sender.split`@`[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+    await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${who.split`@`[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['addestrellas *<@user>* <cantidad>'];
