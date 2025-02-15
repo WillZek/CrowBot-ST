@@ -1,4 +1,5 @@
-
+// Esto Ni Se Usa Porque No Hay Beneficios Como Premium 
+/*
 const handler = async (m, {conn, text, usedPrefix, command}) => {
   let who;
   if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
@@ -22,3 +23,4 @@ handler.command = /^(remove|-|del)premium$/i;
 handler.group = true;
 handler.prems = true;
 export default handler;
+*/
