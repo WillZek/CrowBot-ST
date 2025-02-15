@@ -24,9 +24,9 @@ let handler = async (m, { conn, text }) => {
 
     users[who].estrellas += dmt;
 
-   let pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : m.sender
+  let pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false;
 
-    await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${who.split`@`[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+    await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${pene.split`@`[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['addestrellas *<@user>* <cantidad>'];
