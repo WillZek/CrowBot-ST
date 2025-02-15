@@ -25,7 +25,7 @@ let handler = async (m, { conn, text }) => {
     users[who].estrellas += dmt;
 
     let pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
-    let no = pene.split('@')[0]
+    let No = pene.split('@')[0]
     if (pene) {
         await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${No}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
     } else {
