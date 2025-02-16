@@ -55,24 +55,9 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     regbot += `• 245 Experiencia 💸\n> `
     regbot += `• 12 Tokens 💰\n`
     regbot += `꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷\n> `
-    regbot += `🍭 Verifica Tu Registro Aqui 👇🏻`
+    regbot += `🍭 Verifica Tu Registro Aqui 👇`
 
-    await m.react('📪')
   await conn.sendMessage(m.chat, {
-           text: regbot, 
-        contextInfo: {
-            externalAdReply: {
-                showAdAttribution: true,                      
-                containsAutoReply: true,     
-                renderLargerThumbnail": true,
-                title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',  
-                body: dev,  
-                containsAutoReply: true, 
-                sourceUrl: channel,
-                mediaType: 1, 
-                thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg' }}}, {quoted: m})
-
-/*  await conn.sendMessage(m.chat, {
         text: regbot,
         contextInfo: {
             externalAdReply: {
@@ -87,6 +72,21 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
             }
         }
     }, { quoted: m });
+
+/*    await m.react('📪')
+  await conn.sendMessage(m.chat, {
+           text: regbot, 
+        contextInfo: {
+            externalAdReply: {
+                showAdAttribution: true,                      
+                containsAutoReply: true,     
+                renderLargerThumbnail": true,
+                title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',  
+                body: dev,  
+                containsAutoReply: true, 
+                sourceUrl: channel,
+                mediaType: 1, 
+                thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg' }}}, {quoted: m})
 */
 
 let chtxt = `👤 *𝚄𝚜𝚎𝚛* » ${m.pushName || 'Anónimo'}
