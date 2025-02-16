@@ -45,7 +45,7 @@
 "axios": "^1.1.2",
 "acrcloud": "latest",
 "google-play-scraper": "latest",
-"form-data": "^4.0.0",
+"form-data": "^4.0.2",
 "cfonts": "^3.3.0",
 "boxen": "^7.1.1",
 "groq-sdk": "latest",
