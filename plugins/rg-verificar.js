@@ -62,7 +62,6 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
         contextInfo: {
             externalAdReply: {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
-                body: dev,
                 thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg',
                 mediaUrl: channel,
                 sourceUrl: channel,
