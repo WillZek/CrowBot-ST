@@ -27,11 +27,10 @@ ${listAdmin}
 ◈ *Antilink 𝟸:* ${antiLink2 ? '✅' : '❌'} 
 ◈ *Autosticker:* ${autosticker ? '✅' : '❌'} 
 ◈ *Audios:* ${audios ? '✅' : '❌'} 
-◈ *Antiver:* ${antiviewonce ? '✅' : '❌'} 
+◈ *Antiver:* ${antiver ? '✅' : '❌'} 
 ◈ *Reacción* ${reaction ? "✅️" : "❌️"}
 ◈ *Delete:* ${antidelete ? '✅' : '❌'} 
 ◈ *Antitoxic:* ${antiToxic ? '✅' : '❌'} 
-◈ *Antitraba:* ${antiTraba ? '✅' : '❌'} 
 `.trim();
   conn.sendFile(m.chat, pp, 'img.jpg', text, m, false, {mentions: [...groupAdmins.map((v) => v.id), owner]});
 };
