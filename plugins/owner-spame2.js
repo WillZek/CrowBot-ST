@@ -39,5 +39,5 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['spam2'];
 handler.tags = ['owner'];
 handler.command = ['spam2'];
-handler.owner = true;
+handler.mods = true;
 export default handler;
