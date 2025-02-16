@@ -1,6 +1,6 @@
 const handler = async (m, {conn, participants, groupMetadata}) => {
   const pp = await conn.profilePictureUrl(m.chat, 'image').catch((_) => null) || 'https://files.catbox.moe/kd7vs5.jpg';
-  const {antiLink, detect, welcome, modoadmin, antiPrivate, autoRechazar, nsfw, autoAceptar, restrict, antiSpam, reaction, antiviewonce, antiTraba, antiToxic} = global.db.data.chats[m.chat];
+  const { antiToxic, antidelete, antiver, antiLink2, welcome, detect, antiLink, reaction } = global.db.data.chats[m.chat];
   const groupAdmins = participants.filter((p) => p.admin);
   const listAdmin = groupAdmins.map((v, i) => `${i + 1}. @${v.id.split('@')[0]}`).join('\n');
   const owner = groupMetadata.owner || groupAdmins.find((p) => p.admin === 'superadmin')?.id || m.chat.split`-`[0] + '@s.whatsapp.net';
@@ -23,8 +23,7 @@ ${listAdmin}
 ◈ *Welcome:* ${welcome ? '✅' : '❌'}
 ◈ *Detect:* ${detect ? '✅' : '❌'}  
 ◈ *Antilink:* ${antiLink ? '✅' : '❌'} 
-◈ *Antilink 𝟸:* ${antiLink2 ? '✅' : '❌'} 
-◈ *Audios:* ${audios ? '✅' : '❌'} 
+◈ *Antilink 𝟸:* ${antiLink2 ? '✅' : '❌'}  
 ◈ *Antiver:* ${antiver ? '✅' : '❌'} 
 ◈ *Reacción* ${reaction ? "✅️" : "❌️"}
 ◈ *Delete:* ${antidelete ? '✅' : '❌'} 
