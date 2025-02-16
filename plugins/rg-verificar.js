@@ -63,8 +63,6 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
             externalAdReply: {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
                 thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg',
-                mediaUrl: channel,
-                sourceUrl: channel,
                 mediaType: 1,
                 showAdAttribution: true,
                 renderLargerThumbnail: true
