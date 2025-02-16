@@ -19,9 +19,6 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 🍭 *Rol:* Mod
 💛 *Número:* Wa.me/529831715910
 
-• 𝐒𝐞𝐧𝐧𝐚 
-🎩 *Rol:* Mod
-💛 *Número:* Wa.me/51971867199
 
 • 𝐌𝐨𝐫𝐚𝐥𝐞𝐬
 🍭 *Rol:* Mod
