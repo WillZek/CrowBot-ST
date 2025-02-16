@@ -25,7 +25,6 @@ ${listAdmin}
 ◈ *Detect:* ${detect ? '✅' : '❌'}  
 ◈ *Antilink:* ${antiLink ? '✅' : '❌'} 
 ◈ *Antilink 𝟸:* ${antiLink2 ? '✅' : '❌'} 
-◈ *Autosticker:* ${autosticker ? '✅' : '❌'} 
 ◈ *Audios:* ${audios ? '✅' : '❌'} 
 ◈ *Antiver:* ${antiver ? '✅' : '❌'} 
 ◈ *Reacción* ${reaction ? "✅️" : "❌️"}
