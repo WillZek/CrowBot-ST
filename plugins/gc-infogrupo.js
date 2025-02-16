@@ -10,7 +10,7 @@ const handler = async (m, {conn, participants, groupMetadata}) => {
 💛 *Nombre:*
 → ${groupMetadata.subject}
 💛 *Descripción:*
-→ ${groupMetadata.desc?.toString() || 'Sin Descripción'}
+→ ${groupMetadata.desc?.toString() || '*CrowBot-ST*'}
 💫 *Miembros:*
 → ${participants.length} Participantes
 👑 *Creador del Grupo:*
