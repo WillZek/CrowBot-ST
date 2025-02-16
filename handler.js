@@ -298,7 +298,7 @@ return
 }
 
 // Modoadmin
-let hl = _prefix  
+let hl = global.prefix 
 let adminMode = global.db.data.chats[m.chat].modoadmin
 let crow = `${plugins.botAdmin || plugins.admin || plugins.group || plugins || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugins.command}`
 
