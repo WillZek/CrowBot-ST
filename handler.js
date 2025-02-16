@@ -295,6 +295,12 @@ user.antispam++
 return
 }
 
+// Modoadmin 
+let adminMode = global.db.data.chats[m.chat].modoadmin
+let crow = `${plugins.botAdmin || plugins.admin || plugins.group || plugins || noPrefix || hl ||  m.text.slice(0, 1) == hl || plugins.command}`
+
+if (adminMode && !isOwner && !isROwner && m.isGroup && !isAdmin && crow) return   
+
 //Antispam 2                
 if (user.antispam2 && isROwner) return
 let time = global.db.data.users[m.sender].spam + 3000
