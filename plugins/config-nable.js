@@ -66,6 +66,17 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       chat.antiBot2 = isEnable
       break
 
+    case 'antitoxic': 
+    case 'antitoxicos':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn);
+          throw false;
+        }
+      }
+      isEnable = chat.antitoxic = !chat.antitoxic;
+      break;
+
  case 'antifake':
     case 'antifakes':
     case 'antiarabes':
@@ -273,19 +284,15 @@ break
 🜲 ${usedPrefix + command} subbots
 🜲 ${usedPrefix + command} status
 🜲 ${usedPrefix + command} restrict
-🜲 ${usedPrefix + command} autoread
 
 *[🎩] Funciones De Grupos*
 
 ➳ ${usedPrefix + command} welcome 
 ➳ ${usedPrefix + command} autolevelup
 ➳ ${usedPrefix + command} antibot
-➳ ${usedPrefix + command} audios
-➳ ${usedPrefix + command} autoread
 ➳ ${usedPrefix + command} antiver
 ➳ ${usedPrefix + command} detect 
 ➳ ${usedPrefix + command} delete
-➳ ${usedPrefix + command} antitraba
 ➳ ${usedPrefix + command} modoadmin 
 ➳ ${usedPrefix + command} antiarabes
 ➳ ${usedPrefix + command} autoaceptar
