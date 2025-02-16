@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import axios from 'axios';
 
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
-    if (!text) return `🍭 Ingresa Un Texto Para Realizar Tu Sticker\n> *Ejemplo:* ${usedPrefix + command} CrowBot`
+    if (!text) return m.reply(`🍭 Ingresa Un Texto Para Realizar Tu Sticker\n> *Ejemplo:* ${usedPrefix + command} CrowBot`)
     let teks = encodeURI(text)
     if (command == 'attp') {
         const data = {
