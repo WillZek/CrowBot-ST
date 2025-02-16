@@ -4,7 +4,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   const args = text.split('|').map(v => v.trim());
 
   if (args.length < 3) {
-    return m.reply(`🌠 Debes ingresar el link del grupo, el mensaje y la cantidad de spam separados por "|".*\n\nEjemplo:\n${usedPrefix + command} https://chat.whatsapp.com/SSSS | Hola, ¿cómo están? | 5`);
+    return m.reply(`>🌠 Debes ingresar el link del grupo, el mensaje y la cantidad de spam separados por "|".*\n\n\n*Ejemplo:*\n${usedPrefix + command} https://chat.whatsapp.com/SSSS | Hola, ¿cómo están? | 5`);
   }
 
   const [groupLink, message, countStr] = args;
