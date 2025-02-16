@@ -38,6 +38,8 @@ export async function handler(chatUpdate) {
                     user.exp = 0
                 if (!isNumber(user.estrellas))
                     user.estrellas = 10
+                if (!('muto' in user))
+user.muto = false
                 if (!('premium' in user)) 
                     user.premium = false
                 if (!user.premium) 
