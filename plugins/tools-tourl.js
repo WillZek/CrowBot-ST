@@ -1,70 +1,39 @@
-import fetch from "node-fetch";
-import crypto from "crypto";
-import { FormData, Blob } from "formdata-node";
-import { fileTypeFromBuffer } from "file-type";
-
-const handler = async (m, { conn }) => {
-let q = m.quoted ? m.quoted : m;
-  let mime = (q.msg || q).mimetype || "";
-  if (!mime) return m.reply("No media found", null, { quoted: fkontak });
-  let media = await q.download();
-let link = await catbox(media);
-  let caption = `📮 *L I N K :*
- \`\`\`• ${link}\`\`\`
-📊 *S I Z E :* ${formatBytes(media.length)}
-📛 *E x p i r e d :* "No Expiry Date" 
-`;
-
-  await m.reply(caption);
-}
-handler.command = handler.help = ['tourl']
+import uploadFile from '../lib/uploadFile.js';
+import upload from '../lib/uploadFile2.js';
+import uploadImage from '../lib/uploadImage.js';
+import fetch from 'node-fetch'
+const handler = async (m) => {
+const q = m.quoted ? m.quoted : m;
+const mime = (q.msg || q).mimetype || '';
+if (!mime) return m.reply('🍭 Responde A Una Imagen o Video✨');
+const media = await q.download();
+try {
+let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime)
+let link = await (isTele ? uploadImage : uploadFile)(media)
+m.reply(`${await shortUrl(link)}`)
+} catch (e) {
+try {    
+const isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime);
+const link = await (isTele ? uploadImage : uploadFile)(media);
+m.reply(link);
+} catch (e) {
+console.log(e) 
+}}}
+handler.help = ['tourl']
 handler.tags = ['tools']
-handler.diamond = true
-handler.estrellas = 5;
+handler.command = /^(tourl)$/i
 export default handler
-
 
 function formatBytes(bytes) {
   if (bytes === 0) {
-    return "0 B";
+    return '0 B';
   }
-  const sizes = ["B", "KB", "MB", "GB", "TB"];
-  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+  const sizes = ['B', 'KB', 'MB', 'GB', 'TB']
+  const i = Math.floor(Math.log(bytes) / Math.log(1024))
   return `${(bytes / 1024 ** i).toFixed(2)} ${sizes[i]}`;
 }
 
-
-/**
- * Upload image to catbox
- * Supported mimetype:
- * - `image/jpeg`
- * - `image/jpg`
- * - `image/png`s
- * - `image/webp`
- * - `video/mp4`
- * - `video/gif`
- * - `audio/mpeg`
- * - `audio/opus`
- * - `audio/mpa`
- * @param {Buffer} buffer Image Buffer
- * @return {Promise<string>}
- */
-async function catbox(content) {
-  const { ext, mime } = (await fileTypeFromBuffer(content)) || {};
-  const blob = new Blob([content.toArrayBuffer()], { type: mime });
-  const formData = new FormData();
-  const randomBytes = crypto.randomBytes(5).toString("hex");
-  formData.append("reqtype", "fileupload");
-  formData.append("fileToUpload", blob, randomBytes + "." + ext);
-
-  const response = await fetch("https://catbox.moe/user/api.php", {
-    method: "POST",
-    body: formData,
-    headers: {
-      "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
-    },
-  });
-
-  return await response.text();
+async function shortUrl(url) {
+        let res = await fetch(`https://tinyurl.com/api-create.php?url=${url}`)
+        return await res.text()
 }
