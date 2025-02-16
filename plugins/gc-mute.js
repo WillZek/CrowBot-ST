@@ -7,10 +7,12 @@ const handler = async (_0x5b04ea, {
   isAdmin: _0x9e35ac
 }) => {
   if (_0x38ad25 === "mute") {
-    if (!_0x9e35ac) return _0x5b04ea.reply('💌 *Solo un administrador puede ejecutar este comando');
+    if (!_0x9e35ac) {
+      throw "💌 *Solo un administrador puede ejecutar este comando";
     }
     const _0x45f556 = global.owner[0x0][0x0] + "@s.whatsapp.net";
-    if (_0x5b04ea.mentionedJid[0x0] === _0x45f556) return _0x5b04ea.reply('🚩 *El creador del bot no puede ser mutado*');
+    if (_0x5b04ea.mentionedJid[0x0] === _0x45f556) {
+      throw "🚩 *El creador del bot no puede ser mutado*";
     }
     let _0x329969 = _0x5b04ea.mentionedJid[0x0] ? _0x5b04ea.mentionedJid[0x0] : _0x5b04ea.quoted ? _0x5b04ea.quoted.sender : _0x29b0ac;
     if (_0x329969 === _0x24d45b.user.jid) {
@@ -31,7 +33,7 @@ const handler = async (_0x5b04ea, {
       'message': {
         'locationMessage': {
           'name': "𝗨𝘀𝘂𝗮𝗿𝗶𝗼 𝗺𝘂𝘁𝗮𝗱𝗼",
-          'jpegThumbnail': await (await _0x19a3e4('https://files.catbox.moe/qd5v12.jpg')).buffer(),
+          'jpegThumbnail': await (await _0x19a3e4('https://telegra.ph/file/f8324d9798fa2ed2317bc.png')).buffer(),
           'vcard': "BEGIN:VCARD\nVERSION:3.0\nN:;Unlimited;;;\nFN:Unlimited\nORG:Unlimited\nTITLE:\nitem1.TEL;waid=19709001746:+1 (970) 900-1746\nitem1.X-ABLabel:Unlimited\nX-WA-BIZ-DESCRIPTION:ofc\nX-WA-BIZ-NAME:Unlimited\nEND:VCARD"
         }
       },
