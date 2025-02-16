@@ -1,22 +1,29 @@
 import { sticker } from '../lib/sticker.js'
 import fetch from 'node-fetch'
+import axios from 'axios';
+
 let handler = async(m, { conn, text, args, usedPrefix, command }) => {
-if (!text) return conn.reply(m.chat, `𝙀𝙨𝙘𝙧𝙞𝙗𝙖 𝙥𝙖𝙧𝙖 𝙦𝙪𝙚 𝙚𝙡 𝙩𝙚𝙭𝙩𝙤 𝙨𝙚 𝙘𝙤𝙣𝙫𝙞𝙚𝙧𝙩𝙖 𝙚𝙡 𝙨𝙩𝙞𝙘𝙠𝙚𝙧\n𝙀𝙟𝙚𝙢𝙥𝙡𝙤\n*${usedPrefix + command}* Nuevo Sticker`, m, {contextInfo: {externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, title: wm, body: '', previewType: 0, thumbnail: imagen1, sourceUrl: redes.getRandom()}}})
-let teks = encodeURI(text)
-conn.fakeReply(m.chat, `${espera}\n\n> *Esto puede demorar unos minutos*`, '0@s.whatsapp.net', `CrowBot`, 'status@broadcast', null, fake)
-//m.reply(`${espera}\n\n> *Esto puede demorar unos minutos*`) 
-
-if (command == 'attp') {
-let stiker = await sticker(null,`https://api.erdwpe.com/api/maker/attp?text=${teks}`,global.packname, global.author)
-conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: `h`, mediaType: 2, sourceUrl: channel, thumbnail: imagen1}}}, { quoted: m })}
-
-if (command == 'ttp') {
-let stiker = await sticker(null,`https://api.erdwpe.com/api/maker/ttp?text=${teks}`,global.packname, global.author)
-conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: `h`, mediaType: 2, sourceUrl: channel, thumbnail: imagen1}}}, { quoted: m })}
+    if (!text) return `🍭 Ingresa Un Texto Para Realizar Tu Sticker\n> *Ejemplo:* ${usedPrefix + command} CrowBot`
+    let teks = encodeURI(text)
+    if (command == 'attp') {
+        const data = {
+            text: `${text}`
+        };
+        const response = await axios.post('https://salism3api.pythonanywhere.com/text2gif', data);
+        const x=response.data.image;
+        let stiker = await sticker(null,x,global.packname, global.author)
+        conn.sendFile(m.chat, stiker, null, { asSticker: true })
+    }
+    if (command == 'ttp') {
+        const data = {
+            text: `${text}`,"outlineColor":"255,0,0,255", "textColor":"0,0,0,255"
+        };
+        const response = await axios.post('https://salism3api.pythonanywhere.com/text2img', data);
+        const x=response.data.image;
+        let stiker = await sticker(null,x,global.packname, global.author)
+        conn.sendFile(m.chat, stiker, null, { asSticker: true })
+    }
 }
-handler.help = ['attp'];
+handler.command = handler.help = ['ttp', 'attp']
 handler.tags = ['sticker']
-handler.command = /^(attp|ttp|ttp2|ttp3|ttp4|attp2)$/i
-handler.estrellas = 3;
-handler.register = true
 export default handler
