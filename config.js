@@ -14,10 +14,8 @@ global.owner = [
    ['5212731595017', 'CrowBot Soporte', true],
    ['584148256527', 'Dev Diomar', true],
    ['584120346669', 'Dev ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
-   ['51971867199', 'Dev Senna', true],
    ['584241836217', 'Dev Prak', true],
    ['51968382008', 'Dev Darkcore', true],
-   ['573215751237', 'CrowBot OFC1', true],
 ]
 
 global.creadorbot = [
