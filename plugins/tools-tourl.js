@@ -1,5 +1,4 @@
 import uploadFile from '../lib/uploadFile.js';
-import upload from '../lib/uploadFile2.js';
 import uploadImage from '../lib/uploadImage.js';
 import fetch from 'node-fetch'
 const handler = async (m) => {
