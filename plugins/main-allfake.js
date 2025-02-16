@@ -103,7 +103,7 @@ global.canalNombreM = ["⏤͟͟͞͞𝐒𝐪𝐮𝐚𝐝 𝐂𝐫𝐨𝐰'𝐬 �
 global.channelRD = await getRandomChannel()
   
 global.icono = [ 
-'https://files.catbox.moe/1rb6am.jpg',
+'https://qu.ax/aQWkg.jpg',
 'https://files.catbox.moe/2yfz2e.jpg',
 'https://qu.ax/pcKXp.jpg',
 'https://files.catbox.moe/m5y6ns.jpg',
