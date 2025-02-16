@@ -34,7 +34,7 @@ const handler = async (_0x5b04ea, {
         'locationMessage': {
           'name': "𝗨𝘀𝘂𝗮𝗿𝗶𝗼 𝗺𝘂𝘁𝗮𝗱𝗼",
           'jpegThumbnail': await (await _0x19a3e4('https://files.catbox.moe/80cc06.jpg')).buffer(),
-          'vcard': "BEGIN:VCARD\nVERSION:3.0\nN:;Unlimited;;;\nFN:Unlimited\nORG:Unlimited\nTITLE:\nitem1.TEL;waid=19709001746:+1 (970) 900-1746\nitem1.X-ABLabel:Unlimited\nX-WA-BIZ-DESCRIPTION:ofc\nX-WA-BIZ-NAME:Unlimited\nEND:VCARD"
+          'vcard': "BEGIN:VCARD\nVERSION:3.0\nN:;Unlimited;;;\nFN:Unlimited\nORG:Unlimited\nTITLE:\nitem1.TEL;waid=50557865603:50557865603\nitem1.X-ABLabel:Unlimited\nX-WA-BIZ-DESCRIPTION:ofc\nX-WA-BIZ-NAME:Unlimited\nEND:VCARD"
         }
       },
       'participant': "0@s.whatsapp.net"
@@ -43,7 +43,7 @@ const handler = async (_0x5b04ea, {
       return _0x24d45b.reply(_0x5b04ea.chat, "🚩 *Menciona a la persona que deseas mutar*", _0x5b04ea);
     }
     if (_0xc6ae1d.muto === true) {
-      throw "🚩 *Este usuario ya ha sido mutado*";
+      return "🚩 *Este usuario ya ha sido mutado*";
     }
     _0x24d45b.reply(_0x5b04ea.chat, "*Tus mensajes serán eliminados*", _0x3d4fa1, null, {
       'mentions': [_0x329969]
