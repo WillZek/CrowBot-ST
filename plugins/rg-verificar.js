@@ -49,7 +49,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     regbot += `*「💛」𝐍𝐨𝐦𝐛𝐫𝐞:* ${name}\n`
     regbot += `*「💛」𝐄𝐝𝐚𝐝:* ${age} años\n`
     regbot += `•✩.･*:｡≻──── ⋆♡⋆ ────.•*:｡✩•\n`
-    regbot += `*「💝」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:*\n> `
+    regbot += `*「🎀」𝐑𝐞𝐜𝐨𝐦𝐩𝐞𝐧𝐬𝐚𝐬:*\n> `
     regbot += `• 15 Estrellas 🌟\n> `
     regbot += `• 5 CrowCoins 🪙\n> `
     regbot += `• 245 Experiencia 💸\n> `
@@ -80,6 +80,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',  
                 body: dev,  
                 containsAutoReply: true,
+                showAdAttribution: true,
                 mediaType: 1, 
                 thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg' }}}, {quoted: m})
 */
