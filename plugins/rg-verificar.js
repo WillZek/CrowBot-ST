@@ -67,7 +67,8 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
                 renderLargerThumbnail": true,
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',  
                 body: dev,  
-                containsAutoReply: true,  
+                containsAutoReply: true, 
+                sourceUrl: channel,
                 mediaType: 1, 
                 thumbnailUrl: 'https://i.ibb.co/GMTyKcN/file.jpg' }}}, {quoted: m})
 
