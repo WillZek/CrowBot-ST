@@ -11,5 +11,5 @@ handler.tags = ['owner']
 handler.command = ["salvar", "saveplugin"]
 
 handler.rowner = true
-handler.private = true
+handler.private = false
 export default handler
