@@ -26,10 +26,10 @@ let handler = async (m, { conn }) => {
   await m.react('✅')
   if (api.data.data) {
     let txt = `${wm}\n\n`
-        txt += `*🔖 Titulo* : ${q.filename || 'x'}\n`
+        txt += `*🔖 Titulo* : ${q.filename || 'crow'}\n`
         txt += `*🔖 Enlace* : ${api.data.data.url}\n`
         txt += `*🔖 Mime* : ${mime}\n`
-        txt += `*🔖 File* : ${q.filename || 'x.jpg'}\n`
+        txt += `*🔖 File* : ${q.filename || 'crow.jpg'}\n`
         txt += `${dev}`
     await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, fake)
   } else {
