@@ -25,7 +25,7 @@ let handler = async (m, { conn }) => {
 
   await m.react('✅')
   if (api.data.data) {
-    let txt = '${wm}\n\n`
+    let txt = `${wm}\n\n`
         txt += `*🔖 Titulo* : ${q.filename || 'x'}\n`
         txt += `*🔖 Enlace* : ${api.data.data.url}\n`
         txt += `*🔖 Mime* : ${mime}\n`
