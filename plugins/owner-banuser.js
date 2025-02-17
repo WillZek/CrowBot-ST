@@ -11,5 +11,5 @@ conn.reply(m.chat, `✨ *El usuario @${who.split('@')[0]}, fue baneado con éxit
 handler.help = ['banuser <@tag> <razón>']
 handler.command = ['banuser']
 handler.tags = ['owner']
-handler.prems = true
+handler.mods = true
 export default handler
