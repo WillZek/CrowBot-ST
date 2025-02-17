@@ -3,7 +3,7 @@ import { sticker } from '../lib/sticker.js';
 
 let handler = m => m;
 
-handler.all = async function (m, {conn}) {
+handler.all = async function (m, {conn, text}) {
     let chat = global.db.data.chats[m.chat];
     let prefixRegex = new RegExp('^[' + (opts['prefix'] || '‎z/i!#$%+£¢€¥^°=¶∆×÷π√✓©®:;?&.,\\-').replace(/[|\\{}()[\]^$+*?.\-\^]/g, '\\$&') + ']');
 
