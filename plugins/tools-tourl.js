@@ -19,7 +19,8 @@ let handler = async (m) => {
       txt += `*» Expiración* : ${isTele ? 'No expira' : 'Desconocido'}\n\n`
       txt += `> *${dev}*`
 
-await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, fkontak)
+// await conn.sendFile(m.chat, img, 'thumbnail.jpg', txt, m, fkontak)
+ m.reply(txt);
 await m.react(done)
 } catch (e) {
 m.reply(`${e}`);
