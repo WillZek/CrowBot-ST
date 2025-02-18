@@ -5,7 +5,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
 await m.react('🕓');
 
-  try {
     const response = await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=Gata-Dios`)
     const json = await response.json()
     await conn.sendMessage(m.chat, { video: { url: json.data.url }, mimetype: 'video/mp4', fileName: json.data.filename }, { quoted: m })
