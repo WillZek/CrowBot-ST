@@ -8,6 +8,7 @@ await m.react('🕓');
     const response = await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=Gata-Dios`)
     const json = await response.json()
     await conn.sendMessage(m.chat, { video: { url: json.data.url }, mimetype: 'video/mp4', fileName: json.data.filename }, { quoted: m })
+m.reac(done)
 }
 
 handler.help = ['ytmp4 *<url>*']; 
