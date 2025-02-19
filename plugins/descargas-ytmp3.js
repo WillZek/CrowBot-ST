@@ -111,7 +111,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         `https://api.zenkey.my.id/api/download/ytmp4?apikey=zenkey&url=${url}`,
         `https://axeel.my.id/api/download/video?url=${encodeURIComponent(url)}`,
         `https://delirius-apiofc.vercel.app/download/ytmp4?url=${url}`
-`https://api.alyachan.dev/api/ytv?url=${url}&apikey=Gata-Dios`
+`https://api.alyachan.dev/api/ytv?url=${encodeURIComponent(url)}&apikey=Gata-Dios`
       ];
 
       let success = false;
