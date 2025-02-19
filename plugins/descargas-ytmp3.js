@@ -111,7 +111,6 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         `https://api.zenkey.my.id/api/download/ytmp4?apikey=zenkey&url=${url}`,
         `https://axeel.my.id/api/download/video?url=${encodeURIComponent(url)}`,
         `https://delirius-apiofc.vercel.app/download/ytmp4?url=${url}`
-`https://api.alyachan.dev/api/ytv?url=${encodeURIComponent(url)}&apikey=Gata-Dios`
       ];
 
       let success = false;
@@ -119,7 +118,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         try {
           const res = await fetch(source);
           const { data, result, downloads } = await res.json();
-          let downloadUrl = data?.dl || result?.download?.url || downloads?.url || data?.download?.url || data?.url;
+          let downloadUrl = data?.dl || result?.download?.url || downloads?.url || data?.download?.url;
 
           if (downloadUrl) {
             success = true;
@@ -148,7 +147,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = handler.help = ['ytmp3', 'yta', 'ytmp4', 'ytv'];
+handler.command = handler.help = ['ytmp3', 'yta', 'ytmp4'];
 handler.tags = ['descargas'];
 
 export default handler;
