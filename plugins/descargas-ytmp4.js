@@ -1,3 +1,4 @@
+// Repuesto Pal Ytmp4
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
@@ -11,8 +12,8 @@ await m.react('🕓');
 m.reac(done)
 }
 
-handler.help = ['ytmp4 *<url>*']; 
-handler.command = ['test'];
+handler.help = ['ytv *<url>*']; 
+handler.command = ['ytv'];
 handler.tags = ['descargas'];
 
 export default handler;
