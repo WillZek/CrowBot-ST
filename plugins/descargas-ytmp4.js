@@ -31,6 +31,6 @@ await conn.sendMessage(m.chat, {
     m.react(done);
 }
 
-handler.command = ['test']
+handler.command = ['ytv']
 
 export default handler;
