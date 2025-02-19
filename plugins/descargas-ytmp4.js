@@ -1,19 +1,36 @@
-// Repuesto Pal Ytmp4
+/* Repuesto Pal Ytmp4
+- Código Modificado por WillZek 
+*/
+
 import fetch from 'node-fetch';
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) return conn.reply(m.chat, `💛 Ingresa un link de YouTube válido\n> Ejemplo https://youtu.be/P4LfHsUnNL8?si=ahDKJ5h0cW-EB9C9`, m, rcanal);
+let handler = async(m, { conn, args, text }) => {
 
-await m.react('🕓');
+if (!text) return m.reply('Ingrese Un Link De YouTube');
 
-    const response = await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=Gata-Dios`)
-    const json = await response.json()
-    await conn.sendMessage(m.chat, { video: { url: json.data.url }, mimetype: 'video/mp4', fileName: json.data.filename }, { quoted: m })
-m.reac(done)
+m.react(rwait);
+
+let video;
+try {
+      video = await (await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=Gata-Dios`)).json();
+} catch (error) {
+try {
+      video = await (await fetch(`https://delirius-apiofc.vercel.app/download/ytmp4?url=${text}`)).json();
+} catch (error) {
+      video = await (await fetch(`https://api.vreden.my.id/api/ytmp4?url=${text}`)).json();
+      }
+    }
+
+if (!video.data || !video.data.url) return "No se pudo obtener el video.";
+
+await conn.sendMessage(m.chat, {
+      video: { url: video.data.url },
+      mimetype: "video/mp4",
+      caption: `${resp}`,
+    }, { quoted: m });
+    m.react(done);
 }
 
-handler.help = ['ytv *<url>*']; 
-handler.command = ['ytv'];
-handler.tags = ['descargas'];
+handler.command = ['test']
 
 export default handler;
