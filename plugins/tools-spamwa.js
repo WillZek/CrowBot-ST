@@ -2,8 +2,8 @@
 const handler = async (m, {conn, text}) => {
   const [nomor, pesan, jumlah] = text.split('|');
   if (!nomor) m.reply('*Uso Correcto:*\n*☁️ #spamwa numero|texto|cantidad*\n*Eᴊᴇᴍᴘʟᴏ:*\n*☁️ #spamwa 5219999999999|responde :v|25*');
-  if (!pesan) throw '*Uso Correcto:*\n*☁️ #spamwa numero|texto|cantidad*\n*Eᴊᴇᴍᴘʟᴏ:*\n*☁️ #spamwa 5219999999999|responde :v|25*';
-  if (jumlah && isNaN(jumlah)) throw '*🌋 Lᴀ Cᴀɴᴛɪᴅᴀᴅ Dᴇᴠᴇ Sᴇʀ Nᴜᴍᴇʀᴏ!*\n*Uso Correcto:*\n*☁️ #spamwa numero|texto|cantidad*\n*𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*☁️ #spamwa 5219999999999|responde :v|25*';
+  if (!pesan) return '*Uso Correcto:*\n*☁️ #spamwa numero|texto|cantidad*\n*Eᴊᴇᴍᴘʟᴏ:*\n*☁️ #spamwa 5219999999999|responde :v|25*';
+  if (jumlah && isNaN(jumlah)) return '*🌋 Lᴀ Cᴀɴᴛɪᴅᴀᴅ Dᴇᴠᴇ Sᴇʀ Nᴜᴍᴇʀᴏ!*\n*Uso Correcto:*\n*☁️ #spamwa numero|texto|cantidad*\n*𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*☁️ #spamwa 5219999999999|responde :v|25*';
 
   const fixedNumber = nomor.replace(/[-+<>@]/g, '').replace(/ +/g, '').replace(/^[0]/g, '62') + '@s.whatsapp.net';
   const fixedJumlah = jumlah ? jumlah * 1 : 10;
