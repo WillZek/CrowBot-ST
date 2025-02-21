@@ -99,7 +99,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         mimetype: "audio/mpeg"
       }, { quoted: m });
 
-    } else if (command === 'playdoc2' || command === 'ytmp4doc') {
+    } else if (command === 'playdoc2' || command === 'ytmp4doc' || command === 'ytmp4') {
       const sources = [
         `https://api.siputzx.my.id/api/d/ytmp4?url=${url}`,
         `https://delirius-apiofc.vercel.app/download/ytmp4?url=${url}`
@@ -145,7 +145,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = handler.help = ['pdoc', 'pdoc2', 'ytmp4doc', 'ytmp3doc'];
+handler.command = handler.help = ['pdoc', 'pdoc2', 'ytmp4doc', 'ytmp4', 'ytmp3doc'];
 handler.tags = ['descargas'];
 
 export default handler;
