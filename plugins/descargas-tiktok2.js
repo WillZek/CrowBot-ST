@@ -2,12 +2,12 @@ import fetch from 'node-fetch'
 
 var handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) {
-        throw m.reply(`*❄️ Ejemplo: ${usedPrefix + command}* https://vm.tiktok.com/ZMhAk8tLx/`);
+        throw m.reply(`*🍭 Ejemplo: ${usedPrefix + command}* https://vm.tiktok.com/ZMhAk8tLx/`);
     }
-
+// 3 años de navidad y no he cambiado los emojis xD
     try {
-        await conn.reply(m.chat, "🎄 *Espere un momento, estoy descargando su video...*", m);
-await m.react('❄️')
+        await conn.reply(m.chat, "🎩 *Espere un momento, estoy descargando su video...*", m);
+await m.react('💫')
         const tiktokData = await tiktokdl(args[0]);
 
         if (!tiktokData) {
