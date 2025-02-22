@@ -130,13 +130,13 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       }
 
       if (!success) {
-        return m.reply(`${emoji2} *No se pudo descargar el video:* No se encontró un enlace de descarga válido.`);
+        return m.reply(`✨ *No se pudo descargar el video:* No se encontró un enlace de descarga válido.`);
       }
     } else {
       throw "Comando no reconocido.";
     }
   } catch (error) {
-    return m.reply(`${msm}︎ Ocurrió un error: ${error.message}`);
+    return m.reply(`🍭 Ocurrió un error: ${error.message}`);
   }
 };
 
