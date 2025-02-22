@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 const handler = async (m, {conn, text, usedPrefix, command}) => {
-if (!text) return `*🧑‍💻 ingrese la URL de la imagen.*`;
+if (!text) return m.reply(`*🧑‍💻 ingrese la URL de la imagen.*`);
 m.react('🕒');
 await conn.sendMessage(m.chat, {text: '*🧑‍💻 Eliminando, Espere Un Momento...*'}, {quoted: m});
 try {
