@@ -33,7 +33,7 @@ conn.reply(m.chat, `Usuario no encontrado.`, m);
 conn.reply(m.chat, 'Uso: .mute <@tag> (etiqueta al user en otras palabras)', m);
   }
 
-if (muted[user]) {
+if (muted[m.sender]) {
     await conn.sendMessage(m.chat, { delete: m.key });
     return;
   }
