@@ -17,7 +17,7 @@ try {
 try {
       video = await (await fetch(`https://delirius-apiofc.vercel.app/download/ytmp4?url=${text}`)).json();
 } catch (error) {
-      video = await (await fetch(`https://exonity.tech/api/dl/ytmp4?url=${text}&apikey=ex-290e8d524d`)).json();
+      video = await (await fetch(`https://good-camel-seemingly.ngrok-free.app/download/mp4?url=${text}`)).json();
       }
     }
 
