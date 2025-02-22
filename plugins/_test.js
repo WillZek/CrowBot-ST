@@ -40,7 +40,7 @@ conn.reply(m.chat, 'Uso: .unmute + el usuario (osea el @Tag)', m);
     return;
   }
 
-if (muted[user.id]) {
+if (muted[user]) {
 await conn.sendMessage(m.chat, { delete: m.key });
     return;
   }
