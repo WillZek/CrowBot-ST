@@ -1,4 +1,6 @@
 import fetch from 'node-fetch';
+import fs from 'fs';
+
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (!text) return m.reply(`*🧑‍💻 ingrese la URL de la imagen.*`);
 m.react('🕒');
