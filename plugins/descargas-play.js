@@ -100,48 +100,43 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       }, { quoted: m });
 
     } else if (command === 'playdoc2' || command === 'ytmp4doc' || command === 'ytmp4') {
-      const sources = [
-        `https://api.siputzx.my.id/api/d/ytmp4?url=${url}`,
+       let sources = [
+        `https://api.alyachan.dev/api/ytv?url=${url}&apikey=Gata-Dios`,
+        `https://api.vreden.my.id/api/ytmp4?url=${url}`,
         `https://delirius-apiofc.vercel.app/download/ytmp4?url=${url}`
       ];
 
-      let downloadPromises = sources.map(source =>
-        fetch(source)
-          .then(res => {
-            if (!res.ok) throw new Error('Error en la respuesta de la API');
-            return res.json();
-          })
-          .then(({ data }) => data?.dl || data?.download?.url)
-          .catch(err => {
-            console.error('Error al obtener la URL de descarga:', err);
-            return null;
-          })
-      );
+      let success = false;
+      for (let source of sources) {
+        try {
+          const res = await fetch(source);
+          const { data, result, downloads } = await res.json();
+          let downloadUrl = data?.dl || result?.download?.url || downloads?.url || data?.download?.url;
 
-      try {
-        const downloadUrls = await Promise.all(downloadPromises);
-        const validUrl = downloadUrls.find(url => url);
-
-        if (validUrl) {
-          await conn.sendMessage(m.chat, {
-            document: { url: validUrl },
-            fileName: `${title}.mp4`,
-            mimetype: 'video/mp4',
-            caption: `${emoji} Aqui tienes ฅ^•ﻌ•^ฅ.`,
-            thumbnail: thumb
-          }, { quoted: m });
-        } else {
-          return m.reply(`${emoji2} *No se pudo descargar el video:* No se encontró un enlace de descarga válido.`);
+          if (downloadUrl) {
+            success = true;
+            await conn.sendMessage(m.chat, {
+              video: { url: downloadUrl },
+              fileName: `${title}.mp4`,
+              mimetype: 'video/mp4',
+              caption: ``,
+              thumbnail: thumb
+            }, { quoted: m });
+            break;
+          }
+        } catch (e) {
+          console.error(`Error con la fuente ${source}:`, e.message);
         }
-      } catch (error) {
-        console.error('Error al obtener las URL de descarga:', error);
-        return m.reply(`${msm} Error al intentar descargar el video: ${error.message}`);
+      }
+
+      if (!success) {
+        return m.reply(`${emoji2} *No se pudo descargar el video:* No se encontró un enlace de descarga válido.`);
       }
     } else {
       throw "Comando no reconocido.";
     }
   } catch (error) {
-    return m.reply(`${msm} Ocurrió un error: ${error.message}`);
+    return m.reply(`${msm}︎ Ocurrió un error: ${error.message}`);
   }
 };
 
