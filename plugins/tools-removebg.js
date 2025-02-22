@@ -9,7 +9,7 @@ formData.append("size", "auto");
 formData.append("image_url", text);
 const response = await fetch("https://www.remove.bg/es/api", {
 method: "POST",
-headers: { "X-Api-Key": "pZoqmwkwmMSJAVdJFDnMgWB8" },
+headers: { "X-Api-Key": "6DraQpWhEtfkcX8H2GiZBKT3" },
 body: formData,
 });
 if (!response.ok) throw new Error('Network response was not ok');
