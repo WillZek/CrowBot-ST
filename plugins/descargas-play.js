@@ -98,8 +98,8 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         fileName: `${title}.mp3`,
         mimetype: "audio/mpeg"
       }, { quoted: m });
-
-    } else if (command === 'playdoc2' || command === 'ytmp4doc' || command === 'ytmp4') {
+     
+     } else if (command === 'playmp4' || command === 'penemp4' || command === 'ytmp4') {
        let sources = [
         `https://api.alyachan.dev/api/ytv?url=${url}&apikey=Gata-Dios`,
         `https://api.vreden.my.id/api/ytmp4?url=${url}`,
