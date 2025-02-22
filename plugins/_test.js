@@ -24,7 +24,7 @@ conn.reply(m.chat, 'Uso: .mute <@tag> (etiqueta al user en otras palabras)', m);
     return;
   }
 
-if (command == 'test2') {
+} else if (command == 'test2') {
 const target = text.substring(7).trim();
 const targetUser = participants.find(p => p.id.startsWith('@') ? p.id.replace('@s.whatsapp.net','') === target : p.id === target);
 
