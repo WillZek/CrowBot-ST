@@ -27,7 +27,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
 
 const despMessage = global.db.data.chats[m.chat]?.despMessage || 'Se Fue😹';
 
-     let bye = `┏╼★${textbot}\n┋「 ADIOS 👋 」\nn┗╼★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n ┋💛 ${despMessage}\n ┋💛 Jamás te quisimos aquí\n   └───────────────┈ ⳹\n> ${dev}`
+     let bye = `┏╼★${textbot}\n┋「 ADIOS 👋 」\nn┗╼★ 「 @${m.messageStubParameters[0].split`@`[0]} 」\n ┋❖ ${despMessage}\n ┋❀ Jamás te quisimos aquí\n   ┗━━━━━━━━━━━━━━━┅ ⳹\n> ${dev}`
       await conn.sendMessage(m.chat, { image: img, caption: bye, mentions: [who] }, { quoted: estilo })
     }
   }
