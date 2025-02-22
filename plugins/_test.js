@@ -8,7 +8,7 @@ const groupMetadata = await conn.groupMetadata(m.chat);
 const participants = groupMetadata.participants;
   const user = m.sender;
 
-if (command == 'mute' && isAdmin) {
+if (command == 'test' && isAdmin) {
 if (text.startsWith('mute ')) {
       const target = text.substring(5).trim();
       const targetUser = participants.find(p => p.id.startsWith('@') ? p.id.replace('@s.whatsapp.net','') === target : p.id === target);
@@ -25,7 +25,7 @@ conn.reply(m.chat, 'Uso: .mute <@tag> (etiqueta al user en otras palabras)', m);
     return;
   }
 
-if (command == 'unmute' && isAdmin) {
+if (command == 'test2' && isAdmin) {
  if (text.startsWith('unmute ')) {
 const target = text.substring(7).trim();
 const targetUser = participants.find(p => p.id.startsWith('@') ? p.id.replace('@s.whatsapp.net','') === target : p.id === target);
