@@ -1,11 +1,9 @@
 let muted = {};
 
-let handler = async (m, { conn, isAdmin, command, text, groupMetadata }) => {
+let handler = async (m, { conn, isAdmin, command, text, groupMetadata, participants }) => {
   if (!text) return m.reply('Etiqueta A Una Persona ✨');
   if (!m.isGroup) return m.reply('Este Comando Solo Puede Ser Usado En Grupos');
 
-const groupMetadata = await conn.groupMetadata(m.chat);
-const participants = groupMetadata.participants;
   const user = m.sender;
 
 if (command == 'test' && isAdmin) {
