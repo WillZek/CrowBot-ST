@@ -1,6 +1,6 @@
 let muted = {};
 
-let handler = async (m, { conn, isAdmin, command, text, groupMedata }) => {
+let handler = async (m, { conn, isAdmin, command, text, groupMetadata }) => {
   if (!text) return m.reply('Etiqueta A Una Persona ✨');
   if (!m.isGroup) return m.reply('Este Comando Solo Puede Ser Usado En Grupos');
 
