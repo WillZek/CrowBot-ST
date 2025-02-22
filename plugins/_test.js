@@ -1,8 +1,8 @@
 // import fs from 'fs'; pronto
 
+const handler = async (m, { conn, isAdmin, command, text, groupMetadata, participants }) => {
 let muted = {};
 
-const handler = async (m, { conn, isAdmin, command, text, groupMetadata, participants }) => {
 if (!m.isGroup) return m.reply('Este Comando Solo Puede Ser Usado En Grupos');
 
 if (command === 'test') {
