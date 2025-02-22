@@ -10,9 +10,9 @@ async function handler(m, {groupMetadata}) {
     b = ps[randomIndexB];
   } while (b === a);
 
-  let txt = `*FORMANDO PAREJA 14 DE FEBRERO 💏*\n> ${toM(a)}, Deberías Empezar Una Cita con ${toM(b)} 🌹`;
+  let txt = `*FORMANDO PAREJA 💏*\n> ${toM(a)}, Deberías Empezar Una Cita con ${toM(b)} 🌹`;
 
-  const stickerUrl = 'https://files.catbox.moe/ajtz0u.webp'; 
+  const stickerUrl = 'https://files.catbox.moe/3v8qvl.webp'; 
   m.react('💘');
 
   await conn.sendFile(m.chat, stickerUrl, 'sticker.webp', '', m, null);
