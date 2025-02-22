@@ -9,12 +9,24 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 
 m.react('🕑');
 
-let txt = 'Pack🔥🔥🔥\n> Pon De Nuevo .pack para mirar el siguiente ✨';
+let txt = 'Pack🔥🔥🔥';
 
 let img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
 
 m.react('✅');
-conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
+conn.sendMessage(m.chat, { 
+        image: { url: img }, 
+        caption: txt, 
+        footer: dev, 
+        buttons: [
+            {
+                buttonId: `.pack`,
+                buttonText: { displayText: 'Siguiente' }
+            }
+        ],
+        viewOnce: true,
+        headerType: 4
+    }, { quoted: m });
 }
 
 handler.command = ['pack'];
