@@ -6,7 +6,7 @@ import moment from 'moment-timezone'
 let handler = async function (m, { conn, usedPrefix, command }) {
     let user = global.db.data.users[m.sender]
     let defaultName = conn.getName(m.sender) || "UsuarioDesconocido";
-let ager = [ "18", "19", "20", "17", "16"];
+let ager = [ "18", "19", "20", "17", "16"].getRandom();
     let defaultAge = ager
 
     if (user.registered === true) {
