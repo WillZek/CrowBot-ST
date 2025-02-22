@@ -49,6 +49,6 @@ await conn.sendMessage(m.chat, { delete: m.key });
 
 };
 
-handler.command = ['test']
+handler.command = ['test', 'test2']
 
 export default handler;
