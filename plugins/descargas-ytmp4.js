@@ -21,6 +21,8 @@ try {
       }
     }
 
+let link = video.data.url || video.url
+
 if (!video.data || !video.data.url) return "No se pudo obtener el video.";
 
 await conn.sendMessage(m.chat, {
