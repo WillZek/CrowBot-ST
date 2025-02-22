@@ -9,7 +9,6 @@ let handler = async (m, { conn, isAdmin, command, text, groupMetadata, participa
   const user = m.sender;
 
 if (command == 'test') {
-if (text.startsWith('test ')) {
       const target = text.substring(5).trim();
       const targetUser = participants.find(p => p.id.startsWith('@') ? p.id.replace('@s.whatsapp.net','') === target : p.id === target);
 
@@ -26,7 +25,6 @@ conn.reply(m.chat, 'Uso: .mute <@tag> (etiqueta al user en otras palabras)', m);
   }
 
 if (command == 'test2') {
- if (text.startsWith('test2 ')) {
 const target = text.substring(7).trim();
 const targetUser = participants.find(p => p.id.startsWith('@') ? p.id.replace('@s.whatsapp.net','') === target : p.id === target);
 
