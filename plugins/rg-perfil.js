@@ -49,9 +49,7 @@ var handler = async (m, { conn }) => {
 💴 *Estrellas:* ${estrellas || 0}
 🌟 *Nivel:* ${level || 0}
 ✨ *Experiencia:* ${exp || 0}
-⚜️ *Rango:* ${role}
-👑 *Premium:* ${premium ? '✅': '❌'}
-`.trim();
+⚜️ *Rango:* ${role}`.trim();
 
     let prem = `╭──⪩ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 ⪨
 │⧼👤⧽ *ᴜsᴜᴀʀɪᴏ:* *${username}*
