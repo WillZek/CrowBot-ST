@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 let muted = {};
 
 let handler = async (m, { conn, isAdmin, command, text, groupMetadata, participants }) => {
