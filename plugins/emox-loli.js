@@ -14,6 +14,7 @@ let txt = 'Pack🔥🔥🔥';
 let img = 'https://delirius-apiofc.vercel.app/nsfw/girls';
 
 m.react('✅');
+// viva el porno jodido 
 conn.sendMessage(m.chat, { 
         image: { url: img }, 
         caption: txt, 
