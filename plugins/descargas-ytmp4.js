@@ -21,7 +21,7 @@ try {
       }
     }
 
-let link = video.data.url || video.url
+let link = video.data.url || video.download_url
 
 if (!video.data || !video.data.url) return "No se pudo obtener el video.";
 
