@@ -1,7 +1,7 @@
 import yts from 'yt-search';
 import axios from "axios";
 
-const handler = async (m, { conn, text, dev }) => {
+const handler = async (m, { conn, text }) => {
   try {
     if (!text) return conn.reply('🍭 Ingrese el nombre De Alguna Música');
 
