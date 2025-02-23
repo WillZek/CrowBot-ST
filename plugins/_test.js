@@ -99,6 +99,10 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     };
 
     await conn.reply(m.chat, infoMessage, m, ST);
+
+} catch (e) {
+m.reply(`Error: ${e.message}`);
+  }
 }
 
 handler.command = ['test'];
