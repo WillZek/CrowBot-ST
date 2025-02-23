@@ -12,7 +12,7 @@ conn.sendMessage(m.chat, { react: { text: "🕒", key: m.key } });
 }
 handler.help = ['mediafire']
 handler.tags = ['descargas']
-handler.command ='mediafire' , /^(mediafire|mf)$/i
+handler.command = /^(mediafire|mf)$/i
 handler.premium = false
 handler.estrellas = 5
 handler.register = true
