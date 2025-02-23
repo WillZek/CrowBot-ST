@@ -98,7 +98,19 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
       },
     };
 
-    await conn.reply(m.chat, infoMessage, m, ST);
+conn.sendMessage(m.chat, { 
+        image: { url: pene }, 
+        caption: infoMessage, 
+        footer: dev, 
+        buttons: [
+            {
+                buttonId: `.ytv ${url}`,
+                buttonText: { displayText: '✨ Obtener Video' }
+            }
+        ],
+        viewOnce: true,
+        headerType: 4
+    }, { quoted: m });
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
