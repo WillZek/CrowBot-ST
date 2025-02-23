@@ -3,7 +3,7 @@ let handler = async(m, { conn }) => {
 
 let rvid = global.vidxxx[Math.floor(Math.random() * global.vidxxx.length)];
 
-conn.sendMessage(m.chat, { video: { url: rvid }, caption: '🍭 Disfruta!' }, { quoted: m });
+conn.sendMessage(m.chat, { video: { url: rvid }, caption: '🍭 ¡Disfruta Del Video!' }, { quoted: m });
 }
 
 handler.command = ['videoxxx', 'vxxx'];
