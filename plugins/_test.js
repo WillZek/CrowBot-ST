@@ -99,7 +99,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     };
 
 conn.sendMessage(m.chat, { 
-        image: { url: pene }, 
+        image: { url: thumb }, 
         caption: infoMessage, 
         footer: dev, 
         buttons: [
