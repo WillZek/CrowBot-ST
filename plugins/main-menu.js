@@ -6,7 +6,7 @@ import { xpRange } from '../lib/levelling.js'
 let tags = {
   'crow': '「 *`MENUS CROWBOT`* 」👑',
   'main': '「 MAIN - PRINCIPAL 」🍨',
-  'teclado': '「 TECLADO DE CROWBOT 」🍨',
+  'teclado': '「 TECLADO - Keyboard 」🍨',
   'buscador': '「 BUSQUEDAS - SEARCH 」🍨',
   'fun': '「 JUEGOS - GAMES 」🍨',
   'serbot': '「 SUB BOTS - JADIBOTS 」🍨',
