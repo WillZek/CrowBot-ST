@@ -1,5 +1,5 @@
-/* Repuesto Pal Ytmp4
-- Código Modificado por WillZek 
+/* [🍭] YOUTUBE VIDEO
+- By WillZek 
 */
 
 import fetch from 'node-fetch';
