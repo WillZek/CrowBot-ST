@@ -6,14 +6,14 @@ import { xpRange } from '../lib/levelling.js'
 let tags = {
   'crow': '「 *`MENUS CROWBOT`* 」👑',
   'main': '「 MAIN - PRINCIPAL 」🍨',
-  'teclado': '「 TECLADO - Keyboard 」🍨',
+  'teclado': '「 TECLADO - KEYBOARD 」🍨',
   'buscador': '「 BUSQUEDAS - SEARCH 」🍨',
   'fun': '「 JUEGOS - GAMES 」🍨',
-  'serbot': '「 SUB BOTS - JADIBOTS 」🍨',
+  'serbot': '「 SUBBOTS - JADIBOTS 」🍨',
   'rpg': '「 RPG - ROLLGAME 」🍨',
   'gacha': '「 ROLLWAIFU - WAIFU 」🍨',
-  'rg': '「REGISTRO - RECORD 」🍨',
-  'sticker': '「 STICKER - PEGATINA 」🍨',
+  'rg': '「 REGISTRO - RECORD 」🍨',
+  'sticker': '「 STICKER - PEGATINA」🍨',
   'emox': '「 ANIMES - EMOX 」🍨',
   'database': '「 DATABASE - DBCC 」🍨',
   'grupo': '「 GRUPOS - GROUPS 」🍨',
@@ -22,7 +22,7 @@ let tags = {
   'tools': '「 HERRAMIENTAS - TOOLS 」🍨',
   'info': '「 INFO - INFORMATION 」🍨',
   'owner': '「 CREADOR - OWNER 」🍨',
-  'logos': '「 LOGOS - EDIT LOGOS 」🍨', 
+  'logos': '「 LOGOS - EDITS 」🍨', 
 }
 
 const vid = ['https://qu.ax/GRpXR.mp4', 'https://qu.ax/GRpXR.mp4']
