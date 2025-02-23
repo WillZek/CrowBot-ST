@@ -83,21 +83,6 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     const infoMessage = `「 *𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐒𝐓* 」\n> ♡ *Título:* ${title}\n> ♡ *Duración:* ${timestamp}\n> ♡ *Vistas:* ${vistas}\n> ♡ *Canal:* ${videoInfo.author.name || 'Desconocido'}\n> ♡ *Publicado:* ${ago}\n> ♡ *Enlace:* ${url}\n> Powered By Crow's Club`;
     const thumb = (await conn.getFile(thumbnail))?.data;
 
-    const ST = {
-      contextInfo: {
-        externalAdReply: {
-          title: packname,
-          body: dev,
-          mediaType: 1,
-          previewType: 0,
-          mediaUrl: url,
-          sourceUrl: url,
-          thumbnail: thumb,
-          renderLargerThumbnail: true,
-        },
-      },
-    };
-
 conn.sendMessage(m.chat, { 
         image: { url: thumb }, 
         caption: infoMessage, 
