@@ -3,7 +3,19 @@ let handler = async(m, { conn }) => {
 
 let rvid = global.vidxxx[Math.floor(Math.random() * global.vidxxx.length)];
 
-conn.sendMessage(m.chat, { video: { url: rvid }, caption: '🍭 ¡Disfruta Del Video!' }, { quoted: m });
+conn.sendMessage(m.chat, { 
+        video: { url: rvid }, 
+        caption: '🍭 ¡Disfruta Del Video!', 
+        footer: dev, 
+        buttons: [
+            {
+                buttonId: `.vxxx`,
+                buttonText: { displayText: 'Siguiente Vídeo' }
+            }
+        ],
+        viewOnce: true,
+        headerType: 4
+    }, { quoted: m });
 }
 
 handler.tag = ['emox'];
