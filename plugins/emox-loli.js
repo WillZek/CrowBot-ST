@@ -23,6 +23,11 @@ conn.sendMessage(m.chat, {
             {
                 buttonId: `.pack`,
                 buttonText: { displayText: 'Siguiente' }
+            },
+        buttons: [
+            {
+                buttonId: `.pvideo pack video cortos`,
+                buttonText: { displayText: 'Video' }
             }
         ],
         viewOnce: true,
