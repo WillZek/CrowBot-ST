@@ -15,8 +15,7 @@ let tags = {
   'rg': '「REGISTRO - RECORD 」🍨',
   'sticker': '「 STICKERS - PEGATINAS 」🍨',
   'emox': '「 ANIMES - CARICATURAS 」🍨',
-  'database': '「 DATABASE - D.B.C
-C 」🍨',
+  'database': '「 DATABASE - DBCC 」🍨',
   'grupo': '「 GRUPOS - GROUPS 」🍨',
   'nable': '「 ENABLE / DISABLE 」', 
   'descargas': '「 DESCARGAS - DOWNLOADS 」🍨',
