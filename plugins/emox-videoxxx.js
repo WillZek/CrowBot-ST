@@ -1,7 +1,7 @@
 // Para los pajeros xd
 let handler = async(m, { conn }) => {
 
-conn.sendMessage(m.chat, { video: global.vidxxx }, caption: '🍭 Disfruta!' }, { quoted: m });
+conn.sendMessage(m.chat, { video: { url: global.vidxxx }, caption: '🍭 Disfruta!' }, { quoted: m });
 
 
 handler.command = ['videoxxx', 'vxxx'];
