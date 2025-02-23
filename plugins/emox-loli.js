@@ -23,11 +23,6 @@ conn.sendMessage(m.chat, {
             {
                 buttonId: `.pack`,
                 buttonText: { displayText: 'Siguiente' }
-            },
-        buttons: [
-            {
-                buttonId: `.pvideo pack video cortos`,
-                buttonText: { displayText: 'Video' }
             }
         ],
         viewOnce: true,
@@ -37,6 +32,6 @@ conn.sendMessage(m.chat, {
 
 handler.help = ['pack'];
 handler.tag = ['emox'];
-handler.command = ['pack'];
+handler.command = ['pack', 'loli'];
 
 export default handler;
