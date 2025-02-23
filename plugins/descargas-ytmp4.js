@@ -24,7 +24,7 @@ try {
     }
  }
 
-let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.link
+let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link
 
 if (!video.download_url || !video.data.url || !video.result.dl_url) return m.reply('No se pudo obtener el video.');
 
