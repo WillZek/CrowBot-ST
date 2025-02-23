@@ -21,18 +21,18 @@ const handler = async (m, { conn, text }) => {
     }
     const thumb = thumbData.data;
 
-    conn.sendMessage(m.chat, {
-      image: { url: thumb },
-      caption: infoMessage,
-      footer: dev,
-      buttons: [
-        {
-          buttonId: `.ytv ${url}`,
-          buttonText: { displayText: '✨ Obtener Video' }
-        }
-      ],
-      viewOnce: true,
-      headerType: 4
+conn.sendMessage(m.chat, { 
+        image: { url: thumb }, 
+        caption: infoMessage, 
+        footer: dev, 
+        buttons: [
+            {
+                buttonId: `.ytmp4`,
+                buttonText: { displayText: 'Obtener Vídeo' }
+            }
+        ],
+        viewOnce: true,
+        headerType: 4
     }, { quoted: m });
   
 } catch (e) {
