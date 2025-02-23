@@ -30,6 +30,8 @@ conn.sendMessage(m.chat, {
     }, { quoted: m });
 }
 
+handler.help = ['pack'];
+handler.tag = ['emox'];
 handler.command = ['pack'];
 
 export default handler;
