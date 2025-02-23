@@ -16,6 +16,7 @@ try {
 } catch (error) {
 try {
       video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${text}&quality=480p&apikey=be9NqGwC`)).json();
+} catch (error) {
 try {
       video = await (await fetch(`https://good-camel-seemingly.ngrok-free.app/download/mp4?url=${text}`)).json();
 } catch (error) {
