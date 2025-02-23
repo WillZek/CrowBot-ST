@@ -140,7 +140,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = handler.help = ['pdoc', 'pdoc2', 'ytmp4doc', 'ytmp4', 'ytmp3doc'];
+handler.command = handler.help = ['pdoc', 'pdoc2', 'ytmp4doc', 'ytmp3doc'];
 handler.tags = ['descargas'];
 
 export default handler;
