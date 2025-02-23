@@ -32,7 +32,7 @@ if (!link) return m.reply('No se pudo obtener el video.');
 await conn.sendMessage(m.chat, {
       video: { url: link },
       mimetype: "video/mp4",
-      caption: `Toma tu mrd`,
+      caption: 'Toma tu mrd',
     }, { quoted: m });
     m.react(done);
 }
