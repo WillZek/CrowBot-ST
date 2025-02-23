@@ -147,7 +147,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = handler.help = ['paudio', 'pvideo'];
+handler.command = handler.help = ['paudio'];
 handler.tags = ['descargas'];
 
 export default handler;
