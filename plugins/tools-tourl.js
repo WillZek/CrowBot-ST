@@ -36,7 +36,7 @@ let handler = async (m, { conn }) => {
     await m.react('✅')
   }
 }
-handler.tags = ['convertir']
+handler.tags = ['tools']
 handler.help = ['tourl']
 handler.command = /^(tourl)$/i
 handler.register = true 
