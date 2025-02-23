@@ -6,6 +6,8 @@ let rvid = global.vidxxx[Math.floor(Math.random() * global.vidxxx.length)];
 conn.sendMessage(m.chat, { video: { url: rvid }, caption: '🍭 ¡Disfruta Del Video!' }, { quoted: m });
 }
 
+handler.tag = ['emox'];
+handler.help = ['videoxxx'];
 handler.command = ['videoxxx', 'vxxx'];
 
 export default handler;
