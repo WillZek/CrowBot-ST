@@ -10,6 +10,7 @@ if (!text) return m.reply('🍭 Ingrese Un Link De YouTube\n> *Ejemplo:* https:/
 
 m.react(rwait);
 
+try {
 let video;
 try {
       video = await (await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=Gata-Dios`)).json();
@@ -35,6 +36,10 @@ await conn.sendMessage(m.chat, {
       caption: `${dev}`,
     }, { quoted: m });
     m.react(done);
+
+} catch (e) {
+m.reply(`Error: ${e.message}`);
+  }
 }
 
 handler.command = ['ytv', 'ytmp4', 'ymp4']
