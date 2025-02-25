@@ -86,13 +86,13 @@ if (!bot.jadibotmd) return m.reply('💛 Este Comando Se Encuentra Desactivado P
       setTimeout(async () => {
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-            let txt = `┌  👑  *Usa este Código para convertirte en un Sub Bot*\n`
-            txt += `│  🌠  Pasos\n`
-            txt += `│  🌠  *1* : Haga click en los 3 puntos\n`
-            txt += `│  🌠  *2* : Toque dispositivos vinculados\n`
-            txt += `│  🌠  *3* : Selecciona *Vincular con el número de teléfono*\n` 
-            txt += `└  🌠  *4* : Escriba el Codigo\n\n`
-            txt += `*👑Nota:* Este Código solo funciona en el número en el que se solicitó\n\n> *Sigan El Canal*\n> ${channel}`;
+            let txt = `┌  🜲  *Usa este Código para convertirte en un Sub Bot*\n`
+            txt += `│  ❀  Pasos\n`
+            txt += `│  ❀  *1* : Haga click en los 3 puntos\n`
+            txt += `│  ❀  *2* : Toque dispositivos vinculados\n`
+            txt += `│  ❀  *3* : Selecciona *Vincular con el número de teléfono*\n` 
+            txt += `└  ❀  *4* : Escriba el Codigo\n\n`
+            txt += `*❖ Nota:* Este Código solo funciona en el número en el que se solicitó\n\n> *Sigan El Canal*\n> ${channel}`;
         await parent.reply(m.chat, txt, m);
         await parent.reply(m.chat, codeBot, m);
         rl.close();
