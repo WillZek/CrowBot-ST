@@ -7,7 +7,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let who = m.messageStubParameters[0]
   let taguser = `@${who.split('@')[0]}`
   let chat = global.db.data.chats[m.chat]
-  let defaultImage = 'https://files.catbox.moe/kd7vs5.jpg';
+  let defaultImage = 'https://i.ibb.co/mVzcY6yV/file.jpg';
 
   if (chat.welcome) {
     let img;
