@@ -25,7 +25,7 @@ try {
     }
  }
 
-let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link
+let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link[0]
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
