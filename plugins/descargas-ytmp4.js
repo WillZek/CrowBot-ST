@@ -27,7 +27,7 @@ try {
 
 let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link
 
-if (!link) return m.reply('No se pudo obtener el video.');
+if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
 await conn.sendMessage(m.chat, {
       video: { url: link },
