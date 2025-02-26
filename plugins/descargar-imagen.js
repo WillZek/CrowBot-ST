@@ -11,14 +11,14 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply('🍭 Ingrese Un Texto Para Buscar Una Imagen');
 
 try {
-let api = `https://apis-starlights-team.koyeb.app/starlight/pinterest-search?text=${text}`;
+let api = `https://delirius-apiofc.vercel.app/search/gimage?query=${text}`;
 let response = await fetch(api);
 let json = await response.json();
-let res = json.results[0];
+let res = json.data[0];
 
 m.react('🕑');
 let txt = `> *Resultado De: ${text}*`;
-let img = res.image;
+let img = res.url;
 let link = img;
 
 await conn.sendMessage(m.chat, { image: { url: link }, caption: txt }, {quoted: fkontak});   
