@@ -1,6 +1,9 @@
 // Para los pajeros xd
 let handler = async(m, { conn }) => {
 
+let chat = global.db.data.chats[m.chat];
+
+if (!chat.nsfw) return m.reply('
 let rvid = global.vidxxx[Math.floor(Math.random() * global.vidxxx.length)];
 
 conn.sendMessage(m.chat, { 
