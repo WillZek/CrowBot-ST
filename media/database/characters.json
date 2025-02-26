@@ -361,27 +361,5 @@
         "video": "https://files.catbox.moe/lkse01.mp4",
         "user": null,
         "status": "Libre"
-    },
-    {
-        "id": "34",
-        "name": "Luffy",
-        "gender": "Hombre",
-        "value": "400",
-        "source": "One Piece",
-        "img": "https://i.ibb.co/whtsDtBW/file.jpg",
-        "video": "https://files.catbox.moe/rf3pro.mp4",
-        "user": null,
-        "status": "Libre"
-    },
-    {
-        "id": "35",
-        "name": "Saitama",
-        "gender": "Hombre",
-        "value": "550",
-        "source": "One Punch Man",
-        "img": "https://i.ibb.co/TMZQgkZF/file.jpg",
-        "video": "https://files.catbox.moe/pn1qwu.mp4",
-        "user": null,
-        "status": "Libre"
     }
 ]
