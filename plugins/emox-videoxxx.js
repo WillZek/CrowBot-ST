@@ -40,4 +40,8 @@ global.vidxxx = [
     'https://telegra.ph/file/ee2cf1b359d6eef50d7b7.mp4',
     'https://telegra.ph/file/598857924f3a29ffd37ae.mp4',
     'https://telegra.ph/file/528caef6ea950ec45aeef.mp4',
+
+'https://files.catbox.moe/nm0hdi.mp4',
+
+'https://files.catbox.moe/prdlor.mp4',
 ];
