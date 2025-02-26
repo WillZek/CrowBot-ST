@@ -123,7 +123,7 @@ if (!bot.jadibotmd) return m.reply('💛 Este Comando Se Encuentra Desactivado P
       if (connection == 'open') {
         conn.isInit = true;
         global.conns.push(conn);
-        await parent.reply(m.chat, args[0] ? 'Conectado con éxito' : '*\`[ Conectado Exitosamente 🔱 ]\`*\n\n> _Se intentará reconectar en caso de desconexión de sesión_\n> _Si quieres eliminar el subbot borra la sesión en dispositivos vinculados_\n> _El número del bot puede cambiar, guarda este enlace :_\n\nhttps://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W', m);
+        await parent.reply(m.chat, args[0] ? 'Conectado con éxito' : `*\`❀ ᥴ᥆ᥒᥱᥴ𝗍ᥲძ᥆ ᥱ᥊і𝗍᥆sᥲmᥱᥒ𝗍ᥱ ᥲ ᥕһᥲ𝗍sᥲ⍴⍴, ᥣᥲ ⍴r᥆́᥊іmᥲ ᥎ᥱz 𝗊ᥙᥱ sᥱ ძᥱsᥴ᥆ᥒᥱᥴ𝗍ᥱ ᥙsᥱ *#delsesion* ᥡ ძᥱ ᥒᥙᥱ᥎᥆ *#code*.\`*\n\n> ${dev}`, m);
         await sleep(5000);
         if (args[0]) return;
 
