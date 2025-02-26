@@ -24,14 +24,14 @@ let handler = async (m, { conn, command, args, usedPrefix }) => {
                 teks += `*${result.title}*\n_${result.url}_\n_${result.description}_\n\n─────────────────\n\n`;
             }
 
-            const ss = `https://image.thum.io/get/fullpage/https://www.google.com/search?q=${encodeURIComponent(text)}`;
+            const ss = `https://image.thum.io/get/fullpage/https://google.com/search?q=${encodeURIComponent(text)}`;
             conn.sendFile(m.chat, ss, 'result.png', teks, fkontak, false, fake);
             m.react("✅");
             handler.limit = 1;      
         }
     } catch (error) {
         try {
-            const url = 'https://www.google.com/search?q=' + encodeURIComponent(text);
+            const url = 'https://google.com/search?q=' + encodeURIComponent(text);
             google({ 'query': text }).then(res => {
                 let teks = `\`🔍 RESULTADOS DE:\` ${text}\n\n*${url}*\n\n`;
                 for (let g of res) {
