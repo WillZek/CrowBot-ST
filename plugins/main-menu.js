@@ -3,6 +3,8 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
+try {
+
 let tags = {
   'crow': '👑「 *`MENUS CROWBOT`* 」👑',
   'main': '「INFO」🍨',
@@ -56,7 +58,7 @@ const defaultMenu = {
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
-  try {
+//  pene 🥵 try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { exp, estrellas, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
@@ -161,7 +163,7 @@ await conn.sendMessage(m.chat, { video: { url: vid.getRandom() }, caption: text.
 
   } catch (error) {
     conn.reply(m.chat, `❌️ Lo sentimos, el menú tiene un error ${error.message}`, m, rcanal, )
-    throw e
+    throw error
   }
 }
 handler.help = ['menu']
