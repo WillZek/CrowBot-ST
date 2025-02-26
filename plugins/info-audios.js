@@ -13,8 +13,6 @@ let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?k
 
 let aud = res.resultados[0];
 
-if (!res.ok) return m.reply('No Se Encontraron Resultados');
-
 conn.sendMessage(m.chat, { audio: { url: aud.url }, mimetype: 'audio/mpeg' }, { quoted: m });
     }
 };
