@@ -3,8 +3,6 @@ import { join } from 'path'
 import fetch from 'node-fetch'
 import { xpRange } from '../lib/levelling.js'
 
-try {
-
 let tags = {
   'crow': '👑「 *`MENUS CROWBOT`* 」👑',
   'main': '「INFO」🍨',
@@ -58,7 +56,7 @@ const defaultMenu = {
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
-//  pene 🥵 try {
+try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { exp, estrellas, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
@@ -161,9 +159,9 @@ await m.react(emojis)
 await conn.sendMessage(m.chat, { video: { url: vid.getRandom() }, caption: text.trim(), contextInfo: { mentionedJid: [m.sender], isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, newsletterName: channelRD.name, serverMessageId: -1, }, forwardingScore: 999, externalAdReply: { title: textbot, body: dev, thumbnailUrl: 'https://qu.ax/kJBTp.jpg', sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false,
 }, }, gifPlayback: true, gifAttribution: 0 }, { quoted: null })
 
-  } catch (error) {
-    conn.reply(m.chat, `❌️ Lo sentimos, el menú tiene un error ${error.message}`, m, rcanal, )
-    throw error
+  } catch (e) {
+    conn.reply(m.chat, `❌️ Lo sentimos, el menú tiene un error ${e.message}`, m, rcanal, )
+    throw e
   }
 }
 handler.help = ['menu']
