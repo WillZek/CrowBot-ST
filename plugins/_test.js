@@ -9,7 +9,7 @@ let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?k
 
 let aud = res.resultados[0];
 
-conn.sendMessage(m.chat, { audio: aud.url }, { quoted: m });
+conn.sendMessage(m.chat, { audio: { url: aud.url }, mimetype: 'audio/mpeg' }, { quoted: m }); // xD me faltaba algunas cosas ✨
     }
 };
 
