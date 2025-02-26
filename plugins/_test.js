@@ -5,7 +5,7 @@ let handler = async(m, { conn, command }) => {
 
 if (command == 'rempalago' || command == 'nomeloesperaba' || command == 'bobesponja') {
 
-let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?key=api&q=${command}`).json;
+let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?key=api&q=${command}`).json();
 
 let aud = res.resultados[0];
 
