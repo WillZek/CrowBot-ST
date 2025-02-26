@@ -10,7 +10,7 @@ let handler = async (m, { conn }) => {
 
   await m.react('🕒')
   if (!mime.startsWith('image/')) {
-    return m.reply('🍭 Responde A Una Imagen ✨')
+    return m.reply('🍭 Responde A Una Imagen ✨\n> Para Obtener El Link De Un Video Usa *#tourl2*')
   }
 
   let media = await q.download()
