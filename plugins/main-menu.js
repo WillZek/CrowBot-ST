@@ -32,15 +32,7 @@ const defaultMenu = {
 
 ╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
 ✦  👤 *Cliente:* %name
-✧  ❤️‍🔥 *Exp:* %exp
-✦  🌟 *Estrellas:* %estrellas
-✧  👑 *Nivel:* %level
-✦  🌠 *Rango:* %role
-╚━━━━━━━━━━━━━━
-%readmore
-╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐔𝐒𝐄𝐑⊰*
-✧  🤖 *Bot:* CrowBot-ST
-✦  🔱 *Modo:* Privado VIP 
+✦  🔱 *Modo:* Público
 ✧  ✨ *Baileys:* Multi Device
 ✦  🪐 *Tiempo Activo:* %muptime
 ✧  💫 *Usuarios:* %totalreg 
