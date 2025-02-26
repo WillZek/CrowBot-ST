@@ -46,4 +46,5 @@ global.vidxxx = [
 'https://files.catbox.moe/s6vc54.mp4',
 'https://files.catbox.moe/vvtv05.mp4',
 'https://files.catbox.moe/uxc844.mp4',
+'https://files.catbox.moe/5tn2yr.mp4',
 ];
