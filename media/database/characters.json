@@ -308,7 +308,7 @@
         "status": "Libre"
     },
     {
-        "id": "29",
+        "id": "30",
         "name": "Hitomi Tsukishiro",
         "gender": "Mujer",
         "value": "5041",
@@ -319,7 +319,7 @@
         "status": "Libre"
     },
     {
-        "id": "30",
+        "id": "31",
         "name": "Megumi Kayano",
         "gender": "Mujer",
         "value": "347",
@@ -330,10 +330,10 @@
         "status": "Libre"
     },
     {
-        "id": "31",
+        "id": "32",
         "name": "Battler Ushiromiya",
         "gender": "Hombre",
-        "value": "647",
+        "value": "6476",
         "source": "Umineko no Naku Koro ni",
         "img": "https://files.catbox.moe/0vcxcq.jpg",
         "video": "https://files.catbox.moe/xvlskx.mp4",
@@ -341,10 +341,10 @@
         "status": "Libre"
     },
     {
-        "id": "32",
+        "id": "33",
         "name": "Bocchi",
         "gender": "Mujer",
-        "value": "689",
+        "value": "6476",
         "source": "Umineko no Naku Koro ni",
         "img": "https://files.catbox.moe/ap3obh.jpg",
         "video": "https://files.catbox.moe/lkse01.mp4",
@@ -352,11 +352,11 @@
         "status": "Libre"
     },
     {
-        "id": "33",
+        "id": "34",
         "name": "Naruto",
         "gender": "Hombre",
-        "value": "600",
-        "source": "Naruto",
+        "value": "6476",
+        "source": "Umineko no Naku Koro ni",
         "img": "https://files.catbox.moe/5c3hs8.jpg",
         "video": "https://files.catbox.moe/lkse01.mp4",
         "user": null,
