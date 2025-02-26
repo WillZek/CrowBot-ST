@@ -7,7 +7,7 @@ try {
 await m.react(rwait)
 conn.reply(m.chat, `🕒 *Enviando El Video...*`, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
-title: packname,
+title: botname,
 body: wm,
 previewType: 0, thumbnail: icons,
 sourceUrl: channel }}})      
