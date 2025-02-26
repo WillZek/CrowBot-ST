@@ -60,6 +60,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
         throw new Error('No se pudo obtener el enlace de descarga de ninguna API.');
     } catch (error) {
+m.reply(`*Error:* ${error.message}`);
         await m.react('❌');
     }
 };
