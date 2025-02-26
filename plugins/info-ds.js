@@ -1,6 +1,8 @@
 
 /* Codigo hecho por @Fabri115 y mejorado por BrunoSobrino */
 
+// Bruno zzzz
+
 import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs'
 import path from 'path'
 
@@ -11,7 +13,7 @@ return conn.reply(m.chat, '🍂 *Utiliza este comando directamente en el número
 }
 
 let chatId = m.isGroup ? [m.chat, m.sender] : [m.sender]
-let sessionPath = './LuffySession/'
+let sessionPath = './CrowSession/'
 
 try {
 
