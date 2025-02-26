@@ -7,7 +7,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, command }) => {
 
-if (command == 'rempalago' || command == 'nomeloesperaba' || command == 'bobesponja' || command == 'fiesta', 'pintamos') {
+if (command == 'rempalago' || command == 'bobesponja' || command == 'pintamos' || command == 'fiesta') {
 
 // después agrego mas comandos de audios 
 let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?key=api&q=${command}`)).json();
