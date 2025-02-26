@@ -7,7 +7,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, command }) => {
 
-if (command == 'rempalago' || command == 'nomeloesperaba' || command == 'bobesponja' || command == 'fiesta', 'pintamoslacasa') {
+if (command == 'rempalago' || command == 'nomeloesperaba' || command == 'bobesponja' || command == 'fiesta', 'pintamos') {
 
 let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?key=api&q=${command}`)).json();
 
@@ -17,7 +17,7 @@ conn.sendMessage(m.chat, { audio: { url: aud.url }, mimetype: 'audio/mpeg' }, { 
     }
 };
 
-handler.command = ['rempalago', 'bobesponja', 'fiesta', 'pintamoslacasa'];
+handler.command = ['rempalago', 'bobesponja', 'fiesta', 'pintamos'];
 
 export default handler;
 
