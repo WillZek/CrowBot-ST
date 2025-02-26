@@ -28,7 +28,7 @@ const vid = 'https://files.catbox.moe/07lnqw.mp4';
 const defaultMenu = {
   before: `*•:•:•:•:•:•:•:•:•:•☾☼☽•:•.•:•.•:•:•:•:•:•*
 
-"*「💛」 ¡Hola! %name soy ${namebot}*, *%greeting* ❒"
+"*「💛」 ¡Hola! %name *%greeting*, Para Ver Tu Perfil Usa *#perfil* ❒"
 
 ╔━━━━━ *⊱𝐈𝐍𝐅𝐎 - 𝐁𝐎𝐓⊰*
 ✦  👤 *Cliente:* %name
