@@ -50,13 +50,13 @@ const defaultMenu = {
 
 \t*(✰◠‿◠) 𝐂 𝐨 𝐦 𝐚 𝐧 𝐝 𝐨 𝐬*   
 `.trimStart(),
-  header: ' ͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜\n┊➳%category \n* ͜ ۬︵࣪᷼⏜݊᷼⏜࣪᷼✿⃘𐇽۫ꥈ࣪࣪࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪𑁍ٜ𐇽࣪࣪࣪࣪࣪𝇈⃘۫ꥈ࣪࣪࣪࣪࣪✿݊᷼⏜࣪᷼⏜࣪᷼︵۬ ͜',
-  body: '*┃⏤͟͟͞͞🍭➤›* %cmd',
+  header: '*╔════════✮═══════╗*\n┊➳ %category \n*╚════════✮═══════╝*',
+  body: '➩ %cmd',
   footer: '*┗━*\n',
   after: `> ${dev}`,
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
-try {
+  try {
     let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {}
     let { exp, estrellas, level, role } = global.db.data.users[m.sender]
     let { min, xp, max } = xpRange(level, global.multiplier)
@@ -167,7 +167,7 @@ await conn.sendMessage(m.chat, { video: { url: vid }, caption: text.trim(), cont
 handler.help = ['menu']
 handler.tags = ['main']
 handler.command = ['menu', 'help', 'menuall', 'allmenú', 'allmenu', 'menucompleto'] 
-handler.register = true
+handler.register = false
 
 export default handler
 
