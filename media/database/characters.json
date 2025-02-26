@@ -361,5 +361,16 @@
         "video": "https://files.catbox.moe/lkse01.mp4",
         "user": null,
         "status": "Libre"
-    }
+    },
+    {
+        "id": "35",
+        "name": "Luffy",
+        "gender": "Hombre",
+        "value": "4000",
+        "source": "One Piece",
+        "img": "https://i.ibb.co/whtsDtBW/file.jpg",
+        "video": "https://files.catbox.moe/lkse01.mp4",
+        "user": null,
+        "status": "Libre"
+    },
 ]
