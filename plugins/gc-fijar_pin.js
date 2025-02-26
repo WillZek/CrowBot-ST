@@ -1,6 +1,6 @@
 // By Gata Dios ✨
 
-let handler = async (m, { conn, command }) => {
+/* let handler = async (m, { conn, command }) => {
 if (!m.quoted) return m.reply(`⚠️ Responde a un mensaje para ${command === 'pin' ? 'fijarlo' : 'desfijarlo'}.`);
 try {
 let messageKey = {
@@ -29,3 +29,4 @@ handler.admin = true;
 handler.group = true;
 handler.botAdmin = true; 
 export default handler;
+*/
