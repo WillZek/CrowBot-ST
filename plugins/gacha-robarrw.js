@@ -21,7 +21,7 @@ async function saveCharacters(characters) {
 
 let cooldowns = new Map();
 
-let handler = async (m, { conn, args }) => {
+let handler = async (m, { conn, args, usedPrefix, command }) => {
     try {
         const userId = m.sender;
         const cooldownTime = 1 * 60 * 60 * 1000 + 59 * 60 * 1000 + 32 * 1000;
@@ -44,7 +44,7 @@ let handler = async (m, { conn, args }) => {
         const characterName = args.slice(0, -1).join(' ');
 
         if (!characterName || isNaN(newValue)) {
-            await conn.reply(m.chat, '《✧》Debes especificar un personaje para votarlo.', m);
+            await conn.reply(m.chat, '《✧》Debes especificar un personaje y el nuevo valor para votarlo.\n> Ejemplo: ${usedPrefix + command} Aika Sano 2000', m);
             return;
         }
 
