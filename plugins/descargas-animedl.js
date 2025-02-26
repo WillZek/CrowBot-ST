@@ -33,7 +33,7 @@ const getDownloadLinks = async (url) => {
 };
 
 let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-  if (!args[0]) throw `*\`🌱 Ingresa el link del anime para obtener información. Ejemplo:.\`*\n\n\`${usedPrefix+command} https://tioanime.com/ver/dungeon-meshi-1\`\n\n> Nota: En el comando #animes no da los links completos pq son muy largos y por éso usé un acortador, pero igualmente sirven.`
+  if (!args[0]) return m.reply(`*\`🌱 Ingresa el link del anime para obtener información. Ejemplo:.\`*\n\n\`${usedPrefix+command} https://tioanime.com/ver/dungeon-meshi-1\`\n\n> Nota: En el comando #animes no da los links completos pq son muy largos y por éso usé un acortador, pero igualmente sirven.`);
 
   const links = await getDownloadLinks(args[0]);
 
