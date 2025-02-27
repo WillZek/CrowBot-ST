@@ -5,45 +5,59 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text || !text.startsWith('http')) {
-    return conn.reply(m.chat, '[ ᰔᩚ ] Ingresa una URL válida de *Spotify*.', m);
+  if (!text) {
+    return conn.reply(
+      m.chat,
+      '[ ᰔᩚ ] Ingresa el nombre o enlace para buscar en *Spotify*.\n\n' + 
+      `Ejemplo:\n> *${usedPrefix + command}* https://open.spotify.com/track/123456789`,
+      m
+    );
   }
 
   await m.react('🕓');
 
   try {
-    let apiURL = `https://delirius-apiofc.vercel.app/download/spotifydlv3?url=${encodeURIComponent(text)}`;
-    let apiDL = await fetch(apiURL);
-    let jsonDL = await apiDL.json();
+    const response = await fetch(`https://dark-core-api.vercel.app/api/download/spotify?key=api&url=${encodeURIComponent(text)}`);
+    const result = await response.json();
 
-    if (jsonDL && jsonDL.status && jsonDL.data) {
-      let { title, author, image, duration, url: musicUrl } = jsonDL.data;
+    if (result.success) {
+      const { title, thumbnail, downloadLink } = result;
 
-      let durationMinutes = Math.floor(duration / 60000);
-      let durationSeconds = ((duration % 60000) / 1000).toFixed(0);
+      const mensaje = `🎵 *Título:* ${title}`;
 
-      let caption = `🎶 *Título*: ${title}\n🖊️ *Autor*: ${author}\n⏳ *Duración*: ${durationMinutes}:${durationSeconds.padStart(2, '0')}\n🌐 *Enlace*: ${text}`;
+      await conn.sendFile(m.chat, thumbnail, 'cover.jpg', mensaje, m);
 
-      await conn.sendFile(m.chat, image, 'cover.jpg', caption, m);
-
-      await conn.sendMessage(m.chat, {
-        audio: { url: musicUrl },
-        mimetype: 'audio/mp4'
-      }, { quoted: m });
+      await conn.sendMessage(
+        m.chat,
+        {
+          text: `🔗 *Enlace de descarga:* ${downloadLink}`
+        },
+        { quoted: m }
+      );
 
       await m.react('✅');
     } else {
       await m.react('❌');
+      conn.reply(
+        m.chat,
+        '[ ᰔᩚ ] No se pudo obtener la música para este enlace o búsqueda.',
+        m
+      );
     }
   } catch (error) {
     console.error(error);
     await m.react('❌');
+    conn.reply(
+      m.chat,
+      '[ ᰔᩚ ] Ocurrió un error al procesar tu solicitud.',
+      m
+    );
   }
 };
 
-handler.command = /^(spotifydl|spdl|Spotifydl)$/i;
+handler.help = ['spotify *<url>*'];
 handler.tags = ['descargas'];
+handler.command = /^(spotifydl|spdl)$/i;
 handler.register = true;
-handler.estrellas = 6;
 
 export default handler;
