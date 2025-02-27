@@ -36,7 +36,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
       );
 */
 
-await conn.sendMessage(m.chat, { audio { url: downloadLink }, { quoted: m });
+await conn.sendMessage(m.chat, { audio: { url: downloadLink }, mimetype: 'audio/mpeg' }, { quoted: m });
 
       await m.react('✅');
     } else {
