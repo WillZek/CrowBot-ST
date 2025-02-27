@@ -50,7 +50,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 }
 
-handler.help = ['spotify', 'music']
+handler.help = ['spotify <texto>']
 handler.tags = ['downloader']
 handler.command = ['spotify', 'splay']
 handler.group = true
