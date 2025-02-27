@@ -6,10 +6,10 @@ const handler = async (m, { conn, command, usedPrefix, text }) => {
 let user = global.db.data.users[m.sender];
 
 if (user.birth) {
-return conn.reply(m.chat, `🌠 Ya tienes una fecha establecida, si quieres borrar la fecha actual usa:\n> » ${usedPrefix}delbirth`, m);
+return conn.reply(m.chat, `❀ Ya tienes una fecha establecida, si quieres borrar la fecha actual usa:\n> » ${usedPrefix}delbirth`, m);
 }
 
-if (!text) return conn.reply(m.chat, `🌠 Debes ingresar una fecha válida para tu cumpleaños.\n\n> ✐ Ejemplo » *${usedPrefix + command} 01/01/2000* (dia/mes/año)`, m);
+if (!text) return conn.reply(m.chat, `❀ Debes ingresar una fecha válida para tu cumpleaños.\n\n> ✐ Ejemplo » *${usedPrefix + command} 01/01/2000* (dia/mes/año)`, m);
 
 function validarFechaNacimiento(text) {
 const opcionesFecha = [
@@ -29,14 +29,14 @@ return text;
 
 let birth = validarFechaNacimiento(text);
 if (!birth) {
-return conn.reply(m.chat, `🌠 Recuerda elegir una fecha de nacimiento válida.\n> Ejemplo: ${usedPrefix + command} 01/12/2024`, m);
+return conn.reply(m.chat, `❀ Recuerda elegir una fecha de nacimiento válida.\n> Ejemplo: ${usedPrefix + command} 01/12/2024`, m);
 }
 
 user.birth = birth;
 return conn.reply(m.chat, `✐ Se ha establecido tu fecha de nacimiento como: *${user.birth}*!`, m);
 };
 
-handler.help = ['setbirth']
+handler.help = ['setbirth <establece tu cumpleaños>']
 handler.tags = ['rg']
 handler.command = ['setbirth', 'setcumpleaños']
 handler.estrellas = 3;
