@@ -99,7 +99,7 @@ handler.before = async (m) => {
     }
 };
 
-handler.tags = ['fun'];
+handler.tags = ['rg'];
 handler.help = ['marry *@usuario*', 'divorce'];
 handler.command = ['marry', 'divorce'];
 handler.group = true;
