@@ -27,13 +27,16 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 
       await conn.sendFile(m.chat, thumbnail, 'cover.jpg', mensaje, m);
 
-      await conn.sendMessage(
+/*      await conn.sendMessage(
         m.chat,
         {
           text: `🔗 *Enlace de descarga:* ${downloadLink}`
         },
         { quoted: m }
       );
+*/
+
+await conn.sendMessage(m.chat, { audio { url: downloadLink }, { quoted: m });
 
       await m.react('✅');
     } else {
