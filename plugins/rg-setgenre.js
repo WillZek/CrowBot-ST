@@ -36,7 +36,7 @@ user.genre = genre;
 return conn.reply(m.chat, `✐ Se ha establecido tu género como: *${user.genre}*!`, m);
 };
 
-handler.help = ['setgenre']
+handler.help = ['setgenre <establece tu genero>']
 handler.tags = ['rg']
 handler.command = ['setgenero', 'setgenre']
 handler.estrellas = 3; 
