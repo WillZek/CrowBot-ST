@@ -33,8 +33,8 @@ conn.sendMessage(m.chat, {
                 buttonText: { displayText: 'Obtener Video' }
             },
             {
-                buttonId: '.vxxx',
-                buttonText: { displayText: 'Hentai' }
+                buttonId: '.tetas',
+                buttonText: { displayText: 'Tetas' }
             }
         ],
         viewOnce: true,
