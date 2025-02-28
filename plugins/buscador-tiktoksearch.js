@@ -19,12 +19,16 @@ let json = await response.json();
 m.react('🕑');
 let txt = `🔎 TIKTOK - SEARCH`;
     for (let i = 0; i < json.data.length; i++) {
-      let meta = json.meta[i];
-      txt += `\n\n`;
-    }
-    txt += `✧ *Titulo:* ${meta.title}\n✧ *Likes:* ${meta.like}\n✧ *Comentarios:* ${meta.coment}\n✧ *Compartidas:* ${meta.share}\n✧ *Link:* ${meta.url}`;
+    let meta = json.meta[i];
+    txt += `\n\n`;
+    txt += `✧ *Titulo:* ${meta.title}\n`
+    txt += `✧ *Likes:* ${meta.like}\n`
+    txt += `✧ *Comentarios:* ${meta.coment}\n`
+    txt += `✧ *Compartidas:* ${meta.share}\n`
+    txt += `✧ *Link:* ${meta.url}`;
+     }
 
-let vid = meta.hd;
+// let vid = meta.hd;
 
 m.react('✅');
 // conn.sendMessage(m.chat, { video: { url: vid }, caption: txt }, { quoted: fkontak });
