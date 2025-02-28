@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+/* import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) {
@@ -69,13 +69,14 @@ handler.tags = ['descargas'];
 handler.command = /^ytmp4|ytv$/i;
 handler.register = true;
 export default handler;
+*/
 
 /* [🍭] YOUTUBE VIDEO
 - By WillZek 
 */
 
 // apis todas culeadas
-/* import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, text }) => {
 
@@ -113,4 +114,3 @@ await conn.sendMessage(m.chat, {
 handler.command = ['ytv', 'ytmp4', 'ymp4']
 
 export default handler;
-*/
