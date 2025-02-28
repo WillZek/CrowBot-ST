@@ -99,6 +99,7 @@ try {
     }
  }
 
+try {
 let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link[0]
 
 let size = video?.data?.size || 0;
@@ -109,7 +110,11 @@ if (size > 10 * 1024 * 1024) {
 await conn.sendMessage(m.chat, { document: { url: link }, quoted: m });
 } else {
 await conn.sendMessage(m.chat, { video: { url: link }, caption: '🍷✨' }, { quoted: m });
-}
+
+} catch (e) {
+m.reply(`${e}`);
+   }
+};
 
 handler.command = ['ytv', 'ytmp4', 'youtubemp4', 'ymp4']
 
