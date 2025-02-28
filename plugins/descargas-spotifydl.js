@@ -1,6 +1,7 @@
 /* 
 - Downloader Spotify By Izumi-kzx
 - https://whatsapp.com/channel/0029VaJxgcB0bIdvuOwKTM2Y
+- Y Medicado Por Pene
 */
 import fetch from 'node-fetch';
 
@@ -26,15 +27,6 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
       const mensaje = `🎵 *Título:* ${title}`;
 
       await conn.sendFile(m.chat, thumbnail, 'cover.jpg', mensaje, m);
-
-/*      await conn.sendMessage(
-        m.chat,
-        {
-          text: `🔗 *Enlace de descarga:* ${downloadLink}`
-        },
-        { quoted: m }
-      );
-*/
 
 await conn.sendMessage(m.chat, { audio: { url: downloadLink }, mimetype: 'audio/mpeg' }, { quoted: m });
 
