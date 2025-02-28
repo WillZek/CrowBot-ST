@@ -21,9 +21,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                 const response = await fetch(api);
                 result = await response.json();
                 if (result.status && result.result && result.result.downloadUrl) {
-                    const { title, downloadUrl } = result.result || result.data;
+                    const { title, downloadUrl, url } = result.result || result.data;
 
-                    const videoFileResponse = await fetch(dl);
+                    const videoFileResponse = await fetch(url);
                     if (videoFileResponse.ok) {
                         const buffer = await videoFileResponse.buffer();
                         const size = parseInt(videoFileResponse.headers.get('content-length'), 10) || 0;
