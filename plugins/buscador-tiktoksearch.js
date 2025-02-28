@@ -23,7 +23,9 @@ let txt = `✧ *Titulo:* ${meta.title}\n✧ *Likes:* ${meta.like}\n✧ *Comentar
 let vid = meta.hd;
 
 m.react('✅');
-conn.sendMessage(m.chat, { video: { url: vid }, caption: txt }, { quoted: fkontak });
+// conn.sendMessage(m.chat, { video: { url: vid }, caption: txt }, { quoted: fkontak });
+
+conn.sendMessage(m.chat, { text: txt }, { quoted: fkontak });
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
