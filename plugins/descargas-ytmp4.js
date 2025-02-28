@@ -114,6 +114,6 @@ await conn.sendMessage(m.chat, { video: { url: link }, caption: '🍷✨' }, { q
 m.reply(`${e.message}`);
 }
 
-handler.command = ['ytv', 'ytmp4', 'youtubemp4', 'ymp4']
+handler.command = ['ytv', 'ytmp4', 'yvmp4', 'ymp4']
 
 export default handler;
