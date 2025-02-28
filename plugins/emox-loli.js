@@ -30,10 +30,6 @@ conn.sendMessage(m.chat, {
             },
             {
                 buttonId: '.vxxx',
-                buttonText: { displayText: 'Video' }
-            },
-            {
-                buttonId: '.vxxx',
                 buttonText: { displayText: 'Obtener Video' }
             },
             {
