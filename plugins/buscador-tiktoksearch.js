@@ -15,11 +15,13 @@ let api = `https://delirius-apiofc.vercel.app/search/tiktoksearch?query=${text}`
 
 let response = await fetch(api);
 let json = await response.json();
-let meta = json.meta[0];
 
 m.react('🕑');
 let txt = `🔎 TIKTOK - SEARCH`;
-
+    for (let i = 0; i < json.data.length; i++) {
+      let meta = json.meta[i];
+      txt += `\n\n`;
+    }
     txt += `✧ *Titulo:* ${meta.title}\n✧ *Likes:* ${meta.like}\n✧ *Comentarios:* ${meta.coment}\n✧ *Compartidas:* ${meta.share}\n✧ *Link:* ${meta.url}`;
 
 let vid = meta.hd;
