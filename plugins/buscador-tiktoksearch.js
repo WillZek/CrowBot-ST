@@ -28,12 +28,9 @@ let txt = `🔎 TIKTOK - SEARCH`;
     txt += `✧ *Link:* ${meta.url}`;
      }
 
-// let vid = meta.hd;
-
-m.react('✅');
-// conn.sendMessage(m.chat, { video: { url: vid }, caption: txt }, { quoted: fkontak });
-
+m.react('🕒');
 conn.sendMessage(m.chat, { text: txt }, { quoted: fkontak });
+m.react('✅');
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
