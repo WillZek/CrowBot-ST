@@ -36,11 +36,9 @@ conn.sendMessage(m.chat, {
                 buttonId: '.vxxx',
                 buttonText: { displayText: 'Video 2' }
             },
-            },
             {
                 buttonId: '.vxxx',
                 buttonText: { displayText: 'Video 3' }
-            },
             },
             {
                 buttonId: '.vxxx',
