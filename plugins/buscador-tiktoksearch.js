@@ -17,7 +17,7 @@ let response = await fetch(api);
 let json = await response.json();
 
 m.react('🕑');
-let txt = `🔎 \`TIKTOK - SEARCH`\`;
+let txt = `🔎 \*`TIKTOK - SEARCH\`*`;
     for (let i = 0; i < json.meta.length; i++) {
     let meta = json.meta[i];
     txt += `\n\n`;
