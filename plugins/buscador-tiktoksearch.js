@@ -18,7 +18,7 @@ let json = await response.json();
 
 m.react('🕑');
 let txt = `🔎 TIKTOK - SEARCH`;
-    for (let i = 0; i < json.data.length; i++) {
+    for (let i = 0; i < json.meta.length; i++) {
     let meta = json.meta[i];
     txt += `\n\n`;
     txt += `✧ *Titulo:* ${meta.title}\n`
