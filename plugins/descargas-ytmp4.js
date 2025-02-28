@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+/* import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) {
@@ -69,13 +69,14 @@ handler.tags = ['descargas'];
 handler.command = /^ytmp4|ytv$/i;
 handler.register = true;
 export default handler;
+*/
 
 /* [🍭] YOUTUBE VIDEO
 - By WillZek 
 */
 
 // apis todas culeadas
-/* import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, text }) => {
 
@@ -85,13 +86,13 @@ m.react(rwait);
 
 let video;
 try {
-      video = await (await fetch(`https://dark-core-api.vercel.app/api/download/ytmp4?key=api&url=${text}`)).json();
+      video = await (await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=DitzOfc`)).json();
 } catch (error) {
 try {
       video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${text}&quality=480p&apikey=be9NqGwC`)).json();
 } catch (error) {
 try {
-      video = await (await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=uXxd7d`)).json();
+      video = await (await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=DitzOfc`)).json();
 } catch (error) {
       video = await (await fetch(`https://good-camel-seemingly.ngrok-free.app/download/mp4?url=${text}`)).json();
       }
@@ -113,4 +114,3 @@ await conn.sendMessage(m.chat, {
 handler.command = ['ytv', 'ytmp4', 'ymp4']
 
 export default handler;
-*/
