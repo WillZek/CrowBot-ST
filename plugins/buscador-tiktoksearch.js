@@ -29,16 +29,17 @@ let txt = `🔎 \`TIKTOK - SEARCH\`.`;
      }
 
 m.react('🕒');
+let metaa = json.meta[0];
 conn.sendMessage(m.chat, { 
         text: txt, 
         footer: dev, 
         buttons: [
             {
-                buttonId: `${usedPrefix}tiktok ${meta.url}`,
+                buttonId: `${usedPrefix}tiktok ${metaa.url}`,
                 buttonText: { displayText: 'Descargar Video' }
             },
             {
-                buttonId: `${usedPrefix}ttmp3 ${meta.url}`,
+                buttonId: `${usedPrefix}ttmp3 ${metaa.url}`,
                 buttonText: { displayText: 'Descargar Audio' }
             }
         ],
