@@ -80,7 +80,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, text }) => {
 
-if (!text) return m.reply('🍭 Ingrese Un Link De YouTube\n> *Ejemplo:* https://youtube.com/shorts/ZisXJqH1jtw?si=0RZacIJU5zhoCmWh');
+if (!text) return m.reply('🍭 Ingrese Un Link De YouTube\n> *Ejemplo:* https://youtube.com/shorts/ZisXJqH1jtw?si=vtXVNQTpv4ht4KSP');
 
 m.react(rwait);
 
