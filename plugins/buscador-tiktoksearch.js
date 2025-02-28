@@ -18,7 +18,9 @@ let json = await response.json();
 let meta = json.meta[0];
 
 m.react('🕑');
-let txt = `✧ *Titulo:* ${meta.title}\n✧ *Likes:* ${meta.like}\n✧ *Comentarios:* ${meta.coment}\n✧ *Compartidas:* ${meta.share}\n✧ *Link:* ${meta.url}`;
+let txt = `🔎 TIKTOK - SEARCH`;
+
+    txt += `✧ *Titulo:* ${meta.title}\n✧ *Likes:* ${meta.like}\n✧ *Comentarios:* ${meta.coment}\n✧ *Compartidas:* ${meta.share}\n✧ *Link:* ${meta.url}`;
 
 let vid = meta.hd;
 
