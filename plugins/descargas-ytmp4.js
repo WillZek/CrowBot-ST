@@ -106,7 +106,7 @@ let size = video.data.size;
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
 if (size > 10 * 1024 * 1024) {
-await conn.sendMessage(m.chat, { document: { url: link }, { quoted: m });
+await conn.sendMessage(m.chat, { document: { url: link }, quoted: m });
 } else {
 await conn.sendMessage(m.chat, { video: { url: link }, caption: '🍷✨' }, { quoted: m });
    }
