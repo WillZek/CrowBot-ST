@@ -108,6 +108,6 @@ await conn.sendMessage(m.chat, { document: { url: link }, { quoted: m });
 await conn.sendMessage(m.chat, { video: { url: link }, { quoted: m });
 }
 
-handler.command = ['ytv', 'ytmp4', 'ymp4', 'mp4']
+handler.command = ['ytv', 'ytmp4', 'youtubemp4', 'ymp4']
 
 export default handler;
