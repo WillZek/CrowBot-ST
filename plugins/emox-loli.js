@@ -27,7 +27,11 @@ conn.sendMessage(m.chat, {
             {
                 buttonId: `.pack`,
                 buttonText: { displayText: 'Siguiente' }
-            }
+            },
+            {
+                buttonId: '.vxxx',
+                buttonText: { displayText: 'Video' }
+        }
         ],
         viewOnce: true,
         headerType: 4
