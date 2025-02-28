@@ -103,12 +103,9 @@ let link = video?.data?.url || video?.download_url || video?.result?.dl_url || v
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
-await conn.sendMessage(m.chat, {
-      video: { url: link },
-      mimetype: "video/mp4",
-      caption: `${dev}`,
-    }, { quoted: m });
-    m.react(done);
+await conn.sendMessage(m.chat, { document: { url: link }, { quoted: m });
+} else {
+await conn.sendMessage(m.chat, { video: { url: link }, { quoted: m });
 }
 
 handler.command = ['ytv', 'ytmp4', 'ymp4']
