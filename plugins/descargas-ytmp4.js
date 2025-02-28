@@ -86,7 +86,7 @@ m.react(rwait);
 
 let video;
 try {
-      video = await (await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=DitzOfc`)).json();
+      video = await (await fetch(`https://api.alyachan.dev/api/ytv?url=${text}&apikey=zstapi09`)).json();
 } catch (error) {
 try {
       video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${text}&quality=480p&apikey=be9NqGwC`)).json();
