@@ -1,6 +1,5 @@
 /* Tiktok MP3 By WillZek 
-- Free Codes Titan 
-- https://whatsapp.com/channel/0029ValMlRS6buMFL9d0iQ0S
+- >> https://github.com/WillZek
 */
 
 // [💥] 𝗧𝗜𝗞𝗧𝗢𝗞 𝗠𝗣3 - 𝗗𝗟
