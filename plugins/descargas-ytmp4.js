@@ -100,13 +100,12 @@ try {
     }
  }
 */
-
-let video = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${text}&type=video&quality=480p&apikey=GataDios`)).json();
-
-try {
 /* let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link[0];
 let size = video?.data?.size || 0;
 */
+
+try {
+let video = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${text}&type=video&quality=480p&apikey=GataDios`)).json();
 
 let link = video.data.url;
 let size = video.data.size || 0;
