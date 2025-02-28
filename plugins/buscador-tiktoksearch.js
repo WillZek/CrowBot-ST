@@ -29,7 +29,22 @@ let txt = `🔎 \`TIKTOK - SEARCH\`.`;
      }
 
 m.react('🕒');
-conn.sendMessage(m.chat, { text: txt }, { quoted: fkontak });
+conn.sendMessage(m.chat, { 
+        text: txt, 
+        footer: dev, 
+        buttons: [
+            {
+                buttonId: `${usedPrefix}tiktok ${meta.url}`,
+                buttonText: { displayText: 'Descargar Video' }
+            },
+            {
+                buttonId: `${usedPrefix}ttmp3 ${meta.url}`,
+                buttonText: { displayText: 'Descargar Audio' }
+            }
+        ],
+        viewOnce: true,
+        headerType: 4
+    }, { quoted: m });
 m.react('✅');
 
 } catch (e) {
