@@ -1,6 +1,6 @@
 let handler = async(m, { conn }) => {
 
-let img = 'https://delirius-apiofc.vercel.app/nsfw/';
+let img = 'https://delirius-apiofc.vercel.app/nsfw/boobs';
 
 let text = '*🍭 TETAS*';
 
