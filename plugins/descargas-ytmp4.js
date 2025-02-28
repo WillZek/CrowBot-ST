@@ -107,7 +107,6 @@ await conn.sendMessage(m.chat, { document: { url: link }, { quoted: m });
 } else {
 await conn.sendMessage(m.chat, { video: { url: link }, { quoted: m });
    }
-};
 
 handler.command = ['ytv', 'ytmp4', 'youtubemp4', 'ymp4']
 
