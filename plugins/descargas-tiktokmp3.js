@@ -2,7 +2,7 @@
 - >> https://github.com/WillZek
 */
 
-// [💥] 𝗧𝗜𝗞𝗧𝗢𝗞 𝗠𝗣3 - 𝗗𝗟
+// [💥] 𝗧𝗜𝗞𝗧𝗢𝗞 𝗠𝗣3
 
 import fetch from 'node-fetch';
 
