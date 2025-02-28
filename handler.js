@@ -51,6 +51,8 @@ user.muto = false
                         user.name = m.name
                     if (!isNumber(user.age))
                         user.age = -1
+                    if (!isNumber(user.warn))
+user.warn = 0
                     if (!isNumber(user.regTime))
                         user.regTime = -1
                 }
