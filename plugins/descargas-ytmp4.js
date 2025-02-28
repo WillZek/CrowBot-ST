@@ -1,4 +1,4 @@
-/* import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) {
@@ -9,9 +9,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         await m.react('🕒');
 
         const apis = [
-            `https://api.siputzx.my.id/api/d/ytmp4?url=${encodeURIComponent(text)}`,
-            `https://api.botcahx.eu.org/api/dowloader/yt?url=${encodeURIComponent(text)}&apikey=xenzpedo`,
-            `https://mahiru-shiina.vercel.app/download/ytmp4?url=${encodeURIComponent(text)}`,
+            `https://api.neoxr.eu/api/youtube?url=${text}&type=video&quality=480p&apikey=GataDios`,
+            `https://api.alyachan.dev/api/ytv?url=${text}&apikey=zstapi09`,
+            `https://api.fgmods.xyz/api/downloader/ytmp4?url=${text}&quality=480p&apikey=be9NqGwC`,
             `https://api.agungny.my.id/api/youtube-video?url=${encodeURIComponent(text)}`
         ];
 
@@ -69,14 +69,13 @@ handler.tags = ['descargas'];
 handler.command = /^ytmp4|ytv$/i;
 handler.register = true;
 export default handler;
-*/
 
 /* [🍭] YOUTUBE VIDEO
 - By WillZek 
 */
 
 // apis todas culeadas
-import fetch from 'node-fetch';
+/* import fetch from 'node-fetch';
 
 let handler = async(m, { conn, args, text }) => {
 
@@ -114,3 +113,4 @@ await conn.sendMessage(m.chat, {
 handler.command = ['ytv', 'ytmp4', 'ymp4']
 
 export default handler;
+*/
