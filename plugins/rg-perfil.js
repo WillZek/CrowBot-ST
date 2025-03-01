@@ -41,15 +41,15 @@ var handler = async (m, { conn }) => {
 💠 *Edad:* ${age}
 ⚧️ *Genero:* ${genre}
 🎂 *Cumpleaños:* ${birth} 
-👩‍❤️‍👩 *Casad@:* ${isMarried ? partnerName : 'Nadie'}
-📜 *Descripción:* ${description}
+♡ *ᥴᥲsᥲძ@:* ${isMarried ? partnerName : 'Nadie'}
+✎ *ძᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
 🌀 *Registrado:* ${registered ? '✅': '❌'}
 
 「 💰 *RECURSOS* 」
-💴 *Estrellas:* ${estrellas || 0}
-🌟 *Nivel:* ${level || 0}
-✨ *Experiencia:* ${exp || 0}
-⚜️ *Rango:* ${role}`.trim();
+✩ *ᥱs𝗍rᥱᥣᥣᥲs:* ${estrellas || 0}
+ ${level || 0}
+◭ *ᥱ᥊⍴ᥱrіᥱᥒᥴіᥲ:* ${exp || 0}
+⚡︎ *rᥲᥒg᥆:* ${role}`.trim();
 
     let prem = `╭──⪩ 𝐔𝐒𝐔𝐀𝐑𝐈𝐎 𝐏𝐑𝐄𝐌𝐈𝐔𝐌 ⪨
 │⧼👤⧽ *ᴜsᴜᴀʀɪᴏ:* *${username}*
