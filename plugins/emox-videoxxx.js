@@ -3,10 +3,13 @@ let handler = async(m, { conn }) => {
 
 let chat = global.db.data.chats[m.chat];
 if (!chat.nsfw) return m.reply('[❗] 𝐋𝐨𝐬 𝐜𝐨𝐦𝐚𝐧𝐝𝐨𝐬 +𝟏𝟖 𝐞𝐬𝐭𝐚́𝐧 𝐝𝐞𝐬𝐚𝐜𝐭𝐢𝐯𝐚𝐝𝐨𝐬 𝐞𝐧 𝐞𝐬𝐭𝐞 𝐠𝐫𝐮𝐩𝐨.\n> 𝐬𝐢 𝐞𝐬 𝐚𝐝𝐦𝐢𝐧 𝐲 𝐝𝐞𝐬𝐞𝐚 𝐚𝐜𝐭𝐢𝐯𝐚𝐫𝐥𝐨𝐬 𝐮𝐬𝐞 .enable nsfw');
-let rvid = global.vidxxx[Math.floor(Math.random() * global.vidxxx.length)];
+
+// let rvid = global.vidxxx[Math.floor(Math.random() * global.vidxxx.length)];
+
+let vid = 'https://dark-core-api.vercel.app/api/random/anime-random-hot?key=api';
 
 conn.sendMessage(m.chat, { 
-        video: { url: rvid }, 
+        video: { url: vid }, 
         caption: '🍭 ¡Disfruta Del Video!', 
         footer: dev, 
         buttons: [
@@ -26,7 +29,7 @@ handler.command = ['videoxxx', 'vxxx'];
 
 export default handler;
 
-global.vidxxx = [
+/* global.vidxxx = [
     'https://telegra.ph/file/4a270d9945ac46f42d95c.mp4',
     'https://telegra.ph/file/958c11e84d271e783ea3f.mp4',
     'https://telegra.ph/file/f753759342337c4012b3f.mp4',
@@ -59,3 +62,4 @@ global.vidxxx = [
 'https://files.catbox.moe/age8dz.mp4',
 'https://files.catbox.moe/lxawfr.mp4',
 ];
+*/
