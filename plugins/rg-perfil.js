@@ -44,7 +44,7 @@ var handler = async (m, { conn }) => {
 ✎ *ძᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
 ❍ *rᥱgіs𝗍rᥲძ᥆:* ${registered ? '✅': '❌'}
 
-「 ✦ *Recursos* 」
+「 ✦ *Recursos - User* 」
 ✩ *ᥱs𝗍rᥱᥣᥣᥲs:* ${estrellas || 0}
  ${level || 0}
 ◭ *ᥱ᥊⍴ᥱrіᥱᥒᥴіᥲ:* ${exp || 0}
