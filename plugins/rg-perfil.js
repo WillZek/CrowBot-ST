@@ -30,13 +30,12 @@ var handler = async (m, { conn }) => {
     birth = birth || 'No Establecido';
     description = description || 'Sin Descripción';
     role = role || 'Aldeano';
-
     let isMarried = who in global.db.data.marriages;
     let partner = isMarried ? global.db.data.marriages[who] : null;
     let partnerName = partner ? conn.getName(partner) : 'Nadie';
 
     let noprem = `
-「 𖤘 *⍴ᥱr𝖿іᥣ ძᥱ ᥙsᥙᥲrі᥆* 」
+「 𖤘 *Perfil De Usuario* 」
 ❀ *ᥒ᥆mᑲrᥱ:* ${username}
 ❖ *ᥱძᥲძ:* ${age}
 ⚥ *gᥱᥒᥱr᥆:* ${genre}
@@ -45,7 +44,7 @@ var handler = async (m, { conn }) => {
 ✎ *ძᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
 ❍ *rᥱgіs𝗍rᥲძ᥆:* ${registered ? '✅': '❌'}
 
-「 ✦ *rᥱᥴᥙrs᥆s* 」
+「 ✦ *Recursos* 」
 ✩ *ᥱs𝗍rᥱᥣᥣᥲs:* ${estrellas || 0}
  ${level || 0}
 ◭ *ᥱ᥊⍴ᥱrіᥱᥒᥴіᥲ:* ${exp || 0}
