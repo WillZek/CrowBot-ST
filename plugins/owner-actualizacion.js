@@ -21,12 +21,13 @@ try {
         previousCommitUser = login
         conn.sendMessage(m.chat, {text: `*✅️ ¡El repositorio ha sido actualizado!*\n*- Repositorio:* ${html_url}\n*- Mensaje de commit:* ${message}\n*- Commit por:* ${login}`}, {quoted: estilo});
       }
-    } catch (error) {
+ /*   } catch (error) {
       console.error(error)
       m.reply('*🏓 Error Al Verificar El Repositorio*');
     }
   }
   setInterval(checkRepoUpdates, 6000);
+*/
 } catch (e) {
 m.reply(e)
 }
