@@ -1,7 +1,7 @@
 
 // adartado por mario
 
-import axios from 'axios';
+/* import axios from 'axios';
 let previousCommitSHA = '';
 let previousUpdatedAt = '';
 let previousCommitUser = ''; 
@@ -35,3 +35,4 @@ m.reply(e)
 handler.command = /^(actualizacion|autoupdate|autoactualizar)/i;
 handler.rowner = true;
 export default handler;
+*/
