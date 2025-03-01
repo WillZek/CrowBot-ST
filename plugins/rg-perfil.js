@@ -36,8 +36,8 @@ var handler = async (m, { conn }) => {
     let partnerName = partner ? conn.getName(partner) : 'Nadie';
 
     let noprem = `
-「 👤 *PERFIL DE USUARIO* 」
-☁️ *Nombre:* ${username}
+「 𖤘 *⍴ᥱr𝖿іᥣ ძᥱ ᥙsᥙᥲrі᥆* 」
+❀ *ᥒ᥆mᑲrᥱ:* ${username}
 ❖ *ᥱძᥲძ:* ${age}
 ⚥ *gᥱᥒᥱr᥆:* ${genre}
 ❀ *ᥴᥙm⍴ᥣᥱᥲᥒ̃᥆s:* ${birth} 
@@ -45,7 +45,7 @@ var handler = async (m, { conn }) => {
 ✎ *ძᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
 ❍ *rᥱgіs𝗍rᥲძ᥆:* ${registered ? '✅': '❌'}
 
-「 💰 *RECURSOS* 」
+「 ✦ *rᥱᥴᥙrs᥆s* 」
 ✩ *ᥱs𝗍rᥱᥣᥣᥲs:* ${estrellas || 0}
  ${level || 0}
 ◭ *ᥱ᥊⍴ᥱrіᥱᥒᥴіᥲ:* ${exp || 0}
