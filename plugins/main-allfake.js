@@ -93,7 +93,7 @@ global.packsticker = `┊ 🔱𝐒𝐪𝐮𝐚𝐝 𝐂𝐫𝐨𝐰'𝐬 𝐂�
 //Fakes
 global.fkontak = { key: { participants:"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=50557865603:50557865603\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" }
 
-global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363371291001924@newsletter', newsletterName: "˚₊·͟͟͟͟͟͟͞͞͞͞͞͞➳❥ ꒰  𝐓𝐞𝐚𝐦 𝐒𝐭𝐚𝐫𝐂𝐨𝐫𝐞 ꒱ | ೃ࿔₊•", serverMessageId: -1 }
+global.fake = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: '120363377595441592@newsletter', newsletterName: "ᰔᩚ . ˚ Tᥱᥲm M᥆᥆ᥒ F᥆rᥴᥱ  ֹ ☆˒", serverMessageId: -1 }
 }}, { quoted: m }
 
 //Id Channel
