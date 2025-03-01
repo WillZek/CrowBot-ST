@@ -38,12 +38,12 @@ var handler = async (m, { conn }) => {
     let noprem = `
 「 👤 *PERFIL DE USUARIO* 」
 ☁️ *Nombre:* ${username}
-💠 *Edad:* ${age}
-⚧️ *Genero:* ${genre}
-🎂 *Cumpleaños:* ${birth} 
+❖ *ᥱძᥲძ:* ${age}
+⚥ *gᥱᥒᥱr᥆:* ${genre}
+❀ *ᥴᥙm⍴ᥣᥱᥲᥒ̃᥆s:* ${birth} 
 ♡ *ᥴᥲsᥲძ@:* ${isMarried ? partnerName : 'Nadie'}
 ✎ *ძᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
-🌀 *Registrado:* ${registered ? '✅': '❌'}
+❍ *rᥱgіs𝗍rᥲძ᥆:* ${registered ? '✅': '❌'}
 
 「 💰 *RECURSOS* 」
 ✩ *ᥱs𝗍rᥱᥣᥣᥲs:* ${estrellas || 0}
