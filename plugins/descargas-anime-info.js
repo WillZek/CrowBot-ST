@@ -9,7 +9,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, text, usedPrefix, command }) => {
 
-if (!text) return m.reply(m.chat, '🍭 Ingrese Un Nombre Del Algún Anime', m, rcanal);
+if (!text) return m.reply('🍭 Ingrese Un Nombre Del Algún Anime');
 
 try {
 let api = `https://api.ryzendesu.vip/api/weebs/anime-info?query=${text}`;
