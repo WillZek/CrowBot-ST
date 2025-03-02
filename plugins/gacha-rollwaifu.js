@@ -44,8 +44,7 @@ let rollHandler = async (m, { conn }) => {
 ⚥ Género » *${randomCharacter.gender}*
 ✰ Valor » *${randomCharacter.value}*
 ♡ Estado » *${statusMessage}*
-❖ Fuente » *${randomCharacter.source}*
-ID: *${randomCharacter.id}*`;
+❖ Fuente » *${randomCharacter.source}*`;
 
         await conn.sendFile(m.chat, randomCharacter.img, `${randomCharacter.name}.jpg`, message, m);
         cooldowns[userId] = now + 15 * 60 * 1000;
