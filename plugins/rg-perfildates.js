@@ -7,8 +7,7 @@ let txt = `ᰔᩚ mᥲᥒᥙᥲᥣ ⍴ᥲrᥲ ᥱძі𝗍ᥲr 𝗍ᥙ ⍴ᥱr�
     txt += `❀ ${usedPrefix}marry <cásate con una persona>\n\n`
     txt += `┅┅┅┅┅┅┅┅┅༻❁༺┅┅┅┅┅┅┅┅┅`;
 
-// conn.reply(m.chat, txt, m, rcanal);
-conn.sendMessage(m.chat, { text: txt }, { quoted: m });
+conn.reply(m.chat, txt, m, rcanal);
 m.react('🍫');
 }
 
