@@ -28,6 +28,8 @@ m.react('✖️');
   }
 };
 
+handler.help = ['flag <nombre de un país>'];
+handler.tag = ['buscador'];
 handler.command = ['paisinfo', 'flag'];
 
 export default handler;
