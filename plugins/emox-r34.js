@@ -28,7 +28,7 @@ const urlimg = randomImage.file_url;
 await conn.sendFile(m.chat, urlimg, 'thumbnail.jpg', `*Resultados De:* ${use}`, m, null, rcanal)
 } catch (error) {
 console.error(error);
-await m.reply('🚩 Ocurrió un error.');
+await m.reply('🚩 No se encontraron resultados.');
 }};
 handler.help = ['r34 <texto>'];
 handler.command = ['r34', 'rule34'];
