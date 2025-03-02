@@ -36,5 +36,7 @@ m.react('✖️');
 }
 
 handler.command = ['happymodsearch', 'hpmodsearch', 'hpmsearch'];
+handler.help = ['happymodsearch'];
+handler.tag = ['buscador'];
 
 export default handler;
