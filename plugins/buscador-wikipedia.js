@@ -8,13 +8,16 @@ let handler = async (m, { text }) => {
     try {
         const link =  await axios.get(`https://es.wikipedia.org/wiki/${text}`)
         const $ = cheerio.load(link.data)
+
         let wik = $('#firstHeading').text().trim()
         let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
         m.reply(`▢ *Wikipedia*
 
-‣ ${resulw}`)
+‣ Resultado De: ${wik}
+
+${resulw}`)
 } catch (e) {
-  m.reply(`⚠️ ${mssg.searchError}`)
+  m.reply(`Error: ${e}`)
 }
 }
 handler.help = ['wikipedia']
