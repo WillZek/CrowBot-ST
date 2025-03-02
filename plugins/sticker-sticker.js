@@ -18,7 +18,7 @@ if (!img) return conn.reply(m.chat, `${emojis} *_Y el video ?, intenta enviar pr
 
 let out
 try {
-stiker = await sticker(img, false, global.packsticker, global.authsticker)
+stiker = await sticker(img, false, global.authsticker, global.packsticker)
 } catch (e) {
 console.error(e)
 } finally {
