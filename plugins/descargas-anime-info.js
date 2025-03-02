@@ -26,7 +26,7 @@ conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkonta
 } catch (error) {
 console.log(error)
 m.reply(`*Error:* ${error.message}`);
-m.reply('✖️');
+m.react('✖️');
  }
 };
 
