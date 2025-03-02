@@ -1,6 +1,6 @@
 let handler = async(m, { conn, usedPrefix, command }) => {
 
-let txt = `ᰔᩚ mᥲᥒᥙᥲᥣ ⍴ᥲrᥲ ᥱძі𝗍ᥲr 𝗍ᥙ ⍴ᥱr𝖿іᥣ ♡`;
+let txt = `ᰔᩚ mᥲᥒᥙᥲᥣ ⍴ᥲrᥲ ᥱძі𝗍ᥲr 𝗍ᥙ ⍴ᥱr𝖿іᥣ ♡\n\n`;
     txt = `❀ ${usedPrefix}setbirth <edita tu fecha de cumpleaños 🎂>\n`
     txt = `❀ ${usedPrefix}setdescription <edita La descripción de tu perfil>\n`
     txt = `❀ ${usedPrefix}setgenre <edita tu genero en tu perfil>\n`
