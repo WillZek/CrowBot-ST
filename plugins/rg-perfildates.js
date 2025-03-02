@@ -5,7 +5,7 @@ let txt = `ᰔᩚ mᥲᥒᥙᥲᥣ ⍴ᥲrᥲ ᥱძі𝗍ᥲr 𝗍ᥙ ⍴ᥱr�
     txt += `❀ *${usedPrefix}setdescription* <edita La descripción de tu perfil>\n`
     txt += `❀ *${usedPrefix}setgenre* <edita tu genero en tu perfil>\n`
     txt += `❀ *${usedPrefix}marry* <cásate con una persona>\n\n`
-    txt += `┅┅┅┅┅┅┅┅༻❁༺┅┅┅┅┅┅┅┅`;
+    txt += `┅┅┅┅┅┅┅༻❁༺┅┅┅┅┅┅┅`;
 
 conn.reply(m.chat, txt, m, rcanal);
 m.react('🍫');
