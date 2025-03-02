@@ -32,6 +32,8 @@ m.reply('✖️');
  }
 };
 
+handler.help = ['lyrics'];
+handler.tag = ['buscador'];
 handler.command = ['lyrics'];
 
 export default handler;
