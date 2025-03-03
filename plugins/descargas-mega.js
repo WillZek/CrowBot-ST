@@ -2,14 +2,14 @@ import { File } from "megajs"
 
 let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     try {
-        if (!text) return m.reply(`*❗ Uso correcto del comando:*\n${usedPrefix + command} https://mega.nz/file/`);
+        if (!text) return m.reply(m.chat, `*❗ Uso correcto del comando:*\n${usedPrefix + command} https://mega.nz/file/HslSXS4a#7UBanJTjJqUl_2Z-JmAsreQYiJUKC-8UlZDR0rUsarw`, m, rcanal);
 
         const file = File.fromURL(text);
         await file.loadAttributes();
 
         if (file.size >= 300000000) return m.reply('Error: el tamaño del archivo es demasiado grande (Tamaño máximo: 300 MB)');
         //m.react(rwait)
-        m.reply(`*_🌾 Espere un momento en lo que descargo el archivo..._*\n\n${file.name} se está descargando...`);
+        m.reply(`*🍭 Espere un momento en lo que descargo el archivo...*\n\n${file.name} se está descargando...`);
 
         const data = await file.downloadBuffer();
 
