@@ -58,7 +58,7 @@ let latensi = speed() - timestamp
 let crow = `╭─⬣「 *Info De CrowBot* 」⬣\n`
 crow += `│ 👑 *Creador* : @${owner[0][0].split('@s.whatsapp.net')[0]}\n`
 crow += `│ 🍭 *Prefijo* : [  ${usedPrefix}  ]\n`
-crow += `│ 🍫 *Tipo De Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-Bot 🅢')}
+crow += `│ 🍫 *Tipo De Bot:* ${(conn.user.jid == global.conn.user.jid ? 'Principal 🅥' : 'Sub-Bot 🅢')}\n`
 crow += `│ 📦 *Total Plugins* : ${totalf}\n`
 crow += `│ 💫 *Plataforma* : ${platform()}\n`
 crow += `│ 🧿 *Servidor* : ${hostname()}\n`
