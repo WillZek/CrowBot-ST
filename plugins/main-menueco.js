@@ -183,7 +183,7 @@ await m.react('💸')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'MENU DE ECONOMÍA',
+        title: '𓂂𓏸  𐅹੭੭   *`ᴍᴇɴᴜ ᴅᴇ ᴇᴄᴏɴᴏᴍɪᴀ`* 🌙 ᦡᦡ',
         body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
