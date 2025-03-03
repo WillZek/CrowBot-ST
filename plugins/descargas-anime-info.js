@@ -12,10 +12,10 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply('🍭 Ingrese Un Nombre Del Algún Anime');
 
 try {
-let api = `https://api.ryzendesu.vip/api/weebs/anime-info?query=${text}`;
+let json = await (await fetch(`https://api.ryzendesu.vip/api/weebs/anime-info?query=${text}`)).json();
 
-let responde = await fetch(api);
-let json = await responde.json();
+// let responde = await fetch(api);
+// let json = await responde.json();
 
 let txt = `*Nombre:* ${json.title}\n*Miembros:* ${json.members}\n*Url:* ${json.url}\n*Informacion:* ${json.synopsis}`;
 
