@@ -1,35 +1,32 @@
-/* Anime Info By WillZek 
-- Free Codes Titan 
-- https://github.com/WillZek 
-*/
+import fetch from 'node-fetch'
 
-// [🐋] Anime Info
+var handler = async (m, { conn, usedPrefix, command, text }) => {
 
-import fetch from 'node-fetch';
+if (!text) return conn.reply(m.chat, `🍫 *Ingrese el nombre de algun anime*\n\nEjemplo, ${usedPrefix + command} Ai Yaemori`, m, rcanal)
+let res = await fetch('https://api.jikan.moe/v4/manga?q=' + text)
+if (!res.ok) return conn.reply(m.chat, `🚩 *Ocurrió un fallo*`, m, rcanal)
 
-let handler = async(m, { conn, text, usedPrefix, command }) => {
+let json = await res.json()
+let { chapters, title_japanese, url, type, score, members, background, status, volumes, synopsis, favorites } = json.data[0]
+let author = json.data[0].authors[0].name
+let animeingfo = `🍟 Título: ${title_japanese}
+🚩 Capítulo: ${chapters}
+💫 Transmisión: ${type}
+🗂 Estado: ${status}
+🗃 Volumes: ${volumes}
+🌟 Favorito: ${favorites}
+🧮 Puntaje: ${score}
+👥 Miembros: ${members}
+🔗 Url: ${url}
+👨‍🔬 Autor: ${author}
+📝 Fondo: ${background}
+💬 Sinopsis: ${synopsis}
+ ` 
+conn.sendFile(m.chat, json.data[0].images.jpg.image_url, 'anjime.jpg', '      🚩 *I N F O - A N I M E* 🚩\n\n' + animeingfo, fkontak, m)
 
-if (!text) return m.reply('🍭 Ingrese Un Nombre Del Algún Anime');
+} 
+handler.help = ['infoanime'] 
+handler.tags = ['buscador'] 
+handler.command = ['infoanime', 'animeinfo'] 
 
-try {
-let json = await (await fetch(`https://api.ryzendesu.vip/api/weebs/anime-info?query=${text}`)).json();
-
-// let responde = await fetch(api);
-// let json = await responde.json();
-
-let txt = `*Nombre:* ${json.title}\n*Miembros:* ${json.members}\n*Url:* ${json.url}\n*Informacion:* ${json.synopsis}`;
-
-let img = json.images.jpg.image_url;
-
-conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
-
-} catch (error) {
-console.log(error)
-m.reply(`*Error:* ${error.message}`);
-m.react('✖️');
- }
-};
-
-handler.command = ['animeinfo', 'ainfo'];
-
-export default handler;
+export default handler
