@@ -183,7 +183,7 @@ await m.react('💸')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: '𓂂𓏸  𐅹੭੭   *`ᴍᴇɴᴜ ᴅᴇ ᴇᴄᴏɴᴏᴍɪᴀ`* 🌙 ᦡᦡ',
+        title: '𓂂𓏸  𐅹੭੭ ᴍᴇɴᴜ ᴅᴇ ᴇᴄᴏɴᴏᴍɪᴀ 🌙 ᦡᦡ',
         body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
