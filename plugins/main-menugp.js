@@ -181,7 +181,7 @@ await m.react('🪩')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'MENU GRUPOS',
+        title: '𓂂𓏸  𐅹੭੭ ᴍᴇɴᴜ ᴅᴇ ɢʀᴜᴘᴏs 🌙 ᦡᦡ',
         body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
