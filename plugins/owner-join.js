@@ -2,7 +2,7 @@
 
 let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
 
-if (!text) return m.reply(`🌸 Ingresa el enlace del Grupo.`)
+if (!text) return m.reply(`🌸 Ingresa el enlace del Grupo\n> *Ejemplo:* ${usedPrefix + command} <enlace> <número de días>.`)
 try {
 let [_, code] = text.match(linkRegex) || []
 if (!code) return m.reply('🌺 Enlace invalido.')
