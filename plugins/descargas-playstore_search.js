@@ -40,7 +40,7 @@ let handler = async (m, { conn, text }) => {
   conn.reply(m.chat, res, m, opt); 
 };
 
-handler.help = ['playstore', 'playstoresearch']; 
+handler.help = ['playstoresearch']; 
 handler.tags = ['buscador'];
 handler.command = /^(playstoresearch)$/i;
 
