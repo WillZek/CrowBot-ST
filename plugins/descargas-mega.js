@@ -2,7 +2,7 @@ import { File } from "megajs"
 
 let handler = async (m, { conn, args, usedPrefix, text, command }) => {
     try {
-        if (!text) return m.reply(m.chat, `*❗ Uso correcto del comando:*\n${usedPrefix + command} https://mega.nz/file/HslSXS4a#7UBanJTjJqUl_2Z-JmAsreQYiJUKC-8UlZDR0rUsarw`, m, rcanal);
+        if (!text) return conn.reply(m.chat, `*❗ Uso correcto del comando:*\n${usedPrefix + command} https://mega.nz/file/HslSXS4a#7UBanJTjJqUl_2Z-JmAsreQYiJUKC-8UlZDR0rUsarw`, m, rcanal);
 
         const file = File.fromURL(text);
         await file.loadAttributes();
