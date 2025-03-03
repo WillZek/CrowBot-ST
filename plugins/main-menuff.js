@@ -11,7 +11,18 @@ let ff = `🎩 *M E N U - F F*\n\n`
 
 let img = 'https://files.catbox.moe/l6jzeo.jpeg';
 
-conn.sendMessage(m.chat, { image: { url: img }, caption: ff }, { quoted: fkontak });
+ conn.sendMessage(m.chat, {
+        text: ff,
+        contextInfo: {
+        externalAdReply: {
+        title: '𓂂𓏸  𐅹੭੭ ᴍᴇɴᴜ ᴅᴇ ғʀᴇᴇ ғɪʀᴇ 🌙 ᦡᦡ',
+        body: dev,
+        thumbnailUrl: img,
+        sourceUrl: redes,
+        mediaType: 1,
+        renderLargerThumbnail: true
+        }}},
+        { quoted: fkontak })
 m.react('🔫');
 }
 
