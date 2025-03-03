@@ -46,7 +46,7 @@ let handler = async (m, { conn, args, usedPrefix: prefix, command }) => {
     conn.reply(m.chat, `*¡Descarga completada para "${h}"!*`, m, rcanal);
 }
 
-handler.help = ['playstore *<url>*']; 
+handler.help = ['playstoredl *<url>*']; 
 handler.tags = ['descargas'];
-handler.command = /^(playstore)$/i;
+handler.command = /^(playstoredl)$/i;
 export default handler;
