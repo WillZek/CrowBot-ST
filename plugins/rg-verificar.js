@@ -55,7 +55,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     regbot += `• 245 Experiencia 💸\n> `
     regbot += `• 12 Tokens 💰\n`
     regbot += `꒷꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒦꒷꒷꒦꒷\n> `
-    regbot += `🍫 Usa *#perfil* Para Ver Tu Perfil y *#menu* para ver todos los comandos.`
+    regbot += `🍫 Usᥲ *#perfil* ⍴ᥲrᥲ ᥎ᥱr 𝗍ᥙ ⍴ᥱr𝖿іᥣ.`
 
   await conn.sendMessage(m.chat, {
         text: regbot,
