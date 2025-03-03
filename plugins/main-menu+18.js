@@ -19,21 +19,18 @@ let texto = `• 𝐌𝐄𝐍𝐔 +10 •
 ║➤ ❤️‍🔥 _.violar_ (@tag)
 ║➤ ❤️‍🔥 _.sixnine_ (@tag)`
 
-const fkontak = {
-        "key": {
-    "participants":"0@s.whatsapp.net",
-                "remoteJid": "status@broadcast",
-                "fromMe": false,
-                "id": "Halo"
-        },
-        "message": {
-                "contactMessage": {
-                        "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
-                }
-        },
-        "participant": "0@s.whatsapp.net"
-}
-await conn.sendFile(m.chat, img, 'img.jpg', texto, fkontak)
+ conn.sendMessage(m.chat, {
+        text: texto,
+        contextInfo: {
+        externalAdReply: {
+        title: '𓂂𓏸  𐅹੭੭ ᴍᴇɴᴜ ᴅᴇ ᴘᴏʀɴᴏɢʀᴀғɪᴀ 🌙 ᦡᦡ',
+        body: dev,
+        thumbnailUrl: img,
+        sourceUrl: channel,
+        mediaType: 1,
+        renderLargerThumbnail: true
+        }}},
+        { quoted: fkontak })
 }
 handler.help = ['menuhot (menu +18)']
 handler.tags = ['crow']
