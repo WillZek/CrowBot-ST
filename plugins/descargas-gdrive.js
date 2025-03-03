@@ -2,7 +2,7 @@ import fg from 'api-dylux';
 
 const mssg = {
     noLink: (service) => `${emoji} Por favor proporciona un enlace de ${service}.`,
-    usage: (command, prefix) => `🍭 Por favor, envia un link de Gdrive para descargar el archivo.`,
+    usage: (command, prefix) => `🍭 Por favor, envia un link de Gdrive para descargar el archivo.\n> Ejemplo: #gdrive https://drive.google.com/file/d/1565tW24QSG4Yla4tDE5AwQqEQIPqNLgw/view?usp=drivesdk`,
     name: 'Nombre del archivo',
     size: 'Tamaño del archivo',
     limitdl: 'Límite de descarga',
