@@ -181,7 +181,7 @@ await m.react('🪩')
         text: text,
         contextInfo: {
         externalAdReply: {
-        title: 'MENU DE JUEGOS',
+        title: '𓂂𓏸  𐅹੭੭ ᴍᴇɴᴜ ᴅᴇ ᴊᴜᴇɢᴏs 🌙 ᦡᦡ',
         body: dev,
         thumbnailUrl: img,
         sourceUrl: channel,
