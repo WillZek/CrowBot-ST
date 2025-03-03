@@ -36,13 +36,13 @@ var handler = async (m, { conn }) => {
 
     let noprem = `
 「 𖤘 *Perfil De Usuario* 」
-❀ *N᥆mᑲrᥱ:* ${username}
-❖ *Eძᥲძ:* ${age}
-⚥ *Gᥱᥒᥱr᥆:* ${genre}
-❀ *Cᥙm⍴ᥣᥱᥲᥒ̃᥆s:* ${birth} 
-♡ *Cᥲsᥲძ@:* ${isMarried ? partnerName : 'Nadie'}
-✎ *Dᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
-❍ *Rᥱgіs𝗍rᥲძ᥆:* ${registered ? '✅': '❌'}
+❀  *N᥆mᑲrᥱ:* ${username}
+❖  *Eძᥲძ:* ${age}
+⚥  *Gᥱᥒᥱr᥆:* ${genre}
+❀  *Cᥙm⍴ᥣᥱᥲᥒ̃᥆s:* ${birth} 
+♡  *Cᥲsᥲძ@:* ${isMarried ? partnerName : 'Nadie'}
+✎  *Dᥱsᥴrі⍴ᥴі᥆́ᥒ:* ${description}
+❍  *Rᥱgіs𝗍rᥲძ᥆:* ${registered ? '✅': '❌'}
 
 「 ✦ *Recursos - User* 」
 ✩ *Es𝗍rᥱᥣᥣᥲs:* ${estrellas || 0}
