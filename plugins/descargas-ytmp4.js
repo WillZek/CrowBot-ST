@@ -29,7 +29,7 @@ let link = video?.data?.url || video?.download_url || video?.result?.dl_url || v
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
-let limit = 10 * 1024 * 1024; // 10MB
+let limit = 5 * 1024 * 1024; // 10MB
 if (video?.data?.size > limit) {
 await conn.sendMessage(m.chat, {
       document: { url: link },
