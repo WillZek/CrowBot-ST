@@ -15,14 +15,17 @@ let api = `https://dark-core-api.vercel.app/api/search/happymod?key=api&text=${t
 
 let response = await fetch(api);
 let json = await response.json();
-let arch = json.results[0];
 
 if (!arch || arch.length === 0) {
     return m.reply(`🍭 No Encontramos Resultados Para : ${text}`);
 }
 
 m.react('🕑');
-let txt = `🍭 *Titulo:* ${arch.name}\n✏️ *Descripción:* ${arch.description}\n🌟 *Estrellas:* ${arch.stars}\n📎 *Link:* ${arch.link}`;
+let txt = `\`🔎 HAPPYMOD SEARCH\`.`[
+txt += `🍭 *Titulo:* ${arch.name}\n`
+txt += `✏️ *Descripción:* ${arch.description}\n`
+txt += `🌟 *Estrellas:* ${arch.stars}\n`
+txt += `📎 *Link:* ${arch.link}`;
 
 let img = arch.image;
 
