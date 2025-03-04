@@ -32,16 +32,16 @@ let link = video.data.url;
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
-/* let limit = 5 * 1024 * 1024; // 5MB porque si
-if (video?.data?.size > limit) {
-*/
+let limit = 5 * 1024 * 1024; // 5MB porque si
 
-let sizeString = video.data.size;
+/* let sizeString = video.data.size;
 let sizeMB = parseFloat(sizeString);
 let sizePene = sizeMB * 1024 * 1024;
 let limit = 5 * 1024 * 1024; // 5MB porque si
 
 if (sizePene > limit) {
+*/
+if (video?.data?.size > limit) {
 await conn.sendMessage(m.chat, {
       document: { url: link },
       fileName: `${video.title}.mp4`,
