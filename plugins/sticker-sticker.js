@@ -32,7 +32,7 @@ stiker = await sticker(false, out, global.packsticker, global.authsticker)
 } else if (args[0]) {
 if (isUrl(args[0])) stiker = await sticker(false, args[0], global.packsticker, global.authsticker)
 
-else return m.reply(`《★》El url es incorrecto`)
+else return m.reply(`《★》 El url es incorrecto`)
 
 }
 } catch (e) {
@@ -41,7 +41,7 @@ if (!stiker) stiker = e
 } finally {
 if (stiker) conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: '🎩𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐒𝐭𝐢𝐜𝐤𝐞𝐫✨', body: `CrowBot - ST ${emojis}`, mediaType: 2, sourceUrl: grupo, thumbnail: icons}}}, { quoted: m })
 
-else return conn.reply(m.chat, `《★》*_La conversión ha fallado, intenta enviar primero imagen/video/gif y luego responde con el comando._*\n\n> ${emojis} ${publi} ${emojis}`, m, rcanal)
+else return conn.reply(m.chat, `《★》 *_La conversión ha fallado, intenta enviar primero imagen/video/gif y luego responde con el comando._*\n\n> ${emojis} ${publi} ${emojis}`, m, rcanal)
 
 
 }}
