@@ -37,7 +37,6 @@ await conn.sendMessage(m.chat, {
       mimetype: 'video/mp4', caption: '✅ Descargado Con Exito.',
       thumbnail: video.thumbnail },          
       { quoted: m })
-}
 
 } else { 
 await conn.sendMessage(m.chat, {
