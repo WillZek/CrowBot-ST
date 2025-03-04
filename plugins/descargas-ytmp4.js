@@ -43,7 +43,7 @@ let limit = 5 * 1024 * 1024; // 5MB porque si
 // if (sizePene > limit) {
 */
 
-if (video?.data?.size > limit) {
+/* if (video?.data?.size > limit) {
 await conn.sendMessage(m.chat, {
       document: { url: link },
       fileName: `${video.title}.mp4`,
@@ -52,6 +52,8 @@ await conn.sendMessage(m.chat, {
       { quoted: m })
 
 } else { 
+*/
+
 await conn.sendMessage(m.chat, {
       video: { url: link },
       mimetype: "video/mp4",
@@ -59,7 +61,7 @@ await conn.sendMessage(m.chat, {
     }, { quoted: m });
     m.react(done);
    }
-}
+// }
 
 handler.command = ['ytv', 'ytmp4', 'ymp4']
 
