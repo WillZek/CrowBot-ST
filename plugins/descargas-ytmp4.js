@@ -10,10 +10,11 @@ if (!text) return m.reply('🍭 Ingrese Un Link De YouTube\n> *Ejemplo:* https:/
 
 m.react(rwait);
 
-let video;
+// let video;
 try {
-      video = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${text}&type=video&quality=480p&apikey=GataDios`)).json();
-} catch (error) {
+let video = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${text}&type=video&quality=480p&apikey=GataDios`)).json();
+
+/* } catch (error) {
 try {
       video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${text}&quality=480p&apikey=be9NqGwC`)).json();
 } catch (error) {
@@ -24,12 +25,14 @@ try {
       }
     }
  }
+*/
 
-let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link[0]
+let link = video.data.url;
+// let link = video?.data?.url || video?.download_url || video?.result?.dl_url || video?.downloads?.link[0]
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
-let limit = 5 * 1024 * 1024; // 10MB
+let limit = 5 * 1024 * 1024; // 5MB porque si
 if (video?.data?.size > limit) {
 await conn.sendMessage(m.chat, {
       document: { url: link },
