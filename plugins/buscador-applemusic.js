@@ -3,7 +3,7 @@ import cheerio from 'cheerio';
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
 
-  if (!text) throw m.reply(`Ejemplo de uso: ${usedPrefix + command} <Nombre de la canciĂłn>`);
+  if (!text) return m.reply(`《★》Ingrese El Nombre De Alguna Canción.`);
 
 
 const appleMusic = {
