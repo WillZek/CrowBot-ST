@@ -21,7 +21,9 @@ if (!arch || arch.length === 0) {
 }
 
 m.react('🕑');
-let txt = `\`🔎 HAPPYMOD SEARCH\`.`[
+let txt = `\`🔎 HAPPYMOD SEARCH\`.`
+for (let i = 0; i < (5 <= json.results.length ? 5 : json.results.length); i++) {
+let arch = json.results[i];
 txt += `🍭 *Titulo:* ${arch.name}\n`
 txt += `✏️ *Descripción:* ${arch.description}\n`
 txt += `🌟 *Estrellas:* ${arch.stars}\n`
