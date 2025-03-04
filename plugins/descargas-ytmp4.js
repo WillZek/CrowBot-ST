@@ -31,11 +31,13 @@ if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n
 
 let limit = 10 * 1024 * 1024; // 10MB
 if (!video.data.size > limit) {
+      .                .
 await conn.sendMessage(m.chat, {
       document: { url: link },
-      mimeType: "video/mp4",
-      caption: `${dev}`,
-    }, { quoted: m });
+      fileName: `${video.title}.mp4`,
+      mimetype: 'video/mp4', caption: '✅ Descargado Con Exito.',
+      thumbnail: video.thumbnail },          
+      { quoted: m })
 }
 
 } else { 
