@@ -31,7 +31,6 @@ if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n
 
 let limit = 10 * 1024 * 1024; // 10MB
 if (video.data.size > limit) {
-      .                .
 await conn.sendMessage(m.chat, {
       document: { url: link },
       fileName: `${video.title}.mp4`,
