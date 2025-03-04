@@ -14,7 +14,7 @@ if (/webp|image|video/g.test(mime)) {
 if (/video/g.test(mime)) if ((q.msg || q).seconds > 10) return m.reply(`《★》El Vídeo Debe Durar Menos De *10 Segundos*`)
 let img = await q.download?.()
 
-if (!img) return conn.reply(m.chat, `《★》Por favor, envia un vídeo para hacer un sticker.`, m, rcanal)
+if (!img) return conn.reply(m.chat, '《★》Por favor, envia un vídeo para hacer un sticker.', m, rcanal)
 
 let out
 try {
