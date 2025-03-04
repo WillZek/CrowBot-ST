@@ -39,7 +39,7 @@ let sizeMB = parseFloat(sizeString);
 let sizePene = sizeMB * 1024 * 1024;
 let limit = 5 * 1024 * 1024; // 5MB porque si
 
-if (sizePene > limit) {
+// if (sizePene > limit) {
 */
 if (video?.data?.size > limit) {
 await conn.sendMessage(m.chat, {
