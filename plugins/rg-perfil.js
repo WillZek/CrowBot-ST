@@ -35,7 +35,7 @@ var handler = async (m, { conn }) => {
     let partnerName = partner ? conn.getName(partner) : 'Nadie';
 
     let noprem = `
-「 𖤘 *Perfil De Usuario* 」
+《★》𝗣𝗲𝗿𝗳𝗶𝗹 𝗗𝗲 𝗨𝘀𝘂𝗮𝗿𝗶𝗼 ᰔᩚ
 ❀  *N᥆mᑲrᥱ:* ${username}
 ❖  *Eძᥲძ:* ${age}
 ⚥  *Gᥱᥒᥱr᥆:* ${genre}
