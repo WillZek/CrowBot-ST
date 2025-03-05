@@ -9,6 +9,8 @@ let stiker = await sticker(null,`https://api.fgmods.xyz/api/maker/carbon?text=${
 conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: dev, mediaType: 2, sourceUrl: redes, thumbnail: imagen1 }}}, { quoted: m })
 }
 
+handler.help = ['brat'];
+handler.tag = ['sticker'];
 handler.command = ['brat'];
 
 export default handler;
