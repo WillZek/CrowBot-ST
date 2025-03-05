@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
-  let txt = `《★》${msg.langList}\n- es (Español)\n- en (Inglés)\n- id (Indonesia)\n- pt (Portugues)\n- ar (Árabe)\n\n🍫 ${mssg.example}: *${usedPrefix + command}* en`
+  let txt = `《★》${msg.langList}\n- es (Español)\n- en (Inglés)\n- id (Indonesia)\n- pt (Portugues)\n- ar (Árabe)\n\n🍫 ${msg.example}: *${usedPrefix + command}* en`
   if (!text) return conn.reply(m.chat, txt, m, rcanal);
   let users = global.db.data.users[m.sender]
    if (args[0] === "es") {
