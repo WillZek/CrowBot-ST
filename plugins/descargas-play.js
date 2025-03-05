@@ -1,4 +1,4 @@
-// prueba, mañana lo termino xd
+// By WillZek 🍫
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, command }) => {
@@ -30,7 +30,7 @@ await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.tit
    }
 }
 
-handler.help = ['ytmp3doc'];
+handler.help = ['ytmp3doc', 'ytmp4doc'];
 handler.tag = ['descargas'];
 handler.command = ['ytmp3doc', 'mp3doc', 'ytmp4doc', 'mp4doc'];
 
