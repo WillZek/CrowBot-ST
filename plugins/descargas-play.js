@@ -16,7 +16,7 @@ m.react(rwait)
 conn.sendMessage(m.chat, { image: { url: pene.data.image }, caption: texto }, { quoted: m });
 m.react(done);
 
-if (command == 'ytmp3doc' || command == 'mp3doc') {
+if (command == 'ytmp3doc' || command == 'mp3doc' || command == 'ytadoc') {
 let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=api&url=${args[0]}`)).json();
 
 if (!api?.download) return m.reply('No Se  Encontraron Resultados');
@@ -24,7 +24,7 @@ if (!api?.download) return m.reply('No Se  Encontraron Resultados');
 await conn.sendMessage(m.chat, { document: { url: api.download }, mimetype: 'audio/mpeg', fileName: `${api.title}.mp3` }, { quoted: m });
  }
 
-if (command == 'ytmp4doc' || command == 'mp4doc') {
+if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
 let video = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${args[0]}&type=video&quality=480p&apikey=GataDios`)).json();
 
 let link = video?.data?.url;
@@ -37,6 +37,6 @@ await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.tit
 
 handler.help = ['ytmp3doc', 'ytmp4doc'];
 handler.tag = ['descargas'];
-handler.command = ['ytmp3doc', 'mp3doc', 'ytmp4doc', 'mp4doc'];
+handler.command = ['ytmp3doc', 'mp3doc', 'ytmp4doc', 'mp4doc', 'ytadoc', 'ytvdoc'];
 
 export default handler;
