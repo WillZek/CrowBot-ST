@@ -10,7 +10,7 @@ let handler = async(m, { conn, command }) => {
 if (command == 'rempalago' || command == 'bobesponja' || command == 'pintamos' || command == 'fiesta') {
 
 // después agrego mas comandos de audios 
-let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?key=api&q=${command}`)).json();
+let res = await (await fetch(`https://dark-core-api.vercel.app/api/search/meme?key=dk-vip&q=${command}`)).json();
 
 let aud = res.resultados[0];
 
