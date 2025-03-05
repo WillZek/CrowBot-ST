@@ -60,6 +60,8 @@ user.warn = 0
                     user.afk = -1
                 if (!('afkReason' in user))
                     user.afkReason = ''
+                if (!('language' in user))
+                    user.language = 'es'
                 if (!('banned' in user))
                     user.banned = false
                 if (!('useDocument' in user))
@@ -78,6 +80,7 @@ user.warn = 0
                     regTime: -1,
                     afk: -1,
                     afkReason: '',
+                    language: 'es',
                     banned: false,
                     useDocument: false,
                     bank: 0,
