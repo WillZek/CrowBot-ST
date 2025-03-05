@@ -5,6 +5,12 @@ let handler = async (m, { conn, args, command }) => {
 
 if (!args[0]) return m.reply('🍭 Ingresa Un Link De Youtube');
 
+let pene = await(await fetch(`https://delirius-apiofc.vercel.app/download/ytmp4?url=${args[0]}`)).json();
+
+let texto = `*Título:* ${pene.data.title}\n*Duración:* ${pene.data.duration}\n*Comentarios:* ${pene.data.comments}`
+
+conn.sendMessage(m.chat, { image: { url: pene.data.image }, caption: texto }, { quoted: m });
+
 if (command == 'ytmp3doc' || command == 'mp3doc') {
 let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=api&url=${args[0]}`)).json();
 
