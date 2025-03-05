@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
-  let txt = `《★》${msg.langList}\n- es (Español)\n- en (Inglés)\n- id (Indonesia)\n- pt (Portugues)\n- ar (Árabe)\n\n🍫 ${msg.example}: *${usedPrefix + command}* en`
+  let txt = `《★》${msg.langList}\n- es (Español)\n- en (Inglés)\n- ar (Árabe)\n\n🍫 ${msg.example}: *${usedPrefix + command}* en`
   if (!text) return m.reply(txt);
   let users = global.db.data.users[m.sender]
    if (args[0] === "es") {
