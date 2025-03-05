@@ -10,7 +10,7 @@ const handler = async (m, {conn, usedPrefix, command}) => {
   contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
   title: packname,
   body: wm,
-  previewType: 0, thumbnail: icono,
+  previewType: 0, thumbnail: icons,
   sourceUrl: channel }}})
   if (/webp/.test(mime)) {
     out = await webp2mp4(media);
