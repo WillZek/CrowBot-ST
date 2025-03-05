@@ -19,7 +19,7 @@ await conn.sendMessage(m.chat, { document: { url: api.download }, mimetype: 'aud
 if (command == 'ytmp4doc' || command == 'mp4doc') {
 let video = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${args[0]}&type=video&quality=480p&apikey=GataDios`)).json();
 
-let link = video.data.url;
+let link = video?.data?.url;
 
 if (!link) return m.reply('No Hubo Resultados');
 
