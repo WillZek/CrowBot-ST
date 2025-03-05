@@ -6,7 +6,7 @@ if (!chat.nsfw) return m.reply('[❗] 𝐋𝐨𝐬 𝐜𝐨𝐦𝐚𝐧𝐝𝐨�
 
 // let rvid = global.vidxxx[Math.floor(Math.random() * global.vidxxx.length)];
 
-let vid = 'https://dark-core-api.vercel.app/api/random/anime-random-hot?key=api';
+let vid = 'https://dark-core-api.vercel.app/api/random/anime-random-hot?key=dk-vip';
 
 conn.sendMessage(m.chat, { 
         video: { url: vid }, 
