@@ -18,7 +18,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   await m.react('🕓');
 
   try {
-    const response = await fetch(`https://dark-core-api.vercel.app/api/download/spotify?key=api&url=${encodeURIComponent(text)}`);
+    const response = await fetch(`https://dark-core-api.vercel.app/api/download/spotify?key=dk-vip&url=${encodeURIComponent(text)}`);
     const result = await response.json();
 
     if (result.success) {
