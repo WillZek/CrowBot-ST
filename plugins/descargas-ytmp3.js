@@ -4,7 +4,7 @@ let handler = async (m, { conn, args }) => {
 
 if (!args[0]) return m.reply('🍭 Ingresa Un Link De Youtube');
 
-let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=api&url=${args[0]}`)).json();
+let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=dk-vip&url=${args[0]}`)).json();
 
 if (!api?.download) return m.reply('No Se  Encontraron Resultados');
 
