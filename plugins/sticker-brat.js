@@ -12,5 +12,6 @@ conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forw
 handler.help = ['brat'];
 handler.tag = ['sticker'];
 handler.command = ['brat'];
+handler.estrellas = 3;
 
 export default handler;
