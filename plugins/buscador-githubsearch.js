@@ -12,7 +12,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply('🍭 Ingresa Un Nombre De Repositorio o De Usuario De Github');
 
 try {
-let api = `https://dark-core-api.vercel.app/api/search/github?key=api&text=${text}`;
+let api = `https://dark-core-api.vercel.app/api/search/github?key=dk-vip&text=${text}`;
 
 let response = await fetch(api);
 let json = await response.json();
