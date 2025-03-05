@@ -27,7 +27,7 @@ const translations = {
     recon: 'Conexión perdida...\n\n🔄 Reconectando',
     sesClose: 'La conexión se cerró, Tendras que conectarte manualmente enviando el *ID*',
     connet: 'Conectado con exito',
-    connID: '*Conectado con éxito!*\n\nEn unos segundos te mandaremos el *Id* que debes usar para volver a conectarte\n\n*NOTA:* Sal del grupo de *DyLux  ┃ ᴮᴼᵀ*\nguarde este enlace para que pueda unirse después\nhttps://instabio.cc/fg98ff',
+    connID: '❀ ᥴ᥆ᥒᥱᥴ𝗍ᥲძ᥆ ᥱ᥊і𝗍᥆sᥲmᥱᥒ𝗍ᥱ ᥲ ᥕһᥲ𝗍sᥲ⍴⍴, ᥣᥲ ⍴r᥆́᥊іmᥲ ᥎ᥱz 𝗊ᥙᥱ sᥱ ძᥱsᥴ᥆ᥒᥱᥴ𝗍ᥱ ᥙsᥱ *#delsesion* ᥡ ძᥱ ᥒᥙᥱ᥎᥆ *#code*.\n\n> ${dev}',
     connMsg: 'La siguiente vez que se conecte envía el siguiente mensaje para iniciar sesión sin escanear otro código *QR*',
     botlist: 'Lista de Sub Bots Activos',
     newcode: (usedPrefix) => `Bien! ya puedes usar *${usedPrefix}botclone* para pedir nuevo codigo QR`,
