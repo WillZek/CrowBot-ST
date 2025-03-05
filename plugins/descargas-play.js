@@ -17,7 +17,7 @@ conn.sendMessage(m.chat, { image: { url: pene.data.image }, caption: texto }, { 
 m.react(done);
 
 if (command == 'ytmp3doc' || command == 'mp3doc' || command == 'ytadoc') {
-let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=api&url=${args[0]}`)).json();
+let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=dk-vip&url=${args[0]}`)).json();
 
 if (!api?.download) return m.reply('No Se  Encontraron Resultados');
 
