@@ -102,13 +102,6 @@ global.canalIdM = ["120363368073378190@newsletter", "120363387375075395@newslett
 global.canalNombreM = ["✯ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✯", "⏤͟͟͞͞☆ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 𝐓𝐞𝐬𝐭 『𝐏𝐨𝐝𝐜𝐚𝐬𝐭』"]
 global.channelRD = await getRandomChannel()
   
-global.icono = [ 
-'https://qu.ax/aQWkg.jpg',
-'https://qu.ax/xYAPu.jpg',
-'https://qu.ax/pcKXp.jpg',
-'https://qu.ax/kJBTp.jpg',
-].getRandom()
-
 global.urls = [
 "https://qu.ax/vnPMj.mp4",
 "https://qu.ax/vnPMj.mp4",
