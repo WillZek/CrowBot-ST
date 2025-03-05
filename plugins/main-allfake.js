@@ -101,12 +101,6 @@ global.idchannel = '120363381910502266@newsletter'
 global.canalIdM = ["120363368073378190@newsletter", "120363387375075395@newsletter"]
 global.canalNombreM = ["✯ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐂𝐡𝐚𝐧𝐧𝐞𝐥 ✯", "⏤͟͟͞͞☆ 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 𝐓𝐞𝐬𝐭 『𝐏𝐨𝐝𝐜𝐚𝐬𝐭』"]
 global.channelRD = await getRandomChannel()
-  
-global.urls = [
-"https://qu.ax/vnPMj.mp4",
-"https://qu.ax/vnPMj.mp4",
-];
-let gifUrl = urls[Math.floor(Math.random() * urls.length)];
 
 global.rcanal = { contextInfo: { isForwarded: true, forwardedNewsletterMessageInfo: { newsletterJid: channelRD.id, serverMessageId: 100, newsletterName: channelRD.name, }, externalAdReply: { showAdAttribution: true, title: textbot, body: dev, mediaUrl: null, description: null, previewType: "PHOTO", thumbnailUrl: icons, sourceUrl: redes, mediaType: 1, renderLargerThumbnail: false }, }, }}
 
