@@ -50,7 +50,7 @@ title: `🎩 STAFF OFICIAL🌟`,
 body: dev,
 mediaType: 1,
 sourceUrl: redes,
-thumbnailUrl: icono }}
+thumbnailUrl: icons }}
 }, { mentions: m.sender })
 m.react(emoji)
 
