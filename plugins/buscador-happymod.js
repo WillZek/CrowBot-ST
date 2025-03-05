@@ -11,7 +11,7 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 if (!text) return m.reply(`📩 Ingresa Un Texto Para Buscar En Happy Mod\n> Ejemplo: ${usedPrefix + command} Minecraft`);
 
 try {
-let api = `https://dark-core-api.vercel.app/api/search/happymod?key=api&text=${text}`;
+let api = `https://dark-core-api.vercel.app/api/search/happymod?key=dk-vip&text=${text}`;
 
 let response = await fetch(api);
 let json = await response.json();
