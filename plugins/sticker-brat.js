@@ -1,15 +1,14 @@
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : ''
-    
-if (!teks) return m.reply('Por favor, proporciona un texto para el sticker.');
-let res = `https://api.fgmods.xyz/api/maker/carbon?text=${teks}&apikey=elrebelde21`
-await conn.sendFile(m.chat, res, 'error.jpg', null, m, null, fake)
+import { sticker } from '../lib/sticker.js'
+import fetch from 'node-fetch'
+import axios from 'axios';
+
+let handler = async(m, { conn, text, args, usedPrefix, command }) => {
+    if (!text) return m.reply(`🍭 Ingresa Un Texto Para Realizar Tu Sticker\n> *Ejemplo:* ${usedPrefix + command} CrowBot`);
+
+let stiker = await sticker(null,`https://api.fgmods.xyz/api/maker/carbon?text=${text}&apikey=elrebelde21`,global.packname, global.author)
+conn.sendFile(m.chat, stiker, 'sticker.webp', '',m, true, { contextInfo: { 'forwardingScore': 200, 'isForwarded': false, externalAdReply:{ showAdAttribution: false, title: wm, body: dev, mediaType: 2, sourceUrl: redes, thumbnail: imagen1 }}}, { quoted: m })
 }
 
-handler.help = ['brat']
-handler.tags = ['sticker']
-handler.command = ['brat']
-handler.estrellas = 1
-handler.register = true 
+handler.command = ['brat'];
 
-export default handler
+export default handler;
