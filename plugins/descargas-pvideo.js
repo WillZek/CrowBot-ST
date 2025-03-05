@@ -21,7 +21,7 @@ conn.sendMessage(m.chat, {
         footer: dev, 
         buttons: [
             {
-                buttonId: `.ytmp4 ${results.url}`,
+                buttonId: `.ytmp4doc ${results.url}`,
                 buttonText: { displayText: 'Obtener Video' }
             }
         ],
