@@ -9,7 +9,7 @@ let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3
 let txt = `Titulo: ${api.title}`;
 conn.reply(m.chat, txt, m, rcanal);
 
-conn.sendMessage(m.chat, { audio: { url: api.download }, mimeType: 'audio/mpeg' }, { quoted: m });
+conn.sendMessage(m.chat, { audio: { url: api.download }, mimetype: 'audio/mpeg' }, { quoted: m });
  }
 
 handler.command = ['ytmp3', 'ytest'];
