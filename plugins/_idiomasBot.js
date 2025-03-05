@@ -1,5 +1,5 @@
 
-import { en, es, id, pt, ar } from '../language/idiomas.js'
+import { en, es, ar } from '../language/idiomas.js'
 
 export async function before(m,{ conn }) {
 
@@ -10,10 +10,6 @@ export async function before(m,{ conn }) {
       translations = es
      } else if (lang === "en") {
       translations = en
-     } else if (lang === "id") {
-      translations = id
-     } else if (lang === "pt") {
-      translations = pt
       } else if (lang === "ar") {
       translations = ar
      } else {
