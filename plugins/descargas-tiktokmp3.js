@@ -19,7 +19,7 @@ let res = json.results;
 m.react('🕑');
 let ttt = `*Autor:* ${res.author}\n*Título:* ${res.title}`;
 
-let dark = await (await fetch(`https://dark-core-api.vercel.app/api/download/tiktok?key=api&url=${args[0]}`)).json();
+let dark = await (await fetch(`https://dark-core-api.vercel.app/api/download/tiktok?key=dk-vip&url=${args[0]}`)).json();
 let aud = res.audio;
 let img = dark.result.thumbanail;
 
