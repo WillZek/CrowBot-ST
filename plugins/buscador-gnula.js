@@ -1,7 +1,7 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, text, usedPrefix, command }) => {
-if (!text) return m.reply(`🎩 *Ingresa el nombre de una pelicula*\n *Ejemplo: ${usedPrefix + command} Deadpool*`)
+if (!text) return m.reply(`《★》𝙄𝙣𝙜𝙧𝙚𝙨𝙖 𝙚𝙡 𝙣𝙤𝙢𝙗𝙧𝙚 𝙙𝙚 𝙪𝙣𝙖 𝙥𝙚𝙡𝙞𝙘𝙪𝙡𝙖\n> *Ejemplo: ${usedPrefix + command} Deadpool*`)
 
 try {
 let api = await fetch(`https://delirius-apiofc.vercel.app/search/cuevana?q=${encodeURIComponent(text)}`)
