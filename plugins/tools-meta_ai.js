@@ -10,8 +10,10 @@ try {
 const crow = `https://eliasar-yt-api.vercel.app/api/ai/text2img?prompt=${text}`;
 
 const texto = `*Resultados De:* ${text}`;
-m.react('✔️');
+m.react(rwait);
 await conn.sendMessage(m.chat, { image: { url: crow }, caption: texto }, { quoted: m });
+m.react(done);
+
 } catch (error) {
 console.error(error);
 throw `*🚨 Lo sentimos, ha ocurrido un error 😔*`;
