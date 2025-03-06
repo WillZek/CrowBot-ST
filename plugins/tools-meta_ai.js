@@ -18,7 +18,7 @@ throw `*🚨 Lo sentimos, ha ocurrido un error 😔*`;
 }
 }
 handler.tags = ['tools'];
-handler.help = ['genimg'];
-handler.command = ['genearimg2', 'imgg2', 'meta', 'genimg'];
+handler.help = ['crowai'];
+handler.command = ['crowai'];
 
 export default handler;
