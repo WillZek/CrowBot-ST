@@ -265,7 +265,7 @@ const translations = {
     premH: 'Esta función solo es para usuarios Premium.',
     groupH: 'Esta funcion solo puede ser ejecutada en grupos.',
     privateH: 'Esta función solo puede ser usada en chat privado.',
-    adminH: 'Este comando es solo para *Admins* del grupos',
+    adminH: 'Este comando solo puede ser usado por admins.',
     botAdmin: '¡Para usar este comando debo ser *Administrador!*',
     unregH: 'Regístrese para usar esta función  Escribiendo:\n\n*/reg*'
 }
