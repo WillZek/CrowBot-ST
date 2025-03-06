@@ -252,7 +252,7 @@ const translations = {
     snVerify: 'Verifique su número de serie con el comando',
     snError: 'Número de serie incorrecto',
     unReg: 'Registro Eliminado',
-    stickError: 'La conversión ha fallado, intenta enviar primero *imagen/video/gif* y luego responde con el comando',
+    stickError: '𝙋𝙤𝙧 𝙛𝙖𝙫𝙤𝙧, 𝙚𝙣𝙫𝙞𝙖 𝙪𝙣𝙖 𝙞𝙢𝙖𝙜𝙚𝙣 𝙤 𝙫𝙞𝙙𝙚𝙤 𝙥𝙖𝙧𝙖 𝙝𝙖𝙘𝙚𝙧 𝙪𝙣 𝙨𝙩𝙞𝙘𝙠𝙚𝙧',
     tgStick: 'ingrese un link de un pack de stickers de telegram',
     replyStick: 'Responda a un Sticker',
     ssWeb: 'Ingrese la Url de una pagina',
