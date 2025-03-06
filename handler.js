@@ -511,7 +511,7 @@ const msg = {
 rowner: `《★》${msg.rownerH}`, 
 owner: `《★》${msg.ownerH}`, 
 mods: `《★》${msg.modsH}`, 
-premium: '《★》Esta función solo es para usuarios Premium.', 
+premium: `《★》${msg.premH}`, 
 group: '《★》Esta funcion solo puede ser ejecutada en grupos.', 
 private: '《★》Esta función solo puede ser usada en chat privado.', 
 admin: '《★》Este comando solo puede ser usado por admins.', 
