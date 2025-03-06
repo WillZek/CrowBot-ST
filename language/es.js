@@ -56,6 +56,7 @@ const translations = {
     search: (value) => `Ingrese lo que desea buscar en *${value}*`,
     lastUp: 'Última Actualización',
     noLink: (value) => `Ingrese un Link de ${value}`,
+    ytLink: 'Ingrese Un Link De YouTube',
     title: 'Título',
     noUsername: 'Escriba un nombre de Usuario',
     username: 'Username',
