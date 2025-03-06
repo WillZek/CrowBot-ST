@@ -268,6 +268,7 @@ const translations = {
     adminH: 'Este comando solo puede ser usado por admins.',
     botAdmin: 'Para usar esta función debo ser admin.',
     unregH: 'No te encuentras registrado, registrese para usar esta función.\n*/reg nombre.edad*\n\n> *Ejemplo* : */reg Crow.18*'
+    restrictH: 'Esta característica esta desactivada.'
 }
 
 export default translations
