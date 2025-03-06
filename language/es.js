@@ -261,7 +261,7 @@ const translations = {
 
     rownerH: 'Esta función solo puede ser usada por mi creador.',
     ownerH: 'Esta función solo puede ser usada por mi desarrollador.',
-    modsH: 'Esta función es solo para *Para moderadores del Bot*',
+    modsH: 'Esta función solo puede ser usada por los moderadores del bot.',
     premH: 'Este comando es solo para miembros *Premium*\n\nEscribe */premium* para más info',
     groupH: 'Este comando solo se puede usar en grupos',
     privateH: 'Este comando solo se puede usar en el chat *privado del Bot*',
