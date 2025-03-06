@@ -29,6 +29,7 @@ const translations = {
     connet: 'Connected successfully',
     connID: '❀ sᥙᥴᥴᥱss𝖿ᥙᥣᥣᥡ ᥴ᥆ᥒᥒᥱᥴ𝗍ᥱძ 𝗍᥆ ᥕһᥲ𝗍sᥲ⍴⍴, ᥒᥱ᥊𝗍 𝗍іmᥱ ᥡ᥆ᥙ ძіsᥴ᥆ᥒᥒᥱᥴ𝗍 ᥙsᥱ *#delsesion* ᥲᥒძ ᥲgᥲіᥒ *#code.*\ᥒ\ᥒ> ${dev}',
     connMsg: 'The next time you connect, send the following message to log in without scanning another *QR* code',
+    sinsb: 'There are no active subbots at this time',
     botlist: 'Active Subbots',
     newcode: (usedPrefix) => `Great! You can now use *${usedPrefix}botclone* to request a new QR code`,
     nsbot: 'This command is only for *Active Sub Bots*',
