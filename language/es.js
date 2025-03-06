@@ -260,7 +260,7 @@ const translations = {
     searchError: 'No se encontraron resultados',
 
     rownerH: 'Esta función solo puede ser usada por mi creador.',
-    ownerH: 'Este comando solo puede ser utilizado por el *Owner y Sub Bots*',
+    ownerH: 'Esta función solo puede ser usada por mi desarrollador.',
     modsH: 'Esta función es solo para *Para moderadores del Bot*',
     premH: 'Este comando es solo para miembros *Premium*\n\nEscribe */premium* para más info',
     groupH: 'Este comando solo se puede usar en grupos',
