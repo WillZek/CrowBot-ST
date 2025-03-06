@@ -259,7 +259,7 @@ const translations = {
     tradList: 'Lista de Idiomas Admitidos',
     searchError: 'No se encontraron resultados',
 
-    rownerH: 'Este comando solo puede ser utilizado por el *Creador del bot*',
+    rownerH: 'Esta función solo puede ser usada por mi creador.',
     ownerH: 'Este comando solo puede ser utilizado por el *Owner y Sub Bots*',
     modsH: 'Esta función es solo para *Para moderadores del Bot*',
     premH: 'Este comando es solo para miembros *Premium*\n\nEscribe */premium* para más info',
