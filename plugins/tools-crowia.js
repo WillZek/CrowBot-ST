@@ -54,6 +54,11 @@ let handler = async (m, conn, chatUpdate) => {
   }
 }
 
+handler.customPrefix = /^(aicrow|crowtest)$/i
+handler.command = new RegExp
+
+export default handler;
+
 async function luminsesi(q, username, logic) {
   try {
     const response = await axios.post("https://Luminai.my.id", {
@@ -68,7 +73,3 @@ async function luminsesi(q, username, logic) {
     throw error;
   }
 }
-handler.customPrefix = /^(aicrow|crowai)$/i
-handler.command = new RegExp
-
-export default handler;
