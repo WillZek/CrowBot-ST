@@ -16,6 +16,6 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['sugerencia']
 handler.tags = ['owner']
 handler.command = ['sugerencia', 'sugerir', 'crowsug']
-handler.group = true;
+handler.group = false;
 
 export default handler
