@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, command }) => {
 
-if (!args[0]) return m.reply(`🍭 ${msg.ytLink});
+if (!args[0]) return m.reply(`🍭 ${msg.ytLink}`);
 
 let pene = await(await fetch(`https://delirius-apiofc.vercel.app/download/ytmp4?url=${args[0]}`)).json();
 
