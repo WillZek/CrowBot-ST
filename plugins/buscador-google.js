@@ -11,7 +11,7 @@ import axios from 'axios';
 let handler = async (m, { conn, command, args, usedPrefix }) => {
     const fetch = (await import('node-fetch')).default;
     const text = args.join` `;
-    if (!text) return m.reply(`*\`《★》Ingrese el texto a buscar\`*\n• Ejemplo: ${usedPrefix + command} gato`);
+    if (!text) return m.reply(`《★》𝙄𝙣𝙜𝙧𝙚𝙨𝙖 𝙪𝙣 𝙩𝙚𝙭𝙩𝙤 𝙥𝙖𝙧𝙖 𝙗𝙪𝙨𝙘𝙖𝙧\n> *Ejemplo:* ${usedPrefix + command} gato`);
 
     m.react("🔥");
     try {
