@@ -517,7 +517,7 @@ private: `《★》${msg.privateH}`,
 admin: `《★》${msg.adminH}`, 
 botAdmin: `《★》${msg.botAdmin}`,
 unreg: `《★》${msg.unregH}`,
-restrict: '《★》Esta característica esta desactivada.'
+restrict: `《★》${msg.restrictH}`
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
 
