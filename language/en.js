@@ -268,6 +268,7 @@ const translations = {
     adminH: 'This command is only for *Group Admins*',
     botAdmin: 'To use this command, I must be an *Administrator*!',
     unregH: 'Register to use this feature by typing:\n\n*/reg*'
+    restrictH: 'This feature is disabled.'
 }
 
 export default translations
