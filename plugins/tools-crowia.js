@@ -50,9 +50,7 @@ await m.react('💬')
 
 try {
 
-const query = text
-
-const prompt = `${basePrompt}. Responde lo siguiente: ${query}`
+const prompt = `${basePrompt}. Responde lo siguiente: ${text}`
 
 const response = await luminsesi(query, username, prompt)
 
