@@ -12,7 +12,7 @@ const translations = {
     noMention: 'منشن مستخدم',
     userDb: 'المستخدم غير موجود في قاعدة بياناتي',
     example: 'مثال',
-    stickMsg: 'من فضلك أرسل صورة أو فيديو لصنع ملصق.',
+    stickMsg: 'من فضلك أرسل صورة أو فيديو لصنع ملصق',
 
     //-- Stick reaction
     killmsg: 'قتل',
