@@ -12,6 +12,7 @@ const translations = {
     noMention: 'منشن مستخدم',
     userDb: 'المستخدم غير موجود في قاعدة بياناتي',
     example: 'مثال',
+    stickMsg: 'لقد كان الأمر كما لو كان مجرد صدفة',
 
     //-- Stick reaction
     killmsg: 'قتل',
