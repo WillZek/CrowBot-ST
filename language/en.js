@@ -12,7 +12,7 @@ const translations = {
     noMention: 'Mention a User',
     userDb: 'The user is not in my database',
     example: 'Example',
-    stickMsg: '𝙋𝙡𝙚𝙖𝙨𝙚 𝙚𝙫𝙚𝙧 𝙬𝙖𝙞𝙩𝙞𝙣𝙜 𝙛𝙤𝙧 𝙮𝙤𝙪',
+    stickMsg: 'Please send an image or video to make a sticker',
 
     //-- Stick reaction
     killmsg: 'Killed',
