@@ -509,7 +509,7 @@ console.error(e)
 global.dfail = (type, m, conn) => {
 const msg = {
 rowner: `《★》${msg.rownerH}`, 
-owner: '《★》Esta función solo puede ser usada por mi desarrollador.', 
+owner: `《★》${msg.ownerH}`, 
 mods: '《★》Esta función solo puede ser usada por los moderadores del bot', 
 premium: '《★》Esta función solo es para usuarios Premium.', 
 group: '《★》Esta funcion solo puede ser ejecutada en grupos.', 
