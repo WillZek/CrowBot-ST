@@ -267,7 +267,7 @@ const translations = {
     privateH: 'Esta función solo puede ser usada en chat privado.',
     adminH: 'Este comando solo puede ser usado por admins.',
     botAdmin: 'Para usar esta función debo ser admin.',
-    unregH: 'Regístrese para usar esta función  Escribiendo:\n\n*/reg*'
+    unregH: 'No te encuentras registrado, registrese para usar esta función.\n*/reg nombre.edad*\n\n> *Ejemplo* : */reg Crow.18*'
 }
 
 export default translations
