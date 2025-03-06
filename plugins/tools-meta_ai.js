@@ -1,21 +1,17 @@
-// Código Creado Por WillZek Wa.me/50557865603
-import fetch from 'node-fetch';
+// By WillZek
+
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 
 if (!text) return m.reply(`*🧑‍💻 Ingresa un texto para generar tu imagen a tu gusto*`);
+
 m.react('🕒');
 await conn.sendMessage(m.chat, {text: '*🧑‍💻 Espere, Estamos Trabajando en su imagen*'}, {quoted: m});
 try {
-
 const crow = `https://eliasar-yt-api.vercel.app/api/ai/text2img?prompt=${text}`;
-/* const response = await fetch(`https://eliasar-yt-api.vercel.app/api/ai/text2img?prompt=${encodeURIComponent(text)}`);
 
-if (!response.ok) throw new Error('Network response was not ok');
-const buffer = await response.buffer();
-*/
-
+const texto = `*Resultados De:* ${text}`;
 m.react('✔️');
-await conn.sendMessage(m.chat, { image: { url: crow }, {quoted: m});
+await conn.sendMessage(m.chat, { image: { url: crow }, caption: texto }, { quoted: m });
 } catch (error) {
 console.error(error);
 throw `*🚨 Lo sentimos, ha ocurrido un error 😔*`;
