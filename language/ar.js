@@ -268,6 +268,7 @@ const translations = {
     adminH: 'هذا الأمر مخصص فقط لـ *المشرفين* في المجموعة',
     botAdmin: 'يجب أن أكون *مسؤولًا* لاستخدام هذا الأمر!',
     unregH: 'سجل لاستخدام هذه الوظيفة بكتابة:\n\n/ reg'
+    restrictH: 'تم تعطيل هذه الميزة.'
 }
 
 export default translations
