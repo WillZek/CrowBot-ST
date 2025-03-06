@@ -515,7 +515,7 @@ premium: `《★》${msg.premH}`,
 group: `《★》${msg.groupH}`, 
 private: `《★》${msg.privateH}`, 
 admin: `《★》${msg.adminH}`, 
-botAdmin: '《★》Para usar esta función debo ser admin.',
+botAdmin: `《★》${msg.botAdmin}`,
 unreg: `《★》No te encuentras registrado, registrese para usar esta función\n\n*/reg nombre.edad*\n\n*Ejemplo* : */reg Crow.18*`,
 restrict: '《★》Esta característica esta desactivada.'
 }[type];
