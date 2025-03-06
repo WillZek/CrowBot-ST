@@ -16,7 +16,7 @@ let api = `https://dark-core-api.vercel.app/api/search/happymod?key=dk-vip&text=
 let response = await fetch(api);
 let json = await response.json();
 
-if (!arch || arch.length === 0) {
+if (!json || json.length === 0) {
     return m.reply(`🍭 No Encontramos Resultados Para : ${text}`);
 }
 
