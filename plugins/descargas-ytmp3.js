@@ -2,7 +2,7 @@ import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args }) => {
 
-if (!args[0]) return m.reply('🍭 Ingresa Un Link De Youtube');
+if (!args[0]) return m.reply(`🍭 ${msg.ytLink}`);
 
 let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=dk-vip&url=${args[0]}`)).json();
 
