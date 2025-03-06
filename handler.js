@@ -516,7 +516,7 @@ group: `《★》${msg.groupH}`,
 private: `《★》${msg.privateH}`, 
 admin: `《★》${msg.adminH}`, 
 botAdmin: `《★》${msg.botAdmin}`,
-unreg: `《★》No te encuentras registrado, registrese para usar esta función\n\n*/reg nombre.edad*\n\n*Ejemplo* : */reg Crow.18*`,
+unreg: `《★》${msg.unregH}`,
 restrict: '《★》Esta característica esta desactivada.'
 }[type];
 if (msg) return conn.reply(m.chat, msg, m, rcanal).then(_ => m.react('✖️'))}
