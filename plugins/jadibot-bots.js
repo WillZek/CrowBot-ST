@@ -24,7 +24,7 @@ async function handler(m, { conn: stars, usedPrefix }) {
 🤍 *Link:* https://wa.me/${v.user.jid.replace(/[^0-9]/g, '')}
 `).join('\n\n')
 
-  let responseMessage = `🍭 *Subbots Activos: ${totalUsers}*\n\n${message.trim() || '_0 Subbots._'}`
+  let responseMessage = `🍭 *${msg.botList}: ${totalUsers}*\n\n${message.trim() || '_0 Subbots._'}`
 
   await stars.sendFile(
     m.chat,
