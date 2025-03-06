@@ -56,6 +56,7 @@ const translations = {
     search: (value) => `Enter what you want to search in *${value}*`,
     lastUp: 'Last Update',
     noLink: (value) => `Enter a ${value} link`,
+    ytLink: 'Enter a YouTube link',
     title: 'Title',
     noUsername: 'Enter a Username',
     username: 'Username',
