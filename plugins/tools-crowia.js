@@ -69,8 +69,6 @@ handler.command = new RegExp
 
 export default handler;
 
-export default handler
-
 // Función para enviar una imagen y obtener el análisis
 
 async function fetchImageBuffer(content, imageBuffer) {
