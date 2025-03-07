@@ -18,17 +18,17 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   await m.react('🕓');
 
   try {
-    const response = await fetch(`https://dark-core-api.vercel.app/api/download/spotify?key=dk-vip&url=${encodeURIComponent(text)}`);
+    const response = await fetch(`https://apis-starlights-team.koyeb.app/starlight/spotifydl?url=${encodeURIComponent(text)}`);
     const result = await response.json();
 
     if (result.success) {
-      const { title, thumbnail, downloadLink } = result;
+      const { title, thumbnail, music } = result;
 
       const mensaje = `🎵 *Título:* ${title}`;
 
       await conn.sendFile(m.chat, thumbnail, 'cover.jpg', mensaje, m);
 
-await conn.sendMessage(m.chat, { audio: { url: downloadLink }, mimetype: 'audio/mpeg' }, { quoted: m });
+await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: 'audio/mpeg' }, { quoted: m });
 
       await m.react('✅');
     } else {
