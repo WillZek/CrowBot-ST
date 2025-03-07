@@ -17,11 +17,11 @@ let img = results.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=dk-vip&url=${results.url}`)).json();
+let api2 = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=dk-vip&url=${results.url}`)).json();
 
-if (!api?.download) return m.reply('No Se  Encontraron Resultados');
+if (!api2?.download) return m.reply('No Se  Encontraron Resultados');
 
-conn.sendMessage(m.chat, { audio: { url: api.download }, mimetype: 'audio/mpeg' }, { quoted: m });
+conn.sendMessage(m.chat, { audio: { url: api2.download }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
