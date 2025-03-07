@@ -44,7 +44,7 @@ await conn.sendMessage(m.chat, { audio: { url: music }, mimetype: 'audio/mpeg' }
     await m.react('❌');
     conn.reply(
       m.chat,
-      '[ ᰔᩚ ] Ocurrió un error al procesar tu solicitud.',
+      `[ ᰔᩚ ] Ocurrió un error al procesar tu solicitud.\n*${error.message}`,
       m
     );
   }
