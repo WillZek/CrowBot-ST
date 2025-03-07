@@ -24,7 +24,6 @@ let audio = json3.data.url;
 
 let txt = `*\`- S O U N C L O U D - M U S I C -\`*\n\n`;
     txt += `        ✩  *Título* : ${json[0].title}\n`;
-    txt += `        ✩  *Calidad* : ${quality}\n`;
     txt += `        ✩  *Url* : ${url}\n\n`;
     txt += `> 🍭 *${dev}*`
 
