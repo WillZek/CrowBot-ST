@@ -8,7 +8,10 @@ await m.react('🕒');
 try {
 let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${encodeURIComponent(text)}`);
 let json = await api.json();
-let { url } = json[0];
+
+let apic = await fetch(`https://delirius-apiofc.vercel.app/search/soundcloud?q=${text}&limit=10`);
+let jsonc = await apic.json();
+let { url } = jsonc[0];
 
 let api2 = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${url}`);
 let json2 = await api2.json();
