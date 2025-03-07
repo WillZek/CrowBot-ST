@@ -1,26 +1,40 @@
+// By WillZek >> Para CrowBot
+
 import fetch from 'node-fetch';
-import axios from 'axios';
 
-let handler = async (m, { conn, command, args, text, usedPrefix }) => {
-if (!text) return conn.reply(m.chat, `🎩 Ingrese el nombre de la cancion de *Soundcloud.*`, m, rcanal);
+let handler = async(m, { conn, usedPrefix, command, text }) => {
 
-await m.react('🕒');
+if (!text) return m.reply(`🍭 Ingresa Un Texto Para Buscar En Youtube\n> *Ejemplo:* ${usedPrefix + command}crow edits`);
+
 try {
-let api = await (await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${text}`)).json();
+let api = await (await fetch(`https://delirius-apiofc.vercel.app/search/ytsearch?q=${text}`)).json();
 
-let api2 = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${api[0].url}`);
-let json2 = await api2.json();
+let results = api.data[0];
 
-conn.sendMessage(m.chat, { audio: { url: json2.data.url }, mimetype: 'audio/mpeg' }, { quoted: m });
+let txt = `✨ *Título:* ${results.title}\n⌛ *Duración:* ${results.duration}\n📎 *Link:* ${results.url}\n📆 *Publicado:* ${results.publishedAt}`;
 
-await m.react('✅');
-} catch (error) {
-m.reply(`No Se Encontraron Resultados Para Tu Búsqueda En Soundcloud\n${error.message}`);
-await m.react('✖️');
-}}
+let img = results.image;
 
-handler.help = ['soundcloud *<búsqueda>*']
-handler.tags = ['descargas']
-handler.command = ['soundcloud', 'sound', 'play']
+conn.sendMessage(m.chat, { 
+        image: { url: img }, 
+        caption: txt, 
+        footer: dev, 
+        buttons: [
+            {
+                buttonId: `.ytmp3 ${results.url}`,
+                buttonText: { displayText: 'Obtener Audio' }
+            }
+        ],
+        viewOnce: true,
+        headerType: 4
+    }, { quoted: m });
+
+} catch (e) {
+m.reply(`Error: ${e.message}`);
+m.react('✖️');
+  }
+}
+
+handler.command = ['play'];
 
 export default handler
