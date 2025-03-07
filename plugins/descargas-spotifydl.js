@@ -25,25 +25,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 
       const mensaje = `🎵 *Título:* ${title}`;
 
-    await conn.sendMessage(m.chat, {
-      audio: {
-        url: downloadLink
-      },
-      mimetype: 'audio/mpeg',
-      contextInfo: {
-        externalAdReply: {
-          title: title,
-          body: dev,
-          mediaType: 1,
-          mediaUrl: null,
-          thumbnailUrl: thumbnail,
-          sourceUrl: null,
-          containsAutoReply: true,
-          renderLargerThumbnail: true,
-          showAdAttribution: false,
-        }
-      }
-    }, { quoted: m });
+ await conn.sendMessage(m.chat, { audio: { url: downloadLink }, mimetype: 'audio/mpeg' }, { quoted: m });
       await m.react('✅');
     } else {
       await m.react('❌');
