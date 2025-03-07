@@ -13,7 +13,7 @@ let apib = await fetch(`https://delirius-apiofc.vercel.app/search/soundcloud?q=$
 let json2 = await apib.json();
 let { link } = json2[0];
 
-let apic = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${url}`);
+let apic = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${link}`);
 let json3 = await apic.json();
 
 // let { quality, image } = json2;
