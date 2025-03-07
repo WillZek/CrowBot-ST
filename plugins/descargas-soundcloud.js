@@ -1,4 +1,4 @@
-// By WillZek >> Para CrowBot
+// By WillZek >> https://github.com/WillZek
 
 import fetch from 'node-fetch';
 
