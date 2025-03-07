@@ -21,14 +21,14 @@ import { makeWASocket } from '../lib/simple.js';
 if (!(global.conns instanceof Array)) global.conns = [];
 
 let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => {
-  let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn;
 
 const bot = global.db.data.settings[conn.user.jid] || {};
 
 if (!bot.jadibotmd) return m.reply('💛 Este Comando Se Encuentra Desactivado Por Mi Creador');
 
-/*  
-if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
+  let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn;
+
+/*  if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
     return m.reply(`Este comando solo puede ser usado en el bot principal! wa.me/${global.conn.user.jid.split`@`[0]}?text=${usedPrefix}code`);
   }
 */
@@ -78,9 +78,6 @@ if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.use
       version
     };
 
-let time = global.db.data.users[m.sender].Subs + 120000
-if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m.chat, `《★》Debes esperar ${msToTime(time - new Date())} para volver a vincular un *Sub-Bot.*`, m)
-
     let conn = makeWASocket(connectionOptions);
 
     if (methodCode && !conn.authState.creds.registered) {
@@ -89,14 +86,13 @@ if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m
       setTimeout(async () => {
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-        let txt = `┌  🜲  *Usa este Código para convertirte en un Sub Bot*\n`
+            let txt = `┌  🜲  *Usa este Código para convertirte en un Sub Bot*\n`
             txt += `│  ❀  Pasos\n`
             txt += `│  ❀  *1* : Haga click en los 3 puntos\n`
             txt += `│  ❀  *2* : Toque dispositivos vinculados\n`
             txt += `│  ❀  *3* : Selecciona *Vincular con el número de teléfono*\n` 
             txt += `└  ❀  *4* : Escriba el Codigo\n\n`
             txt += `*❖ Nota:* Este Código solo funciona en el número en el que se solicitó.`;
-
         await parent.reply(m.chat, txt, m);
         await parent.reply(m.chat, codeBot, m);
         rl.close();
@@ -184,30 +180,13 @@ if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m
   serbot();
 };
 
-global.db.data.users[m.sender].Subs = new Date * 1
-} 
-
 handler.help = ['code'];
 handler.tags = ['serbot'];
-handler.command = ['code', 'code', 'serbot'];
-handler.rowner = false;
+handler.command = ['code', 'Code', 'serbot'];
+handler.rowner = false
 
 export default handler;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
-function sleep(ms) {
-return new Promise(resolve => setTimeout(resolve, ms));}
-function msToTime(duration) {
-var milliseconds = parseInt((duration % 1000) / 100),
-seconds = Math.floor((duration / 1000) % 60),
-minutes = Math.floor((duration / (1000 * 60)) % 60),
-hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
-hours = (hours < 10) ? '0' + hours : hours
-minutes = (minutes < 10) ? '0' + minutes : minutes
-seconds = (seconds < 10) ? '0' + seconds : seconds
-return minutes + ' m y ' + seconds + ' s '
 }
