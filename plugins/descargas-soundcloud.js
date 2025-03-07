@@ -11,12 +11,12 @@ let json = await apia.json();
 
 let apib = await fetch(`https://delirius-apiofc.vercel.app/search/soundcloud?q=${text}&limit=10`);
 let json2 = await apib.json();
-let { url } = json2[0];
+let { link } = json2[0];
 
 let apic = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${url}`);
 let json3 = await apic.json();
 
-// let { link: dl_url, quality, image } = json2;
+// let { quality, image } = json2;
 
 let audio = json3.data.url;
 
