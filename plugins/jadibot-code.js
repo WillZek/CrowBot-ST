@@ -183,6 +183,10 @@ if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m
   serbot();
 };
 
+
+global.db.data.users[m.sender].Subs = new Date * 1
+} 
+
 handler.help = ['code'];
 handler.tags = ['serbot'];
 handler.command = ['code', 'Code', 'serbot'];
