@@ -189,7 +189,7 @@ global.db.data.users[m.sender].Subs = new Date * 1
 
 handler.help = ['code'];
 handler.tags = ['serbot'];
-handler.command = ['code', 'code'];
+handler.command = ['code', 'code', 'serbot'];
 handler.rowner = false;
 
 export default handler;
