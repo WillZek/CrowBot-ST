@@ -20,7 +20,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
   try {
     const response = await (await fetch(`https://apis-starlights-team.koyeb.app/starlight/spotifydl?url=${text}`)).json();
 
-      const { title, thumbnail, music } = result;
+      const { title, thumbnail, music } = response;
 
       const mensaje = `🎵 *Título:* ${title}`;
 
