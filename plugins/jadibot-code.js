@@ -33,6 +33,9 @@ if (!bot.jadibotmd) return m.reply('💛 Este Comando Se Encuentra Desactivado P
   }
 */
 
+let time = global.db.data.users[m.sender].Subs + 120000
+if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m.chat, `《★》𝘿𝙚𝙗𝙚𝙨 𝙚𝙨𝙥𝙚𝙧𝙖𝙧 ${msToTime(time - new Date())} 𝙥𝙖𝙧𝙖 𝙫𝙤𝙡𝙫𝙚𝙧 𝙖 𝙫𝙞𝙣𝙘𝙪𝙡𝙖𝙧 𝙪𝙣 *𝙎𝙪𝙗-𝘽𝙤𝙩.*`, m)
+
   async function serbot() {
     let authFolderB = m.sender.split('@')[0];
     const userFolderPath = `./CrowJadiBot/${authFolderB}`;
@@ -189,4 +192,18 @@ export default handler;
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
+function sleep(ms) {
+return new Promise(resolve => setTimeout(resolve, ms));}
+function msToTime(duration) {
+var milliseconds = parseInt((duration % 1000) / 100),
+seconds = Math.floor((duration / 1000) % 60),
+minutes = Math.floor((duration / (1000 * 60)) % 60),
+hours = Math.floor((duration / (1000 * 60 * 60)) % 24)
+hours = (hours < 10) ? '0' + hours : hours
+minutes = (minutes < 10) ? '0' + minutes : minutes
+seconds = (seconds < 10) ? '0' + seconds : seconds
+return minutes + ' m y ' + seconds + ' s '
 }
