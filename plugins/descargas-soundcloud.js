@@ -6,19 +6,19 @@ if (!text) return conn.reply(m.chat, `🎩 Ingrese el nombre de la cancion de *S
 
 await m.react('🕒');
 try {
-let api = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${encodeURIComponent(text)}`);
-let json = await api.json();
+let apia = await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${encodeURIComponent(text)}`);
+let json = await apia.json();
 
-let apic = await fetch(`https://delirius-apiofc.vercel.app/search/soundcloud?q=${text}&limit=10`);
-let jsonc = await apic.json();
-let { url } = jsonc[0];
+let apib = await fetch(`https://delirius-apiofc.vercel.app/search/soundcloud?q=${text}&limit=10`);
+let json2 = await apib.json();
+let { url } = json2[0];
 
-let api2 = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${url}`);
-let json2 = await api2.json();
+let apic = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${url}`);
+let json3 = await apic.json();
 
 // let { link: dl_url, quality, image } = json2;
 
-let audio = json2.data.url;
+let audio = json3.data.url;
 
 // let audio = await getBuffer(dl_url);
 
@@ -29,7 +29,7 @@ let txt = `*\`- S O U N C L O U D - M U S I C -\`*\n\n`;
     txt += `> 🍭 *${dev}*`
 
 await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null, rcanal);
-await conn.sendMessage(m.chat, { audio: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
+await conn.sendMessage(m.chat, { audio: { url: audio, fileName: `${json[0].title}.mp3`, mimetype: 'audio/mpeg' }, { quoted: m })
 
 await m.react('✅');
 } catch (error) {
