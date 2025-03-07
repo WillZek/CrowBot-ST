@@ -14,7 +14,7 @@ let link = json[0].data.link;
 let api2 = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${link}`);
 let json2 = await api2.json();
 
-let { imageURL } = json[0];
+let { imageURL } = json2[0];
 let audio = json2.data.url;
 
 let txt = `*\`- S O U N C L O U D - M U S I C -\`*\n\n`;
