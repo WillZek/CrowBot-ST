@@ -16,7 +16,7 @@ let { link } = json2[0];
 let apic = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${link}`);
 let json3 = await apic.json();
 
-// let { quality, image } = json2;
+let { image } = json[0];
 
 let audio = json3.data.url;
 
