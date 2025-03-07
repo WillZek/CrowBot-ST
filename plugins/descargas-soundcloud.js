@@ -8,9 +8,7 @@ await m.react('🕒');
 try {
 let api = await (await fetch(`https://apis-starlights-team.koyeb.app/starlight/soundcloud-search?text=${text}`)).json();
 
-let link = api.url;
-
-let api2 = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${link}`);
+let api2 = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?url=${api[0].url}`);
 let json2 = await api2.json();
 
 conn.sendMessage(m.chat, { audio: { url: json2.data.url }, mimetype: 'audio/mpeg' }, { quoted: m });
