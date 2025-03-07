@@ -15,8 +15,7 @@ let api2 = await fetch(`https://delirius-apiofc.vercel.app/download/soundcloud?u
 let json2 = await api2.json();
 
 let { image } = json[0];
-let { url } = json2.data;
-let audio = url;
+let audio = json2.data.url;
 
 let txt = `*\`- S O U N C L O U D - M U S I C -\`*\n\n`;
     txt += `        ✩  *Título* : ${json[0].title}\n`; // pene
