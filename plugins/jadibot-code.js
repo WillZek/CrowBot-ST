@@ -21,20 +21,17 @@ import { makeWASocket } from '../lib/simple.js';
 if (!(global.conns instanceof Array)) global.conns = [];
 
 let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => {
+  let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn;
 
 const bot = global.db.data.settings[conn.user.jid] || {};
 
 if (!bot.jadibotmd) return m.reply('💛 Este Comando Se Encuentra Desactivado Por Mi Creador');
 
-  let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn;
-
-/*  if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
+/*  
+if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
     return m.reply(`Este comando solo puede ser usado en el bot principal! wa.me/${global.conn.user.jid.split`@`[0]}?text=${usedPrefix}code`);
   }
 */
-
-let time = global.db.data.users[m.sender].Subs + 120000
-if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m.chat, `《★》𝘿𝙚𝙗𝙚𝙨 𝙚𝙨𝙥𝙚𝙧𝙖𝙧 ${msToTime(time - new Date())} 𝙥𝙖𝙧𝙖 𝙫𝙤𝙡𝙫𝙚𝙧 𝙖 𝙫𝙞𝙣𝙘𝙪𝙡𝙖𝙧 𝙪𝙣 *𝙎𝙪𝙗-𝘽𝙤𝙩.*`, m)
 
   async function serbot() {
     let authFolderB = m.sender.split('@')[0];
@@ -80,7 +77,10 @@ if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m
       defaultQueryTimeoutMs: undefined,
       version
     };
-       
+
+let time = global.db.data.users[m.sender].Subs + 120000
+if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m.chat, `《★》Debes esperar ${msToTime(time - new Date())} para volver a vincular un *Sub-Bot.*`, m)
+
     let conn = makeWASocket(connectionOptions);
 
     if (methodCode && !conn.authState.creds.registered) {
@@ -89,13 +89,14 @@ if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m
       setTimeout(async () => {
         let codeBot = await conn.requestPairingCode(cleanedNumber);
         codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
-            let txt = `┌  🜲  *Usa este Código para convertirte en un Sub Bot*\n`
+        let txt = `┌  🜲  *Usa este Código para convertirte en un Sub Bot*\n`
             txt += `│  ❀  Pasos\n`
             txt += `│  ❀  *1* : Haga click en los 3 puntos\n`
             txt += `│  ❀  *2* : Toque dispositivos vinculados\n`
             txt += `│  ❀  *3* : Selecciona *Vincular con el número de teléfono*\n` 
             txt += `└  ❀  *4* : Escriba el Codigo\n\n`
             txt += `*❖ Nota:* Este Código solo funciona en el número en el que se solicitó.`;
+
         await parent.reply(m.chat, txt, m);
         await parent.reply(m.chat, codeBot, m);
         rl.close();
@@ -131,7 +132,7 @@ if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m
         if (args[0]) return;
 
         await parent.reply(conn.user.jid, `La siguiente vez que se conecte envía el siguiente mensaje para iniciar sesión sin utilizar otro código `, m);
-        await parent.sendMessage(conn.user.jid, { text: usedPrefix + command + " " + Buffer.from(fs.readFileSync(`./CrowJadiBot/${authFolderB}/creds.json`), "utf-8").toString("base64") }, { quoted: m });
+        await parent.sendMessage(conn.user.jid, { text: usedPrefix + command + " " + Buffer.from(fs.readFileSync(`./ShinobuJadiBot/${authFolderB}/creds.json`), "utf-8").toString("base64") }, { quoted: m });
       }
     }
 
@@ -183,14 +184,13 @@ if (new Date - global.db.data.users[m.sender].Subs < 120000) return conn.reply(m
   serbot();
 };
 
-
 global.db.data.users[m.sender].Subs = new Date * 1
 } 
 
 handler.help = ['code'];
 handler.tags = ['serbot'];
-handler.command = ['code', 'Code', 'serbot'];
-handler.rowner = false
+handler.command = ['code', 'code'];
+handler.rowner = false;
 
 export default handler;
 
