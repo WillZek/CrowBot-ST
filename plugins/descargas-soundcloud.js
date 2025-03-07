@@ -21,7 +21,7 @@ let txt = `*\`- S O U N C L O U D - M U S I C -\`*\n\n`;
     txt += `        ✩  *Título* : ${json[0].title}\n`; // pene
     txt += `> 🍭 *${dev}*`
 
-await conn.sendFile(m.chat, imageURL, 'thumbnail.jpg', txt, m, null, rcanal);
+await conn.sendFile(m.chat, image, 'thumbnail.jpg', txt, m, null, rcanal);
 conn.sendMessage(m.chat, { audio: { url: json2.data.url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 await m.react('✅');
