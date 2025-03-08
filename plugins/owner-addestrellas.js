@@ -35,7 +35,7 @@ let handler = async (m, { conn, text }) => {
 let whoo = m.messageStubParameters[0]
 let user = `@${whoo.split('@')[0]}`
 
-        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${user || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${m.mentionedJid[0] || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['addestrellas *<@user>* <cantidad>']
