@@ -32,7 +32,9 @@ let handler = async (m, { conn, text }) => {
     pene = text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.chat;
   }
 
-        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${m.mentionedJid[0] || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+    let user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
+
+        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${user || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['addestrellas *<@user>* <cantidad>']
