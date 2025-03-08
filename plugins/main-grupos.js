@@ -1,5 +1,3 @@
-import fetch from 'node-fetch'
-
 let handler = async (m, { conn, usedPrefix, command }) => {
 
 let grupos = `╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈≫\n\n☕︎︎ *Hola!, te invito a unirte a los grupos oficiales del Bot para convivir con la comunidad oficial* 💛
@@ -18,13 +16,13 @@ let grupos = `╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈≫\n\n☕�
 
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈≫`
 
-await conn.sendFile(m.chat, imagen1, "Crow.jpg", grupos, m, null, rcanal)
+let img = 'https://i.ibb.co/nMPrKxD4/file.jpg';
 
-await m.react(emojis)
-
+conn.sendMessage(m.chat, { image: { url: img }, caption: grupos }, { quoted: m });
 }
+
 handler.help = ['grupos']
 handler.tags = ['main']
 handler.command = ['grupos', 'crowgrupos', 'gruposcrow']
-handler.estrellas = 5;
+
 export default handler
