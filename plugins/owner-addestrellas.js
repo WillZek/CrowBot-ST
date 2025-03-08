@@ -29,7 +29,7 @@ let handler = async (m, { conn, text }) => {
     users[who].estrellas += dmt;
 
 let name = conn.getName(who);
-        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${who.split('@')[0]} || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${who.split('@')[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['addestrellas *<@user>* <cantidad>']
