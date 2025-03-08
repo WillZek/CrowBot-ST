@@ -25,7 +25,7 @@ let handler = async (m, { conn, text }) => {
     users[who].estrellas += dmt;
 
 let name = conn.getName(who);
-    await conn.reply(m.chat, `✿ Transferiste *¥${dmt} Estrellas* a /`${name}/`\n> Ahora tienes *¥${users[m.sender].estrellas} Estrellas* en el banco.`, m);
+    await conn.reply(m.chat, `✿ Transferiste *¥${dmt} Estrellas* a \`${name}\`\n> Ahora tienes *¥${users[m.sender].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['pay *<@user>* <cantidad>'];
