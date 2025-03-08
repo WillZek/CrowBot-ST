@@ -13,7 +13,7 @@ m.react(rwait);
 
 let video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${text}&quality=480p&apikey=elrebelde21`)).json();
 
-let link = video.results.dl_url;
+let link = video.result.dl_url;
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
@@ -22,7 +22,7 @@ if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n
 if (video?.data?.size > limit) {
 await conn.sendMessage(m.chat, {
       document: { url: link },
-      fileName: `${video.results.title}.mp4`,
+      fileName: `${video.result.title}.mp4`,
       mimetype: 'video/mp4', caption: '✅ Descargado Con Exito.',
       thumbnail: video.thumbnail },          
       { quoted: m })
