@@ -10,9 +10,9 @@ let handler = async (m, { conn, text }) => {
     if (m.isGroup) who = m.mentionedJid[0];
     else who = m.chat;
 */
-    let who;
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
-    else who = m.chat;
+    let who;
+    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
+    else who = m.chat;
 
     if (!who) return m.reply(`《✧》Debes mencionar a quien quieras agregar estrellas.\n> Ejemplo » *.addestrellas @mencion 100*`);
 
@@ -29,7 +29,7 @@ let handler = async (m, { conn, text }) => {
     users[who].estrellas += dmt;
 
 let name = conn.getName(who);
-        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${who.split('@')[0]}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${name || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['addestrellas *<@user>* <cantidad>']
