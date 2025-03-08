@@ -32,7 +32,8 @@ let handler = async (m, { conn, text }) => {
     pene = text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.chat;
   }
 
-    let user = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted.sender;
+let who = m.messageStubParameters[0]
+let user = `@${who.split('@')[0]}`
 
         await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${user || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
