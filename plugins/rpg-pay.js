@@ -4,7 +4,7 @@ import MessageType from '@whiskeysockets/baileys';
 
 let handler = async (m, { conn, text }) => {
     let who;
-    if (m.isGroup) who = m.mentionedJid[0];
+    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
     else who = m.chat;
 
     if (!who) return m.reply(`《✧》Debes mencionar a quien quieras regalar *${moneda}*.\n> Ejemplo » *#pay 25000 @mencion*`);
@@ -24,7 +24,8 @@ let handler = async (m, { conn, text }) => {
     users[m.sender].estrellas -= dmt;
     users[who].estrellas += dmt;
 
-    await conn.reply(m.chat, `✿ Transferiste *¥${dmt} Estrellas* a @+${who.split('@')[0]}\n> Ahora tienes *¥${users[m.sender].estrellas} Estrellas* en el banco.`, m);
+let name = conn.getName(who);
+    await conn.reply(m.chat, `✿ Transferiste *¥${dmt} Estrellas* a /`${name}/`\n> Ahora tienes *¥${users[m.sender].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['pay *<@user>* <cantidad>'];
