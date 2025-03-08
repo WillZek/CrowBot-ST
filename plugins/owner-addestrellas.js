@@ -6,9 +6,13 @@ import db from '../lib/database.js';
 import MessageType from '@whiskeysockets/baileys';
 
 let handler = async (m, { conn, text }) => {
-    let who;
+/*    let who;
     if (m.isGroup) who = m.mentionedJid[0];
     else who = m.chat;
+*/
+    let who;
+    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
+    else who = m.chat;
 
     if (!who) return m.reply(`《✧》Debes mencionar a quien quieras agregar estrellas.\n> Ejemplo » *.addestrellas @mencion 100*`);
 
@@ -32,10 +36,8 @@ let handler = async (m, { conn, text }) => {
     pene = text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.chat;
   }
 
-let whoo = m.messageStubParameters[0]
-let user = `@${whoo.split('@')[0]}`
-
-        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${m.mentionedJid[0] || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
+let name = conn.getName(who);
+        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${name || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
 
 handler.help = ['addestrellas *<@user>* <cantidad>']
