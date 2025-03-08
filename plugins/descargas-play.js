@@ -27,7 +27,7 @@ await conn.sendMessage(m.chat, { document: { url: api.download }, mimetype: 'aud
 if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
 let video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${args[0]}&quality=480p&apikey=elrebelde21`)).json();
 
-let link = video?.data?.url;
+let link = video?.result.d_url;
 
 if (!link) return m.reply('No Hubo Resultados');
 
