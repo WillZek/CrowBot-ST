@@ -28,14 +28,6 @@ let handler = async (m, { conn, text }) => {
 
     users[who].estrellas += dmt;
 
-  let pene;
-
-  if (m.isGroup) {
-    pene = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : false;
-  } else {
-    pene = text ? text.replace(/[^0-9]/g, '') + '@s.whatsapp.net' : m.chat;
-  }
-
 let name = conn.getName(who);
         await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${name || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
 }
