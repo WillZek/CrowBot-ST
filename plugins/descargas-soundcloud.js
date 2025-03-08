@@ -19,9 +19,9 @@ conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
 let api2 = await(await fetch(`https://api.fgmods.xyz/api/downloader/ytmp3?url=${results.url}&quality=480p&apikey=elrebelde21`)).json();
 
-if (!api2?.download) return m.reply('No Se  Encontraron Resultados');
+if (!api2?.dl_url) return m.reply('No Se  Encontraron Resultados');
 
-conn.sendMessage(m.chat, { audio: { url: api2.download }, mimetype: 'audio/mpeg' }, { quoted: m });
+conn.sendMessage(m.chat, { audio: { url: api2.dl_url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
