@@ -1,40 +1,131 @@
-/* Código Hecho Por WillZek Para Crow Ya Que El Otro Se Jodió xD
-- https://github.com/WillZek 
-*/
+import axios from 'axios'
 
-import db from '../lib/database.js';
-import MessageType from '@whiskeysockets/baileys';
+import fetch from 'node-fetch'
 
-let handler = async (m, { conn, text }) => {
-/*    let who;
-    if (m.isGroup) who = m.mentionedJid[0];
-    else who = m.chat;
-*/
-    let who;
-    if (m.isGroup) who = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false;
-    else who = m.chat;
+let handler = async (m, { conn, usedPrefix, command, text }) => {
 
-    if (!who) return m.reply(`《✧》Debes mencionar a quien quieras agregar estrellas.\n> Ejemplo » *.addestrellas @mencion 100*`);
+const isQuotedImage = m.quoted && (m.quoted.msg || m.quoted).mimetype && (m.quoted.msg || m.quoted).mimetype.startsWith('image/')
 
-    let txt = text.replace('@' + who.split`@`[0], '').trim();
-    if (!txt) return m.reply('《✧》Debes especificar una cantidad válida.\n> Ejemplo » *.addestrellas @mencion 100*');
-    if (isNaN(txt)) return m.reply('《✧》*sólo números*');
+const username = `${conn.getName(m.sender)}`
 
-    let dmt = parseInt(txt);
-    if (dmt < 1) return m.reply(`《✧》Debes agregar al menos *¥1 Estrella*`);
+const basePrompt = `Tu nombre es CrowBot y parece haber sido creado por WillZek. Tú usas el idioma Español. Llamarás a las personas por su nombre ${username}, te gusta ser divertido, te encanta aprender y sobre todo las explociones. Siempre Darás Publicidad A Tu Canal Oficial o Ofc el cual es : https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W. Lo más importante es que debes ser amigable con la persona con la que estás hablando. ${username}`
 
-    let users = global.db.data.users;
-    if (!users[who]) return m.reply('⚠️ El usuario no existe en la base de datos.');
+if (isQuotedImage) {
 
-    users[who].estrellas += dmt;
+const q = m.quoted
 
-let name = conn.getName(who);
-        await conn.reply(m.chat, `✿ Agregaste *¥${dmt} Estrellas* a @${name || 'Sin Nombre'}\n> Ahora tiene *¥${users[who].estrellas} Estrellas* en el banco.`, m);
-}
+const img = await q.download?.()
 
-handler.help = ['addestrellas *<@user>* <cantidad>']
-handler.tags = ['owner'];
-handler.command = ['addestrellas', 'addes']
-handler.mods = true
+if (!img) {
+
+console.error('💛 Error: No image buffer available')
+
+return conn.reply(m.chat, '💛 Error: No se pudo descargar la imagen.', m, fake)}
+
+const content = '💛 ¿Qué se observa en la imagen?'
+
+try {
+
+const imageAnalysis = await fetchImageBuffer(content, img)
+
+const query = '😊 Descríbeme la imagen y detalla por qué actúan así. También dime quién eres'
+
+const prompt = `${basePrompt}. La imagen que se analiza es: ${imageAnalysis.result}`
+
+const description = await luminsesi(query, username, prompt)
+
+await conn.reply(m.chat, description, m)
+
+} catch (error) {
+
+console.error('💛 Error al analizar la imagen:', error)
+
+await conn.reply(m.chat, '💛 Error al analizar la imagen.', m)}
+
+} else {
+
+if (!text) { return conn.reply(m.chat, `💛 *Ingrese su petición*\n💛 *Ejemplo de uso:* ${usedPrefix + command} Como hacer un avión de papel`, m, rcanal)}
+
+await m.react('💬')
+
+try {
+
+const query = text
+
+const prompt = `${basePrompt}. Responde lo siguiente: ${query}`
+
+const response = await luminsesi(query, username, prompt)
+
+await conn.reply(m.chat, response, m)
+
+} catch (error) {
+
+console.error('💛 Error al obtener la respuesta:', error)
+
+await conn.reply(m.chat, 'Error: intenta más tarde.', m)}}}
+
+handler.help = ['chatgpt <texto>', 'ia <texto>']
+
+handler.tags = ['tools']
+
+handler.register = true
+
+handler.estrellas = 4;
+
+handler.command = ['ia', 'chatgpt', 'ai', 'chat', 'gpt']
 
 export default handler
+
+// Función para enviar una imagen y obtener el análisis
+
+async function fetchImageBuffer(content, imageBuffer) {
+
+try {
+
+const response = await axios.post('https://Luminai.my.id', {
+
+content: content,
+
+imageBuffer: imageBuffer 
+
+}, {
+
+headers: {
+
+'Content-Type': 'application/json' 
+
+}})
+
+return response.data
+
+} catch (error) {
+
+console.error('Error:', error)
+
+throw error }}
+
+// Función para interactuar con la IA usando prompts
+
+async function luminsesi(q, username, logic) {
+
+try {
+
+const response = await axios.post("https://Luminai.my.id", {
+
+content: q,
+
+user: username,
+
+prompt: logic,
+
+webSearchMode: false
+
+})
+
+return response.data.result
+
+} catch (error) {
+
+console.error('💛 Error al obtener:', error)
+
+throw error }}
