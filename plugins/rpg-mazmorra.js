@@ -1,4 +1,4 @@
-// Hecho Por I'm Fz~ y Mejorado Por WillZek
+// Hecho Por I'm Fz~
 
 let handler = async (m, { conn, usedPrefix, command }) => {
    let user = db.data.users[m.sender]
