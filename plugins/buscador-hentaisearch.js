@@ -24,7 +24,7 @@ await conn.sendMessage(m.chat, { image: { url: randomThumbnail }, caption: teks 
   }
   conn.sendFile(m.chat, randomThumbnail, 'error.jpg', teks, m);
 };
-handler.command = ['searchhentai', 'hentaisearch']
+handler.command = ['searchhentai', 'hentaisearch', 'htsearch']
 export default handler;
 async function searchHentai(search) {
   return new Promise((resolve, reject) => {
