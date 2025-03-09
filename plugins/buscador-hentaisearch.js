@@ -16,6 +16,8 @@ if (!gp.nsfw && m.isGroup) return m.reply('[❗] 𝐋𝐨𝐬 𝐜𝐨𝐦𝐚�
   if (searchResults.result.length > 0) {
     const randomIndex = Math.floor(Math.random() * searchResults.result.length);
     randomThumbnail = searchResults.result[randomIndex].thumbnail;
+
+await conn.sendMessage(m.chat, { image: { url: randomThumbnail }, caption: teks }, { quoted: m });
   } else {
     randomThumbnail = 'https://pictures.hentai-foundry.com/e/Error-Dot/577798/Error-Dot-577798-Zero_Two.png';
     teks = `✧ No se encontraron resultados.,.`;
