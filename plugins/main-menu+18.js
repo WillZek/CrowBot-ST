@@ -10,6 +10,7 @@ let texto = `• 𝐌𝐄𝐍𝐔 +10 •
 ║➤ ❤️‍🔥 _.rule34_ (texto)
 ║➤ ❤️‍🔥 _.xvideosearch_ (texto)
 ║➤ ❤️‍🔥 _.xvideosdl_ (link)
+║➤ ❤️‍🔥 _.hentaisearch_ (texto)
 ║➤ ❤️‍🔥 _.fuck_ (@tag)
 ║➤ ❤️‍🔥 _.fuck2_ (@tag)
 ║➤ ❤️‍🔥 _.cum_ (@tag)
