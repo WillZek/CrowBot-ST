@@ -46,7 +46,7 @@ ___
 [![Accounts](https://img.shields.io/badge/CUENTAS-000000%7D?style=for-the-badger&logo=biolink&logoColor=white)](https://www.atom.bio/crowbot-ofc)
 
 
-<a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | NIÑO PIÑA💛 | STARCORE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
+<a href="#"><img title="CrowBot" src="https://img.shields.io/badge/CROWBOT💛 | WILLZEK 💛 | MOON FORCE 💛-blue?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
 </p>
 
 <!-- RAINBOW LINE BOT -->
@@ -103,8 +103,8 @@ ___
 
 ### **`👑 INFORMACION CONTACTOS`**
 
-#### **`Owner: Niño Piña 🤴`**
-> **`Developed By: Crow's Club`**
+#### **`Owner: WillZek 🤴`**
+> **`Developed By: Moon Force`**
 
 #### **`CONTACTOS 💻`**
 <p>
