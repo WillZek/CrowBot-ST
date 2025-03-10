@@ -51,6 +51,7 @@
 "groq-sdk": "latest",
 "chalk": "^5.1.0",
 "sanzy-spotifydl": "*",
+"savetubedl", "^3.0.0",
 "url-file-size": "^1.0.5-1",
 "fluid-spotify.js": "*",
 "cheerio": "npm:cheerio@1.0.0-rc.12",
