@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 
 const charactersFilePath = './media/database/characters.json';
+const haremFilePath = './media/database/harem.json';
 
 async function loadCharacters() {
     try {
@@ -11,7 +12,16 @@ async function loadCharacters() {
     }
 }
 
-let wimageHandler = async (m, { conn, args }) => {
+async function loadHarem() {
+    try {
+        const data = await fs.readFile(haremFilePath, 'utf-8');
+        return JSON.parse(data);
+    } catch (error) {
+        return [];
+    }
+}
+
+let handler = async (m, { conn, args }) => {
     const characterName = args.join(' ').toLowerCase().trim();
 
     try {
@@ -23,18 +33,23 @@ let wimageHandler = async (m, { conn, args }) => {
             return;
         }
 
+        // Seleccionar una imagen aleatoria
+        const randomImage = character.img[Math.floor(Math.random() * character.img.length)];
+
         const message = `❀ Nombre » *${character.name}*
 ⚥ Género » *${character.gender}*
 ❖ Fuente » *${character.source}*`;
 
-        await conn.sendFile(m.chat, character.img, `${character.name}.jpg`, message, m);
+        await conn.sendFile(m.chat, randomImage, `${character.name}.jpg`, message, m);
     } catch (error) {
         await conn.reply(m.chat, `✘ Error al cargar la imagen del personaje: ${error.message}`, m);
     }
 };
 
-wimageHandler.help = ['wimage <nombre del personaje>'];
-wimageHandler.tags = ['gacha'];
-wimageHandler.command = ['charimage', 'cimage', 'wimage', 'waifuimage'];
+handler.help = ['wimage <nombre del personaje>'];
+handler.tags = ['gacha'];
+handler.command = ['charimage', 'cimage', 'wimage', 'waifuimage'];
+handler.group = true;
+handler.register = true;
 
-export default wimageHandler;
+export default handler;
