@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 
 const charactersFilePath = './media/database/characters.json';
+const haremFilePath = './media/database/harem.json';
 
 const cooldowns = {};
 
@@ -21,7 +22,7 @@ async function saveCharacters(characters) {
     }
 }
 
-let claimHandler = async (m, { conn }) => {
+let handler = async (m, { conn }) => {
     const userId = m.sender;
     const now = Date.now();
 
@@ -33,11 +34,16 @@ let claimHandler = async (m, { conn }) => {
     }
 
     if (m.quoted && m.quoted.sender === conn.user.jid) {
-        const quotedMessageId = m.quoted.id;
-
         try {
             const characters = await loadCharacters();
-            const characterId = m.quoted.text.match(/ID: \*(.+?)\*/)[1]; 
+            const characterIdMatch = m.quoted.text.match(/ID: \*(.+?)\*/);
+
+            if (!characterIdMatch) {
+                await conn.reply(m.chat, '《✧》No se pudo encontrar el ID del personaje en el mensaje citado.', m);
+                return;
+            }
+
+            const characterId = characterIdMatch[1];
             const character = characters.find(c => c.id === characterId);
 
             if (!character) {
@@ -45,11 +51,12 @@ let claimHandler = async (m, { conn }) => {
                 return;
             }
 
-            if (character.user) {
-                await conn.reply(m.chat, `《✧》El personaje ya ha sido reclamado por @${character.user.split('@')[0]}, inténtalo a la próxima :v.`, m);
+            if (character.user && character.user !== userId) {
+                await conn.reply(m.chat, `《✧》El personaje ya ha sido reclamado por @${character.user.split('@')[0]}, inténtalo a la próxima :v.`, m, { mentions: [character.user] });
                 return;
             }
 
+            // Cambiar el estado del personaje a "Reclamado"
             character.user = userId;
             character.status = "Reclamado";
 
@@ -67,8 +74,10 @@ let claimHandler = async (m, { conn }) => {
     }
 };
 
-claimHandler.help = ['claim'];
-claimHandler.tags = ['gacha'];
-claimHandler.command = ['c', 'claim', 'reclamar'];
+handler.help = ['claim'];
+handler.tags = ['gacha'];
+handler.command = ['c', 'claim', 'reclamar'];
+handler.group = true;
+handler.register = true;
 
-export default claimHandler;
+export default handler;
