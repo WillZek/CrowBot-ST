@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
 
 const charactersFilePath = './media/database/characters.json';
+const haremFilePath = './media/database/harem.json';
 
 const cooldowns = {};
 
@@ -9,7 +10,7 @@ async function loadCharacters() {
         const data = await fs.readFile(charactersFilePath, 'utf-8');
         return JSON.parse(data);
     } catch (error) {
-        throw new Error(`❀ No se pudo cargar el archivo characters.json : ${error.message}`);
+        throw new Error('❀ No se pudo cargar el archivo characters.json.');
     }
 }
 
@@ -21,7 +22,24 @@ async function saveCharacters(characters) {
     }
 }
 
-let rollHandler = async (m, { conn }) => {
+async function loadHarem() {
+    try {
+        const data = await fs.readFile(haremFilePath, 'utf-8');
+        return JSON.parse(data);
+    } catch (error) {
+        return [];
+    }
+}
+
+async function saveHarem(harem) {
+    try {
+        await fs.writeFile(haremFilePath, JSON.stringify(harem, null, 2), 'utf-8');
+    } catch (error) {
+        throw new Error('❀ No se pudo guardar el archivo harem.json.');
+    }
+}
+
+let handler = async (m, { conn }) => {
     const userId = m.sender;
     const now = Date.now();
 
@@ -35,7 +53,10 @@ let rollHandler = async (m, { conn }) => {
     try {
         const characters = await loadCharacters();
         const randomCharacter = characters[Math.floor(Math.random() * characters.length)];
+        const randomImage = randomCharacter.img[Math.floor(Math.random() * randomCharacter.img.length)];
 
+        const harem = await loadHarem();
+        const userEntry = harem.find(entry => entry.characterId === randomCharacter.id);
         const statusMessage = randomCharacter.user 
             ? `Reclamado por @${randomCharacter.user.split('@')[0]}` 
             : 'Libre';
@@ -43,10 +64,26 @@ let rollHandler = async (m, { conn }) => {
         const message = `❀ Nombre » *${randomCharacter.name}*
 ⚥ Género » *${randomCharacter.gender}*
 ✰ Valor » *${randomCharacter.value}*
-♡ Estado » *${statusMessage}*
-❖ Fuente » *${randomCharacter.source}*`;
+♡ Estado » ${statusMessage}
+❖ Fuente » *${randomCharacter.source}*
+ID: *${randomCharacter.id}*`;
 
-        await conn.sendFile(m.chat, randomCharacter.img, `${randomCharacter.name}.jpg`, message, m);
+        const mentions = userEntry ? [userEntry.userId] : [];
+        await conn.sendFile(m.chat, randomImage, `${randomCharacter.name}.jpg`, message, m, { mentions });
+
+        if (!randomCharacter.user) {
+            randomCharacter.user = userId;
+            const userEntry = {
+                userId: userId,
+                characterId: randomCharacter.id,
+                lastVoteTime: now,
+                voteCooldown: now + 1.5 * 60 * 60 * 1000
+            };
+            harem.push(userEntry);
+            await saveHarem(harem);
+        }
+
+        await saveCharacters(characters);
         cooldowns[userId] = now + 15 * 60 * 1000;
 
     } catch (error) {
@@ -54,8 +91,10 @@ let rollHandler = async (m, { conn }) => {
     }
 };
 
-rollHandler.help = ['rw', 'rollwaifu'];
-rollHandler.tags = ['gacha'];
-rollHandler.command = ['roll', 'rw', 'rollwaifu'];
+handler.help = ['rw'];
+handler.tags = ['gacha'];
+handler.command = ['rw', 'rollwaifu'];
+handler.group = true;
+handler.register = true;
 
-export default rollHandler;
+export default handler;
