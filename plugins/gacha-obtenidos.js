@@ -1,19 +1,30 @@
 import { promises as fs } from 'fs';
 
 const charactersFilePath = './media/database/characters.json';
+const haremFilePath = './media/database/harem.json';
 
 async function loadCharacters() {
     try {
         const data = await fs.readFile(charactersFilePath, 'utf-8');
         return JSON.parse(data);
     } catch (error) {
-        throw new Error('《✧》No se pudo cargar el archivo characters.json.');
+        throw new Error('❀ No se pudo cargar el archivo characters.json.');
+    }
+}
+
+async function loadHarem() {
+    try {
+        const data = await fs.readFile(haremFilePath, 'utf-8');
+        return JSON.parse(data);
+    } catch (error) {
+        return [];
     }
 }
 
 let handler = async (m, { conn, args }) => {
     try {
         const characters = await loadCharacters();
+        const harem = await loadHarem();
         let userId;
 
         if (m.quoted && m.quoted.sender) {
@@ -27,7 +38,7 @@ let handler = async (m, { conn, args }) => {
         const userCharacters = characters.filter(character => character.user === userId);
 
         if (userCharacters.length === 0) {
-            await conn.reply(m.chat, '《✧》No tiene personajes reclamados en tu harem.', m);
+            await conn.reply(m.chat, '❀ No tiene personajes reclamados en tu harem.', m);
             return;
         }
 
@@ -43,7 +54,7 @@ let handler = async (m, { conn, args }) => {
             return;
         }
 
-        let message = `「✿」Personajes reclamados\n`;
+        let message = `✿ Personajes reclamados ✿\n`;
         message += `⌦ Usuario: @${userId.split('@')[0]}\n`;
         message += `♡ Personajes: *(${totalCharacters}):*\n\n`;
 
@@ -62,6 +73,8 @@ let handler = async (m, { conn, args }) => {
 
 handler.help = ['harem [@usuario] [pagina]'];
 handler.tags = ['gacha'];
-handler.command = ['harem', 'obtenidos', 'ob'];
+handler.command = ['harem', 'claims', 'waifus'];
+handler.group = true;
+handler.register = true;
 
 export default handler;
