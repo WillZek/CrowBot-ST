@@ -33,7 +33,8 @@ let handler = async (m, { conn, args }) => {
             return;
         }
 
-        const randomVideo = character.video;
+        // Seleccionar un video aleatorio
+        const randomVideo = character.vid[Math.floor(Math.random() * character.vid.length)];
 
         const message = `❀ Nombre » *${character.name}*
 ⚥ Género » *${character.gender}*
@@ -48,5 +49,7 @@ let handler = async (m, { conn, args }) => {
 handler.help = ['wvideo <nombre del personaje>'];
 handler.tags = ['gacha'];
 handler.command = ['charvideo', 'cvideo', 'wvideo', 'waifuvideo'];
+handler.group = true;
+handler.register = true;
 
 export default handler;
