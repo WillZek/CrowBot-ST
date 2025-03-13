@@ -8,7 +8,7 @@ let api = await(await fetch(`https://api.fgmods.xyz/api/downloader/ytmp3?url=${a
 
 if (!api?.result.dl_url) return m.reply('No Se  Encontraron Resultados');
 
-let txt = `「✦」𝗧𝗶𝘁𝘂𝗹𝗼: ${api.title}`;
+let txt = `「✦」𝗧𝗶𝘁𝘂𝗹𝗼: ${api.result.title}`;
 conn.reply(m.chat, txt, m, rcanal);
 
 conn.sendMessage(m.chat, { audio: { url: api.result.dl_url }, mimetype: 'audio/mpeg' }, { quoted: m });
