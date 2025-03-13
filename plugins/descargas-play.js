@@ -17,11 +17,11 @@ conn.sendMessage(m.chat, { image: { url: pene.data.image }, caption: texto }, { 
 m.react(done);
 
 if (command == 'ytmp3doc' || command == 'mp3doc' || command == 'ytadoc') {
-let api = await(await fetch(`https://dark-core-api.vercel.app/api/download/YTMP3?key=dk-vip&url=${args[0]}`)).json();
+let api = await(await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${args[0]}&quality=480p&apikey=elrebelde21`)).json();
 
-if (!api?.download) return m.reply('No Se  Encontraron Resultados');
+if (!api?.result.dl_url) return m.reply('No Se  Encontraron Resultados');
 
-await conn.sendMessage(m.chat, { document: { url: api.download }, mimetype: 'audio/mpeg', fileName: `${api.title}.mp3` }, { quoted: m });
+await conn.sendMessage(m.chat, { document: { url: api.result.dl_url }, mimetype: 'audio/mpeg', fileName: `${api.title}.mp3` }, { quoted: m });
  }
 
 if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
