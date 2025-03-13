@@ -21,7 +21,7 @@ let api = await(await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${a
 
 if (!api?.result.dl_url) return m.reply('No Se  Encontraron Resultados');
 
-await conn.sendMessage(m.chat, { document: { url: api.result.dl_url }, mimetype: 'audio/mpeg', fileName: `${api.title}.mp3` }, { quoted: m });
+await conn.sendMessage(m.chat, { document: { url: api.result.dl_url }, mimetype: 'audio/mpeg', fileName: `${api.result.title}.mp3` }, { quoted: m });
  }
 
 if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
