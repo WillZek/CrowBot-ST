@@ -6,7 +6,7 @@
 
 let handler = async (m, { conn, text, isRowner }) => {
   if (!text) {
-    return m.reply('🎩 Debes proporcionar el mensaje de bienvenida después del comando. Ejemplo: `.setwelcome ¡Bienvenido al grupo!`');
+    return m.reply('《★》Debes proporcionar el mensaje de bienvenida después del comando. Ejemplo: `.setwelcome ¡Bienvenido al grupo!`');
   }
 
   const welcomeMessage = text.trim();
@@ -14,10 +14,10 @@ let handler = async (m, { conn, text, isRowner }) => {
   try {
     global.db.data.chats[m.chat].welcomeMessage = welcomeMessage;
 
-    m.reply(`🎩 El mensaje de bienvenida del grupo ha sido actualizado correctamente a: ${welcomeMessage}`);
+    m.reply(`《★》El mensaje de bienvenida del grupo ha sido actualizado correctamente a: ${welcomeMessage}`);
   } catch (error) {
     console.error(error);
-    m.reply('🎩 Hubo un error al intentar cambiar el mensaje de bienvenida.');
+    m.reply('《★》Hubo un error al intentar cambiar el mensaje de bienvenida.');
   }
 };
 
