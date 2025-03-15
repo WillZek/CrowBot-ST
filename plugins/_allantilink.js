@@ -38,57 +38,57 @@ return m.reply(`《★》Las restricciones no estan activas.`)
     
 if (chat.antiYoutube && isAntiLinkYt) {
 if (isBotAdmin && bot.restrict) {
-await conn.reply(m.chat, `『✦』Se detecto un enlace de \`YouTube\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
+await conn.reply(m.chat, `《★》Se detecto un enlace de \`YouTube\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!isBotAdmin) {
-return m.reply(`『✦』El bot no es admin, no puedo eliminar personas.`)
+return m.reply(`《★》El bot no es admin, no puedo eliminar personas.`)
 } else if (!bot.restrict) {
-return m.reply(`『✦』Las restricciones no estan activas.`)
+return m.reply(`《★》Las restricciones no estan activas.`)
 }}  
     
 if (chat.antiTelegram && isAntiLinkTel) {
 if (isBotAdmin && bot.restrict) {
-await conn.reply(m.chat, `『✦』Se detecto un enlace de \`Telegram\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
+await conn.reply(m.chat, `《★》Se detecto un enlace de \`Telegram\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!isBotAdmin) {
-return m.reply(`『✦』El bot no es admin, no puedo eliminar personas.`)
+return m.reply(`《★》El bot no es admin, no puedo eliminar personas.`)
 } else if (!bot.restrict) {
-return m.reply(`『✦』Las restricciones no estan activas.`)
+return m.reply(`《★》Las restricciones no estan activas.`)
 }}    
     
 if (chat.antiFacebook && isAntiLinkFb) {
 if (isBotAdmin && bot.restrict) {
-await conn.reply(m.chat, `『✦』Se detecto un enlace de \`Facebook\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
+await conn.reply(m.chat, `《★》Se detecto un enlace de \`Facebook\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!isBotAdmin) {
-return m.reply(`『✦』El bot no es admin, no puedo eliminar personas.`)
+return m.reply(`《★》El bot no es admin, no puedo eliminar personas.`)
 } else if (!bot.restrict) {
-return m.reply(`『✦』Las restricciones no estan activas.`)
+return m.reply(`《★》Las restricciones no estan activas.`)
 }}  
     
 if (chat.antiInstagram && isAntiLinkIg) {
 if (isBotAdmin && bot.restrict) {
-await conn.reply(m.chat, `『✦』Se detecto un enlace de \`Instagram\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
+await conn.reply(m.chat, `《★》Se detecto un enlace de \`Instagram\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!isBotAdmin) {
-return m.reply(`『✦』El bot no es admin, no puedo eliminar personas.`)
+return m.reply(`《★》El bot no es admin, no puedo eliminar personas.`)
 } else if (!bot.restrict) {
-return m.reply(`『✦』Las restricciones no estan activas.`)
+return m.reply(`《★》Las restricciones no estan activas.`)
 }}
     
 if (chat.antiTwitter && isAntiLinkTw) {
 if (isBotAdmin && bot.restrict) {
-await conn.reply(m.chat, `『✦』Se detecto un enlace de \`Twitter\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
+await conn.reply(m.chat, `《★》Se detecto un enlace de \`Twitter\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!isBotAdmin) {
-return m.reply(`『✦』El bot no es admin, no puedo eliminar personas.`)
+return m.reply(`《★》El bot no es admin, no puedo eliminar personas.`)
 } else if (!bot.restrict) {
-return m.reply(`『✦』Las restricciones no estan activas.`)
+return m.reply(`《★》Las restricciones no estan activas.`)
 }}
 return !0
 }
