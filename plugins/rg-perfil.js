@@ -21,7 +21,7 @@ var handler = async (m, { conn }) => {
         who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender;
     }
 
-    let pp = await conn.profilePictureUrl(who, 'image').catch(_ => imagen1);
+    let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://i.ibb.co/d0sfxs0T/file.jpg');
     let { premium, level, genre, birth, description, estrellas, exp, lastclaim, registered, regTime, age, role } = global.db.data.users[who] || {};
     let username = conn.getName(who);
 
