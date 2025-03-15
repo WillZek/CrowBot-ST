@@ -33,7 +33,7 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   let video = data.url;
 
   try {
-    await conn.sendMessage(m.chat, { video: { url: video }, caption: '*Descargado Con Exito ✓*', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
+    await conn.sendMessage(m.chat, { video: { url: video }, caption: '《★》 *Descargado Con Exito ✓*', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
   } catch (error) {
     return conn.reply(m.chat, '*`Error al enviar el video.`*', m);
   await m.react('❌');
