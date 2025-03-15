@@ -1,4 +1,4 @@
-// Créditos Del Código A FzTesis
+// Créditos Del Código A FzTeis
 
 import axios from 'axios';
 import baileys from '@whiskeysockets/baileys';
