@@ -35,7 +35,7 @@ let handler = async (m, { conn, text, args, setting }) => {
           externalAdReply: {
             title: videoInfo.title,
             body: "Descargar video",
-            thumbnail: await (await fetch(menu)).buffer(),
+            thumbnail: imagen1,
             sourceUrl: text,
             mediaType: 1,
             renderLargerThumbnail: true
@@ -64,8 +64,8 @@ let handler = async (m, { conn, text, args, setting }) => {
           externalAdReply: {
             title: "Resultados de búsqueda",
             body: "Veohentai",
-            thumbnail: await (await fetch(menu)).buffer(),
-            sourceUrl: insta,
+            thumbnail: imagen1,
+            sourceUrl: redes,
             mediaType: 1,
             renderLargerThumbnail: true
           }
