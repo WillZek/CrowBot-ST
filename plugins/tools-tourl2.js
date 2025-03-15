@@ -45,7 +45,7 @@ let handler = async (m, { conn, text, command, usedPrefix }) => {
     conn.sendMessage(m.chat, { text: cap }, { quoted: m });
 };
 handler.tags = ["tools"]
-handler.help = handler.command = ["up", "tourl"];
+handler.help = handler.command = ["up", "tourl2"];
 export default handler;
 
 async function upload(filePath) {
