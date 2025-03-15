@@ -27,13 +27,13 @@ const isAntiLinkTw = isLinkTw.exec(m.text)
  
 if (chat.antiTiktok && isAntiLinkTik) {  
 if (isBotAdmin && bot.restrict) {
-await conn.reply(m.chat, `『✦』Se detecto un enlace de \`TikTok\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
+await conn.reply(m.chat, `《★》Se detecto un enlace de \`TikTok\`.\nSeras eliminado/a: *@${toUser}*`, null, { mentions: [aa] })
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }})
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
 } else if (!isBotAdmin) {
-return m.reply(`『✦』El bot no es admin, no puedo eliminar personas.`)
+return m.reply(`《★》El bot no es admin, no puedo eliminar personas.`)
 } else if (!bot.restrict) {
-return m.reply(`『✦』Las restricciones no estan activas.`)
+return m.reply(`《★》Las restricciones no estan activas.`)
 }}
     
 if (chat.antiYoutube && isAntiLinkYt) {
