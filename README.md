@@ -168,6 +168,8 @@ npm start
 ```
 > **Si después de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal**
 
+> [**`CrowBot Archivos`**](https://github.com/WillZek/CrowBot-ST/archive/refs/heads/master.zip)
+
 </details>
 
 ---
