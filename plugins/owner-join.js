@@ -32,8 +32,9 @@ let handler = async (m, { conn, text, isOwner, usedPrefix, command }) => {
     let chats = global.db.data.chats[res]
     if (!chats) chats = global.db.data.chats[res] = {}
     if (expired) chats.expired = +new Date() + expired * 1000 * 60 * 60 * 24
-  const pp = './media/menus/Menu3.jpg';
+/*  const pp = './media/menus/Menu3.jpg';
   conn.sendFile(m.chat, pp, 'error.jpg', text, m, false);
+*/
 }
 
 handler.help = ['join *<link> <días>*']
