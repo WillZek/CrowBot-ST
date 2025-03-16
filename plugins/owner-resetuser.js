@@ -27,7 +27,7 @@ const handler = async (m, { conn, text }) => {
         conn.sendMessage(m.chat, {text: `🚩 *Éxito Todos Los Datos Del User: @${userNumber} Ya Fuerón Eliminados De Mi Base De Datos.*`, mentions: [user]}, {quoted: fkontak});
 };
 handler.tags = ['owner'];
-handler.command = /(restablecerdatos|deletedatauser|resetuser|borrardatos)$/i;
+handler.command = /(restablecerdatos|deletedatauser|resetuser|borrardatos|restartuser)$/i;
 handler.mods = true;
 
 export default handler;
