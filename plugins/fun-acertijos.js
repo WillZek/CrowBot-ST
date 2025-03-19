@@ -8,7 +8,7 @@ const handler = async (m, {conn, usedPrefix}) => {
     conn.reply(m.chat, '*Todavía hay acertijos sin responder en este chat*', conn.tekateki[id][0]);
     throw false;
   }
-  const tekateki = JSON.parse(fs.readFileSync(`./media/game/acertijo.json`));
+  const tekateki = JSON.parse(fs.readFileSync(`./media/database/acertijo.json`));
   const json = tekateki[Math.floor(Math.random() * tekateki.length)];
   const _clue = json.response;
   const clue = _clue.replace(/[A-Za-z]/g, '_');
