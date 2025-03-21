@@ -116,6 +116,8 @@ chat.antiLink2 = false
 chat.antiBot2 = false
                 if (!('antitoxic' in chat))
 chat.antitoxic = false
+                if (!('autoresponder' in chat))
+chat.autoresponder = false
                 if (!('antiver' in chat))
                     chat.antiver = false
                 if (!('delete' in chat))
@@ -132,6 +134,7 @@ chat.antitoxic = false
                     antiLink: false,
                     antiLink2: false,
                     onlyLatinos: false,
+                    autoresponder: false,
                     antitoxic: false, 
                     simi: false,
                     autolevelup: false,
