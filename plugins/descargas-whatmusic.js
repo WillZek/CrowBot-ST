@@ -1,84 +1,77 @@
-import fetch from 'node-fetch'
-import FormData from 'form-data'
-import fs from 'fs'
+import acrcloud from "acrcloud";
 
-let handler = async (m) => {
-let q = m.quoted ? m.quoted : m
-let mime = q.mediaType || ''
-if (/audio|video/.test(mime)) {
-let media = await q.download(true)
-let upload = await uploadFile(media)
-let shp = await fetch(`https://apis-starlights-team.koyeb.app/starlight/chazam?url=${upload.files[0].url}`, { headers: { 'Content-Type': 'application/json' }})
-let json = await shp.json()
-let app = { title: json.title, artist: json.artist, type: json.type, url: json.url }
-let txt = `*\`-• C H A Z A M - M U S I C •-\`*\n\n` +
-`🍟 *Nombre:* ${app.title}\n` +
-`🍟 *Artista:* ${app.artist}\n` +
-`🍟 *Tipo:* ${app.type}\n` +
-`🍟 *Link:* ${app.url}`
-m.reply(txt)
-} else {
-return conn.reply(m.chat, '🚩 Responde a un *Audio/Video.*', m, rcanal)
-}}
-handler.help = ['shazam *<Audio/Video>*']
-handler.tags = ['tools']
-handler.command = /^(shazam | whatmusic)$/i
-handler.register = true
+const acr = new acrcloud({
+   host: "identify-ap-southeast-1.acrcloud.com",
+   access_key: "ee1b81b47cf98cd73a0072a761558ab1",
+   access_secret: "ya9OPe8onFAnNkyf9xMTK8qRyMGmsghfuHrIMmUI",
+});
 
+let handler = async(m, { conn, text }) => {
+      let q = m.quoted ? m.quoted : m;
+      if (!q.mimetype || !q.mimetype.includes("audio")) {
+         return m.reply("🍭 Responde al audio del cual deseas buscar el título. Si es un vídeo, conviertelo a audio usando : #tomp3");
+      }
+      m.react('⌛')
+      let buffer = await q.download();
+      try {
+         let data = await whatmusic(buffer);
+         if (!data.length) return m.reply("No se encontraron datos de la canción")
+
+         let cap = "      乂 \`S H A Z A M\`\n\n";
+         for (let result of data) {
+            cap += `   ◦  ✨ \`Título :\` ${result.title}\n`;
+            cap += `   ◦  🌿 \`Artista :\` ${result.artist}\n`;
+            cap += `   ◦  🌱 \`Duración :\` ${result.duration}\n`;
+            cap += `   ◦  🌾 \`Fuentes :\` ${result.url.filter(x => x).map(i => `\n${i}`).join("\n")}\n\n`;
+         }
+conn.relayMessage(m.chat, {
+extendedTextMessage:{
+                text: cap + footer, 
+                contextInfo: {
+                mentionedJid: conn.parseMention(cap),
+                externalAdReply: {
+                        title: wm,
+                        mediaType: 1,
+                        previewType: 0,
+                        renderLargerThumbnail: true,
+                        thumbnail: await (await fetch(menu)).buffer(),
+                        sourceUrl: ''
+                    }
+                }
+}}, { quoted: m })
+         m.react('💠')
+      } catch (error) {
+         console.error(error);
+         m.reply("Ocurrió un error al identificar la música. Inténtalo nuevamente.")
+      }
+   }
+handler.command = ["whatmusic", "shazam"]
+handler.help = ["whatmusic"]
+handler.tags = ["tools"]
 export default handler
 
-async function uploadFile(path) {
-let form = new FormData()
-form.append('files[]', fs.createReadStream(path))
-let res = await (await fetch('https://uguu.se/upload.php', { method: 'post',
-headers: {
-...form.getHeaders()
-},
-body: form
-})).json()
-await fs.promises.unlink(path)
-return res
+async function whatmusic(buffer) {
+   let data = (await acr.identify(buffer)).metadata;
+   if (!data.music) return [];
+
+   return data.music.map(a => ({
+      title: a.title,
+      artist: a.artists[0].name,
+      duration: toTime(a.duration_ms),
+      url: Object.keys(a.external_metadata).map(i =>
+         i === "youtube"
+            ? "https://youtu.be/" + a.external_metadata[i].vid
+            : i === "deezer"
+               ? "https://www.deezer.com/us/track/" + a.external_metadata[i].track.id
+               : i === "spotify"
+                  ? "https://open.spotify.com/track/" + a.external_metadata[i].track.id
+                  : ""
+      ),
+   }));
 }
 
-/* import acrcloud from 'acrcloud'
-import { youtubedl, youtubedlv2 } from '@bochilteam/scraper'
-import yts from 'yt-search'
-
-let acr = new acrcloud({
-  host: 'identify-eu-west-1.acrcloud.com',
-  access_key: 'c33c767d683f78bd17d4bd4991955d81',
-  access_secret: 'bvgaIAEtADBTbLwiPGYlxupWqkNGIjT7J9Ag2vIu'
-})
-let handler = async (m, { conn, usedPrefix, command }) => {
-  let q = m.quoted ? m.quoted : m
-  let mime = (q.msg || q).mimetype || q.mediaType || ''
-  if (/video|audio/.test(mime)) {
-  let buffer = await q.download()
-  let user = global.db.data.users[m.sender]
-  await m.react('🕓')
-  let { status, metadata } = await acr.identify(buffer)
-  if (status.code !== 0) throw status.msg 
-  let { title, artists, album, genres, release_date } = metadata.music[0]
-  let res = await yts(title)
-  let vid = res.videos[0]
-  let v = vid.url
-  let yt = await youtubedl(v).catch(async () => await youtubedlv2(v))
-  let url = await yt.audio['128kbps'].download()
-  let title2 = await yt.title
-  let txt = '`W H A T M U S I C  -  T O O L S`\n\n'
-      txt += `        🎩   *Titulo* : ${title}${artists ? `\n        🌟   *Artists* : ${artists.map(v => v.name).join(', ')}` : ''}`
-      txt += `${album ? `\n        👑   *Album* : ${album.name}` : ''}${genres ? `\n        👥   *Genero* : ${genres.map(v => v.name).join(', ')}` : ''}\n`
-      txt += `        📆   *Fecha de lanzamiento* : ${release_date}\n\n`
-      txt += `> 🍭 *${wm}*`
-  await conn.sendFile(m.chat, vid.thumbnail, 'thumbnail.jpg', txt, m, null, rcanal)
-  await conn.sendFile(m.chat, url, title2 + '.mp3', null, m, false, { mimetype: 'audio/mpeg', asDocument: user.useDocument })
-  await m.react('✅')
-  } else return conn.reply(m.chat, `🍭 Etiqueta un audio o video de poca duración con el comando *${usedPrefix + command}* para ver que música contiene.`, m, rcanal)
+function toTime(ms) {
+   let m = Math.floor(ms / 60000) % 60;
+   let s = Math.floor(ms / 1000) % 60;
+   return [m, s].map(v => v.toString().padStart(2, "0")).join(":");
 }
-handler.help = ['whatmusic *<audio/video>*']
-handler.tags = ['tools']
-handler.command = ['whatmusic', 'shazam']
-//handler.limit = 1
-handler.register = true 
-export default handler
-*/
