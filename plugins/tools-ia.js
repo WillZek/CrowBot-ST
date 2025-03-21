@@ -8,6 +8,7 @@ let handler = async(m, { conn, usedPrefix, command, text }) => {
 
 if (!text) return m.reply('🍭 Ingresa Un Texto');
 
+await m.react('💬')
 try {
 const username = `${conn.getName(m.sender)}`
 
@@ -17,7 +18,6 @@ const api = await (await fetch(`https://delirius-apiofc.vercel.app/ia/gptprompt?
 
 let respuesta = api.data;
 
-await m.react('🕒');
 await conn.sendMessage(m.chat, { text: respuesta }, { quoted: m });
 m.react(done);
 
