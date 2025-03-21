@@ -17,7 +17,7 @@ const api = await (await fetch(`https://delirius-apiofc.vercel.app/ia/gptprompt?
 
 let respuesta = api.data;
 
-await m.react(rwait);
+await m.react('🕒');
 await conn.sendMessage(m.chat, { text: respuesta }, { quoted: m });
 m.react(done);
 
