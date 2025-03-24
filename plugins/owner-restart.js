@@ -1,42 +1,25 @@
-import { spawn } from 'child_process';
-
+import { spawn } from 'child_process'
 let handler = async (m, { conn, isROwner, text }) => {
-    if (!process.send) throw '*『✦』Reiniciar: node start.js*\n*『✦』Reiniciar: node index.js*';
 
-    if (conn.user.jid === conn.user.jid) {
-        const progreso = [
-      "*🕒 iniciando proceso de reinicio de CrowBot*",
-            "□□□□□□ 0%",
-            "■□□□□□ 20%",
-            "■■□□□□ 30%",
-            "■■■□□□ 50%",
-            "■■■■□□ 60%",
-            "■■■■■□ 80%",
-            "■■■■■■ 100%",
-        ];
+if (!process.send) throw '*『✦』Reiniciar: node sunlight.js*\n*『✦』Reiniciar: node index.js*'
 
-        const { key } = await conn.sendMessage(m.chat, { text: progreso[0] }, { quoted: m });
+if (conn.user.jid == conn.user.jid) {
 
-        for (let i = 1; i < progreso.length; i++) {
-            await delay(1000);
+const { key } = await conn.sendMessage(m.chat, {text: `🗂️ Cargando...`}, {quoted: m})
+await delay(1000 * 1)
+await conn.sendMessage(m.chat, {text: `📦 Cargando...`, edit: key})
+await delay(1000 * 1)
+await conn.sendMessage(m.chat, {text: `♻️ Cargando...`, edit: key})
+await conn.sendMessage(m.chat, {text: `*『⛏️』Comenzar reinicio completo...*`, edit: key})
 
-            await conn.sendMessage(m.chat, { text: progreso[i], edit: key });
-        }
+process.send('reset')
+} else throw 'eh'
+}
 
-        await conn.sendMessage(m.chat, { text: "✅ 𝗖𝗿𝗼𝘄𝗕𝗼𝘁 reiniciado con éxito espera unos segundos asta que el proceso termine.", edit: key }, { externalAdReply: { title: botname, body: dev, sourceUrl: channel });
+handler.help = ['restart']
+handler.tags = ['owner']
+handler.command = ['restart', 'reiniciar'] 
+handler.rowner = true
 
-        await delay(2000);
-        process.send('reset');
-    } else {
-        throw 'No tienes permisos para ejecutar este comando.';
-    }
-};
-
-handler.help = ['restart'];
-handler.tags = ['tools'];
-handler.command = ['restart', 'xd', 'reiniciar'];
-handler.rowner = true;
-
-export default handler;
-
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+export default handler
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
