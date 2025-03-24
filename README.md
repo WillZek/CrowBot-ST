@@ -191,7 +191,7 @@ npm start
 * Panel: [`Panel`](https://control.luminarys.shop)
 * Canal de WhatsApp: [`Canal Masha`](https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J)
 * Comunidad: [`Aquí`](https://chat.whatsapp.com/Fz9rCXegzos1Yh0qHkxGhD)
-* Contacto(s): [`WillZek`](https://wa.me/50557865603) / [`Legend`](https://wa.me/584148256527) / [`Tesis`](https://wa.me/522431268546)
+* Contacto(s): [`Vegeta`](https://wa.me/526633900512) / [`Marcos`](https://wa.me/525653326435) / [`Adrian`](https://wa.me/595976126756)
 
 </details>
 
