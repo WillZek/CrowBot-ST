@@ -21,7 +21,7 @@ let api2 = await(await fetch(`https://api.fgmods.xyz/api/downloader/ytmp3?url=${
 
 if (!api2?.result.dl_url) return m.reply('No Se  Encontraron Resultados');
 
-await conn.sendMessage(m.chat, { audio: { url: api2.result.dl_url }, caption: `${title}`, mimetype: 'audio/mpeg', fileName: `${api2.result.title}.mp3` }, { quoted: m });
+await conn.sendMessage(m.chat, { audio: { url: api2.result.dl_url }, caption: `${api2.result.title}`, mimetype: 'audio/mpeg', fileName: `${api2.result.title}.mp3` }, { quoted: m });
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
