@@ -1,6 +1,6 @@
 
 import fs from "fs"
-let handler = async(m, { conn, usedPrefix }) {
+let handler = async(m, { conn, usedPrefix }) => {
  try {
     const user = m.sender.split("@")[0]
     if (fs.existsSync("./CrowJadiBot/" + user + "/creds.json")) {
