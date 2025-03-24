@@ -10,7 +10,6 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
 
 if (!text) return m.reply(`📩 Ingresa Un Texto Para Buscar En Happy Mod\n> Ejemplo: ${usedPrefix + command} Minecraft`);
 
-try {
 let api = `https://dark-core-api.vercel.app/api/search/happymod?key=dk-vip&text=${text}`;
 
 let response = await fetch(api);
@@ -33,11 +32,6 @@ let img = arch.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: fkontak });
 m.react('✅');
-
-} catch (e) {
-m.reply(`Error: ${e.message}`);
-m.react('✖️');
- }
 }
 
 handler.command = ['happymodsearch', 'hpmodsearch', 'hpmsearch'];
