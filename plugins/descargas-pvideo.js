@@ -29,6 +29,7 @@ let img = results.image;
         headerType: 4
     }, { quoted: m });
 */
+if (command == 'pvideo') {
 let video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${results.url}&quality=480p&apikey=elrebelde21`)).json();
 
 let link = video?.result.dl_url;
@@ -38,8 +39,7 @@ await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.res
 } catch (e) {
 m.reply(`Error: ${e.message}`);
 m.react('✖️');
-  }
-}
+}}}
 
 handler.command = ['pvideo'];
 
