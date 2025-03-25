@@ -44,6 +44,6 @@ m.react('✖️');
   }
 }
 
-handler.command = ['pvideo'];
+handler.command = ['pvideo', 'play2'];
 
 export default handler
