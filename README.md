@@ -182,15 +182,14 @@ npm start
  <summary><b> 🎩 𝗛𝗢𝗦𝗧𝗜𝗡𝗚𝗦 𝗗𝗘 𝗖𝗔𝗟𝗜𝗗𝗔𝗗</b></summary>
 
 ###  **`🍬 LUMINARY'S - HOSTING`**
-<a href="https://dash.masha-host.shop/home"><img src="https://qu.ax/aHudo.jpg" height="145px"></a>
+<a href="https://dash.luminarys.shop/home"><img src="https://qu.ax/aHudo.jpg" height="145px"></a>
 
 <details>
  <summary><b>🍂 Servidor Luminary's - Host</b></summary>
 
-* Dashboard: [`Dash`](https://home.luminarys.shop)
-* Panel: [`Panel`](https://control.luminarys.shop)
-* Canal de WhatsApp: [`Canal Masha`](https://whatsapp.com/channel/0029VaoyLfA0LKZKjEh5Yh1J)
-* Comunidad: [`Aquí`](https://chat.whatsapp.com/Fz9rCXegzos1Yh0qHkxGhD)
+* Dashboard: [`Dash`](https://dash.luminarys.shop)
+* Panel: [`Panel`](https://panel.luminarys.shop)
+* Grupo: [`Aquí`](https://chat.whatsapp.com/L29DaYhqORo2wBEF95j9D3)
 * Contacto(s): [`Vegeta`](https://wa.me/526633900512) / [`Marcos`](https://wa.me/525653326435) / [`Adrian`](https://wa.me/595976126756)
 
 </details>
