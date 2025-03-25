@@ -15,7 +15,7 @@ let txt = `✨ *Título:* ${results.title}\n⌛ *Duración:* ${results.duration}
 
 let img = results.image;
 
-conn.sendMessage(m.chat, { 
+/* conn.sendMessage(m.chat, { 
         image: { url: img }, 
         caption: txt, 
         footer: dev, 
@@ -28,6 +28,12 @@ conn.sendMessage(m.chat, {
         viewOnce: true,
         headerType: 4
     }, { quoted: m });
+*/
+let video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${results.url}&quality=480p&apikey=elrebelde21`)).json();
+
+let link = video?.result.dl_url;
+
+await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.result.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
