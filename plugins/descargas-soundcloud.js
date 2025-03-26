@@ -29,6 +29,6 @@ m.react('✖️');
   }
 }
 
-handler.command = ['play'];
+handler.command = ['play', 'paudio'];
 
 export default handler
