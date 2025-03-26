@@ -24,7 +24,7 @@ if (!api2?.result.dl_url) return m.reply('No Se  Encontraron Resultados');
 conn.sendMessage(m.chat, { audio: { url: api2.result.dl_url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 } catch (e) {
-m.reply(`Error: ${e.message}`);
+m.reply(`*No Encontramos Resultados Para Tu Búsqueda:* ${text}`);
 m.react('✖️');
   }
 }
