@@ -17,11 +17,11 @@ let img = results.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let api2 = await(await fetch(`https://api.fgmods.xyz/api/downloader/ytmp3?url=${results.url}&quality=480p&apikey=elrebelde21`)).json();
+let api2 = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${results.url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
 
-if (!api2?.result.dl_url) return m.reply('No Se  Encontraron Resultados');
+if (!api2?.data.url) return m.reply('No Se  Encontraron Resultados');
 
-conn.sendMessage(m.chat, { audio: { url: api2.result.dl_url }, mimetype: 'audio/mpeg' }, { quoted: m });
+conn.sendMessage(m.chat, { audio: { url: api2.data.url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 } catch (e) {
 m.reply(`*No Encontramos Resultados Para Tu Búsqueda*`);
