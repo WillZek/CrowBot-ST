@@ -34,8 +34,8 @@ m.react('✖️');
  }
 };
 
-handler.help = ['gpwasearch'];
+handler.help = ['buscargp'];
 handler.tag = ['buscador'];
-handler.command = ['gpwasearch', 'gpwas'];
+handler.command = ['gpwasearch', 'gpwas', 'buscargp', 'buscargrupo'];
 
 export default handler;
