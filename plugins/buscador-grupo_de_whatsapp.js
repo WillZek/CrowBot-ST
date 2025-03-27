@@ -29,7 +29,7 @@ conn.sendMessage(m.chat, { image: { url: img.thumb }, caption: txt }, { quoted: 
 m.react('✅');
 
 } catch (e) {
-m.reply(`Error: ${e.message}`);
+m.reply('💠 No Se Encontró El Grupo De WhatsApp');
 m.react('✖️');
  }
 };
