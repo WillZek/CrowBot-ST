@@ -11,9 +11,9 @@ if (!text) return m.reply(`🍭 Ingresa Un Link De YouTube\n> *Ejemplo:* https:/
 m.react(rwait);
 
 
-let video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${text}&quality=480p&apikey=elrebelde21`)).json();
+let video = await (await fetch(`https://api.agungny.my.id/api/youtube-video?url=${text}`)).json();
 
-let link = video.result.dl_url;
+let link = video.result.download;
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
