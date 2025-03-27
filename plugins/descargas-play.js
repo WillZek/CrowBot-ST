@@ -17,11 +17,11 @@ conn.sendMessage(m.chat, { image: { url: pene.data.image }, caption: texto }, { 
 m.react(done);
 
 if (command == 'ytmp3doc' || command == 'mp3doc' || command == 'ytadoc') {
-let api = await(await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${args[0]}&quality=480p&apikey=elrebelde21`)).json();
+let api = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${args[0]}&type=audio&quality=128kbps&apikey=GataDios`)).json();
 
-if (!api?.result.dl_url) return m.reply('No Se  Encontraron Resultados');
+if (!api?.data.url) return m.reply('No Se  Encontraron Resultados');
 
-await conn.sendMessage(m.chat, { document: { url: api.result.dl_url }, mimetype: 'audio/mpeg', fileName: `${api.result.title}.mp3` }, { quoted: m });
+await conn.sendMessage(m.chat, { document: { url: api.data.url }, mimetype: 'audio/mpeg', fileName: `${api.result.title}.mp3` }, { quoted: m });
  }
 
 if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
