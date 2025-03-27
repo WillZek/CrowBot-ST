@@ -31,7 +31,7 @@ let link = video?.result.result.download;
 
 if (!link) return m.reply('No Hubo Resultados');
 
-await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.result.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
+await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.result.result.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
    }
 }
 
