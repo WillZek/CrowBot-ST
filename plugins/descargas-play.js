@@ -21,7 +21,7 @@ let api = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${args[0]}&typ
 
 if (!api?.data.url) return m.reply('No Se  Encontraron Resultados');
 
-await conn.sendMessage(m.chat, { document: { url: api.data.url }, mimetype: 'audio/mpeg', fileName: `${api.result.title}.mp3` }, { quoted: m });
+await conn.sendMessage(m.chat, { document: { url: api.data.url }, mimetype: 'audio/mpeg', fileName: `${api.data.title}.mp3` }, { quoted: m });
  }
 
 if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
