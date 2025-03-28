@@ -34,7 +34,7 @@ await conn.sendMessage(m.chat, {
 */
 
 await conn.sendMessage(m.chat, {
-      video: { url: link },
+      video: { url: url },
       mimetype: "video/mp4",
       caption: `${dev}`,
     }, { quoted: m });
