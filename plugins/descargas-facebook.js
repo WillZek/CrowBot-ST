@@ -34,7 +34,7 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   let video = data.url;
 let api = await(await fetch(`https://delirius-apiofc.vercel.app/download/facebook?url=${args[0]}`)).json();
 
-let vid = api.urls.hd || api.urls.sd;
+let vid = api.urls[0].hd|| api.urls[0].sd;
 
   try {
     await conn.sendMessage(m.chat, { video: { url: vid }, caption: '《★》 *Descargado Con Exito ✓*', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
