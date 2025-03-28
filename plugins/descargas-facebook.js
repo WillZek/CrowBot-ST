@@ -1,4 +1,5 @@
- import { igdl } from 'ruhend-scraper';
+import { igdl } from 'ruhend-scraper';
+import fetch from 'node-fetch';
 
 const handler = async (m, { text, conn, args, usedPrefix, command }) => {
   if (!args[0]) {
@@ -31,9 +32,12 @@ const handler = async (m, { text, conn, args, usedPrefix, command }) => {
 
   await m.react('✅');
   let video = data.url;
+let api = await(await fetch(`https://delirius-apiofc.vercel.app/download/facebook?url=${args[0]}`)).json();
+
+let vid = api.urls.hd || api.urls.sd;
 
   try {
-    await conn.sendMessage(m.chat, { video: { url: video }, caption: '《★》 *Descargado Con Exito ✓*', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
+    await conn.sendMessage(m.chat, { video: { url: vid }, caption: '《★》 *Descargado Con Exito ✓*', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
   } catch (error) {
     return conn.reply(m.chat, '*`Error al enviar el video.`*', m);
   await m.react('❌');
