@@ -1,48 +1,36 @@
+import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs';
+import path from 'path';
 
-/* Codigo hecho por @Fabri115 y mejorado por BrunoSobrino */
-
-// Bruno zzzz
-
-import { readdirSync, unlinkSync, existsSync, promises as fs, rmSync } from 'fs'
-import path from 'path'
-
-var handler = async (m, { conn, usedPrefix }) => {
-
-if (global.conn.user.jid !== conn.user.jid) {
-return conn.reply(m.chat, '🍂 *Utiliza este comando directamente en el número principal del Bot*', m, rcanal, )
-}
-
-let chatId = m.isGroup ? [m.chat, m.sender] : [m.sender]
-let sessionPath = './CrowSession/'
-
-try {
-
-let files = await fs.readdir(sessionPath)
-let filesDeleted = 0
-for (let file of files) {
-for (let id of chatId) {
-if (file.includes(id.split('@')[0])) {
-await fs.unlink(path.join(sessionPath, file))
-filesDeleted++;
-break
-}}}
-
-if (filesDeleted === 0) {
-await conn.reply(m.chat, '🍂 *No se encontró ningún archivo que incluya la ID del chat*', m, rcanal, )
-} else {
-await conn.reply(m.chat, `🌸 *Se eliminaron ${filesDeleted} archivos de sesión*`, m, rcanal, )
-conn.reply(m.chat, `🍂 *¡Hola! ¿logras verme?*`, m, rcanal, )
-}
-} catch (err) {
-console.error('Error al leer la carpeta o los archivos de sesión:', err)
-await conn.reply(m.chat, '[🌠] *Hola Soy CrowBot Sigue El Canal💛*', m, rcanal, )
-}
-
-}
-handler.help = ['ds', 'fixmsgespera']
-handler.tags = ['info']
-handler.command = /^(fixmsgespera|ds)$/i
-handler.estrellas = 5;
-handler.register = true
-
-export default handler
+const handler = async (m, { conn, usedPrefix }) => {
+  if (global.conn.user.jid !== conn.user.jid) {
+    return conn.sendMessage(m.chat, {text: '🍭 Este comando solo puede ser utilizado en el bot principal.'}, {quoted: m});
+  }
+  await conn.sendMessage(m.chat, {text: '🍭 Iniciando...'}, {quoted: m});
+  const sessionPath = './CrowSession'
+  try {
+    if (!existsSync(sessionPath)) {
+      return await conn.sendMessage(m.chat, {text: '🍭 La carpeta sessions no existe o está vacía.'}, {quoted: m});
+    }
+    const files = await fs.readdir(sessionPath);
+    let filesDeleted = 0;
+    for (const file of files) {
+      if (file !== 'creds.json') {
+        await fs.unlink(path.join(sessionPath, file));
+        filesDeleted++;
+      }
+    }
+    if (filesDeleted === 0) {
+      await conn.sendMessage(m.chat, {text: '🍭 No se encontró ningún archivo para eliminar en la carpeta sessions.'}, {quoted: m});
+    } else {
+      await conn.sendMessage(m.chat, {text: `🍭 Se eliminaron ${filesDeleted} archivos.`}, {quoted: m});
+    }
+  } catch {
+    await conn.sendMessage(m.chat, {text: '🍭 Ocurrió un error al eliminar los archivos de sesión.'}, {quoted: m});
+  }
+  await conn.sendMessage(m.chat, {text: `¡Hola! ¿Ahora me ves?`}, {quoted: m});
+};
+//handler.tags = ['owner']
+//handler.help = ['dsowner']
+handler.command = /^(del_reg_in_session_owner|dsowner|clearallsession)$/i;
+handler.rowner = true
+export default handler;
