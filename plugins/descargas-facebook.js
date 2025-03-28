@@ -39,7 +39,7 @@ let vid = api.urls.hd || api.urls.sd;
   try {
     await conn.sendMessage(m.chat, { video: { url: vid }, caption: '《★》 *Descargado Con Exito ✓*', fileName: 'fb.mp4', mimetype: 'video/mp4' }, { quoted: m });
   } catch (error) {
-    return conn.reply(m.chat, '*`Error al enviar el video.`*', m);
+    return conn.reply(m.chat, `*Error al enviar el video.*\n> ${error.message}`, m);
   await m.react('❌');
   }
 };
