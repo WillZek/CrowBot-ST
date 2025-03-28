@@ -39,7 +39,7 @@
 "@xct007/frieren-scraper": "^0.0.2",
 "@ibaraki-douji/pixivts": "^2.4.1",
 "awesome-phonenumber": "^3.4.0",
-"ruhend-scraper": "latest",
+"ruhend-scraper": "^8.0.8",
 "gradient-string": "^2.0.2",
 "fluid-spotify.js": "latest",
 "axios": "^1.1.2",
