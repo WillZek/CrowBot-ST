@@ -12,9 +12,11 @@ if (!text) return m.reply(`🍭 Ingresa Un Link De YouTube\n> *Ejemplo:* https:/
 m.react(rwait);
 
 
-let video = await (await fetch(`https://api.agungny.my.id/api/youtube-video?url=${text}`)).json();
+// let video = await (await fetch(`https://api.agungny.my.id/api/youtube-video?url=${text}`)).json();
 
-let link = video.result.result.download;
+let data = await fg.ytmp4(text);
+let url = data.dl_url;
+// let link = video.result.result.download;
 
 if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
@@ -22,8 +24,8 @@ if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n
 
 if (video?.data?.size > limit) {
 await conn.sendMessage(m.chat, {
-      document: { url: link },
-      fileName: `${video.result.title}.mp4`,
+      document: { url: url },
+      fileName: `${data.title}.mp4`,
       mimetype: 'video/mp4', caption: '✅ Descargado Con Exito.',
       thumbnail: video.thumbnail },          
       { quoted: m })
