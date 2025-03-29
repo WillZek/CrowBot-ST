@@ -32,7 +32,7 @@ let img = results.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let video = await (await fetch(`https://api.fgmods.xyz/api/downloader/ytmp4?url=${results.url}&quality=480p&apikey=elrebelde21`)).json();
+let video = await (await fetch(`https://api.neoxr.eu/api/video?q=${results.url}&apikey=russelxz`)).json();
 
 let link = video?.result.dl_url;
 
