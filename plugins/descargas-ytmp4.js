@@ -18,7 +18,7 @@ let data = await fg.ytmp4(text);
 let url = data.dl_url;
 // let link = video.result.result.download;
 
-if (!link) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
+if (!url) return m.reply('《✧》Hubo un error al intentar acceder al link.\n> Si el problema persiste, reportalo en el grupo de soporte.');
 
 /* let limit = 5 * 1024 * 1024; // 5MB porque si
 
