@@ -1,6 +1,7 @@
 // By WillZek >> Para CrowBot
 
 import fetch from 'node-fetch';
+import fg from 'senna-fg';
 
 let handler = async(m, { conn, usedPrefix, command, text }) => {
 
@@ -32,11 +33,13 @@ let img = results.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let video = await (await fetch(`https://api.neoxr.eu/api/video?q=${results.url}&apikey=russelxz`)).json();
+// let video = await (await fetch(`https://api.neoxr.eu/api/video?q=${results.url}&apikey=russelxz`)).json();
 
-let link = video?.result.dl_url;
+// let link = video?.result.dl_url;
+let data = await fg.ytmp4(text);
+let link = data.dl_url;
 
-await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.result.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
+await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${results.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
