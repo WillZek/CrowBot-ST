@@ -30,13 +30,14 @@ let img = results.image;
         headerType: 4
     }, { quoted: m });
 */
-
+m.react('🕒');
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
 let api2 = await fetch(`https://api.giftedtech.my.id/api/download/dlmp4?apikey=gifted&url=${{results.url}`)
 let json = await api2.json()
 let { title, download_url } = json.result
-await conn.sendMessage(m.chat, { document: { url: download_url }, fileName: `${title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
+await conn.sendMessage(m.chat, { document: { url: download_url }, fileName: `${title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })
+m.react('✅');     
 
 } catch (e) {
 m.reply(`Error: ${e.message}`);
