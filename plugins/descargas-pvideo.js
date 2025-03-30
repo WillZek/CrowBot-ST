@@ -33,7 +33,7 @@ let img = results.image;
 m.react('🕒');
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let data = await fg.ytmp4(text);
+let data = await fg.ytmp4(results.url);
 let url = data.dl_url;
 
 await conn.sendMessage(m.chat, { document: { url: url }, fileName: `${results.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })
