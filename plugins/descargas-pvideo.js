@@ -30,6 +30,7 @@ let img = results.image;
         headerType: 4
     }, { quoted: m });
 */
+
 m.react('🕒');
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
