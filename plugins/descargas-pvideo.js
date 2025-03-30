@@ -1,4 +1,4 @@
-// By WillZek >> Para CrowBot
+// Código Hecho Por WillZek
 
 import fetch from 'node-fetch';
 import fg from 'senna-fg';
