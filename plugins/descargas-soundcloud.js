@@ -25,7 +25,7 @@ if (!api2?.data.url) return m.reply('No Se  Encontraron Resultados');
 
 let api2 = await(await fetch(`https://api.vreden.my.id/api/ytmp3?url=${results.url}`)).json();
 
-conn.sendMessage(m.chat, { audio: { url: result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m });
+conn.sendMessage(m.chat, { audio: { url: api2.result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 } catch (e) {
 m.reply(`*No Encontramos Resultados Para Tu Búsqueda*`);
