@@ -23,7 +23,7 @@ conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 if (!api2?.data.url) return m.reply('No Se  Encontraron Resultados');
 */
 
-let data = await fg.ytmp3(text);
+let data = await fg.ytmp4(text);
 let url = data.dl_url;
 
 conn.sendMessage(m.chat, { audio: { url: url }, mimetype: 'audio/mpeg' }, { quoted: m });
