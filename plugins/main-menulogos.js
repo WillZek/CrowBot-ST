@@ -1,6 +1,7 @@
 let handler = async (m, { isPrems, conn }) => {
 
-let img = 'https://files.catbox.moe/w1ltfq.jpg' 
+// let img = 'https://files.catbox.moe/w1ltfq.jpg'
+let img = './media/menus/Menu.jpg'; 
 
 let texto = `• 𝐌𝐄𝐍𝐔-𝐋𝐎𝐆𝐎𝐒 •
 •° 🔱 *LOGOS BY CROWBOT* 🔱 °•
