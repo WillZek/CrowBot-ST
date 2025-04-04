@@ -1,6 +1,7 @@
 // By WillZek >> https://github.com/WillZek
 
 import fetch from 'node-fetch';
+import fg from 'senna-fg';
 
 let handler = async(m, { conn, usedPrefix, command, text }) => {
 
@@ -17,9 +18,13 @@ let img = results.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let api2 = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${results.url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
+/* let api2 = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${results.url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
 
 if (!api2?.data.url) return m.reply('No Se  Encontraron Resultados');
+*/
+
+let data = await fg.ytmp3(text);
+let url = data.dl_url;
 
 conn.sendMessage(m.chat, { audio: { url: api2.data.url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
