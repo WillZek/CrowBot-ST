@@ -18,11 +18,14 @@ let img = results.image;
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: txt }, { quoted: m });
 
-let api2 = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${results.url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
+/* let api2 = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${results.url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
 
 if (!api2?.data.url) return m.reply('No Se  Encontraron Resultados');
+*/
 
-conn.sendMessage(m.chat, { audio: { url: api2.data.url }, mimetype: 'audio/mpeg' }, { quoted: m });
+let api2 = await(await fetch(`https://api.vreden.my.id/api/ytmp3?url=${results.url}`)).json();
+
+conn.sendMessage(m.chat, { audio: { url: result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 } catch (e) {
 m.reply(`*No Encontramos Resultados Para Tu Búsqueda*`);
