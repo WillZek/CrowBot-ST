@@ -4,7 +4,7 @@ import fetch from 'node-fetch';
 
 let handler = async(m, { conn, usedPrefix, command, text }) => {
 
-if (!text) return m.reply(`🍭 Ingresa Un Texto Para Buscar En Youtube\n> *Ejemplo:* ${usedPrefix + command}crow edits`);
+if (!text) return m.reply(`🍭 Ingresa Un Texto Para Buscar En Youtube\n> *Ejemplo:* ${usedPrefix + command} crow edits`);
 
 try {
 let api = await (await fetch(`https://delirius-apiofc.vercel.app/search/ytsearch?q=${text}`)).json();
