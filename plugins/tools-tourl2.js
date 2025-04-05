@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+/* import fetch from "node-fetch";
 import crypto from "crypto";
 import { FormData, Blob } from "formdata-node";
 import { fileTypeFromBuffer } from "file-type";
@@ -70,3 +70,4 @@ async function megaUpload(content) {
     return { link: null, name: randomBytes + "." + ext };
   }
 }
+*/
