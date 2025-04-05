@@ -166,6 +166,8 @@ yarn install && npm install
 ```bash
 npm start
 ```
+> Si aparece (Y/I/N/O/D/Z) [default=N] ? use la letra "y" + "ENTER" para continuar con la instalación.
+
 > **Si después de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal**
 
 > [**`CrowBot Archivos`**](https://github.com/WillZek/CrowBot-ST/archive/refs/heads/master.zip)
