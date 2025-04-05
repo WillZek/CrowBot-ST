@@ -1,43 +1,72 @@
-import fs from 'fs'
-import FormData from 'form-data'
-import axios from 'axios'
-import fetch from 'node-fetch'
+import fetch from "node-fetch";
+import crypto from "crypto";
+import { FormData, Blob } from "formdata-node";
+import { fileTypeFromBuffer } from "file-type";
 
 let handler = async (m, { conn }) => {
+  let q = m.quoted ? m.quoted : m;
+  let mime = (q.msg || q).mimetype || '';
+  if (!mime) return conn.reply(m.chat, `🍫 Por favor, responde a un archivo válido (imagen, video, etc.).`, m);
 
-  let q = m.quoted ? m.quoted : m
-  let mime = (q.msg || q).mimetype || ''
+  await m.react(rwait);
 
-  await m.react('🕒')
-  if (!mime.startsWith('image/')) {
-    return m.reply('🍭 Responde A Una Imagen ✨\n> Para Obtener El Link De Un Video Usa *#tourl2*')
+  try {
+    let media = await q.download();
+    let isTele = /image\/(png|jpe?g|gif)|video\/mp4/.test(mime);
+    let { link, name } = await megaUpload(media);
+
+    let txt = `*乂 M E G A - U P L O A D E R 乂*\n\n`;
+    txt += `*» Enlace* : ${link || 'No disponible'}\n`;
+    txt += `*» Nombre* : ${name}\n`;
+    txt += `*» Tamaño* : ${formatBytes(media.length)}\n`;
+    txt += `*» Expiración* : ${isTele ? 'No expira' : 'Desconocido'}\n\n`;
+    txt += `> *${dev}*`;
+
+    await conn.sendFile(m.chat, media, 'thumbnail.jpg', txt, m, fkontak);
+
+    await m.react(done);
+  } catch {
+    await m.react(error);
   }
+};
 
-  let media = await q.download()
-  let formData = new FormData()
-  formData.append('image', media, { filename: 'file' })
+handler.help = ['up'];
+handler.tags = ['transformador'];
+handler.command = ['up', 'to', 'tourl2'];
 
-  let api = await axios.post('https://api.imgbb.com/1/upload?key=10604ee79e478b08aba6de5005e6c798', formData, {
+export default handler;
+
+function formatBytes(bytes) {
+  if (bytes === 0) {
+    return '0 B';
+  }
+  const sizes = ['B', 'KB', 'MB', 'GB', 'TB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+  return `${(bytes / 1024 ** i).toFixed(2)} ${sizes[i]}`;
+}
+
+async function megaUpload(content) {
+  const { ext, mime } = (await fileTypeFromBuffer(content)) || {};
+  const blob = new Blob([content], { type: mime });
+  const formData = new FormData();
+  const randomBytes = crypto.randomBytes(5).toString("hex");
+  formData.append("reqtype", "fileupload");
+  formData.append("fileToUpload", blob, randomBytes + "." + ext);
+
+  const response = await fetch("https://cdnmega.vercel.app/upload", {
+    method: "POST",
+    body: formData,
     headers: {
-      ...formData.getHeaders()
-    }
-  })
+      "User-Agent":
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36",
+    },
+  });
 
-  await m.react('✅')
-  if (api.data.data) {
-    let txt = `${wm}\n\n`
-        txt += `*🔖 Titulo* : ${q.filename || 'crow'}\n`
-        txt += `*🔖 Enlace* : ${api.data.data.url}\n`
-        txt += `*🔖 Mime* : ${mime}\n`
-        txt += `*🔖 File* : ${q.filename || 'crow.jpg'}\n`
-        txt += `${dev}`
-    await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, fake)
+  const result = await response.json();
+
+  if (result.success && result.files.length > 0) {
+    return { link: result.files[0].url, name: randomBytes + "." + ext };
   } else {
-    await m.react('✅')
+    return { link: null, name: randomBytes + "." + ext };
   }
 }
-handler.tags = ['tools']
-handler.help = ['tourl']
-handler.command = /^(tourl)$/i
-handler.register = true 
-export default handler
