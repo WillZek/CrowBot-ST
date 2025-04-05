@@ -3,6 +3,7 @@
 */
 
 import fetch from 'node-fetch';
+import fg from 'senna-fg';
 
 let handler = async (m, { conn, args, command }) => {
 
@@ -27,11 +28,14 @@ await conn.sendMessage(m.chat, { document: { url: api.data.url }, mimetype: 'aud
 if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
 let video = await (await fetch(`https://api.agungny.my.id/api/youtube-video?url=${args[0]}`)).json();
 
-let link = video?.result.result.download;
+// let link = video?.result.result.download;
 
-if (!link) return m.reply('No Hubo Resultados');
+let data = await fg.ytmp4(args[0]);
+let url = data.dl_url;
 
-await conn.sendMessage(m.chat, { document: { url: link }, fileName: `${video.result.result.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
+if (!url) return m.reply('No Hubo Resultados');
+
+await conn.sendMessage(m.chat, { document: { url: url }, fileName: `${pene.data.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
    }
 }
 
