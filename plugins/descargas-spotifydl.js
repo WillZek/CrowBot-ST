@@ -24,9 +24,11 @@ moon += `☪︎ *Artista:* ${force.artis}\n`
 moon += `☪︎ *Duración:* ${force.durasi}\n`
 moon += `───── ･ ｡ﾟ☆: *.☽ .* :☆ﾟ. ─────`;
 
+m.react('🕒');
 conn.sendFile(m.chat, imagen, 'MoonForce.jpg', moon, m, null);
 
 conn.sendMessage(m.chat, { audio: { url: force.download }, mimetype: 'audio/mpeg' }, { quoted: m });
+m.react('✅');
 }
 
 MF.command = ['spotifydl', 'spdl'];
