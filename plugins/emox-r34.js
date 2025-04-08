@@ -13,7 +13,7 @@ conn.reply(m.chat, wait, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, showAdAttribution: true,
 title: packname,
 body: botname,
-previewType: 0, thumbnail: icono,
+previewType: 0, thumbnail: icons,
 sourceUrl: channel }}})
 const response = await fetch(url);
 const data = await response.json();
