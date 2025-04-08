@@ -16,7 +16,7 @@ m.react(done);
 
 } catch (error) {
 console.error(error);
-m.reply('*🚨 No Encontré Resultados');
+m.reply('*🚨 No Encontré Resultados*');
 }
 }
 handler.tags = ['tools'];
