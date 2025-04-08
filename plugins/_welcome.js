@@ -7,7 +7,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let who = m.messageStubParameters[0]
   let taguser = `@${who.split('@')[0]}`
   let chat = global.db.data.chats[m.chat]
-  let defaultImage = 'https://i.ibb.co/mVzcY6yV/file.jpg';
+  let defaultImage = 'https://cdnmega.vercel.app/media/gsw1gLhC@ew68pKDxFue1JI_z7IgeAiR61Swwz5QS0aChvcZM9CI';
 
   if (chat.welcome) {
     let img;
