@@ -21,7 +21,7 @@ let grupos = `╭┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈≫\n\n☕�
 
 ╰┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈≫`
 
-let img = 'https://i.ibb.co/nMPrKxD4/file.jpg';
+let img = 'https://cdnmega.vercel.app/media/0koXFaLT@i7K8L3tXymGVsjK7a1cLTaxk5th9cUTCpRU4FSchn-4';
 
 conn.sendMessage(m.chat, { image: { url: img }, caption: grupos }, { quoted: m });
 }
