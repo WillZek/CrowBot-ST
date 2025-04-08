@@ -62,7 +62,7 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
         contextInfo: {
             externalAdReply: {
                 title: '⊱『✅𝆺𝅥 𝗥𝗘𝗚𝗜𝗦𝗧𝗥𝗔𝗗𝗢(𝗔) 𝆹𝅥✅』⊰',
-                thumbnailUrl: 'https://cdnmega.vercel.app/media/J1ZzFDYC@wNBS8rKd-Ynw264guxMkO8Hx2CuTdAuyfE0ijGbS3Dw',
+                thumbnailUrl: 'https://cdnmega.vercel.app/media/h44y0CQD@xRux51A-53nzEWpQQYioHF2F3Pq04k9oPdDpcdNz5mw',
                 mediaType: 1,
                 renderLargerThumbnail: true
             }
