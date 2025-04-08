@@ -27,6 +27,6 @@ const handler = async (m, { conn, args, usedPrefix }) => {
 };
 handler.help = ['r34 <tag>', 'rule34 <tag>'];
 handler.command = ['r34', 'rule34'];
-handler.tags = ['nsfw'];
+handler.tags = ['emox'];
 
 export default handler;
