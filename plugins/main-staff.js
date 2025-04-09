@@ -57,7 +57,7 @@ m.react(emoji)
 }
 handler.help = ['staff']
 handler.command = ['colaboradores', 'staff']
-handler.register = true
+handler.register = false
 handler.tags = ['main', 'crow']
 handler.estrellas = 1;
 
