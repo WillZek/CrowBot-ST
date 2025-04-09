@@ -39,7 +39,7 @@ let staff = `🚩 *EQUIPO DE AYUDANTES*
 • 𝐀𝐍𝐆𝐄𝐋
 🍭 *Rol:* Mod
 💛 *Numero:* Wa.me/50368471855`
-await conn.sendFile(m.chat, 'https://cdnmega.vercel.app/media/c4hhgZgD@fGOHhRAM1CD-3_cpAQk-Q86yQnQLGHYKZ1M0P_heI9s', 'brook.jpg', staff.trim(), fkontak, true, {
+await conn.sendFile(m.chat, 'https://cdnmega.vercel.app/media/c4hhgZgD@fGOHhRAM1CD-3_cpAQk-Q86yQnQLGHYKZ1M0P_heI9s', 'staff.jpg', staff.trim(), fkontak, true, {
 contextInfo: {
 'forwardingScore': 200,
 'isForwarded': false,
