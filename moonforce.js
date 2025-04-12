@@ -22,7 +22,7 @@ import Datastore from '@seald-io/nedb';
 import store from './lib/store.js'
 import readline from 'readline'
 import NodeCache from 'node-cache' 
-import { startSubBots } from './plugins/jadibot-code.js';
+import { startSubBots } from './plugins/jadibot.js';
 import pkg from 'google-libphonenumber'
 const { PhoneNumberUtil } = pkg
 const phoneUtil = PhoneNumberUtil.getInstance()
