@@ -65,16 +65,10 @@ unwatchFile(args[0]);
 start(file);
 });
 });
-let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse());
+let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
 if (!opts['test'])
 if (!rl.listenerCount()) rl.on('line', line => {
-p.emit('message', line.trim());
-});
-}
-process.on('warning', (warning) => {
-if (warning.name === 'MaxListenersExceededWarning') {
-console.warn('🥀 Se excedió el límite de Listeners en:');
-console.warn(warning.stack);
-}
-});
-start('starcore.js');
+p.emit('message', line.trim())
+})}
+
+start('starcore.js')
