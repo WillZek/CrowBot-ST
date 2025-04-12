@@ -296,3 +296,403 @@ markOnlineOnConnect: false,
 generateHighQualityLinkPreview: true,
 syncFullHistory: false, 
 };
+
+global.conn = makeWASocket(connectionOptions)    
+
+if (!fs.existsSync(`./${authFile}/creds.json`)) {
+if (opcion === '2' || methodCode) {
+opcion = '2'
+if (!conn.authState.creds.registered) {
+let addNumber
+if (!!phoneNumber) {
+addNumber = phoneNumber.replace(/[^0-9]/g, '')
+} else {
+do {
+phoneNumber = await question(chalk.bgBlack(chalk.bold.greenBright(`\n\n🌙 ${await tr("Escriba su número")}\n\n${await tr("Ejemplo")}: 50557865603\n\n\n\n`)))
+phoneNumber = phoneNumber.replace(/\D/g,'')
+if (!phoneNumber.startsWith('+')) {
+phoneNumber = `+${phoneNumber}`
+}
+} while (!await isValidPhoneNumber(phoneNumber))
+rl.close()
+addNumber = phoneNumber.replace(/\D/g, '')
+setTimeout(async () => {
+let codeBot = await conn.requestPairingCode(addNumber)
+codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
+console.log(chalk.bold.white(chalk.bgMagenta(await tr(`CÓDIGO DE VINCULACIÓN:`))), chalk.bold.white(chalk.white(codeBot)))
+}, 2000)
+}}}
+}
+
+conn.isInit = false
+conn.well = false
+
+if (!opts['test']) {
+setInterval(async () => {
+if (global.db.data) await global.db.save();
+if (opts['autocleartmp'] && (global.support || {}).find) {
+const tmpDirs = [os.tmpdir(), 'tmp', "jadibts"];
+tmpDirs.forEach(dir => {
+cp.spawn('find', [dir, '-amin', '2', '-type', 'f', '-delete']);
+})}}, 30 * 1000)}
+if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
+
+//respaldo de la sesión
+const backupCreds = async () => {
+if (fs.existsSync(credsFile)) {
+fs.copyFileSync(credsFile, backupFile);
+console.log(await tr(`[✅] Respaldo creado en ${backupFile}`))
+} else {
+console.log(await tr('[⚠] No se encontró el archivo creds.json para respaldar.'))
+}};
+
+const restoreCreds = async () => {
+if (fs.existsSync(credsFile)) {
+fs.copyFileSync(backupFile, credsFile);
+console.log(await tr(`[✅] creds.json reemplazado desde el respaldo.`))
+} else if (fs.existsSync(backupFile)) {
+fs.copyFileSync(backupFile, credsFile);
+console.log(await tr(`[✅] creds.json restaurado desde el respaldo.`))
+} else {
+console.log(await tr('[⚠] No se encontró ni el archivo creds.json ni el respaldo.'))
+}};
+
+setInterval(async () => {
+await backupCreds();
+console.log(await tr('[♻️] Respaldo periódico realizado.'))
+}, 5 * 60 * 1000);
+
+async function connectionUpdate(update) {  
+const {connection, lastDisconnect, isNewLogin} = update
+global.stopped = connection
+if (isNewLogin) conn.isInit = true
+const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
+if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
+await global.reloadHandler(true).catch(console.error)
+//console.log(await global.reloadHandler(true).catch(console.error));
+global.timestamp.connect = new Date
+}
+if (global.db.data == null) loadDatabase()
+if (update.qr != 0 && update.qr != undefined || methodCodeQR) {
+if (opcion == '1' || methodCodeQR) {
+console.log(chalk.cyan(await tr('✅ ESCANEA EL CÓDIGO QR EXPIRA EN 45 SEGUNDOS ✅.')))
+}}
+if (connection == 'open') {
+console.log(chalk.bold.greenBright(`\n▣─────────────────────────────···\n│\n│❧ ${await tr("CONECTADO CORRECTAMENTE AL WHATSAPP")} ✅\n│\n▣─────────────────────────────···`))
+global.botStartTime = Date.now();
+await joinChannels(conn)
+}
+let reason = new Boom(lastDisconnect?.error)?.output?.statusCode
+if (connection === 'close') {
+if (reason === DisconnectReason.badSession) {
+conn.logger.error(`[ ⚠ ] ${await tr("Sesión incorrecta, por favor elimina la carpeta")} ${global.authFile} ${await tr("y escanea nuevamente")}.`);
+} else if (reason === DisconnectReason.connectionClosed) {
+conn.logger.warn(`[ ⚠ ] ${await tr("Conexión cerrada, reconectando...")}`);
+restoreCreds();
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.connectionLost) {
+conn.logger.warn(`[ ⚠ ] ${await tr("Conexión perdida con el servidor, reconectando...")}`);
+restoreCreds();
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.connectionReplaced) {
+conn.logger.error(`[ ⚠ ] ${await tr("Conexión reemplazada, se ha abierto otra nueva sesión. Por favor, cierra la sesión actual primero.")}`);
+} else if (reason === DisconnectReason.loggedOut) {
+conn.logger.error(`[ ⚠ ] ${await tr("Conexion cerrada, por favor elimina la carpeta")} ${global.authFile} ${await tr("y escanea nuevamente")}.`);
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.restartRequired) {
+conn.logger.info(`[ ⚠ ] ${await tr("Reinicio necesario, reinicie el servidor si presenta algún problema.")}`);
+await global.reloadHandler(true).catch(console.error)
+} else if (reason === DisconnectReason.timedOut) {
+conn.logger.warn(`[ ⚠ ] ${await tr("Tiempo de conexión agotado, reconectando...")}`);
+await global.reloadHandler(true).catch(console.error) //process.send('reset')
+} else {
+conn.logger.warn(`[ ⚠ ] ${await tr("Razón de desconexión desconocida.")} ${reason || ''}: ${connection || ''}`);
+}}}
+
+process.on('uncaughtException', console.error);
+
+let isInit = true;
+let handler = await import('./handler.js');
+global.reloadHandler = async function(restatConn) {
+try {
+const Handler = await import(`./handler.js?update=${Date.now()}`).catch(console.error);
+if (Object.keys(Handler || {}).length) handler = Handler;
+} catch (e) {
+console.error(e);
+}
+if (restatConn) {
+const oldChats = global.conn.chats;
+try {
+global.conn.ws.close();
+} catch { }
+conn.ev.removeAllListeners();
+global.conn = makeWASocket(connectionOptions, {chats: oldChats});
+isInit = true;
+}
+if (!isInit) {
+conn.ev.off('messages.upsert', conn.handler);
+conn.ev.off('group-participants.update', conn.participantsUpdate);
+conn.ev.off('groups.update', conn.groupsUpdate);
+conn.ev.off('message.delete', conn.onDelete);
+conn.ev.off('call', conn.onCall);
+conn.ev.off('connection.update', conn.connectionUpdate);
+conn.ev.off('creds.update', conn.credsUpdate);
+}
+
+async function setWelcomeMessage() {
+conn.welcome = `${await tr("Hola!!")} @user ${await tr("¿COMO ESTAS?")}😃\n\n『${await tr("Bienvenido A")} *@subject*』\n\n${await tr("Un gusto conocerte amig@")} 🤗\n\n_${await tr("Recuerda leer las reglas del grupo para no tener ningun problema")} 🧐_\n\n*${await tr("Solo disfrutar de este grupo y divertite")} 🥳*`
+conn.bye = `${await tr("Bueno, se fue")} @user 👋\n\n${await tr("Que dios lo bendiga")} 😎`
+conn.spromote = 'Hey @user ya forma parte de staff 👑'
+conn.sdemote = 'jajaja @user ya no eres admins'
+conn.sDesc = 'La descripción ha sido cambiada a \n@desc'
+conn.sSubject = 'El nombre del grupo ha sido cambiado a \n@group'
+conn.sIcon = 'El icono del grupo ha sido cambiado'
+conn.sRevoke = 'El enlace del grupo ha sido cambiado a \n@revoke'
+}
+
+setWelcomeMessage().catch(console.error);
+conn.handler = handler.handler.bind(global.conn);
+conn.participantsUpdate = handler.participantsUpdate.bind(global.conn);
+conn.groupsUpdate = handler.groupsUpdate.bind(global.conn);
+conn.onDelete = handler.deleteUpdate.bind(global.conn);
+conn.onCall = handler.callUpdate.bind(global.conn);
+conn.connectionUpdate = connectionUpdate.bind(global.conn);
+conn.credsUpdate = saveCreds.bind(global.conn, true);
+conn.ev.on('messages.upsert', conn.handler);
+conn.ev.on('group-participants.update', conn.participantsUpdate);
+conn.ev.on('groups.update', conn.groupsUpdate);
+conn.ev.on('message.delete', conn.onDelete);
+conn.ev.on('call', conn.onCall);
+conn.ev.on('connection.update', conn.connectionUpdate);
+conn.ev.on('creds.update', conn.credsUpdate);
+isInit = false
+return true
+}
+
+//Arranque nativo para subbots
+await startSubBots();
+
+/*const pluginFolder = global.__dirname(join(__dirname, './plugins/index'));
+const pluginFilter = (filename) => /\.js$/.test(filename);
+global.plugins = {};
+async function filesInit() {
+for (const filename of readdirSync(pluginFolder).filter(pluginFilter)) {
+try {
+const file = global.__filename(join(pluginFolder, filename));
+const module = await import(file);
+global.plugins[filename] = module.default || module;
+} catch (e) {
+conn.logger.error(e);
+delete global.plugins[filename];
+}}}
+filesInit().then((_) => Object.keys(global.plugins)).catch(console.error)*/
+
+const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
+const pluginFilter = (filename) => /\.js$/.test(filename)
+global.plugins = {}
+async function filesInit() {
+for (const filename of readdirSync(pluginFolder).filter(pluginFilter)) {
+try {
+const file = global.__filename(join(pluginFolder, filename))
+const module = await import(file)
+global.plugins[filename] = module.default || module
+} catch (e) {
+conn.logger.error(e)
+delete global.plugins[filename]
+}}}
+filesInit().then((_) => Object.keys(global.plugins)).catch(console.error)
+
+global.reload = async (_ev, filename) => {
+if (pluginFilter(filename)) {
+const dir = global.__filename(join(pluginFolder, filename), true)
+if (filename in global.plugins) {
+if (existsSync(dir)) conn.logger.info(` SE ACTULIZADO - '${filename}' CON ÉXITO`)
+else {
+conn.logger.warn(`SE ELIMINO UN ARCHIVO : '${filename}'`)
+return delete global.plugins[filename];
+}
+} else conn.logger.info(`SE DETECTO UN NUEVO PLUGINS : '${filename}'`)
+const err = syntaxerror(readFileSync(dir), filename, {
+sourceType: 'module',
+allowAwaitOutsideFunction: true,
+});
+if (err) conn.logger.error(`SE DETECTO UN ERROR DE SINTAXIS | SYNTAX ERROR WHILE LOADING '${filename}'\n${format(err)}`);
+else {
+try {
+const module = (await import(`${global.__filename(dir)}?update=${Date.now()}`));
+global.plugins[filename] = module.default || module;
+} catch (e) {
+conn.logger.error(`HAY UN ERROR REQUIERE EL PLUGINS '${filename}\n${format(e)}'`);
+} finally {
+global.plugins = Object.fromEntries(Object.entries(global.plugins).sort(([a], [b]) => a.localeCompare(b)));
+}}}};
+Object.freeze(global.reload);
+watch(pluginFolder, global.reload);
+await global.reloadHandler();
+async function _quickTest() {
+const test = await Promise.all([
+spawn('ffmpeg'),
+spawn('ffprobe'),
+spawn('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-filter_complex', 'color', '-frames:v', '1', '-f', 'webp', '-']),
+spawn('convert'),
+spawn('magick'),
+spawn('gm'),
+spawn('find', ['--version']),
+].map((p) => {
+return Promise.race([
+new Promise((resolve) => {
+p.on('close', (code) => {
+resolve(code !== 127);
+});
+}),
+new Promise((resolve) => {
+p.on('error', (_) => resolve(false));
+})]);
+}));
+
+const [ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find] = test;
+const s = global.support = {ffmpeg, ffprobe, ffmpegWebp, convert, magick, gm, find};
+Object.freeze(global.support);
+}
+
+function clearTmp() {
+const tmpDir = join(__dirname, 'tmp')
+const filenames = readdirSync(tmpDir)
+filenames.forEach(file => {
+const filePath = join(tmpDir, file)
+unlinkSync(filePath)})
+}
+
+async function purgeSession() {
+const sessionDir = './CrowSession';
+try {
+if (!existsSync(sessionDir)) return;
+const files = await readdir(sessionDir);
+const preKeys = files.filter(file => file.startsWith('pre-key-'));
+const now = Date.now();
+const oneHourAgo = now - (24 * 60 * 60 * 1000); //24 horas
+
+for (const file of preKeys) {
+const filePath = join(sessionDir, file);
+const fileStats = await stat(filePath);
+if (fileStats.mtimeMs < oneHourAgo) { 
+try {
+await unlink(filePath);
+console.log(chalk.green(`[🗑️] Pre-key ${await tr("antigua eliminada")}: ${file}`));
+} catch (err) {
+//console.error(chalk.red(`[⚠] Error al eliminar pre-key antigua ${file}: ${err.message}`));
+}} else {
+//console.log(chalk.yellow(`[ℹ️] Manteniendo pre-key activa: ${file}`));
+}}
+console.log(chalk.cyanBright(`[🔵] ${await tr("Sesiones no esenciales eliminadas de")} ${global.authFile}`));
+} catch (err) {
+//console.error(chalk.red(`[⚠] Error al limpiar BotSession: ${err.message}`));
+}}
+
+async function purgeSessionSB() {
+const jadibtsDir = './CrowJadiBot/';
+try {
+if (!existsSync(jadibtsDir)) return;
+const directories = await readdir(jadibtsDir);
+let SBprekey = [];
+const now = Date.now();
+const oneHourAgo = now - (24 * 60 * 60 * 1000); //24 horas
+
+for (const dir of directories) {
+const dirPath = join(jadibtsDir, dir);
+const stats = await stat(dirPath);
+if (stats.isDirectory()) {
+const files = await readdir(dirPath);
+const preKeys = files.filter(file => file.startsWith('pre-key-') && file !== 'creds.json');
+SBprekey = [...SBprekey, ...preKeys];
+for (const file of preKeys) {
+const filePath = join(dirPath, file);
+const fileStats = await stat(filePath);
+if (fileStats.mtimeMs < oneHourAgo) { 
+try {
+await unlink(filePath);
+console.log(chalk.green(`[🗑️] Pre-key antigua eliminada de sub-bot ${dir}: ${file}`));
+} catch (err) {
+//console.error(chalk.red(`[⚠] Error al eliminar pre-key antigua ${file} en ${dir}: ${err.message}`));
+}} else {
+//console.log(chalk.yellow(`[ℹ️] Manteniendo pre-key activa en sub-bot ${dir}: ${file}`));
+}}}}
+if (SBprekey.length === 0) {
+//console.log(chalk.green(`[ℹ️] No se encontraron pre-keys en sub-bots.`));
+} else {
+console.log(chalk.cyanBright(`[🔵] Pre-keys antiguas eliminadas de sub-bots: ${SBprekey.length}`));
+}} catch (err) {
+//console.error(chalk.red(`[⚠] Error al limpiar sub-bots: ${err.message}`));
+}}
+
+async function purgeOldFiles() {
+const directories = ['./CrowSession/', './CrowJadiBot/'];
+for (const dir of directories) {
+try {
+if (!fs.existsSync(dir)) { 
+console.log(chalk.yellow(`[⚠] Carpeta no existe: ${dir}`));
+continue;
+}
+const files = await fsPromises.readdir(dir); 
+for (const file of files) {
+if (file !== 'creds.json') {
+const filePath = join(dir, file);
+try {
+await fsPromises.unlink(filePath);
+//console.log(chalk.green(`[🗑️] Archivo residual eliminado: ${file} en ${dir}`));
+} catch (err) {
+//console.error(chalk.red(`[⚠] Error al eliminar ${file} en ${dir}: ${err.message}`));
+}}}
+} catch (err) {
+//console.error(chalk.red(`[⚠] Error al limpiar ${dir}: ${err.message}`));
+}}
+//console.log(chalk.cyanBright(`[🟠] Archivos residuales eliminados de ${directories.join(', ')}`));
+}
+
+function redefineConsoleMethod(methodName, filterStrings) {
+const originalConsoleMethod = console[methodName]
+console[methodName] = function() {
+const message = arguments[0]
+if (typeof message === 'string' && filterStrings.some(filterString => message.includes(atob(filterString)))) {
+arguments[0] = ""
+}
+originalConsoleMethod.apply(console, arguments)
+}}
+
+setInterval(async () => {
+if (stopped === 'close' || !conn || !conn.user) return;
+  await clearTmp();
+  console.log(chalk.cyan(`┏━━━━━━⪻♻️ AUTO-CLEAR 🗑️⪼━━━━━━•\n┃→ ${await tr("ARCHIVOS DE LA CARPETA TMP ELIMINADOS")}\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━•`));
+}, 1000 * 60 * 3); //3 min
+
+setInterval(async () => {
+  if (stopped === 'close' || !conn || !conn.user) return;
+  await purgeSessionSB();
+  await purgeSession();
+  console.log(chalk.bold.cyanBright(`\n╭» 🔵 ${global.authFile} 🔵\n│→ ${await tr("SESIONES NO ESENCIALES ELIMINADAS")}\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`));
+  await purgeOldFiles();
+  console.log(chalk.bold.cyanBright(`\n╭» 🟠 ARCHIVOS 🟠\n│→ ${await tr("ARCHIVOS RESIDUALES ELIMINADAS")}\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`));
+}, 1000 * 60 * 10); //10 min
+
+_quickTest().then(() => conn.logger.info('Ƈᴀʀɢᴀɴᴅᴏ．．．.\n'))
+.catch(console.error)
+
+async function isValidPhoneNumber(number) {
+try {
+number = number.replace(/\s+/g, '')
+// Si el número empieza con '+521' o '+52 1', quitar el '1'
+if (number.startsWith('+521')) {
+number = number.replace('+521', '+52'); // Cambiar +521 a +52
+} else if (number.startsWith('+52') && number[4] === '1') {
+number = number.replace('+52 1', '+52'); // Cambiar +52 1 a +52
+}
+const parsedNumber = phoneUtil.parseAndKeepRawInput(number)
+return phoneUtil.isValidNumber(parsedNumber)
+} catch (error) {
+return false
+}}
+
+async function joinChannels(conn) {
+for (const channelId of Object.values(global.ch)) {
+await conn.newsletterFollow(channelId).catch(() => {})
+}}
