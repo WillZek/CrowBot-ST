@@ -73,4 +73,4 @@ console.log('♻️ Reiniciando bot automáticamente...');
 process.exit(0); 
 }, 14400000) //4hs
 
-start('moonforce.js');
+start('starcore.js');
