@@ -1,74 +1,76 @@
-import { join, dirname } from 'path';
-import { createRequire } from 'module';
-import { fileURLToPath } from 'url';
-import { setupMaster, fork } from 'cluster';
-import { watchFile, unwatchFile } from 'fs';
-import cfonts from 'cfonts';
-import { createInterface } from 'readline';
-import yargs from 'yargs';
-import chalk from 'chalk';
-console.log('\n✰ Iniciando CrowBot ✰');
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const require = createRequire(__dirname);
-const { name, description, author, version } = require(join(__dirname, './package.json'));
-const { say } = cfonts;
-const rl = createInterface(process.stdin, process.stdout);
-say('CrowBot ST', {
-font: 'block',
-align: 'center',
-colors: ['magentaBright']
-});
-say(`Multi Device`, {
+console.log('Iniciando CrowBot') 
+import { join, dirname } from 'path'
+import { createRequire } from 'module'
+import { fileURLToPath } from 'url'
+import { setupMaster, fork } from 'cluster'
+import { watchFile, unwatchFile } from 'fs'
+import cfonts from 'cfonts'
+import { createInterface } from 'readline'
+import yargs from 'yargs'
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const require = createRequire(__dirname)
+const { name, author } = require(join(__dirname, './package.json'))
+const { say } = cfonts
+const rl = createInterface(process.stdin, process.stdout)
+
+say('CrowBot', {
 font: 'chrome',
 align: 'center',
-colors: ['redBright']
-});
-say(`Developed By • WillZek`, {
+gradient: ['red', 'magenta']})
+say(`Powered By: WillZek`, {
 font: 'console',
 align: 'center',
-colors: ['blueBright']
-});
-var isRunning = false;
+gradient: ['red', 'magenta']});
+
+let isRunning = false
+/**
+* Start a js file
+* @param {String} file `path/to/file`
+*/
 function start(file) {
-if (isRunning) return;
-isRunning = true;
-let args = [join(__dirname, file), ...process.argv.slice(2)];
-say([process.argv[0], ...args].join(' '), {
-font: 'console',
-align: 'center',
-colors: ['candy']
-});
+if (isRunning) return
+isRunning = true
+const args = [join(__dirname, file), ...process.argv.slice(2)]
+
 setupMaster({
 exec: args[0],
-args: args.slice(1),
-});
-let p = fork();
-p.on('message', data => {
+args: args.slice(1)})
+const p = fork()
+p.on('message', (data) => {
+//console.log('╭--------- - - - ✓\n┆ ✅ TIEMPO DE ACTIVIDAD ACTUALIZADA\n╰-------------------- - - -', data)
 switch (data) {
 case 'reset':
-p.process.kill();
-isRunning = false;
-start.apply(this, arguments);
-break;
+p.process.kill()
+isRunning = false
+start.apply(this, arguments)
+break
 case 'uptime':
-p.send(process.uptime());
-break;
+p.send(process.uptime())
+break
 }
-});
+})
 p.on('exit', (_, code) => {
 isRunning = false;
-console.error('🥀 Error:\n', code);
-process.exit();
-if (code === 0) return;
-watchFile(args[0], () => {
-unwatchFile(args[0]);
-start(file);
-});
-});
-let opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-if (!opts['test'])
-if (!rl.listenerCount()) rl.on('line', line => {
+console.error('⚠️ Error Inesperado ⚠️', code)
+p.process.kill()
+isRunning = false
+start.apply(this, arguments)
+if (process.env.pm_id) {
+process.exit(1)
+} else {
+process.exit()
+}})
+const opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
+if (!opts['test']) {
+if (!rl.listenerCount()) {
+rl.on('line', (line) => {
 p.emit('message', line.trim())
-})}
+})
+}}}
 
-start('starcore.js')
+setInterval(() => {
+console.log('♻️ Reiniciando bot automáticamente...');
+process.exit(0); 
+}, 14400000) //4hs
+
+start('moonforce.js');
