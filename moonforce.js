@@ -22,7 +22,6 @@ import Datastore from '@seald-io/nedb';
 import store from './lib/store.js'
 import readline from 'readline'
 import NodeCache from 'node-cache' 
-import { startSubBots } from '../plugins/jadibot.js';
 import pkg from 'google-libphonenumber'
 const { PhoneNumberUtil } = pkg
 const phoneUtil = PhoneNumberUtil.getInstance()
@@ -470,7 +469,7 @@ return true
 }
 
 //Arranque nativo para subbots
-await startSubBots();
+// await startSubBots();
 
 /*const pluginFolder = global.__dirname(join(__dirname, './plugins/index'));
 const pluginFilter = (filename) => /\.js$/.test(filename);
