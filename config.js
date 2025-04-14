@@ -29,6 +29,18 @@ global.mods = ['50368471855', '51920227615', '5219831715910', '573007796996', '5
 
 global.prems = ['573215751237']
 
+
+//*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
+
+global.libreria = 'Baileys'
+global.baileys = 'V 6.7.16' 
+global.vs = '2.2.0'
+global.nameqr = 'CrowBot-MF'
+global.namebot = 'CrowBot-MF'
+global.sessions = 'CrowSession'
+global.jadi = 'CrowJadiBot' 
+global.yukiJadibts = true // Activado
+
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.packname = '【✧】𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐌.𝐅 ❖'
