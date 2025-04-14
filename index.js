@@ -398,3 +398,85 @@ unlinkSync(`./${sessions}/${files}`)
 } 
 
 function purgeSessionSB() {
+try {
+const listaDirectorios = readdirSync(`./${jadi}/`);
+let SBprekey = [];
+listaDirectorios.forEach(directorio => {
+if (statSync(`./${jadi}/${directorio}`).isDirectory()) {
+const DSBPreKeys = readdirSync(`./${jadi}/${directorio}`).filter(fileInDir => {
+return fileInDir.startsWith('pre-key-')
+})
+SBprekey = [...SBprekey, ...DSBPreKeys];
+DSBPreKeys.forEach(fileInDir => {
+if (fileInDir !== 'creds.json') {
+unlinkSync(`./${jadi}/${directorio}/${fileInDir}`)
+}})
+}})
+if (SBprekey.length === 0) {
+console.log(chalk.bold.green(`\n╭» ❍ ${jadi} ❍\n│→ NADA POR ELIMINAR \n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻︎`))
+} else {
+console.log(chalk.bold.cyanBright(`\n╭» ❍ ${jadi} ❍\n│→ ARCHIVOS NO ESENCIALES ELIMINADOS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻︎︎`))
+}} catch (err) {
+console.log(chalk.bold.red(`\n╭» ❍ ${jadi} ❍\n│→ OCURRIÓ UN ERROR\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻\n` + err))
+}}
+
+function purgeOldFiles() {
+const directories = [`./${sessions}/`, `./${jadi}/`]
+directories.forEach(dir => {
+readdirSync(dir, (err, files) => {
+if (err) throw err
+files.forEach(file => {
+if (file !== 'creds.json') {
+const filePath = path.join(dir, file);
+unlinkSync(filePath, err => {
+if (err) {
+console.log(chalk.bold.red(`\n╭» ❍ ARCHIVO ❍\n│→ ${file} NO SE LOGRÓ BORRAR\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ✘\n` + err))
+} else {
+console.log(chalk.bold.green(`\n╭» ❍ ARCHIVO ❍\n│→ ${file} BORRADO CON ÉXITO\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻`))
+} }) }
+}) }) }) }
+
+function redefineConsoleMethod(methodName, filterStrings) {
+const originalConsoleMethod = console[methodName]
+console[methodName] = function() {
+const message = arguments[0]
+if (typeof message === 'string' && filterStrings.some(filterString => message.includes(atob(filterString)))) {
+arguments[0] = ""
+}
+originalConsoleMethod.apply(console, arguments)
+}}
+
+setInterval(async () => {
+if (stopped === 'close' || !conn || !conn.user) return
+await clearTmp()
+console.log(chalk.bold.cyanBright(`\n╭» ❍ MULTIMEDIA ❍\n│→ ARCHIVOS DE LA CARPETA TMP ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻`))}, 1000 * 60 * 4) // 4 min 
+
+setInterval(async () => {
+if (stopped === 'close' || !conn || !conn.user) return
+await purgeSession()
+console.log(chalk.bold.cyanBright(`\n╭» ❍ ${global.sessions} ❍\n│→ SESIONES NO ESENCIALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻`))}, 1000 * 60 * 10) // 10 min
+
+setInterval(async () => {
+if (stopped === 'close' || !conn || !conn.user) return
+await purgeSessionSB()}, 1000 * 60 * 10) 
+
+setInterval(async () => {
+if (stopped === 'close' || !conn || !conn.user) return
+await purgeOldFiles()
+console.log(chalk.bold.cyanBright(`\n╭» ❍ ARCHIVOS ❍\n│→ ARCHIVOS RESIDUALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ⌫ ♻`))}, 1000 * 60 * 10)
+
+_quickTest().then(() => conn.logger.info(chalk.bold(`✦  H E C H O\n`.trim()))).catch(console.error)
+
+async function isValidPhoneNumber(number) {
+try {
+number = number.replace(/\s+/g, '')
+if (number.startsWith('+521')) {
+number = number.replace('+521', '+52');
+} else if (number.startsWith('+52') && number[4] === '1') {
+number = number.replace('+52 1', '+52');
+}
+const parsedNumber = phoneUtil.parseAndKeepRawInput(number)
+return phoneUtil.isValidNumber(parsedNumber)
+} catch (error) {
+return false
+}}
