@@ -24,8 +24,9 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args, command}) => {
 let tags = {
 'descargas': 'MenuDescargas',
 }
+
 // let img = 'https://files.catbox.moe/w3s79j.jpg'
-let img = './media/menus/Menu.jpg';
+let img = 'https://cdnmega.vercel.app/media/l5pwXDAJ@gZRUbCOQitBCChp5bqOPP0LW3HXn_ENTqz5Gvrw6ts8';
 
   try {
           // DEFAULT MENU
