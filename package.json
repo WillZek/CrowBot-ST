@@ -1,8 +1,8 @@
 {
 "name": "CrowBot-MF",
 "version": "2.5.0",
-"description": "Simple WhatsApp Bot Multi Device",
-"main": "starcore.js",
+"description": "Super WhatsApp Bot Multi Device",
+"main": "index.js",
 "type": "module",
 "directories": {
 "lib": "lib",
@@ -10,11 +10,11 @@
 "plugins": "plugins"
 },
 "scripts": {
-"start": "node starcore.js",
-"qr": "node starcore.js qr",
-"code": "node starcore.js code",
+"start": "node index.js",
+"qr": "node index.js qr",
+"code": "node index.js code",
 "test": "node test.js",
-"test2": "nodemon starcore.js",
+"test2": "nodemon index.js", 
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
