@@ -4,7 +4,7 @@ const handler = async (m, {conn, isROwner, text}) => {
   const groups = Object.entries(getGroups).slice(0).map((entry) => entry[1]);
   const anu = groups.map((v) => v.id);
   const pesan = m.quoted && m.quoted.text ? m.quoted.text : text;
-  if (!pesan) throw `${emoji} Te faltó el texto.`;
+  if (!pesan) return m.reply(`${emoji} Te faltó el texto.`);
   for (const i of anu) {
     await delay(500);
     conn.relayMessage(i,
