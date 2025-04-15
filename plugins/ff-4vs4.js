@@ -4,7 +4,7 @@ let handler = async(m, { conn }) => {
 
 let vs = `🩵 4 VS 4 - FREE FIRE\n\n`
     vs += `🛡️ PARTICIPANTES:\n`
-    vs += `•\n•\n___________________________\n•\n•`
+    vs += `•\n•\n___________________________\n•\n•\n`
     vs += `💫 REGLAS:\n`
     vs += `•\n•\n•\n`
     vs += `🍨 ${dev}`
