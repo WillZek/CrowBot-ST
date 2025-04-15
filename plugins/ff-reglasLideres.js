@@ -1,6 +1,6 @@
 let handler = async (m, { conn }) => {
 
-let img = 'https://telegra.ph/file/f49d69baf52c38286c16b.jpg' // este link todavía sirve alv
+let img = 'https://raw.githubusercontent.com/The-King-Destroy/Adiciones/main/Contenido/1744692781624.jpeg' // link de la imagen By Destroy 
  
 let texto = `» 𝙍𝙀𝙂𝙇𝘼𝙎 𝙇𝙄𝘿𝙀𝙍𝙀𝙎 𝘽𝘼𝙎𝙄𝘾𝘼𝙎`
 
