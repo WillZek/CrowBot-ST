@@ -76,7 +76,7 @@ global.db.data.users[m.sender].Subs = new Date * 1
 } 
 handler.help = ['qrp', 'codep']
 handler.tags = ['serbot']
-handler.command = ['qrp', 'codep']
+handler.command = ['qrp', 'codep', 'serbot']
 export default handler 
 
 export async function yukiJadiBot(options) {
