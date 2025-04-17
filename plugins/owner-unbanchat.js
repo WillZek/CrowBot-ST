@@ -8,7 +8,7 @@ await conn.reply(m.chat, `《★》𝗖𝗿𝗼𝘄𝗕𝗼𝘁-𝗠𝗙 ya fué
 handler.help = ['unbanchat'];
 handler.tags = ['owner'];
 handler.command = ['unbanchat','desbanearchat','desbanchat']
-handler.rowner = true
+handler.owner = true 
 handler.admin = true 
 handler.botAdmin = false
 handler.group = false
