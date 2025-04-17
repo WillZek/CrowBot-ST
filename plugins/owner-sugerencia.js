@@ -13,7 +13,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 
      await conn.reply(groupChatId, m.quoted ? teks + m.quoted.text : teks, m, { mentions: [m.sender] })
 
-    m.reply('🌠 La sugerencia se envió al Staff De Sonicbot.')
+    m.reply(`🌠 La sugerencia se envió al Staff De ${botname}`) 
 }
 
 handler.help = ['sugerencia']
