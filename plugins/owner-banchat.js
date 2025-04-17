@@ -7,7 +7,7 @@ conn.reply(m.chat, `《★》𝗘𝗹 𝗕𝗼𝘁 𝗛𝗮 𝗦𝗶𝗱𝗼 �
 handler.help = ['banchat']
 handler.tags = ['owner']
 handler.command = /^banchat$/i
-handler.rowner = true
-handler.admin = true 
+handler.owner = true
+handler.admin = true
 
 export default handler
