@@ -150,6 +150,6 @@ await conn.sendMessage('120363387375075395@newsletter', { text: approvedText, co
 await conn.reply(sender, `🌸 Solicitud aceptada, Puedes Verla Aqui:\n> https://whatsapp.com/channel/0029Vb1kImN42Dcn99y1rW0E`);
 delete suggestionQueue[suggestionId];
 }};
-handler.command = ['sug', 'newcomand', 'solicitud'];
+handler.command = ['sug', 'solicitud', 'publicidad'];
 
 export default handler;
