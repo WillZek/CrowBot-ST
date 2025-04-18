@@ -182,7 +182,7 @@ if (!bot.jadibotmd) return m.reply('💛 Este Comando Se Encuentra Desactivado P
 
 handler.help = ['code'];
 handler.tags = ['serbot'];
-handler.command = ['code', 'Code', 'serbot'];
+handler.command = ['code', 'Code'];
 handler.rowner = false
 
 export default handler;
