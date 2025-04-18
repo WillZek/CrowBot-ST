@@ -16,6 +16,7 @@ global.owner = [
    ['584120346669', 'Dev ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
    ['584241836217', 'Dev Prak', true],
    ['51968382008', 'Dev Darkcore', true],
+   ['5216633900512','Dev ʙʀᴀʏᴀɴᴏғᴄ', true],
 ]
 
 global.creadorbot = [
