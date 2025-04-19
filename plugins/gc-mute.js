@@ -11,6 +11,12 @@ let handler = async (m, { conn, usedPrefix, command, isAdmin, isBotAdmin }) => {
         return conn.reply(m.chat, '🍭 Responde al mensaje del usuario que quieres mutear.', m);
     }
 
+    const ownerBot = global.owner[0][0] + '@s.whatsapp.net';
+
+    if (user === ownerBot) {
+        return conn.reply(m.chat, '🍭 No puedo mutar al propietario del bot.', m);
+    }
+
     if (command === "mute") {
         mutedUsers.add(user);
         conn.reply(m.chat, `✅ *Usuario muteado:* @${user.split('@')[0]}`, m, { mentions: [user] });
