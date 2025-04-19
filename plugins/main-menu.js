@@ -154,7 +154,7 @@ await m.react(emojis)
   await conn.sendMessage(m.chat, { 
       text: text.trim(),
       contextInfo: {
-          mentionedJid: [m.sender, userId],
+          mentionedJid: [m.sender],
           isForwarded: true,
           forwardedNewsletterMessageInfo: {
               newsletterJid: channelRD.id,
