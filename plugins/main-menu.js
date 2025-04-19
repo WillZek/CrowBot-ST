@@ -165,8 +165,8 @@ let img = 'https://raw.githubusercontent.com/WillZek/CrowBot-ST/main/media/catal
           },
           forwardingScore: 999,
           externalAdReply: {
-              title: botname,
-              body: textbot,
+              title: textbot,
+              body: dev,
               thumbnailUrl: img,
               sourceUrl: redes,
               mediaType: 1,
