@@ -110,12 +110,12 @@ ___
 <p>
 
 <a
-href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7.jpg" height="125px"></a>
+href="https://wa.me/59894243071?text="><img src="https://files.catbox.moe/44q2o7.jpg" height="125px"></a>
 
 <details>
 <summary><b> 📞 Toca Aqui</b></summary>
 
-- **Propietario:** [`Aquí`](https:/Wa.me/50557865603)
+- **Propietario:** [`Aquí`](https:/Wa.me/59894243071)
 - **Github:** [`Aqui`](https://github.com/WillZek)
 - **Instagram:** [`Aqui`](https://www.instagram.com/pina_dzn)
 - **Correo:** [`Aqui`](ninopina10@gmail.com)
@@ -192,7 +192,7 @@ npm start
 * Dashboard: [`Dash`](https://dash.luminarys.shop)
 * Panel: [`Panel`](https://panel.luminarys.shop)
 * Grupo: [`Aquí`](https://chat.whatsapp.com/L29DaYhqORo2wBEF95j9D3)
-* Contacto(s): [`Vegeta`](https://wa.me/526633900512) / [`Marcos`](https://wa.me/525653326435) / [`Adrian`](https://wa.me/595976126756)
+* Contacto(s): [`Vegeta`](https://wa.me/59894243071) / [`Marcos`](https://wa.me/59894243071) / [`Adrian`](https://wa.me/59894243071)
 
 </details>
 
@@ -229,7 +229,7 @@ href="https://dash.hostingpy.shop/"><img src="https://files.catbox.moe/lr92z2.jp
 * Panel [`Panel`](https://panel.hostingpy.shop)
 * Canal de WhatsApp [`Canal Hosting`](https://whatsapp.com/channel/0029Vak4e1R4NVifmh8Tvi3q)
 * Comunidad  [`Aquí`](https://chat.whatsapp.com/HT9YFbWTuqO0DQrq6Xxhvx)
-* Contacto(s) [`Soporte`](https://wa.me/595976126756)
+* Contacto(s) [`Soporte`](https://wa.me/59894243071)
 
 > **`Usa Mi Código de Referencia`**:
  LgZKVYOK
@@ -253,4 +253,4 @@ href="https://github.com/WillZek"><img src="https://github.com/WillZek.png" widt
 
 </details>
 
-> **[✎ P᥆ᥕᥱrᥱძ ᑲᥡ m᥆᥆ᥒ𝖿᥆rᥴᥱ 𝗍ᥱᥲm ❀](https://whatsapp.com/channel/0029VaxkClI1NCrW4BX5rn3g)**
+> **[✎ P᥆ᥕᥱrᥱძ ᑲᥡ m᥆᥆ᥒ𝖿᥆rᥴᥱ 𝗍ᥱᥲm ❀](victor-Bot)**
