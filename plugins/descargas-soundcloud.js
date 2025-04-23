@@ -28,7 +28,7 @@ let api2 = await(await fetch(`https://api.vreden.my.id/api/ytmp3?url=${results.u
 conn.sendMessage(m.chat, { audio: { url: api2.result.download.url }, mimetype: 'audio/mpeg' }, { quoted: m });
 
 } catch (e) {
-m.reply(`*No Encontramos Resultados Para Tu Búsqueda*`);
+m.reply(`*No Encontramos Resultados Para Tu Búsqueda* ${e.message}\n> Posdata: Me Pica Un Webo`);
 m.react('✖️');
   }
 }
