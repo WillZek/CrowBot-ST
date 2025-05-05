@@ -108,7 +108,6 @@ ___
 
 #### **`CONTACTOS 💻`**
 <p>
-
 <a
 href="https://wa.me/59894243071?text="><img src="https://files.catbox.moe/44q2o7.jpg" height="125px"></a>
 
@@ -192,7 +191,7 @@ npm start
 * Dashboard: [`Dash`](https://dash.luminarys.shop)
 * Panel: [`Panel`](https://panel.luminarys.shop)
 * Grupo: [`Aquí`](https://chat.whatsapp.com/L29DaYhqORo2wBEF95j9D3)
-* Contacto(s): [`Vegeta`](https://wa.me/526633900512) / [`Marcos`](https://wa.me/525653326435) / [`victior`](https://wa.me/595976126756)
+* Contacto(s): [`victor`](https://wa.me/59894243071) / [`victor`](https://wa.me/59894243071) / [`victior`](https://wa.me/595976126756)
 
 </details>
 
@@ -208,7 +207,7 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 * Panel [`Panel`](https://panel.skyultraplus.com)
 * Canal de WhatsApp [`Canal sky`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
 * Comunidad  [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
-* Contacto(s) [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
+* Contacto(s) [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=59894243071&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
 * Discord [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
 
 </details>
