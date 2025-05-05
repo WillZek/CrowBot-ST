@@ -8,10 +8,10 @@ import axios from 'axios'
 import moment from 'moment-timezone' 
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
-// Staff De CrowBot
+// Staff De victorBot
 global.owner = [
-   ['50557865603', 'Creador WillZek💛', true],
-   ['5212731595017', 'CrowBot Soporte', true],
+   ['59894243071', 'Creador victorbot💛', true],
+   ['59894243071', 'victorbot Soporte', true],
    ['584148256527', 'Dev Diomar', true],
    ['584120346669', 'Dev ⁱᵃᵐ|𝔇ĕ𝐬†𝓻⊙γ𒆜', true],
    ['584241836217', 'Dev Prak', true],
@@ -20,15 +20,15 @@ global.owner = [
 ]
 
 global.creadorbot = [
-   ['50557865603', 'WillZek', true],
+   ['59894243071', 'victorbot', true],
 ]
   
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.mods = ['50368471855', '51920227615', '5219831715910', '573007796996', '50488198573', '51991055096', '5212731590195', '50557865603', '595975677765', '584245610338']
+global.mods = ['59894243071', '51920227615', '5219831715910', '573007796996', '50488198573', '51991055096', '5212731590195', '50557865603', '595975677765', '584245610338']
 
-global.prems = ['573215751237']
+global.prems = ['59894243071']
 
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -36,9 +36,9 @@ global.prems = ['573215751237']
 global.libreria = 'Baileys'
 global.baileys = 'V 6.7.16' 
 global.vs = '2.2.0'
-global.nameqr = 'CrowBot-MF'
-global.namebot = 'CrowBot-MF'
-global.sessions = 'CrowSession'
+global.nameqr = 'victorBot-MF'
+global.namebot = 'victorBot-MF'
+global.sessions = 'victorbotSession'
 global.jadi = 'CrowJadiBot' 
 global.yukiJadibts = true // Activado
 global.ch = {
@@ -49,13 +49,13 @@ ch2: '120363368073378190@newsletter'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.packname = '【★】𝐒𝐭𝐚𝐫𝐕𝐨𝐢𝐝-𝐂𝐥𝐮𝐛 ❖'
-global.botname = '(✦◠‿◠)𝑪𝒓𝒐𝒘𝑩𝒐𝒕-𝑺𝑻'
-global.wm = '⏤͟͟͞͞⋆⬪࣪ꥈ🍨★ ׄ ꒱ 𝑪𝒓𝒐𝒘𝑩𝒐𝒕 - 𝑺𝑻 ୭'
+global.botname = '(✦◠‿◠)victor𝑩𝒐𝒕-𝑺𝑻'
+global.wm = '⏤͟͟͞͞⋆⬪࣪ꥈ🍨★ ׄ ꒱ victor𝑩𝒐𝒕 - 𝑺𝑻 ୭'
 global.author = '(⁎˃ᴗ˂⁎)𝐌𝐚𝐝𝐞 𝐁𝐲 𝐒𝐭𝐚𝐫𝐕𝐨𝐢𝐝-𝐂𝐥𝐮𝐛𓆪'
-global.dev = '© 𝖯᥆𝗐ᥱ𝗋ᥱძ ᑲᥡ 𝖲ᥙᥒ𝖿ᥣᥲ𝗋ᥱ  ☂︎  𝖳ᥱᥲ𝗆'
+global.dev = '© 𝖯᥆𝗐ᥱ𝗋ᥱძ ᑲᥡ 𝖲ᥙᥒ𝖿ᥣᥲ𝗋ᥱ victorbot ☂︎  𝖳ᥱᥲ𝗆'
 global.espera = '✰ 𝐄𝐬𝐩𝐞𝐫𝐚 𝐔𝐧 𝐌𝐨𝐦𝐞𝐧𝐭𝐨, 𝐄𝐬𝐭𝐚𝐦𝐨𝐬 𝐄𝐧𝐯𝐢𝐚𝐧𝐝𝐨 𝐒𝐮 𝐏𝐞𝐝𝐢𝐝𝐨 (✿◠‿◠)'
-global.namebot = 'ᥴr᥆ᥕᑲ᥆𝗍 s𝗍'
-global.textbot = `「 🔱 𝐂𝐫𝐨𝐰𝐁𝐨𝐭 - 𝐒𝐓 🔱 」`
+global.namebot = 'victorᑲ᥆𝗍 s𝗍'
+global.textbot = `「 🔱 victor𝐁𝐨𝐭 - 𝐒𝐓 🔱 」`
 global.vs = '2.2.0'
 global.publi = '✰𝐒𝐢𝐠𝐮𝐞 𝐄𝐥 𝐂𝐚𝐧𝐚𝐥👇'
 
@@ -78,7 +78,7 @@ global.channel = 'https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W'
 global.insta = 'https://www.instagram.com/crowbot-wa'
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "543876577197-120363317332020195@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '👑【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】🎩', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
+global.estilo = { key: {  fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "59894243071-120363317332020195@g.us" } : {}) }, message: { orderMessage: { itemCount : -999999, status: 1, surface : 1, message: '👑【✫𝚃𝙴𝙰𝙼  乂 𝚂𝚃𝙰𝚁𝙲𝙾𝚁𝙴✫】🎩', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net'}}}
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
