@@ -2,8 +2,8 @@
 
 ![Bienvenida Épica](https://github.com/WillZek/WillZek/blob/main/Crow.svg)
 
-> **`🪩 Versión Actual: 2.5.0`**  
-
+> **`🪩 Versión Actual: 2.5.0`**
+> 
 <a
 href="https://github.com/WillZek/CrowBot-ST/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/WillZek/CrowBot-ST?color=yellow&style=flat-square"></a>
 <a href="https://github.com/WillZek/CrowBot-ST/watchers"><img title="espectadores" src="https://img.shields.io/github/watchers/WillZek/CrowBot-ST?label=Espectadores&style=social"></a>
@@ -21,7 +21,7 @@ ___
 ___
 
 
-## 💛 **`C R O W - B O T`**    
+## 💛 **`v i c t o r - B O T`**    
 
 ![Menú Principal](https://files.catbox.moe/v8q8y2.jpg)
 
@@ -57,7 +57,7 @@ ___
 
 ![Menu Secundario](https://files.catbox.moe/ugr9af.jpg)
 
-> Enlaces Oficiales De CrowBot
+> Enlaces Oficiales De victorBot
 
 ### **`🔗 OBTEN LOS ENLACES`**
 
@@ -103,19 +103,18 @@ ___
 
 ### **`👑 INFORMACION CONTACTOS`**
 
-#### **`Owner: WillZek 🤴`**
+#### **`Owner: victor 🤴`**
 > **`Developed By: Moon Force`**
 
 #### **`CONTACTOS 💻`**
 <p>
-
 <a
-href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7.jpg" height="125px"></a>
+href="https://wa.me/59894243071?text="><img src="https://files.catbox.moe/44q2o7.jpg" height="125px"></a>
 
 <details>
 <summary><b> 📞 Toca Aqui</b></summary>
 
-- **Propietario:** [`Aquí`](https:/Wa.me/50557865603)
+- **Propietario:** [`Aquí`](https:/Wa.me/59894243071)
 - **Github:** [`Aqui`](https://github.com/WillZek)
 - **Instagram:** [`Aqui`](https://www.instagram.com/pina_dzn)
 - **Correo:** [`Aqui`](ninopina10@gmail.com)
@@ -128,10 +127,10 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 ### **`🖤 TERMUX INFORMACIÓN`**
 
 > [!IMPORTANT]
-> **CrowBot No Recibe Mucho Mantenimiento En Termux**
+> **victorBot No Recibe Mucho Mantenimiento En Termux**
 
 > [!TIP]
-> **Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!**
+> **Puedes Utilizar Servidores Para Instalar A victorBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De victorBot!**
 
 
 #### **`🌠 Click en la imagen para obtener termux`**
@@ -156,7 +155,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```bash
-git clone https://github.com/WillZek/CrowBot-ST && cd CrowBot-ST
+git clone https://github.com/VIctor20500/WillZek-CrowBot-ST.git && cd CrowBot-ST.com
 ```
 
 ```bash
@@ -192,7 +191,7 @@ npm start
 * Dashboard: [`Dash`](https://dash.luminarys.shop)
 * Panel: [`Panel`](https://panel.luminarys.shop)
 * Grupo: [`Aquí`](https://chat.whatsapp.com/L29DaYhqORo2wBEF95j9D3)
-* Contacto(s): [`Vegeta`](https://wa.me/526633900512) / [`Marcos`](https://wa.me/525653326435) / [`Adrian`](https://wa.me/595976126756)
+* Contacto(s): [`victor`](https://wa.me/59894243071) / [`victor`](https://wa.me/59894243071) / [`victior`](https://wa.me/595976126756)
 
 </details>
 
@@ -208,7 +207,7 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 * Panel [`Panel`](https://panel.skyultraplus.com)
 * Canal de WhatsApp [`Canal sky`](https://whatsapp.com/channel/0029VakUvreFHWpyWUr4Jr0g)
 * Comunidad  [`Aquí`](https://chat.whatsapp.com/JPwcXvPEUwlEOyjI3BpYys)
-* Contacto(s) [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=15167096032&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
+* Contacto(s) [`Gata Dios`](https://wa.me/message/B3KTM5XN2JMRD1) / [`Russell`](https://api.whatsapp.com/send/?phone=59894243071&text&type=phone_number&app_absent=0) / [`elrebelde21`](https://facebook.com/elrebelde21)
 * Discord [`SkyUltraPlus`](https://discord.gg/Ph4eWsZ8)
 
 </details>

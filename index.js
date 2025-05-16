@@ -41,15 +41,15 @@ const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 //let require = createRequire(megu)
 let { say } = cfonts
 
-console.log(chalk.bold.redBright(`\n✰ Iniciando CrowBot ✰\n`))
+console.log(chalk.bold.redBright(`\n✰ Iniciando victorBot ✰\n`))
 
-say('CrowBot', {
+say('victorBot', {
 font: 'block',
 align: 'center',
 colors: ['magentaBright']
 })
 
-say(`Developed By • WillZek`, {
+say(`Developed By • victorbot`, {
 font: 'console',
 align: 'center',
 colors: ['blueBright']

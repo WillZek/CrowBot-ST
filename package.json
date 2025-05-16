@@ -1,5 +1,5 @@
 {
-"name": "CrowBot-MF",
+"name": "victorBot-MF",
 "version": "2.5.0",
 "description": "Super WhatsApp Bot Multi Device",
 "main": "index.js",
@@ -20,7 +20,7 @@
 },
 "homepage": "https://github.com/WillZek/CrowBot-ST",
 "author": {
-"name": "WillZek"
+"name": "victor"
 },
 "repository": {
 "type": "git",

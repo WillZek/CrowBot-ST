@@ -15,8 +15,8 @@ let muptime = clockString(_muptime)
 const chats = Object.entries(conn.chats).filter(([id, data]) => id && data.isChats)
 const groupsIn = chats.filter(([id]) => id.endsWith('@g.us')) 
 const used = process.memoryUsage()
-let Crow = `╭─⬣「 *Estado De CrowBot* 」⬣\n`
-Crow += `│ 💛 *Creador ∙* WillZek\n`
+let Crow = `╭─⬣「 *Estado De victorBot* 」⬣\n`
+Crow += `│ 💛 *Creador ∙* victor\n`
 Crow += `│ 📚 *Grupos Unidos ∙* ${groupsIn.length}\n`
 Crow += `│ 👤 *Chats Privados ∙* ${chats.length - groupsIn.length}\n`
 Crow += `│ 💬 *Total De Chats ∙* ${chats.length}\n`
