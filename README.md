@@ -139,41 +139,6 @@ href="https://wa.me/50557865603?text="><img src="https://files.catbox.moe/44q2o7
 > **Puedes Utilizar Servidores Para Instalar A CrowBot o Compra Tu [Token](https://crow-bot-dashboard.vercel.app/) En La Pagina Oficial De CrowBot!**
 
 
-#### **`🌠 Click en la imagen para obtener termux`**
-<a
-href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="https://qu.ax/finc.jpg" height="125px"></a>
-
-<div align=>
-
-#### **`🚩Instalar Por Termux🚩`**
-
-<details>
- <summary><b> 👉 Haga Click para los ver Comandos</b></summary>
-
-#### **🪄 `Instalación manual por termux`**
-> copie y peguen en termux uno por uno 
-```bash
-termux-setup-storage
-```
-
-```bash
-apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
-```
-
-```bash
-git clone https://github.com/WillZek/CrowBot-ST && cd CrowBot-ST
-```
-
-```bash
-yarn install && npm install
-```
-
-```bash
-npm start
-```
-> Si aparece (Y/I/N/O/D/Z) [default=N] ? use la letra "y" + "ENTER" para continuar con la instalación.
-
-> **Si después de poner el numero de WhatsApp, y sale letras en roja no se preocupe es normal**
 
 > [**`CrowBot Archivos`**](https://github.com/WillZek/CrowBot-ST/archive/refs/heads/master.zip)
 
