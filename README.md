@@ -1,7 +1,7 @@
 
 # ⚠️ **`AVISO IMPORTANTE`**
 > ESTE REPOSITORIO YA NO RECIBE ACTUALIZACIONES!, ESO NO SIGNIFICA QUE CROW DEJA DE EXISTIR. ESTAMOS TRABAJANDO EN EL BOT PERO DE MANERA PRIVADA!.
-> COMO APOYARNOS? PUEDES SEGUIRNOS EN NUESTRA CUENTA DE [**GITHUB**](https://github.com/WillZek) Y EN NUESTRO [**CANAL OFICIAL**](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W).
+> COMO APOYARNOS? PUEDES SEGUIRNOS EN NUESTRA CUENTA DE **[GITHUB](https://github.com/WillZek)** Y EN NUESTRO **[CANAL OFICIAL](https://whatsapp.com/channel/0029Vb1AFK6HbFV9kaB3b13W)**.
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=150&section=header&text=Bienvenidos%20-%20Crow%20Bot%20💛&fontSize=30&fontColor=FFFFFF&animation=fadeIn" width="100%"/> 
 
