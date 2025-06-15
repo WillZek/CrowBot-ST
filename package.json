@@ -1,7 +1,7 @@
 {
 "name": "CrowBot-MF",
 "version": "2.5.0",
-"description": "Super WhatsApp Bot Multi Device",
+"description": "WhatsApp Bot Multi-Device using Baileys",
 "main": "index.js",
 "type": "module",
 "directories": {
