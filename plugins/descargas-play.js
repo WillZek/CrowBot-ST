@@ -1,71 +1,46 @@
+/* By WillZek
+- https:// github.com/WillZek 
+*/
+
 import fetch from 'node-fetch';
 import fg from 'senna-fg';
 
 let handler = async (m, { conn, args, command }) => {
-  const url = args[0];
 
-  if (!url || !url.includes('youtube.com') && !url.includes('youtu.be')) {
-    return m.reply(`🍭 Ingresa un enlace válido de YouTube.\n\nEjemplo: *.play https://youtu.be/4JSPcvKPhSM*`);
-  }
+if (!args[0]) return m.reply(`🍭 Ingresa Un Link De YouTube.`);
 
-  let json = await (await fetch(`https://delirius-apiofc.vercel.app/download/ytmp4?url=${url}`)).json();
-  let data = json.data;
+let pene = await(await fetch(`https://delirius-apiofc.vercel.app/download/ytmp4?url=${args[0]}`)).json();
 
-  if (!data) return m.reply('❌ No se pudo obtener información del video.');
+let texto = `「❖」𝗥𝗲𝘀𝘂𝗹𝘁𝗮𝗱𝗼 𝗗𝗲 ${pene.data.title}\n\n✦ *Autor:* ${pene.data.author}\n✦ *Duración:* ${pene.data.duration}\n✦ *Comentarios:* ${pene.data.comments}\n✦ *Vistas:* ${pene.data.views}\n> ${dev}`
 
-  let texto = `📀 *${data.title}*\n\n👤 *Autor:* ${data.author}\n⏱️ *Duración:* ${data.duration}\n💬 *Comentarios:* ${data.comments}\n👁️ *Vistas:* ${data.views}\n\n¿Deseas descargar el audio o video?`;
+m.react(rwait)
+conn.sendMessage(m.chat, { image: { url: pene.data.image }, caption: texto }, { quoted: m });
+m.react(done);
 
-  const buttons = [
-    { buttonId: `.playaudio ${url}`, buttonText: { displayText: '🎧 Audio' }, type: 1 },
-    { buttonId: `.playvideo ${url}`, buttonText: { displayText: '📹 Video' }, type: 1 },
-    { buttonId: url, buttonText: { displayText: '🌐 Ver en YouTube' }, type: 1 },
-  ];
+if (command == 'ytmp3doc' || command == 'mp3doc' || command == 'ytadoc') {
+let api = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${args[0]}&type=audio&quality=128kbps&apikey=GataDios`)).json();
 
-  const buttonMessage = {
-    image: { url: data.image },
-    caption: texto,
-    footer: 'Elige una opción abajo 👇',
-    buttons,
-    headerType: 4,
-  };
+if (!api?.data.url) return m.reply('No Se  Encontraron Resultados');
 
-  return conn.sendMessage(m.chat, buttonMessage, { quoted: m });
-};
+await conn.sendMessage(m.chat, { document: { url: api.data.url }, mimetype: 'audio/mpeg', fileName: `${pene.data.title}.mp3` }, { quoted: m });
+ }
 
-handler.command = ['play'];
-handler.help = ['play <enlace de YouTube>'];
-handler.tags = ['descargas'];
+if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
+let video = await (await fetch(`https://api.agungny.my.id/api/youtube-video?url=${args[0]}`)).json();
+
+// let link = video?.result.result.download;
+
+let data = await fg.ytmp4(args[0]);
+let url = data.dl_url;
+
+if (!url) return m.reply('No Hubo Resultados');
+
+await conn.sendMessage(m.chat, { document: { url: url }, fileName: `${pene.data.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
+   }
+}
+
+handler.help = ['ytmp3doc', 'ytmp4doc'];
+handler.tag = ['descargas'];
+handler.command = ['ytmp3doc', 'mp3doc', 'ytmp4doc', 'mp4doc', 'ytadoc', 'ytvdoc'];
 
 export default handler;
-
-// 🎧 Handler de audio
-export const playaudio = async (m, { conn, args }) => {
-  const url = args[0];
-  if (!url) return m.reply('⚠️ Falta el link de YouTube');
-
-  let api = await (await fetch(`https://api.neoxr.eu/api/youtube?url=${url}&type=audio&quality=128kbps&apikey=GataDios`)).json();
-  if (!api?.data?.url) return m.reply('❌ No se pudo obtener el audio.');
-
-  await conn.sendMessage(m.chat, {
-    document: { url: api.data.url },
-    mimetype: 'audio/mpeg',
-    fileName: `${api.data.title}.mp3`,
-    caption: '🎧 Aquí tienes tu audio.'
-  }, { quoted: m });
-};
-
-// 📹 Handler de video
-export const playvideo = async (m, { conn, args }) => {
-  const url = args[0];
-  if (!url) return m.reply('⚠️ Falta el link de YouTube');
-
-  let data = await fg.ytmp4(url);
-  if (!data?.dl_url) return m.reply('❌ No se pudo obtener el video.');
-
-  await conn.sendMessage(m.chat, {
-    document: { url: data.dl_url },
-    mimetype: 'video/mp4',
-    fileName: `${data.title}.mp4`,
-    caption: '📹 Aquí tienes tu video.'
-  }, { quoted: m });
-};
