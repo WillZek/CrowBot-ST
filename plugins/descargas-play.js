@@ -1,43 +1,80 @@
-/* By WillZek
-- https:// github.com/WillZek 
-*/
+const { Client, Buttons, MessageMedia, LocalAuth } = require('whatsapp-web.js');
+const qrcode = require('qrcode-terminal');
+const express = require('express');
+const ytdl = require('ytdl-core');
+const axios = require('axios');
+const ffmpeg = require('fluent-ffmpeg');
+const ffmpegPath = require('ffmpeg-static');
+const fs = require('fs');
+const path = require('path');
 
-import fetch from 'node-fetch';
-import fg from 'senna-fg';
+ffmpeg.setFfmpegPath(ffmpegPath);
 
-let handler = async (m, { conn, args, command }) => {
+const client = new Client({
+    authStrategy: new LocalAuth()
+});
 
-if (!args[0]) return m.reply(`🍭 Ingresa Un Link De YouTube.`);
+client.on('qr', (qr) => {
+    qrcode.generate(qr, { small: true });
+});
 
-let pene = await(await fetch(`https://delirius-apiofc.vercel.app/download/ytmp4?url=${args[0]}`)).json();
+client.on('ready', () => {
+    console.log('✅ Bot listo!');
+});
 
-let texto = `「❖」𝗥𝗲𝘀𝘂𝗹𝘁𝗮𝗱𝗼 𝗗𝗲 ${pene.data.title}\n\n✦ *Autor:* ${pene.data.author}\n✦ *Duración:* ${pene.data.duration}\n✦ *Comentarios:* ${pene.data.comments}\n✦ *Vistas:* ${pene.data.views}\n> ${dev}`
+client.on('message', async (message) => {
+    if (message.body.startsWith('.play ')) {
+        const query = message.body.slice(6);
+        const searchUrl = `https://www.youtube.com/results?search_query=${encodeURIComponent(query)}`;
 
-m.react(rwait)
-conn.sendMessage(m.chat, { image: { url: pene.data.image }, caption: texto }, { quoted: m });
-m.react(done);
+        try {
+            const { data } = await axios.get(searchUrl);
+            const videoIdMatch = data.match(/"videoId":"(.*?)"/);
+            if (!videoIdMatch) return message.reply('❌ No encontré resultados.');
 
-if (command == 'ytmp3doc' || command == 'mp3doc' || command == 'ytadoc') {
-let api = await(await fetch(`https://api.neoxr.eu/api/youtube?url=${args[0]}&type=audio&quality=128kbps&apikey=GataDios`)).json();
+            const videoId = videoIdMatch[1];
+            const videoUrl = `https://www.youtube.com/watch?v=${videoId}`;
+            const info = await ytdl.getInfo(videoUrl);
 
-if (!api?.data.url) return m.reply('No Se  Encontraron Resultados');
+            const title = info.videoDetails.title;
+            const author = info.videoDetails.author.name;
+            const views = info.videoDetails.viewCount;
+            const length = Math.floor(info.videoDetails.lengthSeconds / 60) + ':' + (info.videoDetails.lengthSeconds % 60).toString().padStart(2, '0');
 
-await conn.sendMessage(m.chat, { document: { url: api.data.url }, mimetype: 'audio/mpeg', fileName: `${pene.data.title}.mp3` }, { quoted: m });
- }
+            const buttons = new Buttons(
+                `🎶 *${title}*\n👤 *${author}*\n⏱️ Duración: ${length}\n👀 Vistas: ${views}\n🔗 [Ver en YouTube](${videoUrl})\n\n¿Qué deseas hacer?`,
+                [
+                    { body: '🎵 Descargar Audio' },
+                    { body: '📹 Descargar Video' },
+                    { body: '🌐 Solo Ver' }
+                ],
+                'Resultado encontrado',
+                'Elige una opción'
+            );
 
-if (command == 'ytmp4doc' || command == 'mp4doc' || command == 'ytvdoc') {
-let video = await (await fetch(`https://api.agungny.my.id/api/youtube-video?url=${args[0]}`)).json();
+            await client.sendMessage(message.from, buttons);
 
-// let link = video?.result.result.download;
+            // Escucha la siguiente respuesta
+            const collector = client.on('message', async (response) => {
+                if (response.from === message.from) {
+                    if (response.body === '🎵 Descargar Audio') {
+                        await sendAudio(videoUrl, message.from, client);
+                    } else if (response.body === '📹 Descargar Video') {
+                        await sendVideo(videoUrl, message.from, client);
+                    } else if (response.body === '🌐 Solo Ver') {
+                        client.sendMessage(message.from, `🔗 ${videoUrl}`);
+                    }
 
-let data = await fg.ytmp4(args[0]);
-let url = data.dl_url;
+                    client.removeListener('message', collector);
+                }
+            });
 
-if (!url) return m.reply('No Hubo Resultados');
-
-await conn.sendMessage(m.chat, { document: { url: url }, fileName: `${pene.data.title}.mp4`, caption: `> ${wm}`, mimetype: 'video/mp4' }, { quoted: m })    
-   }
-}
+        } catch (err) {
+            console.error(err);
+            message.reply('❌ Ocurrió un error.');
+        }
+    }
+});
 
 handler.help = ['ytmp3doc', 'ytmp4doc'];
 handler.tag = ['descargas'];
