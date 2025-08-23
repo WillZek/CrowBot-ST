@@ -1,1 +1,0 @@
-// jadibot-serbot.js
